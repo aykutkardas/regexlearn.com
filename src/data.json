@@ -1,0 +1,11 @@
+[
+  {
+    "title": "steps.1.title",
+    "description": "steps.1.description",
+    "placeholder": "steps.1.placeholder",
+    "content": "Content 1",
+    "regex": "\\d",
+    "flags": "g",
+    "answer": "1"
+  }
+]
