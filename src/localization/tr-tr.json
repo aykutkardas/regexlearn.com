@@ -17,7 +17,7 @@
   "steps.2.description": "Nokta `.` işaretini herhangi bir karakteri almak için kullanıyorsak, doğrudan bir noktayı yakalayabilmek için öncesinde bir kaçış karakteri kullanmamız gerekiyor. Bunun için noktanın öncesinde `\\` işareti kullanın.",
 
   "steps.3.title": "Adım 3 - Sözcük Karakterleri",
-  "steps.3.description": "Özel karakterler ve boşluklar dışındaki sözcük karakterlerini almak için `\\w` kullanılır. Harfleri ve sayıları alacatır.",
+  "steps.3.description": "Özel karakterler ve boşluklar dışındaki sözcük karakterlerini almak için `\\w` kullanılır. Harfleri ve sayıları alacaktır.",
 
   "steps.4.title": "Adım 4 - Sözcük Karakterleri Dışındakiler",
   "steps.4.description": "Sözcük karakterleri dışındakileri almak için `\\W` kullanılır. Özel karakterleri ve boşlukları alacaktır.",
