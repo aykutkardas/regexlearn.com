@@ -1,0 +1,20 @@
+.navigation {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+
+  &-step {
+    padding: 50px;
+    cursor: pointer;
+  }
+
+  &-prev-step {
+    margin-right: auto;
+  }
+
+  &-next-step {
+    margin-left: auto;
+  }
+}
