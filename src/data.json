@@ -10,17 +10,107 @@
   {
     "title": "steps.1.title",
     "description": "steps.1.description",
-    "content": "abcABC123 :!?",
+    "content": "abcABC123 .:!?",
     "regex": ".",
     "flags": "g",
-    "answer": ["a", "b", "c", "A", "B", "C", "1", "2", "3", " ", ":", "!", "?"]
+    "answer": [
+      "a",
+      "b",
+      "c",
+      "A",
+      "B",
+      "C",
+      "1",
+      "2",
+      "3",
+      " ",
+      ".",
+      ":",
+      "!",
+      "?"
+    ]
   },
   {
     "title": "steps.2.title",
     "description": "steps.2.description",
-    "content": "abcABC123.:!?",
+    "content": "abcABC123 .:!?",
     "regex": "\\.",
     "flags": "g",
     "answer": ["."]
+  },
+  {
+    "title": "steps.3.title",
+    "description": "steps.3.description",
+    "content": "abcABC123 .:!?",
+    "regex": "\\w",
+    "flags": "g",
+    "answer": ["a", "b", "c", "A", "B", "C", "1", "2", "3"]
+  },
+  {
+    "title": "steps.4.title",
+    "description": "steps.4.description",
+    "content": "abcABC123 .:!?",
+    "regex": "\\W",
+    "flags": "g",
+    "answer": [" ", ".", ":", "!", "?"]
+  },
+  {
+    "title": "steps.5.title",
+    "description": "steps.5.description",
+    "content": "abcABC123 .:!?",
+    "regex": "\\d",
+    "flags": "g",
+    "answer": ["1", "2", "3"]
+  },
+  {
+    "title": "steps.6.title",
+    "description": "steps.6.description",
+    "content": "abcABC123 .:!?",
+    "regex": "\\d",
+    "flags": "g",
+    "answer": ["a", "b", "c", "A", "B", "C", " ", ".", ":", "!", "?"]
+  },
+  {
+    "title": "steps.7.title",
+    "description": "steps.7.description",
+    "content": "abcABC123 .:!?",
+    "regex": "\\d",
+    "flags": "g",
+    "answer": [" "]
+  },
+  {
+    "title": "steps.8.title",
+    "description": "steps.8.description",
+    "content": "abcABC123 .:!?",
+    "regex": "\\d",
+    "flags": "g",
+    "answer": ["a", "b", "c", "A", "B", "C", "1", "2", "3", ".", ":", "!", "?"]
+  },
+  {
+    "title": "steps.9.title",
+    "description": "steps.9.description",
+    "content": "abcABC123 .:!?",
+    "initialValue": "[]",
+    "regex": "[abc]",
+    "flags": "g",
+    "answer": ["a", "b", "c"]
+  },
+  {
+    "title": "steps.10.title",
+    "description": "steps.10.description",
+    "content": "abcABC123 .:!?",
+    "initialValue": "[^]",
+    "regex": "[^abc]",
+    "flags": "g",
+    "answer": ["A", "B", "C", "1", "2", "3", " ", ".", ":", "!", "?"]
+  },
+  {
+    "title": "steps.11.title",
+    "description": "steps.11.description",
+    "content": "abcABC123 .:!?",
+    "initialValue": "[-]",
+    "regex": "[a-c]",
+    "flags": "g",
+    "answer": ["a", "b", "c"]
   }
 ]

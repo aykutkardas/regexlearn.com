@@ -12,5 +12,32 @@
   "steps.1.description": "Nokta (.) işareti özel karakterler ve boşluklarda dahil herhangi bir karakteri yakalamayı sağlar.",
 
   "steps.2.title": "Adım 2 - Kaçış Karakteri",
-  "steps.2.description": "Nokta (.) işaretini herhangi bir karakteri almak için kullanıyorsak, doğrudan bir noktayı yakalayabilmek için öncesinde bir kaçış karakteri kullanmamız gerekiyor. Bunun için noktanın öncesinde (\\) işareti kullanın."
+  "steps.2.description": "Nokta (.) işaretini herhangi bir karakteri almak için kullanıyorsak, doğrudan bir noktayı yakalayabilmek için öncesinde bir kaçış karakteri kullanmamız gerekiyor. Bunun için noktanın öncesinde (\\) işareti kullanın.",
+
+  "steps.3.title": "Adım 3 - Sözcük Karakterleri",
+  "steps.3.description": "Özel karakterler ve boşluklar dışındaki sözcük karakterlerini almak için `\\w` kullanılır. Harfleri ve sayıları alacatır.",
+
+  "steps.4.title": "Adım 4 - Sözcük Karakterleri Dışındakiler",
+  "steps.4.description": "Sözcük karakterleri dışındakileri almak için `\\W` kullanılır. Özel karakterleri ve boşlukları alacaktır.",
+
+  "steps.5.title": "Adım 5 - Sayı Karakterleri",
+  "steps.5.description": "Sadece sayı karakterlerini almak için `\\d` kullanılır.",
+
+  "steps.6.title": "Adım 6 - Sayı Karakterleri Dışındakiler",
+  "steps.6.description": "Sayı karakterleri dışındakileri almak için `\\D` kullanılır. Harfleri, özel karakterleri ve boşlukları alacaktır.",
+
+  "steps.7.title": "Adım 7 - Boşluk Karakterleri",
+  "steps.7.description": "Sadece boşluk karakterlerini almak için `\\s` kullanılır.",
+
+  "steps.8.title": "Adım 8 - Boşluk Karakterleri Dışındakiler",
+  "steps.8.description": "Boşluk karakterleri dışındakileri almak için `\\S` kullanılır. Harfleri, sayıları ve özel karakterleri alacaktır.",
+
+  "steps.9.title": "Adım 9 - Belli Karakterlerden Herhangi Biri",
+  "steps.9.description": "Bazı karakterlerden herhangi birini almak için beklediğimiz karakterleri köşeli parantezler `[ ]` içerisinde yan yana yazarız. Küçük harflerle yazılmış a, b ve c karakterlerini almak için köşeli parantezler içinde bu harfleri yan yana yazalım.",
+
+  "steps.10.title": "Adım 10 - Belli Karakterlerin Dışındakiler",
+  "steps.10.description": "Belli karakterlerin dışındakileri almak için almak istemediğimiz karakterleri köşeli parantezler `[ ]` içine üst karakteri `^` ile başlayacak şekilde yan yana yazarız. Küçük harflerle yazılmış a, b ve c karakterleri dışındakileri almak için köşeli parantezler içinde başına bir kez `^` karakteri koyarak bu harfleri yan yana yazalım.",
+
+  "steps.11.title": "Adım 11 - Belli Aralıktaki Harfler",
+  "steps.11.description": "Belli aralıktaki harfleri almak için başlangıç harfi ve bitiş harfini aralarında bir tire (-) olacak şekilde köşeli parantezler `[ ]` içine yazılır. Aynısı sayılar içinde geçerlidir. Büyük küçük harf duyarlıdır. a ve c de dahil aralarındaki tüm harfleri alacak regexi yazalım."
 }
