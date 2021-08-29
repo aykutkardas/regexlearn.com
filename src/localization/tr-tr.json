@@ -1,0 +1,16 @@
+{
+  "general.prevStep": "Önceki Adım",
+  "general.nextStep": "Sonraki Adım",
+  "general.result": "Sonuç",
+  "general.regex": "Regex",
+  "general.text": "Metin",
+
+  "steps.0.title": "Başlangıç",
+  "steps.0.description": "Regexi öğrenmeyi sağlayacak çeşitli adımlar mevcut. Aşağıdaki `İçerik` alanı regex uygulayacağımız metni ifade eder. `Regex` alanı ise regex yazacağımız bir metin alanıdır. Regex yazdıkça `Sonuç` alanı anlık olarak güncellenir. İlk adıma geçmek için Regex alanına `OK` yazarak başlayalım.",
+
+  "steps.1.title": "Adım 1 - Herhangi Bir Karakter",
+  "steps.1.description": "Nokta (.) işareti özel karakterler ve boşluklarda dahil herhangi bir karakteri yakalamayı sağlar.",
+
+  "steps.2.title": "Adım 2 - Kaçış Karakteri",
+  "steps.2.description": "Nokta (.) işaretini herhangi bir karakteri almak için kullanıyorsak, doğrudan bir noktayı yakalayabilmek için öncesinde bir kaçış karakteri kullanmamız gerekiyor. Bunun için noktanın öncesinde (\\) işareti kullanın."
+}

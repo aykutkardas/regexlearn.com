@@ -1,11 +1,26 @@
 [
   {
+    "title": "steps.0.title",
+    "description": "steps.0.description",
+    "content": "Understand? OK or NOT",
+    "regex": "OK",
+    "flags": "g",
+    "answer": ["OK"]
+  },
+  {
     "title": "steps.1.title",
     "description": "steps.1.description",
-    "placeholder": "steps.1.placeholder",
-    "content": "Content 1",
-    "regex": "\\d",
+    "content": "abcABC123 :!?",
+    "regex": ".",
     "flags": "g",
-    "answer": "1"
+    "answer": ["a", "b", "c", "A", "B", "C", "1", "2", "3", " ", ":", "!", "?"]
+  },
+  {
+    "title": "steps.2.title",
+    "description": "steps.2.description",
+    "content": "abcABC123.:!?",
+    "regex": "\\.",
+    "flags": "g",
+    "answer": ["."]
   }
 ]
