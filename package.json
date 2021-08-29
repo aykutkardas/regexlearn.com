@@ -9,10 +9,15 @@
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
+    "lodash": "^4.17.21",
+    "mousetrap": "^1.6.5",
+    "mousetrap-global-bind": "^1.1.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-icomoon": "^2.4.1",
     "react-intl": "^5.20.10",
     "react-scripts": "4.0.3",
+    "react-toastify": "^8.0.1",
     "web-vitals": "^1.0.1"
   },
   "scripts": {
@@ -38,5 +43,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "sass": "^1.38.2"
   }
 }
