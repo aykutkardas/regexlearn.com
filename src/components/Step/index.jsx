@@ -47,9 +47,15 @@ function Steps({ data }) {
       <h2 className="step-title">
         <FormattedMessage id={data.title} />
       </h2>
-      <p className="step-description">
-        <FormattedMessage id={data.description} />
-      </p>
+      <p
+        className="step-description"
+        dangerouslySetInnerHTML={{
+          __html: formatMessage({ id: data.description }).replace(
+            /`(\S*?[^`]*)`/gim,
+            "<span class='step-word'>$1</span>"
+          ),
+        }}
+      />
       <div
         className="step-block"
         data-title={formatMessage({ id: "general.text" })}
