@@ -5,7 +5,7 @@ import { FormattedMessage, useIntl } from "react-intl";
 import { toast } from "react-toastify";
 import _ from "lodash";
 
-function Steps({ data }) {
+function Steps({ data, step }) {
   const [regex, setRegex] = useState("");
   const [result, setResult] = useState([]);
   const [error, setError] = useState(false);
@@ -19,7 +19,7 @@ function Steps({ data }) {
     if (regexInput) {
       regexInput.current.focus();
     }
-  }, [data.title]);
+  }, [step]);
 
   useEffect(() => {
     try {
@@ -31,7 +31,19 @@ function Steps({ data }) {
       const isSuccess = _.isEmpty(_.xor(data.answer, regResult));
 
       if (isSuccess) {
-        toast.success("Step 1 - Completed", { theme: "colored" });
+        toast.success(
+          formatMessage(
+            {
+              id: step
+                ? "general.completedCurrentStep"
+                : "general.completedStarterStep",
+            },
+            { step }
+          ),
+          {
+            theme: "colored",
+          }
+        );
         setError(false);
       } else {
         toast.dismiss();
@@ -39,11 +51,12 @@ function Steps({ data }) {
       }
     } catch (err) {
       setError(true);
+      setResult([]);
     }
   }, [regex]);
 
   return (
-    <div className="step">
+    <div className="step" key={step}>
       <h2 className="step-title">
         <FormattedMessage id={data.title} />
       </h2>
@@ -69,11 +82,12 @@ function Steps({ data }) {
         <div className="step-input">
           <input
             ref={regexInput}
+            key={step}
             type="text"
             style={{
               width: regex.length * 15 || 50,
             }}
-            value={regex || data.initialValue}
+            value={regex || data.initialValue || ""}
             onChange={(e) => setRegex(e.target.value)}
             placeholder={formatMessage({ id: "general.regex" }).toLowerCase()}
             spellCheck={false}

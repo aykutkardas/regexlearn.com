@@ -49,7 +49,7 @@ function App() {
       defaultLocale={defaultLang}
     >
       <div className="App">
-        <Step data={data[step]} />
+        <Step data={data[step]} step={step} />
         <Navigation
           steps={data}
           step={step}
