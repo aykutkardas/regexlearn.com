@@ -1,5 +1,7 @@
 import "./navigation.scss";
 
+import { FormattedMessage } from "react-intl";
+
 function Navigation({ steps, step, nextStep, prevStep }) {
   return !steps.length ? null : (
     <div className="navigation">
@@ -8,7 +10,7 @@ function Navigation({ steps, step, nextStep, prevStep }) {
           className="navigation-step navigation-prev-step"
           onClick={prevStep}
         >
-          Prev Step
+          <FormattedMessage id="general.prevStep" />
         </div>
       )}
       {step < steps.length - 1 && (
@@ -16,7 +18,7 @@ function Navigation({ steps, step, nextStep, prevStep }) {
           className="navigation-step navigation-next-step"
           onClick={nextStep}
         >
-          Next Step
+          <FormattedMessage id="general.nextStep" />
         </div>
       )}
     </div>
