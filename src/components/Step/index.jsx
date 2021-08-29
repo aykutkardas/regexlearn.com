@@ -67,7 +67,7 @@ function Steps({ data }) {
             style={{
               width: regex.length * 15 || 50,
             }}
-            value={regex}
+            value={regex || data.initialValue}
             onChange={(e) => setRegex(e.target.value)}
             placeholder={formatMessage({ id: "general.regex" }).toLowerCase()}
             spellCheck={false}
