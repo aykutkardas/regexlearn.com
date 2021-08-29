@@ -79,7 +79,7 @@
     background: #5ff59b;
     min-width: 10px;
     height: 20px;
-    margin: 1px;
+    margin: 1px 3px;
     color: #000000;
     font-size: 10px;
     padding: 2px 5px;
@@ -89,7 +89,9 @@
     justify-content: center;
   }
 
-  &-block.error .step-result-tag {
-    background: tomato;
+  &.error {
+    .step-result-tag {
+      background: tomato;
+    }
   }
 }

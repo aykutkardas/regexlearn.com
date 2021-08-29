@@ -7,14 +7,13 @@ import _ from "lodash";
 
 function Steps({ data, step }) {
   const [regex, setRegex] = useState("");
-  const [result, setResult] = useState([]);
+  const [content, setContent] = useState(null);
   const [error, setError] = useState(false);
   const regexInput = useRef(null);
   const { formatMessage } = useIntl();
 
   useEffect(() => {
     setError(false);
-    setResult([]);
     setRegex("");
     if (regexInput) {
       regexInput.current.focus();
@@ -23,12 +22,19 @@ function Steps({ data, step }) {
 
   useEffect(() => {
     try {
-      const reg = new RegExp(regex, data.flags);
+      const reg = new RegExp("(" + regex + ")", data.flags);
       const regResult = [...data.content.matchAll(reg)]
         .map((res) => res[0])
         .filter((res) => !!res);
-      setResult(regResult);
       const isSuccess = _.isEmpty(_.xor(data.answer, regResult));
+
+      if (regex) {
+        setContent(
+          data.content.replace(reg, "<span class='step-result-tag'>$1</span>")
+        );
+      } else {
+        setContent(data.content);
+      }
 
       if (isSuccess) {
         toast.success(
@@ -44,6 +50,7 @@ function Steps({ data, step }) {
             theme: "colored",
           }
         );
+
         setError(false);
       } else {
         toast.dismiss();
@@ -51,12 +58,11 @@ function Steps({ data, step }) {
       }
     } catch (err) {
       setError(true);
-      setResult([]);
     }
   }, [regex]);
 
   return (
-    <div className="step" key={step}>
+    <div className={"step " + (error ? "error" : "")} key={step}>
       <h2 className="step-title">
         <FormattedMessage id={data.title} />
       </h2>
@@ -72,9 +78,10 @@ function Steps({ data, step }) {
       <div
         className="step-block"
         data-title={formatMessage({ id: "general.text" })}
-      >
-        {data.content}
-      </div>
+        dangerouslySetInnerHTML={{
+          __html: content || data.content,
+        }}
+      />
       <div
         className="step-block"
         data-title={formatMessage({ id: "general.regex" })}
@@ -93,16 +100,6 @@ function Steps({ data, step }) {
             spellCheck={false}
           />
         </div>
-      </div>
-      <div
-        className={"step-block " + (error ? "error" : "")}
-        data-title={formatMessage({ id: "general.result" })}
-      >
-        {result.map((item, index) => (
-          <span key={index} className="step-result-tag">
-            {item}
-          </span>
-        ))}
       </div>
     </div>
   );
