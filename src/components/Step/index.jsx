@@ -79,7 +79,7 @@ function Steps({ data, step }) {
         className="step-block"
         data-title={formatMessage({ id: "general.regex" })}
       >
-        <div className="step-input">
+        <div className="step-input" data-flags={data.flags}>
           <input
             ref={regexInput}
             key={step}
