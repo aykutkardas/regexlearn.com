@@ -107,10 +107,19 @@
   {
     "title": "steps.11.title",
     "description": "steps.11.description",
-    "content": "abcABC123 .:!?",
+    "content": "abcdefghABC123 .:!?",
     "initialValue": "[-]",
     "regex": "[a-c]",
     "flags": "g",
-    "answer": ["a", "b", "c"]
+    "answer": ["a", "b", "c", "d", "e", "f"]
+  },
+  {
+    "title": "steps.12.title",
+    "description": "steps.12.description",
+    "content": "abcABC123456789 .:!?",
+    "initialValue": "[-]",
+    "regex": "[1-3]",
+    "flags": "g",
+    "answer": ["1", "2", "3", "4", "5"]
   }
 ]
