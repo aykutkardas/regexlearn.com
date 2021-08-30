@@ -9,11 +9,14 @@ function Steps({ data, step }) {
   const [regex, setRegex] = useState("");
   const [content, setContent] = useState(null);
   const [error, setError] = useState(false);
+  const [success, setSuccess] = useState(false);
   const regexInput = useRef(null);
   const { formatMessage } = useIntl();
 
   useEffect(() => {
     setError(false);
+    setSuccess(false);
+    setContent(data.content);
     setRegex("");
     if (regexInput) {
       regexInput.current.focus();
@@ -52,6 +55,7 @@ function Steps({ data, step }) {
         );
 
         setError(false);
+        setSuccess(true);
       } else {
         toast.dismiss();
         setError(true);
@@ -91,6 +95,7 @@ function Steps({ data, step }) {
             ref={regexInput}
             key={step}
             type="text"
+            readOnly={success}
             style={{
               width: regex.length * 15 || 50,
             }}
