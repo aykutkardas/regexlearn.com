@@ -8,7 +8,7 @@
   "general.completedCurrentStep": "Adım {step} - Tamamlandı.",
 
   "steps.0.title": "Başlangıç",
-  "steps.0.description": "Regexi öğrenmeyi sağlayacak çeşitli adımlar mevcut. Aşağıdaki `İçerik` alanı regex uygulayacağımız metni ifade eder. `Regex` alanı ise regex yazacağımız bir metin alanıdır. Regex yazdıkça `İçerik` alanında sonuçlar önizlenir. İlk adıma geçmek için Regex alanına `OK` yazarak başlayalım.",
+  "steps.0.description": "Regexi öğrenmeyi sağlayacak çeşitli adımlar mevcut. Aşağıdaki `Metin` alanı regex uygulayacağımız metni ifade eder. `Regex` alanı ise regex yazacağımız bir metin alanıdır. Regex yazdıkça `Metin` alanında sonuçlar önizlenir. İlk adıma geçmek için Regex alanına `OK` yazarak başlayalım.",
 
   "steps.1.title": "Adım 1 - Herhangi Bir Karakter",
   "steps.1.description": "Nokta `.` işareti özel karakterler ve boşluklarda dahil herhangi bir karakteri yakalamayı sağlar.",
