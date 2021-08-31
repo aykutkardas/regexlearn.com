@@ -1,6 +1,7 @@
 import "./navigation.scss";
 
 import { FormattedMessage } from "react-intl";
+import Icon from "../Icon";
 
 function Navigation({ steps, step, nextStep, prevStep }) {
   return !steps.length ? null : (
@@ -10,6 +11,7 @@ function Navigation({ steps, step, nextStep, prevStep }) {
           className="navigation-step navigation-prev-step"
           onClick={prevStep}
         >
+          <Icon icon="arrow-left2" size={20} />
           <FormattedMessage id="general.prevStep" />
         </div>
       )}
@@ -19,6 +21,7 @@ function Navigation({ steps, step, nextStep, prevStep }) {
           onClick={nextStep}
         >
           <FormattedMessage id="general.nextStep" />
+          <Icon icon="arrow-right2" size={20} />
         </div>
       )}
     </div>
