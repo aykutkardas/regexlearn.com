@@ -8,3 +8,7 @@
   justify-content: center;
   color: white;
 }
+
+.Toastify__toast-theme--colored.Toastify__toast--success {
+  background: #328252 !important;
+}
