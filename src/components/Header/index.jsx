@@ -2,7 +2,7 @@ import "./header.scss";
 
 import Icon from "../Icon";
 
-const Header = ({ command }) => {
+const Header = () => {
   return (
     <header className="header">
       <div className="header-social">
