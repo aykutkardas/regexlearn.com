@@ -7,6 +7,7 @@ import mousetrap from "mousetrap";
 import "mousetrap-global-bind";
 
 import localization from "./localization";
+import Header from "./components/Header";
 import Step from "./components/Step";
 import Navigation from "./components/Navigation";
 
@@ -49,6 +50,7 @@ function App() {
       defaultLocale={defaultLang}
     >
       <div className="App">
+        <Header />
         <Step data={data[step]} step={step} />
         <Navigation
           steps={data}
