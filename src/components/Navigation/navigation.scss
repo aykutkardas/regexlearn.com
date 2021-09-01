@@ -6,11 +6,17 @@
   left: 0;
 
   &-step {
-    padding: 50px;
+    margin: 50px;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+
+    .shortcut {
+      position: absolute;
+      top: -30px;
+    }
 
     &:hover {
       opacity: 0.7;
@@ -23,9 +29,17 @@
 
   &-prev-step {
     margin-right: auto;
+
+    .shortcut {
+      right: 0;
+    }
   }
 
   &-next-step {
     margin-left: auto;
+
+    .shortcut {
+      left: 0;
+    }
   }
 }
