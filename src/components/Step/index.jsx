@@ -52,6 +52,7 @@ function Steps({ data, step }) {
           {
             theme: "colored",
             autoClose: false,
+            position: "top-center",
           }
         );
 
