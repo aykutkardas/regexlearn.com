@@ -6,7 +6,7 @@ import { toast } from "react-toastify";
 import _ from "lodash";
 
 function Steps({ data, step }) {
-  const [regex, setRegex] = useState("");
+  const [regex, setRegex] = useState(data.initialValue || "");
   const [content, setContent] = useState(null);
   const [error, setError] = useState(false);
   const [success, setSuccess] = useState(false);
@@ -17,13 +17,14 @@ function Steps({ data, step }) {
     setError(false);
     setSuccess(false);
     setContent(data.content);
-    setRegex("");
+    setRegex(data.initialValue || "");
+    checkRegex();
     if (regexInput) {
       regexInput.current.focus();
     }
   }, [step]);
 
-  useEffect(() => {
+  const checkRegex = () => {
     try {
       const reg = new RegExp("(" + regex + ")", data.flags);
       const regResult = [...data.content.matchAll(reg)]
@@ -67,7 +68,9 @@ function Steps({ data, step }) {
     } catch (err) {
       setError(true);
     }
-  }, [regex]);
+  };
+
+  useEffect(checkRegex, [regex]);
 
   return (
     <div className={"step " + (error ? "error" : "")} key={step}>
@@ -103,7 +106,7 @@ function Steps({ data, step }) {
             style={{
               width: regex.length * 15 || 50,
             }}
-            value={regex || data.initialValue || ""}
+            value={regex}
             onChange={(e) => setRegex(e.target.value)}
             placeholder={formatMessage({ id: "general.regex" }).toLowerCase()}
             spellCheck={false}
