@@ -29,7 +29,9 @@ function Steps({ data, step }) {
       const regResult = [...data.content.matchAll(reg)]
         .map((res) => res[0])
         .filter((res) => !!res);
-      const isSuccess = _.isEmpty(_.xor(data.answer, regResult));
+      const isSuccess =
+        data.answer.length === regResult.length &&
+        _.isEmpty(_.xor(data.answer, regResult));
 
       if (regex) {
         setContent(
@@ -82,10 +84,10 @@ function Steps({ data, step }) {
         }}
       />
       <div
-        className="step-block"
+        className="step-block step-block-content"
         data-title={formatMessage({ id: "general.text" })}
         dangerouslySetInnerHTML={{
-          __html: content || data.content,
+          __html: (content || data.content).replace(/\n/gm, "<br />"),
         }}
       />
       <div

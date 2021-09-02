@@ -45,6 +45,12 @@
     }
   }
 
+  &-block-content {
+    display: block;
+    text-align: left;
+    padding: 20px 12px;
+  }
+
   &-input {
     background: #272727;
     padding: 7px 15px;
@@ -88,6 +94,7 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    vertical-align: middle;
   }
 
   &.error {
