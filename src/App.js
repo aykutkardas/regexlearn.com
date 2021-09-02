@@ -31,16 +31,10 @@ function App() {
   };
 
   useEffect(() => {
-    mousetrap.bindGlobal(["ctrl+left", "command+left"], prevStep);
-    mousetrap.bindGlobal(["ctrl+right", "command+right"], nextStep);
+    mousetrap.bindGlobal(["alt+left"], prevStep);
+    mousetrap.bindGlobal(["alt+right"], nextStep);
 
-    return () =>
-      mousetrap.unbindGlobal([
-        "ctrl+left",
-        "ctrl+right",
-        "command+left",
-        "command+right",
-      ]);
+    return () => mousetrap.unbindGlobal(["alt+left", "alt+right"]);
   }, [step]);
 
   return (
