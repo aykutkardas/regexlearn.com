@@ -121,5 +121,23 @@
     "regex": "[1-3]",
     "flags": "g",
     "answer": ["1", "2", "3", "4", "5"]
+  },
+  {
+    "title": "steps.13.title",
+    "description": "steps.13.description",
+    "content": "Hello,\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Hello. Aenean quis odio vulputate dui varius finibus at nec lectus. \n\nHello, nunc diam sapien, sagittis ac elementum eu, maximus sit amet nunc. Sed tincidunt luctus tortor. Hello.  Duis eleifend ipsum velit.",
+    "initialValue": "Hello",
+    "regex": "^Hello",
+    "flags": "gm",
+    "answer": ["Hello", "Hello"]
+  },
+  {
+    "title": "steps.14.title",
+    "description": "steps.14.description",
+    "content": "Lorem ipsum dolor sit amet, Bye consectetur adipiscing elit.\nAenean quis odio vulputate dui varius finibus at nec lectus. Bye\n\nBye, nunc diam sapien, sagittis ac elementum eu, maximus sit amet nunc. Sed tincidunt luctus tortor.  Duis eleifend ipsum velit. Bye",
+    "initialValue": "Bye",
+    "regex": "Bye$",
+    "flags": "gm",
+    "answer": ["Bye", "Bye"]
   }
 ]
