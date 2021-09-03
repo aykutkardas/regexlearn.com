@@ -18,13 +18,17 @@ function App() {
   const [lang, setLang] = useState(defaultLang);
   const [step, setStep] = useState(0);
 
-  const prevStep = () => {
+  const prevStep = (e) => {
+    e.preventDefault();
+
     if (step > 0) {
       setStep(step - 1);
     }
   };
 
-  const nextStep = () => {
+  const nextStep = (e) => {
+    e.preventDefault();
+
     if (step < data.length - 1) {
       setStep(step + 1);
     }
