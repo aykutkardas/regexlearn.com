@@ -1,1 +1,10 @@
-{}
+{
+  "general.prevStep": "Previous Step",
+  "general.nextStep": "Next Step",
+  "general.result": "Result",
+  "general.regex": "Regex",
+  "general.text": "Text",
+  "general.completedStarterStep": "Starter Step - Completed.",
+  "general.completedCurrentStep": "Step {step} - Completed.",
+  "general.hintQuestion": "Do you need answer?"
+}
