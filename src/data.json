@@ -109,7 +109,7 @@
     "description": "steps.11.description",
     "content": "abcdefghABC123 .:!?",
     "initialValue": "[-]",
-    "regex": "[a-c]",
+    "regex": "[a-f]",
     "flags": "g",
     "answer": ["a", "b", "c", "d", "e", "f"]
   },
@@ -118,7 +118,7 @@
     "description": "steps.12.description",
     "content": "abcABC123456789 .:!?",
     "initialValue": "[-]",
-    "regex": "[1-3]",
+    "regex": "[1-5]",
     "flags": "g",
     "answer": ["1", "2", "3", "4", "5"]
   },
