@@ -35,10 +35,11 @@ function App() {
   };
 
   useEffect(() => {
+    mousetrap.bindGlobal(["alt"], (e) => e.preventDefault());
     mousetrap.bindGlobal(["alt+left"], prevStep);
     mousetrap.bindGlobal(["alt+right"], nextStep);
 
-    return () => mousetrap.unbindGlobal(["alt+left", "alt+right"]);
+    return () => mousetrap.unbindGlobal(["alt+left", "alt+right", "alt"]);
   }, [step]);
 
   return (
