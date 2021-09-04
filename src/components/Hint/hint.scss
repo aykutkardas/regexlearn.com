@@ -1,0 +1,25 @@
+.hint {
+  cursor: default;
+  min-width: 10px;
+  color: #8d8d8d;
+  font-size: 10px;
+  padding: 5px;
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  &-question {
+    position: relative;
+
+    .shortcut {
+      position: absolute;
+      bottom: -30px;
+      right: 0;
+      font-size: 8px;
+    }
+  }
+
+  &-answer {
+    color: #5ff59b;
+  }
+}

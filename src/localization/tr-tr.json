@@ -6,6 +6,7 @@
   "general.text": "Metin",
   "general.completedStarterStep": "Başlangıç - Tamamlandı.",
   "general.completedCurrentStep": "Adım {step} - Tamamlandı.",
+  "general.hintQuestion": "Cevaba ihtiyacın var mı?",
 
   "steps.0.title": "Başlangıç",
   "steps.0.description": "Regexi öğrenmeyi sağlayacak çeşitli adımlar mevcut. Aşağıdaki `Metin` alanı regex uygulayacağımız metni ifade eder. `Regex` alanı ise regex yazacağımız bir metin alanıdır. Regex yazdıkça `Metin` alanında sonuçlar önizlenir. İlk adıma geçmek için Regex alanına `OK` yazarak başlayalım.",

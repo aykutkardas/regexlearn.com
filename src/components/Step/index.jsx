@@ -5,6 +5,8 @@ import { FormattedMessage, useIntl } from "react-intl";
 import { toast } from "react-toastify";
 import _ from "lodash";
 
+import Hint from "../Hint";
+
 function Steps({ data, step }) {
   const [regex, setRegex] = useState(data.initialValue || "");
   const [content, setContent] = useState(null);
@@ -97,6 +99,8 @@ function Steps({ data, step }) {
         className="step-block"
         data-title={formatMessage({ id: "general.regex" })}
       >
+        <Hint regex={data.regex} flags={data.flags} />
+
         <div className="step-input" data-flags={data.flags}>
           <input
             ref={regexInput}
