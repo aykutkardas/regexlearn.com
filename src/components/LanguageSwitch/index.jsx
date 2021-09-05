@@ -6,6 +6,7 @@ import langs, { langNames } from "../../localization";
 import Icon from "../Icon";
 import Shortcut from "../Shortcut";
 import Mousetrap from "mousetrap";
+import shortcut from "../../shortcut";
 
 const langList = Object.keys(langs).map((langKey) => ({
   value: langKey,
@@ -28,10 +29,10 @@ const LanguageSwitch = ({ lang, setLang }) => {
   const availableLangList = langList.filter((item) => item.value !== lang);
 
   useEffect(() => {
-    Mousetrap.bindGlobal("alt+l", toggleVisible);
+    Mousetrap.bindGlobal(shortcut.languageSwitch, toggleVisible);
 
     availableLangList.forEach((item, index) => {
-      Mousetrap.bindGlobal("alt+l+" + (index + 1), (e) => {
+      Mousetrap.bindGlobal(shortcut.languageSwitch + "+" + (index + 1), (e) => {
         e.preventDefault();
         setLang(item.value);
       });
@@ -39,8 +40,10 @@ const LanguageSwitch = ({ lang, setLang }) => {
 
     return () =>
       Mousetrap.unbindGlobal([
-        "alt+l",
-        ...availableLangList.map((item, index) => "alt+l+" + index),
+        shortcut.languageSwitch,
+        ...availableLangList.map(
+          (item, index) => shortcut.languageSwitch + "+" + index
+        ),
       ]);
   }, [visible, lang]);
 

@@ -6,17 +6,18 @@ import { FormattedMessage } from "react-intl";
 import Mousetrap from "mousetrap";
 
 import Shortcut from "../Shortcut";
+import shortcut from "../../shortcut";
 
 const Hint = ({ regex, flags }) => {
   const hintRef = useRef(null);
 
   useEffect(() => {
-    Mousetrap.bindGlobal("alt+h", () => {
+    Mousetrap.bindGlobal(shortcut.hint, () => {
       ReactTooltip.show(hintRef.current);
     });
 
     return () => {
-      Mousetrap.unbindGlobal("alt+h");
+      Mousetrap.unbindGlobal(shortcut.hint);
       ReactTooltip.hide(hintRef.current);
     };
   }, []);

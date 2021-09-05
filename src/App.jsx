@@ -3,7 +3,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { useEffect, useState } from "react";
 import { IntlProvider } from "react-intl";
 import { ToastContainer } from "react-toastify";
-import mousetrap from "mousetrap";
+import Mousetrap from "mousetrap";
 import "mousetrap-global-bind";
 
 import localization from "./localization";
@@ -14,6 +14,7 @@ import Navigation from "./components/Navigation";
 import getOS from "./utils/getOS";
 
 import data from "./data.json";
+import shortcut from "./shortcut";
 
 function App() {
   const currentOS = getOS();
@@ -39,11 +40,16 @@ function App() {
   };
 
   useEffect(() => {
-    mousetrap.bindGlobal(["alt"], (e) => e.preventDefault());
-    mousetrap.bindGlobal(["alt+left"], prevStep);
-    mousetrap.bindGlobal(["alt+right"], nextStep);
+    Mousetrap.bindGlobal(shortcut.rootKey, (e) => e.preventDefault());
+    Mousetrap.bindGlobal(shortcut.prevStep, prevStep);
+    Mousetrap.bindGlobal(shortcut.nextStep, nextStep);
 
-    return () => mousetrap.unbindGlobal(["alt+left", "alt+right", "alt"]);
+    return () =>
+      Mousetrap.unbindGlobal([
+        shortcut.prevStep,
+        shortcut.nextStep,
+        shortcut.rootKey,
+      ]);
   }, [step]);
 
   return (
