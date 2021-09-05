@@ -17,7 +17,7 @@ import data from "./data.json";
 
 function App() {
   const currentOS = getOS();
-  const isDesktop = ["Windows", "Mas OS", "Linux"].includes(currentOS);
+  const isDesktop = ["Windows", "Mac OS", "Linux"].includes(currentOS);
   const defaultLang = "tr-tr";
   const [lang, setLang] = useState(defaultLang);
   const [step, setStep] = useState(0);
