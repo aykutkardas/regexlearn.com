@@ -1,4 +1,4 @@
-import "./App.css";
+import "./App.scss";
 import "react-toastify/dist/ReactToastify.css";
 import { useEffect, useState } from "react";
 import { IntlProvider } from "react-intl";
@@ -11,9 +11,13 @@ import Header from "./components/Header";
 import Step from "./components/Step";
 import Navigation from "./components/Navigation";
 
+import getOS from "./utils/getOS";
+
 import data from "./data.json";
 
 function App() {
+  const currentOS = getOS();
+  const isDesktop = ["Windows", "Mas OS", "Linux"].includes(currentOS);
   const defaultLang = "tr-tr";
   const [lang, setLang] = useState(defaultLang);
   const [step, setStep] = useState(0);
@@ -48,7 +52,7 @@ function App() {
       locale={lang}
       defaultLocale={defaultLang}
     >
-      <div className="App">
+      <div className={"App " + (isDesktop ? "desktop" : "")}>
         <Header lang={lang} setLang={setLang} />
         <Step data={data[step]} step={step} />
         <Navigation

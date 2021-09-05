@@ -7,6 +7,16 @@
   align-items: center;
   justify-content: center;
   color: white;
+
+  .shortcut {
+    display: none;
+  }
+
+  &.desktop {
+    .shortcut {
+      display: block;
+    }
+  }
 }
 
 .Toastify__toast-theme--colored.Toastify__toast--success {
