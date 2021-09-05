@@ -1,0 +1,53 @@
+.language-switch {
+  margin: 10px;
+  margin-left: auto;
+  position: relative;
+  cursor: pointer;
+
+  &:hover {
+    .language-switch-list {
+      display: block;
+    }
+  }
+
+  &-current {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    .shortcut {
+      position: absolute;
+      top: 0px;
+      left: -50px;
+      font-size: 10px;
+    }
+
+    svg {
+      margin-left: 8px;
+    }
+  }
+
+  &-list {
+    position: absolute;
+    display: none;
+    font-size: 14px;
+    padding-top: 10px;
+
+    &.visible {
+      display: block;
+    }
+
+    &-item {
+      padding: 5px;
+      color: #a9a9a9;
+      position: relative;
+
+      .shortcut {
+        position: absolute;
+        left: -50px;
+        font-size: 8px;
+      }
+    }
+  }
+}

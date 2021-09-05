@@ -1,8 +1,9 @@
 import "./header.scss";
 
 import Icon from "../Icon";
+import LanguageSwitch from "../LanguageSwitch";
 
-const Header = () => {
+const Header = ({ lang, setLang }) => {
   return (
     <header className="header">
       <div className="header-social">
@@ -21,6 +22,7 @@ const Header = () => {
           <Icon icon="twitter" size={20} color="white" />
         </a>
       </div>
+      <LanguageSwitch lang={lang} setLang={setLang} />
     </header>
   );
 };
