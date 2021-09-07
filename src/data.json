@@ -139,5 +139,32 @@
     "regex": "Bye$",
     "flags": "gm",
     "answer": ["Bye", "Bye"]
+  },
+  {
+    "title": "steps.15.title",
+    "description": "steps.15.description",
+    "content": "color, colour",
+    "initialValue": "colour",
+    "regex": "colou?r",
+    "flags": "g",
+    "answer": ["color", "colour"]
+  },
+  {
+    "title": "steps.16.title",
+    "description": "steps.16.description",
+    "content": "br ber beer beeer beeeer",
+    "initialValue": "ber",
+    "regex": "be+r",
+    "flags": "g",
+    "answer": ["ber", "beer", "beeer", "beeeer"]
+  },
+  {
+    "title": "steps.17.title",
+    "description": "steps.17.description",
+    "content": "br ber beer beeer beeeer",
+    "initialValue": "ber",
+    "regex": "be+r",
+    "flags": "g",
+    "answer": ["br", "ber", "beer", "beeer", "beeeer"]
   }
 ]

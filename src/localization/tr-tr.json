@@ -51,5 +51,14 @@
   "steps.13.description": "Sadece satır başında geçen `Hello` değerlerini seçmek için `^` işaretini `Hello` değerinden önce kullanalım.",
 
   "steps.14.title": "Adım 14 - ($) Satır Sonuna Göre",
-  "steps.14.description": "Sadece satır sonunda geçen `Bye` değerlerini seçmek için `$` işaretini `Bye` değerinden sonra kullanalım."
+  "steps.14.description": "Sadece satır sonunda geçen `Bye` değerlerini seçmek için `$` işaretini `Bye` değerinden sonra kullanalım.",
+
+  "steps.15.title": "Adım 15 - Opsiyonel",
+  "steps.15.description": "Bir karakterin ya da tanımlanmış örüntünün opsiyonel olduğunu ifade etmek için sonuna `?` soru işareti koyarız. Örneğin aşağıdaki `u` harfinin opsiyonel olduğunu bildirelim.",
+
+  "steps.16.title": "Adım 16 - İfadenin Bir ya da Daha Fazla Eşleşmesie Göre",
+  "steps.16.description": "Bir karakterin ya da tanımlanmış örüntünün bir ya da daha fazla geçebileceğini ifade etmek için sonuna `+` artı işareti koyarız. Örneğin aşağıdaki `e` harfinin bir ya daha fazla olabileceğini bildirelim.",
+
+  "steps.17.title": "Adım 17 - İfadenin Hiç ya da Birden Fazla Eşleşmesie Göre",
+  "steps.17.description": "Bir karakterin ya da tanımlanmış örüntünün hiç ya da birden fazla geçebileceğini ifade etmek için sonuna `*` yıldız işareti koyarız. Örneğin aşağıdaki `e` harfinin hiç ya birden fazla olabileceğini bildirelim."
 }
