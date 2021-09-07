@@ -56,9 +56,21 @@
   "steps.15.title": "Adım 15 - Opsiyonel",
   "steps.15.description": "Bir karakterin ya da tanımlanmış örüntünün opsiyonel olduğunu ifade etmek için sonuna `?` soru işareti koyarız. Örneğin aşağıdaki `u` harfinin opsiyonel olduğunu bildirelim.",
 
-  "steps.16.title": "Adım 16 - İfadenin Bir ya da Daha Fazla Eşleşmesie Göre",
+  "steps.16.title": "Adım 16 - İfadenin Bir ya da Daha Fazla Eşleşmesine Göre",
   "steps.16.description": "Bir karakterin ya da tanımlanmış örüntünün bir ya da daha fazla geçebileceğini ifade etmek için sonuna `+` artı işareti koyarız. Örneğin aşağıdaki `e` harfinin bir ya daha fazla olabileceğini bildirelim.",
 
-  "steps.17.title": "Adım 17 - İfadenin Hiç ya da Birden Fazla Eşleşmesie Göre",
-  "steps.17.description": "Bir karakterin ya da tanımlanmış örüntünün hiç ya da birden fazla geçebileceğini ifade etmek için sonuna `*` yıldız işareti koyarız. Örneğin aşağıdaki `e` harfinin hiç ya birden fazla olabileceğini bildirelim."
+  "steps.17.title": "Adım 17 - İfadenin Hiç ya da Birden Fazla Eşleşmesine Göre",
+  "steps.17.description": "Bir karakterin ya da tanımlanmış örüntünün hiç ya da birden fazla geçebileceğini ifade etmek için sonuna `*` yıldız işareti koyarız. Örneğin aşağıdaki `e` harfinin hiç ya birden fazla olabileceğini bildirelim.",
+
+  "steps.18.title": "Adım 18 - İfadenin Belirli Bir Sayıda Eşleşmesine Göre",
+  "steps.18.description": "Bir karakterin ya da tanımlanmış örüntünün belirli bir sayıda geçmesini ifade etmek için sonuna `{x}` süslü parantezleri, içine kaç kere geçmesini istediğimizle birlikte yazarız. Örneğin aşağıdaki `e` harfinin sadece iki kere geçebileceğini bildirelim.",
+
+  "steps.19.title": "Adım 19 - İfadenin Belirli Bir Sayıda ya da Daha Fazla Eşleşmesine Göre",
+  "steps.19.description": "Bir karakterin ya da tanımlanmış örüntünün belirli bir sayıda ya da daha fazla geçmesini ifade etmek için sonuna `{x,}` süslü parantezleri, içine en az kaç kere geçmesini istediğimizi virgül ile birlikte yazarız. Örneğin aşağıdaki `e` harfinin sadece en az iki ve daha fazla geçebileceğini bildirelim.",
+
+  "steps.20.title": "Adım 20 - İfadenin Belirli Bir Sayı Aralığında Eşleşmesine Göre",
+  "steps.20.description": "Bir karakterin ya da tanımlanmış örüntünün belirli bir sayı aralığında geçmesini ifade etmek için sonuna `{x,y}` süslü parantezleri, içine en az ve en fazla kaç kere geçmesini istediğimizle birlikte yazarız. Örneğin aşağıdaki `e` harfinin sadece bir ile üç arasında geçebileceğini bildirelim.",
+
+  "steps.21.title": "Adım 21 - Ya Da Operatörü",
+  "steps.21.description": "Bir durum için birden fazla karakter ya da tanımlanmış örüntü gelebileceğini ifade eder. Böylece olabilecek tüm ifadeler `(x|y)` parantez içerisinde `|` işareti ile birbirinden ayrılır. Örneğin aşağıdaki `e` harfinin `a` da olabileceğini bildirelim."
 }

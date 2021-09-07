@@ -166,5 +166,41 @@
     "regex": "be+r",
     "flags": "g",
     "answer": ["br", "ber", "beer", "beeer", "beeeer"]
+  },
+  {
+    "title": "steps.18.title",
+    "description": "steps.18.description",
+    "content": "ber beer beeer beeeer",
+    "initialValue": "be{}r",
+    "regex": "be{2}r",
+    "flags": "g",
+    "answer": ["beer"]
+  },
+  {
+    "title": "steps.19.title",
+    "description": "steps.19.description",
+    "content": "ber beer beeer beeeer",
+    "initialValue": "be{,}r",
+    "regex": "be{1,3}r",
+    "flags": "g",
+    "answer": ["beer", "beeer", "beeeer"]
+  },
+  {
+    "title": "steps.20.title",
+    "description": "steps.20.description",
+    "content": "ber beer beeer beeeer",
+    "initialValue": "be{,}r",
+    "regex": "be{1,3}r",
+    "flags": "g",
+    "answer": ["ber", "beer", "beeer"]
+  },
+  {
+    "title": "steps.21.title",
+    "description": "steps.21.description",
+    "content": "beer bear",
+    "initialValue": "be(e|)r",
+    "regex": "be(a|e)r",
+    "flags": "g",
+    "answer": ["beer", "bear"]
   }
 ]
