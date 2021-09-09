@@ -109,9 +109,9 @@
     "description": "steps.11.description",
     "content": "abcdefghABC123 .:!?",
     "initialValue": "[-]",
-    "regex": "[a-f]",
+    "regex": "[a-g]",
     "flags": "g",
-    "answer": ["a", "b", "c", "d", "e", "f"]
+    "answer": ["a", "b", "c", "d", "e", "f", "g"]
   },
   {
     "title": "steps.12.title",
@@ -202,5 +202,23 @@
     "regex": "be(a|e)r",
     "flags": "g",
     "answer": ["beer", "bear"]
+  },
+  {
+    "title": "steps.22.title",
+    "description": "steps.22.description",
+    "content": "red and blue",
+    "initialValue": "(a)",
+    "regex": "(and)",
+    "flags": "g",
+    "answer": ["and"]
+  },
+  {
+    "title": "steps.23.title",
+    "description": "steps.23.description",
+    "content": "444-0-444",
+    "initialValue": "(\\d{3})-\\d-",
+    "regex": "(444)-0-\\1",
+    "flags": "g",
+    "answer": ["444-0-444"]
   }
 ]

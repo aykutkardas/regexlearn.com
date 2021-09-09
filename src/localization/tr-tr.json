@@ -72,5 +72,11 @@
   "steps.20.description": "Bir karakterin ya da tanımlanmış örüntünün belirli bir sayı aralığında geçmesini ifade etmek için sonuna `{x,y}` süslü parantezleri, içine en az ve en fazla kaç kere geçmesini istediğimizle birlikte yazarız. Örneğin aşağıdaki `e` harfinin sadece bir ile üç arasında geçebileceğini bildirelim.",
 
   "steps.21.title": "Adım 21 - Ya Da Operatörü",
-  "steps.21.description": "Bir durum için birden fazla karakter ya da tanımlanmış örüntü gelebileceğini ifade eder. Böylece olabilecek tüm ifadeler `(x|y)` parantez içerisinde `|` işareti ile birbirinden ayrılır. Örneğin aşağıdaki `e` harfinin `a` da olabileceğini bildirelim."
+  "steps.21.description": "Bir durum için birden fazla karakter ya da tanımlanmış örüntü gelebileceğini ifade eder. Böylece olabilecek tüm ifadeler `(x|y)` parantez içerisinde `|` işareti ile birbirinden ayrılır. Örneğin aşağıdaki `e` harfinin `a` da olabileceğini bildirelim.",
+
+  "steps.22.title": "Adım 22 - Gruplama",
+  "steps.22.description": "Bir ifadeyi gruplayabilir ve bunlara farklı kurallar uygulama için kullanabiliriz. Bir ifadeyi gruplamak için `()` parantezler içine alırız. Şimdilik sadece aşağıdaki `and` kelimesini gruplayalım.",
+
+  "steps.23.title": "Adım 23 - Bir Gruba Referans Göstermek",
+  "steps.23.description": "Tekrar eden ifadelerde aynı şeyi tekrar tekrar yazmamak için daha önce yaptığımız bir gruba referans gösterebiliriz. Örneğin bu örnekte `444` değeri `(\\d{3})` ifadesi olarak gruplanmıştır. İlk tanımladığımız bu gruba referans göstermek için, kullanmak istediğimiz yerde `\\` işareti yanına gruplama sıramızın numarasını ekliyoruz. Bu örnek için `1` i. Şimdi deneyelim."
 }
