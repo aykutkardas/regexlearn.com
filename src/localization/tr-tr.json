@@ -42,7 +42,7 @@
   "steps.10.description": "Belli karakterlerin dışındakileri almak için almak istemediğimiz karakterleri köşeli parantezler `[ ]` içine üst karakteri `^` ile başlayacak şekilde yan yana yazarız. Küçük harflerle yazılmış `a`, `b` ve `c` karakterleri dışındakileri almak için köşeli parantezler içinde başına bir kez `^` karakteri koyarak bu harfleri yan yana yazalım.",
 
   "steps.11.title": "Adım 11 - Belli Aralıktaki Harfler",
-  "steps.11.description": "Belli aralıktaki harfleri almak için başlangıç harfi ve bitiş harfi aralarında bir tire `-` olacak şekilde köşeli parantezler `[ ]` içine yazılır. Aynısı sayılar içinde geçerlidir. Büyük küçük harf duyarlıdır. `a` ve `f` de dahil aralarındaki tüm harfleri alacak regexi yazalım.",
+  "steps.11.description": "Belli aralıktaki harfleri almak için başlangıç harfi ve bitiş harfi aralarında bir tire `-` olacak şekilde köşeli parantezler `[ ]` içine yazılır. Aynısı sayılar içinde geçerlidir. Büyük küçük harf duyarlıdır. `a` ve `g` de dahil aralarındaki tüm harfleri alacak regexi yazalım.",
 
   "steps.12.title": "Adım 12 - Belli Aralıktaki Sayılar",
   "steps.12.description": "Belli aralıktaki sayıları almak için başlangıç sayısı ve bitiş sayısı aralarında bir tire `-` olacak şekilde köşeli parantezler `[ ]` içine yazılır. `1` ve `5` de dahil aralarındaki tüm sayıları alacak regexi yazalım.",
