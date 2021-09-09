@@ -28,7 +28,12 @@ function Steps({ data, step }) {
 
   const checkRegex = () => {
     try {
-      const reg = new RegExp("(" + regex + ")", data.flags);
+      let $regex = regex;
+      [...$regex.matchAll(/\\(\d+)/g)].forEach((item) => {
+        $regex = $regex.replace("\\" + item[1], "\\" + (parseInt(item[1]) + 1));
+      });
+
+      const reg = new RegExp("(" + $regex + ")", data.flags);
       const regResult = [...data.content.matchAll(reg)]
         .map((res) => res[0])
         .filter((res) => !!res);
