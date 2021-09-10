@@ -41,15 +41,15 @@
   {
     "title": "steps.3.title",
     "description": "steps.3.description",
-    "content": "abcABC123 _-=.:!?",
+    "content": "abcABC123 _.:!?",
     "regex": "\\w",
     "flags": "g",
-    "answer": ["a", "b", "c", "A", "B", "C", "1", "2", "3"]
+    "answer": ["a", "b", "c", "A", "B", "C", "1", "2", "3", "_"]
   },
   {
     "title": "steps.4.title",
     "description": "steps.4.description",
-    "content": "abcABC123 .:!?",
+    "content": "abcABC123 _.:!?",
     "regex": "\\W",
     "flags": "g",
     "answer": [" ", ".", ":", "!", "?"]
