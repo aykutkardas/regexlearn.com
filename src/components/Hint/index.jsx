@@ -6,18 +6,18 @@ import { FormattedMessage } from "react-intl";
 import Mousetrap from "mousetrap";
 
 import Shortcut from "../Shortcut";
-import shortcut from "../../shortcut";
+import shortcuts from "../../shortcuts";
 
 const Hint = ({ regex, flags }) => {
   const hintRef = useRef(null);
 
   useEffect(() => {
-    Mousetrap.bindGlobal(shortcut.hint, () => {
+    Mousetrap.bindGlobal(shortcuts.hint, () => {
       ReactTooltip.show(hintRef.current);
     });
 
     return () => {
-      Mousetrap.unbindGlobal(shortcut.hint);
+      Mousetrap.unbindGlobal(shortcuts.hint);
       ReactTooltip.hide(hintRef.current);
     };
   }, []);
@@ -25,7 +25,7 @@ const Hint = ({ regex, flags }) => {
   return (
     <div ref={hintRef} className="hint" data-tip data-for="hint">
       <span className="hint-question">
-        <Shortcut command={`ALT + H`} />
+        <Shortcut command={shortcuts.hint} />
         <FormattedMessage id="general.hintQuestion" />
       </span>
 

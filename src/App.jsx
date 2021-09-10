@@ -14,7 +14,7 @@ import Navigation from "./components/Navigation";
 import getOS from "./utils/getOS";
 
 import data from "./data.json";
-import shortcut from "./shortcut";
+import shortcuts from "./shortcuts";
 
 function App() {
   const currentOS = getOS();
@@ -40,15 +40,15 @@ function App() {
   };
 
   useEffect(() => {
-    Mousetrap.bindGlobal(shortcut.rootKey, (e) => e.preventDefault());
-    Mousetrap.bindGlobal(shortcut.prevStep, prevStep);
-    Mousetrap.bindGlobal(shortcut.nextStep, nextStep);
+    Mousetrap.bindGlobal(shortcuts.rootKey, (e) => e.preventDefault());
+    Mousetrap.bindGlobal(shortcuts.prevStep, prevStep);
+    Mousetrap.bindGlobal(shortcuts.nextStep, nextStep);
 
     return () =>
       Mousetrap.unbindGlobal([
-        shortcut.prevStep,
-        shortcut.nextStep,
-        shortcut.rootKey,
+        shortcuts.prevStep,
+        shortcuts.nextStep,
+        shortcuts.rootKey,
       ]);
   }, [step]);
 

@@ -6,7 +6,7 @@ import langs, { langNames } from "../../localization";
 import Icon from "../Icon";
 import Shortcut from "../Shortcut";
 import Mousetrap from "mousetrap";
-import shortcut from "../../shortcut";
+import shortcuts from "../../shortcuts";
 
 const langList = Object.keys(langs).map((langKey) => ({
   value: langKey,
@@ -29,20 +29,23 @@ const LanguageSwitch = ({ lang, setLang }) => {
   const availableLangList = langList.filter((item) => item.value !== lang);
 
   useEffect(() => {
-    Mousetrap.bindGlobal(shortcut.languageSwitch, toggleVisible);
+    Mousetrap.bindGlobal(shortcuts.languageSwitch, toggleVisible);
 
     availableLangList.forEach((item, index) => {
-      Mousetrap.bindGlobal(shortcut.languageSwitch + "+" + (index + 1), (e) => {
-        e.preventDefault();
-        setLang(item.value);
-      });
+      Mousetrap.bindGlobal(
+        shortcuts.languageSwitch + "+" + (index + 1),
+        (e) => {
+          e.preventDefault();
+          setLang(item.value);
+        }
+      );
     });
 
     return () =>
       Mousetrap.unbindGlobal([
-        shortcut.languageSwitch,
+        shortcuts.languageSwitch,
         ...availableLangList.map(
-          (item, index) => shortcut.languageSwitch + "+" + index
+          (item, index) => shortcuts.languageSwitch + "+" + index
         ),
       ]);
   }, [visible, lang]);
@@ -50,7 +53,7 @@ const LanguageSwitch = ({ lang, setLang }) => {
   return (
     <div className="language-switch">
       <div className="language-switch-current">
-        <Shortcut command={`ALT + L`} />
+        <Shortcut command={shortcuts.languageSwitch} />
         {langNames[lang]}
         <Icon icon="earth" color="#fff" size={15}></Icon>
       </div>
@@ -62,7 +65,7 @@ const LanguageSwitch = ({ lang, setLang }) => {
             data-value={item.value}
             className="language-switch-list-item"
           >
-            <Shortcut command={`ALT + L + ` + (index + 1)} />
+            <Shortcut command={shortcuts.languageSwitch + "+" + (index + 1)} />
             {item.label}
           </div>
         ))}
