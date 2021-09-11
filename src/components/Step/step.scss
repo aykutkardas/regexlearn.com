@@ -1,6 +1,12 @@
 .step {
-  max-width: 80%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   width: 800px;
+  max-width: 90%;
+  text-align: center;
+  margin: 0 auto;
 
   &-title {
     font-size: 28px;
@@ -54,6 +60,9 @@
   &-input {
     background: #272727;
     padding: 7px 15px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
 
     input {
       border: 0px;
@@ -64,6 +73,7 @@
       color: #5ff59b;
       letter-spacing: 4px;
       max-width: 440px;
+      overflow: hidden;
 
       &:active,
       &:focus {
@@ -102,5 +112,11 @@
     .step-result-tag {
       background: tomato;
     }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .step-input {
+    max-width: 100px;
   }
 }

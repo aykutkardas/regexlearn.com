@@ -2,7 +2,6 @@ import "./App.scss";
 import "react-toastify/dist/ReactToastify.css";
 import { useEffect, useState } from "react";
 import { IntlProvider } from "react-intl";
-import { ToastContainer } from "react-toastify";
 import Mousetrap from "mousetrap";
 import "mousetrap-global-bind";
 
@@ -67,7 +66,6 @@ function App() {
           prevStep={prevStep}
           nextStep={nextStep}
         />
-        <ToastContainer />
       </div>
     </IntlProvider>
   );

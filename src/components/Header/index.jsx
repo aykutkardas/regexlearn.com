@@ -1,11 +1,14 @@
 import "./header.scss";
 
+import { ToastContainer } from "react-toastify";
+
 import Icon from "../Icon";
 import LanguageSwitch from "../LanguageSwitch";
 
 const Header = ({ lang, setLang }) => {
   return (
     <header className="header">
+      <ToastContainer />
       <div className="header-social">
         <a
           href="https://github.com/aykutkardas/easy-regex"

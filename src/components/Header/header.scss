@@ -1,15 +1,10 @@
 .header {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 50px;
-  width: 100%;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  height: 50px;
+  padding: 20px;
 
   &-social {
-    margin-left: 50px;
     display: flex;
 
     a {
@@ -18,12 +13,11 @@
       }
 
       svg {
-        margin-right: 20px;
+        margin: 0 10px;
       }
     }
   }
 
   .language-switch {
-    margin-right: 50px;
   }
 }

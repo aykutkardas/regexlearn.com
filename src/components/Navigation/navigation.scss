@@ -1,12 +1,10 @@
 .navigation {
   display: flex;
-  position: absolute;
-  width: 100%;
-  bottom: 0;
-  left: 0;
+  align-items: center;
+  height: 100px;
+  padding: 20px;
 
   &-step {
-    margin: 50px;
     cursor: pointer;
     display: flex;
     align-items: center;
