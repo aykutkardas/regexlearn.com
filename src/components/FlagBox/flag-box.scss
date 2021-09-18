@@ -1,0 +1,13 @@
+.flag-box {
+  display: flex;
+  margin-top: 10px;
+
+  &-item {
+    display: flex;
+    align-items: center;
+
+    &-highlight {
+      color: #5ff59b;
+    }
+  }
+}
