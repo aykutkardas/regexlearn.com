@@ -6,9 +6,11 @@ import { toast } from "react-toastify";
 import _ from "lodash";
 
 import Hint from "../Hint";
+import FlagBox from "../FlagBox";
 
 function Steps({ data, step }) {
   const [regex, setRegex] = useState(data.initialValue || "");
+  const [flags, setFlags] = useState(data.initialFlags);
   const [content, setContent] = useState(null);
   const [error, setError] = useState(false);
   const [success, setSuccess] = useState(false);
@@ -19,6 +21,7 @@ function Steps({ data, step }) {
     setError(false);
     setSuccess(false);
     setContent(data.content);
+    setFlags(data.initialFlags);
     setRegex(data.initialValue || "");
     checkRegex();
     if (regexInput) {
@@ -33,8 +36,10 @@ function Steps({ data, step }) {
         $regex = $regex.replace("\\" + item[1], "\\" + (parseInt(item[1]) + 1));
       });
 
-      const reg = new RegExp("(" + $regex + ")", data.flags);
-      const regResult = [...data.content.matchAll(reg)]
+      const reg = new RegExp("(" + $regex + ")", flags);
+      const regResult = [
+        ...data.content[flags?.includes("g") ? "matchAll" : "match"](reg),
+      ]
         .map((res) => res[0])
         .filter((res) => !!res);
       const isSuccess =
@@ -77,7 +82,7 @@ function Steps({ data, step }) {
     }
   };
 
-  useEffect(checkRegex, [regex]);
+  useEffect(checkRegex, [regex, flags]);
 
   return (
     <div className={"step " + (error ? "error" : "")} key={step}>
@@ -101,12 +106,11 @@ function Steps({ data, step }) {
         }}
       />
       <div
-        className="step-block"
+        className="step-block step-block-regex"
         data-title={formatMessage({ id: "general.regex" })}
       >
         <Hint regex={data.regex} flags={data.flags} />
-
-        <div className="step-input" data-flags={data.flags}>
+        <div className="step-input" data-flags={flags}>
           <input
             ref={regexInput}
             key={step}
@@ -121,6 +125,7 @@ function Steps({ data, step }) {
             spellCheck={false}
           />
         </div>
+        {data.useFlagsControl && <FlagBox flags={flags} setFlags={setFlags} />}
       </div>
     </div>
   );

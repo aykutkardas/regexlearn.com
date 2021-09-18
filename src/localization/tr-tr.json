@@ -78,5 +78,14 @@
   "steps.22.description": "Bir ifadeyi gruplayabilir ve bunlara referams göstermek ya da bazı kurallar uygulamak için kullanabiliriz. Bir ifadeyi gruplamak için `()` parantezler içine alırız. Şimdilik sadece aşağıdaki `and` kelimesini gruplayalım.",
 
   "steps.23.title": "Adım 23 - Bir Gruba Referans Göstermek",
-  "steps.23.description": "Tekrar eden ifadelerde aynı şeyi tekrar tekrar yazmamak için daha önce yaptığımız bir gruba referans gösterebiliriz. Örneğin bu örnekte `444` değeri `(\\d{3})` ifadesi olarak gruplanmıştır. İlk tanımladığımız bu gruba referans göstermek için, kullanmak istediğimiz yerde `\\` işareti yanına gruplama sıramızın numarasını ekliyoruz. Bu örnek için bu sıra numarası `1` dir. Şimdi deneyelim."
+  "steps.23.description": "Tekrar eden ifadelerde aynı şeyi tekrar tekrar yazmamak için daha önce yaptığımız bir gruba referans gösterebiliriz. Örneğin bu örnekte `444` değeri `(\\d{3})` ifadesi olarak gruplanmıştır. İlk tanımladığımız bu gruba referans göstermek için, kullanmak istediğimiz yerde `\\` işareti yanına gruplama sıramızın numarasını ekliyoruz. Bu örnek için bu sıra numarası `1` dir. Şimdi deneyelim.",
+
+  "steps.24.title": "Adım 24 - Bayraklar (global)",
+  "steps.24.description": "Bayraklar yazdığımız ifadenin hangi kurallara göre uygulanacağını belirler. Örneğin büyük küçük harf duyarlı olacak mı? Tek bir eşleşme mi bulacak yoksa tümünü mü? Ya da sadece ilk satırda mı çalışacak tüm satırlarda mı? gibi. Önceki adımlarda bu bayraklar hep hazır seçili geldi. Şimdi tüm eşleşmeleri bulabilmek için `global` bayrağını aktif edelim.",
+
+  "steps.25.title": "Adım 25 - Bayraklar (multiline)",
+  "steps.25.description": "RegEx tüm metni tek satır olarak görür. Fakat her satırı ayrı ayrı ele alabilmek için `multiline` bayrağını kullanırız. Bu sayede satır sonuna göre yazdığımız ifadeler her satır için ayrı ayrı çalışır. Şimdi tüm eşleşmeleri bulabilmek için `global` ve `multiline` bayrağını aktif edelim.",
+
+  "steps.26.title": "Adım 26 - Bayraklar (case-insensitive)",
+  "steps.26.description": "Yazdıdığımız ifadenin büyük küçük harf duyarlılığını kaldırmak için `case-insensitive` bayrağını aktif etmeliyiz. Deneyelim."
 }

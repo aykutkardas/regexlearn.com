@@ -49,6 +49,11 @@
       padding: 2px 5px;
       border-radius: 5px;
     }
+
+    &-regex {
+      display: flex;
+      flex-direction: column;
+    }
   }
 
   &-block-content {

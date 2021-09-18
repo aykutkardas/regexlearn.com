@@ -3,16 +3,16 @@
     "title": "steps.0.title",
     "description": "steps.0.description",
     "content": "Understand? OK or NOT",
+    "initialFlags": "g",
     "regex": "OK",
-    "flags": "g",
     "answer": ["OK"]
   },
   {
     "title": "steps.1.title",
     "description": "steps.1.description",
     "content": "abcABC123 .:!?",
+    "initialFlags": "g",
     "regex": ".",
-    "flags": "g",
     "answer": [
       "a",
       "b",
@@ -34,56 +34,56 @@
     "title": "steps.2.title",
     "description": "steps.2.description",
     "content": "abcABC123 .:!?",
+    "initialFlags": "g",
     "regex": "\\.",
-    "flags": "g",
     "answer": ["."]
   },
   {
     "title": "steps.3.title",
     "description": "steps.3.description",
     "content": "abcABC123 _.:!?",
+    "initialFlags": "g",
     "regex": "\\w",
-    "flags": "g",
     "answer": ["a", "b", "c", "A", "B", "C", "1", "2", "3", "_"]
   },
   {
     "title": "steps.4.title",
     "description": "steps.4.description",
     "content": "abcABC123 _.:!?",
+    "initialFlags": "g",
     "regex": "\\W",
-    "flags": "g",
     "answer": [" ", ".", ":", "!", "?"]
   },
   {
     "title": "steps.5.title",
     "description": "steps.5.description",
     "content": "abcABC123 .:!?",
+    "initialFlags": "g",
     "regex": "\\d",
-    "flags": "g",
     "answer": ["1", "2", "3"]
   },
   {
     "title": "steps.6.title",
     "description": "steps.6.description",
     "content": "abcABC123 .:!?",
+    "initialFlags": "g",
     "regex": "\\D",
-    "flags": "g",
     "answer": ["a", "b", "c", "A", "B", "C", " ", ".", ":", "!", "?"]
   },
   {
     "title": "steps.7.title",
     "description": "steps.7.description",
     "content": "abcABC123 .:!?",
+    "initialFlags": "g",
     "regex": "\\s",
-    "flags": "g",
     "answer": [" "]
   },
   {
     "title": "steps.8.title",
     "description": "steps.8.description",
     "content": "abcABC123 .:!?",
+    "initialFlags": "g",
     "regex": "\\S",
-    "flags": "g",
     "answer": ["a", "b", "c", "A", "B", "C", "1", "2", "3", ".", ":", "!", "?"]
   },
   {
@@ -91,8 +91,8 @@
     "description": "steps.9.description",
     "content": "ghijklmnopqrs",
     "initialValue": "[]",
+    "initialFlags": "g",
     "regex": "[efg]",
-    "flags": "g",
     "answer": ["g"]
   },
   {
@@ -100,8 +100,8 @@
     "description": "steps.10.description",
     "content": "abcABC123 .:!?",
     "initialValue": "[^]",
+    "initialFlags": "g",
     "regex": "[^abc]",
-    "flags": "g",
     "answer": ["A", "B", "C", "1", "2", "3", " ", ".", ":", "!", "?"]
   },
   {
@@ -109,8 +109,8 @@
     "description": "steps.11.description",
     "content": "abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ 1234567890",
     "initialValue": "[-]",
+    "initialFlags": "g",
     "regex": "[a-g]",
-    "flags": "g",
     "answer": ["a", "b", "c", "d", "e", "f", "g"]
   },
   {
@@ -118,8 +118,8 @@
     "description": "steps.12.description",
     "content": "abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ 1234567890",
     "initialValue": "[-]",
+    "initialFlags": "g",
     "regex": "[1-8]",
-    "flags": "g",
     "answer": ["1", "2", "3", "4", "5", "6", "7", "8"]
   },
   {
@@ -127,8 +127,8 @@
     "description": "steps.13.description",
     "content": "1: 01.01.2000",
     "initialValue": "\\d",
+    "initialFlags": "g",
     "regex": "^\\d",
-    "flags": "g",
     "answer": ["1"]
   },
   {
@@ -136,8 +136,8 @@
     "description": "steps.14.description",
     "content": "https://domain.com/what-is-html.html",
     "initialValue": "html",
+    "initialFlags": "g",
     "regex": "html$",
-    "flags": "g",
     "answer": ["html"]
   },
   {
@@ -145,8 +145,8 @@
     "description": "steps.15.description",
     "content": "color, colour",
     "initialValue": "colour",
+    "initialFlags": "g",
     "regex": "colou?r",
-    "flags": "g",
     "answer": ["color", "colour"]
   },
   {
@@ -154,8 +154,8 @@
     "description": "steps.16.description",
     "content": "br ber beer beeer beeeer",
     "initialValue": "ber",
+    "initialFlags": "g",
     "regex": "be+r",
-    "flags": "g",
     "answer": ["ber", "beer", "beeer", "beeeer"]
   },
   {
@@ -163,8 +163,8 @@
     "description": "steps.17.description",
     "content": "br ber beer beeer beeeer",
     "initialValue": "ber",
+    "initialFlags": "g",
     "regex": "be+r",
-    "flags": "g",
     "answer": ["br", "ber", "beer", "beeer", "beeeer"]
   },
   {
@@ -172,8 +172,8 @@
     "description": "steps.18.description",
     "content": "ber beer beeer beeeer",
     "initialValue": "be{}r",
+    "initialFlags": "g",
     "regex": "be{2}r",
-    "flags": "g",
     "answer": ["beer"]
   },
   {
@@ -181,8 +181,8 @@
     "description": "steps.19.description",
     "content": "ber beer beeer beeeer",
     "initialValue": "be{,}r",
+    "initialFlags": "g",
     "regex": "be{3,}r",
-    "flags": "g",
     "answer": ["beeer", "beeeer"]
   },
   {
@@ -190,8 +190,8 @@
     "description": "steps.20.description",
     "content": "ber beer beeer beeeer",
     "initialValue": "be{,}r",
+    "initialFlags": "g",
     "regex": "be{1,3}r",
-    "flags": "g",
     "answer": ["ber", "beer", "beeer"]
   },
   {
@@ -199,8 +199,8 @@
     "description": "steps.21.description",
     "content": "beer bear",
     "initialValue": "be(e|)r",
+    "initialFlags": "g",
     "regex": "be(a|e)r",
-    "flags": "g",
     "answer": ["beer", "bear"]
   },
   {
@@ -208,8 +208,8 @@
     "description": "steps.22.description",
     "content": "red and blue",
     "initialValue": "(a)",
+    "initialFlags": "g",
     "regex": "(and)",
-    "flags": "g",
     "answer": ["and"]
   },
   {
@@ -217,8 +217,39 @@
     "description": "steps.23.description",
     "content": "444-0-444",
     "initialValue": "(\\d{3})-\\d-",
+    "initialFlags": "g",
     "regex": "(444)-0-\\1",
-    "flags": "g",
     "answer": ["444-0-444"]
+  },
+  {
+    "title": "steps.24.title",
+    "description": "steps.24.description",
+    "content": "domain.com, test.com, site.com",
+    "initialValue": "\\w+\\.com",
+    "flags": "g",
+    "regex": "\\w\\.com",
+    "answer": ["domain.com", "test.com", "site.com"],
+    "useFlagsControl": true
+  },
+  {
+    "title": "steps.25.title",
+    "description": "steps.25.description",
+    "content": "domain.com\ntest.com\nsite.com",
+    "initialValue": "\\w+\\.com$",
+    "flags": "gm",
+    "regex": "\\w\\.com$",
+    "answer": ["domain.com", "test.com", "site.com"],
+    "useFlagsControl": true
+  },
+  {
+    "title": "steps.26.title",
+    "description": "steps.26.description",
+    "content": "DOMAIN.COM\nTEST.COM\nSITE.COM",
+    "initialValue": "\\w+\\.com$",
+    "initialFlags": "gm",
+    "flags": "gmi",
+    "regex": "\\w\\.com$",
+    "answer": ["DOMAIN.COM", "TEST.COM", "SITE.COM"],
+    "useFlagsControl": true
   }
 ]
