@@ -5,6 +5,11 @@
   &-item {
     display: flex;
     align-items: center;
+    margin: 0 5px;
+
+    input {
+      margin-right: 5px;
+    }
 
     &-highlight {
       color: #5ff59b;
