@@ -5,7 +5,7 @@ import Icon from "../Icon";
 import Shortcut from "../Shortcut";
 import shortcuts from "../../shortcuts";
 
-function Navigation({ steps, step, nextStep, prevStep }) {
+function Navigation({ steps, step, nextStep, prevStep, success }) {
   return !steps.length ? null : (
     <div className="navigation">
       {step > 0 && (
@@ -25,6 +25,12 @@ function Navigation({ steps, step, nextStep, prevStep }) {
         >
           <FormattedMessage id="general.nextStep" />
           <Icon icon="arrow-right2" size={20} />
+          <Icon
+            className="lock-icon"
+            icon={success ? "unlocked" : "lock"}
+            color={success ? "#5ff59b" : "gray"}
+            size={20}
+          />
           <Shortcut command={shortcuts.nextStep} />
         </div>
       )}

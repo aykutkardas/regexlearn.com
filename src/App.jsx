@@ -21,6 +21,7 @@ function App() {
   const defaultLang = "tr-tr";
   const [lang, setLang] = useState(defaultLang);
   const [step, setStep] = useState(0);
+  const [success, setSuccess] = useState(false);
 
   const prevStep = (e) => {
     e.preventDefault();
@@ -33,9 +34,15 @@ function App() {
   const nextStep = (e) => {
     e.preventDefault();
 
+    if (!success) return;
+
     if (step < data.length - 1) {
       setStep(step + 1);
     }
+  };
+
+  const onChangeSuccess = (status) => {
+    setSuccess(status);
   };
 
   useEffect(() => {
@@ -49,7 +56,7 @@ function App() {
         shortcuts.nextStep,
         shortcuts.rootKey,
       ]);
-  }, [step]);
+  }, [step, success]);
 
   return (
     <IntlProvider
@@ -59,12 +66,13 @@ function App() {
     >
       <div className={"App " + (isDesktop ? "desktop" : "")}>
         <Header lang={lang} setLang={setLang} />
-        <Step data={data[step]} step={step} />
+        <Step data={data[step]} step={step} onChangeSuccess={onChangeSuccess} />
         <Navigation
           steps={data}
           step={step}
           prevStep={prevStep}
           nextStep={nextStep}
+          success={success}
         />
       </div>
     </IntlProvider>

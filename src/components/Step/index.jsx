@@ -8,7 +8,7 @@ import _ from "lodash";
 import Hint from "../Hint";
 import FlagBox from "../FlagBox";
 
-function Steps({ data, step }) {
+function Steps({ data, step, onChangeSuccess }) {
   const [regex, setRegex] = useState(data.initialValue || "");
   const [flags, setFlags] = useState(data.initialFlags);
   const [content, setContent] = useState(null);
@@ -55,6 +55,7 @@ function Steps({ data, step }) {
       }
 
       if (isSuccess) {
+        onChangeSuccess(true);
         toast.success(
           formatMessage(
             {
@@ -74,6 +75,7 @@ function Steps({ data, step }) {
         setError(false);
         setSuccess(true);
       } else {
+        onChangeSuccess(false);
         toast.dismiss();
         setError(true);
       }
