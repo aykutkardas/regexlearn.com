@@ -11,7 +11,7 @@ const Header = ({ lang, setLang }) => {
       <ToastContainer />
       <div className="header-social">
         <a
-          href="https://github.com/aykutkardas/easy-regex"
+          href="https://github.com/aykutkardas/regexlearn.com"
           target="_blank"
           rel="noreferrer"
         >
