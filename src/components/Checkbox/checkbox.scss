@@ -1,0 +1,53 @@
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 10px;
+  width: 10px;
+  background: #333332;
+  border-radius: 2px;
+  border: solid 1px #d8d8d8;
+
+  &:after {
+    content: "";
+	position: absolute;
+	display: none;
+  }
+}
+
+.checkbox {
+  &-item {
+    display: none;
+
+  &:checked {
+	~ {
+	  .checkmark {
+	    background-color: #429488;
+		border-color: #429488;
+					
+		&:after {
+		  display: block;
+		  }
+		}
+	  }
+	}
+  }
+
+  .checkmark {
+    cursor: pointer;
+
+	&:after {
+      top: 0px;
+	  left: 2.5px;
+	  width: 2.4px;
+	  height: 6px;
+	  border: solid #333332;
+	  border-width: 0 2px 2px 0;
+	  -webkit-transform: rotate(45deg);
+	  -ms-transform: rotate(45deg);
+	  transform: rotate(45deg);
+	  }
+    }
+}
+
+  
