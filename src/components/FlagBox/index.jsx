@@ -1,4 +1,5 @@
 import "./flag-box.scss";
+import Checkbox from "../Checkbox";
 
 const FlagBox = ({ flags, setFlags }) => {
   const flagList = [
@@ -31,27 +32,25 @@ const FlagBox = ({ flags, setFlags }) => {
   return (
     <div className="flag-box">
       {flagList.map((flag) => (
-        <label
+        <Checkbox
           key={flag.name}
-          className="flag-box-item"
-          htmlFor={"flag-" + flag.name}
+          id={"flag-" + flag.name}
+          flag={flag.code}
+          type="checkbox"
+          checked={!!flags?.includes(flag.code)}
+          onChange={handleClick}
         >
-          <input
-            id={"flag-" + flag.name}
-            flag={flag.code}
-            type="checkbox"
-            checked={!!flags?.includes(flag.code)}
-            onChange={handleClick}
-          />
-          <span
-            dangerouslySetInnerHTML={{
-              __html: flag.name.replace(
-                flag.regex,
-                "<span class='flag-box-item-highlight'>$1</span>"
-              ),
-            }}
-          />
-        </label>
+          <label className="flag-box-item" htmlFor={"flag-" + flag.name}>
+            <span
+              dangerouslySetInnerHTML={{
+                __html: flag.name.replace(
+                  flag.regex,
+                  "<span class='flag-box-item-highlight'>$1</span>"
+                ),
+              }}
+            />
+          </label>
+        </Checkbox>
       ))}
     </div>
   );
