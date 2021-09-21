@@ -237,7 +237,7 @@
     "content": "domain.com\ntest.com\nsite.com",
     "initialValue": "\\w+\\.com$",
     "flags": "gm",
-    "regex": "\\w\\.com$",
+    "regex": "\\w+\\.com$",
     "answer": ["domain.com", "test.com", "site.com"],
     "useFlagsControl": true
   },
@@ -248,7 +248,7 @@
     "initialValue": "\\w+\\.com$",
     "initialFlags": "gm",
     "flags": "gmi",
-    "regex": "\\w\\.com$",
+    "regex": "\\w+\\.com$",
     "answer": ["DOMAIN.COM", "TEST.COM", "SITE.COM"],
     "useFlagsControl": true
   }
