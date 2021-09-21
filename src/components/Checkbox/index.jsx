@@ -1,11 +1,12 @@
 import "./checkbox.scss";
 
-const Checkbox = ({ ...props }) => {
+const Checkbox = ({ children, ...props }) => {
   return (
-      <label className="checkbox" {...props }>
-        <input className="checkbox-item" type="checkbox" />
-        <span className="checkmark" />
-      </label>
+    <label className="checkbox">
+      <input className="checkbox-item" type="checkbox" {...props} />
+      <span className="checkmark" />
+      {children}
+    </label>
   );
 };
 
