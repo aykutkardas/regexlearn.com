@@ -1,7 +1,8 @@
 import "./App.scss";
-import "react-toastify/dist/ReactToastify.css";
+
 import { useEffect, useState } from "react";
 import { IntlProvider } from "react-intl";
+import cx from "classnames";
 import Mousetrap from "mousetrap";
 import "mousetrap-global-bind";
 
@@ -63,7 +64,7 @@ function App() {
       locale={lang}
       defaultLocale={defaultLang}
     >
-      <div className={"App " + (isDesktop ? "desktop" : "")}>
+      <div className={cx("App", { desktop: isDesktop })}>
         <Header lang={lang} setLang={setLang} />
         <Step data={data[step]} step={step} onChangeSuccess={onChangeSuccess} />
         <Navigation
