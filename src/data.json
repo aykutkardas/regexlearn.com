@@ -4,6 +4,7 @@
     "description": "steps.0.description",
     "content": "Understand? OK or NOT",
     "initialFlags": "g",
+    "flags": "g",
     "regex": "OK",
     "answer": ["OK"]
   },
@@ -12,6 +13,7 @@
     "description": "steps.1.description",
     "content": "abcABC123 .:!?",
     "initialFlags": "g",
+    "flags": "g",
     "regex": ".",
     "answer": [
       "a",
@@ -35,6 +37,7 @@
     "description": "steps.2.description",
     "content": "abcABC123 .:!?",
     "initialFlags": "g",
+    "flags": "g",
     "regex": "\\.",
     "answer": ["."]
   },
@@ -43,6 +46,7 @@
     "description": "steps.3.description",
     "content": "abcABC123 _.:!?",
     "initialFlags": "g",
+    "flags": "g",
     "regex": "\\w",
     "answer": ["a", "b", "c", "A", "B", "C", "1", "2", "3", "_"]
   },
@@ -51,6 +55,7 @@
     "description": "steps.4.description",
     "content": "abcABC123 _.:!?",
     "initialFlags": "g",
+    "flags": "g",
     "regex": "\\W",
     "answer": [" ", ".", ":", "!", "?"]
   },
@@ -59,6 +64,7 @@
     "description": "steps.5.description",
     "content": "abcABC123 .:!?",
     "initialFlags": "g",
+    "flags": "g",
     "regex": "\\d",
     "answer": ["1", "2", "3"]
   },
@@ -67,6 +73,7 @@
     "description": "steps.6.description",
     "content": "abcABC123 .:!?",
     "initialFlags": "g",
+    "flags": "g",
     "regex": "\\D",
     "answer": ["a", "b", "c", "A", "B", "C", " ", ".", ":", "!", "?"]
   },
@@ -75,6 +82,7 @@
     "description": "steps.7.description",
     "content": "abcABC123 .:!?",
     "initialFlags": "g",
+    "flags": "g",
     "regex": "\\s",
     "answer": [" "]
   },
@@ -83,6 +91,7 @@
     "description": "steps.8.description",
     "content": "abcABC123 .:!?",
     "initialFlags": "g",
+    "flags": "g",
     "regex": "\\S",
     "answer": ["a", "b", "c", "A", "B", "C", "1", "2", "3", ".", ":", "!", "?"]
   },
@@ -92,6 +101,7 @@
     "content": "ghijklmnopqrs",
     "initialValue": "[]",
     "initialFlags": "g",
+    "flags": "g",
     "regex": "[efg]",
     "answer": ["g"]
   },
@@ -101,6 +111,7 @@
     "content": "abcABC123 .:!?",
     "initialValue": "[^]",
     "initialFlags": "g",
+    "flags": "g",
     "regex": "[^abc]",
     "answer": ["A", "B", "C", "1", "2", "3", " ", ".", ":", "!", "?"]
   },
@@ -110,6 +121,7 @@
     "content": "abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ 1234567890",
     "initialValue": "[-]",
     "initialFlags": "g",
+    "flags": "g",
     "regex": "[a-g]",
     "answer": ["a", "b", "c", "d", "e", "f", "g"]
   },
@@ -119,6 +131,7 @@
     "content": "abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ 1234567890",
     "initialValue": "[-]",
     "initialFlags": "g",
+    "flags": "g",
     "regex": "[1-8]",
     "answer": ["1", "2", "3", "4", "5", "6", "7", "8"]
   },
@@ -128,6 +141,7 @@
     "content": "1: 01.01.2000",
     "initialValue": "\\d",
     "initialFlags": "g",
+    "flags": "g",
     "regex": "^\\d",
     "answer": ["1"]
   },
@@ -137,6 +151,7 @@
     "content": "https://domain.com/what-is-html.html",
     "initialValue": "html",
     "initialFlags": "g",
+    "flags": "g",
     "regex": "html$",
     "answer": ["html"]
   },
@@ -146,6 +161,7 @@
     "content": "color, colour",
     "initialValue": "colour",
     "initialFlags": "g",
+    "flags": "g",
     "regex": "colou?r",
     "answer": ["color", "colour"]
   },
@@ -155,6 +171,7 @@
     "content": "br ber beer beeer beeeer",
     "initialValue": "ber",
     "initialFlags": "g",
+    "flags": "g",
     "regex": "be+r",
     "answer": ["ber", "beer", "beeer", "beeeer"]
   },
@@ -164,6 +181,7 @@
     "content": "br ber beer beeer beeeer",
     "initialValue": "ber",
     "initialFlags": "g",
+    "flags": "g",
     "regex": "be+r",
     "answer": ["br", "ber", "beer", "beeer", "beeeer"]
   },
@@ -173,6 +191,7 @@
     "content": "ber beer beeer beeeer",
     "initialValue": "be{}r",
     "initialFlags": "g",
+    "flags": "g",
     "regex": "be{2}r",
     "answer": ["beer"]
   },
@@ -182,6 +201,7 @@
     "content": "ber beer beeer beeeer",
     "initialValue": "be{,}r",
     "initialFlags": "g",
+    "flags": "g",
     "regex": "be{3,}r",
     "answer": ["beeer", "beeeer"]
   },
@@ -191,6 +211,7 @@
     "content": "ber beer beeer beeeer",
     "initialValue": "be{,}r",
     "initialFlags": "g",
+    "flags": "g",
     "regex": "be{1,3}r",
     "answer": ["ber", "beer", "beeer"]
   },
@@ -200,6 +221,7 @@
     "content": "beer bear",
     "initialValue": "be(e|)r",
     "initialFlags": "g",
+    "flags": "g",
     "regex": "be(a|e)r",
     "answer": ["beer", "bear"]
   },
@@ -209,6 +231,7 @@
     "content": "red and blue",
     "initialValue": "(a)",
     "initialFlags": "g",
+    "flags": "g",
     "regex": "(and)",
     "answer": ["and"]
   },
@@ -218,6 +241,7 @@
     "content": "444-0-444",
     "initialValue": "(\\d{3})-\\d-",
     "initialFlags": "g",
+    "flags": "g",
     "regex": "(444)-0-\\1",
     "answer": ["444-0-444"]
   },

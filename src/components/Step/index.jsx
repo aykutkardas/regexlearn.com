@@ -9,13 +9,15 @@ import _ from "lodash";
 import Hint from "../Hint";
 import FlagBox from "../FlagBox";
 import shortcuts from "../../shortcuts";
+import cx from "classnames";
 
 function Steps({ data, step, onChangeSuccess }) {
   const [regex, setRegex] = useState(data.initialValue || "");
-  const [flags, setFlags] = useState(data.initialFlags);
+  const [flags, setFlags] = useState(data.initialFlags || "");
   const [content, setContent] = useState(null);
   const [error, setError] = useState(false);
   const [success, setSuccess] = useState(false);
+  const [match, setMatch] = useState(false);
   const regexInput = useRef(null);
   const { formatMessage } = useIntl();
 
@@ -25,6 +27,10 @@ function Steps({ data, step, onChangeSuccess }) {
     }
   };
 
+  useEffect(() => {
+    onChangeSuccess(success);
+  }, [success]);
+
   const checkRegex = () => {
     try {
       let $regex = regex;
@@ -33,14 +39,25 @@ function Steps({ data, step, onChangeSuccess }) {
       });
 
       const reg = new RegExp("(" + $regex + ")", flags);
-      const regResult = [
-        ...data.content[flags?.includes("g") ? "matchAll" : "match"](reg),
-      ]
+      const matchType = flags?.includes("g") ? "matchAll" : "match";
+      const regResult = [...data.content[matchType](reg)]
         .map((res) => res[0])
         .filter((res) => !!res);
-      const isSuccess =
+
+      const isMatch =
         data.answer.length === regResult.length &&
         _.isEmpty(_.xor(data.answer, regResult));
+
+      setMatch(isMatch);
+
+      const isSuccess =
+        isMatch &&
+        data.regex === regex &&
+        _.isEmpty(_.xor(data.flags.split(""), flags.split("")));
+
+      setSuccess(isSuccess);
+
+      toast.dismiss();
 
       if (regex) {
         setContent(
@@ -51,7 +68,6 @@ function Steps({ data, step, onChangeSuccess }) {
       }
 
       if (isSuccess) {
-        onChangeSuccess(true);
         toast.success(
           formatMessage(
             {
@@ -69,10 +85,9 @@ function Steps({ data, step, onChangeSuccess }) {
         );
 
         setError(false);
-        setSuccess(true);
+      } else if (isMatch) {
+        setError(false);
       } else {
-        onChangeSuccess(false);
-        toast.dismiss();
         setError(true);
       }
     } catch (err) {
@@ -102,7 +117,13 @@ function Steps({ data, step, onChangeSuccess }) {
   useEffect(checkRegex, [regex, flags]);
 
   return (
-    <div className={"step " + (error ? "error" : "")} key={step}>
+    <div
+      className={cx("step", {
+        error,
+        success,
+        match,
+      })}
+    >
       <h2 className="step-title">
         <FormattedMessage id={data.title} />
       </h2>
