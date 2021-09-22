@@ -132,10 +132,7 @@ function Steps({ data, step, onChangeSuccess }) {
             ref={regexInput}
             key={step}
             type="text"
-            readOnly={success}
-            style={{
-              width: regex.length * 15 || 50,
-            }}
+            style={{ width: regex.length * 15 || 50 }}
             value={regex}
             onChange={(e) => setRegex(e.target.value)}
             placeholder={formatMessage({ id: "general.regex" }).toLowerCase()}
