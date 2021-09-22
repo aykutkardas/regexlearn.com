@@ -3,13 +3,14 @@ import "./step.scss";
 import { useState, useEffect, useRef } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
 import { toast } from "react-toastify";
+import cx from "classnames";
 import Mousetrap from "mousetrap";
 import _ from "lodash";
 
 import Hint from "../Hint";
 import FlagBox from "../FlagBox";
 import shortcuts from "../../shortcuts";
-import cx from "classnames";
+import tagWrapper from "../../utils/tagWrapper";
 
 function Steps({ data, step, onChangeSuccess }) {
   const [regex, setRegex] = useState(data.initialValue || "");
@@ -60,9 +61,7 @@ function Steps({ data, step, onChangeSuccess }) {
       toast.dismiss();
 
       if (regex) {
-        setContent(
-          data.content.replace(reg, "<span class='step-result-tag'>$1</span>")
-        );
+        setContent(tagWrapper(data.content, reg, "step-result-tag"));
       } else {
         setContent(data.content);
       }
@@ -91,6 +90,7 @@ function Steps({ data, step, onChangeSuccess }) {
         setError(true);
       }
     } catch (err) {
+      console.log(err);
       setError(true);
     }
   };
@@ -116,6 +116,8 @@ function Steps({ data, step, onChangeSuccess }) {
 
   useEffect(checkRegex, [regex, flags]);
 
+  const description = formatMessage({ id: data.description });
+
   return (
     <div
       className={cx("step", {
@@ -130,10 +132,7 @@ function Steps({ data, step, onChangeSuccess }) {
       <p
         className="step-description"
         dangerouslySetInnerHTML={{
-          __html: formatMessage({ id: data.description }).replace(
-            /`(\S*?[^`]*)`/gim,
-            "<span class='step-word'>$1</span>"
-          ),
+          __html: tagWrapper(description, /`(\S*?[^`]*)`/gim, "step-word"),
         }}
       />
       <div

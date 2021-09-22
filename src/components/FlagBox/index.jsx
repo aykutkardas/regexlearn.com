@@ -1,5 +1,7 @@
 import "./flag-box.scss";
+
 import Checkbox from "../Checkbox";
+import tagWrapper from "../../utils/tagWrapper";
 
 const FlagBox = ({ flags, setFlags }) => {
   const flagList = [
@@ -31,22 +33,19 @@ const FlagBox = ({ flags, setFlags }) => {
 
   return (
     <div className="flag-box">
-      {flagList.map((flag) => (
+      {flagList.map(({ name, code, regex }) => (
         <Checkbox
-          key={flag.name}
-          id={"flag-" + flag.name}
-          flag={flag.code}
+          key={name}
+          id={"flag-" + name}
+          flag={code}
           type="checkbox"
-          checked={!!flags?.includes(flag.code)}
+          checked={!!flags?.includes(code)}
           onChange={handleClick}
         >
-          <label className="flag-box-item" htmlFor={"flag-" + flag.name}>
+          <label className="flag-box-item" htmlFor={"flag-" + name}>
             <span
               dangerouslySetInnerHTML={{
-                __html: flag.name.replace(
-                  flag.regex,
-                  "<span class='flag-box-item-highlight'>$1</span>"
-                ),
+                __html: tagWrapper(name, regex, "flag-box-item-highlight"),
               }}
             />
           </label>
