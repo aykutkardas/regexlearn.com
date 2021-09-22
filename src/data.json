@@ -182,7 +182,7 @@
     "initialValue": "ber",
     "initialFlags": "g",
     "flags": "g",
-    "regex": "be+r",
+    "regex": "be*r",
     "answer": ["br", "ber", "beer", "beeer", "beeeer"]
   },
   {
@@ -222,7 +222,7 @@
     "initialValue": "be(e|)r",
     "initialFlags": "g",
     "flags": "g",
-    "regex": "be(a|e)r",
+    "regex": "be(e|a)r",
     "answer": ["beer", "bear"]
   },
   {
@@ -242,7 +242,7 @@
     "initialValue": "(\\d{3})-\\d-",
     "initialFlags": "g",
     "flags": "g",
-    "regex": "(444)-0-\\1",
+    "regex": "(\\d{3})-\\d-\\1",
     "answer": ["444-0-444"]
   },
   {
@@ -251,7 +251,7 @@
     "content": "domain.com, test.com, site.com",
     "initialValue": "\\w+\\.com",
     "flags": "g",
-    "regex": "\\w\\.com",
+    "regex": "\\w+\\.com",
     "answer": ["domain.com", "test.com", "site.com"],
     "useFlagsControl": true
   },
@@ -260,6 +260,7 @@
     "description": "steps.25.description",
     "content": "domain.com\ntest.com\nsite.com",
     "initialValue": "\\w+\\.com$",
+    "initialFlags": "g",
     "flags": "gm",
     "regex": "\\w+\\.com$",
     "answer": ["domain.com", "test.com", "site.com"],

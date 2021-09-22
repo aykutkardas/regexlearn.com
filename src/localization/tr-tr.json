@@ -84,7 +84,7 @@
   "steps.24.description": "Bayraklar yazdığımız ifadenin hangi kurallara göre uygulanacağını belirler. Örneğin büyük küçük harf duyarlı olacak mı? Tek bir eşleşme mi bulacak yoksa tümünü mü? Ya da sadece ilk satırda mı çalışacak tüm satırlarda mı? gibi. Önceki adımlarda bu bayraklar hep hazır seçili geldi. Şimdi tüm eşleşmeleri bulabilmek için `global` bayrağını aktif edelim.",
 
   "steps.25.title": "Adım 25 - Bayraklar (multiline)",
-  "steps.25.description": "RegEx tüm metni tek satır olarak görür. Fakat her satırı ayrı ayrı ele alabilmek için `multiline` bayrağını kullanırız. Bu sayede satır sonuna göre yazdığımız ifadeler her satır için ayrı ayrı çalışır. Şimdi tüm eşleşmeleri bulabilmek için `global` ve `multiline` bayrağını aktif edelim.",
+  "steps.25.description": "RegEx tüm metni tek satır olarak görür. Fakat her satırı ayrı ayrı ele alabilmek için `multiline` bayrağını kullanırız. Bu sayede satır sonuna göre yazdığımız ifadeler her satır için ayrı ayrı çalışır. Şimdi tüm eşleşmeleri bulabilmek için `multiline` bayrağını aktif edelim.",
 
   "steps.26.title": "Adım 26 - Bayraklar (case-insensitive)",
   "steps.26.description": "Yazdığımız ifadenin büyük küçük harf duyarlılığını kaldırmak için `case-insensitive` bayrağını aktif etmeliyiz. Deneyelim."
