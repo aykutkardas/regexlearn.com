@@ -1,14 +1,12 @@
 import "./header.scss";
 
-import { ToastContainer } from "react-toastify";
-
 import Icon from "../Icon";
 import LanguageSwitch from "../LanguageSwitch";
+import Progress from "../Progress";
 
-const Header = ({ lang, setLang }) => {
+const Header = ({ lang, setLang, steps, step }) => {
   return (
     <header className="header">
-      <ToastContainer />
       <div className="header-social">
         <a
           href="https://github.com/aykutkardas/regexlearn.com"
@@ -25,6 +23,7 @@ const Header = ({ lang, setLang }) => {
           <Icon icon="twitter" size={20} color="white" />
         </a>
       </div>
+      <Progress steps={steps} step={step} />
       <LanguageSwitch lang={lang} setLang={setLang} />
     </header>
   );

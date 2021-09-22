@@ -1,4 +1,4 @@
-export default {
+const shortcuts = {
   rootKey: "alt",
   focus: "tab",
   nextStep: "enter",
@@ -6,3 +6,5 @@ export default {
   hint: "alt+h",
   languageSwitch: "alt+l",
 };
+
+export default shortcuts;

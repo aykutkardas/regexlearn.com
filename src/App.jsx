@@ -65,7 +65,7 @@ function App() {
       defaultLocale={defaultLang}
     >
       <div className={cx("App", { desktop: isDesktop })}>
-        <Header lang={lang} setLang={setLang} />
+        <Header lang={lang} setLang={setLang} steps={data} step={step} />
         <Step data={data[step]} step={step} onChangeSuccess={onChangeSuccess} />
         <Navigation
           steps={data}

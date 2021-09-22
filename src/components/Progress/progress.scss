@@ -1,0 +1,20 @@
+.progress {
+  width: 150px;
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  &-status {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    font-size: 14px;
+    transform: translate(-50%, 0);
+    color: #9f9f9f;
+    font-weight: bold;
+  }
+
+  @media only screen and (max-width: 600px) {
+    width: 75px;
+  }
+}
