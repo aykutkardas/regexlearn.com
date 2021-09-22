@@ -23,4 +23,12 @@ function getOS() {
   return os;
 }
 
-export default getOS;
+function useOS() {
+  const os = getOS();
+  const isDesktop = ["Windows", "Mac OS", "Linux"].includes(os);
+  const isMobile = ["Android", "iOS"].includes(os);
+
+  return { os, isDesktop, isMobile };
+}
+
+export default useOS;
