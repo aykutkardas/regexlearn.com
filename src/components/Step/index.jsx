@@ -3,10 +3,12 @@ import "./step.scss";
 import { useState, useEffect, useRef } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
 import { toast } from "react-toastify";
+import Mousetrap from "mousetrap";
 import _ from "lodash";
 
 import Hint from "../Hint";
 import FlagBox from "../FlagBox";
+import shortcuts from "../../shortcuts";
 
 function Steps({ data, step, onChangeSuccess }) {
   const [regex, setRegex] = useState(data.initialValue || "");
@@ -17,17 +19,11 @@ function Steps({ data, step, onChangeSuccess }) {
   const regexInput = useRef(null);
   const { formatMessage } = useIntl();
 
-  useEffect(() => {
-    setError(false);
-    setSuccess(false);
-    setContent(data.content);
-    setFlags(data.initialFlags);
-    setRegex(data.initialValue || "");
-    checkRegex();
+  const focusInput = () => {
     if (regexInput) {
       regexInput.current.focus();
     }
-  }, [step]);
+  };
 
   const checkRegex = () => {
     try {
@@ -83,6 +79,25 @@ function Steps({ data, step, onChangeSuccess }) {
       setError(true);
     }
   };
+
+  useEffect(() => {
+    Mousetrap.bindGlobal(shortcuts.focus, (e) => {
+      e.preventDefault();
+      focusInput();
+    });
+
+    return () => Mousetrap.unbindGlobal(shortcuts.focus);
+  }, []);
+
+  useEffect(() => {
+    setError(false);
+    setSuccess(false);
+    setContent(data.content);
+    setFlags(data.initialFlags);
+    setRegex(data.initialValue || "");
+    checkRegex();
+    focusInput();
+  }, [step]);
 
   useEffect(checkRegex, [regex, flags]);
 
