@@ -1,6 +1,8 @@
 import "./navigation.scss";
 
 import { FormattedMessage } from "react-intl";
+import cx from "classnames";
+
 import Icon from "../Icon";
 import Shortcut from "../Shortcut";
 import shortcuts from "../../shortcuts";
@@ -14,7 +16,7 @@ function Navigation({ steps, step, nextStep, prevStep, success }) {
           onClick={prevStep}
         >
           <Shortcut command={shortcuts.prevStep} />
-          <Icon icon="arrow-left2" size={20} />
+          <Icon className="navigation-icon" icon="arrow-left2" size={20} />
           <FormattedMessage id="general.prevStep" />
         </div>
       )}
@@ -24,12 +26,13 @@ function Navigation({ steps, step, nextStep, prevStep, success }) {
           onClick={nextStep}
         >
           <FormattedMessage id="general.nextStep" />
-          <Icon icon="arrow-right2" size={20} />
+          <Icon className="navigation-icon" icon="arrow-right2" size={20} />
           <Icon
-            className="lock-icon"
+            className={cx("status-icon", {
+              lock: !success,
+              unlock: success,
+            })}
             icon={success ? "unlocked" : "lock"}
-            color={success ? "#5ff59b" : "gray"}
-            size={20}
           />
           <Shortcut command={shortcuts.nextStep} />
         </div>

@@ -20,7 +20,7 @@
       opacity: 0.7;
     }
 
-    svg {
+    .navigation-icon {
       margin: 0 5px;
     }
   }
@@ -40,10 +40,20 @@
       left: 0;
     }
 
-    .lock-icon {
+    .status-icon {
       position: absolute;
       top: -27px;
       right: 0px;
+      width: 20px;
+      height: 20px;
+
+      &.lock {
+        color: gray;
+      }
+
+      &.unlock {
+        color: #5ff59b;
+      }
     }
   }
 }
