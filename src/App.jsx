@@ -20,7 +20,7 @@ function App() {
   const defaultLang = "tr-tr";
   const { isDesktop } = useOS();
   const [lang, setLang] = useState(defaultLang);
-  const [step, setStep] = useState(10);
+  const [step, setStep] = useState(0);
   const [success, setSuccess] = useState(false);
 
   const prevStep = useCallback(
