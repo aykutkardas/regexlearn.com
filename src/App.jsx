@@ -1,6 +1,6 @@
 import "./App.scss";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 import { IntlProvider } from "react-intl";
 import cx from "classnames";
 import Mousetrap from "mousetrap";
@@ -20,26 +20,32 @@ function App() {
   const defaultLang = "tr-tr";
   const { isDesktop } = useOS();
   const [lang, setLang] = useState(defaultLang);
-  const [step, setStep] = useState(0);
+  const [step, setStep] = useState(10);
   const [success, setSuccess] = useState(false);
 
-  const prevStep = (e) => {
-    e.preventDefault();
+  const prevStep = useCallback(
+    (e) => {
+      e.preventDefault();
 
-    if (step > 0) {
-      setStep(step - 1);
-    }
-  };
+      if (step > 0) {
+        setStep(step - 1);
+      }
+    },
+    [step]
+  );
 
-  const nextStep = (e) => {
-    e.preventDefault();
+  const nextStep = useCallback(
+    (e) => {
+      e.preventDefault();
 
-    if (!success) return;
+      if (!success) return;
 
-    if (step < data.length - 1) {
-      setStep(step + 1);
-    }
-  };
+      if (step < data.length - 1) {
+        setStep(step + 1);
+      }
+    },
+    [step, success]
+  );
 
   const onChangeSuccess = (status) => {
     setSuccess(status);
@@ -56,7 +62,7 @@ function App() {
         shortcuts.nextStep,
         shortcuts.rootKey,
       ]);
-  }, [step, success]);
+  }, [step, success, prevStep, nextStep]);
 
   return (
     <IntlProvider

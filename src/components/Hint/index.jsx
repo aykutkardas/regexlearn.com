@@ -12,13 +12,15 @@ const Hint = ({ regex, flags }) => {
   const hintRef = useRef(null);
 
   useEffect(() => {
+    const hintElement = hintRef.current;
+
     Mousetrap.bindGlobal(shortcuts.hint, () => {
-      ReactTooltip.show(hintRef.current);
+      ReactTooltip.show(hintElement);
     });
 
     return () => {
       Mousetrap.unbindGlobal(shortcuts.hint);
-      ReactTooltip.hide(hintRef.current);
+      ReactTooltip.hide(hintElement);
     };
   }, []);
 
