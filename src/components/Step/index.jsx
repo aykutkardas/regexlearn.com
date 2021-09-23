@@ -11,6 +11,7 @@ import Hint from "../Hint";
 import FlagBox from "../FlagBox";
 import shortcuts from "../../shortcuts";
 import tagWrapper from "../../utils/tagWrapper";
+import setCaretPosition from "../../utils/setCaretPosition";
 
 function Steps({ data, step, onChangeSuccess }) {
   const [regex, setRegex] = useState(data.initialValue || "");
@@ -28,9 +29,15 @@ function Steps({ data, step, onChangeSuccess }) {
     }
   };
 
+  const blurInput = () => {
+    if (regexInput) {
+      regexInput.current.blur();
+    }
+  };
+
   useEffect(() => {
     onChangeSuccess(success);
-  }, [success]);
+  }, [success, onChangeSuccess]);
 
   const checkRegex = () => {
     try {
@@ -105,14 +112,23 @@ function Steps({ data, step, onChangeSuccess }) {
   }, []);
 
   useEffect(() => {
+    console.log(setCaretPosition);
+    console.log(data.cursorPosition);
+  }, [step]);
+
+  useEffect(() => {
     setError(false);
     setSuccess(false);
     setContent(data.content);
     setFlags(data.initialFlags);
     setRegex(data.initialValue || "");
     checkRegex();
-    focusInput();
-  }, [step]);
+    blurInput();
+    setTimeout(() => {
+      setCaretPosition(regexInput.current, data.cursorPosition);
+      focusInput();
+    }, 300);
+  }, [step, data.cursorPosition]);
 
   useEffect(checkRegex, [regex, flags]);
 

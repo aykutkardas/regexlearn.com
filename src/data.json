@@ -6,6 +6,7 @@
     "initialFlags": "g",
     "flags": "g",
     "regex": "OK",
+    "cursorPosition": 0,
     "answer": ["OK"]
   },
   {
@@ -15,6 +16,7 @@
     "initialFlags": "g",
     "flags": "g",
     "regex": ".",
+    "cursorPosition": 0,
     "answer": [
       "a",
       "b",
@@ -39,6 +41,7 @@
     "initialFlags": "g",
     "flags": "g",
     "regex": "\\.",
+    "cursorPosition": 0,
     "answer": ["."]
   },
   {
@@ -48,6 +51,7 @@
     "initialFlags": "g",
     "flags": "g",
     "regex": "\\w",
+    "cursorPosition": 0,
     "answer": ["a", "b", "c", "A", "B", "C", "1", "2", "3", "_"]
   },
   {
@@ -57,6 +61,7 @@
     "initialFlags": "g",
     "flags": "g",
     "regex": "\\W",
+    "cursorPosition": 0,
     "answer": [" ", ".", ":", "!", "?"]
   },
   {
@@ -66,6 +71,7 @@
     "initialFlags": "g",
     "flags": "g",
     "regex": "\\d",
+    "cursorPosition": 0,
     "answer": ["1", "2", "3"]
   },
   {
@@ -75,6 +81,7 @@
     "initialFlags": "g",
     "flags": "g",
     "regex": "\\D",
+    "cursorPosition": 0,
     "answer": ["a", "b", "c", "A", "B", "C", " ", ".", ":", "!", "?"]
   },
   {
@@ -84,6 +91,7 @@
     "initialFlags": "g",
     "flags": "g",
     "regex": "\\s",
+    "cursorPosition": 0,
     "answer": [" "]
   },
   {
@@ -93,6 +101,7 @@
     "initialFlags": "g",
     "flags": "g",
     "regex": "\\S",
+    "cursorPosition": 0,
     "answer": ["a", "b", "c", "A", "B", "C", "1", "2", "3", ".", ":", "!", "?"]
   },
   {
@@ -103,6 +112,7 @@
     "initialFlags": "g",
     "flags": "g",
     "regex": "[efg]",
+    "cursorPosition": 1,
     "answer": ["g"]
   },
   {
@@ -113,6 +123,7 @@
     "initialFlags": "g",
     "flags": "g",
     "regex": "[^abc]",
+    "cursorPosition": 2,
     "answer": ["A", "B", "C", "1", "2", "3", " ", ".", ":", "!", "?"]
   },
   {
@@ -123,6 +134,7 @@
     "initialFlags": "g",
     "flags": "g",
     "regex": "[a-g]",
+    "cursorPosition": 1,
     "answer": ["a", "b", "c", "d", "e", "f", "g"]
   },
   {
@@ -133,6 +145,7 @@
     "initialFlags": "g",
     "flags": "g",
     "regex": "[1-8]",
+    "cursorPosition": 1,
     "answer": ["1", "2", "3", "4", "5", "6", "7", "8"]
   },
   {
@@ -143,6 +156,7 @@
     "initialFlags": "g",
     "flags": "g",
     "regex": "^\\d",
+    "cursorPosition": 0,
     "answer": ["1"]
   },
   {
@@ -153,6 +167,7 @@
     "initialFlags": "g",
     "flags": "g",
     "regex": "html$",
+    "cursorPosition": 4,
     "answer": ["html"]
   },
   {
@@ -163,6 +178,7 @@
     "initialFlags": "g",
     "flags": "g",
     "regex": "colou?r",
+    "cursorPosition": 5,
     "answer": ["color", "colour"]
   },
   {
@@ -173,6 +189,7 @@
     "initialFlags": "g",
     "flags": "g",
     "regex": "be+r",
+    "cursorPosition": 2,
     "answer": ["ber", "beer", "beeer", "beeeer"]
   },
   {
@@ -183,6 +200,7 @@
     "initialFlags": "g",
     "flags": "g",
     "regex": "be*r",
+    "cursorPosition": 2,
     "answer": ["br", "ber", "beer", "beeer", "beeeer"]
   },
   {
@@ -193,6 +211,7 @@
     "initialFlags": "g",
     "flags": "g",
     "regex": "be{2}r",
+    "cursorPosition": 3,
     "answer": ["beer"]
   },
   {
@@ -203,6 +222,7 @@
     "initialFlags": "g",
     "flags": "g",
     "regex": "be{3,}r",
+    "cursorPosition": 3,
     "answer": ["beeer", "beeeer"]
   },
   {
@@ -213,6 +233,7 @@
     "initialFlags": "g",
     "flags": "g",
     "regex": "be{1,3}r",
+    "cursorPosition": 3,
     "answer": ["ber", "beer", "beeer"]
   },
   {
@@ -223,6 +244,7 @@
     "initialFlags": "g",
     "flags": "g",
     "regex": "be(e|a)r",
+    "cursorPosition": 5,
     "answer": ["beer", "bear"]
   },
   {
@@ -233,6 +255,7 @@
     "initialFlags": "g",
     "flags": "g",
     "regex": "(and)",
+    "cursorPosition": 2,
     "answer": ["and"]
   },
   {
@@ -243,6 +266,7 @@
     "initialFlags": "g",
     "flags": "g",
     "regex": "(\\d{3})-\\d-\\1",
+    "cursorPosition": 11,
     "answer": ["444-0-444"]
   },
   {
@@ -252,6 +276,7 @@
     "initialValue": "\\w+\\.com",
     "flags": "g",
     "regex": "\\w+\\.com",
+    "cursorPosition": 8,
     "answer": ["domain.com", "test.com", "site.com"],
     "useFlagsControl": true
   },
@@ -263,6 +288,7 @@
     "initialFlags": "g",
     "flags": "gm",
     "regex": "\\w+\\.com$",
+    "cursorPosition": 8,
     "answer": ["domain.com", "test.com", "site.com"],
     "useFlagsControl": true
   },
@@ -274,6 +300,7 @@
     "initialFlags": "gm",
     "flags": "gmi",
     "regex": "\\w+\\.com$",
+    "cursorPosition": 8,
     "answer": ["DOMAIN.COM", "TEST.COM", "SITE.COM"],
     "useFlagsControl": true
   }
