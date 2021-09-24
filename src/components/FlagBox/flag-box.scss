@@ -1,11 +1,22 @@
 .flag-box {
   display: flex;
   margin-top: 10px;
+  align-items: flex-start;
+
 
   &-item {
     display: flex;
     align-items: center;
     margin: 0 5px;
+    position: relative;
+
+    .shortcut {
+      font-size: 9px;
+      position: absolute;
+      right: 0px;
+      bottom: -30px;
+      width: 45px;
+    }
 
     input {
       margin-right: 5px;
@@ -15,4 +26,8 @@
       color: #5ff59b;
     }
   }
+}
+
+.desktop .flag-box {
+  height: 60px;
 }

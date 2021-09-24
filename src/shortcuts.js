@@ -5,6 +5,9 @@ const shortcuts = {
   prevStep: "alt+left",
   hint: "alt+h",
   languageSwitch: "alt+l",
+  flagGlobal: "alt+g",
+  flagMultiline: "alt+m",
+  flagCaseInsenstive: "alt+c",
 };
 
 export default shortcuts;

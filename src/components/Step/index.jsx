@@ -112,11 +112,6 @@ function Steps({ data, step, onChangeSuccess }) {
   }, []);
 
   useEffect(() => {
-    console.log(setCaretPosition);
-    console.log(data.cursorPosition);
-  }, [step]);
-
-  useEffect(() => {
     setError(false);
     setSuccess(false);
     setContent(data.content);
