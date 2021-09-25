@@ -3,7 +3,6 @@
   margin-top: 10px;
   align-items: flex-start;
 
-
   &-item {
     display: flex;
     align-items: center;
@@ -11,11 +10,11 @@
     position: relative;
 
     .shortcut {
-      font-size: 9px;
+      font-size: 8px;
       position: absolute;
       right: 0px;
-      bottom: -30px;
-      width: 45px;
+      bottom: -26px;
+      width: 38px;
     }
 
     input {
