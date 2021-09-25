@@ -2,7 +2,9 @@
   width: 150px;
   display: flex;
   align-items: center;
-  position: relative;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
 
   &-status {
     position: absolute;
