@@ -39,6 +39,7 @@
     "description": "steps.2.description",
     "content": "abcABC123 .:!?",
     "initialFlags": "g",
+    "initialValue": ".",
     "flags": "g",
     "regex": "\\.",
     "cursorPosition": 0,
@@ -107,29 +108,29 @@
   {
     "title": "steps.9.title",
     "description": "steps.9.description",
-    "content": "ghijklmnopqrs",
-    "initialValue": "[]",
+    "content": "bar ber bir bor bur",
+    "initialValue": "b[]r",
     "initialFlags": "g",
     "flags": "g",
-    "regex": "[efg]",
-    "cursorPosition": 1,
-    "answer": ["g"]
+    "regex": "b[aeiou]r",
+    "cursorPosition": 2,
+    "answer": ["bar", "ber", "bir", "bor", "bur"]
   },
   {
     "title": "steps.10.title",
     "description": "steps.10.description",
-    "content": "abcABC123 .:!?",
-    "initialValue": "[^]",
+    "content": "bar ber bir bor bur",
+    "initialValue": "b[^]r",
     "initialFlags": "g",
     "flags": "g",
-    "regex": "[^abc]",
-    "cursorPosition": 2,
-    "answer": ["A", "B", "C", "1", "2", "3", " ", ".", ":", "!", "?"]
+    "regex": "b[^e]r",
+    "cursorPosition": 3,
+    "answer": ["bar", "bir", "bor", "bur"]
   },
   {
     "title": "steps.11.title",
     "description": "steps.11.description",
-    "content": "abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ 1234567890",
+    "content": "abcdefghijklmnopqrstuvwxyz",
     "initialValue": "[-]",
     "initialFlags": "g",
     "flags": "g",
@@ -140,13 +141,13 @@
   {
     "title": "steps.12.title",
     "description": "steps.12.description",
-    "content": "abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ 1234567890",
+    "content": "0123456789",
     "initialValue": "[-]",
     "initialFlags": "g",
     "flags": "g",
-    "regex": "[1-8]",
+    "regex": "[3-6]",
     "cursorPosition": 1,
-    "answer": ["1", "2", "3", "4", "5", "6", "7", "8"]
+    "answer": ["3", "4", "5", "6"]
   },
   {
     "title": "steps.13.title",

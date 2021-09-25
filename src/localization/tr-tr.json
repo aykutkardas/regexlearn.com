@@ -11,41 +11,41 @@
   "steps.0.title": "Başlangıç",
   "steps.0.description": "RegEx düzenli ifadenin kısaltmasıdır. Metni eşleştirmeye, bulmaya ya da yönetmeye yardımcı olur. İlk adıma geçmek için Regex alanına `OK` yazarak başlayalım.",
 
-  "steps.1.title": "Adım 1 - Herhangi Bir Karakter",
+  "steps.1.title": "Adım 1 - Herhangi Bir Karakter (.)",
   "steps.1.description": "Nokta `.` işareti özel karakterler ve boşluklarda dahil herhangi bir karakteri bulmayı sağlar.",
 
-  "steps.2.title": "Adım 2 - Kaçış Karakteri",
-  "steps.2.description": "Nokta `.` işaretini herhangi bir karakteri bulmak için kullanıyorsak, doğrudan bir noktayı bulabilmek için öncesinde bir kaçış karakteri kullanmamız gerekir. Bunun için noktanın öncesinde `\\` işareti kullanın.",
+  "steps.2.title": "Adım 2 - Kaçış Karakteri (\\)",
+  "steps.2.description": "Nokta `.` işaretini herhangi bir karakteri bulmak için kullanıyorsak, noktanın kendisini bulabilmek için öncesinde bir kaçış karakteri `\\` kullanmamız gerekir. Bunun için noktadan önce bir kaçış karakteri `\\` ekleyelim.",
 
-  "steps.3.title": "Adım 3 - Sözcük Karakterleri",
-  "steps.3.description": "Harf, sayı ve alt çizgi karakterlerini bulmak için `\\w` kullanılır. Deneyelim.",
+  "steps.3.title": "Adım 3 - Sözcük Karakterleri (\\w)",
+  "steps.3.description": "Harf, sayı ve alt çizgi karakterlerini bulmak için `\\w` ifadesi kullanılır. Metindeki sözcük karakterlerini bulmak için `\\w` ifadesini kullanalım.",
 
-  "steps.4.title": "Adım 4 - Sözcük Karakterleri Dışındakiler",
-  "steps.4.description": "Harf, sayı ve alt çizgi karakterleri dışında kalan şeyleri bulmak için `\\W` kullanılır. Deneyelim.",
+  "steps.4.title": "Adım 4 - Sözcük Karakterleri Dışındakiler  (\\W)",
+  "steps.4.description": "Harf, sayı ve alt çizgi karakterleri dışında kalan karakterleri bulmak için `\\W` ifadesi kullanılır. Deneyelim.",
 
-  "steps.5.title": "Adım 5 - Sayı Karakterleri",
+  "steps.5.title": "Adım 5 - Sayı Karakterleri  (\\d)",
   "steps.5.description": "Sadece sayı karakterlerini bulmak için `\\d` kullanılır. Deneyelim.",
 
-  "steps.6.title": "Adım 6 - Sayı Karakterleri Dışındakiler",
-  "steps.6.description": "Sayı karakterleri dışındakileri bulmak için `\\D` kullanılır. Deneyelim..",
+  "steps.6.title": "Adım 6 - Sayı Karakterleri Dışındakiler  (\\D)",
+  "steps.6.description": "Sayı karakterleri dışındakileri bulmak için `\\D` kullanılır. Deneyelim.",
 
-  "steps.7.title": "Adım 7 - Boşluk Karakterleri",
+  "steps.7.title": "Adım 7 - Boşluk Karakterleri  (\\s)",
   "steps.7.description": "Sadece boşluk karakterlerini bulmak için `\\s` kullanılır. Deneyelim.",
 
-  "steps.8.title": "Adım 8 - Boşluk Karakterleri Dışındakiler",
+  "steps.8.title": "Adım 8 - Boşluk Karakterleri Dışındakiler  (\\S)",
   "steps.8.description": "Boşluk karakterleri dışındakileri bulmak için `\\S` kullanılır. Deneyelim.",
 
   "steps.9.title": "Adım 9 - Seçili Karakterlerden Herhangi Biri",
-  "steps.9.description": "Seçtiğimiz karakterlerden herhangi birini bulmak için karakterleri köşeli parantezler `[]` içerisinde yan yana yazarız. Küçük harflerle yazılmış `e`, `f` ve `g` karakterlerinden herhangi birini bulalım.",
+  "steps.9.description": "Eğer bir karakter birden fazla şey olabilirse bunu köşeli parantezler `[]` içerisinde tüm alternatifleri ile yazarız. Örneğin metindeki tüm sözcükleri bulabilecek ifadeyi yazabilmek için `a`, `e`, `i`, `o`, `u` karakterlerini bitişik olarak köşeli parantezlerin `[]` içine yazalım.",
 
   "steps.10.title": "Adım 10 - Seçili Karakterlerin Dışındakiler",
-  "steps.10.description": "Seçili karakterlerin dışındakileri bulmak için istemediğimiz karakterleri köşeli parantezler `[]` içine üst karakteri `^` ile başlayacak şekilde yan yana yazarız. Küçük harflerle yazılmış `a`, `b` ve `c` karakterlerinin dışındakileri bulalım.",
+  "steps.10.description": "Seçili karakterlerin dışındakileri bulmak için istemediğimiz karakterleri köşeli parantezler `[]` içine şapka karakteri `^` ile başlayacak şekilde yan yana yazarız. Aşağıdaki metinde `ber` sözcüğü dışındaki tüm sözcükleri bulabilmek için şapka karakterinden sonra `e` harfini yazalım.",
 
   "steps.11.title": "Adım 11 - Seçili Aralıktaki Harfler",
-  "steps.11.description": "Seçili aralıktaki harfleri bulmak için başlangıç harfi ve bitiş harfi aralarında bir tire `-` olacak şekilde köşeli parantezler `[]` içine yazılır. Büyük küçük harf duyarlıdır. `a` ve `g` de dahil aralarındaki tüm harfleri bulacak ifadeyi yazalım.",
+  "steps.11.description": "Seçili aralıktaki harfleri bulmak için başlangıç harfi ve bitiş harfi aralarında bir tire `-` olacak şekilde köşeli parantezler `[]` içine yazılır. Büyük küçük harf duyarlıdır. Kendileride dahil `a` ve `g` aralarındaki tüm küçük harfleri bulacak ifadeyi yazalım.",
 
   "steps.12.title": "Adım 12 - Seçili Aralıktaki Sayılar",
-  "steps.12.description": "Seçili aralıktaki sayıları bulmak için başlangıç sayısı ve bitiş sayısı aralarında bir tire `-` olacak şekilde köşeli parantezler `[]` içine yazılır. `1` ve `8` de dahil aralarındaki tüm sayıları bulacak ifadeyi yazalım.",
+  "steps.12.description": "Seçili aralıktaki sayıları bulmak için başlangıç sayısı ve bitiş sayısı aralarında bir tire `-` olacak şekilde köşeli parantezler `[]` içine yazılır. Kendileride dahil `3` ve `6` aralarındaki tüm sayıları bulacak ifadeyi yazalım.",
 
   "steps.13.title": "Adım 13 - (^) Satır Başlangıcına Göre",
   "steps.13.description": "Sayıları bulmak için `\\d` ifadesini kullanıyorduk. Sadece satır başında geçen sayıları bulmak için bu ifadenin başına `^` işaretini ekleyelim.",
