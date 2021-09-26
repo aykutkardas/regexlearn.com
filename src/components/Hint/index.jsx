@@ -22,7 +22,7 @@ const Hint = ({ regex, flags }) => {
       Mousetrap.unbindGlobal(shortcuts.hint);
       ReactTooltip.hide(hintElement);
     };
-  }, []);
+  }, [regex]);
 
   return (
     <div ref={hintRef} className="hint" data-tip data-for="hint">
