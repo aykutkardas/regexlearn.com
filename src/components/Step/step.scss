@@ -9,27 +9,28 @@
   margin: 0 auto;
 
   &-title {
+    color: var(--learn-text-title);
     font-size: 28px;
   }
 
   &-description {
     font-size: 16px;
-    color: #d0d0d0;
+    color: var(--learn-text-description);
   }
 
   &-word {
-    background: #333;
+    background: var(--learn-word-highlight);
     border-radius: 6px;
     padding: 2px 6px;
     font-size: 12px;
   }
 
   &-block {
-    background: #333;
+    background: var(--learn-bg-block);
     border-radius: 6px;
     padding: 12px;
     font-size: 12px;
-    color: #999;
+    color: var(--learn-text-block);
     letter-spacing: 1px;
     margin: 20px 0;
     min-height: 50px;
@@ -43,8 +44,8 @@
       position: absolute;
       top: -6px;
       left: 11px;
-      background: #272727;
-      color: #969696;
+      background: var(--learn-bg-block-tag);
+      color: var(--learn-text-block);
       font-size: 10px;
       padding: 2px 5px;
       border-radius: 5px;
@@ -63,7 +64,7 @@
   }
 
   &-input {
-    background: #272727;
+    background: var(--learn-bg-block-tag);
     padding: 7px 15px;
     border-radius: 5px;
     display: flex;
@@ -75,7 +76,7 @@
       margin: 3px;
       text-align: center;
       background: none;
-      color: #5ff59b;
+      color: var(--learn-success);
       letter-spacing: 4px;
       max-width: 440px;
       overflow: hidden;
@@ -88,21 +89,21 @@
 
     &::before {
       content: "/";
-      color: gray;
+      color: var(--learn-gray);
     }
 
     &::after {
       content: "/" attr(data-flags);
-      color: gray;
+      color: var(--learn-gray);
     }
   }
 
   &-result-tag {
-    box-shadow: 3px 3px 2px #21212173;
+    box-shadow: 3px 3px 2px var(--learn-shadow-result-tag);
     min-width: 10px;
     height: 20px;
     margin: 1px 3px;
-    color: #000000;
+    color: var(--learn-black);
     font-size: 10px;
     padding: 2px 5px;
     border-radius: 5px;
@@ -114,19 +115,19 @@
 
   &.error {
     .step-result-tag {
-      background: tomato;
+      background: var(--learn-error);
     }
   }
 
   &.match {
     .step-result-tag {
-      background: orange;
+      background: var(--learn-warning);
     }
   }
 
   &.success {
     .step-result-tag {
-      background: #5ff59b;
+      background: var(--learn-success);
     }
   }
 }

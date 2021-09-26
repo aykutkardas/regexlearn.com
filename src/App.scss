@@ -6,7 +6,7 @@
   justify-content: space-between;
   height: 100vh;
   font-family: "Open Sans", sans-serif;
-  color: white;
+  color: var(--learn-white);
 
   .shortcut {
     display: none;
@@ -17,8 +17,4 @@
       display: block;
     }
   }
-}
-
-.Toastify__toast-theme--colored.Toastify__toast--success {
-  background: #328252 !important;
 }

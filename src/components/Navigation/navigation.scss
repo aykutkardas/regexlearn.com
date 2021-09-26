@@ -48,11 +48,11 @@
       height: 20px;
 
       &.lock {
-        color: gray;
+        color: var(--learn-gray);
       }
 
       &.unlock {
-        color: #5ff59b;
+        color: var(--learn-success);
       }
     }
   }
