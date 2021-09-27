@@ -16,7 +16,7 @@ function Navigation({ steps, step, nextStep, prevStep, success }) {
           onClick={prevStep}
         >
           <Shortcut command={shortcuts.prevStep} />
-          <Icon className="navigation-icon" icon="arrow-left2" size={20} />
+          <Icon className="navigation-icon" icon="arrow-left" size={20} />
           <FormattedMessage id="general.prevStep" />
         </div>
       )}
@@ -26,7 +26,7 @@ function Navigation({ steps, step, nextStep, prevStep, success }) {
           onClick={nextStep}
         >
           <FormattedMessage id="general.nextStep" />
-          <Icon className="navigation-icon" icon="arrow-right2" size={20} />
+          <Icon className="navigation-icon" icon="arrow-right" size={20} />
           <Icon
             className={cx("status-icon", {
               lock: !success,
