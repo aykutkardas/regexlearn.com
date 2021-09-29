@@ -28,6 +28,10 @@
 
   .content {
     flex: 1;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
   }
 
   .intro {
@@ -35,5 +39,17 @@
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+}
+
+@media (max-width: 1199.98px) { 
+  .container {
+    padding: 20px;
+    max-width: 650px;
+    flex-direction: column;
+
+    .intro {
+      display: none;
+    }
   }
 }

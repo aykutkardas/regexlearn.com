@@ -11,7 +11,7 @@ function LandingRegexDemo({ data, step }) {
   const [content, setContent] = useState(null);
   const regexInput = useRef(null);
   const { formatMessage } = useIntl();
-  const initialContent = "1. Learn  2. Practise  3. Test   4. Share";
+  const initialContent = "1. Learn  2. Practice  3. Test   4. Share";
 
   const checkRegex = () => {
     try {
