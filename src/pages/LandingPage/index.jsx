@@ -1,6 +1,7 @@
 import "./landing-page.scss";
 
 import { Link } from "react-router-dom";
+import LandingRegexDemo from "../../components/LandingRegexDemo";
 
 function LandingPage() {
   return (
@@ -22,7 +23,9 @@ function LandingPage() {
         </Link>
         <button disabled>Playgroud</button>
       </div>
-      <div className="intro"></div>
+      <div className="intro">
+        <LandingRegexDemo />
+      </div>
     </div>
   );
 }
