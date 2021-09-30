@@ -7,7 +7,7 @@
   "general.completedStarterStep": "Başlangıç - Tamamlandı.",
   "general.completedCurrentStep": "Adım {step} - Tamamlandı.",
   "general.hintQuestion": "Cevabı Göster",
-  "general.startLearning": "Öğrenmeye Başlayalım",
+  "general.startLearning": "Öğrenmeye Başla",
 
   "landing.title": "Sıfırdan gelişmişe, adım adım RegEx öğren.",
   "landing.description": "RegEx düşündüğünüz kadar zor değil. RegEx'i kolayca `öğrenmek`, `uygulamak`, `test etmek` ve `paylaşmak` için bu aracı kullanabilirsiniz.",
