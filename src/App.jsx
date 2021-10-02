@@ -2,7 +2,7 @@ import "./App.scss";
 
 import { useState } from "react";
 import { IntlProvider } from "react-intl";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import {Switch, Route, HashRouter } from "react-router-dom";
 import cx from "classnames";
 
 import localization from "./localization";
@@ -21,7 +21,7 @@ function App() {
       locale={lang}
       defaultLocale={defaultLang}
     >
-      <Router>
+      <HashRouter>
         <div className={cx("App", { desktop: isDesktop })}>
           <Switch>
             <Route path="/learn">
@@ -32,7 +32,7 @@ function App() {
             </Route>
           </Switch>
         </div>
-      </Router>
+      </HashRouter>
     </IntlProvider>
   );
 }
