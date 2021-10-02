@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { FormattedMessage, useIntl } from "react-intl";
 
 import LandingRegexDemo from "../../components/LandingRegexDemo";
+import Button from "../../components/Button";
 import tagWrapper from "../../utils/tagWrapper";
 
 function LandingPage() {
@@ -24,9 +25,9 @@ function LandingPage() {
           }}
         />
         <Link to="/learn">
-          <button className="primary">
+          <Button className="primary">
             <FormattedMessage id="general.startLearning" />
-          </button>
+          </Button>
         </Link>
       </div>
       <div className="intro">

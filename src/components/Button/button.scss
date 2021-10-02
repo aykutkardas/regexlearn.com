@@ -1,0 +1,16 @@
+button {
+  border: 0;
+  padding: 12px 16px;
+  border-radius: 4px;
+  margin-right: 20px;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &.primary {
+    color: var(--learn-black);
+    background: var(--learn-success);
+  }
+}
