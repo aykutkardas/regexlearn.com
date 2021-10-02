@@ -35,7 +35,7 @@ function LearnPage({ lang, setLang }) {
           setError(false);
         }, 1000);
         return;
-      };
+      }
 
       if (step < data.length - 1) {
         setError(false);
@@ -65,7 +65,12 @@ function LearnPage({ lang, setLang }) {
   return (
     <>
       <Header lang={lang} setLang={setLang} steps={data} step={step} />
-      <Step data={data[step]} step={step} onChangeSuccess={onChangeSuccess} error={error} />
+      <Step
+        data={data[step]}
+        step={step}
+        onChangeSuccess={onChangeSuccess}
+        error={error}
+      />
       <Navigation
         steps={data}
         step={step}

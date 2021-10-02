@@ -123,9 +123,9 @@
     "initialValue": "b[^]r",
     "initialFlags": "g",
     "flags": "g",
-    "regex": "b[^e]r",
+    "regex": "b[^eo]r",
     "cursorPosition": 3,
-    "answer": ["bar", "bir", "bor", "bur"]
+    "answer": ["bar", "bir", "bur"]
   },
   {
     "title": "steps.11.title",

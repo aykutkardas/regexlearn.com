@@ -11,12 +11,12 @@
 
   "landing.title": "Sıfırdan gelişmişe, adım adım RegEx öğren.",
   "landing.description": "RegEx düşündüğünüz kadar zor değil. RegEx'i kolayca `öğrenmek`, `uygulamak`, `test etmek` ve `paylaşmak` için bu aracı kullanabilirsiniz.",
-  
+
   "steps.0.title": "Başlangıç",
   "steps.0.description": "RegEx düzenli ifadenin kısaltmasıdır. Metni eşleştirmeye, bulmaya ya da yönetmeye yardımcı olur. İlk adıma geçmek için Regex alanına `OK` yazarak başlayalım.",
 
   "steps.1.title": "Adım 1 - Herhangi Bir Karakter (.)",
-  "steps.1.description": "Nokta `.` işareti özel karakterler ve boşluklarda dahil herhangi bir karakteri bulmayı sağlar.",
+  "steps.1.description": "Nokta `.` işareti özel karakterler ve boşluklar da dahil herhangi bir karakteri bulmayı sağlar.",
 
   "steps.2.title": "Adım 2 - Kaçış Karakteri (\\)",
   "steps.2.description": "Nokta `.` işaretini herhangi bir karakteri bulmak için kullanıyorsak, noktanın kendisini bulabilmek için öncesinde bir kaçış karakteri `\\` kullanmamız gerekir. Bunun için noktadan önce bir kaçış karakteri `\\` ekleyelim.",
@@ -25,31 +25,31 @@
   "steps.3.description": "Harf, sayı ve alt çizgi karakterlerini bulmak için `\\w` ifadesi kullanılır. Metindeki sözcük karakterlerini bulmak için `\\w` ifadesini kullanalım.",
 
   "steps.4.title": "Adım 4 - Sözcük Karakterleri Dışındakiler  (\\W)",
-  "steps.4.description": "Harf, sayı ve alt çizgi karakterleri dışında kalan karakterleri bulmak için `\\W` ifadesi kullanılır. Deneyelim.",
+  "steps.4.description": "Harf, sayı ve alt çizgi karakterleri dışında kalan karakterleri bulmak için `\\W` ifadesi kullanılır.",
 
   "steps.5.title": "Adım 5 - Sayı Karakterleri  (\\d)",
-  "steps.5.description": "Sadece sayı karakterlerini bulmak için `\\d` kullanılır. Deneyelim.",
+  "steps.5.description": "Sadece sayı karakterlerini bulmak için `\\d` kullanılır.",
 
   "steps.6.title": "Adım 6 - Sayı Karakterleri Dışındakiler  (\\D)",
-  "steps.6.description": "Sayı karakterleri dışındakileri bulmak için `\\D` kullanılır. Deneyelim.",
+  "steps.6.description": "Sayı karakterleri dışındakileri bulmak için `\\D` kullanılır.",
 
   "steps.7.title": "Adım 7 - Boşluk Karakterleri  (\\s)",
-  "steps.7.description": "Sadece boşluk karakterlerini bulmak için `\\s` kullanılır. Deneyelim.",
+  "steps.7.description": "Sadece boşluk karakterlerini bulmak için `\\s` kullanılır.",
 
   "steps.8.title": "Adım 8 - Boşluk Karakterleri Dışındakiler  (\\S)",
-  "steps.8.description": "Boşluk karakterleri dışındakileri bulmak için `\\S` kullanılır. Deneyelim.",
+  "steps.8.description": "Boşluk karakterleri dışındakileri bulmak için `\\S` kullanılır.",
 
-  "steps.9.title": "Adım 9 - Seçili Karakterlerden Herhangi Biri",
-  "steps.9.description": "Eğer bir karakter birden fazla şey olabilirse bunu köşeli parantezler `[]` içerisinde tüm alternatifleri ile yazarız. Örneğin metindeki tüm sözcükleri bulabilecek ifadeyi yazabilmek için `a`, `e`, `i`, `o`, `u` karakterlerini bitişik olarak köşeli parantezlerin `[]` içine yazalım.",
+  "steps.9.title": "Adım 9 - Belirttiğimiz Karakterlerden Herhangi Biri",
+  "steps.9.description": "Eğer bir sözcüğün içerdiği karakterlerden biri çeşitli karakterler olabilirse bunu köşeli parantez `[]` içerisinde tüm alternatif karakterler ile birlikte yazarız. Örneğin metindeki tüm sözcükleri bulabilecek ifadeyi yazabilmek için `a`, `e`, `i`, `o`, `u` karakterlerini bitişik olarak köşeli parantezlerin `[]` içine yazalım.",
 
-  "steps.10.title": "Adım 10 - Seçili Karakterlerin Dışındakiler",
-  "steps.10.description": "Seçili karakterlerin dışındakileri bulmak için istemediğimiz karakterleri köşeli parantezler `[]` içine şapka karakteri `^` ile başlayacak şekilde yan yana yazarız. Aşağıdaki metinde `ber` sözcüğü dışındaki tüm sözcükleri bulabilmek için şapka karakterinden sonra `e` harfini yazalım.",
+  "steps.10.title": "Adım 10 - Belirttiğimiz Karakterlerin Dışındakiler",
+  "steps.10.description": "Belirttiğimiz karakterlerin dışındakileri bulmak için istemediğimiz karakterleri köşeli parantez `[]` içine şapka karakteri `^` ile başlayacak şekilde yan yana yazarız. Aşağıdaki metinde `ber` ve `bor` sözcükleri dışındaki tüm sözcükleri bulabilmek için şapka karakterinden sonra `e` ve `o` harfini yan yana yazalım.",
 
-  "steps.11.title": "Adım 11 - Seçili Aralıktaki Harfler",
-  "steps.11.description": "Seçili aralıktaki harfleri bulmak için başlangıç harfi ve bitiş harfi aralarında bir tire `-` olacak şekilde köşeli parantezler `[]` içine yazılır. Büyük küçük harf duyarlıdır. Kendileride dahil `a` ve `g` aralarındaki tüm küçük harfleri bulacak ifadeyi yazalım.",
+  "steps.11.title": "Adım 11 - Belirttiğimiz Aralıktaki Harfler",
+  "steps.11.description": "Belirttiğimiz aralıktaki harfleri bulmak için başlangıç harfi ve bitiş harfi aralarında bir tire `-` olacak şekilde köşeli parantezler `[]` içine yazılır. Büyük küçük harf duyarlıdır. Kendileri de dahil `a` ve `g` aralarındaki tüm küçük harfleri bulacak ifadeyi yazalım.",
 
-  "steps.12.title": "Adım 12 - Seçili Aralıktaki Sayılar",
-  "steps.12.description": "Seçili aralıktaki sayıları bulmak için başlangıç sayısı ve bitiş sayısı aralarında bir tire `-` olacak şekilde köşeli parantezler `[]` içine yazılır. Kendileride dahil `3` ve `6` aralarındaki tüm sayıları bulacak ifadeyi yazalım.",
+  "steps.12.title": "Adım 12 - Belirttiğimiz Aralıktaki Sayılar",
+  "steps.12.description": "Belirttiğimiz aralıktaki sayıları bulmak için başlangıç sayısı ve bitiş sayısı aralarında bir tire `-` olacak şekilde köşeli parantezler `[]` içine yazılır. Kendileride dahil `3` ve `6` aralarındaki tüm sayıları bulacak ifadeyi yazalım.",
 
   "steps.13.title": "Adım 13 - (^) Satır Başlangıcına Göre",
   "steps.13.description": "Sayıları bulmak için `\\d` ifadesini kullanıyorduk. Sadece satır başında geçen sayıları bulmak için bu ifadenin başına `^` işaretini ekleyelim.",
@@ -58,28 +58,28 @@
   "steps.14.description": "Sadece satır sonunda geçen `html` metinlerini bulmak için `$` işaretini `html` değerinden sonra kullanalım.",
 
   "steps.15.title": "Adım 15 - Opsiyonel",
-  "steps.15.description": "Bir karakterin ya da ifadenin opsiyonel olduğunu ifade etmek için sonuna `?` soru işareti koyarız. Örneğin aşağıdaki `u` harfinin opsiyonel olduğunu bildirelim.",
+  "steps.15.description": "Bir karakterin ya da ifadenin opsiyonel olduğunu ifade etmek için sonuna `?` soru işareti koyarız. Örneğin aşağıdaki `u` harfinin opsiyonel olduğunu belirtelim.",
 
   "steps.16.title": "Adım 16 - İfadenin Bir ya da Daha Fazla Eşleşmesine Göre",
-  "steps.16.description": "Bir karakterin veya ifadenin bir ya da daha fazla geçebileceğini ifade etmek için sonuna `+` artı işareti koyarız. Örneğin metinde `e` harfinin bir ya da yan yana daha fazla geçebileceğini bildirelim.",
+  "steps.16.description": "Bir karakterin veya ifadenin bir ya da daha fazla geçebileceğini ifade etmek için sonuna `+` artı işareti koyarız. Örneğin metinde `e` harfinin bir ya da yan yana daha fazla geçebileceğini belirtelim.",
 
   "steps.17.title": "Adım 17 - İfadenin Hiç ya da Birden Fazla Eşleşmesine Göre",
-  "steps.17.description": "Bir karakterin veya ifadenin hiç ya da daha fazla geçebileceğini ifade etmek için sonuna `*` yıldız işareti koyarız. Örneğin metinde `e` harfinin hiç ya da yan yana daha fazla geçebileceğini bildirelim.",
+  "steps.17.description": "Bir karakterin veya ifadenin hiç ya da daha fazla geçebileceğini ifade etmek için sonuna `*` yıldız işareti koyarız. Örneğin metinde `e` harfinin hiç ya da yan yana daha fazla geçebileceğini belirtelim.",
 
   "steps.18.title": "Adım 18 - İfadenin Belirli Bir Sayıda Eşleşmesine Göre",
-  "steps.18.description": "Bir karakterin veya ifadenin belirli bir sayıda geçmesini ifade etmek için sonuna kaç kere geçmesini istediğimizle birlikte süslü parantezleri `{n}` yazarız. Örneğin aşağıdaki `e` harfinin sadece iki kere geçebileceğini bildirelim.",
+  "steps.18.description": "Bir karakterin veya ifadenin belirli bir sayıda geçmesini ifade etmek için sonuna kaç kere geçmesini istediğimizle birlikte süslü parantezleri `{n}` yazarız. Örneğin aşağıdaki `e` harfinin sadece iki kere geçebileceğini belirtelim.",
 
   "steps.19.title": "Adım 19 - İfadenin Belirli Bir Sayıda ya da Daha Fazla Eşleşmesine Göre",
-  "steps.19.description": "Bir karakterin veya ifadenin belirli bir sayıda ya da daha fazla geçmesini ifade etmek için sonuna en az kaç kere geçmesini istediğimizi virgül `,` ile birlikte süslü parantezleri `{n, }` yazarız. Örneğin aşağıdaki `e` harfinin en az üç kez geçebileceğini bildirelim.",
+  "steps.19.description": "Bir karakterin veya ifadenin belirli bir sayıda ya da daha fazla geçmesini ifade etmek için sonuna en az kaç kere geçmesini istediğimizi virgül `,` ile birlikte süslü parantezleri `{n, }` yazarız. Örneğin aşağıdaki `e` harfinin en az üç kez geçebileceğini belirtelim.",
 
   "steps.20.title": "Adım 20 - İfadenin Belirli Bir Sayı Aralığında Eşleşmesine Göre",
-  "steps.20.description": "Bir karakterin veya ifadenin belirli bir sayı aralığında geçmesini ifade etmek için sonuna geçmesini istediğimiz aralıkla birlikte süslü parantezleri `{x,y}` yazarız. Örneğin aşağıdaki `e` harfinin sadece bir ile üç arasında geçebileceğini bildirelim.",
+  "steps.20.description": "Bir karakterin veya ifadenin belirli bir sayı aralığında geçmesini ifade etmek için sonuna geçmesini istediğimiz aralıkla birlikte süslü parantezleri `{x,y}` yazarız. Örneğin aşağıdaki `e` harfinin sadece bir ile üç arasında geçebileceğini belirtelim.",
 
   "steps.21.title": "Adım 21 - Ya Da Operatörü",
-  "steps.21.description": "Bir durum için birden fazla karakter ya da ifade geçebileceğini belirmeyi sağlar. Böylece olabilecek tüm ifadeler `(x|y)` parantez içerisinde `|` işareti ile birbirinden ayrılır. Örneğin aşağıdaki `e` harfinin `a` da olabileceğini bildirelim.",
+  "steps.21.description": "Bir durum için birden fazla karakter ya da ifade geçebileceğini belirmeyi sağlar. Böylece olabilecek tüm ifadeler `(x|y)` parantez içerisinde `|` işareti ile birbirinden ayrılır. Örneğin aşağıdaki `e` harfinin `a` da olabileceğini belirtelim.",
 
   "steps.22.title": "Adım 22 - Gruplama",
-  "steps.22.description": "Bir ifadeyi gruplayabilir ve bunlara referams göstermek ya da bazı kurallar uygulamak için kullanabiliriz. Bir ifadeyi gruplamak için `()` parantezler içine alırız. Şimdilik sadece aşağıdaki `and` kelimesini gruplayalım.",
+  "steps.22.description": "Bir ifadeyi gruplayabilir ve bu gruplaru referans göstermek ya da bazı kurallar uygulamak için kullanabiliriz. Bir ifadeyi gruplamak için `()` parantez içine alırız. Şimdilik sadece aşağıdaki `and` kelimesini gruplayalım.",
 
   "steps.23.title": "Adım 23 - Bir Gruba Referans Göstermek",
   "steps.23.description": "Tekrar eden ifadelerde aynı şeyi tekrar tekrar yazmamak için daha önce yaptığımız bir gruba referans gösterebiliriz. Örneğin bu örnekte `444` değeri `(\\d{3})` ifadesi olarak gruplanmıştır. İlk tanımladığımız bu gruba referans göstermek için, kullanmak istediğimiz yerde `\\` işareti yanına gruplama sıramızın numarasını ekliyoruz. Bu örnek için bu sıra numarası `1` dir. Şimdi deneyelim.",
