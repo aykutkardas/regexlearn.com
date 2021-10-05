@@ -6,5 +6,7 @@
   "general.text": "Text",
   "general.completedStarterStep": "Starter Step - Completed.",
   "general.completedCurrentStep": "Step {step} - Completed.",
-  "general.hintQuestion": "Show Answer"
+  "general.hintQuestion": "Show Answer",
+
+  "alert.site.under.development": "This site is still under development. What you see now may change."
 }
