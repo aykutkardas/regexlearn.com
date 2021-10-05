@@ -6,5 +6,7 @@
   "general.text": "Text",
   "general.completedStarterStep": "Starter Step - Completed.",
   "general.completedCurrentStep": "Step {step} - Completed.",
-  "general.hintQuestion": "Show Answer"
+  "general.hintQuestion": "Show Answer",
+  "landing.learn": "Learn",
+  "landing.playground": "Playground"
 }

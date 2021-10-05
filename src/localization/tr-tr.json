@@ -8,10 +8,12 @@
   "general.completedCurrentStep": "Adım {step} - Tamamlandı.",
   "general.hintQuestion": "Cevabı Göster",
   "general.startLearning": "Öğrenmeye Başla",
+  "landing.learn": "Öğren",
+  "landing.playground": "Playground",
 
   "landing.title": "Sıfırdan gelişmişe, adım adım RegEx öğren.",
   "landing.description": "RegEx düşündüğünüz kadar zor değil. RegEx'i kolayca `öğrenmek`, `uygulamak`, `test etmek` ve `paylaşmak` için bu aracı kullanabilirsiniz.",
-  
+
   "steps.0.title": "Başlangıç",
   "steps.0.description": "RegEx düzenli ifadenin kısaltmasıdır. Metni eşleştirmeye, bulmaya ya da yönetmeye yardımcı olur. İlk adıma geçmek için Regex alanına `OK` yazarak başlayalım.",
 
