@@ -5,7 +5,7 @@
   justify-content: center;
   text-align: center;
   margin: 0 auto;
-  width: 100%;
+  padding: 80px;
   position: relative;
 
   &-block {
@@ -37,7 +37,7 @@
     &-regex {
       display: flex;
       flex-direction: column;
-      width: 300px;
+      width: 100%;
       margin: 20px auto;
     }
   }
@@ -46,7 +46,7 @@
     display: inline-flex;
     text-align: left;
     padding: 20px 12px;
-    width: 300px;
+    width: 100%;
     margin: 0 auto;
   }
 

@@ -1,4 +1,5 @@
 import "./index.scss";
+import "animate.css";
 import "react-toastify/dist/ReactToastify.css";
 
 import React from "react";

@@ -38,6 +38,7 @@
     align-items: center;
     justify-content: center;
     position: relative;
+    transition: .3s;
 
     &::before {
       content: attr(data-title);
@@ -55,6 +56,10 @@
       display: flex;
       flex-direction: column;
     }
+  }
+
+  &.parentError &-block-regex {
+    box-shadow:inset 0px 0px 0px 2px var(--learn-error);
   }
 
   &-block-content {

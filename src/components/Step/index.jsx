@@ -13,7 +13,7 @@ import shortcuts from "../../shortcuts";
 import tagWrapper from "../../utils/tagWrapper";
 import setCaretPosition from "../../utils/setCaretPosition";
 
-function Steps({ data, step, onChangeSuccess }) {
+function Steps({ data, step, error: parentError, onChangeSuccess }) {
   const [regex, setRegex] = useState(data.initialValue || "");
   const [flags, setFlags] = useState(data.initialFlags || "");
   const [content, setContent] = useState(null);
@@ -135,6 +135,7 @@ function Steps({ data, step, onChangeSuccess }) {
         error,
         success,
         match,
+        parentError
       })}
     >
       <h2 className="step-title">

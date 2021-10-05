@@ -12,6 +12,7 @@ import shortcuts from "../../shortcuts";
 function LearnPage({ lang, setLang }) {
   const [step, setStep] = useState(0);
   const [success, setSuccess] = useState(false);
+  const [error, setError] = useState(false);
 
   const prevStep = useCallback(
     (e) => {
@@ -28,9 +29,16 @@ function LearnPage({ lang, setLang }) {
     (e) => {
       e.preventDefault();
 
-      if (!success) return;
+      if (!success) {
+        setError(true);
+        setTimeout(() => {
+          setError(false);
+        }, 1000);
+        return;
+      }
 
       if (step < data.length - 1) {
+        setError(false);
         setStep(step + 1);
       }
     },
@@ -57,13 +65,19 @@ function LearnPage({ lang, setLang }) {
   return (
     <>
       <Header lang={lang} setLang={setLang} steps={data} step={step} />
-      <Step data={data[step]} step={step} onChangeSuccess={onChangeSuccess} />
+      <Step
+        data={data[step]}
+        step={step}
+        onChangeSuccess={onChangeSuccess}
+        error={error}
+      />
       <Navigation
         steps={data}
         step={step}
         prevStep={prevStep}
         nextStep={nextStep}
         success={success}
+        error={error}
       />
     </>
   );

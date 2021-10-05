@@ -7,7 +7,7 @@ import Icon from "../Icon";
 import Shortcut from "../Shortcut";
 import shortcuts from "../../shortcuts";
 
-function Navigation({ steps, step, nextStep, prevStep, success }) {
+function Navigation({ steps, step, nextStep, prevStep, success, error }) {
   return !steps.length ? null : (
     <div className="navigation">
       {step > 0 && (
@@ -31,6 +31,8 @@ function Navigation({ steps, step, nextStep, prevStep, success }) {
             className={cx("status-icon", {
               lock: !success,
               unlock: success,
+              error,
+              "animate__animated animate__shakeX": error
             })}
             icon={success ? "unlocked" : "lock"}
           />
