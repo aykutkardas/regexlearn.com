@@ -23,6 +23,9 @@
 
   // overwrite
   --toastify-color-success: #328252 !important;
+
+  --landing-link-hover: var(--learn-success);
+  --landing-link-disabled: #969696;
 }
 
 body {
