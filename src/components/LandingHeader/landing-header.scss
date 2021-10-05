@@ -1,0 +1,54 @@
+.landing-header {
+  display: flex;
+  height: 80px;
+  align-items: center;
+  justify-content: space-between;
+
+  a {
+    text-decoration: none;
+    color: var(--learn-white);
+
+    &:hover {
+      color: var(--landing-link-hover);
+    }
+  }
+
+  &-brand {
+    display: flex;
+    align-items: center;
+
+    &-icon {
+      color: var(--learn-success);
+      margin-right: 6px;
+    }
+
+    &-name {
+      font-size: 1.3rem;
+      height: 18px;
+    }
+  }
+
+  &-links {
+    display: flex;
+    align-items: center;
+    color: var(--learn-white);
+  }
+
+  .landing-link-learn {
+    font-size: 1.1rem;
+    margin-right: 2.2em;
+  }
+
+  .landing-link-playground {
+    margin-right: 2.2em;
+    cursor: not-allowed;
+    display: flex;
+    align-items: center;
+    font-size: 1.1rem;
+    color: var(--landing-link-disabled);
+
+    &-icon {
+      margin-left: 0.3em;
+    }
+  }
+}
