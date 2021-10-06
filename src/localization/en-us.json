@@ -7,6 +7,9 @@
   "general.completedStarterStep": "Starter Step - Completed.",
   "general.completedCurrentStep": "Step {step} - Completed.",
   "general.hintQuestion": "Show Answer",
+  "general.comingSoon": "Coming Soon",
+
   "landing.learn": "Learn",
-  "landing.playground": "Playground"
+  "landing.playground": "Playground",
+  "alert.site.under.development": "This site is still under development. What you see now may change."
 }

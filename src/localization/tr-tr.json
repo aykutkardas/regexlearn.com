@@ -8,8 +8,10 @@
   "general.completedCurrentStep": "Adım {step} - Tamamlandı.",
   "general.hintQuestion": "Cevabı Göster",
   "general.startLearning": "Öğrenmeye Başla",
+  "general.comingSoon": "Yakında",
   "landing.learn": "Öğren",
   "landing.playground": "Playground",
+  "alert.site.under.development": "Bu site hala geliştirme aşamasındadır. Şu an gördüğünüz şeyler değişebilir.",
 
   "landing.title": "Sıfırdan gelişmişe, adım adım RegEx öğren.",
   "landing.description": "RegEx düşündüğünüz kadar zor değil. RegEx'i kolayca `öğrenmek`, `uygulamak`, `test etmek` ve `paylaşmak` için bu aracı kullanabilirsiniz.",

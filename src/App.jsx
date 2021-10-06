@@ -1,15 +1,17 @@
 import "./App.scss";
 
 import { useState } from "react";
-import { IntlProvider } from "react-intl";
+import { FormattedMessage, IntlProvider } from "react-intl";
 import { Switch, Route, HashRouter } from "react-router-dom";
 import cx from "classnames";
 
 import localization from "./localization";
 import useOS from "./utils/useOS";
+
 import LearnPage from "./pages/LearnPage";
 import LandingPage from "./pages/LandingPage/index";
-import LandingHeader from "./components/LandingHeader";
+
+import Alert from "./components/Alert";
 
 function App() {
   const defaultLang = "tr-tr";
@@ -22,19 +24,21 @@ function App() {
       locale={lang}
       defaultLocale={defaultLang}
     >
-      <HashRouter>
-        <LandingHeader />
-        <div className={cx("App", { desktop: isDesktop })}>
+      <div className={cx("App", { desktop: isDesktop })}>
+        <Alert visible>
+          <FormattedMessage id="alert.site.under.development" />
+        </Alert>
+        <HashRouter>
           <Switch>
+            <Route exact path="/">
+              <LandingPage />
+            </Route>
             <Route path="/learn">
               <LearnPage lang={lang} setLang={setLang} />
             </Route>
-            <Route path="/">
-              <LandingPage />
-            </Route>
           </Switch>
-        </div>
-      </HashRouter>
+        </HashRouter>
+      </div>
     </IntlProvider>
   );
 }
