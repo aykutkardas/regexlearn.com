@@ -3,6 +3,11 @@
   height: 80px;
   align-items: center;
   justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
 
   a {
     text-decoration: none;
@@ -24,7 +29,6 @@
 
     &-name {
       font-size: 1.3rem;
-      height: 18px;
     }
   }
 
@@ -32,19 +36,17 @@
     display: flex;
     align-items: center;
     color: var(--learn-white);
+    font-size: 14px;
   }
 
-  .landing-link-learn {
-    font-size: 1.1rem;
-    margin-right: 2.2em;
+  &-link {
+    margin-left: 20px;
   }
 
   .landing-link-playground {
-    margin-right: 2.2em;
     cursor: not-allowed;
     display: flex;
     align-items: center;
-    font-size: 1.1rem;
     color: var(--landing-link-disabled);
 
     &-icon {

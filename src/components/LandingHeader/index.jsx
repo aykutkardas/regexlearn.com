@@ -1,45 +1,58 @@
 import "./landing-header.scss";
 
-import { useIntl } from "react-intl";
+import { useRef } from "react";
+import ReactTooltip from "react-tooltip";
+import { FormattedMessage } from "react-intl";
 import { Link } from "react-router-dom";
 
 import Icon from "../Icon";
 
 function LandingHeader() {
-  const { formatMessage } = useIntl();
+  const playgroundRef = useRef(null);
 
   return (
-    <div className="container landing-header">
+    <div className="landing-header">
       <Link to="/" className="landing-header-brand">
         <span className="landing-header-brand-name">RegexLearn</span>
       </Link>
 
       <div className="landing-header-links">
-        <Link to="/learn" className="landing-link-learn">
-          {formatMessage({ id: "landing.learn" })}
+        <Link to="/learn" className="landing-header-link landing-link-learn">
+          <FormattedMessage id="landing.learn" />
         </Link>
 
-        <div className="landing-link-playground">
+        <span
+          ref={playgroundRef}
+          className="landing-header-link landing-link-playground"
+          data-tip
+          data-for="playground-link"
+        >
           <span className="landing-link-playground-name">
-            {formatMessage({ id: "landing.playground" })}
+            <FormattedMessage id="landing.playground" />
           </span>
           <Icon
             icon="lock"
             size={16}
             className="landing-link-playground-icon"
           />
-        </div>
+          <ReactTooltip
+            backgroundColor="#444"
+            arrowColor="#444"
+            clickable
+            id="playground-link"
+            place="bottom"
+            effect="solid"
+          >
+            <FormattedMessage id="general.comingSoon" />
+          </ReactTooltip>
+        </span>
         <a
           href="https://github.com/aykutkardas/regexlearn.com"
           target="_blank"
           rel="noreferrer"
-          className="landing-link-github"
+          className="landing-header-link landing-link-github"
         >
-          <Icon
-            className="landing-link-github-icon"
-            icon="github"
-            size={20}
-          ></Icon>
+          <Icon className="landing-link-github-icon" icon="github" size={20} />
         </a>
       </div>
     </div>
