@@ -8,5 +8,89 @@
   "general.completedCurrentStep": "Step {step} - Completed.",
   "general.hintQuestion": "Show Answer",
 
+  "landing.title": "Learn RegEx step by step, from zero to advanced.",
+  "landing.description": "RegEx is not as difficult as you might think. You can use this tool to easily `learn`, `practice`, `test` and `share` RegEx.",
+
+  "steps.0.title": "Beginning",
+  "steps.0.description": "RegEx is short for Regular Expression. It helps to match, find or manage text. Let's start by typing 'OK' in the Regex field to proceed to the first step.",
+
+  "steps.1.title": "Step 1 - Any Character (.)",
+  "steps.1.description": "The period `.` allows to find any character, including special characters and spaces.",
+
+  "steps.2.title": "Step 2 - Escape Character (\\)",
+  "steps.2.description": "If we are using the dot `.` to find any character, we need to use an escape character `\\` before we can find the dot itself. For this, let's add an escape character `\\` before the period.",
+
+  "steps.3.title": "Step 3 - Word Characters (\\w)",
+  "steps.3.description": "The expression `\\w` is used to find letters, numbers and underscore characters. Let's use the expression `\\w` to find word characters in the text.",
+
+  "steps.4.title": "Step 4 - Non-Word Characters (\\W)",
+  "steps.4.description": "The expression `\\W` is used to find characters other than letters, numbers and underscore characters.",
+
+  "steps.5.title": "Step 5 - Number Characters (\\d)",
+  "steps.5.description": "`\\d` is used to find only number characters.",
+
+  "steps.6.title": "Step 6 - Non-Number Characters (\\D)",
+  "steps.6.description": "`\\D` is used to find non-numeric characters.",
+
+  "steps.7.title": "Step 7 - Space Characters (\\s)",
+  "steps.7.description": "`\\s` is used to find only space characters.",
+
+  "steps.8.title": "Step 8 - Non-Space Characters (\\S)",
+  "steps.8.description": "`\\S` is used to find non-space characters.",
+
+  "steps.9.title": "Step 9 - Any of the Characters We Have Specified",
+  "steps.9.description": "If one of the characters in a word can be various characters, we write it in square brackets `[]` with all alternative characters. For example, to write an expression that can find all the words in the text, let's write the characters `a`, `e`, `i`, `o`, `u` adjacently inside the square brackets `[]`.",
+
+  "steps.10.title": "Step 10 - Except for the Characters We Have Specified",
+  "steps.10.description": "In order to find the characters other than the ones we have specified, we write the characters we do not want side by side in square brackets `[]`, starting with the caret character `^`. In the text below, let's write the letters `e` and `o` side by side after the caret character to find all the words except the words `ber` and `bor`.",
+
+  "steps.11.title": "Step 11 - Letters in the Range We Specified",
+  "steps.11.description": "To find the letters in the specified range, the starting letter and the ending letter are written in square brackets `[]` with a hyphen `-` between them. It is case sensitive. Let's write the expression that will find all lowercase letters between `a` and `g`, including themselves.",
+
+  "steps.12.title": "Step 12 - Numbers in the Range We Specify",
+  "steps.12.description": "To find the numbers in the specified range, the starting number and the ending number are written in square brackets `[]` with a dash `-` between them. Let's write the expression that will find all the numbers between `3` and `6` including themselves.",
+
+  "steps.13.title": "Step 13 - (^) Beginning of line / string",
+  "steps.13.description": "We were using `\\d` to find numbers. Let's add the `^` sign at the beginning of this expression to find only the numbers at the beginning of the line.",
+
+  "steps.14.title": "Step 14 - ($) End of line / string",
+  "steps.14.description": "To find only `html` text at the end of the line, let's use the `$` sign after the `html` value.",
+
+  "steps.15.title": "Step 15 - Optional",
+  "steps.15.description": "To indicate that a character or expression is optional, we put a `?` question mark at the end. For example, let's say that the following letter `u` is optional.",
+
+  "steps.16.title": "Step 16 - Based on One or More Matches of Expression",
+  "steps.16.description": "To indicate that a character or expression can occur one or more times, we put a `+` plus sign at the end. For example, let's state that the letter `e` can occur once or more in the text.",
+
+  "steps.17.title": "Step 17 - Based on None or Multiple Matches of Expression",
+  "steps.17.description": "To indicate that a character or expression can occur at all or more, we put an asterisk `*` at the end. For example, let's state that the letter `e` can occur at all or more often in the text.",
+
+  "steps.18.title": "Step 18 - Based on a Certain Number of Expression Matches",
+  "steps.18.description": "To express a certain number of occurrences of a character or expression, we write curly braces `{n}` along with how many times we want it to occur at the end. For example, let's say that the following letter `e` can only occur twice.",
+
+  "steps.19.title": "Step 19 - Based on A Certain Number or More Matches of Expression",
+  "steps.19.description": "To express a certain number or more occurrences of a character or expression, we write the comma `,` and curly braces `{n, }` together with the comma `,` how many times we want it to appear at the end. For example, let's say that the following letter `e` can occur at least three times.",
+
+  "steps.20.title": "Step 20 - According To The Expression Matches In A Range Of Numbers",
+  "steps.20.description": "To express the occurrence of a character or expression in a certain number range, we write curly braces `{x,y}` with the interval we want to go to the end. For example, let's say that the following letter `e` can only occur between one and three.",
+
+  "steps.21.title": "Step 21 - Or Operator",
+  "steps.21.description": "It allows to specify that more than one character or expression can be passed for a situation. Thus, all possible expressions `(x|y)` are separated from each other by a `|` sign in parentheses. For example, let's say that the following letter `e` can also be `a`.",
+
+  "steps.22.title": "Step 22 - Grouping",
+  "steps.22.description": "We can group an expression and use these groups to reference or enforce some rules. To group an expression, we enclose `()` in parentheses. For now, let's just group the `and` word below.",
+
+  "steps.23.title": "Step 23 - Referencing a Group",
+  "steps.23.description": "In order not to write the same thing over and over in repetitive statements, we can refer to a group that we have made before. For example, in this example, the value `444` is grouped as the expression `(\\d{3})`. To refer to this group we defined first, we add the number of our grouping sequence next to the `\\` sign where we want to use it. For this example, this sequence number is `1`. Let's try now.",
+
+  "steps.24.title": "Step 24 - Flags (global)",
+  "steps.24.description": "Flags determine the rules according to which the expression we write will be applied. For example, will it be case sensitive? Will it find a single match or all? Or will it work only on the first line or all lines? as. In the previous steps, these flags were always ready and selected. Now let's enable the 'global' flag to find all matches.",
+
+  "steps.25.title": "Step 25 - Flags (multiline)",
+  "steps.25.description": "RegEx sees all text as one line. But we use the `multiline` flag to handle each line separately. In this way, the expressions we write according to the end of the line work separately for each line. Now let's enable the `multiline` flag to find all matches.",
+
+  "steps.26.title": "Step 26 - Flags (case-insensitive)",
+  "steps.26.description": "In order to remove the case-insensitiveness of the expression we have written, we must activate the `case-insensitive` flag. Let's try.",
+
   "alert.site.under.development": "This site is still under development. What you see now may change."
 }
