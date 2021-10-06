@@ -7,6 +7,7 @@
   "general.completedStarterStep": "开始步骤 - 完成的。",
   "general.completedCurrentStep": "第{step}步 - 完成的。",
   "general.hintQuestion": "显示答案",
-
+  "landing.learn": "學習",
+  "landing.playground": "Playground",
   "alert.site.under.development": "该网站仍在开发中。 你现在看到的可能会改变。"
 }

@@ -8,6 +8,10 @@
   "general.completedCurrentStep": "Adım {step} - Tamamlandı.",
   "general.hintQuestion": "Cevabı Göster",
   "general.startLearning": "Öğrenmeye Başla",
+  "general.comingSoon": "Yakında",
+  "landing.learn": "Öğren",
+  "landing.playground": "Playground",
+  "alert.site.under.development": "Bu site hala geliştirme aşamasındadır. Şu an gördüğünüz şeyler değişebilir.",
 
   "landing.title": "Sıfırdan gelişmişe, adım adım RegEx öğren.",
   "landing.description": "RegEx düşündüğünüz kadar zor değil. RegEx'i kolayca `öğrenmek`, `uygulamak`, `test etmek` ve `paylaşmak` için bu aracı kullanabilirsiniz.",
@@ -91,7 +95,5 @@
   "steps.25.description": "RegEx tüm metni tek satır olarak görür. Fakat her satırı ayrı ayrı ele alabilmek için `multiline` bayrağını kullanırız. Bu sayede satır sonuna göre yazdığımız ifadeler her satır için ayrı ayrı çalışır. Şimdi tüm eşleşmeleri bulabilmek için `multiline` bayrağını aktif edelim.",
 
   "steps.26.title": "Adım 26 - Bayraklar (case-insensitive)",
-  "steps.26.description": "Yazdığımız ifadenin büyük küçük harf duyarlılığını kaldırmak için `case-insensitive` bayrağını aktif etmeliyiz. Deneyelim.",
-
-  "alert.site.under.development": "Bu site hala geliştirme aşamasındadır. Şu an gördüğünüz şeyler değişebilir."
+  "steps.26.description": "Yazdığımız ifadenin büyük küçük harf duyarlılığını kaldırmak için `case-insensitive` bayrağını aktif etmeliyiz. Deneyelim."
 }

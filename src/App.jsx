@@ -7,8 +7,10 @@ import cx from "classnames";
 
 import localization from "./localization";
 import useOS from "./utils/useOS";
+
 import LearnPage from "./pages/LearnPage";
 import LandingPage from "./pages/LandingPage/index";
+
 import Alert from "./components/Alert";
 
 function App() {

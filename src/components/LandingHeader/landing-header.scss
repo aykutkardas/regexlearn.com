@@ -1,0 +1,56 @@
+.landing-header {
+  display: flex;
+  height: 80px;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+
+  a {
+    text-decoration: none;
+    color: var(--learn-white);
+
+    &:hover {
+      color: var(--landing-link-hover);
+    }
+  }
+
+  &-brand {
+    display: flex;
+    align-items: center;
+
+    &-icon {
+      color: var(--learn-success);
+      margin-right: 6px;
+    }
+
+    &-name {
+      font-size: 1.3rem;
+    }
+  }
+
+  &-links {
+    display: flex;
+    align-items: center;
+    color: var(--learn-white);
+    font-size: 14px;
+  }
+
+  &-link {
+    margin-left: 20px;
+  }
+
+  .landing-link-playground {
+    cursor: not-allowed;
+    display: flex;
+    align-items: center;
+    color: var(--landing-link-disabled);
+
+    &-icon {
+      margin-left: 0.3em;
+    }
+  }
+}
