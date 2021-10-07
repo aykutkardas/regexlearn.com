@@ -16,7 +16,7 @@ function NotFoundPage() {
             404
           </h1>
           <p>
-            <FormattedMessage id="404.intro" values={{
+            <FormattedMessage id="notFound.intro" values={{
               br: <br />
             }}/>
           </p>
