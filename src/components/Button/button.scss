@@ -8,8 +8,13 @@ button {
     opacity: 0.8;
   }
 
-  &.primary {
+  &.success {
     color: var(--learn-black);
     background: var(--learn-success);
+  }
+
+  &.warning {
+    color: var(--learn-black);
+    background: var(--learn-warning);
   }
 }
