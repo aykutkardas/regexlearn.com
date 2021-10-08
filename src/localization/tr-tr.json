@@ -9,8 +9,13 @@
   "general.hintQuestion": "Cevabı Göster",
   "general.startLearning": "Öğrenmeye Başla",
   "general.comingSoon": "Yakında",
+
   "landing.learn": "Öğren",
   "landing.playground": "Playground",
+
+  "notFound.intro": "Aradığın sayfa mevcut değil.",
+  "notFound.button": "Anasayfaya dön",
+
   "alert.site.under.development": "Bu site hala geliştirme aşamasındadır. Şu an gördüğünüz şeyler değişebilir.",
 
   "landing.title": "Sıfırdan gelişmişe, adım adım RegEx öğren.",

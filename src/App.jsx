@@ -9,7 +9,8 @@ import localization from "./localization";
 import useOS from "./utils/useOS";
 
 import LearnPage from "./pages/LearnPage";
-import LandingPage from "./pages/LandingPage/index";
+import LandingPage from "./pages/LandingPage";
+import NotFoundPage from "./pages/NotFound";
 
 import Alert from "./components/Alert";
 
@@ -35,6 +36,9 @@ function App() {
             </Route>
             <Route path="/learn">
               <LearnPage lang={lang} setLang={setLang} />
+            </Route>
+            <Route path='*' exact={true}>
+              <NotFoundPage />
             </Route>
           </Switch>
         </HashRouter>
