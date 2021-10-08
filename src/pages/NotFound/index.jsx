@@ -22,7 +22,7 @@ function NotFoundPage() {
           </p>
           <Link to="/learn">
             <Button className="warning">
-              <FormattedMessage id="general.startLearning" />
+              <FormattedMessage id="notFound.button" />
             </Button>
           </Link>
         </div>

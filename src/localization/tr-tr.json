@@ -13,7 +13,8 @@
   "landing.learn": "Öğren",
   "landing.playground": "Playground",
 
-  "notFound.intro": "Aradığın sayfa mevcut değil. {br} Ama buradayken...👇",
+  "notFound.intro": "Aradığın sayfa mevcut değil.",
+  "notFound.button": "Anasayfaya dön",
 
   "alert.site.under.development": "Bu site hala geliştirme aşamasındadır. Şu an gördüğünüz şeyler değişebilir.",
 

@@ -12,7 +12,8 @@
   "landing.learn": "Learn",
   "landing.playground": "Playground",
 
-  "notFound.intro": "The page you are looking for does not exist. {br} But while you're here...👇",
+  "notFound.intro": "The page you are looking for does not exist.",
+  "notFound.button": "Back to home",
 
   "alert.site.under.development": "This site is still under development. What you see now may change."
 }
