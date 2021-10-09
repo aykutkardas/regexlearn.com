@@ -21,7 +21,7 @@ function NotFoundPage() {
               }}
             />
           </p>
-          <Link to="/learn">
+          <Link to="/">
             <Button className="warning">
               <FormattedMessage id="notFound.button" />
             </Button>
