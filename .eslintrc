@@ -1,5 +1,44 @@
 {
-    "extends": [
-        "airbnb"
+  "extends": ["airbnb", "prettier"],
+  "plugins": ["prettier"],
+  "env": {
+    "es2020": true,
+    "browser": true
+  },
+  "rules": {
+    "prettier/prettier": "error",
+    "no-unused-vars": "warn",
+    "no-console": "off",
+    "func-names": "off",
+    "no-process-exit": "off",
+    "object-shorthand": "off",
+    "class-methods-use-this": "off",
+    "react/prop-types": "off",
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-props-no-spreading": "off",
+    "react/no-danger": "off",
+    "jsx-a11y/label-has-associated-control": [
+      2,
+      {
+        "controlComponents": ["Checkbox"],
+        "depth": 3
+      }
     ]
+  },
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaVersion": 2020
+  },
+  "settings": {
+    "import/resolver": {
+      "alias": {
+        "map": [
+          ["@components", "./src/components/"],
+          ["@pages", "./src/pages/"],
+          ["@utils", "./src/utils/"]
+        ],
+        "extensions": [".js", ".jsx", ".json"]
+      }
+    }
+  }
 }
