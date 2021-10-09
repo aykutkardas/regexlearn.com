@@ -3,9 +3,9 @@ import "./navigation.scss";
 import { FormattedMessage } from "react-intl";
 import cx from "classnames";
 
-import Icon from "../Icon";
-import Shortcut from "../Shortcut";
-import shortcuts from "../../shortcuts";
+import Icon from "../../../../components/Icon";
+import Shortcut from "../../../../components/Shortcut";
+import shortcuts from "../../../../shortcuts";
 
 function Navigation({ steps, step, nextStep, prevStep, success, error }) {
   return !steps.length ? null : (
@@ -32,7 +32,7 @@ function Navigation({ steps, step, nextStep, prevStep, success, error }) {
               lock: !success,
               unlock: success,
               error,
-              "animate__animated animate__shakeX": error
+              "animate__animated animate__shakeX": error,
             })}
             icon={success ? "unlocked" : "lock"}
           />

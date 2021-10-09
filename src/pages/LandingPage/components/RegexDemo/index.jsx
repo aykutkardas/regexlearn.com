@@ -1,11 +1,11 @@
-import "./landing-regex-demo.scss";
+import "./regex-demo.scss";
 
 import { useState, useEffect, useRef } from "react";
 import { useIntl } from "react-intl";
 
-import tagWrapper from "../../utils/tagWrapper";
+import tagWrapper from "../../../../utils/tagWrapper";
 
-function LandingRegexDemo({ data, step }) {
+function LandingRegexDemo() {
   const [regex, setRegex] = useState("\\d\\.\\s\\w+");
   const [flags] = useState("gmi");
   const [content, setContent] = useState(null);
@@ -20,10 +20,12 @@ function LandingRegexDemo({ data, step }) {
         $regex = $regex.replace("\\" + item[1], "\\" + (parseInt(item[1]) + 1));
       });
 
-      const reg = new RegExp("(" + $regex + ")", 'gmi');
+      const reg = new RegExp("(" + $regex + ")", "gmi");
 
       if (regex) {
-        setContent(tagWrapper(initialContent, reg, "landing-regex-demo-result-tag"));
+        setContent(
+          tagWrapper(initialContent, reg, "landing-regex-demo-result-tag")
+        );
       } else {
         setContent(initialContent);
       }

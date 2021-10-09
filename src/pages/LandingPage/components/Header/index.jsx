@@ -1,11 +1,11 @@
-import "./landing-header.scss";
+import "./header.scss";
 
 import { useRef } from "react";
 import ReactTooltip from "react-tooltip";
 import { FormattedMessage } from "react-intl";
 import { Link } from "react-router-dom";
 
-import Icon from "../Icon";
+import Icon from "../../../../components/Icon";
 
 function LandingHeader() {
   const playgroundRef = useRef(null);

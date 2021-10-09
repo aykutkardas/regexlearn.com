@@ -2,9 +2,9 @@ import "./header.scss";
 
 import { Link } from "react-router-dom";
 
-import Icon from "../Icon";
-import LanguageSwitch from "../LanguageSwitch";
-import Progress from "../Progress";
+import Icon from "../../../../components/Icon";
+import LanguageSwitch from "../../../../components/LanguageSwitch";
+import Progress from "../../../../components/Progress";
 
 const Header = ({ lang, setLang, steps, step }) => {
   return (

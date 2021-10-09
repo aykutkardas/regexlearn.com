@@ -3,9 +3,9 @@ import "./landing-page.scss";
 import { Link } from "react-router-dom";
 import { FormattedMessage, useIntl } from "react-intl";
 
-import LandingRegexDemo from "../../components/LandingRegexDemo";
 import Button from "../../components/Button";
-import LandingHeader from "../../components/LandingHeader";
+import RegexDemo from "./components/RegexDemo";
+import Header from "./components/Header";
 
 import tagWrapper from "../../utils/tagWrapper";
 
@@ -14,7 +14,7 @@ function LandingPage() {
 
   return (
     <>
-      <LandingHeader />
+      <Header />
       <div className="container">
         <div className="content landing">
           <h1>
@@ -36,7 +36,7 @@ function LandingPage() {
           </Link>
         </div>
         <div className="intro">
-          <LandingRegexDemo />
+          <RegexDemo />
         </div>
       </div>
     </>

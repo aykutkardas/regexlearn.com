@@ -2,9 +2,9 @@ import { useEffect, useState, useCallback } from "react";
 import Mousetrap from "mousetrap";
 import "mousetrap-global-bind";
 
-import Header from "../../components/Header";
-import Step from "../../components/Step";
-import Navigation from "../../components/Navigation";
+import Header from "./components/Header";
+import Step from "./components/Step";
+import Navigation from "./components/Navigation";
 
 import data from "../../data.json";
 import shortcuts from "../../shortcuts";
