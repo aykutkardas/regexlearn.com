@@ -6,12 +6,12 @@ import { Switch, Route, HashRouter } from "react-router-dom";
 import cx from "classnames";
 
 import localization from "./localization";
-import useOS from "./utils/useOS";
+import useOS from "@utils/useOS";
 
-import LearnPage from "./pages/LearnPage";
-import LandingPage from "./pages/LandingPage/index";
+import LearnPage from "@pages/LearnPage";
+import LandingPage from "@pages/LandingPage/index";
 
-import Alert from "./components/Alert";
+import Alert from "@components/Alert";
 
 function App() {
   const defaultLang = "tr-tr";

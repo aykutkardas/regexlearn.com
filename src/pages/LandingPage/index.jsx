@@ -3,11 +3,12 @@ import "./landing-page.scss";
 import { Link } from "react-router-dom";
 import { FormattedMessage, useIntl } from "react-intl";
 
-import Button from "../../components/Button";
+import tagWrapper from "@utils/tagWrapper";
+
+import Button from "@components/Button";
+
 import RegexDemo from "./components/RegexDemo";
 import Header from "./components/Header";
-
-import tagWrapper from "../../utils/tagWrapper";
 
 function LandingPage() {
   const { formatMessage } = useIntl();

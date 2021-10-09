@@ -3,7 +3,7 @@ import "./regex-demo.scss";
 import { useState, useEffect, useRef } from "react";
 import { useIntl } from "react-intl";
 
-import tagWrapper from "../../../../utils/tagWrapper";
+import tagWrapper from "@utils/tagWrapper";
 
 function LandingRegexDemo() {
   const [regex, setRegex] = useState("\\d\\.\\s\\w+");

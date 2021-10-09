@@ -7,11 +7,11 @@ import cx from "classnames";
 import Mousetrap from "mousetrap";
 import _ from "lodash";
 
-import Hint from "../../../../components/Hint";
-import FlagBox from "../../../../components/FlagBox";
+import Hint from "@components/Hint";
+import FlagBox from "@components/FlagBox";
+import tagWrapper from "@utils/tagWrapper";
+import setCaretPosition from "@utils/setCaretPosition";
 import shortcuts from "../../../../shortcuts";
-import tagWrapper from "../../../../utils/tagWrapper";
-import setCaretPosition from "../../../../utils/setCaretPosition";
 
 function Steps({ data, step, error: parentError, onChangeSuccess }) {
   const [regex, setRegex] = useState(data.initialValue || "");

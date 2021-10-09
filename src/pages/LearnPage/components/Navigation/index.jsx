@@ -3,8 +3,8 @@ import "./navigation.scss";
 import { FormattedMessage } from "react-intl";
 import cx from "classnames";
 
-import Icon from "../../../../components/Icon";
-import Shortcut from "../../../../components/Shortcut";
+import Icon from "@components/Icon";
+import Shortcut from "@components/Shortcut";
 import shortcuts from "../../../../shortcuts";
 
 function Navigation({ steps, step, nextStep, prevStep, success, error }) {

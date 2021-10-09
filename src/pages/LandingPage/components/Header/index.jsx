@@ -5,7 +5,7 @@ import ReactTooltip from "react-tooltip";
 import { FormattedMessage } from "react-intl";
 import { Link } from "react-router-dom";
 
-import Icon from "../../../../components/Icon";
+import Icon from "@components/Icon";
 
 function LandingHeader() {
   const playgroundRef = useRef(null);
