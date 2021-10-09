@@ -6,7 +6,7 @@ function setCaretPosition(inputEl, pos) {
 
     // IE8 and below
   } else if (inputEl.createTextRange) {
-    var range = inputEl.createTextRange();
+    const range = inputEl.createTextRange();
     range.collapse(true);
     range.moveEnd("character", pos);
     range.moveStart("character", pos);

@@ -1,11 +1,12 @@
 import "./language-switch.scss";
 
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
+import Mousetrap from "mousetrap";
+
+import Icon from "@components/Icon";
+import Shortcut from "@components/Shortcut";
 
 import langs, { langNames } from "../../localization";
-import Icon from "../Icon";
-import Shortcut from "../Shortcut";
-import Mousetrap from "mousetrap";
 import shortcuts from "../../shortcuts";
 
 const langList = Object.keys(langs).map((langKey) => ({
@@ -32,20 +33,17 @@ const LanguageSwitch = ({ lang, setLang }) => {
     Mousetrap.bindGlobal(shortcuts.languageSwitch, toggleVisible);
 
     availableLangList.forEach((item, index) => {
-      Mousetrap.bindGlobal(
-        shortcuts.languageSwitch + "+" + (index + 1),
-        (e) => {
-          e.preventDefault();
-          setLang(item.value);
-        }
-      );
+      Mousetrap.bindGlobal(`${shortcuts.languageSwitch}+${index + 1}`, (e) => {
+        e.preventDefault();
+        setLang(item.value);
+      });
     });
 
     return () =>
       Mousetrap.unbindGlobal([
         shortcuts.languageSwitch,
         ...availableLangList.map(
-          (item, index) => shortcuts.languageSwitch + "+" + index
+          (item, index) => `${shortcuts.languageSwitch}+${index}`
         ),
       ]);
   }, [visible, lang]);
@@ -55,17 +53,20 @@ const LanguageSwitch = ({ lang, setLang }) => {
       <div className="language-switch-current">
         <Shortcut command={shortcuts.languageSwitch} />
         {langNames[lang]}
-        <Icon icon="earth" color="#fff" size={15}></Icon>
+        <Icon icon="earth" color="#fff" size={15} />
       </div>
-      <div className={"language-switch-list " + (visible ? "visible" : "")}>
+      <div className={`language-switch-list ${visible ? "visible" : ""}`}>
         {availableLangList.map((item, index) => (
           <div
             key={item.value}
+            role="button"
+            tabIndex="0"
             onClick={handleClick}
+            onKeyDown={handleClick}
             data-value={item.value}
             className="language-switch-list-item"
           >
-            <Shortcut command={shortcuts.languageSwitch + "+" + (index + 1)} />
+            <Shortcut command={`${shortcuts.languageSwitch}+${index + 1}`} />
             {item.label}
           </div>
         ))}

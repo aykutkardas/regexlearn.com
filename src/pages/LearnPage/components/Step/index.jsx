@@ -9,8 +9,10 @@ import _ from "lodash";
 
 import Hint from "@components/Hint";
 import FlagBox from "@components/FlagBox";
+
 import tagWrapper from "@utils/tagWrapper";
 import setCaretPosition from "@utils/setCaretPosition";
+
 import shortcuts from "../../../../shortcuts";
 
 function Steps({ data, step, error: parentError, onChangeSuccess }) {
@@ -43,10 +45,13 @@ function Steps({ data, step, error: parentError, onChangeSuccess }) {
     try {
       let $regex = regex;
       [...$regex.matchAll(/\\(\d+)/g)].forEach((item) => {
-        $regex = $regex.replace("\\" + item[1], "\\" + (parseInt(item[1]) + 1));
+        $regex = $regex.replace(
+          `\\${item[1]}`,
+          `\\${parseInt(item[1], 10) + 1}`
+        );
       });
 
-      const reg = new RegExp("(" + $regex + ")", flags);
+      const reg = new RegExp(`(${$regex})`, flags);
       const matchType = flags?.includes("g") ? "matchAll" : "match";
       const regResult = [...data.content[matchType](reg)]
         .map((res) => res[0])

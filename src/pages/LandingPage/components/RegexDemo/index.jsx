@@ -17,10 +17,13 @@ function LandingRegexDemo() {
     try {
       let $regex = regex;
       [...$regex.matchAll(/\\(\d+)/g)].forEach((item) => {
-        $regex = $regex.replace("\\" + item[1], "\\" + (parseInt(item[1]) + 1));
+        $regex = $regex.replace(
+          `\\${item[1]}`,
+          `\\${parseInt(item[1], 10) + 1}`
+        );
       });
 
-      const reg = new RegExp("(" + $regex + ")", "gmi");
+      const reg = new RegExp(`(${$regex})`, "gmi");
 
       if (regex) {
         setContent(
@@ -44,7 +47,7 @@ function LandingRegexDemo() {
   useEffect(checkRegex, [regex, initialContent]);
 
   return (
-    <div className={"landing-regex-demo"}>
+    <div className="landing-regex-demo">
       <div
         className="landing-regex-demo-block landing-regex-demo-block-content"
         data-title={formatMessage({ id: "general.text" })}

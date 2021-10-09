@@ -5,6 +5,7 @@ import cx from "classnames";
 
 import Icon from "@components/Icon";
 import Shortcut from "@components/Shortcut";
+
 import shortcuts from "../../../../shortcuts";
 
 function Navigation({ steps, step, nextStep, prevStep, success, error }) {
@@ -13,7 +14,10 @@ function Navigation({ steps, step, nextStep, prevStep, success, error }) {
       {step > 0 && (
         <div
           className="navigation-step navigation-prev-step"
+          role="button"
+          tabIndex="0"
           onClick={prevStep}
+          onKeyDown={prevStep}
         >
           <Shortcut command={shortcuts.prevStep} />
           <Icon className="navigation-icon" icon="arrow-left" size={20} />
@@ -23,7 +27,10 @@ function Navigation({ steps, step, nextStep, prevStep, success, error }) {
       {step < steps.length - 1 && (
         <div
           className="navigation-step navigation-next-step"
+          role="button"
+          tabIndex="0"
           onClick={nextStep}
+          onKeyDown={nextStep}
         >
           <FormattedMessage id="general.nextStep" />
           <Icon className="navigation-icon" icon="arrow-right" size={20} />
