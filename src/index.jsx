@@ -6,6 +6,8 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { ToastContainer } from "react-toastify";
 
+import * as serviceWorker from "./serviceWorker";
+
 import App from "./App";
 
 ReactDOM.render(
@@ -15,3 +17,5 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById("root")
 );
+
+serviceWorker.register();
