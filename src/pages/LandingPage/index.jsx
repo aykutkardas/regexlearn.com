@@ -31,7 +31,7 @@ function LandingPage() {
             }}
           />
           <Link to="/learn">
-            <Button className="primary">
+            <Button className="success">
               <FormattedMessage id="general.startLearning" />
             </Button>
           </Link>
