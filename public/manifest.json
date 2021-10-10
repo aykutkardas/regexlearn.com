@@ -1,9 +1,14 @@
 {
   "short_name": "Regex Learn",
   "name": "Regex Learn",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "theme_color": "#338152",
+  "background_color": "#282c34",
   "icons": [
     {
-      "src": "favicon.ico",
+      "src": "favicon.svg",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },
@@ -17,9 +22,5 @@
       "type": "image/png",
       "sizes": "512x512"
     }
-  ],
-  "start_url": ".",
-  "display": "standalone",
-  "theme_color": "#5ff59b",
-  "background_color": "#282c34"
+  ]
 }
