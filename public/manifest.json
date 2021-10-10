@@ -1,8 +1,7 @@
 {
   "short_name": "Regex Learn",
   "name": "Regex Learn",
-  "start_url": "/",
-  "scope": "/",
+  "start_url": ".",
   "display": "standalone",
   "theme_color": "#338152",
   "background_color": "#282c34",

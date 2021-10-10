@@ -24,7 +24,19 @@
     "react-scripts": "4.0.3",
     "react-toastify": "^8.0.1",
     "react-tooltip": "^4.2.21",
-    "web-vitals": "^1.0.1"
+    "web-vitals": "^1.0.1",
+    "workbox-background-sync": "^6.3.0",
+    "workbox-broadcast-update": "^6.3.0",
+    "workbox-cacheable-response": "^6.3.0",
+    "workbox-core": "^6.3.0",
+    "workbox-expiration": "^6.3.0",
+    "workbox-google-analytics": "^6.3.0",
+    "workbox-navigation-preload": "^6.3.0",
+    "workbox-precaching": "^6.3.0",
+    "workbox-range-requests": "^6.3.0",
+    "workbox-routing": "^6.3.0",
+    "workbox-strategies": "^6.3.0",
+    "workbox-streams": "^6.3.0"
   },
   "scripts": {
     "start": "PORT=3006 craco start",
