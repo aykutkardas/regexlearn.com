@@ -25,6 +25,11 @@
     font-size: 12px;
   }
 
+  h2 &-word {
+    font-size: unset;
+    margin: 0px 1px;
+  }
+
   &-block {
     background: var(--learn-bg-block);
     border-radius: 6px;
@@ -38,7 +43,7 @@
     align-items: center;
     justify-content: center;
     position: relative;
-    transition: .3s;
+    transition: 0.3s;
 
     &::before {
       content: attr(data-title);
@@ -59,7 +64,7 @@
   }
 
   &.parentError &-block-regex {
-    box-shadow:inset 0px 0px 0px 2px var(--learn-error);
+    box-shadow: inset 0px 0px 0px 2px var(--learn-error);
   }
 
   &-block-content {

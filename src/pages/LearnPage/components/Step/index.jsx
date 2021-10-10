@@ -1,7 +1,7 @@
 import "./step.scss";
 
 import { useState, useEffect, useRef } from "react";
-import { FormattedMessage, useIntl } from "react-intl";
+import { useIntl } from "react-intl";
 import { toast } from "react-toastify";
 import cx from "classnames";
 import Mousetrap from "mousetrap";
@@ -143,9 +143,16 @@ function Steps({ data, step, error: parentError, onChangeSuccess }) {
         parentError,
       })}
     >
-      <h2 className="step-title">
-        <FormattedMessage id={data.title} />
-      </h2>
+      <h2
+        className="step-title"
+        dangerouslySetInnerHTML={{
+          __html: tagWrapper(
+            formatMessage({ id: data.title }),
+            /`(\S*?[^`]*)`/gim,
+            "step-word"
+          ),
+        }}
+      />
       <p
         className="step-description"
         dangerouslySetInnerHTML={{
