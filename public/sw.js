@@ -1,8 +1,8 @@
 /* eslint-disable no-restricted-globals */
 
 // Files to cache
-const cacheName = "regexlearn-pwa-v1";
-const appShellFiles = ["/", "/static/"];
+const cacheName = "regexlearn-pwa-v2";
+const appShellFiles = ["/"];
 
 const contentToCache = appShellFiles;
 
