@@ -150,7 +150,7 @@ function Steps({ data, step, error: parentError, onChangeSuccess }) {
             formatMessage({ id: data.title }),
             /`(\S*?[^`]*)`/gim,
             "step-word"
-          ),
+          ).replace(/\\n/gim, "<br/>"),
         }}
       />
       <p
