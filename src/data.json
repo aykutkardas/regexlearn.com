@@ -134,9 +134,9 @@
     "initialValue": "[-]",
     "initialFlags": "g",
     "flags": "g",
-    "regex": "[a-g]",
+    "regex": "[e-o]",
     "cursorPosition": 1,
-    "answer": ["a", "b", "c", "d", "e", "f", "g"]
+    "answer": ["e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o"]
   },
   {
     "title": "steps.12.title",
@@ -152,24 +152,24 @@
   {
     "title": "steps.13.title",
     "description": "steps.13.description",
-    "content": "1: 01.01.2000",
+    "content": "Basic Omellette Recipe\n\n1. 3 eggs, beaten\n2. 1 tsp sunflower oil\n3. 1 tsp butter",
     "initialValue": "\\d",
-    "initialFlags": "g",
-    "flags": "g",
+    "initialFlags": "gm",
+    "flags": "gm",
     "regex": "^\\d",
     "cursorPosition": 0,
-    "answer": ["1"]
+    "answer": ["1", "2", "3"]
   },
   {
     "title": "steps.14.title",
     "description": "steps.14.description",
-    "content": "https://domain.com/what-is-html.html",
+    "content": "https://domain.com/what-is-html.html\nhttps://otherdomain.com/html-elements\nhttps://website.com/html5-features.html",
     "initialValue": "html",
-    "initialFlags": "g",
-    "flags": "g",
+    "initialFlags": "gm",
+    "flags": "gm",
     "regex": "html$",
     "cursorPosition": 4,
-    "answer": ["html"]
+    "answer": ["html", "html"]
   },
   {
     "title": "steps.15.title",
@@ -263,11 +263,11 @@
     "title": "steps.23.title",
     "description": "steps.23.description",
     "content": "444-0-444",
-    "initialValue": "(\\d{3})-\\d-",
+    "initialValue": "(\\d{3})-(\\d)-",
     "initialFlags": "g",
     "flags": "g",
-    "regex": "(\\d{3})-\\d-\\1",
-    "cursorPosition": 11,
+    "regex": "(\\d{3})-(\\d)-\\1",
+    "cursorPosition": 13,
     "answer": ["444-0-444"]
   },
   {
