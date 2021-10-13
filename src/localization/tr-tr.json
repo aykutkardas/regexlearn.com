@@ -41,7 +41,7 @@
   "steps.withoutWordCharacter.title": "Sözcük Karakteri Dışındakiler `\\W`",
   "steps.withoutWordCharacter.description": "Harf, sayı ve alt çizgi karakterleri dışında kalan karakterleri bulmak için `\\W` ifadesi kullanılır.",
 
-  "steps.numberCharacter.title": "Sayı Karakteri  `\\d`",
+  "steps.numberCharacter.title": "Sayı Karakteri `\\d`",
   "steps.numberCharacter.description": "Sadece sayı karakterlerini bulmak için `\\d` kullanılır.",
 
   "steps.withoutNumberCharacter.title": "Sayı Karakteri Dışındakiler `\\D`",
@@ -53,16 +53,16 @@
   "steps.withoutSpaceCharacter.title": "Boşluk Karakteri Dışındakiler `\\S`",
   "steps.withoutSpaceCharacter.description": "Boşluk karakteri dışındakileri bulmak için `\\S` kullanılır.",
 
-  "steps.characterSet.title": "Belirttiğimiz Karakterlerden Herhangi Biri `[abc]`",
+  "steps.characterSet.title": "Karakter Seti `[abc]`",
   "steps.characterSet.description": "Eğer bir sözcüğün içerdiği karakterlerden biri çeşitli karakterler olabilirse bunu köşeli parantez `[]` içerisinde tüm alternatif karakterler ile birlikte yazarız. Örneğin metindeki tüm sözcükleri bulabilecek ifadeyi yazabilmek için `a`, `e`, `i`, `o`, `u` karakterlerini bitişik olarak köşeli parantezlerin `[]` içine yazalım.",
 
-  "steps.negatedSet.title": "Belirttiğimiz Karakterlerin Dışındakiler `[^abc]`",
+  "steps.negatedSet.title": "Negatiflenmiş Karakter Seti `[^abc]`",
   "steps.negatedSet.description": "Belirttiğimiz karakterlerin dışındakileri bulmak için istemediğimiz karakterleri köşeli parantez `[]` içine şapka karakteri `^` ile başlayacak şekilde yan yana yazarız. Aşağıdaki metinde `ber` ve `bor` sözcükleri dışındaki tüm sözcükleri bulabilmek için şapka karakterinden sonra `e` ve `o` harfini yan yana yazalım.",
 
-  "steps.range.title": "Belirttiğimiz Aralıktaki Harfler `[a-z]`",
+  "steps.range.title": "Harf Karakter Aralığı `[a-z]`",
   "steps.range.description": "Belirttiğimiz aralıktaki harfleri bulmak için başlangıç harfi ve bitiş harfi aralarında bir tire `-` olacak şekilde köşeli parantezler `[]` içine yazılır. Büyük küçük harf duyarlıdır. Kendileri de dahil `e` ve `o` aralarındaki tüm küçük harfleri bulacak ifadeyi yazalım.",
 
-  "steps.rangeNumber.title": "Belirttiğimiz Aralıktaki Sayılar `[0-9]`",
+  "steps.rangeNumber.title": "Sayı Karakter Aralığı `[0-9]`",
   "steps.rangeNumber.description": "Belirttiğimiz aralıktaki sayıları bulmak için başlangıç sayısı ve bitiş sayısı aralarında bir tire `-` olacak şekilde köşeli parantezler `[]` içine yazılır. Kendileride dahil `3` ve `6` aralarındaki tüm sayıları bulacak ifadeyi yazalım.",
 
   "steps.caret.title": "Şapka İşareti `^`:\\nSatır Başlangıcına Göre Seçmek",
