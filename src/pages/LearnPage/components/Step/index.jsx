@@ -18,6 +18,7 @@ import shortcuts from "../../../../shortcuts";
 function Steps({ data, step, error: parentError, onChangeSuccess }) {
   const [regex, setRegex] = useState(data.initialValue || "");
   const [flags, setFlags] = useState(data.initialFlags || "");
+  const [isChanged, setIsChanged] = useState(false);
   const [content, setContent] = useState(null);
   const [error, setError] = useState(false);
   const [success, setSuccess] = useState(false);
@@ -37,9 +38,10 @@ function Steps({ data, step, error: parentError, onChangeSuccess }) {
     }
   };
 
-  useEffect(() => {
-    onChangeSuccess(success);
-  }, [success, onChangeSuccess]);
+  const onChange = (e) => {
+    setIsChanged(true);
+    setRegex(e.target.value);
+  };
 
   const checkRegex = () => {
     try {
@@ -78,22 +80,12 @@ function Steps({ data, step, error: parentError, onChangeSuccess }) {
         setContent(data.content);
       }
 
-      if (isSuccess) {
-        toast.success(
-          formatMessage(
-            {
-              id: step
-                ? "general.completedCurrentStep"
-                : "general.completedStarterStep",
-            },
-            { step }
-          ),
-          {
-            theme: "colored",
-            autoClose: false,
-            position: "top-center",
-          }
-        );
+      if (isChanged && isSuccess) {
+        toast.success(formatMessage({ id: "general.completedStep" }), {
+          theme: "colored",
+          autoClose: true,
+          position: "top-center",
+        });
 
         setError(false);
       } else if (isMatch) {
@@ -106,6 +98,10 @@ function Steps({ data, step, error: parentError, onChangeSuccess }) {
       setError(true);
     }
   };
+
+  useEffect(() => {
+    onChangeSuccess(success);
+  }, [success, onChangeSuccess]);
 
   useEffect(() => {
     Mousetrap.bindGlobal(shortcuts.focus, (e) => {
@@ -122,6 +118,7 @@ function Steps({ data, step, error: parentError, onChangeSuccess }) {
     setContent(data.content);
     setFlags(data.initialFlags);
     setRegex(data.initialValue || "");
+    setIsChanged(false);
     checkRegex();
     blurInput();
     setTimeout(() => {
@@ -156,7 +153,11 @@ function Steps({ data, step, error: parentError, onChangeSuccess }) {
       <p
         className="step-description"
         dangerouslySetInnerHTML={{
-          __html: tagWrapper(description, /`(\S*?[^`]*)`/gim, "step-word"),
+          __html: tagWrapper(
+            description,
+            /`(\S*?[^`]*)`/gim,
+            "step-word"
+          ).replace(/\\n/gim, "<br/>"),
         }}
       />
       <div
@@ -177,8 +178,9 @@ function Steps({ data, step, error: parentError, onChangeSuccess }) {
             key={step}
             type="text"
             style={{ width: regex.length * 15 || 50 }}
+            readOnly={data.readOnly}
             value={regex}
-            onChange={(e) => setRegex(e.target.value)}
+            onChange={onChange}
             placeholder={formatMessage({ id: "general.regex" }).toLowerCase()}
             spellCheck={false}
           />

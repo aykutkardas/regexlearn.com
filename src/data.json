@@ -10,6 +10,29 @@
     "answer": ["OK"]
   },
   {
+    "title": "steps.whatIsRegex.title",
+    "description": "steps.whatIsRegex.description",
+    "content": "readme.md\ndocument.pdf\nimage.png\nmusic.mp4\nmanual.pdf",
+    "initialFlags": "gm",
+    "flags": "gm",
+    "regex": "^\\w+\\.pdf$",
+    "initialValue": "^\\w+\\.pdf$",
+    "cursorPosition": 0,
+    "readOnly": true,
+    "answer": ["document.pdf", "manual.pdf"]
+  },
+  {
+    "title": "steps.basicMatchers.title",
+    "description": "steps.basicMatchers.description",
+    "content": "“I have no special talents. I am only passionately curious.”\n\n― Albert Einstein",
+    "initialFlags": "gm",
+    "flags": "gm",
+    "regex": "curious",
+    "initialValue": "",
+    "cursorPosition": 0,
+    "answer": ["curious"]
+  },
+  {
     "title": "steps.dotCharacter.title",
     "description": "steps.dotCharacter.description",
     "content": "abcABC123 .:!?",

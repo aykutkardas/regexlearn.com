@@ -4,8 +4,7 @@
   "general.result": "Result",
   "general.regex": "Regex",
   "general.text": "Text",
-  "general.completedStarterStep": "Starter Step - Completed.",
-  "general.completedCurrentStep": "Step {step} - Completed.",
+  "general.completedStep": "Step Completed!",
   "general.hintQuestion": "Show Answer",
   "general.comingSoon": "Coming Soon",
 

@@ -4,8 +4,7 @@
   "general.result": "Sonuç",
   "general.regex": "Regex",
   "general.text": "Metin",
-  "general.completedStarterStep": "Başlangıç - Tamamlandı.",
-  "general.completedCurrentStep": "Adım {step} - Tamamlandı.",
+  "general.completedStep": "Adım Tamamlandı.",
   "general.hintQuestion": "Cevabı Göster",
   "general.startLearning": "Öğrenmeye Başla!",
   "general.comingSoon": "Yakında!",
@@ -22,7 +21,13 @@
   "landing.description": "RegEx öğrenmek düşündüğünüzden daha kolay. RegEx'i kolayca `öğrenmek`, `pratik yapmak`, `test etmek` ve `paylaşmak` için bu aracı kullanabilirsiniz.",
 
   "steps.starter.title": "Giriş",
-  "steps.starter.description": "RegEx `Regular Expression` 'in kısaltmasıdır. Metni eşleştirmeye, bulmaya ya da yönetmeye yardımcı olur. İlk adıma geçmek için Regex alanına `OK` yazarak başlayalım.",
+  "steps.starter.description": "RegEx `Regular Expression` 'in kısaltmasıdır. Metni eşleştirmeye, bulmaya ya da yönetmeye yardımcı olur. İlk adıma geçmek ve daha detaylı açıklamaya erişmek için Regex alanına `OK` yazarak başlayalım.",
+
+  "steps.whatIsRegex.title": "Düzenli İfadeler `RegEx`",
+  "steps.whatIsRegex.description": "Düzenli ifadeler bir arama modelini ifade eden bir karakter dizisidir. Genellikle `RegEx` ya da `RegExp` olarak kısaltılmıştır. Özelikle metinlerde geçen sözcükleri bulmak veya değiştirmek için kullanılır. Ayrıca bir metnin belirlediğimiz kurallara uyup uymadığı test edilebilir.\\n\\n Örneğin dosya isimlerinden oluşan bir listeniz olduğunu düşünelim. Ve siz sadece `pdf` uzantılı dosyaları bulmak istiyorsunuz. O halde şöyle bir ifade `^\\w+\\.pdf$` yazmak işe yarayacaktı. Bu ifadedeki tanımlamaların ne anlama geldiği adımlar geçtikçe daha anlaşılır olacak.",
+
+  "steps.basicMatchers.title": "Temel Eşleştiriciler",
+  "steps.basicMatchers.description": "Temel eşleştirici bir karakterin ya da sözcüğün seçilmesi için olduğu gibi yazılmasıdır. Örneğin metinde geçen `curious` sözcüklerini seçmek için aynı şekilde yazalım.",
 
   "steps.dotCharacter.title": "Nokta `.`: Herhangi Bir Karakter",
   "steps.dotCharacter.description": "Nokta `.` işareti özel karakterler ve boşluklar da dahil herhangi bir karakteri seçmeyi sağlar.",
