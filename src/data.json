@@ -1,7 +1,7 @@
 [
   {
-    "title": "steps.0.title",
-    "description": "steps.0.description",
+    "title": "steps.starter.title",
+    "description": "steps.starter.description",
     "content": "Understand? OK or NOT",
     "initialFlags": "g",
     "flags": "g",
@@ -10,8 +10,8 @@
     "answer": ["OK"]
   },
   {
-    "title": "steps.1.title",
-    "description": "steps.1.description",
+    "title": "steps.dotCharacter.title",
+    "description": "steps.dotCharacter.description",
     "content": "abcABC123 .:!?",
     "initialFlags": "g",
     "flags": "g",
@@ -35,8 +35,8 @@
     ]
   },
   {
-    "title": "steps.2.title",
-    "description": "steps.2.description",
+    "title": "steps.escapeCharacter.title",
+    "description": "steps.escapeCharacter.description",
     "content": "abcABC123 .:!?",
     "initialFlags": "g",
     "initialValue": ".",
@@ -46,8 +46,8 @@
     "answer": ["."]
   },
   {
-    "title": "steps.3.title",
-    "description": "steps.3.description",
+    "title": "steps.wordCharacter.title",
+    "description": "steps.wordCharacter.description",
     "content": "abcABC123 _.:!?",
     "initialFlags": "g",
     "flags": "g",
@@ -56,8 +56,8 @@
     "answer": ["a", "b", "c", "A", "B", "C", "1", "2", "3", "_"]
   },
   {
-    "title": "steps.4.title",
-    "description": "steps.4.description",
+    "title": "steps.withoutWordCharacter.title",
+    "description": "steps.withoutWordCharacter.description",
     "content": "abcABC123 _.:!?",
     "initialFlags": "g",
     "flags": "g",
@@ -66,8 +66,8 @@
     "answer": [" ", ".", ":", "!", "?"]
   },
   {
-    "title": "steps.5.title",
-    "description": "steps.5.description",
+    "title": "steps.numberCharacter.title",
+    "description": "steps.numberCharacter.description",
     "content": "abcABC123 .:!?",
     "initialFlags": "g",
     "flags": "g",
@@ -76,8 +76,8 @@
     "answer": ["1", "2", "3"]
   },
   {
-    "title": "steps.6.title",
-    "description": "steps.6.description",
+    "title": "steps.withoutNumberCharacter.title",
+    "description": "steps.withoutNumberCharacter.description",
     "content": "abcABC123 .:!?",
     "initialFlags": "g",
     "flags": "g",
@@ -86,8 +86,8 @@
     "answer": ["a", "b", "c", "A", "B", "C", " ", ".", ":", "!", "?"]
   },
   {
-    "title": "steps.7.title",
-    "description": "steps.7.description",
+    "title": "steps.spaceCharacter.title",
+    "description": "steps.spaceCharacter.description",
     "content": "abcABC123 .:!?",
     "initialFlags": "g",
     "flags": "g",
@@ -96,8 +96,8 @@
     "answer": [" "]
   },
   {
-    "title": "steps.8.title",
-    "description": "steps.8.description",
+    "title": "steps.withoutSpaceCharacter.title",
+    "description": "steps.withoutSpaceCharacter.description",
     "content": "abcABC123 .:!?",
     "initialFlags": "g",
     "flags": "g",
@@ -106,8 +106,8 @@
     "answer": ["a", "b", "c", "A", "B", "C", "1", "2", "3", ".", ":", "!", "?"]
   },
   {
-    "title": "steps.9.title",
-    "description": "steps.9.description",
+    "title": "steps.characterSet.title",
+    "description": "steps.characterSet.description",
     "content": "bar ber bir bor bur",
     "initialValue": "b[]r",
     "initialFlags": "g",
@@ -117,8 +117,8 @@
     "answer": ["bar", "ber", "bir", "bor", "bur"]
   },
   {
-    "title": "steps.10.title",
-    "description": "steps.10.description",
+    "title": "steps.negatedSet.title",
+    "description": "steps.negatedSet.description",
     "content": "bar ber bir bor bur",
     "initialValue": "b[^]r",
     "initialFlags": "g",
@@ -128,8 +128,8 @@
     "answer": ["bar", "bir", "bur"]
   },
   {
-    "title": "steps.11.title",
-    "description": "steps.11.description",
+    "title": "steps.range.title",
+    "description": "steps.range.description",
     "content": "abcdefghijklmnopqrstuvwxyz",
     "initialValue": "[-]",
     "initialFlags": "g",
@@ -139,8 +139,8 @@
     "answer": ["e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o"]
   },
   {
-    "title": "steps.12.title",
-    "description": "steps.12.description",
+    "title": "steps.rangeNumber.title",
+    "description": "steps.rangeNumber.description",
     "content": "0123456789",
     "initialValue": "[-]",
     "initialFlags": "g",
@@ -150,8 +150,8 @@
     "answer": ["3", "4", "5", "6"]
   },
   {
-    "title": "steps.13.title",
-    "description": "steps.13.description",
+    "title": "steps.caret.title",
+    "description": "steps.caret.description",
     "content": "Basic Omellette Recipe\n\n1. 3 eggs, beaten\n2. 1 tsp sunflower oil\n3. 1 tsp butter",
     "initialValue": "\\d",
     "initialFlags": "gm",
@@ -161,8 +161,8 @@
     "answer": ["1", "2", "3"]
   },
   {
-    "title": "steps.14.title",
-    "description": "steps.14.description",
+    "title": "steps.dollar.title",
+    "description": "steps.dollar.description",
     "content": "https://domain.com/what-is-html.html\nhttps://otherdomain.com/html-elements\nhttps://website.com/html5-features.html",
     "initialValue": "html",
     "initialFlags": "gm",
@@ -172,8 +172,8 @@
     "answer": ["html", "html"]
   },
   {
-    "title": "steps.15.title",
-    "description": "steps.15.description",
+    "title": "steps.questionMark.title",
+    "description": "steps.questionMark.description",
     "content": "color, colour",
     "initialValue": "colour",
     "initialFlags": "g",
@@ -183,8 +183,8 @@
     "answer": ["color", "colour"]
   },
   {
-    "title": "steps.16.title",
-    "description": "steps.16.description",
+    "title": "steps.plusCharacter.title",
+    "description": "steps.plusCharacter.description",
     "content": "br ber beer beeer beeeer",
     "initialValue": "ber",
     "initialFlags": "g",
@@ -194,8 +194,8 @@
     "answer": ["ber", "beer", "beeer", "beeeer"]
   },
   {
-    "title": "steps.17.title",
-    "description": "steps.17.description",
+    "title": "steps.starCharacter.title",
+    "description": "steps.starCharacter.description",
     "content": "br ber beer beeer beeeer",
     "initialValue": "ber",
     "initialFlags": "g",
@@ -205,8 +205,8 @@
     "answer": ["br", "ber", "beer", "beeer", "beeeer"]
   },
   {
-    "title": "steps.18.title",
-    "description": "steps.18.description",
+    "title": "steps.quantifier.title",
+    "description": "steps.quantifier.description",
     "content": "ber beer beeer beeeer",
     "initialValue": "be{}r",
     "initialFlags": "g",
@@ -216,8 +216,8 @@
     "answer": ["beer"]
   },
   {
-    "title": "steps.19.title",
-    "description": "steps.19.description",
+    "title": "steps.quantifierMin.title",
+    "description": "steps.quantifierMin.description",
     "content": "ber beer beeer beeeer",
     "initialValue": "be{,}r",
     "initialFlags": "g",
@@ -227,8 +227,8 @@
     "answer": ["beeer", "beeeer"]
   },
   {
-    "title": "steps.20.title",
-    "description": "steps.20.description",
+    "title": "steps.quantifierRange.title",
+    "description": "steps.quantifierRange.description",
     "content": "ber beer beeer beeeer",
     "initialValue": "be{,}r",
     "initialFlags": "g",
@@ -238,8 +238,8 @@
     "answer": ["ber", "beer", "beeer"]
   },
   {
-    "title": "steps.21.title",
-    "description": "steps.21.description",
+    "title": "steps.pipeCharacter.title",
+    "description": "steps.pipeCharacter.description",
     "content": "beer bear",
     "initialValue": "be(e|)r",
     "initialFlags": "g",
@@ -249,8 +249,8 @@
     "answer": ["beer", "bear"]
   },
   {
-    "title": "steps.22.title",
-    "description": "steps.22.description",
+    "title": "steps.groupping.title",
+    "description": "steps.groupping.description",
     "content": "red and blue",
     "initialValue": "(a)",
     "initialFlags": "g",
@@ -260,8 +260,8 @@
     "answer": ["and"]
   },
   {
-    "title": "steps.23.title",
-    "description": "steps.23.description",
+    "title": "steps.groupReference.title",
+    "description": "steps.groupReference.description",
     "content": "444-0-444",
     "initialValue": "(\\d{3})-(\\d)-",
     "initialFlags": "g",
@@ -271,8 +271,8 @@
     "answer": ["444-0-444"]
   },
   {
-    "title": "steps.24.title",
-    "description": "steps.24.description",
+    "title": "steps.flagsGlobal.title",
+    "description": "steps.flagsGlobal.description",
     "content": "domain.com, test.com, site.com",
     "initialValue": "\\w+\\.com",
     "flags": "g",
@@ -282,8 +282,8 @@
     "useFlagsControl": true
   },
   {
-    "title": "steps.25.title",
-    "description": "steps.25.description",
+    "title": "steps.flagsMultiline.title",
+    "description": "steps.flagsMultiline.description",
     "content": "domain.com\ntest.com\nsite.com",
     "initialValue": "\\w+\\.com$",
     "initialFlags": "g",
@@ -294,8 +294,8 @@
     "useFlagsControl": true
   },
   {
-    "title": "steps.26.title",
-    "description": "steps.26.description",
+    "title": "steps.flagsCaseInsensitive.title",
+    "description": "steps.flagsCaseInsensitive.description",
     "content": "DOMAIN.COM\nTEST.COM\nSITE.COM",
     "initialValue": "\\w+\\.com$",
     "initialFlags": "gm",
