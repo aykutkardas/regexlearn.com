@@ -27,8 +27,8 @@ const Hint = ({ regex, flags }) => {
   return (
     <div ref={hintRef} className="hint" data-tip data-for="hint">
       <span className="hint-question">
-        <Shortcut command={shortcuts.hint} />
         <FormattedMessage id="general.hintQuestion" />
+        <Shortcut command={shortcuts.hint} />
       </span>
 
       <ReactTooltip
