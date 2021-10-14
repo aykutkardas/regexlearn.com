@@ -23,6 +23,7 @@ button {
   }
   &.disabled{
     color: var(--learn-black);
+    background: var(--learn-white);
     cursor: not-allowed;
   }
 }
