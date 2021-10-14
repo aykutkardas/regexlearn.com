@@ -115,11 +115,17 @@ function Steps({ data, step, error: parentError, onChangeSuccess }) {
   useEffect(() => {
     setError(false);
     setSuccess(false);
+
+    if (data.interactive === false) {
+      setSuccess(true);
+      return;
+    }
+
+    checkRegex();
     setContent(data.content);
     setFlags(data.initialFlags);
     setRegex(data.initialValue || "");
     setIsChanged(false);
-    checkRegex();
     blurInput();
     setTimeout(() => {
       setCaretPosition(regexInput.current, data.cursorPosition);
@@ -160,33 +166,41 @@ function Steps({ data, step, error: parentError, onChangeSuccess }) {
           ).replace(/\\n/gim, "<br/>"),
         }}
       />
-      <div
-        className="step-block step-block-content"
-        data-title={formatMessage({ id: "general.text" })}
-        dangerouslySetInnerHTML={{
-          __html: (content || data.content).replace(/\n/gm, "<br />"),
-        }}
-      />
-      <div
-        className="step-block step-block-regex"
-        data-title={formatMessage({ id: "general.regex" })}
-      >
-        <Hint regex={data.regex} flags={data.flags} />
-        <div className="step-input" data-flags={flags}>
-          <input
-            ref={regexInput}
-            key={step}
-            type="text"
-            style={{ width: regex.length * 15 || 50 }}
-            readOnly={data.readOnly}
-            value={regex}
-            onChange={onChange}
-            placeholder={formatMessage({ id: "general.regex" }).toLowerCase()}
-            spellCheck={false}
+      {data.interactive !== false && (
+        <>
+          <div
+            className="step-block step-block-content"
+            data-title={formatMessage({ id: "general.text" })}
+            dangerouslySetInnerHTML={{
+              __html: (content || data.content).replace(/\n/gm, "<br />"),
+            }}
           />
-        </div>
-        {data.useFlagsControl && <FlagBox flags={flags} setFlags={setFlags} />}
-      </div>
+          <div
+            className="step-block step-block-regex"
+            data-title={formatMessage({ id: "general.regex" })}
+          >
+            <Hint regex={data.regex} flags={data.flags} />
+            <div className="step-input" data-flags={flags}>
+              <input
+                ref={regexInput}
+                key={step}
+                type="text"
+                style={{ width: regex.length * 15 || 50 }}
+                readOnly={data.readOnly}
+                value={regex}
+                onChange={onChange}
+                placeholder={formatMessage({
+                  id: "general.regex",
+                }).toLowerCase()}
+                spellCheck={false}
+              />
+            </div>
+            {data.useFlagsControl && (
+              <FlagBox flags={flags} setFlags={setFlags} />
+            )}
+          </div>
+        </>
+      )}
     </div>
   );
 }
