@@ -33,6 +33,31 @@
     "answer": ["curious"]
   },
   {
+    "title": "steps.dotCharacter.title",
+    "description": "steps.dotCharacter.description",
+    "content": "abcABC123 .:!?",
+    "initialFlags": "g",
+    "flags": "g",
+    "regex": ".",
+    "cursorPosition": 0,
+    "answer": [
+      "a",
+      "b",
+      "c",
+      "A",
+      "B",
+      "C",
+      "1",
+      "2",
+      "3",
+      " ",
+      ".",
+      ":",
+      "!",
+      "?"
+    ]
+  },
+  {
     "title": "steps.characterSet.title",
     "description": "steps.characterSet.description",
     "content": "bar ber bir bor bur",
@@ -77,29 +102,19 @@
     "answer": ["3", "4", "5", "6"]
   },
   {
-    "title": "steps.dotCharacter.title",
-    "description": "steps.dotCharacter.description",
-    "content": "abcABC123 .:!?",
+    "title": "examples.starter.title",
+    "description": "examples.starter.description",
+    "interactive": false
+  },
+  {
+    "title": "examples.basicMatchers.title",
+    "description": "examples.basicMatchers.description",
+    "content": "“Every man takes the limits of his own field of vision for the limits of the world.”\n― Arthur Schopenhauer",
     "initialFlags": "g",
     "flags": "g",
-    "regex": ".",
+    "regex": "of",
     "cursorPosition": 0,
-    "answer": [
-      "a",
-      "b",
-      "c",
-      "A",
-      "B",
-      "C",
-      "1",
-      "2",
-      "3",
-      " ",
-      ".",
-      ":",
-      "!",
-      "?"
-    ]
+    "answer": ["of", "of", "of"]
   },
   {
     "title": "steps.escapeCharacter.title",
