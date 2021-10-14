@@ -17,4 +17,12 @@ button {
     color: var(--learn-black);
     background: var(--learn-warning);
   }
+  &.danger {
+    color: var(--learn-black);
+    background: var(--learn-error);
+  }
+  &.disabled{
+    color: var(--learn-black);
+    cursor: not-allowed;
+  }
 }
