@@ -69,8 +69,8 @@
     "answer": ["bar", "ber", "bir", "bor", "bur"]
   },
   {
-    "title": "steps.negatedSet.title",
-    "description": "steps.negatedSet.description",
+    "title": "steps.negatedCharacterSet.title",
+    "description": "steps.negatedCharacterSet.description",
     "content": "bar ber bir bor bur",
     "initialValue": "b[^]r",
     "initialFlags": "g",
@@ -115,6 +115,84 @@
     "regex": "of",
     "cursorPosition": 0,
     "answer": ["of", "of", "of"]
+  },
+  {
+    "title": "examples.dotCharacter.title",
+    "description": "examples.dotCharacter.description",
+    "content": "az AZ 09 _- = !? ., :;",
+    "initialFlags": "g",
+    "flags": "g",
+    "regex": ".",
+    "cursorPosition": 0,
+    "answer": [
+      "a",
+      "z",
+      " ",
+      "A",
+      "Z",
+      " ",
+      "0",
+      "9",
+      " ",
+      "_",
+      "-",
+      " ",
+      "=",
+      " ",
+      "!",
+      "?",
+      " ",
+      ".",
+      ",",
+      " ",
+      ":",
+      ";"
+    ]
+  },
+  {
+    "title": "examples.characterSet.title",
+    "description": "examples.characterSet.description",
+    "content": "beer deer feer",
+    "initialFlags": "g",
+    "flags": "g",
+    "regex": "[bdf]eer",
+    "cursorPosition": 0,
+    "answer": ["beer", "deer", "feer"]
+  },
+  {
+    "title": "examples.negatedCharacterSet.title",
+    "description": "examples.negatedCharacterSet.description",
+    "content": "bear beor beer beur",
+    "initialFlags": "g",
+    "flags": "g",
+    "regex": "be[^ou]r",
+    "cursorPosition": 0,
+    "answer": ["bear", "beer"]
+  },
+  {
+    "title": "examples.range.title",
+    "description": "examples.range.description",
+    "content": "abcdefghijklmnopqrstuvwxyz",
+    "initialFlags": "g",
+    "flags": "g",
+    "regex": "[g-k]",
+    "cursorPosition": 0,
+    "answer": ["g", "h", "i", "j", "k"]
+  },
+  {
+    "title": "examples.rangeNumber.title",
+    "description": "examples.rangeNumber.description",
+    "content": "0123456789",
+    "initialFlags": "g",
+    "flags": "g",
+    "regex": "[2-7]",
+    "cursorPosition": 1,
+    "answer": ["2", "3", "4", "5", "6", "7"]
+  },
+  {
+    "title": "examples.finish.title",
+    "description": "examples.finish.description",
+    "interactive": false
   },
   {
     "title": "steps.escapeCharacter.title",
