@@ -5,7 +5,7 @@
     "content": "Understand? OK or NOT",
     "initialFlags": "g",
     "flags": "g",
-    "regex": "OK",
+    "regex": ["OK"],
     "cursorPosition": 0,
     "answer": ["OK"]
   },
@@ -15,7 +15,7 @@
     "content": "readme.md\ndocument.pdf\nimage.png\nmusic.mp4\nmanual.pdf",
     "initialFlags": "gm",
     "flags": "gm",
-    "regex": "^\\w+\\.pdf$",
+    "regex": ["^\\w+\\.pdf$"],
     "initialValue": "^\\w+\\.pdf$",
     "cursorPosition": 0,
     "readOnly": true,
@@ -27,7 +27,7 @@
     "content": "“I have no special talents. I am only passionately curious.”\n\n― Albert Einstein",
     "initialFlags": "gm",
     "flags": "gm",
-    "regex": "curious",
+    "regex": ["curious"],
     "initialValue": "",
     "cursorPosition": 0,
     "answer": ["curious"]
@@ -38,7 +38,7 @@
     "content": "abcABC123 .:!?",
     "initialFlags": "g",
     "flags": "g",
-    "regex": ".",
+    "regex": ["."],
     "cursorPosition": 0,
     "answer": [
       "a",
@@ -64,7 +64,7 @@
     "initialValue": "b[]r",
     "initialFlags": "g",
     "flags": "g",
-    "regex": "b[aeiou]r",
+    "regex": ["b[aeiou]r"],
     "cursorPosition": 2,
     "answer": ["bar", "ber", "bir", "bor", "bur"]
   },
@@ -75,7 +75,7 @@
     "initialValue": "b[^]r",
     "initialFlags": "g",
     "flags": "g",
-    "regex": "b[^eo]r",
+    "regex": ["b[^eo]r"],
     "cursorPosition": 3,
     "answer": ["bar", "bir", "bur"]
   },
@@ -86,7 +86,7 @@
     "initialValue": "[-]",
     "initialFlags": "g",
     "flags": "g",
-    "regex": "[e-o]",
+    "regex": ["[e-o]"],
     "cursorPosition": 1,
     "answer": ["e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o"]
   },
@@ -97,7 +97,7 @@
     "initialValue": "[-]",
     "initialFlags": "g",
     "flags": "g",
-    "regex": "[3-6]",
+    "regex": ["[3-6]"],
     "cursorPosition": 1,
     "answer": ["3", "4", "5", "6"]
   },
@@ -112,7 +112,7 @@
     "content": "“Every man takes the limits of his own field of vision for the limits of the world.”\n― Arthur Schopenhauer",
     "initialFlags": "g",
     "flags": "g",
-    "regex": "of",
+    "regex": ["of"],
     "cursorPosition": 0,
     "answer": ["of", "of", "of"]
   },
@@ -122,7 +122,7 @@
     "content": "az AZ 09 _- = !? ., :;",
     "initialFlags": "g",
     "flags": "g",
-    "regex": ".",
+    "regex": ["."],
     "cursorPosition": 0,
     "answer": [
       "a",
@@ -155,7 +155,7 @@
     "content": "beer deer feer",
     "initialFlags": "g",
     "flags": "g",
-    "regex": "[bdf]eer",
+    "regex": ["[bdf]eer"],
     "cursorPosition": 0,
     "answer": ["beer", "deer", "feer"]
   },
@@ -165,7 +165,7 @@
     "content": "bear beor beer beur",
     "initialFlags": "g",
     "flags": "g",
-    "regex": "be[^ou]r",
+    "regex": ["be[^ou]r"],
     "cursorPosition": 0,
     "answer": ["bear", "beer"]
   },
@@ -175,7 +175,7 @@
     "content": "abcdefghijklmnopqrstuvwxyz",
     "initialFlags": "g",
     "flags": "g",
-    "regex": "[g-k]",
+    "regex": ["[g-k]"],
     "cursorPosition": 0,
     "answer": ["g", "h", "i", "j", "k"]
   },
@@ -185,7 +185,7 @@
     "content": "0123456789",
     "initialFlags": "g",
     "flags": "g",
-    "regex": "[2-7]",
+    "regex": ["[2-7]"],
     "cursorPosition": 1,
     "answer": ["2", "3", "4", "5", "6", "7"]
   },
@@ -206,7 +206,7 @@
     "initialValue": "colour",
     "initialFlags": "g",
     "flags": "g",
-    "regex": "colou?r",
+    "regex": ["colou?r"],
     "cursorPosition": 5,
     "answer": ["color", "colour"]
   },
@@ -217,7 +217,7 @@
     "initialValue": "ber",
     "initialFlags": "g",
     "flags": "g",
-    "regex": "be+r",
+    "regex": ["be+r"],
     "cursorPosition": 2,
     "answer": ["ber", "beer", "beeer", "beeeer"]
   },
@@ -228,7 +228,7 @@
     "initialValue": "ber",
     "initialFlags": "g",
     "flags": "g",
-    "regex": "be*r",
+    "regex": ["be*r"],
     "cursorPosition": 2,
     "answer": ["br", "ber", "beer", "beeer", "beeeer"]
   },
@@ -239,7 +239,7 @@
     "initialValue": "be{}r",
     "initialFlags": "g",
     "flags": "g",
-    "regex": "be{2}r",
+    "regex": ["be{2}r"],
     "cursorPosition": 3,
     "answer": ["beer"]
   },
@@ -250,7 +250,7 @@
     "initialValue": "be{,}r",
     "initialFlags": "g",
     "flags": "g",
-    "regex": "be{3,}r",
+    "regex": ["be{3,}r"],
     "cursorPosition": 3,
     "answer": ["beeer", "beeeer"]
   },
@@ -261,7 +261,7 @@
     "initialValue": "be{,}r",
     "initialFlags": "g",
     "flags": "g",
-    "regex": "be{1,3}r",
+    "regex": ["be{1,3}r"],
     "cursorPosition": 3,
     "answer": ["ber", "beer", "beeer"]
   },
@@ -272,7 +272,7 @@
     "initialFlags": "g",
     "initialValue": ".",
     "flags": "g",
-    "regex": "\\.",
+    "regex": ["\\."],
     "cursorPosition": 0,
     "answer": ["."]
   },
@@ -282,7 +282,7 @@
     "content": "abcABC123 _.:!?",
     "initialFlags": "g",
     "flags": "g",
-    "regex": "\\w",
+    "regex": ["\\w"],
     "cursorPosition": 0,
     "answer": ["a", "b", "c", "A", "B", "C", "1", "2", "3", "_"]
   },
@@ -292,7 +292,7 @@
     "content": "abcABC123 _.:!?",
     "initialFlags": "g",
     "flags": "g",
-    "regex": "\\W",
+    "regex": ["\\W"],
     "cursorPosition": 0,
     "answer": [" ", ".", ":", "!", "?"]
   },
@@ -302,7 +302,7 @@
     "content": "abcABC123 .:!?",
     "initialFlags": "g",
     "flags": "g",
-    "regex": "\\d",
+    "regex": ["\\d"],
     "cursorPosition": 0,
     "answer": ["1", "2", "3"]
   },
@@ -312,7 +312,7 @@
     "content": "abcABC123 .:!?",
     "initialFlags": "g",
     "flags": "g",
-    "regex": "\\D",
+    "regex": ["\\D"],
     "cursorPosition": 0,
     "answer": ["a", "b", "c", "A", "B", "C", " ", ".", ":", "!", "?"]
   },
@@ -322,7 +322,7 @@
     "content": "abcABC123 .:!?",
     "initialFlags": "g",
     "flags": "g",
-    "regex": "\\s",
+    "regex": ["\\s"],
     "cursorPosition": 0,
     "answer": [" "]
   },
@@ -332,7 +332,7 @@
     "content": "abcABC123 .:!?",
     "initialFlags": "g",
     "flags": "g",
-    "regex": "\\S",
+    "regex": ["\\S"],
     "cursorPosition": 0,
     "answer": ["a", "b", "c", "A", "B", "C", "1", "2", "3", ".", ":", "!", "?"]
   },
@@ -343,7 +343,7 @@
     "initialValue": "\\d",
     "initialFlags": "gm",
     "flags": "gm",
-    "regex": "^\\d",
+    "regex": ["^\\d"],
     "cursorPosition": 0,
     "answer": ["1", "2", "3"]
   },
@@ -354,7 +354,7 @@
     "initialValue": "html",
     "initialFlags": "gm",
     "flags": "gm",
-    "regex": "html$",
+    "regex": ["html$"],
     "cursorPosition": 4,
     "answer": ["html", "html"]
   },
@@ -366,7 +366,7 @@
     "initialValue": "be(e|)r",
     "initialFlags": "g",
     "flags": "g",
-    "regex": "be(e|a)r",
+    "regex": ["be(e|a)r"],
     "cursorPosition": 5,
     "answer": ["beer", "bear"]
   },
@@ -377,7 +377,7 @@
     "initialValue": "(a)",
     "initialFlags": "g",
     "flags": "g",
-    "regex": "(and)",
+    "regex": ["(and)"],
     "cursorPosition": 2,
     "answer": ["and"]
   },
@@ -388,7 +388,7 @@
     "initialValue": "(\\d{3})-(\\d)-",
     "initialFlags": "g",
     "flags": "g",
-    "regex": "(\\d{3})-(\\d)-\\1",
+    "regex": ["(\\d{3})-(\\d)-\\1"],
     "cursorPosition": 13,
     "answer": ["444-0-444"]
   },
@@ -398,7 +398,7 @@
     "content": "domain.com, test.com, site.com",
     "initialValue": "\\w+\\.com",
     "flags": "g",
-    "regex": "\\w+\\.com",
+    "regex": ["\\w+\\.com"],
     "cursorPosition": 8,
     "answer": ["domain.com", "test.com", "site.com"],
     "useFlagsControl": true
@@ -410,7 +410,7 @@
     "initialValue": "\\w+\\.com$",
     "initialFlags": "g",
     "flags": "gm",
-    "regex": "\\w+\\.com$",
+    "regex": ["\\w+\\.com$"],
     "cursorPosition": 8,
     "answer": ["domain.com", "test.com", "site.com"],
     "useFlagsControl": true
@@ -422,7 +422,7 @@
     "initialValue": "\\w+\\.com$",
     "initialFlags": "gm",
     "flags": "gmi",
-    "regex": "\\w+\\.com$",
+    "regex": ["\\w+\\.com$"],
     "cursorPosition": 8,
     "answer": ["DOMAIN.COM", "TEST.COM", "SITE.COM"],
     "useFlagsControl": true

@@ -50,7 +50,7 @@ function InteractiveArea({ data, step, isShow, parentError, onChangeSuccess }) {
 
       const isSuccess =
         isMatch &&
-        data.regex === regex &&
+        data.regex.includes(regex) &&
         _.isEmpty(_.xor(data.flags.split(""), flags.split("")));
 
       setSuccess(isSuccess);
