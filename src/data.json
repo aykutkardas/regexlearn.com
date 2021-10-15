@@ -195,6 +195,77 @@
     "interactive": false
   },
   {
+    "title": "steps.repetitions.title",
+    "description": "steps.repetitions.description",
+    "interactive": false
+  },
+  {
+    "title": "steps.questionMark.title",
+    "description": "steps.questionMark.description",
+    "content": "color, colour",
+    "initialValue": "colour",
+    "initialFlags": "g",
+    "flags": "g",
+    "regex": "colou?r",
+    "cursorPosition": 5,
+    "answer": ["color", "colour"]
+  },
+  {
+    "title": "steps.plusCharacter.title",
+    "description": "steps.plusCharacter.description",
+    "content": "br ber beer beeer beeeer",
+    "initialValue": "ber",
+    "initialFlags": "g",
+    "flags": "g",
+    "regex": "be+r",
+    "cursorPosition": 2,
+    "answer": ["ber", "beer", "beeer", "beeeer"]
+  },
+  {
+    "title": "steps.starCharacter.title",
+    "description": "steps.starCharacter.description",
+    "content": "br ber beer beeer beeeer",
+    "initialValue": "ber",
+    "initialFlags": "g",
+    "flags": "g",
+    "regex": "be*r",
+    "cursorPosition": 2,
+    "answer": ["br", "ber", "beer", "beeer", "beeeer"]
+  },
+  {
+    "title": "steps.quantifier.title",
+    "description": "steps.quantifier.description",
+    "content": "ber beer beeer beeeer",
+    "initialValue": "be{}r",
+    "initialFlags": "g",
+    "flags": "g",
+    "regex": "be{2}r",
+    "cursorPosition": 3,
+    "answer": ["beer"]
+  },
+  {
+    "title": "steps.quantifierMin.title",
+    "description": "steps.quantifierMin.description",
+    "content": "ber beer beeer beeeer",
+    "initialValue": "be{,}r",
+    "initialFlags": "g",
+    "flags": "g",
+    "regex": "be{3,}r",
+    "cursorPosition": 3,
+    "answer": ["beeer", "beeeer"]
+  },
+  {
+    "title": "steps.quantifierRange.title",
+    "description": "steps.quantifierRange.description",
+    "content": "ber beer beeer beeeer",
+    "initialValue": "be{,}r",
+    "initialFlags": "g",
+    "flags": "g",
+    "regex": "be{1,3}r",
+    "cursorPosition": 3,
+    "answer": ["ber", "beer", "beeer"]
+  },
+  {
     "title": "steps.escapeCharacter.title",
     "description": "steps.escapeCharacter.description",
     "content": "abcABC123 .:!?",
@@ -265,7 +336,6 @@
     "cursorPosition": 0,
     "answer": ["a", "b", "c", "A", "B", "C", "1", "2", "3", ".", ":", "!", "?"]
   },
-
   {
     "title": "steps.caret.title",
     "description": "steps.caret.description",
@@ -288,72 +358,7 @@
     "cursorPosition": 4,
     "answer": ["html", "html"]
   },
-  {
-    "title": "steps.questionMark.title",
-    "description": "steps.questionMark.description",
-    "content": "color, colour",
-    "initialValue": "colour",
-    "initialFlags": "g",
-    "flags": "g",
-    "regex": "colou?r",
-    "cursorPosition": 5,
-    "answer": ["color", "colour"]
-  },
-  {
-    "title": "steps.plusCharacter.title",
-    "description": "steps.plusCharacter.description",
-    "content": "br ber beer beeer beeeer",
-    "initialValue": "ber",
-    "initialFlags": "g",
-    "flags": "g",
-    "regex": "be+r",
-    "cursorPosition": 2,
-    "answer": ["ber", "beer", "beeer", "beeeer"]
-  },
-  {
-    "title": "steps.starCharacter.title",
-    "description": "steps.starCharacter.description",
-    "content": "br ber beer beeer beeeer",
-    "initialValue": "ber",
-    "initialFlags": "g",
-    "flags": "g",
-    "regex": "be*r",
-    "cursorPosition": 2,
-    "answer": ["br", "ber", "beer", "beeer", "beeeer"]
-  },
-  {
-    "title": "steps.quantifier.title",
-    "description": "steps.quantifier.description",
-    "content": "ber beer beeer beeeer",
-    "initialValue": "be{}r",
-    "initialFlags": "g",
-    "flags": "g",
-    "regex": "be{2}r",
-    "cursorPosition": 3,
-    "answer": ["beer"]
-  },
-  {
-    "title": "steps.quantifierMin.title",
-    "description": "steps.quantifierMin.description",
-    "content": "ber beer beeer beeeer",
-    "initialValue": "be{,}r",
-    "initialFlags": "g",
-    "flags": "g",
-    "regex": "be{3,}r",
-    "cursorPosition": 3,
-    "answer": ["beeer", "beeeer"]
-  },
-  {
-    "title": "steps.quantifierRange.title",
-    "description": "steps.quantifierRange.description",
-    "content": "ber beer beeer beeeer",
-    "initialValue": "be{,}r",
-    "initialFlags": "g",
-    "flags": "g",
-    "regex": "be{1,3}r",
-    "cursorPosition": 3,
-    "answer": ["ber", "beer", "beeer"]
-  },
+
   {
     "title": "steps.pipeCharacter.title",
     "description": "steps.pipeCharacter.description",
