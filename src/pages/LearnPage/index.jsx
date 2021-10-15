@@ -31,7 +31,8 @@ function LearnPage() {
 
       if (!success) {
         setError(true);
-        setTimeout(() => {
+        clearTimeout(window.learnErrorTimer);
+        window.learnErrorTimer = setTimeout(() => {
           setError(false);
         }, 1000);
         return;
