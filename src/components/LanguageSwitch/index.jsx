@@ -1,6 +1,6 @@
 import "./language-switch.scss";
 
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import Mousetrap from "mousetrap";
 
 import Icon from "@components/Icon";
@@ -8,13 +8,16 @@ import Shortcut from "@components/Shortcut";
 
 import langs, { langNames } from "../../localization";
 import shortcuts from "../../shortcuts";
+import { Context } from "../../contexts/LanguageContext";
 
 const langList = Object.keys(langs).map((langKey) => ({
   value: langKey,
   label: langNames[langKey],
 }));
 
-const LanguageSwitch = ({ lang, setLang }) => {
+const LanguageSwitch = () => {
+  const { lang, setLang } = useContext(Context);
+
   const [visible, setVisible] = useState(false);
 
   const handleClick = (e) => {

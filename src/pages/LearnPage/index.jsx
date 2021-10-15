@@ -9,7 +9,7 @@ import Navigation from "./components/Navigation";
 import data from "../../data.json";
 import shortcuts from "../../shortcuts";
 
-function LearnPage({ lang, setLang }) {
+function LearnPage() {
   const [step, setStep] = useState(0);
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState(false);
@@ -64,7 +64,7 @@ function LearnPage({ lang, setLang }) {
 
   return (
     <>
-      <Header lang={lang} setLang={setLang} steps={data} step={step} />
+      <Header steps={data} step={step} />
       <Step
         data={data[step]}
         step={step}
