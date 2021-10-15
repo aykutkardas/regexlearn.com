@@ -12,7 +12,7 @@ import NotFoundPage from "@pages/NotFound";
 import Alert from "@components/Alert";
 
 import useOS from "@utils/useOS";
-
+import { Provider as LanguageProvider } from "./contexts/LanguageContext";
 import localization from "./localization";
 
 function App() {
@@ -26,24 +26,26 @@ function App() {
       locale={lang}
       defaultLocale={defaultLang}
     >
-      <div className={cx("App", { desktop: isDesktop })}>
-        <Alert visible>
-          <FormattedMessage id="alert.site.under.development" />
-        </Alert>
-        <HashRouter>
-          <Switch>
-            <Route exact path="/">
-              <LandingPage />
-            </Route>
-            <Route path="/learn">
-              <LearnPage lang={lang} setLang={setLang} />
-            </Route>
-            <Route path="*" exact>
-              <NotFoundPage />
-            </Route>
-          </Switch>
-        </HashRouter>
-      </div>
+      <LanguageProvider lang={lang} setLang={setLang}>
+        <div className={cx("App", { desktop: isDesktop })}>
+          <Alert visible>
+            <FormattedMessage id="alert.site.under.development" />
+          </Alert>
+          <HashRouter>
+            <Switch>
+              <Route exact path="/">
+                <LandingPage />
+              </Route>
+              <Route path="/learn">
+                <LearnPage />
+              </Route>
+              <Route path="*" exact>
+                <NotFoundPage />
+              </Route>
+            </Switch>
+          </HashRouter>
+        </div>
+      </LanguageProvider>
     </IntlProvider>
   );
 }
