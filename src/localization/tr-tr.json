@@ -45,10 +45,10 @@
   "steps.negatedCharacterSet.description": "Belirttiğimiz karakterlerin dışındakileri bulmak için istemediğimiz karakterleri köşeli parantez `[]` içine şapka karakteri `^` ile başlayacak şekilde yan yana yazarız. Aşağıdaki metinde `ber` ve `bor` sözcükleri dışındaki tüm sözcükleri bulabilmek için şapka karakterinden sonra `e` ve `o` harfini yan yana yazın.",
 
   "steps.range.title": "Harf Karakter Aralığı `[a-z]`",
-  "steps.range.description": "Belirttiğimiz aralıktaki harfleri bulmak için başlangıç harfi ve bitiş harfi aralarında bir tire `-` olacak şekilde köşeli parantezler `[]` içine yazılır. Büyük küçük harf duyarlıdır. Kendileri de dahil `e` ve `o` aralarındaki tüm küçük harfleri bulacak ifadeyi yazın.",
+  "steps.range.description": "Belirttiğimiz aralıktaki harfleri bulmak için başlangıç harfi ve bitiş harfi aralarında bir tire `-` olacak şekilde köşeli parantezler `[]` içine yazılır. Büyük küçük harf duyarlıdır. Kendileri de dahil `e` ve `o` aralarındaki tüm küçük harfleri seçecek ifadeyi yazın.",
 
   "steps.rangeNumber.title": "Sayı Karakter Aralığı `[0-9]`",
-  "steps.rangeNumber.description": "Belirttiğimiz aralıktaki sayıları bulmak için başlangıç sayısı ve bitiş sayısı aralarında bir tire `-` olacak şekilde köşeli parantezler `[]` içine yazılır. Kendileride dahil `3` ve `6` aralarındaki tüm sayıları bulacak ifadeyi yazın.",
+  "steps.rangeNumber.description": "Belirttiğimiz aralıktaki sayıları bulmak için başlangıç sayısı ve bitiş sayısı aralarında bir tire `-` olacak şekilde köşeli parantezler `[]` içine yazılır. Kendileride dahil `3` ve `6` aralarındaki tüm sayıları seçecek ifadeyi yazın.",
 
   "examples.basicMatchers.title": "Pratik: Temel Eşleştici",
   "examples.basicMatchers.description": "Metinde geçen `of` kelimelerini seçecek ifadeyi yazın.",
@@ -69,16 +69,16 @@
   "examples.rangeNumber.description": "Metindeki `2` sayısından `7` sayısına kadar olan sayıları seçecek ifadeyi yazın.\\n`2` ve `7` sayısıda bu aralığa dahil olmalıdır.",
 
   "steps.repetitions.title": "Tekrarlar",
-  "steps.repetitions.description": "Bir karakterin kaç defa tekrar edeceğini, metinde bulunup bulunmayacağını ifade etmek için bazı özel karakterler kullanılır. Bu özel karakterler `+`, `*` ve `?` dir.",
+  "steps.repetitions.description": "Bir karakterin kaç defa tekrar edeceğini, metinde bulunup bulunmayacağını ifade etmek için bazı özel karakterler kullanılır. Bu özel karakterler artı `+`, yıldız `*` ve soru işareti `?` dir.",
 
-  "steps.questionMark.title": "Soru İşareti `?`: Opsiyonel",
-  "steps.questionMark.description": "Bir karakterin opsiyonel olduğunu ifade etmek için sonuna `?` soru işareti koyarız. Örneğin aşağıdaki `u` harfinin opsiyonel olduğunu belirtin.",
+  "steps.starCharacter.title": "Yıldız İşareti `*`:\\nKarakterin Hiç Eşleşmemesi ya da Çok Sayıda Eşleşmesine Göre",
+  "steps.starCharacter.description": "Bir karakterin hiç eşleşmemesini ya da çok sayıda eşleşebileceğini ifade etmek için sonuna `*` yıldız işareti koyarız. Örneğin metinde `e` harfinin hiç geçmeyeceğini ya da yan yana bir ya da daha fazla geçebileceğini belirtin.",
 
   "steps.plusCharacter.title": "Artı İşareti `+`:\\nKarekterin Bir ya da Daha Fazla Eşleşmesine Göre",
   "steps.plusCharacter.description": "Bir karakterin bir ya da daha fazla geçebileceğini ifade etmek için sonuna `+` artı işareti koyarız. Örneğin metinde `e` harfinin bir ya da yan yana daha fazla geçebileceğini belirtin.",
 
-  "steps.starCharacter.title": "Yıldız İşareti `*`:\\nKarakterin Hiç Eşleşmemesi ya da Çok Sayıda Eşleşmesine Göre",
-  "steps.starCharacter.description": "Bir karakterin hiç eşleşmemesini ya da çok sayıda eşleşebileceğini ifade etmek için sonuna `*` yıldız işareti koyarız. Örneğin metinde `e` harfinin hiç geçmeyeceğini ya da yan yana bir ya da daha fazla geçebileceğini belirtin.",
+  "steps.questionMark.title": "Soru İşareti `?`: Opsiyonel",
+  "steps.questionMark.description": "Bir karakterin opsiyonel olduğunu ifade etmek için sonuna `?` soru işareti koyarız. Örneğin aşağıdaki `u` harfinin opsiyonel olduğunu belirtin.",
 
   "steps.quantifier.title": "Karakterin Belirli Bir Sayıda\\nEşleşmesine Göre `{1}`",
   "steps.quantifier.description": "Bir karakterin belirli bir sayıda geçmesini ifade etmek için sonuna kaç kere geçmesini istediğimizle birlikte süslü parantezleri `{n}` yazarız. Örneğin aşağıdaki `e` harfinin sadece `2` kere geçebileceğini belirtin.",
@@ -89,8 +89,23 @@
   "steps.quantifierRange.title": "Karakterin Belirli Bir Sayı Aralığında\\nEşleşmesine Göre `{1,9}`",
   "steps.quantifierRange.description": "Bir karakterin belirli bir sayı aralığında geçmesini ifade etmek için sonuna geçmesini istediğimiz aralıkla birlikte süslü parantezleri `{x,y}` yazarız. Örneğin aşağıdaki `e` harfinin sadece `1` ile `3` arasında geçebileceğini belirtin.",
 
+  "examples.starCharacter.title": "Pratik: Yıldız İşareti `*`",
+  "examples.starCharacter.description": "Metindeki `e` harfinin olmama ve birden fazla olma durumuna uygun, her kelimeyi seçecek ifadeyi yıldız işaretini `*` kullanarak yazın.",
 
-  
+  "examples.plusCharacter.title": "Pratik: Artı İşareti `+`",
+  "examples.plusCharacter.description": "Metindeki `e` harfinin bir veya daha fazla geçtiği kelimeleri seçecek ifadeyi artı işaretini `+` kullanarak yazın.",
+
+  "examples.questionMark.title": "Pratik: Soru İşareti `?`",
+  "examples.questionMark.description": "Metinde geçen `n` harfinin opsiyonel olduğunu bildiren ifadeyi soru işaretini `?` kullanarak yazın. Böylelikle hem `a` hemde `an` sözcükleri seçilebilmiş olsun.",
+
+  "examples.quantifier.title": "Pratik: Belirli Bir Sayıda",
+  "examples.quantifier.description": "Metindeki `0` 'dan `9` 'a kadar olan sayıların yan yana geçen `4` tanesini seçecek ifadeyi süslü parantezleri `{}` kullanarak yazın.",
+
+  "examples.quantifierMin.title": "Pratik: Minumum Bir Sayıda",
+  "examples.quantifierMin.description": "Metindeki  `0` 'dan `9` 'a kadar olan sayıların yan yana en az `2` tane geçenlerini seçecek ifadeyi süslü parantezleri `{}` kullanarak yazın.",
+
+  "examples.quantifierRange.title": "Pratik: Belirli Bir Sayı Aralığında",
+  "examples.quantifierRange.description": "Metindeki  `0` 'dan `9` 'a kadar olan sayıların yan yana en az `1` ile `4` arasında geçenlerini seçecek ifadeyi süslü parantezleri `{}` kullanarak yazın.",
 
   "steps.escapeCharacter.title": "Kaçış Karakteri `\\`: Özel Karakter Hariç Tutma",
   "steps.escapeCharacter.description": "Nokta `.` işaretini herhangi bir karakteri seçmek için kullanıyorsak, noktanın kendisini bulabilmek için öncesinde bir kaçış karakteri `\\` kullanmamız gerekir. Bunun için noktadan önce bir kaçış karakteri `\\` ekleyin.",

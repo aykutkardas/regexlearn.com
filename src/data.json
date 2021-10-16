@@ -6,7 +6,6 @@
     "initialFlags": "g",
     "flags": "g",
     "regex": ["OK"],
-    "cursorPosition": 0,
     "answer": ["OK"]
   },
   {
@@ -17,7 +16,6 @@
     "flags": "gm",
     "regex": ["^\\w+\\.pdf$"],
     "initialValue": "^\\w+\\.pdf$",
-    "cursorPosition": 0,
     "readOnly": true,
     "answer": ["document.pdf", "manual.pdf"]
   },
@@ -29,7 +27,6 @@
     "flags": "gm",
     "regex": ["curious"],
     "initialValue": "",
-    "cursorPosition": 0,
     "answer": ["curious"]
   },
   {
@@ -39,7 +36,6 @@
     "initialFlags": "g",
     "flags": "g",
     "regex": ["."],
-    "cursorPosition": 0,
     "answer": [
       "a",
       "b",
@@ -113,7 +109,6 @@
     "initialFlags": "g",
     "flags": "g",
     "regex": ["of"],
-    "cursorPosition": 0,
     "answer": ["of", "of", "of"]
   },
   {
@@ -123,7 +118,6 @@
     "initialFlags": "g",
     "flags": "g",
     "regex": ["."],
-    "cursorPosition": 0,
     "answer": [
       "a",
       "z",
@@ -156,7 +150,6 @@
     "initialFlags": "g",
     "flags": "g",
     "regex": ["[bdf]eer"],
-    "cursorPosition": 0,
     "answer": ["beer", "deer", "feer"]
   },
   {
@@ -166,7 +159,6 @@
     "initialFlags": "g",
     "flags": "g",
     "regex": ["be[^ou]r"],
-    "cursorPosition": 0,
     "answer": ["bear", "beer"]
   },
   {
@@ -176,7 +168,6 @@
     "initialFlags": "g",
     "flags": "g",
     "regex": ["[g-k]"],
-    "cursorPosition": 0,
     "answer": ["g", "h", "i", "j", "k"]
   },
   {
@@ -200,15 +191,15 @@
     "interactive": false
   },
   {
-    "title": "steps.questionMark.title",
-    "description": "steps.questionMark.description",
-    "content": "color, colour",
-    "initialValue": "colour",
+    "title": "steps.starCharacter.title",
+    "description": "steps.starCharacter.description",
+    "content": "br ber beer beeer beeeer",
+    "initialValue": "ber",
     "initialFlags": "g",
     "flags": "g",
-    "regex": ["colou?r"],
-    "cursorPosition": 5,
-    "answer": ["color", "colour"]
+    "regex": ["be*r"],
+    "cursorPosition": 2,
+    "answer": ["br", "ber", "beer", "beeer", "beeeer"]
   },
   {
     "title": "steps.plusCharacter.title",
@@ -222,15 +213,15 @@
     "answer": ["ber", "beer", "beeer", "beeeer"]
   },
   {
-    "title": "steps.starCharacter.title",
-    "description": "steps.starCharacter.description",
-    "content": "br ber beer beeer beeeer",
-    "initialValue": "ber",
+    "title": "steps.questionMark.title",
+    "description": "steps.questionMark.description",
+    "content": "color, colour",
+    "initialValue": "colour",
     "initialFlags": "g",
     "flags": "g",
-    "regex": ["be*r"],
-    "cursorPosition": 2,
-    "answer": ["br", "ber", "beer", "beeer", "beeeer"]
+    "regex": ["colou?r"],
+    "cursorPosition": 5,
+    "answer": ["color", "colour"]
   },
   {
     "title": "steps.quantifier.title",
@@ -266,6 +257,76 @@
     "answer": ["ber", "beer", "beeer"]
   },
   {
+    "title": "examples.starter.title",
+    "description": "examples.starter.description",
+    "interactive": false
+  },
+  {
+    "title": "examples.starCharacter.title",
+    "description": "examples.starCharacter.description",
+    "content": "dp dep deep",
+    "initialValue": "",
+    "initialFlags": "g",
+    "flags": "g",
+    "regex": ["de*p"],
+    "answer": ["dp", "dep", "deep"]
+  },
+  {
+    "title": "examples.plusCharacter.title",
+    "description": "examples.plusCharacter.description",
+    "content": "dp dep deep",
+    "initialValue": "",
+    "initialFlags": "g",
+    "flags": "g",
+    "regex": ["de+p"],
+    "answer": ["dep", "deep"]
+  },
+  {
+    "title": "examples.questionMark.title",
+    "description": "examples.questionMark.description",
+    "content": "a, an",
+    "initialValue": "",
+    "initialFlags": "g",
+    "flags": "g",
+    "regex": ["an?"],
+    "answer": ["a", "an"]
+  },
+  {
+    "title": "examples.quantifier.title",
+    "description": "examples.quantifier.description",
+    "content": "Release 10/9/2021",
+    "initialValue": "",
+    "initialFlags": "g",
+    "flags": "g",
+    "regex": ["[0-9]{4}"],
+    "answer": ["2021"]
+  },
+  {
+    "title": "examples.quantifierMin.title",
+    "description": "examples.quantifierMin.description",
+    "content": "Release 10/9/2021",
+    "initialValue": "",
+    "initialFlags": "g",
+    "flags": "g",
+    "regex": ["[0-9]{2,}"],
+    "answer": ["10", "2021"]
+  },
+  {
+    "title": "examples.quantifierRange.title",
+    "description": "examples.quantifierRange.description",
+    "content": "Release 10/9/2021",
+    "initialValue": "",
+    "initialFlags": "g",
+    "flags": "g",
+    "regex": ["[0-9]{1,4}"],
+    "answer": ["10", "9", "2021"]
+  },
+  {
+    "title": "examples.finish.title",
+    "description": "examples.finish.description",
+    "interactive": false
+  },
+  {
     "title": "steps.escapeCharacter.title",
     "description": "steps.escapeCharacter.description",
     "content": "abcABC123 .:!?",
@@ -273,7 +334,6 @@
     "initialValue": ".",
     "flags": "g",
     "regex": ["\\."],
-    "cursorPosition": 0,
     "answer": ["."]
   },
   {
@@ -283,7 +343,6 @@
     "initialFlags": "g",
     "flags": "g",
     "regex": ["\\w"],
-    "cursorPosition": 0,
     "answer": ["a", "b", "c", "A", "B", "C", "1", "2", "3", "_"]
   },
   {
@@ -293,7 +352,6 @@
     "initialFlags": "g",
     "flags": "g",
     "regex": ["\\W"],
-    "cursorPosition": 0,
     "answer": [" ", ".", ":", "!", "?"]
   },
   {
@@ -303,7 +361,6 @@
     "initialFlags": "g",
     "flags": "g",
     "regex": ["\\d"],
-    "cursorPosition": 0,
     "answer": ["1", "2", "3"]
   },
   {
@@ -313,7 +370,6 @@
     "initialFlags": "g",
     "flags": "g",
     "regex": ["\\D"],
-    "cursorPosition": 0,
     "answer": ["a", "b", "c", "A", "B", "C", " ", ".", ":", "!", "?"]
   },
   {
@@ -323,7 +379,6 @@
     "initialFlags": "g",
     "flags": "g",
     "regex": ["\\s"],
-    "cursorPosition": 0,
     "answer": [" "]
   },
   {
@@ -333,7 +388,6 @@
     "initialFlags": "g",
     "flags": "g",
     "regex": ["\\S"],
-    "cursorPosition": 0,
     "answer": ["a", "b", "c", "A", "B", "C", "1", "2", "3", ".", ":", "!", "?"]
   },
   {
@@ -344,7 +398,6 @@
     "initialFlags": "gm",
     "flags": "gm",
     "regex": ["^\\d"],
-    "cursorPosition": 0,
     "answer": ["1", "2", "3"]
   },
   {
