@@ -105,6 +105,8 @@ function InteractiveArea({ data, step, isShow, parentError, onChangeSuccess }) {
     setError(false);
     setSuccess(false);
 
+    toast.dismiss();
+
     if (data.interactive === false) {
       setSuccess(true);
       return;
