@@ -1,0 +1,50 @@
+button.menu {
+  margin-right: 2em;
+  visibility: hidden;
+  position: relative;
+  top: -3rem;
+  right: 37%;
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  min-width: 2rem;
+  min-height: 2rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 10;
+
+  div {
+    min-width: 2.1rem;
+    height: 0.25rem;
+    background: #0d0c1d;
+    border-radius: 10px;
+    transition: all 0.3s linear;
+    position: relative;
+    transform-origin: 1px;
+
+    &:first-child {
+      transform: rotate(0deg);
+    }
+    &.opened:first-child {
+      transform: rotate(45deg);
+    }
+
+    &:nth-child(2) {
+      opacity: 1;
+      transform: translateX(0px);
+    }
+    &.opened:nth-child(2) {
+      transform: translateX(-20px);
+      opacity: 0;
+    }
+
+    &:nth-child(3) {
+      transform: rotate(0deg);
+    }
+    &.opened:nth-child(3) {
+      transform: rotate(-45deg);
+    }
+  }
+}

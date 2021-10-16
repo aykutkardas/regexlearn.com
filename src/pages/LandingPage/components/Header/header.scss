@@ -1,3 +1,5 @@
+@import './../../../../utils/responsive-breakpoints.scss';
+
 .landing-header {
   display: flex;
   height: 80px;
@@ -52,5 +54,78 @@
     &-icon {
       margin-left: 0.3em;
     }
+  }
+}
+
+@media (max-width: $breakpoint-phone) {
+  // prevents horizontal scroll https://stackoverflow.com/questions/4192277/disable-horizontal-scroll-on-mobile-web
+  html,
+  body {
+    overflow-x: hidden;
+  }
+  body {
+    position: relative;
+  }
+
+  button.menu {
+    display: flex !important;
+    visibility: visible !important;
+  }
+
+  .landing-header {
+    height: 5em;
+    flex-direction: column;
+    min-width: 300px;
+
+    &-brand {
+      z-index: 1; // to bring the header "regexLearn" on top if the menu is opened
+      margin: 0.5em;
+      &-name {
+        font-size: 2.3em;
+      }
+    }
+
+    &-links {
+      position: absolute;
+      background-color: var(--learn-bg);
+      box-shadow: 0 5px 5px rgba(20, 20, 20, 0.75);
+      width: 100%;
+      padding: 2em;
+      display: flex;
+      flex-direction: column;
+      opacity: 1;
+      transition: opacity 0.2s linear;
+      padding-top: 5em;
+    }
+
+    &-link {
+      margin: 0.5em;
+      font-size: 2em;
+    }
+
+    a {
+      text-decoration: none;
+      color: var(--learn-white);
+
+      &:hover {
+        color: var(--landing-link-hover);
+      }
+    }
+
+    .landing-link-github-icon {
+      scale: 1.8;
+    }
+  }
+}
+
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+
+@media (min-width: $breakpoint-phone + 1px) {
+  .landing-header-links {
+    visibility: visible;
+    opacity: 1;
   }
 }

@@ -1,14 +1,17 @@
 import "./header.scss";
 
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import ReactTooltip from "react-tooltip";
 import { FormattedMessage } from "react-intl";
 import { Link } from "react-router-dom";
 
 import Icon from "@components/Icon";
 
+import Burger from "./components/index";
+
 function LandingHeader() {
   const playgroundRef = useRef(null);
+  const [navToggle, setNavToggle] = useState(false);
 
   return (
     <div className="landing-header">
@@ -16,7 +19,7 @@ function LandingHeader() {
         <span className="landing-header-brand-name">RegexLearn</span>
       </Link>
 
-      <div className="landing-header-links">
+      <div className={`landing-header-links ${navToggle ? "" : "hidden"}`}>
         <Link to="/learn" className="landing-header-link landing-link-learn">
           <FormattedMessage id="landing.learn" />
         </Link>
@@ -55,6 +58,7 @@ function LandingHeader() {
           <Icon className="landing-link-github-icon" icon="github" size={20} />
         </a>
       </div>
+      <Burger open={navToggle} setOpen={setNavToggle} />
     </div>
   );
 }

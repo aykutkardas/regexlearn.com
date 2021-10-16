@@ -1,3 +1,5 @@
+@import './../../utils/responsive-breakpoints.scss';
+
 .alert {
   position: relative;
   display: flex;
@@ -14,5 +16,37 @@
     top: 10px;
     right: 30px;
     cursor: pointer;
+  }
+}
+
+@media (max-width: $breakpoint-phone) {
+  .alert {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    font-size: 1em;
+    padding: 0.9em;
+    width: 100%;
+    letter-spacing: 0.4px;
+    background: #338152;
+    min-height: max-content;
+
+    &-conten-item {
+      width: 80%;
+    }
+
+    &-close-item {
+      position: relative;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      top: 0px;
+      right: 30px;
+      svg {
+        transform: scale(3);
+      }
+    }
   }
 }
