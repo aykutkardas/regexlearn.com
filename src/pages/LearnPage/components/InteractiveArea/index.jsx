@@ -119,7 +119,7 @@ function InteractiveArea({ data, step, isShow, parentError, onChangeSuccess }) {
     setIsChanged(false);
     blurInput();
     setTimeout(() => {
-      setCaretPosition(regexInput.current, data.cursorPosition);
+      setCaretPosition(regexInput.current, data.cursorPosition || 0);
       focusInput();
     }, 300);
   }, [step, data.cursorPosition]);
