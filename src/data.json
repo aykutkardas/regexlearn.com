@@ -5,9 +5,32 @@
     "content": "Understand? OK or NOT",
     "initialFlags": "g",
     "flags": "g",
-    "regex": "OK",
+    "regex": ["OK"],
     "cursorPosition": 0,
     "answer": ["OK"]
+  },
+  {
+    "title": "steps.whatIsRegex.title",
+    "description": "steps.whatIsRegex.description",
+    "content": "readme.md\ndocument.pdf\nimage.png\nmusic.mp4\nmanual.pdf",
+    "initialFlags": "gm",
+    "flags": "gm",
+    "regex": ["^\\w+\\.pdf$"],
+    "initialValue": "^\\w+\\.pdf$",
+    "cursorPosition": 0,
+    "readOnly": true,
+    "answer": ["document.pdf", "manual.pdf"]
+  },
+  {
+    "title": "steps.basicMatchers.title",
+    "description": "steps.basicMatchers.description",
+    "content": "“I have no special talents. I am only passionately curious.”\n\n― Albert Einstein",
+    "initialFlags": "gm",
+    "flags": "gm",
+    "regex": ["curious"],
+    "initialValue": "",
+    "cursorPosition": 0,
+    "answer": ["curious"]
   },
   {
     "title": "steps.dotCharacter.title",
@@ -15,7 +38,7 @@
     "content": "abcABC123 .:!?",
     "initialFlags": "g",
     "flags": "g",
-    "regex": ".",
+    "regex": ["."],
     "cursorPosition": 0,
     "answer": [
       "a",
@@ -35,95 +58,24 @@
     ]
   },
   {
-    "title": "steps.escapeCharacter.title",
-    "description": "steps.escapeCharacter.description",
-    "content": "abcABC123 .:!?",
-    "initialFlags": "g",
-    "initialValue": ".",
-    "flags": "g",
-    "regex": "\\.",
-    "cursorPosition": 0,
-    "answer": ["."]
-  },
-  {
-    "title": "steps.wordCharacter.title",
-    "description": "steps.wordCharacter.description",
-    "content": "abcABC123 _.:!?",
-    "initialFlags": "g",
-    "flags": "g",
-    "regex": "\\w",
-    "cursorPosition": 0,
-    "answer": ["a", "b", "c", "A", "B", "C", "1", "2", "3", "_"]
-  },
-  {
-    "title": "steps.withoutWordCharacter.title",
-    "description": "steps.withoutWordCharacter.description",
-    "content": "abcABC123 _.:!?",
-    "initialFlags": "g",
-    "flags": "g",
-    "regex": "\\W",
-    "cursorPosition": 0,
-    "answer": [" ", ".", ":", "!", "?"]
-  },
-  {
-    "title": "steps.numberCharacter.title",
-    "description": "steps.numberCharacter.description",
-    "content": "abcABC123 .:!?",
-    "initialFlags": "g",
-    "flags": "g",
-    "regex": "\\d",
-    "cursorPosition": 0,
-    "answer": ["1", "2", "3"]
-  },
-  {
-    "title": "steps.withoutNumberCharacter.title",
-    "description": "steps.withoutNumberCharacter.description",
-    "content": "abcABC123 .:!?",
-    "initialFlags": "g",
-    "flags": "g",
-    "regex": "\\D",
-    "cursorPosition": 0,
-    "answer": ["a", "b", "c", "A", "B", "C", " ", ".", ":", "!", "?"]
-  },
-  {
-    "title": "steps.spaceCharacter.title",
-    "description": "steps.spaceCharacter.description",
-    "content": "abcABC123 .:!?",
-    "initialFlags": "g",
-    "flags": "g",
-    "regex": "\\s",
-    "cursorPosition": 0,
-    "answer": [" "]
-  },
-  {
-    "title": "steps.withoutSpaceCharacter.title",
-    "description": "steps.withoutSpaceCharacter.description",
-    "content": "abcABC123 .:!?",
-    "initialFlags": "g",
-    "flags": "g",
-    "regex": "\\S",
-    "cursorPosition": 0,
-    "answer": ["a", "b", "c", "A", "B", "C", "1", "2", "3", ".", ":", "!", "?"]
-  },
-  {
     "title": "steps.characterSet.title",
     "description": "steps.characterSet.description",
     "content": "bar ber bir bor bur",
     "initialValue": "b[]r",
     "initialFlags": "g",
     "flags": "g",
-    "regex": "b[aeiou]r",
+    "regex": ["b[aeiou]r"],
     "cursorPosition": 2,
     "answer": ["bar", "ber", "bir", "bor", "bur"]
   },
   {
-    "title": "steps.negatedSet.title",
-    "description": "steps.negatedSet.description",
+    "title": "steps.negatedCharacterSet.title",
+    "description": "steps.negatedCharacterSet.description",
     "content": "bar ber bir bor bur",
     "initialValue": "b[^]r",
     "initialFlags": "g",
     "flags": "g",
-    "regex": "b[^eo]r",
+    "regex": ["b[^eo]r"],
     "cursorPosition": 3,
     "answer": ["bar", "bir", "bur"]
   },
@@ -134,7 +86,7 @@
     "initialValue": "[-]",
     "initialFlags": "g",
     "flags": "g",
-    "regex": "[e-o]",
+    "regex": ["[e-o]"],
     "cursorPosition": 1,
     "answer": ["e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o"]
   },
@@ -145,31 +97,107 @@
     "initialValue": "[-]",
     "initialFlags": "g",
     "flags": "g",
-    "regex": "[3-6]",
+    "regex": ["[3-6]"],
     "cursorPosition": 1,
     "answer": ["3", "4", "5", "6"]
   },
   {
-    "title": "steps.caret.title",
-    "description": "steps.caret.description",
-    "content": "Basic Omellette Recipe\n\n1. 3 eggs, beaten\n2. 1 tsp sunflower oil\n3. 1 tsp butter",
-    "initialValue": "\\d",
-    "initialFlags": "gm",
-    "flags": "gm",
-    "regex": "^\\d",
-    "cursorPosition": 0,
-    "answer": ["1", "2", "3"]
+    "title": "examples.starter.title",
+    "description": "examples.starter.description",
+    "interactive": false
   },
   {
-    "title": "steps.dollar.title",
-    "description": "steps.dollar.description",
-    "content": "https://domain.com/what-is-html.html\nhttps://otherdomain.com/html-elements\nhttps://website.com/html5-features.html",
-    "initialValue": "html",
-    "initialFlags": "gm",
-    "flags": "gm",
-    "regex": "html$",
-    "cursorPosition": 4,
-    "answer": ["html", "html"]
+    "title": "examples.basicMatchers.title",
+    "description": "examples.basicMatchers.description",
+    "content": "“Every man takes the limits of his own field of vision for the limits of the world.”\n― Arthur Schopenhauer",
+    "initialFlags": "g",
+    "flags": "g",
+    "regex": ["of"],
+    "cursorPosition": 0,
+    "answer": ["of", "of", "of"]
+  },
+  {
+    "title": "examples.dotCharacter.title",
+    "description": "examples.dotCharacter.description",
+    "content": "az AZ 09 _- = !? ., :;",
+    "initialFlags": "g",
+    "flags": "g",
+    "regex": ["."],
+    "cursorPosition": 0,
+    "answer": [
+      "a",
+      "z",
+      " ",
+      "A",
+      "Z",
+      " ",
+      "0",
+      "9",
+      " ",
+      "_",
+      "-",
+      " ",
+      "=",
+      " ",
+      "!",
+      "?",
+      " ",
+      ".",
+      ",",
+      " ",
+      ":",
+      ";"
+    ]
+  },
+  {
+    "title": "examples.characterSet.title",
+    "description": "examples.characterSet.description",
+    "content": "beer deer feer",
+    "initialFlags": "g",
+    "flags": "g",
+    "regex": ["[bdf]eer"],
+    "cursorPosition": 0,
+    "answer": ["beer", "deer", "feer"]
+  },
+  {
+    "title": "examples.negatedCharacterSet.title",
+    "description": "examples.negatedCharacterSet.description",
+    "content": "bear beor beer beur",
+    "initialFlags": "g",
+    "flags": "g",
+    "regex": ["be[^ou]r"],
+    "cursorPosition": 0,
+    "answer": ["bear", "beer"]
+  },
+  {
+    "title": "examples.range.title",
+    "description": "examples.range.description",
+    "content": "abcdefghijklmnopqrstuvwxyz",
+    "initialFlags": "g",
+    "flags": "g",
+    "regex": ["[g-k]"],
+    "cursorPosition": 0,
+    "answer": ["g", "h", "i", "j", "k"]
+  },
+  {
+    "title": "examples.rangeNumber.title",
+    "description": "examples.rangeNumber.description",
+    "content": "0123456789",
+    "initialFlags": "g",
+    "flags": "g",
+    "regex": ["[2-7]"],
+    "cursorPosition": 1,
+    "answer": ["2", "3", "4", "5", "6", "7"]
+  },
+  {
+    "title": "examples.finish.title",
+    "description": "examples.finish.description",
+    "interactive": false
+  },
+  {
+    "title": "steps.repetitions.title",
+    "description": "steps.repetitions.description",
+    "interactive": false
   },
   {
     "title": "steps.questionMark.title",
@@ -178,7 +206,7 @@
     "initialValue": "colour",
     "initialFlags": "g",
     "flags": "g",
-    "regex": "colou?r",
+    "regex": ["colou?r"],
     "cursorPosition": 5,
     "answer": ["color", "colour"]
   },
@@ -189,7 +217,7 @@
     "initialValue": "ber",
     "initialFlags": "g",
     "flags": "g",
-    "regex": "be+r",
+    "regex": ["be+r"],
     "cursorPosition": 2,
     "answer": ["ber", "beer", "beeer", "beeeer"]
   },
@@ -200,7 +228,7 @@
     "initialValue": "ber",
     "initialFlags": "g",
     "flags": "g",
-    "regex": "be*r",
+    "regex": ["be*r"],
     "cursorPosition": 2,
     "answer": ["br", "ber", "beer", "beeer", "beeeer"]
   },
@@ -211,7 +239,7 @@
     "initialValue": "be{}r",
     "initialFlags": "g",
     "flags": "g",
-    "regex": "be{2}r",
+    "regex": ["be{2}r"],
     "cursorPosition": 3,
     "answer": ["beer"]
   },
@@ -222,7 +250,7 @@
     "initialValue": "be{,}r",
     "initialFlags": "g",
     "flags": "g",
-    "regex": "be{3,}r",
+    "regex": ["be{3,}r"],
     "cursorPosition": 3,
     "answer": ["beeer", "beeeer"]
   },
@@ -233,10 +261,104 @@
     "initialValue": "be{,}r",
     "initialFlags": "g",
     "flags": "g",
-    "regex": "be{1,3}r",
+    "regex": ["be{1,3}r"],
     "cursorPosition": 3,
     "answer": ["ber", "beer", "beeer"]
   },
+  {
+    "title": "steps.escapeCharacter.title",
+    "description": "steps.escapeCharacter.description",
+    "content": "abcABC123 .:!?",
+    "initialFlags": "g",
+    "initialValue": ".",
+    "flags": "g",
+    "regex": ["\\."],
+    "cursorPosition": 0,
+    "answer": ["."]
+  },
+  {
+    "title": "steps.wordCharacter.title",
+    "description": "steps.wordCharacter.description",
+    "content": "abcABC123 _.:!?",
+    "initialFlags": "g",
+    "flags": "g",
+    "regex": ["\\w"],
+    "cursorPosition": 0,
+    "answer": ["a", "b", "c", "A", "B", "C", "1", "2", "3", "_"]
+  },
+  {
+    "title": "steps.withoutWordCharacter.title",
+    "description": "steps.withoutWordCharacter.description",
+    "content": "abcABC123 _.:!?",
+    "initialFlags": "g",
+    "flags": "g",
+    "regex": ["\\W"],
+    "cursorPosition": 0,
+    "answer": [" ", ".", ":", "!", "?"]
+  },
+  {
+    "title": "steps.numberCharacter.title",
+    "description": "steps.numberCharacter.description",
+    "content": "abcABC123 .:!?",
+    "initialFlags": "g",
+    "flags": "g",
+    "regex": ["\\d"],
+    "cursorPosition": 0,
+    "answer": ["1", "2", "3"]
+  },
+  {
+    "title": "steps.withoutNumberCharacter.title",
+    "description": "steps.withoutNumberCharacter.description",
+    "content": "abcABC123 .:!?",
+    "initialFlags": "g",
+    "flags": "g",
+    "regex": ["\\D"],
+    "cursorPosition": 0,
+    "answer": ["a", "b", "c", "A", "B", "C", " ", ".", ":", "!", "?"]
+  },
+  {
+    "title": "steps.spaceCharacter.title",
+    "description": "steps.spaceCharacter.description",
+    "content": "abcABC123 .:!?",
+    "initialFlags": "g",
+    "flags": "g",
+    "regex": ["\\s"],
+    "cursorPosition": 0,
+    "answer": [" "]
+  },
+  {
+    "title": "steps.withoutSpaceCharacter.title",
+    "description": "steps.withoutSpaceCharacter.description",
+    "content": "abcABC123 .:!?",
+    "initialFlags": "g",
+    "flags": "g",
+    "regex": ["\\S"],
+    "cursorPosition": 0,
+    "answer": ["a", "b", "c", "A", "B", "C", "1", "2", "3", ".", ":", "!", "?"]
+  },
+  {
+    "title": "steps.caret.title",
+    "description": "steps.caret.description",
+    "content": "Basic Omellette Recipe\n\n1. 3 eggs, beaten\n2. 1 tsp sunflower oil\n3. 1 tsp butter",
+    "initialValue": "\\d",
+    "initialFlags": "gm",
+    "flags": "gm",
+    "regex": ["^\\d"],
+    "cursorPosition": 0,
+    "answer": ["1", "2", "3"]
+  },
+  {
+    "title": "steps.dollar.title",
+    "description": "steps.dollar.description",
+    "content": "https://domain.com/what-is-html.html\nhttps://otherdomain.com/html-elements\nhttps://website.com/html5-features.html",
+    "initialValue": "html",
+    "initialFlags": "gm",
+    "flags": "gm",
+    "regex": ["html$"],
+    "cursorPosition": 4,
+    "answer": ["html", "html"]
+  },
+
   {
     "title": "steps.pipeCharacter.title",
     "description": "steps.pipeCharacter.description",
@@ -244,7 +366,7 @@
     "initialValue": "be(e|)r",
     "initialFlags": "g",
     "flags": "g",
-    "regex": "be(e|a)r",
+    "regex": ["be(e|a)r"],
     "cursorPosition": 5,
     "answer": ["beer", "bear"]
   },
@@ -255,7 +377,7 @@
     "initialValue": "(a)",
     "initialFlags": "g",
     "flags": "g",
-    "regex": "(and)",
+    "regex": ["(and)"],
     "cursorPosition": 2,
     "answer": ["and"]
   },
@@ -266,7 +388,7 @@
     "initialValue": "(\\d{3})-(\\d)-",
     "initialFlags": "g",
     "flags": "g",
-    "regex": "(\\d{3})-(\\d)-\\1",
+    "regex": ["(\\d{3})-(\\d)-\\1"],
     "cursorPosition": 13,
     "answer": ["444-0-444"]
   },
@@ -276,7 +398,7 @@
     "content": "domain.com, test.com, site.com",
     "initialValue": "\\w+\\.com",
     "flags": "g",
-    "regex": "\\w+\\.com",
+    "regex": ["\\w+\\.com"],
     "cursorPosition": 8,
     "answer": ["domain.com", "test.com", "site.com"],
     "useFlagsControl": true
@@ -288,7 +410,7 @@
     "initialValue": "\\w+\\.com$",
     "initialFlags": "g",
     "flags": "gm",
-    "regex": "\\w+\\.com$",
+    "regex": ["\\w+\\.com$"],
     "cursorPosition": 8,
     "answer": ["domain.com", "test.com", "site.com"],
     "useFlagsControl": true
@@ -300,7 +422,7 @@
     "initialValue": "\\w+\\.com$",
     "initialFlags": "gm",
     "flags": "gmi",
-    "regex": "\\w+\\.com$",
+    "regex": ["\\w+\\.com$"],
     "cursorPosition": 8,
     "answer": ["DOMAIN.COM", "TEST.COM", "SITE.COM"],
     "useFlagsControl": true

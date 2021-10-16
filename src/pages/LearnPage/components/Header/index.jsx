@@ -6,7 +6,7 @@ import Icon from "@components/Icon";
 import LanguageSwitch from "@components/LanguageSwitch";
 import Progress from "@components/Progress";
 
-const Header = ({ lang, setLang, steps, step }) => (
+const Header = ({ steps, step }) => (
   <header className="header">
     <div className="header-social">
       <Link to="/">
@@ -28,7 +28,7 @@ const Header = ({ lang, setLang, steps, step }) => (
       </a>
     </div>
     <Progress steps={steps} step={step} />
-    <LanguageSwitch lang={lang} setLang={setLang} />
+    <LanguageSwitch />
   </header>
 );
 
