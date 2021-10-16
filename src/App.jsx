@@ -28,7 +28,7 @@ function App() {
     >
       <LanguageProvider lang={lang} setLang={setLang}>
         <div className={cx("App", { desktop: isDesktop })}>
-          <Alert visible>
+          <Alert>
             <FormattedMessage id="alert.site.under.development" />
           </Alert>
           <HashRouter>

@@ -1,14 +1,17 @@
 import "./alert.scss";
 
 import { useState } from "react";
+import lookie from "lookie";
 
 import Icon from "@components/Icon";
 
-const Alert = ({ visible, children, ...props }) => {
+const Alert = ({ children, ...props }) => {
+  const visible = lookie.get("devAlertStatus") !== "hidden";
   const [isVisible, setVisible] = useState(visible);
 
   const handleClose = () => {
     setVisible(false);
+    lookie.set("devAlertStatus", "hidden", "1h");
   };
 
   return (
