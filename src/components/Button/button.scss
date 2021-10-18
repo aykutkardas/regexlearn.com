@@ -22,8 +22,11 @@ button {
     background: var(--learn-error);
   }
   &.disabled{
-    color: var(--learn-black);
-    background: var(--learn-white);
+    color: var(--learn-white);
+    background: var(--learn-gray);
     cursor: not-allowed;
+    &:hover{
+      opacity: 1;
+    }
   }
 }
