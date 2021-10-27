@@ -1,6 +1,7 @@
 import { useEffect, useState, useCallback } from "react";
 import Mousetrap from "mousetrap";
 import "mousetrap-global-bind";
+import lookie from "lookie";
 
 import Header from "./components/Header";
 import Step from "./components/Step";
@@ -10,8 +11,10 @@ import data from "../../data.json";
 import shortcuts from "../../shortcuts";
 
 function LearnPage() {
-  const [step, setStep] = useState(0);
-  const [success, setSuccess] = useState(false);
+  const progress = lookie.get("completedSteps") || [];
+  const currentStep = progress.length;
+  const [step, setStep] = useState(currentStep);
+  const [success, setSuccess] = useState(progress.includes(data[step]));
   const [error, setError] = useState(false);
 
   const prevStep = useCallback(
@@ -41,6 +44,14 @@ function LearnPage() {
       if (step < data.length - 1) {
         setError(false);
         setStep(step + 1);
+
+        const completedSteps = lookie.get("completedSteps") || [];
+        const currentStepData = data[step];
+
+        if (!completedSteps.includes(currentStepData.title)) {
+          completedSteps.push(currentStepData.title);
+          lookie.set("completedSteps", completedSteps);
+        }
       }
     },
     [step, success]

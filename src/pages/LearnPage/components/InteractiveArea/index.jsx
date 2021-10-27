@@ -6,6 +6,7 @@ import { toast } from "react-toastify";
 import cx from "classnames";
 import Mousetrap from "mousetrap";
 import _ from "lodash";
+import lookie from "lookie";
 
 import Hint from "@components/Hint";
 import FlagBox from "@components/FlagBox";
@@ -112,10 +113,13 @@ function InteractiveArea({ data, step, isShow, parentError, onChangeSuccess }) {
       return;
     }
 
+    const progress = lookie.get("completedSteps") || [];
+    const isCompletedStep = progress.includes(data.title);
+
     checkRegex();
     setContent(data.content);
     setFlags(data.initialFlags);
-    setRegex(data.initialValue || "");
+    setRegex((isCompletedStep ? data.regex[0] : data.initialValue) || "");
     setIsChanged(false);
     blurInput();
     setTimeout(() => {
