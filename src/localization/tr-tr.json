@@ -138,10 +138,13 @@
   "steps.pipeCharacter.description": "Bir karakterin farklı karakterler olabileceğini belirmeyi sağlar. Böylece olabilecek tüm karakterler parantez içerisinde `|` işareti ile birbirinden ayrılarak yazılır. Örneğin aşağıdaki `e` harfinin `a` harfide olabileceğini belirtin.",
 
   "steps.groupping.title": "Parantezler `( )`: Gruplama",
-  "steps.groupping.description": "Bir ifadeyi gruplayabilir ve bu gruplari referans göstermek ya da bazı kurallar uygulamak için kullanabiliriz. Bir ifadeyi gruplamak için `()` parantez içine alırız. Şimdilik sadece aşağıdaki `and` kelimesini gruplayın.",
+  "steps.groupping.description": "Bir ifadeyi gruplayabilir ve bu grupları referans göstermek ya da bazı kurallar uygulamak için kullanabiliriz. Bir ifadeyi gruplamak için `()` parantez içine alırız. Şimdilik sadece aşağıdaki `and` kelimesini gruplayın.",
 
   "steps.groupReference.title": "Bir Gruba Referans Göstermek",
   "steps.groupReference.description": "Tekrar eden ifadelerde aynı şeyi tekrar yazmamak için daha önce yaptığımız bir ifade grubuna referans gösterebiliriz. Örneğin bu örnekte `444` değeri `(\\d{3})` ifadesi olarak ve `0` değeri `(\\d)` ifadesi olarak gruplandırılmıştır. İlk tanımladığımız bu gruba referans göstermek için `\\1` yazarız. Bu tanımlanan birinci grup anlamına gelir. İfademizin sonuna tekrar `(\\d{3})` yazmamak için bu grubu `\\1` yazarak referans gösterin.",
+
+  "steps.nonCapturingGrouppin.title": "Parantezler `(?: )`: Yakalanmayan Gruplama",
+  "steps.nonCapturingGrouppin.description": "Bir ifadeyi gruplayabilir ve bunun referanslar için yakalanmamasını sağlayabilirsiniz. Örneğin aşağıda iki grup vardır. Fakat ilki yakalanmayan bir grup olduğu için `\\1` ile gösterdiğimiz ilk grup referansı aslında ikinci gruba işaret eder.",
 
   "steps.flagsGlobal.title": "Bayraklar `global`",
   "steps.flagsGlobal.description": "Bayraklar yazdığımız ifadenin hangi kurallara göre uygulanacağını belirler. Örneğin büyük küçük harf duyarlı olacak mı? Tek bir eşleşme mi bulacak yoksa tümünü mü? Ya da sadece ilk satırda mı çalışacak tüm satırlarda mı? gibi. Önceki adımlarda bu bayraklar hep hazır seçili geldi. Şimdi tüm eşleşmeleri bulabilmek için `global` bayrağını aktif edin.",

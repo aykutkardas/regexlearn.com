@@ -327,6 +327,39 @@
     "interactive": false
   },
   {
+    "title": "steps.groupping.title",
+    "description": "steps.groupping.description",
+    "content": "red and blue",
+    "initialValue": "(a)",
+    "initialFlags": "g",
+    "flags": "g",
+    "regex": ["(and)"],
+    "cursorPosition": 2,
+    "answer": ["and"]
+  },
+  {
+    "title": "steps.groupReference.title",
+    "description": "steps.groupReference.description",
+    "content": "444-0-444",
+    "initialValue": "([0-9]{3})-([0-9])-",
+    "initialFlags": "g",
+    "flags": "g",
+    "regex": ["([0-9]{3})-([0-9])-\\1"],
+    "cursorPosition": 19,
+    "answer": ["444-0-444"]
+  },
+  {
+    "title": "steps.nonCapturingGrouppin.title",
+    "description": "steps.nonCapturingGrouppin.description",
+    "content": "444-0-AAA-0",
+    "initialValue": "(?:[0-9]{3})-([0-9])-(?:[A-Z]{3})-",
+    "initialFlags": "g",
+    "flags": "g",
+    "regex": ["(?:[0-9]{3})-([0-9])-(?:[A-Z]{3})-\\1"],
+    "cursorPosition": 34,
+    "answer": ["444-0-AAA-0"]
+  },
+  {
     "title": "steps.escapeCharacter.title",
     "description": "steps.escapeCharacter.description",
     "content": "abcABC123 .:!?",
@@ -422,28 +455,6 @@
     "regex": ["be(e|a)r"],
     "cursorPosition": 5,
     "answer": ["beer", "bear"]
-  },
-  {
-    "title": "steps.groupping.title",
-    "description": "steps.groupping.description",
-    "content": "red and blue",
-    "initialValue": "(a)",
-    "initialFlags": "g",
-    "flags": "g",
-    "regex": ["(and)"],
-    "cursorPosition": 2,
-    "answer": ["and"]
-  },
-  {
-    "title": "steps.groupReference.title",
-    "description": "steps.groupReference.description",
-    "content": "444-0-444",
-    "initialValue": "(\\d{3})-(\\d)-",
-    "initialFlags": "g",
-    "flags": "g",
-    "regex": ["(\\d{3})-(\\d)-\\1"],
-    "cursorPosition": 13,
-    "answer": ["444-0-444"]
   },
   {
     "title": "steps.flagsGlobal.title",
