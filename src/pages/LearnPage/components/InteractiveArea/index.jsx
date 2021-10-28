@@ -118,7 +118,7 @@ function InteractiveArea({ data, step, isShow, parentError, onChangeSuccess }) {
 
     checkRegex();
     setContent(data.content);
-    setFlags(data.initialFlags);
+    setFlags(isCompletedStep ? data.flags : data.initialFlags);
     setRegex((isCompletedStep ? data.regex[0] : data.initialValue) || "");
     setIsChanged(false);
     blurInput();
