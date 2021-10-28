@@ -12,8 +12,8 @@ import shortcuts from "../../shortcuts";
 
 function LearnPage() {
   const progress = lookie.get("completedSteps") || [];
-  const currentStep = progress.length;
-  const [step, setStep] = useState(currentStep);
+  const lastStep = lookie.get("lastStep") || 0;
+  const [step, setStep] = useState(lastStep);
   const [success, setSuccess] = useState(progress.includes(data[step]));
   const [error, setError] = useState(false);
 
@@ -65,6 +65,8 @@ function LearnPage() {
     Mousetrap.bindGlobal(shortcuts.rootKey, (e) => e.preventDefault());
     Mousetrap.bindGlobal(shortcuts.prevStep, prevStep);
     Mousetrap.bindGlobal(shortcuts.nextStep, nextStep);
+
+    lookie.set("lastStep", step);
 
     return () =>
       Mousetrap.unbindGlobal([
