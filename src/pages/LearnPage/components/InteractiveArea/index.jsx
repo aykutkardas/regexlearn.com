@@ -91,13 +91,13 @@ function InteractiveArea({ data, step, isShow, parentError, onChangeSuccess }) {
   };
 
   const focusInput = () => {
-    if (regexInput) {
+    if (regexInput?.current) {
       regexInput.current.focus();
     }
   };
 
   const blurInput = () => {
-    if (regexInput) {
+    if (regexInput?.current) {
       regexInput.current.blur();
     }
   };

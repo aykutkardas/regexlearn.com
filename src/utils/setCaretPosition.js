@@ -1,4 +1,6 @@
 function setCaretPosition(inputEl, pos) {
+  if (!inputEl) return;
+
   // Modern browsers
   if (inputEl.setSelectionRange) {
     inputEl.focus();
