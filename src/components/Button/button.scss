@@ -1,32 +1,41 @@
 button {
   border: 0;
   padding: 12px 16px;
-  border-radius: 4px;
+  border-radius: 6px;
+  border-bottom-width: 3px;
+  border-style: solid;
   cursor: pointer;
+  margin-top: 0;
+  transition: 0.1s;
+
+  &:active {
+    margin-top: 3px;
+    border-bottom-width: 0px;
+  }
 
   &:hover {
     opacity: 0.8;
   }
 
   &.success {
-    color: var(--learn-black);
-    background: var(--learn-success);
+    color: var(--learn-white);
+    background: var(--learn-primary);
+    border-color: var(--learn-primary-darken);
   }
 
   &.warning {
     color: var(--learn-black);
     background: var(--learn-warning);
   }
+
   &.danger {
     color: var(--learn-black);
     background: var(--learn-error);
   }
-  &.disabled{
-    color: var(--learn-white);
-    background: var(--learn-gray);
+
+  &[disabled],
+  &[disabled]:hover {
+    opacity: 0.6;
     cursor: not-allowed;
-    &:hover{
-      opacity: 1;
-    }
   }
 }
