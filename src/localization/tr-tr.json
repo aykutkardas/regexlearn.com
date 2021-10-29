@@ -113,8 +113,8 @@
   "steps.groupReference.title": "Bir Gruba Referans Göstermek",
   "steps.groupReference.description": "Tekrar eden ifadelerde aynı şeyi tekrar yazmamak için daha önce yaptığımız bir ifade grubuna referans gösterebiliriz. Örneğin bu örnekte `444` değeri `(\\d{3})` ifadesi olarak ve `0` değeri `(\\d)` ifadesi olarak gruplandırılmıştır. İlk tanımladığımız bu gruba referans göstermek için `\\1` yazarız. Bu tanımlanan birinci grup anlamına gelir. İfademizin sonuna tekrar `(\\d{3})` yazmamak için bu grubu `\\1` yazarak referans gösterin.",
 
-  "steps.nonCapturingGrouppin.title": "Parantezler `(?: )`: Yakalanmayan Gruplama",
-  "steps.nonCapturingGrouppin.description": "Bir ifadeyi gruplayabilir ve bunun referanslar için yakalanmamasını sağlayabilirsiniz. Örneğin aşağıda iki grup vardır. Fakat ilki yakalanmayan bir grup olduğu için `\\1` ile gösterdiğimiz ilk grup referansı aslında ikinci gruba işaret eder.",
+  "steps.nonCapturingGroupping.title": "Parantezler `(?: )`: Yakalanmayan Gruplama",
+  "steps.nonCapturingGroupping.description": "Bir ifadeyi gruplayabilir ve bunun referanslar için yakalanmamasını sağlayabilirsiniz. Örneğin aşağıda iki grup vardır. Fakat ilki yakalanmayan bir grup olduğu için `\\1` ile gösterdiğimiz ilk grup referansı aslında ikinci gruba işaret eder.",
 
   "steps.pipeCharacter.title": "Boru Karakteri `|`:\\nAlternatif İfadelere Göre Seçmek `a|b|c`",
   "steps.pipeCharacter.description": "Bir ifadenin farklı ifadelerde olabileceğini belirmeyi sağlar. Böylece olabilecek tüm ifadeler boru işareti `|` ile birbirinden ayrılarak yazılır. Bunun karakter setinden `[abc]` farkı, karakter setleri karakter seviyesinde çalışır. Alternatifler ise ifade düzeyindedir. Örneğin aşağıdaki ifade hem `cat` hemde `Cat` sözcüklerini seçecek şekildedir. İfadenin sonuna bir boru işareti `|` daha ekleyip `rat` yazarak tüm sözcüklerin seçilmesini sağlayın.",
@@ -146,12 +146,15 @@
   "steps.dollar.title": "Dolar İşareti `$`:\\nSatır Sonuna Göre Seçmek",
   "steps.dollar.description": "Sadece satır sonunda geçen `html` metinlerini bulmak için `$` işaretini `html` değerinden sonra kullanalım.",
 
-  "steps.flagsGlobal.title": "Bayraklar `global`",
-  "steps.flagsGlobal.description": "Bayraklar yazdığımız ifadenin hangi kurallara göre uygulanacağını belirler. Örneğin büyük küçük harf duyarlı olacak mı? Tek bir eşleşme mi bulacak yoksa tümünü mü? Ya da sadece ilk satırda mı çalışacak tüm satırlarda mı? gibi. Önceki adımlarda bu bayraklar hep hazır seçili geldi. Şimdi tüm eşleşmeleri bulabilmek için `global` bayrağını aktif edin.",
+  "steps.flags.title": "Bayraklar",
+  "steps.flags.description": "Bayraklar `flags` ifadenin çıktısını değiştirirler. Bu yüzden değiştiriciler `modifiers` olarakta anılırlar. Yazılan ifadenin, metni ayrı satırlar olarak mı ele alacağını, büyük küçük harf duyarlı olup olmayacağını ya da tüm eşleşmeleri bulup bulmayacağını belirler. Bayrakları öğrenmek için sonraki adıma devam edin.",
 
-  "steps.flagsMultiline.title": "Bayraklar `multiline`",
+  "steps.flagsGlobal.title": "`global` Bayrağı",
+  "steps.flagsGlobal.description": "`global` bayrağı, ifadenin tüm eşleşmeleri seçmesini sağlar. Eğer kullanılmazsa sadece ilk eşleşmeyi seçecektir. Şimdi tüm eşleşmeleri seçebilmek için `global` bayrağını aktif edin.",
+
+  "steps.flagsMultiline.title": "`multiline` Bayrağı",
   "steps.flagsMultiline.description": "RegEx tüm metni tek satır olarak görür. Fakat her satırı ayrı ayrı ele alabilmek için `multiline` bayrağını kullanırız. Bu sayede satır sonuna göre yazdığımız ifadeler her satır için ayrı ayrı çalışır. Şimdi tüm eşleşmeleri bulabilmek için `multiline` bayrağını aktif edin.",
 
-  "steps.flagsCaseInsensitive.title": "Bayraklar `case-insensitive`",
+  "steps.flagsCaseInsensitive.title": "`case-insensitive` Bayrağı",
   "steps.flagsCaseInsensitive.description": "Yazdığımız ifadenin büyük küçük harf duyarlılığını kaldırmak için `case-insensitive` bayrağını aktif etmeliyiz."
 }

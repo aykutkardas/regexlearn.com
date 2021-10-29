@@ -349,8 +349,8 @@
     "answer": ["444-0-444"]
   },
   {
-    "title": "steps.nonCapturingGrouppin.title",
-    "description": "steps.nonCapturingGrouppin.description",
+    "title": "steps.nonCapturingGroupping.title",
+    "description": "steps.nonCapturingGroupping.description",
     "content": "444-0-AAA-0",
     "initialValue": "(?:[0-9]{3})-([0-9])-(?:[A-Z]{3})-",
     "initialFlags": "g",
@@ -379,6 +379,27 @@
     "flags": "g",
     "regex": ["(\\*|\\.)"],
     "answer": ["*", "."]
+  },
+  {
+    "title": "steps.caret.title",
+    "description": "steps.caret.description",
+    "content": "Basic Omellette Recipe\n\n1. 3 eggs, beaten\n2. 1 tsp sunflower oil\n3. 1 tsp butter",
+    "initialValue": "\\d",
+    "initialFlags": "gm",
+    "flags": "gm",
+    "regex": ["^\\d"],
+    "answer": ["1", "2", "3"]
+  },
+  {
+    "title": "steps.dollar.title",
+    "description": "steps.dollar.description",
+    "content": "https://domain.com/what-is-html.html\nhttps://otherdomain.com/html-elements\nhttps://website.com/html5-features.html",
+    "initialValue": "html",
+    "initialFlags": "gm",
+    "flags": "gm",
+    "regex": ["html$"],
+    "cursorPosition": 4,
+    "answer": ["html", "html"]
   },
   {
     "title": "steps.wordCharacter.title",
@@ -435,25 +456,9 @@
     "answer": ["a", "b", "c", "A", "B", "C", "1", "2", "3", ".", ":", "!", "?"]
   },
   {
-    "title": "steps.caret.title",
-    "description": "steps.caret.description",
-    "content": "Basic Omellette Recipe\n\n1. 3 eggs, beaten\n2. 1 tsp sunflower oil\n3. 1 tsp butter",
-    "initialValue": "\\d",
-    "initialFlags": "gm",
-    "flags": "gm",
-    "regex": ["^\\d"],
-    "answer": ["1", "2", "3"]
-  },
-  {
-    "title": "steps.dollar.title",
-    "description": "steps.dollar.description",
-    "content": "https://domain.com/what-is-html.html\nhttps://otherdomain.com/html-elements\nhttps://website.com/html5-features.html",
-    "initialValue": "html",
-    "initialFlags": "gm",
-    "flags": "gm",
-    "regex": ["html$"],
-    "cursorPosition": 4,
-    "answer": ["html", "html"]
+    "title": "steps.flags.title",
+    "description": "steps.flags.description",
+    "interactive": false
   },
   {
     "title": "steps.flagsGlobal.title",
