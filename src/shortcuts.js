@@ -2,7 +2,7 @@ const shortcuts = {
   rootKey: "alt",
   focus: "tab",
   nextStep: "enter",
-  prevStep: "alt+left",
+  prevStep: "shift+enter",
   hint: "alt+h",
   languageSwitch: "alt+l",
   flagGlobal: "alt+g",
