@@ -9,10 +9,10 @@ import _ from "lodash";
 import lookie from "lookie";
 
 import Hint from "@components/Hint";
-import FlagBox from "@components/FlagBox";
-
 import setCaretPosition from "@utils/setCaretPosition";
 import tagWrapper from "@utils/tagWrapper";
+
+import FlagBox from "../FlagBox";
 
 import shortcuts from "../../../../shortcuts";
 

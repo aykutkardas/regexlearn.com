@@ -8,7 +8,7 @@ import Shortcut from "@components/Shortcut";
 
 import tagWrapper from "@utils/tagWrapper";
 
-import shortcuts from "../../shortcuts";
+import shortcuts from "../../../../shortcuts";
 
 const FlagBox = ({ flags, setFlags }) => {
   const flagList = useMemo(
