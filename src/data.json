@@ -360,14 +360,25 @@
     "answer": ["444-0-AAA-0"]
   },
   {
+    "title": "steps.pipeCharacter.title",
+    "description": "steps.pipeCharacter.description",
+    "content": "cat Cat rat",
+    "initialValue": "(C|c)at",
+    "initialFlags": "g",
+    "flags": "g",
+    "regex": ["(C|c)at|rat"],
+    "cursorPosition": 7,
+    "answer": ["cat", "Cat", "rat"]
+  },
+  {
     "title": "steps.escapeCharacter.title",
     "description": "steps.escapeCharacter.description",
-    "content": "abcABC123 .:!?",
+    "content": "(*) Asteriks.",
     "initialFlags": "g",
-    "initialValue": ".",
+    "initialValue": "(*|.)",
     "flags": "g",
-    "regex": ["\\."],
-    "answer": ["."]
+    "regex": ["(\\*|\\.)"],
+    "answer": ["*", "."]
   },
   {
     "title": "steps.wordCharacter.title",
@@ -443,18 +454,6 @@
     "regex": ["html$"],
     "cursorPosition": 4,
     "answer": ["html", "html"]
-  },
-
-  {
-    "title": "steps.pipeCharacter.title",
-    "description": "steps.pipeCharacter.description",
-    "content": "beer bear",
-    "initialValue": "be(e|)r",
-    "initialFlags": "g",
-    "flags": "g",
-    "regex": ["be(e|a)r"],
-    "cursorPosition": 5,
-    "answer": ["beer", "bear"]
   },
   {
     "title": "steps.flagsGlobal.title",

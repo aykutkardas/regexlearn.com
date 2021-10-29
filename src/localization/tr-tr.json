@@ -107,8 +107,20 @@
   "examples.quantifierRange.title": "Pratik: Belirli Bir Sayı Aralığında",
   "examples.quantifierRange.description": "Metindeki  `0` 'dan `9` 'a kadar olan sayıların yan yana en az `1` ile `4` arasında geçenlerini seçecek ifadeyi süslü parantezleri `{}` kullanarak yazın.",
 
+  "steps.groupping.title": "Parantezler `( )`: Gruplama",
+  "steps.groupping.description": "Bir ifadeyi gruplayabilir ve bu grupları referans göstermek ya da bazı kurallar uygulamak için kullanabiliriz. Bir ifadeyi gruplamak için `()` parantez içine alırız. Şimdilik sadece aşağıdaki `and` kelimesini gruplayın.",
+
+  "steps.groupReference.title": "Bir Gruba Referans Göstermek",
+  "steps.groupReference.description": "Tekrar eden ifadelerde aynı şeyi tekrar yazmamak için daha önce yaptığımız bir ifade grubuna referans gösterebiliriz. Örneğin bu örnekte `444` değeri `(\\d{3})` ifadesi olarak ve `0` değeri `(\\d)` ifadesi olarak gruplandırılmıştır. İlk tanımladığımız bu gruba referans göstermek için `\\1` yazarız. Bu tanımlanan birinci grup anlamına gelir. İfademizin sonuna tekrar `(\\d{3})` yazmamak için bu grubu `\\1` yazarak referans gösterin.",
+
+  "steps.nonCapturingGrouppin.title": "Parantezler `(?: )`: Yakalanmayan Gruplama",
+  "steps.nonCapturingGrouppin.description": "Bir ifadeyi gruplayabilir ve bunun referanslar için yakalanmamasını sağlayabilirsiniz. Örneğin aşağıda iki grup vardır. Fakat ilki yakalanmayan bir grup olduğu için `\\1` ile gösterdiğimiz ilk grup referansı aslında ikinci gruba işaret eder.",
+
+  "steps.pipeCharacter.title": "Boru Karakteri `|`:\\nAlternatif İfadelere Göre Seçmek `a|b|c`",
+  "steps.pipeCharacter.description": "Bir ifadenin farklı ifadelerde olabileceğini belirmeyi sağlar. Böylece olabilecek tüm ifadeler boru işareti `|` ile birbirinden ayrılarak yazılır. Bunun karakter setinden `[abc]` farkı, karakter setleri karakter seviyesinde çalışır. Alternatifler ise ifade düzeyindedir. Örneğin aşağıdaki ifade hem `cat` hemde `Cat` sözcüklerini seçecek şekildedir. İfadenin sonuna bir boru işareti `|` daha ekleyip `rat` yazarak tüm sözcüklerin seçilmesini sağlayın.",
+
   "steps.escapeCharacter.title": "Kaçış Karakteri `\\`: Özel Karakter Hariç Tutma",
-  "steps.escapeCharacter.description": "Nokta `.` işaretini herhangi bir karakteri seçmek için kullanıyorsak, noktanın kendisini bulabilmek için öncesinde bir kaçış karakteri `\\` kullanmamız gerekir. Bunun için noktadan önce bir kaçış karakteri `\\` ekleyin.",
+  "steps.escapeCharacter.description": "Regex yazarken kullandığımız özel karakterler vardır. `{ } [ ] / \\ + * . $ ^ | ?` Bu karakterlerin kendilerini seçebilmek için öncesinde bir kaçış karakteri `\\` kullanmamız gerekir. Örneğin metindeki nokta `.` ve yıldız `*` karakterlerini seçmek için öncesine bir kaçış karakteri `\\` ekleyelim.",
 
   "steps.wordCharacter.title": "Sözcük Karakteri `\\w`: Harf, Sayı ve Alt Çizgi",
   "steps.wordCharacter.description": "Harf, sayı ve alt çizgi karakterlerini bulmak için `\\w` ifadesi kullanılır. Metindeki sözcük karakterlerini bulmak için `\\w` ifadesini kullanalım.",
@@ -133,18 +145,6 @@
 
   "steps.dollar.title": "Dolar İşareti `$`:\\nSatır Sonuna Göre Seçmek",
   "steps.dollar.description": "Sadece satır sonunda geçen `html` metinlerini bulmak için `$` işaretini `html` değerinden sonra kullanalım.",
-
-  "steps.pipeCharacter.title": "Boru Karakteri `|`:\\nAlternatif Karakterlere Göre Seçmek `(a|b|c)`",
-  "steps.pipeCharacter.description": "Bir karakterin farklı karakterler olabileceğini belirmeyi sağlar. Böylece olabilecek tüm karakterler parantez içerisinde `|` işareti ile birbirinden ayrılarak yazılır. Örneğin aşağıdaki `e` harfinin `a` harfide olabileceğini belirtin.",
-
-  "steps.groupping.title": "Parantezler `( )`: Gruplama",
-  "steps.groupping.description": "Bir ifadeyi gruplayabilir ve bu grupları referans göstermek ya da bazı kurallar uygulamak için kullanabiliriz. Bir ifadeyi gruplamak için `()` parantez içine alırız. Şimdilik sadece aşağıdaki `and` kelimesini gruplayın.",
-
-  "steps.groupReference.title": "Bir Gruba Referans Göstermek",
-  "steps.groupReference.description": "Tekrar eden ifadelerde aynı şeyi tekrar yazmamak için daha önce yaptığımız bir ifade grubuna referans gösterebiliriz. Örneğin bu örnekte `444` değeri `(\\d{3})` ifadesi olarak ve `0` değeri `(\\d)` ifadesi olarak gruplandırılmıştır. İlk tanımladığımız bu gruba referans göstermek için `\\1` yazarız. Bu tanımlanan birinci grup anlamına gelir. İfademizin sonuna tekrar `(\\d{3})` yazmamak için bu grubu `\\1` yazarak referans gösterin.",
-
-  "steps.nonCapturingGrouppin.title": "Parantezler `(?: )`: Yakalanmayan Gruplama",
-  "steps.nonCapturingGrouppin.description": "Bir ifadeyi gruplayabilir ve bunun referanslar için yakalanmamasını sağlayabilirsiniz. Örneğin aşağıda iki grup vardır. Fakat ilki yakalanmayan bir grup olduğu için `\\1` ile gösterdiğimiz ilk grup referansı aslında ikinci gruba işaret eder.",
 
   "steps.flagsGlobal.title": "Bayraklar `global`",
   "steps.flagsGlobal.description": "Bayraklar yazdığımız ifadenin hangi kurallara göre uygulanacağını belirler. Örneğin büyük küçük harf duyarlı olacak mı? Tek bir eşleşme mi bulacak yoksa tümünü mü? Ya da sadece ilk satırda mı çalışacak tüm satırlarda mı? gibi. Önceki adımlarda bu bayraklar hep hazır seçili geldi. Şimdi tüm eşleşmeleri bulabilmek için `global` bayrağını aktif edin.",
