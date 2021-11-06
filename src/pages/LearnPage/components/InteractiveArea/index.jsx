@@ -39,8 +39,9 @@ function InteractiveArea({ data, step, isShow, parentError, onChangeSuccess }) {
 
       const reg = new RegExp(`(${$regex})`, flags);
       const matchType = flags?.includes("g") ? "matchAll" : "match";
+      const isMatchAll = matchType === "matchAll";
       const regResult = [...data.content[matchType](reg)]
-        .map((res) => res[0])
+        .map((res) => (isMatchAll ? res[0] : res))
         .filter((res) => !!res);
 
       const isMatch =
@@ -71,6 +72,13 @@ function InteractiveArea({ data, step, isShow, parentError, onChangeSuccess }) {
           autoClose: true,
           position: "top-center",
         });
+
+        const completedSteps = lookie.get("completedSteps") || [];
+
+        if (!completedSteps.includes(data.title)) {
+          completedSteps.push(data.title);
+          lookie.set("completedSteps", completedSteps);
+        }
 
         setError(false);
       } else if (isMatch) {
@@ -140,7 +148,7 @@ function InteractiveArea({ data, step, isShow, parentError, onChangeSuccess }) {
     return () => Mousetrap.unbindGlobal(shortcuts.focus);
   }, []);
 
-  useEffect(checkRegex, [regex, flags]);
+  useEffect(checkRegex, [regex, flags, step]);
 
   if (!isShow) return null;
 

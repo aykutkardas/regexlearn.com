@@ -44,14 +44,6 @@ function LearnPage() {
       if (step < data.length - 1) {
         setError(false);
         setStep(step + 1);
-
-        const completedSteps = lookie.get("completedSteps") || [];
-        const currentStepData = data[step];
-
-        if (!completedSteps.includes(currentStepData.title)) {
-          completedSteps.push(currentStepData.title);
-          lookie.set("completedSteps", completedSteps);
-        }
       }
     },
     [step, success]
