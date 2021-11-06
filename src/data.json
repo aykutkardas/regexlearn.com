@@ -541,5 +541,34 @@
     "cursorPosition": 8,
     "answer": ["DOMAIN.COM", "TEST.COM", "SITE.COM"],
     "useFlagsControl": true
+  },
+  {
+    "title": "steps.greedyMatching.title",
+    "description": "steps.greedyMatching.description",
+    "originalTitle": "Greedy Matching",
+    "content": "ber beer beeer beeeer",
+    "initialValue": ".*r",
+    "regex": [".*r"],
+    "initialFlags": "",
+    "flags": "",
+    "cursorPosition": 1,
+    "answer": ["ber beer beeer beeeer", "ber beer beeer beeeer"]
+  },
+  {
+    "title": "steps.lazyMatching.title",
+    "description": "steps.lazyMatching.description",
+    "originalTitle": "Lazy Matching",
+    "content": "ber beer beeer beeeer",
+    "initialValue": ".*r",
+    "regex": [".*?r"],
+    "initialFlags": "",
+    "flags": "",
+    "cursorPosition": 2,
+    "answer": ["ber", "ber"]
+  },
+  {
+    "title": "steps.completeAllSteps.title",
+    "description": "steps.completeAllSteps.description",
+    "interactive": false
   }
 ]
