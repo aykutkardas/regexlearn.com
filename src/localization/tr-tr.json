@@ -71,22 +71,22 @@
   "steps.repetitions.title": "Tekrarlar",
   "steps.repetitions.description": "Bir karakterin kaç defa tekrar edeceğini, metinde bulunup bulunmayacağını ifade etmek için bazı özel karakterler kullanılır. Bu özel karakterler artı `+`, yıldız `*` ve soru işareti `?` dir.",
 
-  "steps.starCharacter.title": "Yıldız İşareti `*`:\\nKarakterin Hiç Eşleşmemesi ya da Çok Sayıda Eşleşmesine Göre",
+  "steps.starCharacter.title": "Yıldız İşareti `*`",
   "steps.starCharacter.description": "Bir karakterin hiç eşleşmemesini ya da çok sayıda eşleşebileceğini ifade etmek için sonuna `*` yıldız işareti koyarız. Örneğin metinde `e` harfinin hiç geçmeyeceğini ya da yan yana bir ya da daha fazla geçebileceğini belirtin.",
 
-  "steps.plusCharacter.title": "Artı İşareti `+`:\\nKarekterin Bir ya da Daha Fazla Eşleşmesine Göre",
+  "steps.plusCharacter.title": "Artı İşareti `+`",
   "steps.plusCharacter.description": "Bir karakterin bir ya da daha fazla geçebileceğini ifade etmek için sonuna `+` artı işareti koyarız. Örneğin metinde `e` harfinin bir ya da yan yana daha fazla geçebileceğini belirtin.",
 
-  "steps.questionMark.title": "Soru İşareti `?`: Opsiyonel",
+  "steps.questionMark.title": "Soru İşareti `?`",
   "steps.questionMark.description": "Bir karakterin opsiyonel olduğunu ifade etmek için sonuna `?` soru işareti koyarız. Örneğin aşağıdaki `u` harfinin opsiyonel olduğunu belirtin.",
 
-  "steps.quantifier.title": "Karakterin Belirli Bir Sayıda\\nEşleşmesine Göre `{1}`",
+  "steps.quantifier.title": "Süslü Parantezler - 1",
   "steps.quantifier.description": "Bir karakterin belirli bir sayıda geçmesini ifade etmek için sonuna kaç kere geçmesini istediğimizle birlikte süslü parantezleri `{n}` yazarız. Örneğin aşağıdaki `e` harfinin sadece `2` kere geçebileceğini belirtin.",
 
-  "steps.quantifierMin.title": "Karakterin En Az Belirli Bir Sayıda\\nEşleşmesine Göre `{1,}`",
+  "steps.quantifierMin.title": "Süslü Parantezler - 2",
   "steps.quantifierMin.description": "Bir karakterin en az belirli bir sayıda geçmesini ifade etmek için sonuna en az kaç kere geçmesini istediğimizi sonuna virgül `,` ile birlikte süslü parantezlerin `{n, }` içine yazarız. Örneğin aşağıdaki `e` harfinin en az `3` kez geçebileceğini belirtin.",
 
-  "steps.quantifierRange.title": "Karakterin Belirli Bir Sayı Aralığında\\nEşleşmesine Göre `{1,9}`",
+  "steps.quantifierRange.title": "Süslü Parantezler - 3",
   "steps.quantifierRange.description": "Bir karakterin belirli bir sayı aralığında geçmesini ifade etmek için sonuna geçmesini istediğimiz aralıkla birlikte süslü parantezleri `{x,y}` yazarız. Örneğin aşağıdaki `e` harfinin sadece `1` ile `3` arasında geçebileceğini belirtin.",
 
   "examples.starCharacter.title": "Pratik: Yıldız İşareti `*`",
@@ -116,10 +116,10 @@
   "steps.nonCapturingGroupping.title": "Parantezler `(?: )`: Yakalanmayan Gruplama",
   "steps.nonCapturingGroupping.description": "Bir ifadeyi gruplayabilir ve bunun referanslar için yakalanmamasını sağlayabilirsiniz. Örneğin aşağıda iki grup vardır. Fakat ilki yakalanmayan bir grup olduğu için `\\1` ile gösterdiğimiz ilk grup referansı aslında ikinci gruba işaret eder.",
 
-  "steps.pipeCharacter.title": "Boru Karakteri `|`:\\nAlternatif İfadelere Göre Seçmek `a|b|c`",
+  "steps.pipeCharacter.title": "Boru Karakteri `|`",
   "steps.pipeCharacter.description": "Bir ifadenin farklı ifadelerde olabileceğini belirmeyi sağlar. Böylece olabilecek tüm ifadeler boru işareti `|` ile birbirinden ayrılarak yazılır. Bunun karakter setinden `[abc]` farkı, karakter setleri karakter seviyesinde çalışır. Alternatifler ise ifade düzeyindedir. Örneğin aşağıdaki ifade hem `cat` hemde `Cat` sözcüklerini seçecek şekildedir. İfadenin sonuna bir boru işareti `|` daha ekleyip `rat` yazarak tüm sözcüklerin seçilmesini sağlayın.",
 
-  "steps.escapeCharacter.title": "Kaçış Karakteri `\\`: Özel Karakter Hariç Tutma",
+  "steps.escapeCharacter.title": "Kaçış Karakteri `\\`",
   "steps.escapeCharacter.description": "Regex yazarken kullandığımız özel karakterler vardır. `{ } [ ] / \\ + * . $ ^ | ?` Bu karakterlerin kendilerini seçebilmek için öncesinde bir kaçış karakteri `\\` kullanmamız gerekir. Örneğin metindeki nokta `.` ve yıldız `*` karakterlerini seçmek için öncesine bir kaçış karakteri `\\` ekleyelim.",
 
   "steps.wordCharacter.title": "Sözcük Karakteri `\\w`: Harf, Sayı ve Alt Çizgi",
