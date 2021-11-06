@@ -456,6 +456,53 @@
     "answer": ["a", "b", "c", "A", "B", "C", "1", "2", "3", ".", ":", "!", "?"]
   },
   {
+    "title": "steps.lookarounds.title",
+    "description": "steps.lookarounds.description",
+    "interactive": false
+  },
+  {
+    "title": "steps.positiveLookahead.title",
+    "description": "steps.positiveLookahead.description",
+    "content": "Date: 4 Aug 3PM",
+    "initialFlags": "g",
+    "flags": "g",
+    "cursorPosition": 3,
+    "initialValue": "\\d+",
+    "regex": ["\\d+(?=PM)"],
+    "answer": ["3"]
+  },
+  {
+    "title": "steps.negativeLookahead.title",
+    "description": "steps.negativeLookahead.description",
+    "content": "Date: 4 Aug 3PM",
+    "initialFlags": "g",
+    "flags": "g",
+    "cursorPosition": 3,
+    "initialValue": "\\d+",
+    "regex": ["\\d+(?!PM)"],
+    "answer": ["4"]
+  },
+  {
+    "title": "steps.positiveLookbehind.title",
+    "description": "steps.positiveLookbehind.description",
+    "content": "Product Code: 1064 Price: $5",
+    "initialFlags": "g",
+    "flags": "g",
+    "initialValue": "\\d+",
+    "regex": ["(?<=\\$)\\d+"],
+    "answer": ["5"]
+  },
+  {
+    "title": "steps.negativeLookbehind.title",
+    "description": "steps.negativeLookbehind.description",
+    "content": "Product Code: 1064 Price: $5",
+    "initialFlags": "g",
+    "flags": "g",
+    "initialValue": "\\d+",
+    "regex": ["(?<!\\$)\\d+"],
+    "answer": ["1064"]
+  },
+  {
     "title": "steps.flags.title",
     "description": "steps.flags.description",
     "interactive": false

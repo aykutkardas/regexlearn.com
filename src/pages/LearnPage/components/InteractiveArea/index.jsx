@@ -17,14 +17,14 @@ import FlagBox from "../FlagBox";
 import shortcuts from "../../../../shortcuts";
 
 function InteractiveArea({ data, step, isShow, parentError, onChangeSuccess }) {
+  const { formatMessage } = useIntl();
+  const regexInput = useRef(null);
   const [regex, setRegex] = useState(data.initialValue || "");
   const [flags, setFlags] = useState(data.initialFlags || "");
   const [isChanged, setIsChanged] = useState(false);
   const [content, setContent] = useState(null);
   const [error, setError] = useState(false);
   const [success, setSuccess] = useState(false);
-  const regexInput = useRef(null);
-  const { formatMessage } = useIntl();
   const [match, setMatch] = useState(false);
 
   const checkRegex = () => {
@@ -47,13 +47,12 @@ function InteractiveArea({ data, step, isShow, parentError, onChangeSuccess }) {
         data.answer.length === regResult.length &&
         _.isEmpty(_.xor(data.answer, regResult));
 
-      setMatch(isMatch);
-
       const isSuccess =
         isMatch &&
         data.regex.includes(regex) &&
         _.isEmpty(_.xor(data.flags.split(""), flags.split("")));
 
+      setMatch(isMatch);
       setSuccess(isSuccess);
 
       toast.dismiss();

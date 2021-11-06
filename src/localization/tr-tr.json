@@ -146,6 +146,22 @@
   "steps.dollar.title": "Dolar İşareti `$`:\\nSatır Sonuna Göre Seçmek",
   "steps.dollar.description": "Sadece satır sonunda geçen `html` metinlerini bulmak için `$` işaretini `html` değerinden sonra kullanalım.",
 
+  "steps.lookarounds.title": "Bakınmak: `Lookarounds`",
+  "steps.lookarounds.description": "Yazdığımız ifadenin, başka bir ifadeden önce ya da sonra geçmesini istiyorsak bakınmaya ihtiyaç duyarız. Bakınmayı öğrenmek için sonraki adıma devam edin.",
+
+  "steps.positiveLookahead.title": "Olumlu İleriye Bakınma: `(?=)`",
+  "steps.positiveLookahead.description": "Örneğin metinde saat değerini seçmek istiyoruz. Bu yüzden yalnızca kendinden sonra `PM` ifadesi geçen sayı değerlerini seçmek için ifademizden sonra olumlu ileriye bakınma `(?=)` ifadesini yazmamız gerekir. Parantezlerin içerisinde `=` işaretinden sonra `PM` ifadesini ekleyin.",
+  
+
+  "steps.negativeLookahead.title": "Olumsuz İleriye Bakınma: `(?!)`",
+  "steps.negativeLookahead.description": "Örneğin metinde saat değeri dışındaki sayıları seçmek istiyoruz. Bu yüzden yalnızca kendinden sonra `PM` ifadesi geçmeyen sayı değerlerini seçmek için ifademizden sonra olumsuz ileriye bakınma `(?!)` ifadesini yazmamız gerekir. Parantezlerin içerisinde `!` işaretinden sonra `PM` ifadesini ekleyin.",
+  
+  "steps.positiveLookbehind.title": "Olumlu Geriye Bakınma: `(?<=)`",
+  "steps.positiveLookbehind.description": "Örneğin metinde fiyat değerini seçmek istiyoruz. Bu yüzden yalnızca kendinden önce `$` ifadesi geçen sayı değerlerini seçmek için ifademizden önce olumlu geriye bakınma `(?<=)` ifadesini yazmamız gerekir. Parantezlerin içerisinde `=` işaretinden sonra `\\$` ifadesini ekleyin.",
+
+  "steps.negativeLookbehind.title": "Olumsuz Geriye Bakınma: `(?&lt;!)`",
+  "steps.negativeLookbehind.description": "Örneğin metinde fiyat değeri dışındaki sayıları seçmek istiyoruz. Bu yüzden yalnızca kendinden önce `$` ifadesi geçmeyen sayı değerlerini seçmek için ifademizden önce olumsuz geriye bakınma `(?&lt;!)` ifadesini yazmamız gerekir. Parantezlerin içerisinde `!` işaretinden sonra `\\$` ifadesini ekleyin.",
+
   "steps.flags.title": "Bayraklar",
   "steps.flags.description": "Bayraklar `flags` ifadenin çıktısını değiştirirler. Bu yüzden değiştiriciler `modifiers` olarakta anılırlar. Yazılan ifadenin, metni ayrı satırlar olarak mı ele alacağını, büyük küçük harf duyarlı olup olmayacağını ya da tüm eşleşmeleri bulup bulmayacağını belirler. Bayrakları öğrenmek için sonraki adıma devam edin.",
 
