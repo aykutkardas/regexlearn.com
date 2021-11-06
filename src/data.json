@@ -11,6 +11,7 @@
   {
     "title": "steps.whatIsRegex.title",
     "description": "steps.whatIsRegex.description",
+    "originalTitle": "Regular Expressions",
     "content": "readme.md\ndocument.pdf\nimage.png\nmusic.mp4\nmanual.pdf",
     "initialFlags": "gm",
     "flags": "gm",
@@ -22,6 +23,7 @@
   {
     "title": "steps.basicMatchers.title",
     "description": "steps.basicMatchers.description",
+    "originalTitle": "Basic Matchers",
     "content": "“I have no special talents. I am only passionately curious.”\n\n― Albert Einstein",
     "initialFlags": "gm",
     "flags": "gm",
@@ -32,6 +34,7 @@
   {
     "title": "steps.dotCharacter.title",
     "description": "steps.dotCharacter.description",
+    "originalTitle": "The Full Stop",
     "content": "abcABC123 .:!?",
     "initialFlags": "g",
     "flags": "g",
@@ -56,6 +59,7 @@
   {
     "title": "steps.characterSet.title",
     "description": "steps.characterSet.description",
+    "originalTitle": "Character Sets",
     "content": "bar ber bir bor bur",
     "initialValue": "b[]r",
     "initialFlags": "g",
@@ -67,6 +71,7 @@
   {
     "title": "steps.negatedCharacterSet.title",
     "description": "steps.negatedCharacterSet.description",
+    "originalTitle": "Negated Character Sets",
     "content": "bar ber bir bor bur",
     "initialValue": "b[^]r",
     "initialFlags": "g",
@@ -77,6 +82,7 @@
   },
   {
     "title": "steps.range.title",
+    "originalTitle": "Character Sets: Alphanumeric Range",
     "description": "steps.range.description",
     "content": "abcdefghijklmnopqrstuvwxyz",
     "initialValue": "[-]",
@@ -89,6 +95,7 @@
   {
     "title": "steps.rangeNumber.title",
     "description": "steps.rangeNumber.description",
+    "originalTitle": "Character Sets: Digit Range",
     "content": "0123456789",
     "initialValue": "[-]",
     "initialFlags": "g",
@@ -105,6 +112,7 @@
   {
     "title": "examples.basicMatchers.title",
     "description": "examples.basicMatchers.description",
+    "originalTitle": "Basic Matchers",
     "content": "“Every man takes the limits of his own field of vision for the limits of the world.”\n― Arthur Schopenhauer",
     "initialFlags": "g",
     "flags": "g",
@@ -114,6 +122,7 @@
   {
     "title": "examples.dotCharacter.title",
     "description": "examples.dotCharacter.description",
+    "originalTitle": "The Full Stop",
     "content": "az AZ 09 _- = !? ., :;",
     "initialFlags": "g",
     "flags": "g",
@@ -146,6 +155,7 @@
   {
     "title": "examples.characterSet.title",
     "description": "examples.characterSet.description",
+    "originalTitle": "Character Sets",
     "content": "beer deer feer",
     "initialFlags": "g",
     "flags": "g",
@@ -155,6 +165,7 @@
   {
     "title": "examples.negatedCharacterSet.title",
     "description": "examples.negatedCharacterSet.description",
+    "originalTitle": "Negated Character Sets",
     "content": "bear beor beer beur",
     "initialFlags": "g",
     "flags": "g",
@@ -164,6 +175,7 @@
   {
     "title": "examples.range.title",
     "description": "examples.range.description",
+    "originalTitle": "Character Sets: Alphanumeric Range",
     "content": "abcdefghijklmnopqrstuvwxyz",
     "initialFlags": "g",
     "flags": "g",
@@ -173,6 +185,7 @@
   {
     "title": "examples.rangeNumber.title",
     "description": "examples.rangeNumber.description",
+    "originalTitle": "Character Sets: Digit Range",
     "content": "0123456789",
     "initialFlags": "g",
     "flags": "g",
@@ -188,11 +201,13 @@
   {
     "title": "steps.repetitions.title",
     "description": "steps.repetitions.description",
+    "originalTitle": "Repetitions",
     "interactive": false
   },
   {
     "title": "steps.starCharacter.title",
     "description": "steps.starCharacter.description",
+    "originalTitle": "Repetitions: The Star",
     "content": "br ber beer beeer beeeer",
     "initialValue": "ber",
     "initialFlags": "g",
@@ -204,6 +219,7 @@
   {
     "title": "steps.plusCharacter.title",
     "description": "steps.plusCharacter.description",
+    "originalTitle": "Repetitions: The Plus",
     "content": "br ber beer beeer beeeer",
     "initialValue": "ber",
     "initialFlags": "g",
@@ -215,6 +231,7 @@
   {
     "title": "steps.questionMark.title",
     "description": "steps.questionMark.description",
+    "originalTitle": "Repetitions: The Question Mark",
     "content": "color, colour",
     "initialValue": "colour",
     "initialFlags": "g",
@@ -226,6 +243,7 @@
   {
     "title": "steps.quantifier.title",
     "description": "steps.quantifier.description",
+    "originalTitle": "Repetitions: Braces",
     "content": "ber beer beeer beeeer",
     "initialValue": "be{}r",
     "initialFlags": "g",
@@ -237,6 +255,7 @@
   {
     "title": "steps.quantifierMin.title",
     "description": "steps.quantifierMin.description",
+    "originalTitle": "Repetitions: Braces",
     "content": "ber beer beeer beeeer",
     "initialValue": "be{,}r",
     "initialFlags": "g",
@@ -248,6 +267,7 @@
   {
     "title": "steps.quantifierRange.title",
     "description": "steps.quantifierRange.description",
+    "originalTitle": "Repetitions: Braces",
     "content": "ber beer beeer beeeer",
     "initialValue": "be{,}r",
     "initialFlags": "g",
@@ -264,6 +284,7 @@
   {
     "title": "examples.starCharacter.title",
     "description": "examples.starCharacter.description",
+    "originalTitle": "Repetitions: The Star",
     "content": "dp dep deep",
     "initialValue": "",
     "initialFlags": "g",
@@ -274,6 +295,7 @@
   {
     "title": "examples.plusCharacter.title",
     "description": "examples.plusCharacter.description",
+    "originalTitle": "Repetitions: The Plus",
     "content": "dp dep deep",
     "initialValue": "",
     "initialFlags": "g",
@@ -284,6 +306,7 @@
   {
     "title": "examples.questionMark.title",
     "description": "examples.questionMark.description",
+    "originalTitle": "Repetitions: The Question Mark",
     "content": "a, an",
     "initialValue": "",
     "initialFlags": "g",
@@ -294,6 +317,7 @@
   {
     "title": "examples.quantifier.title",
     "description": "examples.quantifier.description",
+    "originalTitle": "Repetitions: Braces",
     "content": "Release 10/9/2021",
     "initialValue": "",
     "initialFlags": "g",
@@ -304,6 +328,7 @@
   {
     "title": "examples.quantifierMin.title",
     "description": "examples.quantifierMin.description",
+    "originalTitle": "Repetitions: Braces",
     "content": "Release 10/9/2021",
     "initialValue": "",
     "initialFlags": "g",
@@ -314,6 +339,7 @@
   {
     "title": "examples.quantifierRange.title",
     "description": "examples.quantifierRange.description",
+    "originalTitle": "Repetitions: Braces",
     "content": "Release 10/9/2021",
     "initialValue": "",
     "initialFlags": "g",
@@ -329,6 +355,7 @@
   {
     "title": "steps.groupping.title",
     "description": "steps.groupping.description",
+    "originalTitle": "Groupping",
     "content": "red and blue",
     "initialValue": "(a)",
     "initialFlags": "g",
@@ -340,6 +367,7 @@
   {
     "title": "steps.groupReference.title",
     "description": "steps.groupReference.description",
+    "originalTitle": "Group Reference",
     "content": "444-0-444",
     "initialValue": "([0-9]{3})-([0-9])-",
     "initialFlags": "g",
@@ -351,6 +379,7 @@
   {
     "title": "steps.nonCapturingGroupping.title",
     "description": "steps.nonCapturingGroupping.description",
+    "originalTitle": "Non-capturing Groupping",
     "content": "444-0-AAA-0",
     "initialValue": "(?:[0-9]{3})-([0-9])-(?:[A-Z]{3})-",
     "initialFlags": "g",
@@ -362,6 +391,7 @@
   {
     "title": "steps.pipeCharacter.title",
     "description": "steps.pipeCharacter.description",
+    "originalTitle": "Alternation",
     "content": "cat Cat rat",
     "initialValue": "(C|c)at",
     "initialFlags": "g",
@@ -373,6 +403,7 @@
   {
     "title": "steps.escapeCharacter.title",
     "description": "steps.escapeCharacter.description",
+    "originalTitle": "Escape Character",
     "content": "(*) Asteriks.",
     "initialFlags": "g",
     "initialValue": "(*|.)",
@@ -383,6 +414,7 @@
   {
     "title": "steps.caret.title",
     "description": "steps.caret.description",
+    "originalTitle": "Start of The String",
     "content": "Basic Omellette Recipe\n\n1. 3 eggs, beaten\n2. 1 tsp sunflower oil\n3. 1 tsp butter",
     "initialValue": "\\d",
     "initialFlags": "gm",
@@ -393,6 +425,7 @@
   {
     "title": "steps.dollar.title",
     "description": "steps.dollar.description",
+    "originalTitle": "End of The String",
     "content": "https://domain.com/what-is-html.html\nhttps://otherdomain.com/html-elements\nhttps://website.com/html5-features.html",
     "initialValue": "html",
     "initialFlags": "gm",
@@ -404,6 +437,7 @@
   {
     "title": "steps.wordCharacter.title",
     "description": "steps.wordCharacter.description",
+    "originalTitle": "Alphanumeric",
     "content": "abcABC123 _.:!?",
     "initialFlags": "g",
     "flags": "g",
@@ -413,6 +447,7 @@
   {
     "title": "steps.withoutWordCharacter.title",
     "description": "steps.withoutWordCharacter.description",
+    "originalTitle": "Non-alphanumeric",
     "content": "abcABC123 _.:!?",
     "initialFlags": "g",
     "flags": "g",
@@ -422,6 +457,7 @@
   {
     "title": "steps.numberCharacter.title",
     "description": "steps.numberCharacter.description",
+    "originalTitle": "Digits",
     "content": "abcABC123 .:!?",
     "initialFlags": "g",
     "flags": "g",
@@ -431,6 +467,7 @@
   {
     "title": "steps.withoutNumberCharacter.title",
     "description": "steps.withoutNumberCharacter.description",
+    "originalTitle": "Non-digits",
     "content": "abcABC123 .:!?",
     "initialFlags": "g",
     "flags": "g",
@@ -440,6 +477,7 @@
   {
     "title": "steps.spaceCharacter.title",
     "description": "steps.spaceCharacter.description",
+    "originalTitle": "Whitespace Characters",
     "content": "abcABC123 .:!?",
     "initialFlags": "g",
     "flags": "g",
@@ -449,6 +487,7 @@
   {
     "title": "steps.withoutSpaceCharacter.title",
     "description": "steps.withoutSpaceCharacter.description",
+    "originalTitle": "Non-whitespace Characters",
     "content": "abcABC123 .:!?",
     "initialFlags": "g",
     "flags": "g",
@@ -458,11 +497,13 @@
   {
     "title": "steps.lookarounds.title",
     "description": "steps.lookarounds.description",
+    "originalTitle": "Lookarounds",
     "interactive": false
   },
   {
     "title": "steps.positiveLookahead.title",
     "description": "steps.positiveLookahead.description",
+    "originalTitle": "Lookarounds: Positive Lookahead",
     "content": "Date: 4 Aug 3PM",
     "initialFlags": "g",
     "flags": "g",
@@ -474,6 +515,7 @@
   {
     "title": "steps.negativeLookahead.title",
     "description": "steps.negativeLookahead.description",
+    "originalTitle": "Lookarounds: Negative Lookahead",
     "content": "Date: 4 Aug 3PM",
     "initialFlags": "g",
     "flags": "g",
@@ -485,6 +527,7 @@
   {
     "title": "steps.positiveLookbehind.title",
     "description": "steps.positiveLookbehind.description",
+    "originalTitle": "Lookarounds: Positive Lookbehind",
     "content": "Product Code: 1064 Price: $5",
     "initialFlags": "g",
     "flags": "g",
@@ -495,6 +538,7 @@
   {
     "title": "steps.negativeLookbehind.title",
     "description": "steps.negativeLookbehind.description",
+    "originalTitle": "Lookarounds: Negative Lookbehind",
     "content": "Product Code: 1064 Price: $5",
     "initialFlags": "g",
     "flags": "g",
@@ -505,11 +549,13 @@
   {
     "title": "steps.flags.title",
     "description": "steps.flags.description",
+    "originalTitle": "Flags",
     "interactive": false
   },
   {
     "title": "steps.flagsGlobal.title",
     "description": "steps.flagsGlobal.description",
+    "originalTitle": "Flags: Global",
     "content": "domain.com, test.com, site.com",
     "initialValue": "\\w+\\.com",
     "flags": "g",
@@ -521,6 +567,7 @@
   {
     "title": "steps.flagsMultiline.title",
     "description": "steps.flagsMultiline.description",
+    "originalTitle": "Flags: Multiline",
     "content": "domain.com\ntest.com\nsite.com",
     "initialValue": "\\w+\\.com$",
     "initialFlags": "g",
@@ -533,6 +580,7 @@
   {
     "title": "steps.flagsCaseInsensitive.title",
     "description": "steps.flagsCaseInsensitive.description",
+    "originalTitle": "Flags: Case Insensitive",
     "content": "DOMAIN.COM\nTEST.COM\nSITE.COM",
     "initialValue": "\\w+\\.com$",
     "initialFlags": "gm",

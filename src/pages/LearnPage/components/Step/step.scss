@@ -11,6 +11,16 @@
   &-title {
     color: var(--learn-text-title);
     font-size: 28px;
+    position: relative;
+
+    &::before {
+      content: attr(data-original-title);
+      display: block;
+      font-size: 14px;
+      font-weight: normal;
+      margin-bottom: 10px;
+      color: var(--learn-text-description);
+    }
   }
 
   &-description {

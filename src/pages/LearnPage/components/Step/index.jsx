@@ -25,7 +25,11 @@ function Steps({ data, step, error: parentError, onChangeSuccess }) {
 
   return (
     <div className="step">
-      <h2 className="step-title" dangerouslySetInnerHTML={{ __html: title }} />
+      <h2
+        className="step-title"
+        dangerouslySetInnerHTML={{ __html: title }}
+        data-original-title={data.originalTitle}
+      />
       <p
         className="step-description"
         dangerouslySetInnerHTML={{ __html: description }}

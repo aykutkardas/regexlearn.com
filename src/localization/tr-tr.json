@@ -146,7 +146,7 @@
   "steps.dollar.title": "Dolar İşareti `$`:\\nSatır Sonuna Göre Seçmek",
   "steps.dollar.description": "Sadece satır sonunda geçen `html` metinlerini bulmak için `$` işaretini `html` değerinden sonra kullanalım.",
 
-  "steps.lookarounds.title": "Bakınmak: `Lookarounds`",
+  "steps.lookarounds.title": "Bakınmak",
   "steps.lookarounds.description": "Yazdığımız ifadenin, başka bir ifadeden önce ya da sonra geçmesini istiyorsak bakınmaya ihtiyaç duyarız. Bakınmayı öğrenmek için sonraki adıma devam edin.",
 
   "steps.positiveLookahead.title": "Olumlu İleriye Bakınma: `(?=)`",
@@ -165,13 +165,13 @@
   "steps.flags.title": "Bayraklar",
   "steps.flags.description": "Bayraklar `flags` ifadenin çıktısını değiştirirler. Bu yüzden değiştiriciler `modifiers` olarakta anılırlar. Yazılan ifadenin, metni ayrı satırlar olarak mı ele alacağını, büyük küçük harf duyarlı olup olmayacağını ya da tüm eşleşmeleri bulup bulmayacağını belirler. Bayrakları öğrenmek için sonraki adıma devam edin.",
 
-  "steps.flagsGlobal.title": "`global` Bayrağı",
+  "steps.flagsGlobal.title": "Global Bayrağı",
   "steps.flagsGlobal.description": "`global` bayrağı, ifadenin tüm eşleşmeleri seçmesini sağlar. Eğer kullanılmazsa sadece ilk eşleşmeyi seçecektir. Şimdi tüm eşleşmeleri seçebilmek için `global` bayrağını aktif edin.",
 
-  "steps.flagsMultiline.title": "`multiline` Bayrağı",
+  "steps.flagsMultiline.title": "Çoklu Satır Bayrağı",
   "steps.flagsMultiline.description": "RegEx tüm metni tek satır olarak görür. Fakat her satırı ayrı ayrı ele alabilmek için `multiline` bayrağını kullanırız. Bu sayede satır sonuna göre yazdığımız ifadeler her satır için ayrı ayrı çalışır. Şimdi tüm eşleşmeleri bulabilmek için `multiline` bayrağını aktif edin.",
 
-  "steps.flagsCaseInsensitive.title": "`case-insensitive` Bayrağı",
+  "steps.flagsCaseInsensitive.title": "Büyük/Küçük Harf Duyarsızlık Bayrağı",
   "steps.flagsCaseInsensitive.description": "Yazdığımız ifadenin büyük küçük harf duyarlılığını kaldırmak için `case-insensitive` bayrağını aktif etmeliyiz.",
   
   "steps.greedyMatching.title": "Aç Gözlü Eşleştirme",
