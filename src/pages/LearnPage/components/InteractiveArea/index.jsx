@@ -12,6 +12,7 @@ import setCaretPosition from "@utils/setCaretPosition";
 import tagWrapper from "@utils/tagWrapper";
 
 import Hint from "../Hint";
+import ReportStep from "../ReportStep";
 import FlagBox from "../FlagBox";
 
 import shortcuts from "../../../../shortcuts";
@@ -179,6 +180,7 @@ function InteractiveArea({ data, step, isShow, parentError, onChangeSuccess }) {
         className="step-interactive-block step-interactive-block-regex"
         data-title={formatMessage({ id: "general.regex" })}
       >
+        <ReportStep data={data} step={step} />
         <Hint regex={data.regex} flags={data.flags} />
         <div className="step-interactive-input" data-flags={flags}>
           <input
