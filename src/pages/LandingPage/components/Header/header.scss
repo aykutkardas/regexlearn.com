@@ -1,13 +1,20 @@
 .landing-header {
   display: flex;
-  height: 80px;
   align-items: center;
+  height: 80px;
   justify-content: space-between;
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  display: flex;
-  align-items: center;
+
+  @media only screen and (max-width: 600px) {
+    width: 90%;
+  }
+
+  .language-switch .shortcut,
+  .language-switch-current span {
+    display: none;
+  }
 
   a {
     text-decoration: none;
@@ -23,12 +30,26 @@
     align-items: center;
 
     &-icon {
-      color: var(--learn-success);
+      width: 20px;
+      height: 20px;
+      fill: var(--learn-success);
       margin-right: 6px;
+      display: none;
     }
 
     &-name {
       font-size: 1.3rem;
+      display: block;
+    }
+
+    @media only screen and (max-width: 600px) {
+      &-icon {
+        display: inline-block;
+      }
+
+      &-name {
+        display: none;
+      }
     }
   }
 

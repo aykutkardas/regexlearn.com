@@ -39,4 +39,20 @@
     font-size: unset;
     margin: 0px 1px;
   }
+
+  @media only screen and (max-width: 600px) {
+    &-title {
+      margin: 0;
+      font-size: 20px;
+
+      &::before {
+        font-size: 12px;
+      }
+    }
+
+    &-description {
+      margin-top: 10px;
+      margin-bottom: 0;
+    }
+  }
 }

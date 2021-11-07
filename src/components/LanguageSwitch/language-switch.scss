@@ -3,6 +3,8 @@
   position: relative;
   cursor: pointer;
 
+
+
   &:hover {
     .language-switch-list {
       display: block;
@@ -25,6 +27,16 @@
     svg {
       margin-left: 8px;
     }
+
+    @media only screen and (max-width: 600px) {
+      span {
+        display: none;
+      }
+
+      svg {
+        margin-left: 0;
+      }
+    }
   }
 
   &-list {
@@ -32,6 +44,10 @@
     display: none;
     font-size: 14px;
     padding-top: 10px;
+
+    @media only screen and (max-width: 600px) {
+      right: 0px;
+    }
 
     &.visible {
       display: block;

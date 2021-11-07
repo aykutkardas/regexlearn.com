@@ -48,6 +48,7 @@
     border-radius: 5px;
     display: flex;
     align-items: center;
+    justify-content: center;
 
     input {
       border: 0px;
@@ -59,10 +60,23 @@
       letter-spacing: 4px;
       max-width: 440px;
       overflow: hidden;
+      outline: 1px #444 dotted;
+
 
       &:active,
       &:focus {
         outline: 1px saddlebrown solid;
+      }
+    }
+
+    @media only screen and (max-width: 600px) {
+      min-width: 90%;
+      max-width: 90%;
+
+      input {
+        font-size: 16px;
+        max-width: 100%;
+        letter-spacing: 1px;
       }
     }
 

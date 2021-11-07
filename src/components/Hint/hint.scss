@@ -7,6 +7,10 @@
   top: 14px;
   right: 15px;
 
+  @media only screen and (max-width: 600px) {
+    top: 77px;
+  }
+
   &-question {
     display: flex;
     flex-direction: column;

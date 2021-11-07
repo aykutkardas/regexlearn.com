@@ -55,8 +55,8 @@ const LanguageSwitch = () => {
     <div className="language-switch">
       <div className="language-switch-current">
         <Shortcut command={shortcuts.languageSwitch} />
-        {langNames[lang]}
-        <Icon icon="earth" color="#fff" size={15} />
+        <span>{langNames[lang]}</span>
+        <Icon icon="earth" color="#fff" size={20} />
       </div>
       <div className={`language-switch-list ${visible ? "visible" : ""}`}>
         {availableLangList.map((item, index) => (
