@@ -17,9 +17,9 @@ const Alert = ({ children, ...props }) => {
   return (
     isVisible && (
       <div className="alert" {...props}>
-        <div className="alert-conten-item">{children}</div>
+        <div className="alert-content">{children}</div>
         <div
-          className="alert-close-item"
+          className="alert-close"
           role="button"
           tabIndex="0"
           onClick={handleClose}

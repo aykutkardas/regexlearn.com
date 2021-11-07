@@ -6,6 +6,7 @@
   "general.text": "Text",
   "general.completedStep": "Step Completed!",
   "general.hintQuestion": "Show Answer",
+  "general.startLearning": "Start Learning!",
   "general.comingSoon": "Coming Soon",
 
   "landing.learn": "Learn",
@@ -14,5 +15,8 @@
   "notFound.intro": "The page you are looking for does not exist.",
   "notFound.button": "Back to home",
 
-  "alert.site.under.development": "This site is still under development. What you see now may change."
+  "alert.site.under.development": "This site is still under development. What you see now may change.",
+
+  "landing.title": "Learn RegEx step by step, from zero to advanced.",
+  "landing.description": "Learning RegEx is easier than you think. You can use this tool to easily `learn`, `practice`, `test` and `share` RegEx."
 }

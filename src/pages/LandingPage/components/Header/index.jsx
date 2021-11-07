@@ -6,6 +6,7 @@ import { FormattedMessage } from "react-intl";
 import { Link } from "react-router-dom";
 
 import Icon from "@components/Icon";
+import LanguageSwitch from "@components/LanguageSwitch";
 
 function LandingHeader() {
   const playgroundRef = useRef(null);
@@ -13,14 +14,26 @@ function LandingHeader() {
   return (
     <div className="landing-header">
       <Link to="/" className="landing-header-brand">
+        <Icon
+          className="landing-header-brand-icon"
+          icon="unlocked"
+          removeInlineStyle
+        />
         <span className="landing-header-brand-name">RegexLearn</span>
       </Link>
 
       <div className="landing-header-links">
+        <a
+          href="https://github.com/aykutkardas/regexlearn.com"
+          target="_blank"
+          rel="noreferrer"
+          className="landing-header-link landing-link-github"
+        >
+          <Icon className="landing-link-github-icon" icon="github" size={20} />
+        </a>
         <Link to="/learn" className="landing-header-link landing-link-learn">
           <FormattedMessage id="landing.learn" />
         </Link>
-
         <span
           ref={playgroundRef}
           className="landing-header-link landing-link-playground"
@@ -46,14 +59,7 @@ function LandingHeader() {
             <FormattedMessage id="general.comingSoon" />
           </ReactTooltip>
         </span>
-        <a
-          href="https://github.com/aykutkardas/regexlearn.com"
-          target="_blank"
-          rel="noreferrer"
-          className="landing-header-link landing-link-github"
-        >
-          <Icon className="landing-link-github-icon" icon="github" size={20} />
-        </a>
+        <LanguageSwitch />
       </div>
     </div>
   );
