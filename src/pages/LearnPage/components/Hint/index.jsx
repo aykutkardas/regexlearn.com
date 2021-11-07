@@ -5,8 +5,8 @@ import ReactTooltip from "react-tooltip";
 import { FormattedMessage } from "react-intl";
 import Mousetrap from "mousetrap";
 
-import Shortcut from "../Shortcut";
-import shortcuts from "../../shortcuts";
+import Shortcut from "@components/Shortcut";
+import shortcuts from "../../../../shortcuts";
 
 const Hint = ({ regex, flags }) => {
   const hintRef = useRef(null);

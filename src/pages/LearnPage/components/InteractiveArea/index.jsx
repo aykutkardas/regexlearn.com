@@ -8,10 +8,10 @@ import Mousetrap from "mousetrap";
 import _ from "lodash";
 import lookie from "lookie";
 
-import Hint from "@components/Hint";
 import setCaretPosition from "@utils/setCaretPosition";
 import tagWrapper from "@utils/tagWrapper";
 
+import Hint from "../Hint";
 import FlagBox from "../FlagBox";
 
 import shortcuts from "../../../../shortcuts";
