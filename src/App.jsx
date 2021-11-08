@@ -4,6 +4,7 @@ import { useState } from "react";
 import { FormattedMessage, IntlProvider } from "react-intl";
 import { Switch, Route, HashRouter } from "react-router-dom";
 import cx from "classnames";
+import lookie from "lookie";
 
 import LearnPage from "@pages/LearnPage";
 import LandingPage from "@pages/LandingPage";
@@ -16,9 +17,14 @@ import { Provider as LanguageProvider } from "./contexts/LanguageContext";
 import localization from "./localization";
 
 function App() {
-  const defaultLang = "tr-tr";
+  const defaultLang = lookie.get("lang") || "en-us";
   const [lang, setLang] = useState(defaultLang);
   const { isDesktop } = useOS();
+
+  const handleChangeLang = (newLang) => {
+    lookie.set("lang", newLang);
+    setLang(newLang);
+  };
 
   return (
     <IntlProvider
@@ -26,7 +32,7 @@ function App() {
       locale={lang}
       defaultLocale={defaultLang}
     >
-      <LanguageProvider lang={lang} setLang={setLang}>
+      <LanguageProvider lang={lang} setLang={handleChangeLang}>
         <div className={cx("App", { desktop: isDesktop })}>
           <Alert>
             <FormattedMessage id="alert.site.under.development" />
