@@ -30,7 +30,7 @@ const Hint = ({ data, step }) => {
         target="_blank"
         rel="noreferrer"
       >
-        <Icon icon="bug" size={10} />
+        <Icon icon="bell" size={10} />
         <span>
           <FormattedMessage id="general.reportStep" />
         </span>
