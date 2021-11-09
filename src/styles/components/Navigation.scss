@@ -1,0 +1,62 @@
+.navigation {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+
+  &-step {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    .shortcut {
+      position: absolute;
+      top: -35px;
+    }
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    .navigation-icon {
+      margin: 0 5px;
+    }
+  }
+
+  &-prev-step {
+    margin-right: auto;
+
+    .shortcut {
+      right: 0;
+    }
+  }
+
+  &-next-step {
+    margin-left: auto;
+
+    .shortcut {
+      left: 0;
+    }
+
+    .status-icon {
+      position: absolute;
+      top: -30px;
+      right: 0px;
+      width: 20px;
+      height: 20px;
+
+      &.lock {
+        color: var(--learn-gray);
+      }
+
+      &.unlock {
+        color: var(--learn-success);
+      }
+
+      &.error.lock {
+        color: var(--learn-error);
+      }
+    }
+  }
+}

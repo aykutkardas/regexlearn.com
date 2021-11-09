@@ -5,17 +5,19 @@ This is a project that makes learning how to write regex easy.
 ![Preview](./preview.png)
 
 ## Features
+
 - **Step by Step Learn**
 - **Interactive**
 - **Shortcut Friendly**
-- Practise *(Soon)*
-- Playground *(Soon)*
-- Cheatsheet *(Soon)*
+- Practise _(Soon)_
+- Playground _(Soon)_
+- Cheatsheet _(Soon)_
 
 ## Available Languages
+
 - **English**
 - **Turkish**
-- *Please create an issue to add your own language.*
+- _Please create an issue to add your own language._
 
 <br>
 

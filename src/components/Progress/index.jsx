@@ -1,5 +1,3 @@
-import "./progress.scss";
-
 import { Line } from "rc-progress";
 
 const Progress = ({ steps, step }) => {

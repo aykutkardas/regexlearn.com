@@ -1,0 +1,33 @@
+.flag-box {
+  display: flex;
+  margin-top: 10px;
+  align-items: flex-start;
+
+  &-item {
+    display: flex;
+    align-items: center;
+    margin: 0 5px;
+    position: relative;
+    cursor: pointer;
+
+    .shortcut {
+      font-size: 8px;
+      position: absolute;
+      right: 0px;
+      bottom: -26px;
+      width: 38px;
+    }
+
+    input {
+      margin-right: 5px;
+    }
+
+    &-highlight {
+      color: var(--learn-success);
+    }
+  }
+}
+
+.desktop .flag-box {
+  height: 60px;
+}
