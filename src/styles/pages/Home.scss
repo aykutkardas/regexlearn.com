@@ -1,0 +1,25 @@
+.landing {
+    h1 {
+      margin: 0;
+      font-size: 53px;
+    }
+  
+    p {
+      font-size: 20px;
+      line-height: 30px;
+  
+      span.highlight {
+        color: var(--learn-success);
+      }
+    }
+  
+    @media only screen and (max-width: 600px) {
+      h1 {
+        font-size: 33px;
+      }
+  
+      a, button {
+        width: 100%;
+      }
+    }
+  }

@@ -1,5 +1,3 @@
-import "./button.scss";
-
 const Button = ({ children, ...props }) => (
   <button type="button" {...props}>
     {children}
