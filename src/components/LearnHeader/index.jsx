@@ -8,7 +8,7 @@ const Header = ({ steps, step }) => (
   <header className="header">
     <div className="header-social">
       <Link href="/" passHref>
-        <Icon icon="home" size={20} color="white" />
+        <a><Icon icon="home" size={20} color="white" /></a>      
       </Link>
       <a
         href="https://github.com/aykutkardas/regexlearn.com"

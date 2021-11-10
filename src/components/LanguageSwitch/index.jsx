@@ -6,7 +6,7 @@ import Shortcut from "../Shortcut";
 import langs, { langNames } from "../../localization";
 import shortcuts from "../../shortcuts";
 import { Context } from "../../contexts/LanguageContext";
-import hotkeys from "../../utils/hotkeys";
+import Mousetrap from "../../utils/mousetrap";
 
 
 const langList = Object.keys(langs).map((langKey) => ({
@@ -32,17 +32,17 @@ const LanguageSwitch = () => {
   const availableLangList = langList.filter((item) => item.value !== lang);
 
   useEffect(() => {
-    hotkeys(shortcuts.languageSwitch, toggleVisible);
+    Mousetrap.bindGlobal(shortcuts.languageSwitch, toggleVisible);
 
     availableLangList.forEach((item, index) => {
-      hotkeys(`${shortcuts.languageSwitch}+${index + 1}`, (e) => {
+      Mousetrap.bindGlobal(`${shortcuts.languageSwitch}+${index + 1}`, (e) => {
         e.preventDefault();
         setLang(item.value);
       });
     });
 
     return () =>
-      hotkeys.unbind([
+      Mousetrap.unbind([
         shortcuts.languageSwitch,
         ...availableLangList.map(
           (item, index) => `${shortcuts.languageSwitch}+${index}`

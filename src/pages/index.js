@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { FormattedMessage, useIntl } from "react-intl";
+import Head from "next/head";
 
 import tagWrapper from "../utils/tagWrapper";
 
@@ -13,6 +14,9 @@ export default function Home() {
   return (
     <>
       <Header />
+      <Head>
+        <title>RegexLearn - Step by step, from zero to advanced.</title>
+      </Head>
       <div className="container">
         <div className="content landing">
           <h1>
@@ -27,10 +31,12 @@ export default function Home() {
               ),
             }}
           />
-          <Link href="learn" passHref>
-            <Button className="success">
-              <FormattedMessage id="general.startLearning" />
-            </Button>
+          <Link href="/learn.html" passHref>
+            <a>
+              <Button className="success">
+                <FormattedMessage id="general.startLearning" />
+              </Button>
+            </a>
           </Link>
         </div>
         <div className="intro">

@@ -6,7 +6,7 @@ import cx from "classnames";
 import _ from "lodash";
 import lookie from "lookie";
 
-import hotkeys from "../../utils/hotkeys";
+import Mousetrap from "../../utils/mousetrap";
 import setCaretPosition from "../../utils/setCaretPosition";
 import tagWrapper from "../../utils/tagWrapper";
 
@@ -28,6 +28,8 @@ function InteractiveArea({ data, step, isShow, parentError, onChangeSuccess }) {
   const [match, setMatch] = useState(false);
 
   const checkRegex = () => {
+    if (data.interactive === false) return true;
+
     try {
       let $regex = regex;
       [...$regex.matchAll(/\\(\d+)/g)].forEach((item) => {
@@ -125,7 +127,7 @@ function InteractiveArea({ data, step, isShow, parentError, onChangeSuccess }) {
 
     checkRegex();
     setContent(data.content);
-    setFlags(isCompletedStep ? data.flags : data.initialFlags);
+    setFlags(isCompletedStep ? data.flags : data.initialFlags || "");
     setRegex((isCompletedStep ? data.regex[0] : data.initialValue) || "");
     setIsChanged(false);
     blurInput();
@@ -140,13 +142,12 @@ function InteractiveArea({ data, step, isShow, parentError, onChangeSuccess }) {
   }, [success, onChangeSuccess]);
 
   useEffect(() => {
-
-    hotkeys(shortcuts.focus, (e) => {
+    Mousetrap.bindGlobal(shortcuts.focus, (e) => {
       e.preventDefault();
       focusInput();
     });
 
-    return () => hotkeys.unbind(shortcuts.focus);
+    return () => Mousetrap.unbind(shortcuts.focus);
   }, []);
 
   useEffect(checkRegex, [regex, flags, step]);
@@ -195,7 +196,7 @@ function InteractiveArea({ data, step, isShow, parentError, onChangeSuccess }) {
             spellCheck={false}
           />
         </div>
-        {data.useFlagsControl && <FlagBox flags={flags} setFlags={setFlags} />}
+        {data.useFlagsControl && <FlagBox onChange={setIsChanged} flags={flags} setFlags={setFlags} />}
       </div>
     </div>
   );

@@ -3,12 +3,11 @@ import { useCallback, useEffect, useMemo } from "react";
 import Checkbox from "../Checkbox";
 import Shortcut from "../Shortcut";
 
+import Mousetrap from "../../utils/mousetrap";
 import tagWrapper from "../../utils/tagWrapper";
-import hotkeys from "../../utils/hotkeys";
-
 import shortcuts from "../../shortcuts";
 
-const FlagBox = ({ flags, setFlags }) => {
+const FlagBox = ({ flags, setFlags, onChange }) => {
   const flagList = useMemo(
     () => [
       {
@@ -40,8 +39,9 @@ const FlagBox = ({ flags, setFlags }) => {
       } else {
         setFlags((flags || "") + flag);
       }
+      onChange(true);
     },
-    [flags, setFlags]
+    [flags, setFlags, onChange]
   );
 
   const handleClick = ({ target }) => {
@@ -51,7 +51,7 @@ const FlagBox = ({ flags, setFlags }) => {
 
   useEffect(() => {
     flagList.forEach((flag) => {
-      hotkeys(flag.command, (e) => {
+      Mousetrap.bindGlobal(flag.command, (e) => {
         e.preventDefault();
 
         toggleFlag(flag.code);
@@ -60,7 +60,7 @@ const FlagBox = ({ flags, setFlags }) => {
 
     return () => {
       flagList.forEach((flag) => {
-        hotkeys.unbind(flag.code);
+        Mousetrap.unbind(flag.code);
       });
     };
   }, [flagList, toggleFlag]);

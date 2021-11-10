@@ -2,9 +2,9 @@ import { useState, useEffect, useRef } from "react";
 import ReactTooltip from "react-tooltip";
 import { FormattedMessage } from "react-intl";
 
-import Shortcut from "../Shortcut";
-import hotkeys from "../../utils/hotkeys";
+import Mousetrap from "../../utils/mousetrap";
 import shortcuts from "../../shortcuts";
+import Shortcut from "../Shortcut";
 
 
 
@@ -13,7 +13,7 @@ const Hint = ({ regex, flags }) => {
   const [showStatus, setShowStatus] = useState(false);
 
   useEffect(() => {
-    hotkeys(shortcuts.hint, function(event, handler){
+    Mousetrap.bindGlobal(shortcuts.hint, function(event, handler){
       event.preventDefault();
       ReactTooltip.show(hintRef.current);
       setShowStatus(true);
@@ -21,7 +21,7 @@ const Hint = ({ regex, flags }) => {
 
 
     return () => {
-      hotkeys.unbind(shortcuts.hint);
+      Mousetrap.unbind(shortcuts.hint);
       ReactTooltip.hide(hintRef.current);
       setShowStatus(false);
     };

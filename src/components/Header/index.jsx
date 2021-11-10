@@ -1,13 +1,13 @@
-import { useRef } from "react";
+/* eslint-disable @next/next/no-img-element */
 import ReactTooltip from "react-tooltip";
 import { FormattedMessage } from "react-intl";
 import Link from "next/link";
+import dynamic from "next/dynamic";
 
 import Icon from "../Icon";
-import LanguageSwitch from "../LanguageSwitch";
+const LanguageSwitch  = dynamic(import("../LanguageSwitch"), { ssr: false });
 
 function LandingHeader() {
-  const playgroundRef = useRef(null);
 
   return (
     <div className="landing-header">
@@ -18,7 +18,9 @@ function LandingHeader() {
             icon="unlocked"
             removeInlineStyle
           />
-          <span className="landing-header-brand-name">RegexLearn</span>
+          <span className="landing-header-brand-name">
+            <img width={99} height={24} src="/logo.png" alt="RegexLearn" />
+            </span>
         </a>
       </Link>
 
@@ -31,16 +33,29 @@ function LandingHeader() {
         >
           <Icon className="landing-link-github-icon" icon="github" size={20} />
         </a>
-        <Link href="/learn" passHref>
+        <Link href="/learn.html" passHref>
           <a className="landing-header-link landing-link-learn">
             <FormattedMessage id="landing.learn" />
           </a>
         </Link>
         <span
-          ref={playgroundRef}
           className="landing-header-link landing-link-playground"
           data-tip
-          data-for="playground-link"
+          data-for="coming-soon"
+        >
+          <span className="landing-link-playground-name">
+            <FormattedMessage id="landing.cheatsheet" />
+          </span>
+          <Icon
+            icon="lock"
+            size={16}
+            className="landing-link-playground-icon"
+          />
+        </span>
+        <span
+          className="landing-header-link landing-link-playground"
+          data-tip
+          data-for="coming-soon"
         >
           <span className="landing-link-playground-name">
             <FormattedMessage id="landing.playground" />
@@ -50,17 +65,17 @@ function LandingHeader() {
             size={16}
             className="landing-link-playground-icon"
           />
-          <ReactTooltip
+        </span>
+        <ReactTooltip
             backgroundColor="#444"
             arrowColor="#444"
             clickable
-            id="playground-link"
+            id="coming-soon"
             place="bottom"
             effect="solid"
           >
             <FormattedMessage id="general.comingSoon" />
           </ReactTooltip>
-        </span>
         <LanguageSwitch />
       </div>
     </div>

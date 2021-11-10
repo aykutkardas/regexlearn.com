@@ -6,10 +6,9 @@ import Header from "../LearnHeader";
 import Step from "../Step";
 import Navigation from "../Navigation";
 
+import Mousetrap from "../../utils/mousetrap";
 import data from "../../data.json";
 import shortcuts from "../../shortcuts";
-import hotkeys from "../../utils/hotkeys";
-
 
 export default function Learn() {
   const progress = lookie.get("completedSteps") || [];
@@ -51,21 +50,20 @@ export default function Learn() {
   );
 
   const onChangeSuccess = (status) => {
-    console.log({status})
     setSuccess(status);
   };
 
   useEffect(() => {
-    hotkeys(shortcuts.rootKey, (e) => e.preventDefault());
-    hotkeys(shortcuts.prevStep, prevStep);
-    hotkeys(shortcuts.nextStep, nextStep);
+    Mousetrap.bindGlobal(shortcuts.rootKey, (e) => e.preventDefault());
+    Mousetrap.bindGlobal(shortcuts.prevStep, prevStep);
+    Mousetrap.bindGlobal(shortcuts.nextStep, nextStep);
 
     lookie.set("lastStep", step);
 
     return () => {
-      hotkeys.unbind(shortcuts.rootKey);
-      hotkeys.unbind(shortcuts.prevStep);
-      hotkeys.unbind(shortcuts.nextStep);
+      Mousetrap.unbind(shortcuts.rootKey);
+      Mousetrap.unbind(shortcuts.prevStep);
+      Mousetrap.unbind(shortcuts.nextStep);
     }
   }, [step, success, prevStep, nextStep]);
 

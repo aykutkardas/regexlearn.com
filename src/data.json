@@ -407,6 +407,7 @@
     "content": "(*) Asteriks.",
     "initialFlags": "g",
     "initialValue": "(*|.)",
+    "cursorPosition": 1,
     "flags": "g",
     "regex": ["(\\*|\\.)"],
     "answer": ["*", "."]
