@@ -10,8 +10,12 @@
   "general.startLearning": "Start Learning!",
   "general.comingSoon": "Coming Soon",
 
+  "meta.landing.title": "RegexLearn - Step by step, from zero to advanced.",
+  "meta.learn.title": "RegexLearn - Interactive Course",
+
   "landing.learn": "Learn",
   "landing.playground": "Playground",
+  "landing.cheatsheet": "Cheatsheet",
 
   "notFound.intro": "The page you are looking for does not exist.",
   "notFound.button": "Back to home",

@@ -1,5 +1,3 @@
-import "./shortcut.scss";
-
 const Shortcut = ({ command }) => {
   const readableCommand = command
     .replace(/\+/g, " + ")

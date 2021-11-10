@@ -1,0 +1,66 @@
+.language-switch {
+  margin: 10px;
+  position: relative;
+  cursor: pointer;
+
+  &:hover {
+    .language-switch-list {
+      display: block;
+    }
+  }
+
+  &-current {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    .shortcut {
+      position: absolute;
+      top: -3px;
+      left: -50px;
+      font-size: 10px;
+    }
+
+    svg {
+      margin-left: 8px;
+    }
+
+    @media only screen and (max-width: 600px) {
+      span {
+        display: none;
+      }
+
+      svg {
+        margin-left: 0;
+      }
+    }
+  }
+
+  &-list {
+    position: absolute;
+    display: none;
+    font-size: 14px;
+    padding-top: 10px;
+
+    @media only screen and (max-width: 600px) {
+      right: 0px;
+    }
+
+    &.visible {
+      display: block;
+    }
+
+    &-item {
+      padding: 5px;
+      color: var(--learn-gray);
+      position: relative;
+
+      .shortcut {
+        position: absolute;
+        left: -50px;
+        font-size: 8px;
+      }
+    }
+  }
+}

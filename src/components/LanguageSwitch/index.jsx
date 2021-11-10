@@ -1,14 +1,13 @@
-import "./language-switch.scss";
+import { useCallback, useContext, useEffect, useState } from "react";
 
-import { useContext, useEffect, useState } from "react";
-import Mousetrap from "mousetrap";
-
-import Icon from "@components/Icon";
-import Shortcut from "@components/Shortcut";
+import Icon from "../Icon";
+import Shortcut from "../Shortcut";
 
 import langs, { langNames } from "../../localization";
 import shortcuts from "../../shortcuts";
 import { Context } from "../../contexts/LanguageContext";
+import Mousetrap from "../../utils/mousetrap";
+
 
 const langList = Object.keys(langs).map((langKey) => ({
   value: langKey,
@@ -25,10 +24,10 @@ const LanguageSwitch = () => {
     setLang(value);
   };
 
-  const toggleVisible = (e) => {
+  const toggleVisible = useCallback((e) => {
     e.preventDefault();
     setVisible(!visible);
-  };
+  }, [visible]);
 
   const availableLangList = langList.filter((item) => item.value !== lang);
 
@@ -43,13 +42,13 @@ const LanguageSwitch = () => {
     });
 
     return () =>
-      Mousetrap.unbindGlobal([
+      Mousetrap.unbind([
         shortcuts.languageSwitch,
         ...availableLangList.map(
           (item, index) => `${shortcuts.languageSwitch}+${index}`
         ),
       ]);
-  }, [visible, lang]);
+  }, [visible, lang, toggleVisible, availableLangList, setLang]);
 
   return (
     <div className="language-switch">
