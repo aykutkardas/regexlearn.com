@@ -15,55 +15,48 @@ function LandingHeader() {
         <a className="landing-header-brand">
           <Icon
             className="landing-header-brand-icon"
+            size={20}
             icon="unlocked"
             removeInlineStyle
           />
           <span className="landing-header-brand-name">
-            <img width={99} height={24} src="/logo.png" alt="RegexLearn" />
+            <img src="/logo.png" alt="RegexLearn" />
             </span>
         </a>
       </Link>
 
       <div className="landing-header-links">
-        <a
-          href="https://github.com/aykutkardas/regexlearn.com"
-          target="_blank"
-          rel="noreferrer"
-          className="landing-header-link landing-link-github"
-        >
-          <Icon className="landing-link-github-icon" icon="github" size={20} />
-        </a>
-        <Link href="/learn.html" passHref>
+        <Link href="/learn" passHref>
           <a className="landing-header-link landing-link-learn">
             <FormattedMessage id="landing.learn" />
           </a>
         </Link>
         <span
-          className="landing-header-link landing-link-playground"
+          className="landing-header-link landing-link-disabled"
           data-tip
           data-for="coming-soon"
         >
-          <span className="landing-link-playground-name">
+          <span className="landing-link-disabled-name">
             <FormattedMessage id="landing.cheatsheet" />
           </span>
           <Icon
             icon="lock"
             size={16}
-            className="landing-link-playground-icon"
+            className="landing-link-disabled-icon"
           />
         </span>
         <span
-          className="landing-header-link landing-link-playground"
+          className="landing-header-link landing-link-disabled"
           data-tip
           data-for="coming-soon"
         >
-          <span className="landing-link-playground-name">
+          <span className="landing-link-disabled-name">
             <FormattedMessage id="landing.playground" />
           </span>
           <Icon
             icon="lock"
             size={16}
-            className="landing-link-playground-icon"
+            className="landing-link-disabled-icon"
           />
         </span>
         <ReactTooltip

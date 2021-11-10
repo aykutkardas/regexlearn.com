@@ -30,8 +30,6 @@
       align-items: center;
   
       &-icon {
-        width: 20px;
-        height: 20px;
         fill: var(--learn-success);
         margin-right: 6px;
         display: none;
@@ -64,14 +62,19 @@
       margin-left: 20px;
     }
   
-    .landing-link-playground {
-      cursor: not-allowed;
+    .landing-link-disabled {
       display: flex;
       align-items: center;
       color: var(--landing-link-disabled);
   
       &-icon {
         margin-left: 0.3em;
+      }
+
+      @media only screen and (max-width: 600px) {
+        &-icon {
+          display: none !important;
+        }
       }
     }
   }
