@@ -10,9 +10,12 @@
   "general.startLearning": "Öğrenmeye Başla!",
   "general.comingSoon": "Yakında!",
 
+  "meta.landing.title": "RegexLearn - Adım adım, sıfırdan ileri seviyeye.",
+  "meta.learn.title": "RegexLearn - İnteraktif Kurs",
+
   "landing.learn": "Öğren",
   "landing.playground": "Playground",
-  "landing.cheatsheet": "Cheat Sheet",
+  "landing.cheatsheet": "Cheatsheet",
 
   "notFound.intro": "Aradığın sayfa mevcut değil.",
   "notFound.button": "Anasayfaya dön",

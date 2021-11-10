@@ -1,0 +1,31 @@
+.landing-footer {
+    display: flex;
+    align-items: center;
+    height: 80px;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+  
+    @media only screen and (max-width: 600px) {
+      width: 90%;
+    }
+  
+    a {
+      text-decoration: none;
+      color: var(--learn-white);
+      margin: 0 10px;
+  
+      &:hover {
+        color: var(--landing-link-hover);
+      }
+    }
+  
+    &-links {
+      display: flex;
+      align-items: center;
+      color: var(--learn-white);
+      font-size: 14px;
+    }
+  }
+  

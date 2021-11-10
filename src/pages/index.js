@@ -7,6 +7,7 @@ import tagWrapper from "../utils/tagWrapper";
 import Button from "../components/Button";
 import RegexDemo from "../components/RegexDemo";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 export default function Home() {
   const { formatMessage } = useIntl();
@@ -15,7 +16,7 @@ export default function Home() {
     <>
       <Header />
       <Head>
-        <title>RegexLearn - Step by step, from zero to advanced.</title>
+        <title>{formatMessage({ id: "meta.landing.title" })}</title>
       </Head>
       <div className="container">
         <div className="content landing">
@@ -31,7 +32,7 @@ export default function Home() {
               ),
             }}
           />
-          <Link href="/learn.html" passHref>
+          <Link href="/learn" passHref>
             <a>
               <Button className="success">
                 <FormattedMessage id="general.startLearning" />
@@ -43,6 +44,7 @@ export default function Home() {
           <RegexDemo />
         </div>
       </div>
+      <Footer />
     </>
   )
 }
