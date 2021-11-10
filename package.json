@@ -6,7 +6,7 @@
     "email": "aykutkrds@gmail.com"
   },
   "scripts": {
-    "dev": "next dev -p 3007",
+    "dev": "next dev -p 3008",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
