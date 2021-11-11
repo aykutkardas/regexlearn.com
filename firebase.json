@@ -11,6 +11,13 @@
         "source": "/learn",
         "destination": "/learn.html"
       }
+    ],
+    "redirects": [
+      {
+        "source": "/learn.html",
+        "destination": "/learn",
+        "type": 301
+      }
     ]
   }
 }
