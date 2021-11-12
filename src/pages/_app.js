@@ -52,7 +52,7 @@ function MyApp({ Component, pageProps }) {
             gtag('config', 'G-ZNDXNCMG6E');
             `}} />
             <link rel="shortcut icon" href="/favicon.svg" />
-            <meta name="description" content="Learn RegEx, step by step, zero to advanced. Playground and Cheat Sheet." />
+            <meta name="description" content="Learn RegEx, step by step, zero to advanced. Playground and Cheatsheet." />
           </Head>
           <DynamicAlert>
             <FormattedMessage id="alert.site.under.development" />
