@@ -15,13 +15,12 @@ function LandingHeader() {
         <a className="landing-header-brand">
           <Icon
             className="landing-header-brand-icon"
-            size={20}
             icon="unlocked"
             removeInlineStyle
           />
-          <span className="landing-header-brand-name">
+          <span className="landing-header-brand-image">
             <img src="/logo.png" alt="RegexLearn" />
-            </span>
+          </span>
         </a>
       </Link>
 
