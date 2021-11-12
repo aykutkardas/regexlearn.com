@@ -600,6 +600,7 @@
     "regex": [".*r"],
     "initialFlags": "",
     "flags": "",
+    "readOnly": true,
     "cursorPosition": 1,
     "answer": ["ber beer beeer beeeer", "ber beer beeer beeeer"]
   },
