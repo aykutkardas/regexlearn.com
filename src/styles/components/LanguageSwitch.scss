@@ -2,6 +2,7 @@
   margin: 10px;
   position: relative;
   cursor: pointer;
+  user-select: none;
 
   &:hover {
     .language-switch-list {

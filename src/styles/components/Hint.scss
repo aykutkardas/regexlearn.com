@@ -6,6 +6,7 @@
   position: absolute;
   top: 14px;
   right: 15px;
+  user-select: none;
 
   @media only screen and (max-width: 600px) {
     top: 77px;
@@ -21,12 +22,19 @@
     flex-direction: column;
     align-items: flex-end;
     justify-content: center;
+    cursor: pointer;
 
     .shortcut {
       margin-top: 4px;
       font-size: 8px;
       width: 38px;
     }
+  }
+
+  
+  &-question:hover,
+  .active &-question {
+    color: var(--learn-warning);
   }
 
   &-answer {
