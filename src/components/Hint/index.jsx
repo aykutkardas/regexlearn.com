@@ -51,16 +51,19 @@ const Hint = ({ regex, flags }) => {
       </span>
 
       <ReactTooltip
-        backgroundColor="#444"
-        arrowColor="#444"
         clickable
+        className="hint-tooltip"
         id="hint"
         place="top"
         effect="solid"
       >
-        <span className="hint-answer">
-          /{regex}/{flags}
-        </span>
+        <div className="hint-answer">
+          {regex.map(answer => (
+            <div className="hint-answer-item" key={answer}>
+              {`/${answer}/${flags}`}
+            </div>
+          ))}
+        </div>
       </ReactTooltip>
     </div>
   );

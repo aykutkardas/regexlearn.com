@@ -11,6 +11,11 @@
     top: 77px;
   }
 
+  &-tooltip {
+    background-color: var(--learn-bg-block-tag);
+    box-shadow: 3px 3px 2px var(--learn-shadow-result-tag);
+  }
+
   &-question {
     display: flex;
     flex-direction: column;
@@ -26,5 +31,11 @@
 
   &-answer {
     color: var(--learn-success);
+
+    &-item {
+      padding: 3px 6px;
+      margin-top: 3px;
+      border: 1px dotted #444;
+    }
   }
 }
