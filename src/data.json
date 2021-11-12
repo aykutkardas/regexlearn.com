@@ -169,7 +169,7 @@
     "content": "bear beor beer beur",
     "initialFlags": "g",
     "flags": "g",
-    "regex": ["be[^ou]r"],
+    "regex": ["be[^ou]r", "be[^uo]r"],
     "answer": ["bear", "beer"]
   },
   {
@@ -208,25 +208,25 @@
     "title": "steps.starCharacter.title",
     "description": "steps.starCharacter.description",
     "originalTitle": "Repetitions: The Star",
-    "content": "br ber beer beeer beeeer",
+    "content": "br ber beer",
     "initialValue": "ber",
     "initialFlags": "g",
     "flags": "g",
     "regex": ["be*r"],
     "cursorPosition": 2,
-    "answer": ["br", "ber", "beer", "beeer", "beeeer"]
+    "answer": ["br", "ber", "beer"]
   },
   {
     "title": "steps.plusCharacter.title",
     "description": "steps.plusCharacter.description",
     "originalTitle": "Repetitions: The Plus",
-    "content": "br ber beer beeer beeeer",
+    "content": "br ber beer",
     "initialValue": "ber",
     "initialFlags": "g",
     "flags": "g",
     "regex": ["be+r"],
     "cursorPosition": 2,
-    "answer": ["ber", "beer", "beeer", "beeeer"]
+    "answer": ["ber", "beer"]
   },
   {
     "title": "steps.questionMark.title",

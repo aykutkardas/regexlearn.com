@@ -34,8 +34,8 @@
   "steps.starter.title": "Intro",
   "steps.starter.description": "RegEx is short for `Regular Expression`. It helps to match, find or manage text. Start by typing 'OK' in the RegEx field to proceed to the first step and access the more detailed description..",
 
-  "steps.whatIsRegex.title": "Regular Expressions `RegEx`",
-  "steps.whatIsRegex.description": "Regular Expressions are a string of characters that express a search pattern. Often abbreviated as 'RegEx' or 'RegExp'. It is especially used to find or replace words in texts. It can also be tested whether a text complies with the rules we set.\\n\\n For example, let's say you have a list of filenames. And you only want to find files with the `pdf` extension. Then writing an expression `^\\w+\\.pdf$` would work. What the definitions in this expression mean will become clearer as the steps progress.",
+  "steps.whatIsRegex.title": "What is Regular Expressions `RegEx`?",
+  "steps.whatIsRegex.description": "Regular Expressions are a string of characters that express a search pattern. Often abbreviated as 'RegEx' or 'RegExp'. It is especially used to find or replace words in texts. In addition, we can test whether a text complies with the rules we set.\\n\\n For example, let's say you have a list of filenames. And you only want to find files with the `pdf` extension. Following typing an expression `^\\w+\\.pdf$` will work. The meaning of the definitions in this expression will become clearer as the steps progress.",
 
   "steps.basicMatchers.title": "Basic Matchers",
   "steps.basicMatchers.description": "The basic matcher is to type as is to choose a character or word. For example, to select the word 'curious' in the text, type in the same way.",
@@ -47,7 +47,7 @@
   "steps.characterSet.description": "If one of the characters in a word can be various characters, we write it in square brackets `[]` with all alternative characters. For example, to write an expression that can find all the words in the text, type the characters `a`, `e`, `i`, `o`, `u` adjacently within square brackets `[]`.",
 
   "steps.negatedCharacterSet.title": "Negated Character Sets `[^abc]`",
-  "steps.negatedCharacterSet.description": "In order to find the characters other than the ones we specified, we write the characters we do not want side by side in square brackets `[]`, starting with the caret character `^`. To find all the words in the text below, except for the words `ber` and `bor`, type the letters `e` and `o` side by side after the caret character.",
+  "steps.negatedCharacterSet.description": "To find all words in the text below, except for `ber` and `bor`, type `e` and `o` side by side after the caret `^` character inside curly brackets `[]`.",
 
   "steps.range.title": "Letter Range`[a-z]`",
   "steps.range.description": "To find the letters in the specified range, the starting letter and the ending letter are written in square brackets `[]` with a dash between them `-`. It is case-sensitive. Type the expression that will select all lowercase letters between `e` and `o`, including themselves.",
