@@ -10,16 +10,20 @@
   background: #338152;
   color: var(--learn-white);
 
-  @media only screen and (max-width: 600px) {
-    &-content {
-      padding: 10px 20px;
-    }
-  }
-
   &-close {
     position: absolute;
     top: 10px;
     right: 30px;
     cursor: pointer;
+  }
+
+  @media only screen and (max-width: 600px) {
+    &-content {
+      padding: 10px 20px;
+    }
+
+    &-close {
+      right: 15px;
+    }
   }
 }

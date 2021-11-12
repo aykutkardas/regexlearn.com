@@ -29,25 +29,16 @@
       display: flex;
       align-items: center;
   
-      &-icon {
-        fill: var(--learn-success);
-        margin-right: 6px;
-        display: none;
-      }
-  
-      &-name {
+      &-image {
         font-size: 1.3rem;
         display: block;
       }
-  
-      @media only screen and (max-width: 600px) {
-        &-icon {
-          display: inline-block;
-        }
-  
-        &-name {
-          display: none;
-        }
+
+      &-icon {
+        width: 20px;
+        height: 20px;
+        fill: var(--learn-success);
+        display: none;
       }
     }
   
@@ -60,6 +51,20 @@
   
     &-link {
       margin-left: 20px;
+    }
+
+    @media only screen and (max-width: 600px) {
+      &-link {
+        margin-left: 10px;
+      }
+
+      &-brand-image {
+        display: none;
+      }
+
+      &-brand-icon {
+        display: block;
+      }
     }
   
     .landing-link-disabled {
