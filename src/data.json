@@ -205,9 +205,9 @@
     "interactive": false
   },
   {
-    "title": "steps.starCharacter.title",
-    "description": "steps.starCharacter.description",
-    "originalTitle": "Repetitions: The Star",
+    "title": "steps.asteriks.title",
+    "description": "steps.asteriks.description",
+    "originalTitle": "Repetitions: Asteriks",
     "content": "br ber beer",
     "initialValue": "ber",
     "initialFlags": "g",
@@ -243,7 +243,7 @@
   {
     "title": "steps.quantifier.title",
     "description": "steps.quantifier.description",
-    "originalTitle": "Repetitions: Braces",
+    "originalTitle": "Repetitions: Curly Braces",
     "content": "ber beer beeer beeeer",
     "initialValue": "be{}r",
     "initialFlags": "g",
@@ -255,7 +255,7 @@
   {
     "title": "steps.quantifierMin.title",
     "description": "steps.quantifierMin.description",
-    "originalTitle": "Repetitions: Braces",
+    "originalTitle": "Repetitions: Curly Braces",
     "content": "ber beer beeer beeeer",
     "initialValue": "be{,}r",
     "initialFlags": "g",
@@ -267,7 +267,7 @@
   {
     "title": "steps.quantifierRange.title",
     "description": "steps.quantifierRange.description",
-    "originalTitle": "Repetitions: Braces",
+    "originalTitle": "Repetitions: Curly Braces",
     "content": "ber beer beeer beeeer",
     "initialValue": "be{,}r",
     "initialFlags": "g",
@@ -282,9 +282,9 @@
     "interactive": false
   },
   {
-    "title": "examples.starCharacter.title",
-    "description": "examples.starCharacter.description",
-    "originalTitle": "Repetitions: The Star",
+    "title": "examples.asteriks.title",
+    "description": "examples.asteriks.description",
+    "originalTitle": "Repetitions: Asteriks",
     "content": "dp dep deep",
     "initialValue": "",
     "initialFlags": "g",
@@ -317,7 +317,7 @@
   {
     "title": "examples.quantifier.title",
     "description": "examples.quantifier.description",
-    "originalTitle": "Repetitions: Braces",
+    "originalTitle": "Repetitions: Curly Braces",
     "content": "Release 10/9/2021",
     "initialValue": "",
     "initialFlags": "g",
@@ -328,7 +328,7 @@
   {
     "title": "examples.quantifierMin.title",
     "description": "examples.quantifierMin.description",
-    "originalTitle": "Repetitions: Braces",
+    "originalTitle": "Repetitions: Curly Braces",
     "content": "Release 10/9/2021",
     "initialValue": "",
     "initialFlags": "g",
@@ -339,7 +339,7 @@
   {
     "title": "examples.quantifierRange.title",
     "description": "examples.quantifierRange.description",
-    "originalTitle": "Repetitions: Braces",
+    "originalTitle": "Repetitions: Curly Braces",
     "content": "Release 10/9/2021",
     "initialValue": "",
     "initialFlags": "g",
