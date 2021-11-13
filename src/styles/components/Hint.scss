@@ -4,12 +4,12 @@
   color: var(--learn-bg-hint);
   font-size: 10px;
   position: absolute;
-  top: 14px;
+  bottom: 15px;
   right: 15px;
   user-select: none;
 
   @media only screen and (max-width: 600px) {
-    top: 77px;
+    bottom: -25px;
   }
 
   &-tooltip {
@@ -23,12 +23,6 @@
     align-items: flex-end;
     justify-content: center;
     cursor: pointer;
-
-    .shortcut {
-      margin-top: 4px;
-      font-size: 8px;
-      width: 38px;
-    }
   }
 
   
@@ -43,7 +37,12 @@
     &-item {
       padding: 3px 6px;
       margin-top: 3px;
-      border: 1px dotted #444;
+      border: 1px dotted #333;
+
+      span {
+        color: var(--learn-gray);
+        padding: 2px;
+      }
     }
   }
 }

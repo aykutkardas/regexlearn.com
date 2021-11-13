@@ -1,5 +1,7 @@
 import { useCallback, useContext, useEffect, useState } from "react";
+import cx from "classnames";
 
+import * as styles from "./LanguageSwitch.module.css";
 import Icon from "../Icon";
 import Shortcut from "../Shortcut";
 
@@ -7,7 +9,6 @@ import langs, { langNames } from "../../localization";
 import shortcuts from "../../shortcuts";
 import { Context } from "../../contexts/LanguageContext";
 import Mousetrap from "../../utils/mousetrap";
-
 
 const langList = Object.keys(langs).map((langKey) => ({
   value: langKey,
@@ -19,15 +20,17 @@ const LanguageSwitch = () => {
 
   const [visible, setVisible] = useState(false);
 
-  const handleClick = (e) => {
-    const { value } = e.target.dataset;
+  const handleClick = (value) => {
     setLang(value);
   };
 
-  const toggleVisible = useCallback((e) => {
-    e.preventDefault();
-    setVisible(!visible);
-  }, [visible]);
+  const toggleVisible = useCallback(
+    (e) => {
+      e.preventDefault();
+      setVisible(!visible);
+    },
+    [visible]
+  );
 
   const availableLangList = langList.filter((item) => item.value !== lang);
 
@@ -51,25 +54,35 @@ const LanguageSwitch = () => {
   }, [visible, lang, toggleVisible, availableLangList, setLang]);
 
   return (
-    <div className="language-switch">
-      <div className="language-switch-current">
+    <div className={styles.languageSwitch}>
+      <div className={styles.languageSwitchCurrent}>
         <Shortcut command={shortcuts.languageSwitch} />
         <span>{langNames[lang]}</span>
-        <Icon icon="earth" color="#fff" size={20} />
+        <Icon
+          className={styles.languageSwitchCurrentIcon}
+          icon="earth"
+          color="#fff"
+          size={20}
+        />
       </div>
-      <div className={`language-switch-list ${visible ? "visible" : ""}`}>
+      <div
+        className={cx(styles.languageSwitchList, {
+          [styles.languageSwitchListVisible]: visible,
+        })}
+      >
         {availableLangList.map((item, index) => (
           <div
             key={item.value}
             role="button"
             tabIndex="0"
-            onClick={handleClick}
-            onKeyDown={handleClick}
-            data-value={item.value}
-            className="language-switch-list-item"
+            onClick={() => handleClick(item.value)}
+            onKeyDown={() => handleClick(item.value)}
+            className={styles.languageSwitchListItem}
           >
-            <Shortcut command={`${shortcuts.languageSwitch}+${index + 1}`} />
-            {item.label}
+            <div>
+              <Shortcut command={`${shortcuts.languageSwitch}+${index + 1}`} />
+            </div>
+            <span>{item.label}</span>
           </div>
         ))}
       </div>

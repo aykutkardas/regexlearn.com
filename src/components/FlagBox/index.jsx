@@ -1,13 +1,35 @@
 import { useCallback, useEffect, useMemo } from "react";
 
+import * as styles from "./FlagBox.module.css";
+
 import Checkbox from "../Checkbox";
 import Shortcut from "../Shortcut";
 
-import Mousetrap from "../../utils/mousetrap";
-import tagWrapper from "../../utils/tagWrapper";
-import shortcuts from "../../shortcuts";
+import Mousetrap from "src/utils/mousetrap";
+import tagWrapper from "src/utils/tagWrapper";
+import useOS from "src/utils/useOS";
+import shortcuts from "src/shortcuts";
 
 const FlagBox = ({ flags, setFlags, onChange }) => {
+  const { isDesktop } = useOS();
+
+  const toggleFlag = useCallback(
+    (flag) => {
+      if (flags?.includes(flag)) {
+        setFlags(flags.replace(flag, ""));
+      } else {
+        setFlags((flags || "") + flag);
+      }
+      onChange(true);
+    },
+    [flags, setFlags, onChange]
+  );
+
+  const handleClick = ({ target }) => {
+    const flag = target.getAttribute("flag");
+    toggleFlag(flag);
+  };
+
   const flagList = useMemo(
     () => [
       {
@@ -32,23 +54,6 @@ const FlagBox = ({ flags, setFlags, onChange }) => {
     []
   );
 
-  const toggleFlag = useCallback(
-    (flag) => {
-      if (flags?.includes(flag)) {
-        setFlags(flags.replace(flag, ""));
-      } else {
-        setFlags((flags || "") + flag);
-      }
-      onChange(true);
-    },
-    [flags, setFlags, onChange]
-  );
-
-  const handleClick = ({ target }) => {
-    const flag = target.getAttribute("flag");
-    toggleFlag(flag);
-  };
-
   useEffect(() => {
     flagList.forEach((flag) => {
       Mousetrap.bindGlobal(flag.command, (e) => {
@@ -65,8 +70,14 @@ const FlagBox = ({ flags, setFlags, onChange }) => {
     };
   }, [flagList, toggleFlag]);
 
+  const style = {};
+
+  if (isDesktop) {
+    style.height = 60;
+  }
+
   return (
-    <div className="flag-box">
+    <div className={styles.flagBox} style={style}>
       {flagList.map(({ name, code, command, regex }) => (
         <Checkbox
           key={name}
@@ -76,14 +87,16 @@ const FlagBox = ({ flags, setFlags, onChange }) => {
           checked={!!flags?.includes(code)}
           onChange={handleClick}
         >
-          <div className="flag-box-item">
+          <div className={styles.flagBoxItem}>
             <span
               id={`flag-${name}`}
               dangerouslySetInnerHTML={{
-                __html: tagWrapper(name, regex, "flag-box-item-highlight"),
+                __html: tagWrapper(name, regex, styles.flagBoxItemHighlight),
               }}
             />
-            <Shortcut command={command} />
+            <div className={styles.flagBoxShortcutWrapper}>
+              <Shortcut command={command} />
+            </div>
           </div>
         </Checkbox>
       ))}

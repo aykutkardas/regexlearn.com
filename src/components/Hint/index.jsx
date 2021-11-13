@@ -38,7 +38,7 @@ const Hint = ({ regex, flags }) => {
   };
 
   return (
-    <div ref={hintRef} className="hint" data-tip data-for="hint">
+    <div ref={hintRef} className="hint" data-tip data-for="hint" data-event="click">
       <span
         role="button"
         className="hint-question"
@@ -60,7 +60,7 @@ const Hint = ({ regex, flags }) => {
         <div className="hint-answer">
           {regex.map(answer => (
             <div className="hint-answer-item" key={answer}>
-              {`/${answer}/${flags}`}
+              <span>/</span>{answer}<span>/{flags}</span>
             </div>
           ))}
         </div>

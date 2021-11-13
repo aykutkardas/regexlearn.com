@@ -6,9 +6,6 @@ function globalBindPlugin(Mousetrap) {
     var _globalCallbacks = {};
     var _originalStopCallback = Mousetrap.prototype.stopCallback;
 
-
-    console.log(Mousetrap, Mousetrap.prototype)
-
     Mousetrap.prototype.stopCallback = function (e, element, combo, sequence) {
         var self = this;
 
@@ -38,8 +35,6 @@ function globalBindPlugin(Mousetrap) {
     };
 
     Mousetrap.init();
-
-    console.log(Mousetrap)
 
     return Mousetrap;
 }

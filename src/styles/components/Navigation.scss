@@ -10,14 +10,15 @@
     align-items: center;
     justify-content: center;
     position: relative;
-
-    .shortcut {
-      position: absolute;
-      top: -35px;
-    }
+    flex-direction: column;
 
     &:hover {
       opacity: 0.7;
+    }
+
+    &-text {
+      display: flex;
+      align-items: center;
     }
 
     .navigation-icon {
@@ -27,22 +28,16 @@
 
   &-prev-step {
     margin-right: auto;
-
-    .shortcut {
-      right: 0;
-    }
+    align-items:  flex-end;
   }
 
   &-next-step {
     margin-left: auto;
-
-    .shortcut {
-      left: 0;
-    }
+    align-items:  flex-start;
 
     .status-icon {
       position: absolute;
-      top: -30px;
+      top: 5px;
       right: 0px;
       width: 20px;
       height: 20px;

@@ -1,6 +1,7 @@
 .shortcut {
   display: inline-flex;
   padding: 5px;
+  margin: 5px;
   background-color: var(--learn-bg-shortcut);
   color: var(--learn-text-shortcut);
   font-size: 11px;
