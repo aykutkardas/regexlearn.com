@@ -18,8 +18,10 @@ function Navigation({ steps, step, nextStep, prevStep, success, error }) {
           onKeyDown={prevStep}
         >
           <Shortcut command={shortcuts.prevStep} />
-          <Icon className="navigation-icon" icon="arrow-left" size={20} />
-          <FormattedMessage id="general.prevStep" />
+          <div className="navigation-step-text">
+            <Icon className="navigation-icon" icon="arrow-left" size={20} />
+            <FormattedMessage id="general.prevStep" />
+          </div>
         </div>
       )}
       {step < steps.length - 1 && (
@@ -30,8 +32,11 @@ function Navigation({ steps, step, nextStep, prevStep, success, error }) {
           onClick={nextStep}
           onKeyDown={nextStep}
         >
-          <FormattedMessage id="general.nextStep" />
-          <Icon className="navigation-icon" icon="arrow-right" size={20} />
+          <Shortcut command={shortcuts.nextStep} />
+          <div className="navigation-step-text">
+            <FormattedMessage id="general.nextStep" />
+            <Icon className="navigation-icon" icon="arrow-right" size={20} />
+          </div>
           <Icon
             className={cx("status-icon", {
               lock: !success,
@@ -41,7 +46,6 @@ function Navigation({ steps, step, nextStep, prevStep, success, error }) {
             })}
             icon={success ? "unlocked" : "lock"}
           />
-          <Shortcut command={shortcuts.nextStep} />
         </div>
       )}
     </div>

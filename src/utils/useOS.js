@@ -27,8 +27,9 @@ function useOS() {
   const os = getOS();
   const isDesktop = ["Windows", "Mac OS", "Linux"].includes(os);
   const isMobile = ["Android", "iOS"].includes(os);
+  const isMacOS = "Mac OS" === os;
 
-  return { os, isDesktop, isMobile };
+  return { os, isMacOS, isDesktop, isMobile };
 }
 
 export default useOS;

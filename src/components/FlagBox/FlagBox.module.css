@@ -1,0 +1,33 @@
+.flagBox {
+  display: flex;
+  margin-top: 10px;
+  align-items: flex-start;
+}
+
+.flagBoxItem {
+  display: flex;
+  align-items: flex-start;
+  margin: 0 5px;
+  position: relative;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: relative;
+}
+
+.flagBoxItemInput {
+  margin-right: 5px;
+}
+
+.flagBoxItemHighlight {
+  color: var(--learn-success);
+}
+
+.flagBoxShortcutWrapper {
+  position: absolute;
+  width: 100px;
+  display: flex;
+  flex: 1;
+  top: 22px;
+  left: -15px;
+}

@@ -54,16 +54,6 @@ code {
   height: 100vh;
   font-family: "Open Sans", sans-serif;
   color: var(--learn-white);
-
-  .shortcut {
-    display: none;
-  }
-
-  &.desktop {
-    .shortcut {
-      display: block;
-    }
-  }
 }
 
 .container {

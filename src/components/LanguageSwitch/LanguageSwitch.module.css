@@ -1,0 +1,46 @@
+.languageSwitch {
+  margin: 10px;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+}
+
+.languageSwitch:hover .languageSwitchList {
+  display: flex;
+  flex-direction: column;
+}
+
+.languageSwitchCurrent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.languageSwitchCurrentIcon {
+  margin-left: 8px;
+}
+
+.languageSwitchList {
+  position: absolute;
+  display: none;
+  font-size: 14px;
+  right: 0;
+  width: 150px;
+}
+
+.languageSwitchListVisible {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.languageSwitchListItem {
+  margin-left: auto;
+  padding: 5px;
+  color: var(--learn-gray);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}

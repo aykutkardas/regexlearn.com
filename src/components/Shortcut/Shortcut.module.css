@@ -1,9 +1,10 @@
 .shortcut {
   display: inline-flex;
   padding: 5px;
+  margin: 5px;
   background-color: var(--learn-bg-shortcut);
   color: var(--learn-text-shortcut);
-  font-size: 11px;
+  font-size: 10px;
   border-bottom: 3px solid var(--learn-border-shortcut);
   border-radius: 6px;
 }
