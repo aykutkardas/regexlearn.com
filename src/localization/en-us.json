@@ -32,13 +32,13 @@
   "examples.finish.description": " ",
 
   "steps.starter.title": "Intro",
-  "steps.starter.description": "RegEx is short for `Regular Expression`. It helps to match, find or manage text. Start by typing 'OK' in the RegEx field to proceed to the first step and access the more detailed description..",
+  "steps.starter.description": "RegEx is short for `Regular Expression`. It helps to match, find or manage text. Start by typing `OK` in the RegEx field to proceed to the first step and access the more detailed description..",
 
   "steps.whatIsRegex.title": "What is Regular Expressions `RegEx`?",
   "steps.whatIsRegex.description": "Regular Expressions are a string of characters that express a search pattern. Often abbreviated as `RegEx` or `RegExp`. It is especially used to find or replace words in texts. In addition, we can test whether a text complies with the rules we set.\\n\\n For example, let's say you have a list of filenames. And you only want to find files with the `pdf` extension. Following typing an expression `^\\w+\\.pdf$` will work. The meaning of the definitions in this expression will become clearer as the steps progress.",
 
   "steps.basicMatchers.title": "Basic Matchers",
-  "steps.basicMatchers.description": "The basic matcher is to type as is to choose a character or word. For example, to select the word 'curious' in the text, type in the same way.",
+  "steps.basicMatchers.description": "The basic matcher is to type as is to choose a character or word. For example, to select the word `curious` in the text, type in the same way.",
 
   "steps.dotCharacter.title": "Dot `.`: Any Character",
   "steps.dotCharacter.description": "The period `.` allows selecting any character, including special characters and spaces.",
@@ -56,7 +56,7 @@
   "steps.rangeNumber.description": "To find the numbers in the specified range, the starting number and the ending number are written in square brackets `[]` with a dash `-` between them. Write an expression that will select all numbers between `3` and `6`, including themselves.",
 
   "examples.basicMatchers.title": "Practice: Basic Matcher",
-  "examples.basicMatchers.description": "Write the expression that will select the words 'of' in the text.",
+  "examples.basicMatchers.description": "Write the expression that will select the words `of` in the text.",
 
   "examples.dotCharacter.title": "Practice: Any Character",
   "examples.dotCharacter.description": "Type the expression to select individual letters, numbers, spaces, and special characters in the text. The expression you type must match any character.",
@@ -101,13 +101,13 @@
   "examples.plusCharacter.description": "Write the expression using the plus sign `+` to select words in which the letter `e` occurs one or more times in the text.",
 
   "examples.questionMark.title": "Practice: Question Mark `?`",
-  "examples.questionMark.description": "Write the expression indicating that the letter `n` is optional in the text, using the question mark `?`. Thus, both the words 'a' and 'an' can be selected.",
+  "examples.questionMark.description": "Write the expression indicating that the letter `n` is optional in the text, using the question mark `?`. Thus, both the words `a` and `an` can be selected.",
 
   "examples.quantifier.title": "Practice: Curly Braces - 1",
   "examples.quantifier.description": "Write the expression using curly brackets `{}` to select `4` of the numbers from `0` to `9` in the text.",
 
   "examples.quantifierMin.title": "Practice: Curly Braces - 2",
-  "examples.quantifierMin.description": "Type the expression using curly braces '{}' to select numbers between '0' and '9' that occur at least '2' times in the text.",
+  "examples.quantifierMin.description": "Type the expression using curly braces `{}` to select numbers between `0` and `9` that occur at least `2` times in the text.",
 
   "examples.quantifierRange.title": "Practice: Curly Braces - 3",
   "examples.quantifierRange.description": "Write the expression using curly brackets `{}` to select the numbers from `0` to `9` in the text that is at least between `1` and `4`.",
@@ -119,7 +119,7 @@
   "steps.groupReference.description": "In order not to repeat the same thing in repetitive statements, we can refer to a group of statements that we have written before. For example, in this example, the value `444` is grouped as the expression `(\\d{3})` and the value `0` is grouped as the expression `(\\d)`. We write `\\1` to refer to this group that we defined first. This means the first group defined. To avoid typing `(\\d{3})` again at the end of our expression, reference this group by typing `\\1`.",
 
   "steps.nonCapturingGroupping.title": "Parentheses `(?: )`: Non-capturing Grouping",
-  "steps.nonCapturingGroupping.description": "You can group an expression and ensure that it is not caught by references. For example, below are two groups. However, the first group reference we denote with `\\1' actually points to the second group, as the first is an uncaught group.",
+  "steps.nonCapturingGroupping.description": "You can group an expression and ensure that it is not caught by references. For example, below are two groups. However, the first group reference we denote with `\\1` actually points to the second group, as the first is an uncaught group.",
 
   "steps.pipeCharacter.title": "Pipe Character `|`",
   "steps.pipeCharacter.description": "It allows to specify that an expression can be in different expressions. Thus, all possible statements are written separated by the pipe sign `|`. This differs from charset `[abc]`, charsets operate at the character level. Alternatives are at the expression level. For example, the following expression would select both `cat` and `Cat`. Add another pipe sign `|` to the end of the expression and type `rat` so that all words are selected.",
@@ -131,7 +131,7 @@
   "steps.caret.description": "We were using `\\d` to find numbers. To find only numbers at the beginning of a line, prefix this expression with the `^` sign.",
 
   "steps.dollar.title": "Dollar Sign `$`:\\nSelecting by End of Line",
-  "steps.dollar.description": "Let's use the '$' sign after the 'html' value to find the 'html' texts only at the end of the line.",
+  "steps.dollar.description": "Let's use the `$` sign after the `html` value to find the `html` texts only at the end of the line.",
 
   "steps.wordCharacter.title": "Word Character `\\w`: Letter, Number and Underscore",
   "steps.wordCharacter.description": "The expression `\\w` is used to find letters, numbers and underscore characters. Let's use the expression `\\w` to find word characters in the text.",
@@ -170,7 +170,7 @@
   "steps.flags.description": "Flags change the output of the expression. That's why flags are also called `modifiers`. Determines whether the typed expression treats text as separate lines, is case sensitive, or finds all matches. Continue to the next step to learn the flags.",
 
   "steps.flagsGlobal.title": "Global Flag",
-  "steps.flagsGlobal.description": "The `global` flag causes the expression to select all matches. If not used it will only select the first match. Now enable the 'global' flag to be able to select all matches.",
+  "steps.flagsGlobal.description": "The `global` flag causes the expression to select all matches. If not used it will only select the first match. Now enable the `global` flag to be able to select all matches.",
 
   "steps.flagsMultiline.title": "Multiline Flag",
   "steps.flagsMultiline.description": "RegEx sees all text as one line. But we use the `multiline` flag to handle each line separately. In this way, the expressions we write according to the end of the linework separately for each line. Now enable the `multiline` flag to find all matches.",
