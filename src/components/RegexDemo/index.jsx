@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { useIntl } from "react-intl";
 
 import tagWrapper from "../../utils/tagWrapper";
+import setCaretPosition from "../../utils/setCaretPosition";
 
 function LandingRegexDemo() {
   const [regex, setRegex] = useState("\\d\\.\\s\\w+");
@@ -37,10 +38,12 @@ function LandingRegexDemo() {
 
   const focusInput = () => {
     if (regexInput) {
+      setCaretPosition(regexInput.current, regex.length);
       regexInput.current.focus();
     }
   };
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(focusInput, []);
   useEffect(checkRegex, [regex, initialContent]);
 
