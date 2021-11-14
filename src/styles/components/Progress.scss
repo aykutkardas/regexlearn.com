@@ -2,22 +2,18 @@
   width: 150px;
   display: flex;
   align-items: center;
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%, 0);
+  flex-direction: column;
+  justify-content: flex-start;
   user-select: none;
+  position: relative;
 
   &-status {
-    position: absolute;
-    top: 10px;
-    left: 50%;
     font-size: 14px;
-    transform: translate(-50%, 0);
     color: var(--learn-bg-progress);
     font-weight: bold;
-  }
-
-  @media only screen and (max-width: 600px) {
-    width: 100px;
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+    position: absolute;
   }
 }
