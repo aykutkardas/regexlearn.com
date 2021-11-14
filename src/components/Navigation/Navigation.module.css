@@ -9,9 +9,10 @@
   cursor: pointer;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   position: relative;
   flex-direction: column;
+  height: 100%;
 }
 
 .NavigationStep:hover {
@@ -38,7 +39,6 @@
   margin-left: auto;
   align-items:  flex-start;
 }
-
 
 .NavigationStepNextWrapper {
   display: flex;
