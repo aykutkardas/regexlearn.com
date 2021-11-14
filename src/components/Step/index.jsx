@@ -1,5 +1,7 @@
 import { useIntl } from "react-intl";
 
+import * as styles from "./Step.module.css";
+
 import InteractiveArea from "../InteractiveArea";
 
 import tagWrapper from "../../utils/tagWrapper";
@@ -23,14 +25,15 @@ function Steps({ data, step, error: parentError, onChangeSuccess }) {
   const isInteractive = data.interactive !== false;
 
   return (
-    <div className="step">
+    <div className={styles.Step}>
+      <h4 className={styles.StepTitleOriginal}>{data.originalTitle}</h4>
       <h2
-        className="step-title"
+        className={styles.StepTitle}
         dangerouslySetInnerHTML={{ __html: title }}
         data-original-title={data.originalTitle}
       />
       <p
-        className="step-description"
+        className={styles.StepDescription}
         dangerouslySetInnerHTML={{ __html: description }}
       />
       <InteractiveArea

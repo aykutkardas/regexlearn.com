@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
 :root {
   --learn-bg: #282c34;
   --learn-white: #ffffff;
@@ -31,28 +33,17 @@
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: "Open Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--learn-bg);
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-}
-
-
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 
 .App {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 100vh;
-  font-family: "Open Sans", sans-serif;
   color: var(--learn-white);
 }
 
