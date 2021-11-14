@@ -17,6 +17,10 @@
   position: relative;
 }
 
+.languageSwitchCurrent span {
+  color: var(--learn-gray);
+}
+
 .languageSwitchCurrentIcon {
   margin-left: 8px;
 }
@@ -38,9 +42,20 @@
 .languageSwitchListItem {
   margin-left: auto;
   padding: 5px;
-  color: var(--learn-gray);
+  color: var(--learn-white);
   position: relative;
   display: flex;
   align-items: center;
   justify-content: flex-end;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .languageSwitchCurrent span {
+    display: none;
+  }
+
+  .languageSwitchListItem {
+    margin-top: 10px;
+  }
 }
