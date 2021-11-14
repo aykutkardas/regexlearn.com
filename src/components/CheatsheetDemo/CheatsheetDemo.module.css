@@ -38,9 +38,17 @@
 
 .CheatsheetDemoBlockRegex {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   width: 100%;
   margin: 10px auto;
+}
+
+.CheatsheetDemoBlockRegexIcon {
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+  color: var(--learn-white);
+  user-select: none;
 }
 
 .CheatsheetDemoBlockContent {
@@ -48,6 +56,7 @@
   text-align: left;
   width: 100%;
   margin: 10px auto;
+  min-height: 46px;
 }
 
 .CheatsheetDemoInputWrapper {

@@ -4,11 +4,13 @@ import cx from "classnames";
 
 import * as styles from "./CheatsheetDemo.module.css";
 
+import Icon from "../Icon";
+
 import tagWrapper from "../../utils/tagWrapper";
 
 function CheatsheetDemo({ data }) {
   const [regex] = useState(data.regex || "");
-  const [flags] = useState(data.flags || "");
+  const [highlight, setHighlight] = useState(true);
   const [content, setContent] = useState(null);
   const { formatMessage } = useIntl();
   const initialContent = data.content;
@@ -46,7 +48,7 @@ function CheatsheetDemo({ data }) {
         className={cx(styles.CheatsheetDemoBlock, styles.CheatsheetDemoBlockContent)}
         data-title={formatMessage({ id: "general.text" })}
         dangerouslySetInnerHTML={{
-          __html: (content || initialContent).replace(/\\n/gm, "<br />"),
+          __html: !highlight ? initialContent : (content || initialContent).replace(/\\n/gm, "<br />"),
         }}
       />
       <div
@@ -54,6 +56,13 @@ function CheatsheetDemo({ data }) {
         data-title={formatMessage({ id: "general.regex" })}
       >
         <span className={styles.CheatsheetDemoHiglightText} data-flags={data.flags}>{regex}</span>
+        <Icon
+          icon={highlight ? "eye" : "eye-blocked"}
+          style={{ color: highlight ? "var(--learn-white)" : "var(--learn-gray)"}}
+          className={styles.CheatsheetDemoBlockRegexIcon}
+          size={15}
+          onClick={() => setHighlight(!highlight)}
+        />
       </div>
     </div>
   );
