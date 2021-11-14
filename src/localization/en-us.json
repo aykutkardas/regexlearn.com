@@ -76,8 +76,8 @@
   "steps.repetitions.title": "Repetitions",
   "steps.repetitions.description": "Some special characters are used to specify how many times a character will be repeated in the text. These special characters are the plus `+`, the asterisk `*`, and the question mark `?`.",
 
-  "steps.starCharacter.title": "Asterisk `*`",
-  "steps.starCharacter.description": "We put an asterisk `*` at the end to indicate that a character does not match at all or can match many times. For example, indicate that the letter `e` should never occur in the text, or it can occur once or more side by side.",
+  "steps.asteriks.title": "Asterisk `*`",
+  "steps.asteriks.description": "We put an asterisk `*` at the end to indicate that a character does not match at all or can match many times. For example, indicate that the letter `e` should never occur in the text, or it can occur once or more side by side.",
 
   "steps.plusCharacter.title": "Plus Sign `+`",
   "steps.plusCharacter.description": "To indicate that a character can occur one or more times, we put a plus sign `+` at the end. For example, indicate that the letter `e` can occur one or more times in the text.",
@@ -94,8 +94,8 @@
   "steps.quantifierRange.title": "Curly Braces - 3",
   "steps.quantifierRange.description": "To express the occurrence of a character in a certain number range, we write curly braces `{x,y}` with the interval we want to go to the end. For example, indicate that the following letter `e` can only occur between `1` and `3`.",
 
-  "examples.starCharacter.title": "Practice: Asterisk `*`",
-  "examples.starCharacter.description": "Use the asterisk `*` to write the expression that will select each word, suitable for the absence of the letter `e` in the text and the presence of more than one.",
+  "examples.asteriks.title": "Practice: Asterisk `*`",
+  "examples.asteriks.description": "Use the asterisk `*` to write the expression that will select each word, suitable for the absence of the letter `e` in the text and the presence of more than one.",
 
   "examples.plusCharacter.title": "Practice: Plus Sign `+`",
   "examples.plusCharacter.description": "Write the expression using the plus sign `+` to select words in which the letter `e` occurs one or more times in the text.",
