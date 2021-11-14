@@ -1,0 +1,245 @@
+[
+  {
+    "title": "cheatsheet.anchors",
+    "data": [
+      {
+        "title": "cheatsheet.caret.title",
+        "content": "an answer or a question",
+        "code": "^",
+        "flags": "",
+        "regex": "^\\w+"
+      },
+      {
+        "title": "cheatsheet.dollar.title",
+        "content": "an answer or a question",
+        "code": "$",
+        "flags": "",
+        "regex": "\\w+$"
+      },
+      {
+        "title": "cheatsheet.wordBoundary.title",
+        "content": "an answer or a question",
+        "code": "\\b",
+        "flags": "",
+        "regex": "n\\b"
+      },
+      {
+        "title": "cheatsheet.notWordBoundary.title",
+        "content": "an answer or a question",
+        "code": "\\B",
+        "flags": "",
+        "regex": "n\\B"
+      }
+    ]
+  },
+  {
+    "title": "cheatsheet.flags",
+    "data": [
+      {
+        "title": "cheatsheet.caseInsensitiveFlag.title",
+        "content": "CaT",
+        "code": "i",
+        "flags": "i",
+        "regex": "cat"
+      },
+      {
+        "title": "cheatsheet.globalFlag.title",
+        "content": "cat cat cat",
+        "code": "g",
+        "flags": "g",
+        "regex": "cat"
+      },
+      {
+        "title": "cheatsheet.multilineFlag.title",
+        "content": "cat\\n cat",
+        "code": "m",
+        "flags": "m",
+        "regex": "cat"
+      }
+    ]
+  },
+  {
+    "title": "cheatsheet.groupAndReferences",
+    "data": [
+      {
+        "title": "cheatsheet.group.title",
+        "content": "hahaha hah haha",
+        "code": "()",
+        "flags": "g",
+        "regex": "(ha)+"
+      },
+      {
+        "title": "cheatsheet.reference.title",
+        "content": "hah haa dad",
+        "code": "\\1",
+        "flags": "g",
+        "regex": "(\\w)a\\1"
+      },
+      {
+        "title": "cheatsheet.nonCapturingGroup.title",
+        "content": "hahaha hah haha",
+        "code": "(?:)",
+        "flags": "g",
+        "regex": "(?:ha)+"
+      }
+    ]
+  },
+  {
+    "title": "cheatsheet.characterClasses",
+    "data": [
+      {
+        "title": "cheatsheet.characterSet.title",
+        "content": "bar ber bir bor bur",
+        "code": "[abc]",
+        "flags": "",
+        "regex": "[aeiou]",
+        "answer": ["aeiou"]
+      },
+      {
+        "title": "cheatsheet.negatedCharacterSet.title",
+        "content": "bar ber bir bor bur",
+        "code": "[^abc]",
+        "flags": "",
+        "regex": "[eu]",
+        "answer": ["aiu"]
+      },
+      {
+        "title": "cheatsheet.range.title",
+        "content": "abcdefghijklmnopqrstuvwxyz",
+        "code": "[a-z]",
+        "flags": "",
+        "regex": "[e-i]",
+        "answer": ["e", "f", "g", "h", "i"]
+      },
+      {
+        "title": "cheatsheet.dot.title",
+        "content": "abcde",
+        "code": ".",
+        "flags": "",
+        "regex": ".",
+        "answer": ["a", "b", "c", "d", "e"]
+      },
+      {
+        "title": "cheatsheet.word.title",
+        "content": "hello",
+        "code": "\\w",
+        "flags": "",
+        "regex": "\\w",
+        "answer": ["h", "e", "l", "l", "o"]
+      },
+      {
+        "title": "cheatsheet.notWord.title",
+        "content": "hi, thanks.",
+        "code": "\\W",
+        "flags": "",
+        "regex": "\\W",
+        "answer": [",", " ", "."]
+      },
+      {
+        "title": "cheatsheet.digit.title",
+        "content": "+1-(444)-222",
+        "code": "\\d",
+        "flags": "",
+        "regex": "\\d",
+        "answer": ["1", "4", "4", "4", "2", "2", "2"]
+      },
+      {
+        "title": "cheatsheet.notDigit.title",
+        "content": "+1-(444)-222",
+        "code": "\\D",
+        "flags": "",
+        "regex": "\\D",
+        "answer": ["+", "-", "(", ")", "-"]
+      },
+      {
+        "title": "cheatsheet.space.title",
+        "content": "one two",
+        "code": "\\s",
+        "flags": "",
+        "regex": "\\s",
+        "answer": [" "]
+      },
+      {
+        "title": "cheatsheet.notSpace.title",
+        "content": "one two",
+        "code": "\\S",
+        "flags": "",
+        "regex": "\\S",
+        "answer": ["o", "n", "e", "t", "w", "o"]
+      }
+    ]
+  },
+  {
+    "title": "cheatsheet.lookarounds",
+    "data": [
+      {
+        "title": "cheatsheet.positiveLookahead.title",
+        "content": "1st 2nd 3pc",
+        "code": "(?=)",
+        "flags": "g",
+        "regex": "\\d(?=nd)"
+      },
+      {
+        "title": "cheatsheet.negativeLookahead.title",
+        "content": "1st 2nd 3pc",
+        "code": "(?!)",
+        "flags": "g",
+        "regex": "\\d(?!nd)"
+      },
+      {
+        "title": "cheatsheet.positiveLookbehind.title",
+        "content": "#1 $2 %3",
+        "code": "(?<=)",
+        "flags": "g",
+        "regex": "(?<=%)\\d"
+      },
+      {
+        "title": "cheatsheet.negativeLookbehind.title",
+        "content": "#1 $2 %3",
+        "code": "(?!)",
+        "flags": "g",
+        "regex": "(?<!%)\\d"
+      }
+    ]
+  },
+  {
+    "title": "cheatsheet.quantifiersAndAlternation",
+    "data": [
+      {
+        "title": "cheatsheet.plus.title",
+        "content": "bp bep beep",
+        "code": "+",
+        "flags": "g",
+        "regex": "b(e)+p"
+      },
+      {
+        "title": "cheatsheet.asteriks.title",
+        "content": "bp bep beep",
+        "code": "*",
+        "flags": "g",
+        "regex": "b(e)*p"
+      },
+      {
+        "title": "cheatsheet.quantifier.title",
+        "content": "bp bep beep beep",
+        "code": "{1,3}",
+        "flags": "g",
+        "regex": "be{1,2}p"
+      },
+      {
+        "title": "cheatsheet.optional.title",
+        "content": "color, colour",
+        "code": "?",
+        "flags": "g",
+        "regex": "colou?r"
+      },
+      {
+        "title": "cheatsheet.alternation.title",
+        "content": "fat, cat, rat",
+        "code": "|",
+        "flags": "g",
+        "regex": "(c|r)at"
+      }
+    ]
+  }
+]

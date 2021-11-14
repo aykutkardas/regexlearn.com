@@ -13,13 +13,13 @@ function Steps({ data, step, error: parentError, onChangeSuccess }) {
   const title = tagWrapper(
     formatMessage({ id: data.title }),
     /`(\S*?[^`]*)`/gim,
-    "step-word"
+    styles.StepDescriptionWord
   ).replace(/\\n/gim, "<br/>");
 
   const description = tagWrapper(
     formatMessage({ id: data.description }),
     /`(\S*?[^`]*)`/gim,
-    "step-word"
+    styles.StepDescriptionWord
   ).replace(/\\n/gim, "<br/>");
 
   const isInteractive = data.interactive !== false;

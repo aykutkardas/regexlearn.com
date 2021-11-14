@@ -40,8 +40,8 @@ function MyApp({ Component, pageProps }) {
       defaultLocale={defaultLang}
     >
       <LanguageProvider lang={lang} setLang={handleChangeLang}>
+        <ToastContainer />
         <div className={cx("App", { desktop: isDesktop })}>
-          <ToastContainer />
           <Head>
             <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZNDXNCMG6E" />
             <script dangerouslySetInnerHTML={{

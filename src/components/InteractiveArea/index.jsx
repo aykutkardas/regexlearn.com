@@ -188,7 +188,7 @@ function InteractiveArea({ data, step, isShow, parentError, onChangeSuccess }) {
             ref={regexInput}
             key={step}
             type="text"
-            style={{ width: regex.length * 15 || 50 }}
+            style={{ width: regex.length * 15 || 60 }}
             readOnly={data.readOnly}
             value={regex}
             onChange={onChange}

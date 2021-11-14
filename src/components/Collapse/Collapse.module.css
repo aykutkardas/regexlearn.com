@@ -1,0 +1,32 @@
+.Collapse {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border-radius: 6px;
+}
+
+.CollapseTitle {
+  display: flex;
+  align-items: center;
+  height: 25px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.CollapseTitleIcon {
+  color: var(--learn-gray)
+}
+
+.CollapseContent {
+  display: flex;
+  margin: 6px 0;
+  overflow: hidden;
+  height: 0;
+  transition: .3s;
+}
+
+.CollapseContentInner {
+  width: 100%;
+  border-bottom: 1px solid var(--learn-gray);
+}

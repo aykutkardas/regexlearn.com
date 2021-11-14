@@ -11,7 +11,8 @@
   "general.comingSoon": "Yakında",
 
   "meta.landing.title": "RegexLearn - Adım adım, sıfırdan ileri seviyeye.",
-  "meta.learn.title": "RegexLearn - İnteraktif Kurs",
+  "meta.learn.title": "RegexLearn - RegEx İnteraktif Kurs",
+  "meta.cheatsheet.title": "RegexLearn - RegEx Cheatsheet",
 
   "landing.learn": "Öğren",
   "landing.playground": "Playground",
@@ -21,6 +22,47 @@
   "notFound.button": "Anasayfaya dön",
 
   "alert.site.under.development": "Bu site hala geliştirme aşamasındadır. Şu an gördüğünüz şeyler değişebilir.",
+
+  "cheatsheet.anchors": "Çapalar",
+  "cheatsheet.caret.title": "Dize veya Satırın Başlangıcı",
+  "cheatsheet.dollar.title": "Dize veya Satırın Sonu",
+  "cheatsheet.wordBoundary.title": "Kelime Sınırı",
+  "cheatsheet.notWordBoundary.title": "Kelime Sınırı Olmayan",
+
+  "cheatsheet.characterClasses": "Karakter Sınıfları",
+  "cheatsheet.characterSet.title": "Karakter Seti",
+  "cheatsheet.negatedCharacterSet.title": "Negatiflenmiş Karakter Seti",
+  "cheatsheet.range.title": "Aralık",
+  "cheatsheet.dot.title": "Nokta",
+  "cheatsheet.word.title": "Harfler",
+  "cheatsheet.notWord.title": "Harf Olmayan",
+  "cheatsheet.digit.title": "Sayılar",
+  "cheatsheet.notDigit.title": "Sayı Olmayan",
+  "cheatsheet.space.title": "Boşluklar",
+  "cheatsheet.notSpace.title": "Boşluk Olmayan",
+
+  "cheatsheet.flags": "Bayraklar",
+  "cheatsheet.caseInsensitiveFlag.title": "Büyük/Küçük Harf Duyarsızlığı",
+  "cheatsheet.globalFlag.title": "Global",
+  "cheatsheet.multilineFlag.title": "Çoklu Satır",
+
+  "cheatsheet.groupAndReferences": "Grup & Referans",
+  "cheatsheet.group.title": "Grup",
+  "cheatsheet.reference.title": "Referans",
+  "cheatsheet.nonCapturingGroup.title": "Yakalanmayan Gruplama",
+
+  "cheatsheet.lookarounds": "Bakınma",
+  "cheatsheet.positiveLookahead.title": "Olumlu İleriye Bakınma",
+  "cheatsheet.negativeLookahead.title": "Olumsuz İleriye Bakınma",
+  "cheatsheet.positiveLookbehind.title": "Olumlu Geriye Bakınma",
+  "cheatsheet.negativeLookbehind.title": "Olumsuz Geriye Bakınma",
+
+  "cheatsheet.quantifiersAndAlternation": "Niceleyiciler ve Alternasyon",
+  "cheatsheet.plus.title": "Artı İşareti",
+  "cheatsheet.asteriks.title": "Yıldız İşareti",
+  "cheatsheet.quantifier.title": "Niceleyici",
+  "cheatsheet.optional.title": "Opsiyonal",
+  "cheatsheet.alternation.title": "Alternasyon",
 
   "landing.title": "Sıfırdan ileri seviyeye, adım adım RegEx öğren.",
   "landing.description": "RegEx öğrenmek düşündüğünüzden daha kolay. RegEx'i kolayca `öğrenmek`, `pratik yapmak`, `test etmek` ve `paylaşmak` için bu aracı kullanabilirsiniz.",

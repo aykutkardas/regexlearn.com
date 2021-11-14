@@ -26,24 +26,15 @@ function LandingHeader() {
 
       <div className="landing-header-links">
         <Link href="/learn" passHref>
-          <a className="landing-header-link landing-link-learn">
+          <a className="landing-header-link">
             <FormattedMessage id="landing.learn" />
           </a>
         </Link>
-        <span
-          className="landing-header-link landing-link-disabled"
-          data-tip
-          data-for="coming-soon"
-        >
-          <span className="landing-link-disabled-name">
+        <Link href="/cheatsheet" passHref>
+          <a className="landing-header-link">
             <FormattedMessage id="landing.cheatsheet" />
-          </span>
-          <Icon
-            icon="lock"
-            size={16}
-            className="landing-link-disabled-icon"
-          />
-        </span>
+          </a>
+        </Link>
         <span
           className="landing-header-link landing-link-disabled"
           data-tip

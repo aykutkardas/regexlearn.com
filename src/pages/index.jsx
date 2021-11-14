@@ -19,7 +19,7 @@ export default function Home() {
         <title>{formatMessage({ id: "meta.landing.title" })}</title>
       </Head>
       <div className="container">
-        <div className="content landing">
+        <div className="col-md-6 col-sm-12 landing">
           <h1>
             <FormattedMessage id="landing.title" />
           </h1>
@@ -40,7 +40,7 @@ export default function Home() {
             </a>
           </Link>
         </div>
-        <div className="intro">
+        <div className="col-md-6 col-sm-12 visible-md visible-lg intro">
           <RegexDemo />
         </div>
       </div>

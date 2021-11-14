@@ -11,7 +11,8 @@
   "general.comingSoon": "Coming Soon",
 
   "meta.landing.title": "RegexLearn - Step by step, from zero to advanced.",
-  "meta.learn.title": "RegexLearn - Interactive Course",
+  "meta.learn.title": "RegexLearn - RegEx Interactive Course",
+  "meta.cheatsheet.title": "RegexLearn - RegEx Cheatsheet",
 
   "landing.learn": "Learn",
   "landing.playground": "Playground",
@@ -21,6 +22,48 @@
   "notFound.button": "Back to home",
 
   "alert.site.under.development": "This site is still under development. What you see now may change.",
+
+  "cheatsheet.anchors": "Anchors",
+  "cheatsheet.caret.title": "Start of string or line",
+  "cheatsheet.dollar.title": "End of string or line",
+  "cheatsheet.wordBoundary.title": "Word Boundary",
+  "cheatsheet.notWordBoundary.title": "Not Word Boundary",
+
+  "cheatsheet.characterClasses": "Character Classes",
+  "cheatsheet.characterSet.title": "Character Set",
+  "cheatsheet.negatedCharacterSet.title": "Negated Character Set",
+  "cheatsheet.range.title": "Range",
+  "cheatsheet.dot.title": "Dot",
+  "cheatsheet.word.title": "Word",
+  "cheatsheet.notWord.title": "Not Word",
+  "cheatsheet.digit.title": "Digit",
+  "cheatsheet.notDigit.title": "Not Digit",
+  "cheatsheet.space.title": "Space",
+  "cheatsheet.notSpace.title": "Not Space",
+
+  "cheatsheet.flags": "Flags",
+  "cheatsheet.caseInsensitiveFlag.title": "Ignore Case",
+  "cheatsheet.globalFlag.title": "Global",
+  "cheatsheet.multilineFlag.title": "Multiline",
+
+  "cheatsheet.groupAndReferences": "Group & References",
+  "cheatsheet.group.title": "Group",
+  "cheatsheet.reference.title": "Reference",
+  "cheatsheet.nonCapturingGroup.title": "Non Capturing Group",
+
+  "cheatsheet.lookarounds": "Lookarounds",
+  "cheatsheet.positiveLookahead.title": "Positive Lookahead",
+  "cheatsheet.negativeLookahead.title": "Negative Lookahead",
+  "cheatsheet.positiveLookbehind.title": "Positive Lookbehind",
+  "cheatsheet.negativeLookbehind.title": "Negative Lookbehind",
+
+  "cheatsheet.quantifiersAndAlternation": "Quantifiers And Alternation",
+  "cheatsheet.plus.title": "Plus",
+  "cheatsheet.asteriks.title": "Astekriks",
+  "cheatsheet.quantifier.title": "Quantifier",
+  "cheatsheet.optional.title": "Optional",
+  "cheatsheet.alternation.title": "Alternation",
+
 
   "landing.title": "Learn RegEx step by step, from zero to advanced.",
   "landing.description": "Learning RegEx is easier than you think. You can use this tool to easily `learn`, `practice`, `test` and `share` RegEx.",

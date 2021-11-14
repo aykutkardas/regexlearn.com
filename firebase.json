@@ -10,12 +10,21 @@
       {
         "source": "/learn",
         "destination": "/learn.html"
+      },
+      {
+        "source": "/cheatsheet",
+        "destination": "/cheatsheet.html"
       }
     ],
     "redirects": [
       {
         "source": "/learn.html",
         "destination": "/learn",
+        "type": 301
+      },
+      {
+        "source": "/cheatsheet.html",
+        "destination": "/cheatsheet",
         "type": 301
       }
     ]

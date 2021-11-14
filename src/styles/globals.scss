@@ -51,37 +51,17 @@ body {
   color: var(--learn-white);
 }
 
-.container {
-  max-width: 1200px;
-  height: 100%;
-  margin: 0 auto;
+.content {
+  flex: 1;
   display: flex;
-  align-items: center;
-
-  .content {
-    flex: 1;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    flex-direction: column;
-  }
-
-  .intro {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
 }
 
-@media (max-width: 1199.98px) {
-  .container {
-    padding: 20px;
-    max-width: 650px;
-    flex-direction: column;
-
-    .intro {
-      display: none;
-    }
-  }
+.intro {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
