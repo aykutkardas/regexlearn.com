@@ -1,6 +1,6 @@
 {
-  "general.prevStep": "Önceki Adım",
-  "general.nextStep": "Sonraki Adım",
+  "general.prev": "Önceki",
+  "general.next": "Sonraki",
   "general.result": "Sonuç",
   "general.regex": "Regex",
   "general.text": "Metin",

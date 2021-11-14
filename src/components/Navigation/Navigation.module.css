@@ -1,0 +1,65 @@
+.Navigation {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  user-select: none;
+}
+
+.NavigationStep {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  flex-direction: column;
+}
+
+.NavigationStep:hover {
+  opacity: 0.7;
+}
+
+.NavigationStepText {
+  display: flex;
+  align-items: center;
+}
+
+.NavigationStepArrow {
+  margin: 0 5px;
+}
+
+.NavigationStepPrev {
+  composes: NavigationStep;
+  margin-right: auto;
+  align-items:  flex-end;
+}
+
+.NavigationStepNext {
+  composes: NavigationStep;
+  margin-left: auto;
+  align-items:  flex-start;
+}
+
+
+.NavigationStepNextWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 27px;
+  margin: 5px;
+}
+
+.NavigationStepStatusIcon {
+  color: var(--learn-gray);
+  margin-left: auto;
+  width: 20px;
+  height: 20px;
+}
+
+.NavigationStepStatusIconUnlock {
+  color: var(--learn-success);
+}
+
+.NavigationStepStatusIconError {
+  color: var(--learn-error);
+}

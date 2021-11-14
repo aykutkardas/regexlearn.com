@@ -1,6 +1,6 @@
 {
-  "general.prevStep": "Previous Step",
-  "general.nextStep": "Next Step",
+  "general.prev": "Previous",
+  "general.nextStep": "Next",
   "general.result": "Result",
   "general.regex": "Regex",
   "general.text": "Text",
