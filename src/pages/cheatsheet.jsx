@@ -29,7 +29,7 @@ export default function Home() {
           <div className="row">
             <div className="col-lg-4 col-md-6">
                 {firstBlockDatas.map(arr => (
-                  <>
+                  <div key={arr.title}>
                     <h4>{formatMessage({ id: arr.title})}</h4>
                     {arr.data.map(item => (
                       <Collapse
@@ -38,12 +38,12 @@ export default function Home() {
                         title={<CheatsheetItemTitle data={item} />}
                       />                
                     ))}
-                  </>
+                  </div>
                 ))}
             </div>
-            <div className="col-lg-4 col-md-5">
+            <div className="col-lg-4 col-md-6">
                 {secondBlockDatas.map(arr => (
-                  <>
+                  <div key={arr.title}>
                     <h4>{formatMessage({ id: arr.title})}</h4>
                     {arr.data.map(item => (
                       <Collapse
@@ -52,12 +52,12 @@ export default function Home() {
                         title={<CheatsheetItemTitle data={item} />}
                       />                
                     ))}
-                  </>
+                  </div>
                 ))}
             </div>
-            <div className="col-lg-3 col-md-6">
+            <div className="col-lg-4 col-md-6">
               {thirdBlockDatas.map(arr => (
-                <>
+                <div key={arr.title}>
                   <h4>{formatMessage({ id: arr.title})}</h4>
                   {arr.data.map(item => (
                     <Collapse
@@ -66,7 +66,7 @@ export default function Home() {
                       title={<CheatsheetItemTitle data={item} />}
                     />                
                   ))}
-                </>
+                </div>
               ))}
             </div>
           </div>
