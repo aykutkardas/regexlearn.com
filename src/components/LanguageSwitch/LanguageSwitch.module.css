@@ -18,7 +18,7 @@
 }
 
 .languageSwitchCurrent span {
-  color: var(--learn-gray);
+  color: var(--landing-link-disabled);
 }
 
 .languageSwitchCurrentIcon {

@@ -1,4 +1,6 @@
 import * as styles from "./Shortcut.module.css";
+import cx from "classnames";
+
 import useOS from "src/utils/useOS";
 
 const Shortcut = ({ command }) => {
@@ -11,7 +13,14 @@ const Shortcut = ({ command }) => {
     .replace(/alt/g, isMacOS ? "option" : "alt")
     .toUpperCase();
 
-  return <div className={styles.shortcut}>{readableCommand}</div>;
+  return (
+    <div
+      role="button"
+      className={cx(styles.Shortcut, "visible-md visible-lg")}
+    >
+      {readableCommand}
+    </div>
+  );
 };
 
 export default Shortcut;

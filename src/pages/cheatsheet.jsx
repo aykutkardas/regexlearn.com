@@ -25,7 +25,7 @@ export default function Home() {
       <Head>
         <title>{formatMessage({ id: "meta.cheatsheet.title" })}</title>
       </Head>
-        <div className="container">
+        <div className="container flex-1">
           <div className="row">
             <div className="col-lg-4 col-md-6">
                 {firstBlockDatas.map(arr => (

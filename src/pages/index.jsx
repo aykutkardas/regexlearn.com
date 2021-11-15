@@ -19,29 +19,31 @@ export default function Home() {
         <title>{formatMessage({ id: "meta.landing.title" })}</title>
       </Head>
       <div className="container">
-        <div className="col-md-6 col-sm-12 landing">
-          <h1>
-            <FormattedMessage id="landing.title" />
-          </h1>
-          <p
-            dangerouslySetInnerHTML={{
-              __html: tagWrapper(
-                formatMessage({ id: "landing.description" }),
-                /`(\S*?[^`]*)`/gim,
-                "highlight"
-              ),
-            }}
-          />
-          <Link href="/learn" passHref>
-            <a>
-              <Button className="success">
-                <FormattedMessage id="general.startLearning" />
-              </Button>
-            </a>
-          </Link>
-        </div>
-        <div className="col-md-6 col-sm-12 visible-md visible-lg intro">
-          <RegexDemo />
+        <div className="row">
+          <div className="col-md-6 col-sm-12 landing">
+            <h1>
+              <FormattedMessage id="landing.title" />
+            </h1>
+            <p
+              dangerouslySetInnerHTML={{
+                __html: tagWrapper(
+                  formatMessage({ id: "landing.description" }),
+                  /`(\S*?[^`]*)`/gim,
+                  "highlight"
+                ),
+              }}
+            />
+            <Link href="/learn" passHref>
+              <a>
+                <Button className="success">
+                  <FormattedMessage id="general.startLearning" />
+                </Button>
+              </a>
+            </Link>
+          </div>
+          <div className="col-md-6 col-sm-12 visible-md visible-lg intro">
+            <RegexDemo />
+          </div>
         </div>
       </div>
       <Footer />

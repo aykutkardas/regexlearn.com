@@ -31,9 +31,7 @@
   --toastify-color-success: #328252 !important;
 }
 
-* {
-  outline: none;
-}
+* { outline: none; }
 
 body {
   margin: 0;
@@ -65,3 +63,5 @@ body {
   align-items: center;
   justify-content: center;
 }
+
+.flex-1 { flex: 1; }
