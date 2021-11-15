@@ -1,0 +1,58 @@
+.Header {
+  display: flex;
+  align-items: center;
+  height: 80px;
+  justify-content: space-between;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.HeaderNav {
+  display: flex;
+  align-items: center;
+  color: var(--learn-white);
+  font-size: 14px;
+}
+
+.HeaderLink {
+  text-decoration: none;
+  color: var(--learn-white);
+  margin-left: 20px;
+  user-select: none;
+}
+
+.HeaderLink:hover {
+  color: var(--landing-link-hover);
+}
+
+.HeaderLinkDisabled {
+  display: flex;
+  align-items: center;
+  color: var(--landing-link-disabled);
+  cursor: pointer;
+}
+
+.HeaderLinkDisabledIcon {
+  margin-left: 0.3em;
+}
+
+.HeaderBrand {
+  display: flex;
+  align-items: center;
+}
+
+.HeaderBrandIcon {
+  width: 20px;
+  height: 20px;
+  fill: var(--learn-success);
+}
+
+@media only screen and (max-width: 600px) {
+  .HeaderLink {
+    margin-left: 10px;
+  }
+
+  .HeaderLinkDisabledIcon {
+    display: none;
+  }
+}
