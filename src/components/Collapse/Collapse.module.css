@@ -14,8 +14,14 @@
   font-size: 14px;
 }
 
+.CollapseDescription {
+  font-size: 13px;
+  color: var(--landing-link-disabled);
+  margin: 0;
+}
+
 .CollapseTitleIcon {
-  color: var(--learn-gray)
+  color: var(--learn-gray);
 }
 
 .CollapseContent {

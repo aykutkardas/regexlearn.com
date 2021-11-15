@@ -52,8 +52,8 @@
 }
 
 .CheatsheetDemoBlockContent {
-  display: inline-flex;
-  text-align: left;
+  display: inline-block;
+  text-align: center;
   width: 100%;
   margin: 10px auto;
   min-height: 46px;

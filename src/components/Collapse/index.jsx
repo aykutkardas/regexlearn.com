@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { FormattedMessage } from "react-intl";
 
 import CheatsheetDemo from "../CheatsheetDemo";
 import Icon from "../Icon";
@@ -18,13 +19,16 @@ function Collapse({ title, data }) {
             {title}
             <Icon
               className={styles.CollapseTitleIcon}
-              icon={show ? "arrow-up" : "arrow-down"}
+              icon={show ? "caret-up" : "caret-down"}
               style={{ color: show ? "var(--learn-white)" : "var(--learn-gray)"}}
               size={12}
             />
         </div>
-        <div style={{ height: show ? 150 : 0}} className={styles.CollapseContent}>
+        <div style={{ height: show ? 190 : 0}} className={styles.CollapseContent}>
             <div className={styles.CollapseContentInner}>
+              <p className={styles.CollapseDescription}>
+                <FormattedMessage id={data.description || "general.prev"} />
+              </p>
               <CheatsheetDemo data={data} />
             </div>
         </div>
