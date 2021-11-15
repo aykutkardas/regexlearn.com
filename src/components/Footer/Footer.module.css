@@ -1,0 +1,25 @@
+.Footer {
+  display: flex;
+  align-items: center;
+  height: 80px;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.FooterSocial {
+  display: flex;
+  align-items: center;
+  color: var(--learn-white);
+  font-size: 14px;
+}
+
+.FooterSocialLink {
+  text-decoration: none;
+  color: var(--learn-white);
+  margin: 0 10px;
+}
+
+.FooterSocialLink:hover {
+  color: var(--landing-link-hover);
+}
