@@ -11,13 +11,20 @@ const Header = ({ steps, step }) => (
   <div className={cx(styles.LearnHeader, "container-fluid")}>
     <header className={cx(styles.LearnHeaderRow, "row")}>
       <div className={cx(styles.LearnHeaderHomeWrapper, "col-xs-4")}>
-        <div className="header-social">
-          <Link href="/" passHref>
-            <a>
-              <Icon icon="home" size={20} color="white" />
-            </a>
-          </Link>
-        </div>
+        <Link href="/">
+          <a className={styles.LearnHeaderBrand}>
+            <Icon
+              className={cx(styles.LearnHeaderBrandIcon, "visible-xs visible-sm")}
+              icon="unlocked"
+              removeInlineStyle
+            />
+            <img
+              className="visible-md visible-lg"
+              src="/logo.svg"
+              alt="RegexLearn"
+            />
+          </a>
+        </Link>
       </div>
       <div className={cx(styles.LearnHeaderProgressWrapper, "col-xs-4")}>
         <Progress steps={steps} step={step} />
