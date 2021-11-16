@@ -38,7 +38,7 @@ const LanguageSwitch = () => {
     Mousetrap.bindGlobal(shortcuts.languageSwitch, toggleVisible);
 
     availableLangList.forEach((item, index) => {
-      Mousetrap.bindGlobal(`${shortcuts.languageSwitch}+${index + 1}`, (e) => {
+      Mousetrap.bindGlobal(`${shortcuts.rootKey}+${index + 1}`, (e) => {
         e.preventDefault();
         setLang(item.value);
       });
@@ -48,7 +48,7 @@ const LanguageSwitch = () => {
       Mousetrap.unbind([
         shortcuts.languageSwitch,
         ...availableLangList.map(
-          (item, index) => `${shortcuts.languageSwitch}+${index}`
+          (item, index) => `${shortcuts.rootKey}+${index}`
         ),
       ]);
   }, [visible, lang, toggleVisible, availableLangList, setLang]);
@@ -80,7 +80,7 @@ const LanguageSwitch = () => {
             className={styles.languageSwitchListItem}
           >
             <div>
-              <Shortcut command={`${shortcuts.languageSwitch}+${index + 1}`} />
+              <Shortcut command={`${shortcuts.rootKey}+${index + 1}`} />
             </div>
             <span>{item.label}</span>
           </div>

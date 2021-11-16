@@ -38,6 +38,11 @@
   flex-direction: column;
   align-items: center;
 }
+.languageSwitchCurrent span,
+.languageSwitchListItem span {
+  min-width: 50px;
+  text-align: right;
+}
 
 .languageSwitchListItem {
   margin-left: auto;
@@ -47,6 +52,7 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  margin-right: 22px;
 }
 
 
