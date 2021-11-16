@@ -1,0 +1,31 @@
+.LearnHeader {
+  min-height: 80px;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.LearnHeaderRow {
+  display: flex;
+  height: 100%;
+}
+
+.LearnHeaderWrapper {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.LearnHeaderHomeWrapper {
+  composes: LearnHeaderWrapper;
+  justify-content: flex-start;
+}
+
+.LearnHeaderProgressWrapper {
+  composes: LearnHeaderWrapper;
+  justify-content: center;
+}
+
+.LearnHeaderLanguageSwitchWrapper {
+  composes: LearnHeaderWrapper;
+  justify-content: flex-end;
+}
