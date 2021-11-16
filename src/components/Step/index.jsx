@@ -13,7 +13,7 @@ function Steps({ data, step, error: parentError, onChangeSuccess }) {
   const title = tagWrapper(
     formatMessage({ id: data.title }),
     /`(\S*?[^`]*)`/gim,
-    styles.StepDescriptionWord
+    styles.StepTitleWord
   ).replace(/\\n/gim, "<br/>");
 
   const description = tagWrapper(
