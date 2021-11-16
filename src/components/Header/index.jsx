@@ -3,6 +3,7 @@ import ReactTooltip from "react-tooltip";
 import { FormattedMessage } from "react-intl";
 import Link from "next/link";
 import dynamic from "next/dynamic";
+import { useRouter } from "next/router";
 import cx from "classnames";
 
 import * as styles from "./Header.module.css";
@@ -11,7 +12,9 @@ import Icon from "../Icon";
 
 const LanguageSwitch  = dynamic(import("../LanguageSwitch"), { ssr: false });
 
-function LandingHeader() {
+function Header() {
+  const { pathname } = useRouter();
+
   return (
     <div className="container">
       <div className="row">
@@ -26,7 +29,7 @@ function LandingHeader() {
                 />
                   <img
                     className="visible-md visible-lg"
-                    src="/logo.png"
+                    src="/logo.svg"
                     alt="RegexLearn"
                   />
               </a>
@@ -34,12 +37,12 @@ function LandingHeader() {
 
             <div className={styles.HeaderNav}>
               <Link href="/learn" passHref>
-                <a className={styles.HeaderLink}>
+                <a className={cx(styles.HeaderLink, { [styles.HeaderLinkActive]: pathname === "/learn"})}>
                   <FormattedMessage id="landing.learn" />
                 </a>
               </Link>
               <Link href="/cheatsheet" passHref>
-                <a className={styles.HeaderLink}>
+                <a className={cx(styles.HeaderLink, { [styles.HeaderLinkActive]: pathname === "/cheatsheet"})}>
                   <FormattedMessage id="landing.cheatsheet" />
                 </a>
               </Link>
@@ -76,4 +79,4 @@ function LandingHeader() {
   );
 }
 
-export default LandingHeader;
+export default Header;
