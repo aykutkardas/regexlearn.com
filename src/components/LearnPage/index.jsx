@@ -4,7 +4,7 @@ import lookie from "lookie";
 
 import Header from "../LearnHeader";
 import Step from "../Step";
-import Navigation from "../Navigation";
+import LearnFooter from "../LearnFooter";
 
 import Mousetrap from "../../utils/mousetrap";
 import data from "../../data.json";
@@ -76,7 +76,7 @@ export default function Learn() {
         onChangeSuccess={onChangeSuccess}
         error={error}
       />
-      <Navigation
+      <LearnFooter
         steps={data}
         step={step}
         prevStep={prevStep}

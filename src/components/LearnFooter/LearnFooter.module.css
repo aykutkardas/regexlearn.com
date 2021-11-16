@@ -1,0 +1,115 @@
+.LearnFooter {
+  width: 100%;
+  min-height: 80px;
+  margin-bottom: 20px;
+}
+
+.LearnFooterRow {
+  display: flex;
+  height: 100%;
+}
+
+.LearnFooterWrapper {
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+}
+
+.LearnFooterPrevWrapper {
+  composes: LearnFooterWrapper;
+  justify-content: flex-start;
+}
+
+.LearnFooterSocialWrapper {
+  composes: LearnFooterWrapper;
+  justify-content: center;
+}
+
+.LearnFooterNextWrapper {
+  composes: LearnFooterWrapper;
+  justify-content: flex-end;
+}
+
+.NavigationStep {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+  flex-direction: column;
+  height: 100%;
+}
+
+.NavigationStep:hover {
+  opacity: 0.7;
+}
+
+.NavigationStepText {
+  display: flex;
+  align-items: center;
+}
+
+.NavigationStepPrev {
+  composes: NavigationStep;
+  margin-right: auto;
+  align-items: flex-end;
+  text-align: left;
+}
+
+.NavigationStepNext {
+  composes: NavigationStep;
+  margin-left: auto;
+  align-items: flex-start;
+  text-align: right;
+}
+
+.NavigationStepPrev .NavigationStepIcon {
+  margin-right: 5px;
+}
+
+.NavigationStepNext .NavigationStepIcon {
+  margin-left: 5px;
+}
+
+.NavigationStepNextWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 27px;
+  margin: 5px;
+}
+
+.NavigationStepPrev .NavigationStepText {
+  margin-right: auto;
+}
+
+.NavigationStepNext .NavigationStepText {
+  margin-left: auto;
+}
+
+.NavigationStepStatusIcon {
+  color: var(--learn-gray);
+  margin-left: auto;
+  width: 20px;
+  height: 20px;
+}
+
+.NavigationStepStatusIconUnlock {
+  color: var(--learn-success);
+}
+
+.NavigationStepStatusIconError {
+  color: var(--learn-error);
+}
+
+.NavigationSocial {
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.NavigationSocialIcon {
+  margin: 0 10px;
+}
