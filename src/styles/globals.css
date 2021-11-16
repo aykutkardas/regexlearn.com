@@ -70,3 +70,5 @@ body {
 }
 
 .flex-1 { flex: 1; }
+
+.container, .container-fluid { width: 100%; }
