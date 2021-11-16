@@ -5,7 +5,6 @@ import Head from "next/head";
 import tagWrapper from "../utils/tagWrapper";
 
 import Button from "../components/Button";
-import RegexDemo from "../components/RegexDemo";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
