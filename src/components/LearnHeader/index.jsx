@@ -9,7 +9,7 @@ import Progress from "../Progress";
 
 const Header = ({ steps, step }) => (
   <div className={cx(styles.LearnHeader, "container-fluid")}>
-    <header className={styles.LearnHeaderRow}>
+    <header className={cx(styles.LearnHeaderRow, "row")}>
       <div className={cx(styles.LearnHeaderHomeWrapper, "col-xs-4")}>
         <div className="header-social">
           <Link href="/" passHref>
