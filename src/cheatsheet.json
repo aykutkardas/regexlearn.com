@@ -184,7 +184,6 @@
     "data": [
       {
         "title": "cheatsheet.positiveLookahead.title",
-        "description": "-",
         "content": "1st 2nd 3pc",
         "code": "(?=)",
         "flags": "g",
@@ -192,7 +191,6 @@
       },
       {
         "title": "cheatsheet.negativeLookahead.title",
-        "description": "-",
         "content": "1st 2nd 3pc",
         "code": "(?!)",
         "flags": "g",
@@ -200,7 +198,6 @@
       },
       {
         "title": "cheatsheet.positiveLookbehind.title",
-        "description": "-",
         "content": "#1 $2 %3",
         "code": "(?<=)",
         "flags": "g",
@@ -208,7 +205,6 @@
       },
       {
         "title": "cheatsheet.negativeLookbehind.title",
-        "description": "-",
         "content": "#1 $2 %3",
         "code": "(?!)",
         "flags": "g",

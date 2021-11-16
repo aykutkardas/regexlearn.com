@@ -18,6 +18,7 @@
   font-size: 13px;
   color: var(--landing-link-disabled);
   margin: 0;
+  margin-left: 80px;
 }
 
 .CollapseTitleIcon {

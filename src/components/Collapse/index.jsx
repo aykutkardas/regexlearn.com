@@ -26,9 +26,9 @@ function Collapse({ title, data }) {
         </div>
         <div style={{ height: show ? 190 : 0}} className={styles.CollapseContent}>
             <div className={styles.CollapseContentInner}>
-              <p className={styles.CollapseDescription}>
-                <FormattedMessage id={data.description || "general.prev"} />
-              </p>
+              {data.description && <p className={styles.CollapseDescription}>
+                <FormattedMessage id={data.description} />
+              </p>}
               <CheatsheetDemo data={data} />
             </div>
         </div>
