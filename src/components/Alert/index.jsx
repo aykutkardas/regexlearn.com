@@ -1,7 +1,9 @@
 import { useState } from "react";
 import lookie from "lookie";
+import cx from "classnames";
 
 import Icon from "../Icon";
+import * as styles from "./Alert.module.css";
 
 const Alert = ({ children, ...props }) => {
   const visible = lookie.get("devAlertStatus") !== "hidden";
@@ -14,10 +16,10 @@ const Alert = ({ children, ...props }) => {
 
   return (
     isVisible && (
-      <div className="alert" {...props}>
-        <div className="alert-content">{children}</div>
+      <div className={styles.Alert} {...props}>
+        <div className={styles.AlertContent}>{children}</div>
         <div
-          className="alert-close"
+          className={styles.AlertClose}
           role="button"
           tabIndex="0"
           onClick={handleClose}
