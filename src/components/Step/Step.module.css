@@ -9,6 +9,11 @@
   margin: 0 auto;
 }
 
+.StepImage {
+  width: 240px;
+  margin: 0 auto;
+}
+
 .StepTitle {
   color: var(--learn-text-title);
   font-size: 28px;

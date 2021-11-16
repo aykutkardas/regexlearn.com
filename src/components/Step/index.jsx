@@ -26,7 +26,8 @@ function Steps({ data, step, error: parentError, onChangeSuccess }) {
 
   return (
     <div className={styles.Step}>
-      <h4 className={styles.StepTitleOriginal}>{data.originalTitle}</h4>
+      {data.image && <img className={styles.StepImage} src={data.image} alt="" width="100px" />}
+      {data.originalTitle && <h4 className={styles.StepTitleOriginal}>{data.originalTitle}</h4>}
       <h2
         className={styles.StepTitle}
         dangerouslySetInnerHTML={{ __html: title }}

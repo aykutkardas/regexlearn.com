@@ -107,6 +107,7 @@
   {
     "title": "examples.starter.title",
     "description": "examples.starter.description",
+    "image": "/Practise Starter.webp",
     "interactive": false
   },
   {
@@ -196,6 +197,7 @@
   {
     "title": "examples.finish.title",
     "description": "examples.finish.description",
+    "image": "/Practise Starter.webp",
     "interactive": false
   },
   {
@@ -279,6 +281,7 @@
   {
     "title": "examples.starter.title",
     "description": "examples.starter.description",
+    "image": "/Practise Starter.webp",
     "interactive": false
   },
   {
@@ -350,6 +353,7 @@
   {
     "title": "examples.finish.title",
     "description": "examples.finish.description",
+    "image": "/Practise Starter.webp",
     "interactive": false
   },
   {
@@ -619,6 +623,7 @@
   {
     "title": "steps.completeAllSteps.title",
     "description": "steps.completeAllSteps.description",
+    "image": "/Learn.webp",
     "interactive": false
   }
 ]
