@@ -215,7 +215,7 @@
   "steps.escapeCharacter.description": "Regex yazarken kullandığımız özel karakterler vardır. `{ } [ ] / \\ + * . $ ^ | ?` Bu karakterlerin kendilerini seçebilmek için öncesinde bir kaçış karakteri `\\` kullanmamız gerekir. Örneğin metindeki nokta `.` ve yıldız `*` karakterlerini seçmek için öncesine bir kaçış karakteri `\\` ekleyelim.",
 
   "steps.caret.title": "Şapka İşareti `^`:\\nSatır Başlangıcına Göre Seçmek",
-  "steps.caret.description": "Sayıları bulmak için `\\d` ifadesini kullanıyorduk. Sadece satır başında geçen sayıları bulmak için bu ifadenin başına `^` işaretini ekleyin.",
+  "steps.caret.description": "Sayıları bulmak için `[0-9]` ifadesini kullanıyorduk. Sadece satır başında geçen sayıları bulmak için bu ifadenin başına `^` işaretini ekleyin.",
 
   "steps.dollar.title": "Dolar İşareti `$`:\\nSatır Sonuna Göre Seçmek",
   "steps.dollar.description": "Sadece satır sonunda geçen `html` metinlerini bulmak için `$` işaretini `html` değerinden sonra kullanalım.",
