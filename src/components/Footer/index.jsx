@@ -1,3 +1,4 @@
+import { FormattedMessage } from "react-intl";
 import Icon from "../Icon";
 
 import * as styles from "./Footer.module.css";
@@ -31,7 +32,7 @@ function Footer() {
                 className={styles.FooterCopyrightLink}
                 href="mailto:aykutkrds@gmail.com"
               >
-                Become a Sponsor
+                <FormattedMessage id="general.becomeSponsor" />
               </a>
             </div>
           </div>
