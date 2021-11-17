@@ -196,7 +196,7 @@
   "examples.quantifierMin.description": "Type the expression using curly braces `{}` to select numbers between `0` and `9` that occur at least `2` times in the text.",
 
   "examples.quantifierRange.title": "Practice: Curly Braces - 3",
-  "examples.quantifierRange.description": "Write the expression using curly brackets `{}` to select the numbers from `0` to `9` in the text that is at least between `1` and `4`.",
+  "examples.quantifierRange.description": "Write the expression using curly brackets `{}` to select all number sequences that are between `1` and `4` digits long. Each digit can be from `0` to `9`.",
 
   "steps.groupping.title": "Parentheses `( )`: Grouping",
   "steps.groupping.description": "We can group an expression and use these groups to reference or enforce some rules. To group an expression, we enclose `()` in parentheses. For now just group `and` below.",
