@@ -190,7 +190,7 @@
   "examples.questionMark.description": "Write the expression indicating that the letter `n` is optional in the text, using the question mark `?`. Thus, both the words `a` and `an` can be selected.",
 
   "examples.quantifier.title": "Practice: Curly Braces - 1",
-  "examples.quantifier.description": "Write the expression using curly brackets `{}` to select `4` of the numbers from `0` to `9` in the text.",
+  "examples.quantifier.description": "Write the expression using curly brackets `{}` to select number sequences with a length of `4` from the text. Digits can have values from `0` to `9`.",
 
   "examples.quantifierMin.title": "Practice: Curly Braces - 2",
   "examples.quantifierMin.description": "Type the expression using curly braces `{}` to select numbers between `0` and `9` that occur at least `2` times in the text.",
