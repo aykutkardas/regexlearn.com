@@ -23,6 +23,20 @@ button {
     border-color: var(--learn-primary-darken);
   }
 
+  &.github {
+    display: flex;
+    font-size: 16px;
+    align-items: baseline;
+    color: var(--learn-white);
+    background: var(--learn-bg-block);
+    border-color: var(--learn-bg-block-tag);
+    justify-content: center;
+
+    span {
+      margin-left: 10px;
+    }
+  }
+
   &.warning {
     color: var(--learn-black);
     background: var(--learn-warning);

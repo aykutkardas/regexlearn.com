@@ -1,17 +1,16 @@
-# regexlearn.com (BETA)
+# [regexlearn.com](https://regexlearn.com)
 
 This is a project that makes learning how to write regex easy.
 
-![Preview](./preview.png)
 
 ## Features
 
 - **Step by Step Learn**
 - **Interactive**
 - **Shortcut Friendly**
-- Practise _(Soon)_
+- **Cheatsheet**
+- Practice _(Soon)_
 - Playground _(Soon)_
-- Cheatsheet _(Soon)_
 
 ## Available Languages
 
@@ -21,6 +20,13 @@ This is a project that makes learning how to write regex easy.
 
 <br>
 
+![Preview](preview/preview-landing.png)
+![Preview](preview/preview-learn.png)
+![Preview](preview/preview-cheatsheet.png)
+
+<br>
+
+
 <h2 align="center">Sponsoring</h2>
 
-This project is developed as open-source in our spare time. [Contact](mailto:aykutkrds@gmail.com) to support and appear as a sponsor.
+<p align="center">This project is developed as open-source in our spare time. <a href="mailto:aykutkrds@gmail.com">Contact</a> to support and appear as a sponsor.</p>

@@ -1,25 +1,106 @@
 .landing {
-    h1 {
-      margin: 0;
-      font-size: 53px;
-    }
+  h1 {
+    margin: 0;
+    font-size: 53px;
+  }
   
-    p {
-      font-size: 20px;
-      line-height: 30px;
+  p {
+    font-size: 20px;
+    line-height: 30px;
   
-      span.highlight {
-        color: var(--learn-success);
-      }
-    }
-  
-    @media only screen and (max-width: 600px) {
-      h1 {
-        font-size: 33px;
-      }
-  
-      a, button {
-        width: 100%;
-      }
+    span.highlight {
+      color: var(--learn-success);
     }
   }
+  
+  @media only screen and (max-width: 600px) {
+    h1 {
+      font-size: 33px;
+    }
+  
+    a, button {
+      width: 100%;
+    }
+  }
+}
+
+.main-section {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+}
+
+.sub-section {
+  display: flex;
+  align-items: center;
+  margin-bottom: 50px;
+
+  a {
+    text-decoration: none !important;
+  }
+
+  img {
+    max-width: 500px;
+  }
+}
+
+.landing-section {
+  h1 {
+    margin: 0;
+    font-size: 43px;
+  }
+  
+  p {
+    font-size: 18px;
+    line-height: 30px;
+  
+    span.highlight {
+      color: var(--learn-success);
+    }
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .sub-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+
+    img {
+      max-width: 60%;
+      margin: 0 auto;
+    }
+  }
+
+  .sub-section-reverse {
+    display: flex;
+    .sub-section-image {
+      order: 1;
+    }
+    .sub-section-content {
+      order: 2;
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .landing-section {
+    h1 {
+      font-size: 33px;
+    }
+
+    a, button {
+      width: 100%;
+    }
+  }
+
+  .sub-section {
+    text-align: center;
+    img {
+      max-width: 90%;
+    }
+  }
+}

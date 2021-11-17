@@ -49,10 +49,6 @@ body {
   color: var(--learn-white);
 }
 
-.main-section {
-  display: flex;
-  align-items: center;
-}
 
 .content {
   flex: 1;
