@@ -31,7 +31,7 @@ function Footer() {
                 className={styles.FooterCopyrightLink}
                 href="mailto:aykutkrds@gmail.com"
               >
-                Became a Sponsor
+                Become a Sponsor
               </a>
             </div>
           </div>
