@@ -1,6 +1,7 @@
 .Footer {
   display: flex;
   align-items: center;
+  flex-direction: column;
   height: 80px;
   justify-content: center;
   width: 100%;
@@ -22,4 +23,21 @@
 
 .FooterSocialLink:hover {
   color: var(--landing-link-hover);
+}
+
+.FooterCopyright {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  margin: 10px 0;
+}
+
+.FooterCopyrightLink {
+  text-decoration: none;
+  user-select: none;
+  color: var(--landing-link-disabled);
+}
+
+.FooterCopyrightLink:hover {
+  opacity: .8;
 }

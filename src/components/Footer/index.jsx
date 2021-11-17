@@ -26,6 +26,14 @@ function Footer() {
                 <Icon icon="twitter" size={20} color="white" />
               </a>
             </div>
+            <div className={styles.FooterCopyright}>
+              <a
+                className={styles.FooterCopyrightLink}
+                href="mailto:aykutkrds@gmail.com"
+              >
+                Became a Sponsor
+              </a>
+            </div>
           </div>
         </div>
       </div>
