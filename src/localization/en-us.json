@@ -202,7 +202,7 @@
   "steps.groupping.description": "We can group an expression and use these groups to reference or enforce some rules. To group an expression, we enclose `()` in parentheses. For now just group `and` below.",
 
   "steps.groupReference.title": "Referencing a Group",
-  "steps.groupReference.description": "In order not to repeat the same thing in repetitive statements, we can refer to a group of statements that we have written before. For example, in this example, the value `444` is grouped as the expression `(\\d{3})` and the value `0` is grouped as the expression `(\\d)`. We write `\\1` to refer to this group that we defined first. This means the first group defined. To avoid typing `(\\d{3})` again at the end of our expression, reference this group by typing `\\1`.",
+  "steps.groupReference.description": "In order not to repeat the same thing in repetitive statements, we can refer to a group of statements that we have written before. For example, in this example, the value `444` is grouped as the expression `([0-9]{3})` and the value `0` is grouped as the expression `([0-9])`. We write `\\1` to refer to this group that we defined first. This means the first group defined. To avoid typing `([0-9]{3})` again at the end of our expression, reference this group by typing `\\1`.",
 
   "steps.nonCapturingGroupping.title": "Parentheses `(?: )`: Non-capturing Grouping",
   "steps.nonCapturingGroupping.description": "You can group an expression and ensure that it is not caught by references. For example, below are two groups. However, the first group reference we denote with `\\1` actually points to the second group, as the first is an uncaught group.",
