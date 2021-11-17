@@ -1,5 +1,4 @@
 import { useCallback, useContext, useEffect, useState } from "react";
-import cx from "classnames";
 
 import * as styles from "./LanguageSwitch.module.css";
 import Icon from "../Icon";
@@ -48,8 +47,7 @@ const LanguageSwitch = () => {
       <div className={styles.LanguageSwitchCurrent}
         role="button"
         tabIndex="0"
-        onClick={toggleLang}
-        onKeyDown={toggleLang}>
+        onClick={toggleLang}>
         <Shortcut command={shortcuts.languageSwitch} />
         <span>{langNames[lang]}</span>
         <Icon
