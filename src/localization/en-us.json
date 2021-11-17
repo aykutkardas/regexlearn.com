@@ -137,7 +137,7 @@
   "steps.range.title": "Letter Range`[a-z]`",
   "steps.range.description": "To find the letters in the specified range, the starting letter and the ending letter are written in square brackets `[]` with a dash between them `-`. It is case-sensitive. Type the expression that will select all lowercase letters between `e` and `o`, including themselves.",
 
-  "steps.rangeNumber.title": "Number Range`[a-z]`",
+  "steps.rangeNumber.title": "Number Range`[0-9]`",
   "steps.rangeNumber.description": "To find the numbers in the specified range, the starting number and the ending number are written in square brackets `[]` with a dash `-` between them. Write an expression that will select all numbers between `3` and `6`, including themselves.",
 
   "examples.basicMatchers.title": "Practice: Basic Matcher",
