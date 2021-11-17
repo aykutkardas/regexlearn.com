@@ -23,7 +23,7 @@
   "landing.cheatsheet": "Cheatsheet",
 
   "section.learn.title": "Öğren",
-  "section.learn.content": "`Regular Expressions` (Düzenli İfadeler)'in kısaltması olan RegEx veya RegExp söz dizimi (syntax) kuralları çerçevesinde oluşturulan bir karakter dizisidir. Bulma, eşleştirme, düzenleme gibi komutları uygulayabileceğiniz RegEx ile hızlı ve pratik bir şekilde verilerinizi yönetebilirsiniz. Phyton, SQL, Javascript, R gibi programlama dillerinde, Google Analytics, Google Data Studio ve kod işlemlerinde kullanabileceğiniz RegEx'i `RegexLearn` üzerinden örneklerle online bir şekilde hemen öğrenin.",
+  "section.learn.content": "`Regular Expressions` (Düzenli İfadeler)'in kısaltması olan RegEx veya RegExp söz dizimi (syntax) kuralları çerçevesinde oluşturulan bir karakter dizisidir. Bulma, eşleştirme, düzenleme gibi komutları uygulayabileceğiniz RegEx ile hızlı ve pratik bir şekilde verilerinizi yönetebilirsiniz. Python, SQL, Javascript, R gibi programlama dillerinde, Google Analytics, Google Data Studio ve kod işlemlerinde kullanabileceğiniz RegEx'i `RegexLearn` üzerinden örneklerle online bir şekilde hemen öğrenin.",
 
   "section.cheatsheet.button": "Şimdi İncele",
   "section.cheatsheet.title": "Cheatsheet",
