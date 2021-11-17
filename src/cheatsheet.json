@@ -206,7 +206,7 @@
       {
         "title": "cheatsheet.negativeLookbehind.title",
         "content": "#1 $2 %3",
-        "code": "(?!)",
+        "code": "(?<!)",
         "flags": "g",
         "regex": "(?<!%)\\d"
       }
