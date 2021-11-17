@@ -538,6 +538,7 @@
     "flags": "g",
     "initialValue": "\\d+",
     "regex": ["(?<=\\$)\\d+"],
+    "safariAccept": true,
     "answer": ["5"]
   },
   {
@@ -549,6 +550,7 @@
     "flags": "g",
     "initialValue": "\\d+",
     "regex": ["(?<!\\$)\\d+"],
+    "safariAccept": true,
     "answer": ["1064"]
   },
   {

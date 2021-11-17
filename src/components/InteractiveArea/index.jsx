@@ -9,6 +9,7 @@ import lookie from "lookie";
 import Mousetrap from "../../utils/mousetrap";
 import setCaretPosition from "../../utils/setCaretPosition";
 import tagWrapper from "../../utils/tagWrapper";
+import isSafari from "../../utils/isSafari";
 
 import Hint from "../Hint";
 import ReportStep from "../ReportStep";
@@ -27,8 +28,22 @@ function InteractiveArea({ data, step, isShow, parentError, onChangeSuccess }) {
   const [success, setSuccess] = useState(false);
   const [match, setMatch] = useState(false);
 
+  const isSafariAndAccept = isSafari() && data.safariAccept;
+
   const checkRegex = () => {
     if (data.interactive === false) return true;
+
+    if (isSafariAndAccept) {
+      console.log(data.regex[0], regex)
+      if (data.regex[0] == regex) {
+        setError(false);
+        setSuccess(true);
+      } else {
+        setError(true);
+        setSuccess(false);
+      }
+      return true;
+    }
 
     try {
       let $regex = regex;
