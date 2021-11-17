@@ -15,76 +15,49 @@ const langList = Object.keys(langs).map((langKey) => ({
   label: langNames[langKey],
 }));
 
+const getCurrentIndex = (langList, lang) => {
+  return langList.indexOf(item => item.value === lang);
+}
+
 const LanguageSwitch = () => {
   const { lang, setLang } = useContext(Context);
+  const [currentLangIndex, setCurrentLangIndex] = useState(getCurrentIndex(langList, lang));
 
-  const [visible, setVisible] = useState(false);
+  const toggleLang = useCallback(() => {
+    const newLangIndex = currentLangIndex + 1;
+    if (newLangIndex > langList.length - 1) {
+      setCurrentLangIndex(0);
+      setLang(langList[0].value);
 
-  const handleClick = (value) => {
-    setLang(value);
-  };
+    } else {
+      setCurrentLangIndex(newLangIndex);
+      setLang(langList[newLangIndex].value);
+    }
+  }, [currentLangIndex, setLang]);
 
-  const toggleVisible = useCallback(
-    (e) => {
-      e.preventDefault();
-      setVisible(!visible);
-    },
-    [visible]
-  );
-
-  const availableLangList = langList.filter((item) => item.value !== lang);
 
   useEffect(() => {
-    Mousetrap.bindGlobal(shortcuts.languageSwitch, toggleVisible);
-
-    availableLangList.forEach((item, index) => {
-      Mousetrap.bindGlobal(`${shortcuts.rootKey}+${index + 1}`, (e) => {
-        e.preventDefault();
-        setLang(item.value);
-      });
-    });
+    Mousetrap.bindGlobal(shortcuts.languageSwitch, toggleLang);
 
     return () =>
-      Mousetrap.unbind([
-        shortcuts.languageSwitch,
-        ...availableLangList.map(
-          (item, index) => `${shortcuts.rootKey}+${index}`
-        ),
-      ]);
-  }, [visible, lang, toggleVisible, availableLangList, setLang]);
+      Mousetrap.unbind(shortcuts.languageSwitch);
+  }, [lang, toggleLang, setLang]);
 
   return (
-    <div className={styles.languageSwitch}>
-      <div className={styles.languageSwitchCurrent}>
+    <div className={styles.LanguageSwitch}>
+      <div className={styles.LanguageSwitchCurrent}
+        role="button"
+        tabIndex="0"
+        onClick={toggleLang}
+        onKeyDown={toggleLang}>
         <Shortcut command={shortcuts.languageSwitch} />
         <span>{langNames[lang]}</span>
         <Icon
-          className={styles.languageSwitchCurrentIcon}
+          className={styles.LanguageSwitchCurrentIcon}
           icon="earth"
           color="#fff"
           size={20}
         />
-      </div>
-      <div
-        className={cx(styles.languageSwitchList, {
-          [styles.languageSwitchListVisible]: visible,
-        })}
-      >
-        {availableLangList.map((item, index) => (
-          <div
-            key={item.value}
-            role="button"
-            tabIndex="0"
-            onClick={() => handleClick(item.value)}
-            onKeyDown={() => handleClick(item.value)}
-            className={styles.languageSwitchListItem}
-          >
-            <div>
-              <Shortcut command={`${shortcuts.rootKey}+${index + 1}`} />
-            </div>
-            <span>{item.label}</span>
-          </div>
-        ))}
       </div>
     </div>
   );

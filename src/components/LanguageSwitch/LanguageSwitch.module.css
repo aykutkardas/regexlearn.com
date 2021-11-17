@@ -1,67 +1,37 @@
-.languageSwitch {
+.LanguageSwitch {
   margin-left: 10px;
   position: relative;
   cursor: pointer;
   user-select: none;
 }
 
-.languageSwitch:hover .languageSwitchList {
+.LanguageSwitch:hover .LanguageSwitchList {
   display: flex;
   flex-direction: column;
 }
 
-.languageSwitchCurrent {
+.LanguageSwitchCurrent {
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
 }
 
-.languageSwitchCurrent span {
+.LanguageSwitchCurrent span {
   color: var(--landing-link-disabled);
 }
 
-.languageSwitchCurrentIcon {
+.LanguageSwitchCurrentIcon {
   margin-left: 8px;
 }
 
-.languageSwitchList {
-  position: absolute;
-  display: none;
-  font-size: 14px;
-  right: 0;
-  width: 150px;
-}
-
-.languageSwitchListVisible {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.languageSwitchCurrent span,
-.languageSwitchListItem span {
+.LanguageSwitchCurrent span {
   min-width: 50px;
   text-align: right;
 }
 
-.languageSwitchListItem {
-  margin-left: auto;
-  padding: 5px;
-  color: var(--learn-white);
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  margin-right: 22px;
-}
-
-
 @media only screen and (max-width: 600px) {
-  .languageSwitchCurrent span {
+  .LanguageSwitchCurrent span {
     display: none;
-  }
-
-  .languageSwitchListItem {
-    margin-top: 10px;
   }
 }
