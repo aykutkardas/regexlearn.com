@@ -30,14 +30,20 @@ function InteractiveArea({ data, step, isShow, parentError, onChangeSuccess }) {
 
   const isSafariAndAccept = isSafari() && data.safariAccept;
 
+  const toastConfig = {
+    theme: "colored",
+    autoClose: true,
+    position: "top-center",
+  };
+
   const checkRegex = () => {
     if (data.interactive === false) return true;
 
     if (isSafariAndAccept) {
-      console.log(data.regex[0], regex)
       if (data.regex[0] == regex) {
         setError(false);
         setSuccess(true);
+        toast.success(formatMessage({ id: "general.completedStep" }), toastConfig);
       } else {
         setError(true);
         setSuccess(false);
@@ -84,11 +90,7 @@ function InteractiveArea({ data, step, isShow, parentError, onChangeSuccess }) {
       }
 
       if (isChanged && isSuccess) {
-        toast.success(formatMessage({ id: "general.completedStep" }), {
-          theme: "colored",
-          autoClose: true,
-          position: "top-center",
-        });
+        toast.success(formatMessage({ id: "general.completedStep" }), toastConfig);
 
         const completedSteps = lookie.get("completedSteps") || [];
 
@@ -211,7 +213,9 @@ function InteractiveArea({ data, step, isShow, parentError, onChangeSuccess }) {
             spellCheck={false}
           />
         </div>
-        {data.useFlagsControl && <FlagBox onChange={setIsChanged} flags={flags} setFlags={setFlags} />}
+        {data.useFlagsControl && (
+          <FlagBox onChange={setIsChanged} flags={flags} setFlags={setFlags} />
+        )}
       </div>
     </div>
   );
