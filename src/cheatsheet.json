@@ -224,8 +224,8 @@
         "regex": "b(e)+p"
       },
       {
-        "title": "cheatsheet.asteriks.title",
-        "description": "cheatsheet.asteriks.description",
+        "title": "cheatsheet.asterisk.title",
+        "description": "cheatsheet.asterisk.description",
         "content": "bp bep beep beeep",
         "code": "*",
         "flags": "g",
