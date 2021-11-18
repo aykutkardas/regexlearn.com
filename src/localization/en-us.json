@@ -98,8 +98,8 @@
   "cheatsheet.quantifiersAndAlternation": "Quantifiers And Alternation",
   "cheatsheet.plus.title": "Plus",
   "cheatsheet.plus.description": "Expression matches one or more.",
-  "cheatsheet.asteriks.title": "Astekriks",
-  "cheatsheet.asteriks.description": "Expression matches zero or more.",
+  "cheatsheet.asterisk.title": "Astekrisk",
+  "cheatsheet.asterisk.description": "Expression matches zero or more.",
   "cheatsheet.quantifier.title": "Quantifier",
   "cheatsheet.quantifier.description": "Expression matches within specified ranges.",
   "cheatsheet.optional.title": "Optional",
@@ -162,8 +162,8 @@
   "steps.repetitions.title": "Repetitions",
   "steps.repetitions.description": "Some special characters are used to specify how many times a character will be repeated in the text. These special characters are the plus `+`, the asterisk `*`, and the question mark `?`.",
 
-  "steps.asteriks.title": "Asterisk `*`",
-  "steps.asteriks.description": "We put an asterisk `*` at the end to indicate that a character does not match at all or can match many times. For example, indicate that the letter `e` should never occur in the text, or it can occur once or more side by side.",
+  "steps.asterisk.title": "Asterisk `*`",
+  "steps.asterisk.description": "We put an asterisk `*` at the end to indicate that a character does not match at all or can match many times. For example, indicate that the letter `e` should never occur in the text, or it can occur once or more side by side.",
 
   "steps.plusCharacter.title": "Plus Sign `+`",
   "steps.plusCharacter.description": "To indicate that a character can occur one or more times, we put a plus sign `+` at the end. For example, indicate that the letter `e` can occur one or more times in the text.",
@@ -180,8 +180,8 @@
   "steps.quantifierRange.title": "Curly Braces - 3",
   "steps.quantifierRange.description": "To express the occurrence of a character in a certain number range, we write curly braces `{x,y}` with the interval we want to go to the end. For example, indicate that the following letter `e` can only occur between `1` and `3`.",
 
-  "examples.asteriks.title": "Practice: Asterisk `*`",
-  "examples.asteriks.description": "Use the asterisk `*` to write the expression that will select each word, suitable for the absence of the letter `e` in the text and the presence of more than one.",
+  "examples.asterisk.title": "Practice: Asterisk `*`",
+  "examples.asterisk.description": "Use the asterisk `*` to write the expression that will select each word, suitable for the absence of the letter `e` in the text and the presence of more than one.",
 
   "examples.plusCharacter.title": "Practice: Plus Sign `+`",
   "examples.plusCharacter.description": "Write the expression using the plus sign `+` to select words in which the letter `e` occurs one or more times in the text.",
@@ -247,10 +247,10 @@
   "steps.negativeLookahead.description": "For example, we want to select numbers other than the hour value in the text. Therefore, we need to write the negative look-ahead `(?!)` expression after our expression to select only the numerical values that do not have `PM` after them. Include `PM` after the `!` sign inside the parentheses.",
   
   "steps.positiveLookbehind.title": "Positive Lookbehind: `(?<=)`",
-  "steps.positiveLookbehind.description": "For example, we want to select the price value in the text. Therefore, to select only the number values that precede `$`, we need to write the positive lookbehind expression `(?<=)` before our expression. Add `\\$` after the `=` sign inside the brackets.",
+  "steps.positiveLookbehind.description": "For example, we want to select the price value in the text. Therefore, to select only the number values that preceded by `$`, we need to write the positive lookbehind expression `(?<=)` before our expression. Add `\\$` after the `=` sign inside the brackets.",
 
   "steps.negativeLookbehind.title": "Negative Lookbehind: `(?&lt;!)`",
-  "steps.negativeLookbehind.description": "For example, we want to select numbers in the text other than the price value. Therefore, to select only numeric values that do not precede `$`, we need to write the negative lookbehind `(?&lt;!)` before our expression. Add `\\$` after the `!` inside the brackets.",
+  "steps.negativeLookbehind.description": "For example, we want to select numbers in the text other than the price value. Therefore, to select only numeric values that do not preceded by `$`, we need to write the negative lookbehind `(?&lt;!)` before our expression. Add `\\$` after the `!` inside the brackets.",
 
   "steps.flags.title": "Flags",
   "steps.flags.description": "Flags change the output of the expression. That's why flags are also called `modifiers`. Determines whether the typed expression treats text as separate lines, is case sensitive, or finds all matches. Continue to the next step to learn the flags.",

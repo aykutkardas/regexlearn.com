@@ -98,8 +98,8 @@
   "cheatsheet.quantifiersAndAlternation": "Niceleyiciler ve Alternasyon",
   "cheatsheet.plus.title": "Artı İşareti",
   "cheatsheet.plus.description": "İfade bir veya daha fazlasıyla eşleşir.",
-  "cheatsheet.asteriks.title": "Yıldız İşareti",
-  "cheatsheet.asteriks.description": "İfade sıfır veya daha fazlasıyla eşleşir.",
+  "cheatsheet.asterisk.title": "Yıldız İşareti",
+  "cheatsheet.asterisk.description": "İfade sıfır veya daha fazlasıyla eşleşir.",
   "cheatsheet.quantifier.title": "Niceleyici",
   "cheatsheet.quantifier.description": "İfade, belirtilen aralıklarda eşleşir.",
   "cheatsheet.optional.title": "Opsiyonal",
@@ -161,8 +161,8 @@
   "steps.repetitions.title": "Tekrarlar",
   "steps.repetitions.description": "Bir karakterin kaç defa tekrar edeceğini, metinde bulunup bulunmayacağını ifade etmek için bazı özel karakterler kullanılır. Bu özel karakterler artı `+`, yıldız `*` ve soru işareti `?` dir.",
 
-  "steps.asteriks.title": "Yıldız İşareti `*`",
-  "steps.asteriks.description": "Bir karakterin hiç eşleşmemesini ya da çok sayıda eşleşebileceğini ifade etmek için sonuna `*` yıldız işareti koyarız. Örneğin metinde `e` harfinin hiç geçmeyeceğini ya da yan yana bir ya da daha fazla geçebileceğini belirtin.",
+  "steps.asterisk.title": "Yıldız İşareti `*`",
+  "steps.asterisk.description": "Bir karakterin hiç eşleşmemesini ya da çok sayıda eşleşebileceğini ifade etmek için sonuna `*` yıldız işareti koyarız. Örneğin metinde `e` harfinin hiç geçmeyeceğini ya da yan yana bir ya da daha fazla geçebileceğini belirtin.",
 
   "steps.plusCharacter.title": "Artı İşareti `+`",
   "steps.plusCharacter.description": "Bir karakterin bir ya da daha fazla geçebileceğini ifade etmek için sonuna `+` artı işareti koyarız. Örneğin metinde `e` harfinin bir ya da yan yana daha fazla geçebileceğini belirtin.",
@@ -179,8 +179,8 @@
   "steps.quantifierRange.title": "Süslü Parantezler - 3",
   "steps.quantifierRange.description": "Bir karakterin belirli bir sayı aralığında geçmesini ifade etmek için sonuna geçmesini istediğimiz aralıkla birlikte süslü parantezleri `{x,y}` yazarız. Örneğin aşağıdaki `e` harfinin sadece `1` ile `3` arasında geçebileceğini belirtin.",
 
-  "examples.asteriks.title": "Pratik: Yıldız İşareti `*`",
-  "examples.asteriks.description": "Metindeki `e` harfinin olmama ve birden fazla olma durumuna uygun, her kelimeyi seçecek ifadeyi yıldız işaretini `*` kullanarak yazın.",
+  "examples.asterisk.title": "Pratik: Yıldız İşareti `*`",
+  "examples.asterisk.description": "Metindeki `e` harfinin olmama ve birden fazla olma durumuna uygun, her kelimeyi seçecek ifadeyi yıldız işaretini `*` kullanarak yazın.",
 
   "examples.plusCharacter.title": "Pratik: Artı İşareti `+`",
   "examples.plusCharacter.description": "Metindeki `e` harfinin bir veya daha fazla geçtiği kelimeleri seçecek ifadeyi artı işaretini `+` kullanarak yazın.",
