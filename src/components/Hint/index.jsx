@@ -6,19 +6,18 @@ import Mousetrap from "../../utils/mousetrap";
 import shortcuts from "../../shortcuts";
 import Shortcut from "../Shortcut";
 
-
+import * as styles from "./Hint.module.css";
 
 const Hint = ({ regex, flags }) => {
   const hintRef = useRef(null);
   const [showStatus, setShowStatus] = useState(false);
 
   useEffect(() => {
-    Mousetrap.bindGlobal(shortcuts.hint, function(event, handler){
+    Mousetrap.bindGlobal(shortcuts.hint, function (event) {
       event.preventDefault();
       ReactTooltip.show(hintRef.current);
       setShowStatus(true);
     });
-
 
     return () => {
       Mousetrap.unbind(shortcuts.hint);
@@ -38,10 +37,16 @@ const Hint = ({ regex, flags }) => {
   };
 
   return (
-    <div ref={hintRef} className="hint" data-tip data-for="hint" data-event="click">
+    <div
+      ref={hintRef}
+      className={styles.Hint}
+      data-tip
+      data-for="hint"
+      data-event="click"
+    >
       <span
         role="button"
-        className="hint-question"
+        className={styles.HintQuestion}
         onClick={toggleShow}
         onKeyPress={toggleShow}
         tabIndex={0}
@@ -52,15 +57,15 @@ const Hint = ({ regex, flags }) => {
 
       <ReactTooltip
         clickable
-        className="hint-tooltip"
+        className={styles.HintTooltip}
         id="hint"
         place="top"
         effect="solid"
       >
-        <div className="hint-answer">
-          {regex.map(answer => (
-            <div className="hint-answer-item" key={answer}>
-              <span>/</span>{answer}<span>/{flags}</span>
+        <div className={styles.HintAnswer}>
+          {regex.map((answer) => (
+            <div className={styles.HintAnswerItem} key={answer}>
+              /<span className={styles.HintAnswerHighlight}>{answer}</span>/{flags}
             </div>
           ))}
         </div>
