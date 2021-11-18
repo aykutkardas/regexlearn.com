@@ -18,9 +18,6 @@ export default function Section({
   customButton
 }) {
   const { formatMessage } = useIntl();
-
-  console.log({customButton})
-
   const isShowButton = !!(link && buttonText);
 
   return (
