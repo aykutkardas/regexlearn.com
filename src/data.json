@@ -207,9 +207,9 @@
     "interactive": false
   },
   {
-    "title": "steps.asteriks.title",
-    "description": "steps.asteriks.description",
-    "originalTitle": "Repetitions: Asteriks",
+    "title": "steps.asterisk.title",
+    "description": "steps.asterisk.description",
+    "originalTitle": "Repetitions: Asterisk",
     "content": "br ber beer",
     "initialValue": "ber",
     "initialFlags": "g",
@@ -285,9 +285,9 @@
     "interactive": false
   },
   {
-    "title": "examples.asteriks.title",
-    "description": "examples.asteriks.description",
-    "originalTitle": "Repetitions: Asteriks",
+    "title": "examples.asterisk.title",
+    "description": "examples.asterisk.description",
+    "originalTitle": "Repetitions: Asterisk",
     "content": "dp dep deep",
     "initialValue": "",
     "initialFlags": "g",
