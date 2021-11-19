@@ -17,7 +17,6 @@
   max-width: 500px;
 }
 
-
 .SectionReverse {
   composes: Section;
 }
@@ -31,33 +30,28 @@
 }
 
 @media only screen and (max-width: 1200px) {
+  .SectionImage {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (max-width: 600px) {
   .Section {
     flex-direction: column;
     justify-content: center;
     text-align: center;
   }
 
-  .SectionImage {
-    max-width: 60%;
-    margin: 0 auto;
-  }
-
   .SectionReverse .SectionImageWrapper {
     order: 1;
   }
-  
+
   .SectionReverse .SectionContentWrapper {
     order: 2;
   }
-}
 
-
-@media only screen and (max-width: 600px) {
-  .SectionImage {
-    max-width: 90%;
-  }
-
-  .SectionLink, 
+  .SectionLink,
   .SectionButton {
     width: 100%;
   }
