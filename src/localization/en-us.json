@@ -125,7 +125,7 @@
   "steps.whatIsRegex.description": "Regular Expressions are a string of characters that express a search pattern. Often abbreviated as `RegEx` or `RegExp`. It is especially used to find or replace words in texts. In addition, we can test whether a text complies with the rules we set.\\n\\n For example, let's say you have a list of filenames. And you only want to find files with the `pdf` extension. Following typing an expression `^\\w+\\.pdf$` will work. The meaning of the definitions in this expression will become clearer as the steps progress.",
 
   "steps.basicMatchers.title": "Basic Matchers",
-  "steps.basicMatchers.description": "The basic matcher is to type as is to choose a character or word. For example, to select the word `curious` in the text, type in the same way.",
+  "steps.basicMatchers.description": "The character or word we want to find is written directly. It is similar to a normal search process. For example, to find the word 'curious' in the text, type the same.",
 
   "steps.dotCharacter.title": "Dot `.`: Any Character",
   "steps.dotCharacter.description": "The period `.` allows selecting any character, including special characters and spaces.",
