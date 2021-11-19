@@ -131,3 +131,15 @@
     max-width: 100px;
   }
 }
+
+.safari-warning {
+  background-color: var(--learn-pastel-warning);
+  color: var(--learn-black);
+  font-size: 12px;
+  padding: 5px;
+  cursor: pointer;
+
+  &:hover {
+    opacity: .8;
+  }
+}

@@ -107,6 +107,7 @@
   "cheatsheet.alternation.title": "Alternation",
   "cheatsheet.alternation.description": "Or it works like. It waits for one of the expressions it reserved to match.",
 
+  "learn.safari.unsupportWarning": "Regular expressions in this step are not supported by the Safari browser. If you have trouble getting past this step. You can click here.",
 
   "landing.title": "Learn RegEx step by step, from zero to advanced.",
   "landing.description": "Learning RegEx is easier than you think. You can use this tool to easily `learn`, `practice`, `test` and `share` RegEx.",

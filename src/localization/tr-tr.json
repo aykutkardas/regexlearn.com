@@ -107,6 +107,8 @@
   "cheatsheet.alternation.title": "Alternasyon",
   "cheatsheet.alternation.description": "Veya gibi çalışır. Ayırdığı ifadelerden birinin eşleşmesini bekler.",
 
+  "learn.safari.unsupportWarning": "Bu adımdaki düzenli ifadeler Safari tarayıcısı tarafından desteklenmez. Bu adımı geçmekte sorun yaşarsanız. Buraya tıklayabilirsiniz.",
+
   "landing.title": "Sıfırdan ileri seviyeye, adım adım RegEx öğren.",
   "landing.description": "RegEx öğrenmek düşündüğünüzden daha kolay. RegEx'i kolayca `öğrenmek`, `pratik yapmak`, `test etmek` ve `paylaşmak` için bu aracı kullanabilirsiniz.",
 

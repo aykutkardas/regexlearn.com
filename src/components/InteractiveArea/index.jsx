@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useState, useEffect, useRef } from 'react';
-import { useIntl } from 'react-intl';
+import { FormattedMessage, useIntl } from 'react-intl';
 import { toast } from 'react-toastify';
 import cx from 'classnames';
 import _ from 'lodash';
@@ -43,6 +43,12 @@ function InteractiveArea({ data, step, isShow, parentError, onChangeSuccess }) {
     theme: 'colored',
     autoClose: true,
     position: 'top-center',
+  };
+
+  const skipStep = () => {
+    setError(false);
+    setSuccess(true);
+    setLocalStorage();
   };
 
   const checkRegex = () => {
@@ -188,6 +194,11 @@ function InteractiveArea({ data, step, isShow, parentError, onChangeSuccess }) {
         data-title={formatMessage({ id: 'general.text' })}
         dangerouslySetInnerHTML={{ __html: highlightedContent }}
       />
+      {isSafariAndAccept && (
+        <div className="safari-warning" onClick={skipStep}>
+          <FormattedMessage id="learn.safari.unsupportWarning" />
+        </div>
+      )}
       <div
         className="step-interactive-block step-interactive-block-regex"
         data-title={formatMessage({ id: 'general.regex' })}
