@@ -198,13 +198,13 @@
   "examples.quantifierRange.description": "Metindeki  `0` 'dan `9` 'a kadar olan sayıların yan yana en az `1` ile `4` arasında geçenlerini seçecek ifadeyi süslü parantezleri `{}` kullanarak yazın.",
 
   "steps.groupping.title": "Parantezler `( )`: Gruplama",
-  "steps.groupping.description": "Bir ifadeyi gruplayabilir ve bu grupları referans göstermek ya da bazı kurallar uygulamak için kullanabiliriz. Bir ifadeyi gruplamak için `()` parantez içine alırız. Şimdilik sadece aşağıdaki `and` kelimesini gruplayın.",
+  "steps.groupping.description": "Bir ifadeyi gruplayabilir ve bu grupları referans göstermek ya da bazı kurallar uygulamak için kullanabiliriz. Bir ifadeyi gruplamak için `()` parantez içine alırız. Şimdilik sadece aşağıdaki `haa` kelimesini gruplayın.",
 
   "steps.groupReference.title": "Bir Gruba Referans Göstermek",
-  "steps.groupReference.description": "Tekrar eden ifadelerde aynı şeyi tekrar yazmamak için daha önce yazdığımız bir ifade grubuna referans gösterebiliriz. Örneğin bu örnekte `444` değeri `([0-9]{3})` ifadesi olarak ve `0` değeri `([0-9])` ifadesi olarak gruplandırılmıştır. İlk tanımladığımız bu gruba referans göstermek için `\\1` yazarız. Bu tanımlanan birinci grup anlamına gelir. İfademizin sonuna tekrar `([0-9]{3})` yazmamak için bu grubu `\\1` yazarak referans gösterin.",
+  "steps.groupReference.description": "Aşağıda `ha` ve `haa` kelimeleri gruplanmıştır. İlk grup tekrar yazılmamak için `\\1` yazılarak kullanılır. Buradaki `1` gruplanma sırasını ifade eder. İkinci gruba refarans göstermek için ifadenin sonun `\\2` yazın.",
 
   "steps.nonCapturingGroupping.title": "Parantezler `(?: )`: Yakalanmayan Gruplama",
-  "steps.nonCapturingGroupping.description": "Bir ifadeyi gruplayabilir ve bunun referanslar için yakalanmamasını sağlayabilirsiniz. Örneğin aşağıda iki grup vardır. Fakat ilki yakalanmayan bir grup olduğu için `\\1` ile gösterdiğimiz ilk grup referansı aslında ikinci gruba işaret eder.",
+  "steps.nonCapturingGroupping.description": "Aşağıda `ha` ve `haa` kelimeleri gruplanmıştır. İlk grup yakalanmayan bir gruptur. Bu yüzden referans verilemez. Gruplanmış `haa` kelimesine referans göstermek için ifadenin sonuna `\\1` yazın. Buradaki `1` yakalanan grupların sırasını ifade eder.",
 
   "steps.pipeCharacter.title": "Boru Karakteri `|`",
   "steps.pipeCharacter.description": "Bir ifadenin farklı ifadelerde olabileceğini belirmeyi sağlar. Böylece olabilecek tüm ifadeler boru işareti `|` ile birbirinden ayrılarak yazılır. Bunun karakter setinden `[abc]` farkı, karakter setleri karakter seviyesinde çalışır. Alternatifler ise ifade düzeyindedir. Örneğin aşağıdaki ifade hem `cat` hemde `Cat` sözcüklerini seçecek şekildedir. İfadenin sonuna bir boru işareti `|` daha ekleyip `rat` yazarak tüm sözcüklerin seçilmesini sağlayın.",

@@ -360,37 +360,37 @@
     "title": "steps.groupping.title",
     "description": "steps.groupping.description",
     "originalTitle": "Groupping",
-    "content": "red and blue",
-    "initialValue": "(a)",
+    "content": "ha-ha,haa-haa",
+    "initialValue": "(h)",
     "initialFlags": "g",
     "flags": "g",
-    "regex": ["(and)"],
+    "regex": ["(haa)"],
     "cursorPosition": 2,
-    "answer": ["and"]
+    "answer": ["haa", "haa"]
   },
   {
     "title": "steps.groupReference.title",
     "description": "steps.groupReference.description",
     "originalTitle": "Group Reference",
-    "content": "444-0-444",
-    "initialValue": "([0-9]{3})-([0-9])-",
+    "content": "ha-ha,haa-haa",
+    "initialValue": "(ha)-\\1,(haa)-",
     "initialFlags": "g",
     "flags": "g",
-    "regex": ["([0-9]{3})-([0-9])-\\1"],
-    "cursorPosition": 19,
-    "answer": ["444-0-444"]
+    "regex": ["(ha)-\\1,(haa)-\\2"],
+    "cursorPosition": 14,
+    "answer": ["ha-ha,haa-haa"]
   },
   {
     "title": "steps.nonCapturingGroupping.title",
     "description": "steps.nonCapturingGroupping.description",
     "originalTitle": "Non-capturing Groupping",
-    "content": "444-0-AAA-0",
-    "initialValue": "(?:[0-9]{3})-([0-9])-(?:[A-Z]{3})-",
+    "content": "ha-ha,haa-haa",
+    "initialValue": "(?:ha)-ha,(haa)-",
     "initialFlags": "g",
     "flags": "g",
-    "regex": ["(?:[0-9]{3})-([0-9])-(?:[A-Z]{3})-\\1"],
-    "cursorPosition": 34,
-    "answer": ["444-0-AAA-0"]
+    "regex": ["(?:ha)-ha,(haa)-\\1"],
+    "cursorPosition": 16,
+    "answer": ["ha-ha,haa-haa"]
   },
   {
     "title": "steps.pipeCharacter.title",
