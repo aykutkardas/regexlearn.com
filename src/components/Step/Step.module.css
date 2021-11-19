@@ -40,6 +40,7 @@
 .StepDescription {
   font-size: 16px;
   color: var(--learn-text-description);
+  line-height: 1.5em;
 }
 
 .StepDescriptionWord {
