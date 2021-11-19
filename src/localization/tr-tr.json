@@ -60,7 +60,7 @@
   "cheatsheet.range.description": "Kendileri dahil iki karakter arasındaki tüm karakterleri eşleştirir.",
   "cheatsheet.dot.title": "Nokta",
   "cheatsheet.dot.description": "Satır sonları dışında herhangi bir karakterle eşleşir.",
-  "cheatsheet.word.title": "Sözcük",
+  "cheatsheet.word.title": "Alfanumerik",
   "cheatsheet.word.description": "Herhangi bir alfanumerik karakterle eşleşir. Alt çizgi dahil.",
   "cheatsheet.notWord.title": "Alfanumerik Olmayan",
   "cheatsheet.notWord.description": "Herhangi bir alfanumerik olmayan karakterle eşleşir.",

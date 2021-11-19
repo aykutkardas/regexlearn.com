@@ -124,7 +124,7 @@
       {
         "title": "cheatsheet.dot.title",
         "description": "cheatsheet.dot.description",
-        "content": "abcde",
+        "content": "hi 012 _-!?",
         "code": ".",
         "flags": "",
         "regex": "."
@@ -132,7 +132,7 @@
       {
         "title": "cheatsheet.word.title",
         "description": "cheatsheet.word.description",
-        "content": "hello",
+        "content": "hi 012 _-!?",
         "code": "\\w",
         "flags": "",
         "regex": "\\w"
@@ -140,7 +140,7 @@
       {
         "title": "cheatsheet.notWord.title",
         "description": "cheatsheet.notWord.description",
-        "content": "hi, thanks.",
+        "content": "hi 012 _-!?",
         "code": "\\W",
         "flags": "",
         "regex": "\\W"
@@ -221,7 +221,7 @@
         "content": "bp bep beep beeep",
         "code": "+",
         "flags": "g",
-        "regex": "b(e)+p"
+        "regex": "be+p"
       },
       {
         "title": "cheatsheet.asterisk.title",
@@ -229,7 +229,7 @@
         "content": "bp bep beep beeep",
         "code": "*",
         "flags": "g",
-        "regex": "b(e)*p"
+        "regex": "be*p"
       },
       {
         "title": "cheatsheet.quantifier.title",
