@@ -11,10 +11,10 @@
   "general.comingSoon": "Coming Soon",
   "general.becomeSponsor": "Become a Sponsor",
 
-  "meta.landing.title": "RegexLearn - Step by step, from zero to advanced.",
-  "meta.learn.title": "RegexLearn - RegEx Interactive Course",
-  "meta.cheatsheet.title": "RegexLearn - RegEx Cheatsheet",
-  "meta.404.title": "RegexLearn - Not Found",
+  "meta.landing.title": "Regex Learn - Step by step, from zero to advanced.",
+  "meta.learn.title": "Regex Learn - RegEx Interactive Course",
+  "meta.cheatsheet.title": "Regex Learn - RegEx Cheatsheet",
+  "meta.404.title": "Regex Learn - Not Found",
 
   "landing.learn": "Learn",
   "landing.playground": "Playground",
@@ -247,10 +247,10 @@
   "steps.negativeLookahead.description": "For example, we want to select numbers other than the hour value in the text. Therefore, we need to write the negative look-ahead `(?!)` expression after our expression to select only the numerical values that do not have `PM` after them. Include `PM` after the `!` sign inside the parentheses.",
   
   "steps.positiveLookbehind.title": "Positive Lookbehind: `(?<=)`",
-  "steps.positiveLookbehind.description": "For example, we want to select the price value in the text. Therefore, to select only the number values that precede `$`, we need to write the positive lookbehind expression `(?<=)` before our expression. Add `\\$` after the `=` sign inside the brackets.",
+  "steps.positiveLookbehind.description": "For example, we want to select the price value in the text. Therefore, to select only the number values that preceded by `$`, we need to write the positive lookbehind expression `(?<=)` before our expression. Add `\\$` after the `=` sign inside the brackets.",
 
   "steps.negativeLookbehind.title": "Negative Lookbehind: `(?&lt;!)`",
-  "steps.negativeLookbehind.description": "For example, we want to select numbers in the text other than the price value. Therefore, to select only numeric values that do not precede `$`, we need to write the negative lookbehind `(?&lt;!)` before our expression. Add `\\$` after the `!` inside the brackets.",
+  "steps.negativeLookbehind.description": "For example, we want to select numbers in the text other than the price value. Therefore, to select only numeric values that do not preceded by `$`, we need to write the negative lookbehind `(?&lt;!)` before our expression. Add `\\$` after the `!` inside the brackets.",
 
   "steps.flags.title": "Flags",
   "steps.flags.description": "Flags change the output of the expression. That's why flags are also called `modifiers`. Determines whether the typed expression treats text as separate lines, is case sensitive, or finds all matches. Continue to the next step to learn the flags.",

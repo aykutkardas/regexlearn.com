@@ -15,7 +15,7 @@ const langList = Object.keys(langs).map((langKey) => ({
 }));
 
 const getCurrentIndex = (langList, lang) => {
-  return langList.indexOf(item => item.value === lang);
+  return langList.map(item => item.value).indexOf(lang);
 }
 
 const LanguageSwitch = () => {
@@ -27,7 +27,6 @@ const LanguageSwitch = () => {
     if (newLangIndex > langList.length - 1) {
       setCurrentLangIndex(0);
       setLang(langList[0].value);
-
     } else {
       setCurrentLangIndex(newLangIndex);
       setLang(langList[newLangIndex].value);

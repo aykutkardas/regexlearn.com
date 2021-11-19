@@ -19,7 +19,6 @@ function LearnFooter({ steps, step, nextStep, prevStep, success, error }) {
               role="button"
               tabIndex="0"
               onClick={prevStep}
-              onKeyDown={prevStep}
             >
               <Shortcut command={shortcuts.prevStep} />
               <div className={styles.NavigationStepText}>
@@ -66,7 +65,6 @@ function LearnFooter({ steps, step, nextStep, prevStep, success, error }) {
               role="button"
               tabIndex="0"
               onClick={nextStep}
-              onKeyDown={nextStep}
             >
               <div className={styles.NavigationStepNextWrapper}>
                 <Shortcut command={shortcuts.nextStep} />

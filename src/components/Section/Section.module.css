@@ -1,0 +1,64 @@
+.Section {
+  display: flex;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.SectionDescription {
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.SectionHighlight {
+  color: var(--learn-success);
+}
+
+.SectionImage {
+  max-width: 500px;
+}
+
+
+.SectionReverse {
+  composes: Section;
+}
+
+.SectionReverse .SectionImageWrapper {
+  order: 2;
+}
+
+.SectionReverse .SectionContentWrapper {
+  order: 1;
+}
+
+@media only screen and (max-width: 1200px) {
+  .Section {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .SectionImage {
+    max-width: 60%;
+    margin: 0 auto;
+  }
+
+  .SectionReverse .SectionImageWrapper {
+    order: 1;
+  }
+  
+  .SectionReverse .SectionContentWrapper {
+    order: 2;
+  }
+}
+
+
+@media only screen and (max-width: 600px) {
+  .SectionImage {
+    max-width: 90%;
+  }
+
+  .SectionLink, 
+  .SectionButton {
+    width: 100%;
+  }
+}
