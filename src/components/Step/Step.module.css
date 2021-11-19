@@ -44,7 +44,7 @@
 }
 
 .StepDescriptionWord {
-  background: var(--learn-word-highlight);
+  background: var(--learn-bg-shortcut);
   border-radius: 6px;
   padding: 2px 6px;
   font-size: 12px;
