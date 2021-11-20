@@ -23,7 +23,7 @@
 .StepTitleWord {
   font-size: unset;
   margin: 0px 1px;
-  background: var(--learn-word-highlight);
+  background: var(--learn-bg-shortcut);
   border-radius: 6px;
   padding: 2px 6px;
 }
