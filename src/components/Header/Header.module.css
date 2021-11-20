@@ -41,17 +41,6 @@
   margin-left: 0.3em;
 }
 
-.HeaderBrand {
-  display: flex;
-  align-items: center;
-}
-
-.HeaderBrandIcon {
-  width: 20px;
-  height: 20px;
-  fill: var(--learn-success);
-}
-
 @media only screen and (max-width: 600px) {
   .HeaderLink {
     margin-left: 10px;

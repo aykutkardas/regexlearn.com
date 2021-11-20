@@ -29,14 +29,3 @@
   composes: LearnHeaderWrapper;
   justify-content: flex-end;
 }
-
-.LearnHeaderBrand {
-  display: flex;
-  align-items: center;
-}
-
-.LearnHeaderBrandIcon {
-  width: 20px;
-  height: 20px;
-  fill: var(--learn-success);
-}
