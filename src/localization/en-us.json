@@ -203,7 +203,7 @@
   "steps.groupping.description": "We can group an expression and use these groups to reference or enforce some rules. To group an expression, we enclose `()` in parentheses. For now just group `haa` below.",
 
   "steps.groupReference.title": "Referencing a Group",
-  "steps.groupReference.description": "The words `ha` and `haa` are grouped below. The first group is a non-capture group. Therefore it cannot be referenced. To reference the grouped word `haa`, type `\\1` at the end of the expression. Here `1` denotes the order of captured groups.",
+  "steps.groupReference.description": "The words `ha` and `haa` are grouped below. The first group is used by writing `\\1` to avoid rewriting. Here `1` denotes the order of grouping. Type `\\2` at the end of the expression to refer to the second group.",
 
   "steps.nonCapturingGroupping.title": "Parentheses `(?: )`: Non-capturing Grouping",
   "steps.nonCapturingGroupping.description": "You can group an expression and ensure that it is not caught by references. For example, below are two groups. However, the first group reference we denote with `\\1` actually points to the second group, as the first is an uncaught group.",
