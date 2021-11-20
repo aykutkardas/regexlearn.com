@@ -4,7 +4,7 @@ import { FormattedMessage } from 'react-intl';
 import Icon from '../Icon';
 import { Context } from '../../contexts/LanguageContext';
 
-const Hint = ({ data, step }) => {
+const ReportStep = ({ data, step }) => {
   const { lang } = useContext(Context);
 
   const title = encodeURI('[Learn]: ');
@@ -13,7 +13,7 @@ const Hint = ({ data, step }) => {
 **Step Name:** \`${data.title}\`
 **Language:** \`${lang}\`
 
-**Browser:** 
+**User Agent:** 
 \`${window.navigator.userAgent.replace(/;/g, ',')}\`
 
 ---
@@ -40,4 +40,4 @@ const Hint = ({ data, step }) => {
   );
 };
 
-export default Hint;
+export default ReportStep;
