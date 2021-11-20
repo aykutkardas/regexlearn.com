@@ -1,17 +1,20 @@
-import { useContext } from "react";
-import { FormattedMessage } from "react-intl";
+import { useContext } from 'react';
+import { FormattedMessage } from 'react-intl';
 
-import Icon from "../Icon";
-import { Context } from "../../contexts/LanguageContext";
+import Icon from '../Icon';
+import { Context } from '../../contexts/LanguageContext';
 
 const Hint = ({ data, step }) => {
   const { lang } = useContext(Context);
 
-  const title = encodeURI("[Learn]: ");
+  const title = encodeURI('[Learn]: ');
   const body = encodeURI(`
 **Step Number:** \`${step}\`
 **Step Name:** \`${data.title}\`
 **Language:** \`${lang}\`
+
+**Browser:** 
+\`${window.navigator.userAgent.replace(/;/g, ',')}\`
 
 ---
 
