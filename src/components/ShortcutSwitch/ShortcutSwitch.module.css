@@ -1,0 +1,12 @@
+.ShortcutSwitch {
+  margin-left: 10px;
+  cursor: pointer;
+  color: var(--learn-wite);
+  transition: .3s;
+  user-select: none;
+}
+
+.ShortcutSwitchDisable {
+  composes: ShortcutSwitch;
+  color: var(--learn-gray);
+}
