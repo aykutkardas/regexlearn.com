@@ -125,7 +125,7 @@
   "steps.whatIsRegex.description": "Düzenli İfadeler bir arama modelini ifade eden bir karakter dizisidir. Genellikle `RegEx` ya da `RegExp` olarak kısaltılmıştır. Özelikle metinlerde geçen sözcükleri bulmak veya değiştirmek için kullanılır. Ayrıca bir metnin belirlediğimiz kurallara uyup uymadığı test edilebilir.\\n\\n Örneğin dosya isimlerinden oluşan bir listeniz olduğunu düşünelim. Ve siz sadece `pdf` uzantılı dosyaları bulmak istiyorsunuz. O halde şöyle bir ifade `^\\w+\\.pdf$` yazmak işe yarayacaktır. Bu ifadedeki tanımlamaların ne anlama geldiği adımlar geçtikçe daha anlaşılır olacak.",
 
   "steps.basicMatchers.title": "Temel Eşleştiriciler",
-  "steps.basicMatchers.description": "Bulmak istediğimiz karakteri ya da sözcüğü doğrudan yazılır. Normal bir arama işlemine benzer. Örneğin metinde geçen `curious` sözcüğünü bulmak için, aynısını yazın.",
+  "steps.basicMatchers.description": "Bulmak istediğimiz karakter ya da sözcük doğrudan yazılır. Normal bir arama işlemine benzer. Örneğin metinde geçen `curious` sözcüğünü bulmak için, aynısını yazın.",
 
   "steps.dotCharacter.title": "Nokta `.`: Herhangi Bir Karakter",
   "steps.dotCharacter.description": "Nokta `.` işareti özel karakterler ve boşluklar da dahil herhangi bir karakteri seçmeyi sağlar.",
