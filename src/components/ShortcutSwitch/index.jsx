@@ -1,5 +1,7 @@
 import lookie from 'lookie';
 import { useEffect, useState } from 'react';
+import cx from 'classnames';
+
 import Icon from '../Icon';
 
 import * as styles from './ShortcutSwitch.module.css';
@@ -20,10 +22,12 @@ const ShortcutSwitch = () => {
     }
   }, [hidden]);
 
+  const className = hidden ? styles.ShortcutSwitchDisable : styles.ShortcutSwitch;
+
   return (
     <Icon
       onClick={toggle}
-      className={styles[hidden ? 'ShortcutSwitchDisable' : 'ShortcutSwitch']}
+      className={cx(className, 'visible-md visible-lg')}
       icon="keyboard"
       size={20}
     />
