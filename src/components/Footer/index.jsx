@@ -30,7 +30,9 @@ function Footer() {
             <div className={styles.FooterCopyright}>
               <a
                 className={styles.FooterCopyrightLink}
-                href="mailto:aykutkrds@gmail.com"
+                target="_blank"
+                rel="noreferrer"
+                href="https://github.com/aykutkardas/regexlearn.com#sponsoring"
               >
                 <FormattedMessage id="general.becomeSponsor" />
               </a>
