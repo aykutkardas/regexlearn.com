@@ -14,7 +14,7 @@
   "meta.landing.title": "Regex Learn - Adım adım, sıfırdan ileri seviyeye.",
   "meta.learn.title": "Regex Learn - RegEx İnteraktif Kurs",
   "meta.cheatsheet.title": "Regex Learn - RegEx Cheatsheet",
-  "meta.404.title": "Regex Learn - Sayfa Bulundamadı",
+  "meta.404.title": "Regex Learn - Sayfa Bulunamadı",
 
   "landing.learn": "Öğren",
   "landing.playground": "Playground",
@@ -55,7 +55,7 @@
   "cheatsheet.characterSet.title": "Karakter Seti",
   "cheatsheet.characterSet.description": "Setteki herhangi bir karakterle eşleşir.",
   "cheatsheet.negatedCharacterSet.title": "Negatiflenmiş Karakter Seti",
-  "cheatsheet.negatedCharacterSet.description": "Sette olmayan herhangi bir karakteri eşleşir.",
+  "cheatsheet.negatedCharacterSet.description": "Sette olmayan herhangi bir karakterle eşleşir.",
   "cheatsheet.range.title": "Aralık",
   "cheatsheet.range.description": "Kendileri dahil iki karakter arasındaki tüm karakterleri eşleştirir.",
   "cheatsheet.dot.title": "Nokta",
