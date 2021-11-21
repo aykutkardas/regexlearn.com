@@ -8,3 +8,7 @@
   border-bottom: 3px solid var(--learn-border-shortcut);
   border-radius: 6px;
 }
+
+:global(.shortcutHidden) .Shortcut {
+  display: none !important;
+}

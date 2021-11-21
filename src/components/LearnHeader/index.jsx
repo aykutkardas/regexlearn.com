@@ -2,6 +2,7 @@ import cx from 'classnames';
 
 import * as styles from './LearnHeader.module.css';
 
+import ShortcutSwitch from '../ShortcutSwitch';
 import LanguageSwitch from '../LanguageSwitch';
 import Progress from '../Progress';
 import Logo from '../Logo';
@@ -17,6 +18,7 @@ const Header = ({ steps, step }) => (
       </div>
       <div className={cx(styles.LearnHeaderLanguageSwitchWrapper, 'col-xs-4')}>
         <LanguageSwitch />
+        <ShortcutSwitch />
       </div>
     </header>
   </div>

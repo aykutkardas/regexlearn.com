@@ -10,6 +10,7 @@ import * as styles from './Header.module.css';
 import Icon from '../Icon';
 import Logo from '../Logo';
 
+const ShortcutSwitch = dynamic(import('../ShortcutSwitch'), { ssr: false });
 const LanguageSwitch = dynamic(import('../LanguageSwitch'), { ssr: false });
 
 function Header() {
@@ -61,6 +62,7 @@ function Header() {
                 <FormattedMessage id="general.comingSoon" />
               </ReactTooltip>
               <LanguageSwitch />
+              <ShortcutSwitch />
             </div>
           </div>
         </div>
