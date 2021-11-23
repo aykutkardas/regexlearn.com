@@ -10,7 +10,7 @@ export default function Learn() {
   return (
     <>
       <Head>
-        <title>{formatMessage({ id: "meta.learn.title" })}</title>
+        <title>{formatMessage({ id: "page.learn.title" })}</title>
       </Head>
       <LearnPage />
     </>
