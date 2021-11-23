@@ -29,7 +29,7 @@ function Header() {
                     [styles.HeaderLinkActive]: pathname === '/learn',
                   })}
                 >
-                  <FormattedMessage id="landing.learn" />
+                  <FormattedMessage id="general.learn" />
                 </a>
               </Link>
               <Link href="/cheatsheet" passHref>
@@ -38,7 +38,7 @@ function Header() {
                     [styles.HeaderLinkActive]: pathname === '/cheatsheet',
                   })}
                 >
-                  <FormattedMessage id="landing.cheatsheet" />
+                  <FormattedMessage id="general.cheatsheet" />
                 </a>
               </Link>
               <span
@@ -47,7 +47,7 @@ function Header() {
                 data-for="coming-soon"
               >
                 <span className="landing-link-disabled-name">
-                  <FormattedMessage id="landing.playground" />
+                  <FormattedMessage id="general.playground" />
                 </span>
                 <Icon icon="lock" size={16} className={styles.HeaderLinkDisabledIcon} />
               </span>

@@ -1,0 +1,20 @@
+{
+  "landing.title": "Sıfırdan ileri seviyeye, adım adım RegEx öğren.",
+  "landing.description": "RegEx öğrenmek düşündüğünüzden daha kolay. RegEx'i kolayca `öğrenmek`, `pratik yapmak`, `test etmek` ve `paylaşmak` için bu aracı kullanabilirsiniz.",
+
+  "section.learn.title": "Öğren",
+  "section.learn.content": "`Regular Expressions` (Düzenli İfadeler)'in kısaltması olan RegEx veya RegExp söz dizimi (syntax) kuralları çerçevesinde oluşturulan bir karakter dizisidir. Bulma, eşleştirme, düzenleme gibi komutları uygulayabileceğiniz RegEx ile hızlı ve pratik bir şekilde verilerinizi yönetebilirsiniz. Python, SQL, Javascript, R gibi programlama dillerinde, Google Analytics, Google Data Studio ve kod işlemlerinde kullanabileceğiniz RegEx'i `RegexLearn` üzerinden örneklerle online bir şekilde hemen öğrenin.",
+
+  "section.cheatsheet.button": "Şimdi İncele",
+  "section.cheatsheet.title": "Cheatsheet",
+  "section.cheatsheet.content": "`RegexLearn Cheatsheet` ile ihtiyacınız olan kullanımları toplu bir şekilde görebilir, pratik bir şekilde hemen tek bir sayfadan kontrol edebilirsiniz. Tüm RegEx pattern ve sembollerini RegEx cheatsheet ile keşfedin.",
+
+  "section.playground.title": "Playground",
+  "section.playground.content": "Kolayca `RegEx` ifadelerinizi oluşturup test edebileceğiniz `Playground` ile tek tıkla oluşturduğunuz ifadeleri paylaşıp takımınızla ortak bir şekilde çalışabilirsiniz. Yakında yayında.",
+
+  "section.practice.title": "Pratik",
+  "section.practice.content": "Öğrenme bölümünü tamamladıysanız şimdi sıra pratikte! Her seviyeye uygun olarak hazırlanmış pratik bölümü ile RegEx bilginizi pekiştirebilir ve kendinizi geliştirebilirsiniz. Yakında yayında.",
+
+  "section.opensource.title": "Açık Kaynak",
+  "section.opensource.content": "Açık kaynaklı bir proje olan Regex Learn tamamen kullanımı ücretsiz bir araçtır. Yeteneklerinizi geliştirmek ve projeye katkı sağlamak için hemen tıklayın."
+}

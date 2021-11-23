@@ -1,5 +1,5 @@
-import enUS from "./en-us.json";
-import trTR from "./tr-tr.json";
+import enUS from "./en-us";
+import trTR from "./tr-tr";
 
 const messages = {
   "en-us": enUS,
@@ -7,8 +7,8 @@ const messages = {
 };
 
 const langNames = {
-  "en-us": "English",
-  "tr-tr": "Türkçe",
+  "en-us": "EN",
+  "tr-tr": "TR",
 };
 
 export { langNames };

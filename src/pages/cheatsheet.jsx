@@ -20,7 +20,7 @@ export default function Home() {
     <>
       <Header />
       <Head>
-        <title>{formatMessage({ id: "meta.cheatsheet.title" })}</title>
+        <title>{formatMessage({ id: "page.cheatsheet.title" })}</title>
       </Head>
         <div className="container flex-1">
           <div className="row">

@@ -1,0 +1,20 @@
+{
+  "landing.title": "Learn RegEx step by step, from zero to advanced.",
+  "landing.description": "Learning RegEx is easier than you think. You can use this tool to easily `learn`, `practice`, `test` and `share` RegEx.",
+
+  "section.learn.title": "Learn",
+  "section.learn.content": "`Regular Expressions`, abbreviated as RegEx or RegExp, are a string of characters created within the framework of RegEx syntax rules. You can easily manage your data with RegEx, which uses commands like finding, matching, and editing. Regex can be used in programming languages such as Python, SQL, Javascript, R, Google Analytics, Google Data Studio, and throughout the coding process. Learn regex online with examples and tutorials on RegexLearn now.",
+
+  "section.cheatsheet.button": "Review Now",
+  "section.cheatsheet.title": "Cheatsheet",
+  "section.cheatsheet.content": "With `RegexLearn Cheatsheet`, you can see all of the usages you need at once and check them directly from the one page. Explore all RegEx patterns and symbols with the RegEx cheat sheet.",
+
+  "section.playground.title": "Playground",
+  "section.playground.content": "If you want to generate a RegEx, you can easily build and test your RegEx pattern via the Playground. As a RegEx tester, you can validate and share your RegEx with others for collaborative work. Soon.",
+
+  "section.practice.title": "Practice",
+  "section.practice.content": "If you complete the learning part, it's time to PRACTICE! In the practice section, you can test your RegEx knowledge and practice with RegEx tutorials based on your level. Soon.",
+
+  "section.opensource.title": "Open Source",
+  "section.opensource.content": "Regex Learn is an open-source project that welcomes community contributions and is free to use. Working on this project allows you to hone your skills, study, and collaborate.  You can contribute & support here."
+}

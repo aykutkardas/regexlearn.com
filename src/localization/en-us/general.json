@@ -1,0 +1,27 @@
+{
+  "general.prev": "Previous",
+  "general.next": "Next",
+  "general.result": "Result",
+  "general.regex": "Regex",
+  "general.text": "Text",
+  "general.completedStep": "Step Completed!",
+  "general.hintQuestion": "Show Answer",
+  "general.reportStep": "Report a Problem",
+  "general.startLearning": "Start Learning",
+  "general.comingSoon": "Coming Soon",
+  "general.becomeSponsor": "Become a Sponsor",
+  "general.learn": "Learn",
+  "general.playground": "Playground",
+  "general.cheatsheet": "Cheatsheet",
+
+  "notFound.intro": "The page you are looking for does not exist.",
+  "notFound.button": "Back to home",
+
+  "page.landing.title": "Regex Learn - Step by step, from zero to advanced.",
+  "page.learn.title": "Regex Learn - RegEx Interactive Course",
+  "page.cheatsheet.title": "Regex Learn - RegEx Cheatsheet",
+  "page.404.title": "Regex Learn - Not Found",
+
+  "alert.site.under.development": "This site is still under development. What you see now may change.",
+  "learn.safari.unsupportWarning": "Regular expressions in this step are not supported by the Safari browser. If you have trouble getting past this step. You can click here."
+}

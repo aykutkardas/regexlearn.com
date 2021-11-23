@@ -15,7 +15,7 @@ export default function Home() {
     <>
       <Header />
       <Head>
-        <title>{formatMessage({ id: "meta.404.title" })}</title>
+        <title>{formatMessage({ id: "page.404.title" })}</title>
       </Head>
       <div className="container">
         <div className="row">
