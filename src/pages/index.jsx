@@ -21,6 +21,7 @@ export default function Home() {
       <Header />
       <Head>
         <title>{formatMessage({ id: 'page.landing.title' })}</title>
+        <link rel="canonical" href="https://regexlearn.com" />
       </Head>
       <div className="container">
         <div className="row main-section">
