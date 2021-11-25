@@ -21,6 +21,7 @@ export default function Home() {
       <Head>
         <title>{formatMessage({ id: 'page.cheatsheet.title' })}</title>
         <link rel="canonical" href="https://regexlearn.com/cheatsheet" />
+        <meta name="description" content={formatMessage({ id: 'page.cheatsheet.description' })} />
       </Head>
       <div className="container flex-1">
         <div className="row">

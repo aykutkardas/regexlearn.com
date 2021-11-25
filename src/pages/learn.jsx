@@ -12,6 +12,7 @@ export default function Learn() {
       <Head>
         <title>{formatMessage({ id: 'page.learn.title' })}</title>
         <link rel="canonical" href="https://regexlearn.com/learn" />
+        <meta name="description" content={formatMessage({ id: 'page.learn.description' })} />
       </Head>
       <LearnPage />
     </>

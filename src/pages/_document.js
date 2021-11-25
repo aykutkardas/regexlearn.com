@@ -26,10 +26,6 @@ class Documents extends Document {
             </>
           )}
           <link rel="shortcut icon" href="/favicon.svg" />
-          <meta
-            name="description"
-            content="Learn RegEx, step by step, zero to advanced. Playground and Cheatsheet."
-          />
         </Head>
         <body>
           <Main />
