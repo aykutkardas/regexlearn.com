@@ -1,5 +1,5 @@
 .LanguageSwitch {
-  margin-left: 10px;
+  margin-left: 20px;
   position: relative;
   cursor: pointer;
   user-select: none;
@@ -18,7 +18,7 @@
 }
 
 .LanguageSwitchCurrent span {
-  color: var(--landing-link-disabled);
+  color: var(--landing-white);
 }
 
 .LanguageSwitchCurrentIcon {
