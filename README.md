@@ -2,7 +2,6 @@
 
 This is a project that makes learning how to write regex easy.
 
-
 ## Features
 
 - **Step by Step Learn**
@@ -16,6 +15,8 @@ This is a project that makes learning how to write regex easy.
 
 - **English**
 - **Turkish**
+- _Chinese_ [(Requested)](https://github.com/aykutkardas/regexlearn.com/issues/80)
+- _Brazilian Portuguese_ [(Requested)](https://github.com/aykutkardas/regexlearn.com/issues/39)
 - _Please create an issue to add your own language._
 
 <br>
@@ -26,7 +27,6 @@ This is a project that makes learning how to write regex easy.
 
 <h3 align="center">🎉<a href="https://www.patreon.com/bePatron?u=65063346" data-patreon-widget-type="become-patron-button">Become a Patron!</a>🎉</h3>
 
-
 <br>
 
 <h2 align="center">Preview</h2>
@@ -34,8 +34,9 @@ This is a project that makes learning how to write regex easy.
 <br>
 
 ![Preview](preview/preview-landing.png)
+
 ![Preview](preview/preview-learn.png)
+
 ![Preview](preview/preview-cheatsheet.png)
 
 <br>
-
