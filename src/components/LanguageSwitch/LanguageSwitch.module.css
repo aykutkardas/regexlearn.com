@@ -17,7 +17,7 @@
 
 .LanguageSwitch:hover,
 .LanguageSwitch:hover :global(svg) {
-  color: var(--learn-success);
+  color: var(--primary);
 }
 
 .LanguageSwitchCurrent {

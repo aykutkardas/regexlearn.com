@@ -8,5 +8,5 @@
 
 .ShortcutSwitchDisable {
   composes: ShortcutSwitch;
-  color: var(--learn-gray);
+  color: var(--gray);
 }

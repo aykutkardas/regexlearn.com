@@ -8,7 +8,7 @@
   font-size: 13px;
   letter-spacing: 0.4px;
   background: #338152;
-  color: var(--learn-white);
+  color: var(--txt-1);
 }
 
 .AlertClose {

@@ -12,8 +12,8 @@
     &:checked {
       ~ {
         .checkmark {
-          background-color: var(--learn-success);
-          border-color: var(--learn-success);
+          background-color: var(--primary);
+          border-color: var(--primary);
 
           &:after {
             display: block;
@@ -29,9 +29,9 @@
     left: 0;
     height: 10px;
     width: 10px;
-    background: var(--learn-checkmark);
+    background: var(--bg-2);
     border-radius: 2px;
-    border: 1px solid var(--learn-checkmark-border);
+    border: 1px solid var(--bg-5);
 
     &:after {
       content: "";
@@ -41,7 +41,7 @@
       left: 2.5px;
       width: 2.4px;
       height: 6px;
-      border: 1px solid var(--learn-checkmark);
+      border: 1px solid var(--bg-2);
       border-width: 0 2px 2px 0;
       -webkit-transform: rotate(45deg);
       -ms-transform: rotate(45deg);

@@ -9,13 +9,13 @@
   a {
     display: inline-flex;
     align-items: center;
-    color: var(--learn-bg-hint);
+    color: var(--txt-3);
     font-size: 10px;
     text-decoration: none;
     transition: .1s;
   
     &:hover {
-      color: var(--learn-warning);
+      color: var(--warning);
     }
   }
 

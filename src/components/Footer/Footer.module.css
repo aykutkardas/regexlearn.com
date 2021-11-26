@@ -12,18 +12,18 @@
 .FooterSocial {
   display: flex;
   align-items: center;
-  color: var(--learn-white);
+  color: var(--txt-1);
   font-size: 14px;
 }
 
 .FooterSocialLink {
   text-decoration: none;
-  color: var(--learn-white);
+  color: var(--txt-1);
   margin: 0 10px;
 }
 
 .FooterSocialLink:hover {
-  color: var(--landing-link-hover);
+  color: var(--primary);
 }
 
 .FooterCopyright {
@@ -36,7 +36,7 @@
 .FooterCopyrightLink {
   text-decoration: none;
   user-select: none;
-  color: var(--landing-link-disabled);
+  color: var(--txt-3);
 }
 
 .FooterCopyrightLink:hover {

@@ -1,10 +1,10 @@
 .step-interactive {
   &-block {
-    background: var(--learn-bg-block);
+    background: var(--bg-2);
     border-radius: 6px;
     padding: 12px;
     font-size: 12px;
-    color: var(--learn-text-block);
+    color: var(--txt-3);
     letter-spacing: 1px;
     margin: 20px 0;
     min-height: 50px;
@@ -19,8 +19,8 @@
       position: absolute;
       top: -6px;
       left: 11px;
-      background: var(--learn-bg-block-tag);
-      color: var(--learn-text-block);
+      background: var(--bg-3);
+      color: var(--txt-3);
       font-size: 10px;
       padding: 2px 5px;
       border-radius: 5px;
@@ -33,7 +33,7 @@
   }
 
   &.parentError &-block-regex {
-    box-shadow: inset 0px 0px 0px 2px var(--learn-error);
+    box-shadow: inset 0px 0px 0px 2px var(--error);
   }
 
   &-block-content {
@@ -44,7 +44,7 @@
   }
 
   &-input {
-    background: var(--learn-bg-block-tag);
+    background: var(--bg-3);
     padding: 7px 15px;
     border-radius: 5px;
     display: flex;
@@ -57,7 +57,7 @@
       margin: 3px;
       text-align: center;
       background: none;
-      color: var(--learn-success);
+      color: var(--primary);
       letter-spacing: 4px;
       max-width: 440px;
       min-width: 60px;
@@ -84,21 +84,21 @@
 
     &::before {
       content: "/";
-      color: var(--learn-gray);
+      color: var(--gray);
     }
 
     &::after {
       content: "/" attr(data-flags);
-      color: var(--learn-gray);
+      color: var(--gray);
     }
   }
 
   &-result-tag {
-    box-shadow: 3px 3px 2px var(--learn-shadow-result-tag);
+    box-shadow: 3px 3px 2px var(--shadow-1);
     min-width: 10px;
     height: 20px;
     margin: 1px 3px;
-    color: var(--learn-black);
+    color: var(--black);
     font-size: 10px;
     padding: 2px 5px;
     border-radius: 5px;
@@ -110,19 +110,19 @@
 
   &.error {
     .step-interactive-result-tag {
-      background: var(--learn-error);
+      background: var(--error);
     }
   }
 
   &.match {
     .step-interactive-result-tag {
-      background: var(--learn-warning);
+      background: var(--warning);
     }
   }
 
   &.success {
     .step-interactive-result-tag {
-      background: var(--learn-success);
+      background: var(--primary);
     }
   }
 }
@@ -134,8 +134,8 @@
 }
 
 .safari-warning {
-  background-color: var(--learn-pastel-warning);
-  color: var(--learn-black);
+  background-color: var(--warning-darken);
+  color: var(--black);
   font-size: 12px;
   padding: 5px;
   cursor: pointer;

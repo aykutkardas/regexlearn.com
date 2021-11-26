@@ -20,7 +20,7 @@
 }
 
 .flagBoxItemHighlight {
-  color: var(--learn-success);
+  color: var(--primary);
 }
 
 .flagBoxShortcutWrapper {

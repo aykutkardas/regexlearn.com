@@ -15,7 +15,7 @@
 }
 
 .StepTitle {
-  color: var(--learn-text-title);
+  color: var(--txt-1);
   font-size: 28px;
   margin: 0;
 }
@@ -23,7 +23,7 @@
 .StepTitleWord {
   font-size: unset;
   margin: 0px 1px;
-  background: var(--learn-bg-shortcut);
+  background: var(--bg-4);
   border-radius: 6px;
   padding: 2px 6px;
 }
@@ -34,17 +34,17 @@
   font-weight: normal;
   margin: 0;
   margin-bottom: 10px;
-  color: var(--learn-text-description);
+  color: var(--txt-2);
 }
 
 .StepDescription {
   font-size: 16px;
-  color: var(--learn-text-description);
+  color: var(--txt-2);
   line-height: 1.5em;
 }
 
 .StepDescriptionWord {
-  background: var(--learn-bg-shortcut);
+  background: var(--bg-4);
   border-radius: 6px;
   padding: 2px 6px;
   font-size: 12px;

@@ -10,13 +10,13 @@
 .HeaderNav {
   display: flex;
   align-items: center;
-  color: var(--learn-white);
+  color: var(--txt-1);
   font-size: 14px;
 }
 
 .HeaderLink {
   text-decoration: none;
-  color: var(--learn-white);
+  color: var(--txt-1);
   margin-left: 20px;
   user-select: none;
   transition: .3s;
@@ -28,19 +28,19 @@
 }
 
 .HeaderLinkActive {
-  color: var(--learn-success);
-  border-bottom: 1px solid var(--learn-success);
+  color: var(--primary);
+  border-bottom: 1px solid var(--primary);
 }
 
 .HeaderLink:not(.HeaderLinkDisabled):hover,
 .HeaderLink:not(.HeaderLinkDisabled):hover :global(svg) {
-  color: var(--landing-link-hover);
+  color: var(--primary);
 }
 
 .HeaderLinkDisabled {
   display: flex;
   align-items: center;
-  color: var(--landing-link-disabled);
+  color: var(--txt-3);
   cursor: pointer;
   margin-right: -4px;
 }

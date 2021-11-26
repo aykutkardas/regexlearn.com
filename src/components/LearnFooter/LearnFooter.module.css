@@ -89,18 +89,18 @@
 }
 
 .NavigationStepStatusIcon {
-  color: var(--learn-gray);
+  color: var(--gray);
   margin-left: auto;
   width: 20px;
   height: 20px;
 }
 
 .NavigationStepStatusIconUnlock {
-  color: var(--learn-success);
+  color: var(--primary);
 }
 
 .NavigationStepStatusIconError {
-  color: var(--learn-error);
+  color: var(--error);
 }
 
 .NavigationSocial {

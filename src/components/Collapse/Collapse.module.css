@@ -16,13 +16,13 @@
 
 .CollapseDescription {
   font-size: 13px;
-  color: var(--landing-link-disabled);
+  color: var(--txt-3);
   margin: 0;
   margin-left: 80px;
 }
 
 .CollapseTitleIcon {
-  color: var(--learn-gray);
+  color: var(--gray);
 }
 
 .CollapseContent {
@@ -35,5 +35,5 @@
 
 .CollapseContentInner {
   width: 100%;
-  border-bottom: 1px solid var(--learn-gray);
+  border-bottom: 1px solid var(--gray);
 }

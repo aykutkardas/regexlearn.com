@@ -18,18 +18,18 @@ button {
   }
 
   &.success {
-    color: var(--learn-white);
-    background: var(--learn-primary);
-    border-color: var(--learn-primary-darken);
+    color: var(--txt-1);
+    background: var(--secondary);
+    border-color: var(--primary-darken);
   }
 
   &.github {
     display: flex;
     font-size: 16px;
     align-items: baseline;
-    color: var(--learn-white);
-    background: var(--learn-bg-block);
-    border-color: var(--learn-bg-block-tag);
+    color: var(--txt-1);
+    background: var(--bg-2);
+    border-color: var(--bg-3);
     justify-content: center;
 
     span {
@@ -38,13 +38,13 @@ button {
   }
 
   &.warning {
-    color: var(--learn-black);
-    background: var(--learn-warning);
+    color: var(--black);
+    background: var(--warning);
   }
 
   &.danger {
-    color: var(--learn-black);
-    background: var(--learn-error);
+    color: var(--black);
+    background: var(--error);
   }
 
   &[disabled],
