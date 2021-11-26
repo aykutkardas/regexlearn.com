@@ -3,11 +3,21 @@
   position: relative;
   cursor: pointer;
   user-select: none;
+  transition: .3s;
 }
 
 .LanguageSwitch:hover .LanguageSwitchList {
   display: flex;
   flex-direction: column;
+}
+
+.LanguageSwitch :global(svg) {
+  transition: .3s;
+}
+
+.LanguageSwitch:hover,
+.LanguageSwitch:hover :global(svg) {
+  color: var(--learn-success);
 }
 
 .LanguageSwitchCurrent {

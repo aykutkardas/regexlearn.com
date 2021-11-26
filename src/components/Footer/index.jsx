@@ -1,11 +1,11 @@
-import { FormattedMessage } from "react-intl";
-import Icon from "../Icon";
+import { FormattedMessage } from 'react-intl';
+import Icon from '../Icon';
 
-import * as styles from "./Footer.module.css";
+import * as styles from './Footer.module.css';
 
 function Footer() {
   return (
-    <div className="container">
+    <footer className="container">
       <div className="row">
         <div className="col-sm-12">
           <div className={styles.Footer}>
@@ -40,7 +40,7 @@ function Footer() {
           </div>
         </div>
       </div>
-    </div>
+    </footer>
   );
 }
 

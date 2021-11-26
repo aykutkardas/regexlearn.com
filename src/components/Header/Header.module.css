@@ -19,10 +19,12 @@
   color: var(--learn-white);
   margin-left: 20px;
   user-select: none;
+  transition: .3s;
 }
 
 .HeaderLink :global(svg) {
   margin-left: 5px;
+  transition: .3s;
 }
 
 .HeaderLinkActive {
@@ -30,7 +32,8 @@
   border-bottom: 1px solid var(--learn-success);
 }
 
-.HeaderLink:hover {
+.HeaderLink:not(.HeaderLinkDisabled):hover,
+.HeaderLink:not(.HeaderLinkDisabled):hover :global(svg) {
   color: var(--landing-link-hover);
 }
 

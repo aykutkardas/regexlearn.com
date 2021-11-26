@@ -17,7 +17,7 @@ function Header() {
   const { pathname } = useRouter();
 
   return (
-    <div className="container">
+    <header className="container">
       <div className="row">
         <div className="col-sm-12">
           <div className={styles.Header}>
@@ -76,7 +76,7 @@ function Header() {
           </div>
         </div>
       </div>
-    </div>
+    </header>
   );
 }
 
