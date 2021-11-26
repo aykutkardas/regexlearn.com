@@ -21,6 +21,10 @@
   user-select: none;
 }
 
+.HeaderLink :global(svg) {
+  margin-left: 5px;
+}
+
 .HeaderLinkActive {
   color: var(--learn-success);
   border-bottom: 1px solid var(--learn-success);
@@ -35,6 +39,7 @@
   align-items: center;
   color: var(--landing-link-disabled);
   cursor: pointer;
+  margin-right: -4px;
 }
 
 .HeaderLinkDisabledIcon {

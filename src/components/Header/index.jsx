@@ -51,6 +51,15 @@ function Header() {
                 </span>
                 <Icon icon="lock" size={16} className={styles.HeaderLinkDisabledIcon} />
               </span>
+              <a
+                href="https://github.com/aykutkardas/regexlearn.com"
+                target="_blank"
+                rel="noreferrer"
+                className={cx(styles.HeaderLink, 'visible-md visible-lg')}
+              >
+                <span>GitHub</span>
+                <Icon icon="github" size={16} color="white" />
+              </a>
               <ReactTooltip
                 backgroundColor="#444"
                 arrowColor="#444"
