@@ -1,10 +1,10 @@
-.flagBox {
+.FlagBox {
   display: flex;
   margin-top: 10px;
   align-items: flex-start;
 }
 
-.flagBoxItem {
+.FlagBoxItem {
   display: flex;
   align-items: flex-start;
   margin: 0 5px;
@@ -15,19 +15,22 @@
   position: relative;
 }
 
-.flagBoxItemInput {
+.FlagBoxItemInput {
   margin-right: 5px;
 }
 
-.flagBoxItemHighlight {
+.FlagBoxItemHighlight {
   color: var(--primary);
 }
 
-.flagBoxShortcutWrapper {
-  position: absolute;
-  width: 100px;
+.FlagBoxShortcutWrapper {
   display: flex;
-  flex: 1;
-  top: 22px;
-  left: -15px;
+}
+
+
+
+@media only screen and (max-width: 374px) {
+  .FlagBox {
+    flex-direction: column;
+  }
 }
