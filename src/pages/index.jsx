@@ -13,6 +13,8 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Section from '../components/Section';
 
+import * as styles from './Home.module.css';
+
 export default function Home() {
   const { formatMessage } = useIntl();
 
@@ -25,23 +27,24 @@ export default function Home() {
         <meta name="description" content={formatMessage({ id: 'page.landing.description' })} />
       </Head>
       <div className="container">
-        <div className="row main-section">
+        <div className={cx('row', styles.LandingMainSection)}>
           <div className="col-xs-12 col-sm-12 col-md-6">
             <div className="landing">
-              <h1>
+              <h1 className={styles.LandingMainSectionTitle}>
                 <FormattedMessage id="landing.title" />
               </h1>
               <p
+                className={styles.LandingMainSectionDescription}
                 dangerouslySetInnerHTML={{
                   __html: tagWrapper(
                     formatMessage({ id: 'landing.description' }),
                     /`(\S*?[^`]*)`/gim,
-                    'highlight',
+                    styles.LandingMainSectionDescriptionHighlight,
                   ),
                 }}
               />
               <Link href="/learn" passHref>
-                <a>
+                <a className={styles.LandingMainSectionButton}>
                   <Button className={'success'}>
                     <FormattedMessage id="general.startLearning" />
                   </Button>
@@ -51,7 +54,7 @@ export default function Home() {
           </div>
           <div className="col-xs-12 col-sm-12 col-md-6 visible-md visible-lg intro">
             <img src="/Done.webp" width="100%" alt="a relaxed man with his legs on the table" />
-            <ProductButton className="ph-button" />
+            <ProductButton className={styles.ProductHuntButton} />
           </div>
         </div>
 

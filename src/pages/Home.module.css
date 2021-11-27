@@ -1,0 +1,36 @@
+.LandingMainSection {
+  display: flex;
+  align-items: center;
+  height: calc(100vh - 150px);
+}
+
+.LandingMainSectionTitle {
+  margin: 0;
+  font-size: 53px;
+}
+
+.LandingMainSectionDescription {
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.LandingMainSectionDescriptionHighlight {
+  color: var(--primary);
+}
+
+@media only screen and (max-width: 600px) {
+  .LandingMainSectionTitle {
+    font-size: 33px;
+  }
+
+  .LandingMainSectionButton :global(button) {
+    width: 100%;
+  }
+}
+
+.ProductHuntButton {
+  position: fixed;
+  bottom: 10px;
+  right: 30px;
+  z-index: 9999;
+}
