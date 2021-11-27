@@ -43,4 +43,8 @@
   .LanguageSwitchCurrent span {
     display: none;
   }
+
+  .LanguageSwitch {
+    margin-left: 5px;
+  }
 }
