@@ -1,0 +1,25 @@
+.ReportStep {
+  cursor: default;
+  min-width: 10px;
+  position: absolute;
+  bottom: -25px;
+  left: 15px;
+  user-select: none;
+}
+
+.ReportStepLink {
+  display: inline-flex;
+  align-items: center;
+  color: var(--txt-3);
+  font-size: 10px;
+  text-decoration: none;
+  transition: .1s;
+}
+
+.ReportStepLink:hover {
+  color: var(--primary);
+}
+
+.ReportStepLink :global(svg) {
+  margin-right: 5px;
+}
