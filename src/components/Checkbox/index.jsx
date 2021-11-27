@@ -1,8 +1,8 @@
 const Checkbox = ({ children, ...props }) => (
   <label className="checkbox" htmlFor={props.id}>
-    <input className="checkbox-item" type="checkbox" {...props} />
-    <span className="checkmark" />
-    {children}
+    <input type="checkbox" {...props} />
+    <span className="checkbox-check" />
+    <span className="checkbox-text">{children}</span>
   </label>
 );
 
