@@ -23,7 +23,7 @@ function checkRegex(data, { regex, flags }) {
 
     const isSuccess =
       isMatch &&
-      data.regex.includes(regex) &&
+      (data.regex.includes(regex) || data.customValidate?.(regex)) &&
       _.isEmpty(_.xor(data.flags.split(''), flags.split('')));
 
     return { isMatch, isSuccess, $regex: reg };
