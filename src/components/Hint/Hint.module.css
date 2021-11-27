@@ -23,7 +23,7 @@
 }
 
 .HintQuestion:hover {
-  color: var(--warning);
+  color: var(--primary);
 }
 
 .HintAnswer {
