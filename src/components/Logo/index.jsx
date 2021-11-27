@@ -13,6 +13,7 @@ const Logo = () => {
           className={cx(styles.BrandIcon, 'visible-xs visible-sm')}
           icon="unlocked"
           removeInlineStyle
+          size={20}
         />
         <img
           className="visible-md visible-lg"

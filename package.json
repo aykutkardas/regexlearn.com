@@ -24,7 +24,7 @@
     "rc-progress": "^3.1.4",
     "react": "17.0.2",
     "react-dom": "17.0.2",
-    "react-icomoon": "^2.4.1",
+    "react-icomoon": "^2.4.2",
     "react-intl": "^5.21.0",
     "react-toastify": "^8.1.0",
     "react-tooltip": "^4.2.21"
