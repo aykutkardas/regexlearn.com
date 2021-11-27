@@ -1,0 +1,45 @@
+.Button {
+  border: 0;
+  padding: 12px 16px;
+  border-radius: 6px;
+  border-bottom-width: 3px;
+  border-style: solid;
+  cursor: pointer;
+  margin-top: 0;
+  transition: 0.1s;
+}
+
+.Button:active {
+  margin-top: 3px;
+  border-bottom-width: 0px;
+}
+
+.Button:hover {
+  opacity: 0.8;
+}
+
+.Button[disabled],
+.Button[disabled]:hover {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.Primary {
+  color: var(--txt-1);
+  background: var(--secondary);
+  border-color: var(--primary-darken);
+}
+
+.GitHub {
+  display: flex;
+  font-size: 16px;
+  align-items: baseline;
+  color: var(--txt-1);
+  background: var(--bg-2);
+  border-color: var(--bg-3);
+  justify-content: center;
+}
+
+.GitHub :global(svg) {
+  margin-right: 10px;
+}

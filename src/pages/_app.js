@@ -1,6 +1,5 @@
 import "../styles/globals.css";
 import "../styles/plugins/bootstrap.css";
-import "../styles/index.scss";
 import "react-toastify/dist/ReactToastify.css";
 import "animate.css";
 

@@ -45,7 +45,7 @@ export default function Home() {
               />
               <Link href="/learn" passHref>
                 <a className={styles.LandingMainSectionButton}>
-                  <Button className={'success'}>
+                  <Button variant="primary">
                     <FormattedMessage id="general.startLearning" />
                   </Button>
                 </a>
@@ -95,7 +95,7 @@ export default function Home() {
               target="_blank"
               rel="noreferrer"
             >
-              <Button className={cx('github', className)}>
+              <Button variant="github" className={className}>
                 <Icon icon="github" size={16} color="white" />
                 <span>GitHub</span>
               </Button>
