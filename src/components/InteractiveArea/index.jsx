@@ -17,6 +17,8 @@ import FlagBox from '../FlagBox';
 
 import shortcuts from '../../shortcuts';
 
+import * as styles from './InteractiveArea.module.css';
+
 function InteractiveArea({ data, step, isShow, parentError, onChangeSuccess }) {
   const { formatMessage } = useIntl();
   const regexInput = useRef(null);
@@ -94,7 +96,7 @@ function InteractiveArea({ data, step, isShow, parentError, onChangeSuccess }) {
       toast.dismiss();
 
       if (regex) {
-        setContent(tagWrapper(data.content, reg, 'step-interactive-result-tag'));
+        setContent(tagWrapper(data.content, reg, styles.InteractiveAreaResultTag));
       } else {
         setContent(data.content);
       }
@@ -182,34 +184,35 @@ function InteractiveArea({ data, step, isShow, parentError, onChangeSuccess }) {
 
   return (
     <div
-      className={cx('step-interactive', {
-        error,
-        success,
-        match,
-        parentError,
+      className={cx({
+        [styles.InteractiveAreaError]: error,
+        [styles.InteractiveAreaMatch]: match,
+        [styles.InteractiveAreaSuccess]: success,
+        [styles.InteractiveAreaParentError]: parentError,
       })}
     >
       <div
-        className="step-interactive-block step-interactive-block-content"
+        className={styles.InteractiveAreaBlockContent}
         data-title={formatMessage({ id: 'general.text' })}
         dangerouslySetInnerHTML={{ __html: highlightedContent }}
       />
       {isSafariAndAccept && (
-        <div className="safari-warning" onClick={skipStep}>
+        <div className={styles.SafariWarning} onClick={skipStep}>
           <FormattedMessage id="learn.safari.unsupportWarning" />
         </div>
       )}
       <div
-        className="step-interactive-block step-interactive-block-regex"
+        className={styles.InteractiveAreaBlockRegex}
         data-title={formatMessage({ id: 'general.regex' })}
       >
         <ReportStep data={data} step={step} />
         <Hint regex={data.regex} flags={data.flags} />
-        <div className="step-interactive-input" data-flags={flags}>
+        <div className={styles.InteractiveAreaInputWrapper} data-flags={flags}>
           <input
             ref={regexInput}
             key={step}
             type="text"
+            className={styles.InteractiveAreaInput}
             style={{ width: regex.length * 15 || 60 }}
             readOnly={data.readOnly}
             value={regex}

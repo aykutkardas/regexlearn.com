@@ -1,0 +1,136 @@
+.InteractiveAreaBlock {
+  background: var(--bg-2);
+  border-radius: 6px;
+  padding: 12px;
+  font-size: 12px;
+  color: var(--txt-3);
+  letter-spacing: 1px;
+  margin: 20px 0;
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: 0.3s;
+}
+
+.InteractiveAreaBlock::before {
+  content: attr(data-title);
+  position: absolute;
+  top: -6px;
+  left: 11px;
+  background: var(--bg-3);
+  color: var(--txt-3);
+  font-size: 10px;
+  padding: 2px 5px;
+  border-radius: 5px;
+}
+
+.InteractiveAreaBlockContent {
+  composes: InteractiveAreaBlock;
+  display: block;
+  text-align: left;
+  padding: 20px 12px;
+  min-height: 65px;
+}
+
+.InteractiveAreaBlockRegex {
+  composes: InteractiveAreaBlock;
+  display: flex;
+  flex-direction: column;
+}
+
+.InteractiveAreaInputWrapper {
+  background: var(--bg-3);
+  padding: 7px 15px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.InteractiveAreaInputWrapper::before {
+  content: "/";
+  color: var(--gray);
+}
+
+.InteractiveAreaInputWrapper::after {
+  content: "/" attr(data-flags);
+  color: var(--gray);
+}
+
+.InteractiveAreaInput {
+  border: 0px;
+  padding: 5px;
+  margin: 3px;
+  text-align: center;
+  background: none;
+  color: var(--primary);
+  letter-spacing: 4px;
+  max-width: 440px;
+  min-width: 60px;
+  overflow: hidden;
+  outline: 1px #444 dotted;
+}
+
+.InteractiveAreaInput:active,
+.InteractiveAreaInput:focus {
+  outline: 1px saddlebrown solid;
+}
+
+@media only screen and (max-width: 600px) {
+  .InteractiveAreaInputWrapper {
+    min-width: 90%;
+    max-width: 90%;
+    max-width: 100px;
+  }
+
+  .InteractiveAreaInput {
+    font-size: 16px;
+    max-width: 100%;
+    letter-spacing: 1px;
+  }
+}
+
+.InteractiveAreaResultTag {
+  box-shadow: 3px 3px 2px var(--shadow-1);
+  min-width: 10px;
+  height: 20px;
+  margin: 1px 3px;
+  color: var(--black);
+  font-size: 10px;
+  padding: 2px 5px;
+  border-radius: 5px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+}
+
+.InteractiveAreaError .InteractiveAreaResultTag {
+  background: var(--error);
+}
+
+.InteractiveAreaMatch .InteractiveAreaResultTag {
+  background: var(--warning);
+}
+
+.InteractiveAreaSuccess .InteractiveAreaResultTag {
+  background: var(--primary);
+}
+
+.InteractiveAreaParentError .InteractiveAreaBlockRegex {
+  box-shadow: inset 0px 0px 0px 2px var(--error);
+}
+
+.SafariWarning {
+  background-color: var(--warning-darken);
+  color: var(--black);
+  font-size: 12px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.SafariWarning:hover {
+  opacity: .8;
+}
