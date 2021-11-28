@@ -28,6 +28,11 @@ const Hint = ({ regex, flags }) => {
     }
   }, [showStatus]);
 
+  useEffect(() => {
+    ReactTooltip.hide(hintRef.current);
+    setShowStatus(false);
+  }, [regex, flags]);
+
   return (
     <div ref={hintRef} className={styles.Hint} data-tip data-for="hint" data-event="click">
       <span
