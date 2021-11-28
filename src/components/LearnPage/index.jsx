@@ -11,10 +11,10 @@ import data from '../../data';
 import shortcuts from '../../shortcuts';
 
 export default function Learn() {
-  const progress = lookie.get('completedSteps') || [];
   const lastStep = lookie.get('lastStep') || 0;
-  const [step, setStep] = useState(lastStep);
-  const [success, setSuccess] = useState(progress.includes(data[step]));
+  const currentStep = lookie.get('currentStep') || lastStep;
+  const [step, setStep] = useState(currentStep);
+  const [success, setSuccess] = useState(currentStep < lastStep);
   const [error, setError] = useState(false);
 
   const prevStep = useCallback(
@@ -58,14 +58,17 @@ export default function Learn() {
     Mousetrap.bindGlobal(shortcuts.prevStep, prevStep);
     Mousetrap.bindGlobal(shortcuts.nextStep, nextStep);
 
-    lookie.set('lastStep', step);
+    lookie.set('currentStep', step);
+    if (step > lastStep) {
+      lookie.set('lastStep', step);
+    }
 
     return () => {
       Mousetrap.unbind(shortcuts.rootKey);
       Mousetrap.unbind(shortcuts.prevStep);
       Mousetrap.unbind(shortcuts.nextStep);
     };
-  }, [step, success, prevStep, nextStep]);
+  }, [step, lastStep, success, prevStep, nextStep]);
 
   return (
     <>

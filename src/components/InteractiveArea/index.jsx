@@ -32,15 +32,6 @@ function InteractiveArea({ data, step, isShow, parentError, onChangeSuccess }) {
 
   const isSafariAndAccept = isSafari() && data.safariAccept;
 
-  const setLocalStorage = () => {
-    const completedSteps = lookie.get('completedSteps') || [];
-
-    if (!completedSteps.includes(data.title)) {
-      completedSteps.push(data.title);
-      lookie.set('completedSteps', completedSteps);
-    }
-  };
-
   const toastConfig = {
     theme: 'colored',
     autoClose: true,
@@ -50,7 +41,6 @@ function InteractiveArea({ data, step, isShow, parentError, onChangeSuccess }) {
   const skipStep = () => {
     setError(false);
     setSuccess(true);
-    setLocalStorage();
   };
 
   const applyRegex = () => {
@@ -60,7 +50,6 @@ function InteractiveArea({ data, step, isShow, parentError, onChangeSuccess }) {
       if (data.regex[0] == regex) {
         setError(false);
         setSuccess(true);
-        setLocalStorage();
         toast.success(formatMessage({ id: 'general.completedStep' }), toastConfig);
       } else {
         setError(true);
@@ -87,7 +76,6 @@ function InteractiveArea({ data, step, isShow, parentError, onChangeSuccess }) {
 
       if (isChanged && isSuccess) {
         toast.success(formatMessage({ id: 'general.completedStep' }), toastConfig);
-        setLocalStorage();
         setError(false);
       } else if (isMatch) {
         setError(false);
@@ -125,8 +113,8 @@ function InteractiveArea({ data, step, isShow, parentError, onChangeSuccess }) {
       return;
     }
 
-    const progress = lookie.get('completedSteps') || [];
-    const isCompletedStep = progress.includes(data.title);
+    const lastStep = lookie.get('lastStep') || 0;
+    const isCompletedStep = step < lastStep;
 
     applyRegex();
     setContent(data.content);
