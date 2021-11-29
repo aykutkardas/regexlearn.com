@@ -15,9 +15,11 @@ This is a project that makes learning how to write regex easy.
 
 - **English**
 - **Turkish**
+- _Russian_ [(Requested)](https://github.com/aykutkardas/regexlearn.com/issues/85)
 - _Chinese_ [(Requested)](https://github.com/aykutkardas/regexlearn.com/issues/80)
 - _Brazilian Portuguese_ [(Requested)](https://github.com/aykutkardas/regexlearn.com/issues/39)
-- _Please create an issue to add your own language._
+
+_Please create an issue to add your own language._
 
 <br>
 
