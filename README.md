@@ -17,6 +17,7 @@ This is a project that makes learning how to write regex easy.
 - **Turkish**
 - _Russian_ [(Requested)](https://github.com/aykutkardas/regexlearn.com/issues/85)
 - _Chinese_ [(Requested)](https://github.com/aykutkardas/regexlearn.com/issues/80)
+- _Spanish_ [(Requested)](https://github.com/aykutkardas/regexlearn.com/issues/86)
 - _Brazilian Portuguese_ [(Requested)](https://github.com/aykutkardas/regexlearn.com/issues/39)
 
 _Please create an issue to add your own language._
