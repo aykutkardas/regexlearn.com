@@ -1,6 +1,6 @@
 {
-  "general.prev": "Предыдущее задание",
-  "general.next": "Следующее задание",
+  "general.prev": "Предыдущее",
+  "general.next": "Следующее",
   "general.result": "Результат",
   "general.regex": "Regex",
   "general.text": "Текст",
