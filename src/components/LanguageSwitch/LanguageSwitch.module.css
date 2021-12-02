@@ -3,20 +3,15 @@
   position: relative;
   cursor: pointer;
   user-select: none;
-  transition: .3s;
-}
-
-.LanguageSwitch:hover .LanguageSwitchList {
-  display: flex;
-  flex-direction: column;
+  transition: 0.3s;
 }
 
 .LanguageSwitch :global(svg) {
-  transition: .3s;
+  transition: 0.3s;
 }
 
-.LanguageSwitch:hover,
-.LanguageSwitch:hover :global(svg) {
+.LanguageSwitchListItem:hover,
+.LanguageSwitchListItem:hover :global(svg) {
   color: var(--primary);
 }
 
@@ -39,6 +34,36 @@
   text-align: right;
 }
 
+.LanguageSwitchList {
+  position: absolute;
+  top: 30px;
+  width: 100%;
+  z-index: 99;
+}
+
+.LanguageSwitchListItem {
+  margin: 3px 0;
+  padding-right: 20px;
+  color: var(--txt-3);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  white-space: nowrap;
+}
+
+.LanguageSwitchCurrent span,
+.LanguageSwitchListItem span {
+  min-width: 20px;
+}
+
+.LanguageSwitchListItem :global(div[role='button']) {
+  margin-bottom: 2px;
+}
+
+.LanguageSwitchListItemHover {
+  color: var(--primary);
+}
+
 @media only screen and (max-width: 600px) {
   .LanguageSwitchCurrent span {
     display: none;
@@ -46,5 +71,13 @@
 
   .LanguageSwitch {
     margin-left: 5px;
+  }
+
+  .LanguageSwitchList {
+    top: 20px;
+  }
+
+  .LanguageSwitchListItem {
+    padding-right: 0px;
   }
 }

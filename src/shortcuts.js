@@ -8,6 +8,10 @@ const shortcuts = {
   flagGlobal: "alt+g",
   flagMultiline: "alt+m",
   flagCaseInsenstive: "alt+c",
+  close: "esc",
+  up: "up",
+  down: "down",
+  languageSelect: "space",
 };
 
 export default shortcuts;

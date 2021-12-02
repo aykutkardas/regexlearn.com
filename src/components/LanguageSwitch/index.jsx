@@ -1,4 +1,5 @@
 import { useCallback, useContext, useEffect, useState } from 'react';
+import cx from 'classnames';
 
 import * as styles from './LanguageSwitch.module.css';
 import Icon from '../Icon';
@@ -14,28 +15,64 @@ const langList = Object.keys(langs).map(langKey => ({
   label: langNames[langKey],
 }));
 
-const getCurrentIndex = (langList, lang) => langList.findIndex(({ value }) => value === lang);
-
 const LanguageSwitch = () => {
   const { lang, setLang } = useContext(Context);
-  const [currentLangIndex, setCurrentLangIndex] = useState(getCurrentIndex(langList, lang));
+  const [openLangList, setOpenLangList] = useState(false);
+  const [hoverIndex, setHoverIndex] = useState(
+    langList.findIndex(langItem => langItem.value === lang),
+  );
 
   const toggleLang = useCallback(() => {
-    const newLangIndex = currentLangIndex + 1;
-    if (newLangIndex > langList.length - 1) {
-      setCurrentLangIndex(0);
-      setLang(langList[0].value);
-    } else {
-      setCurrentLangIndex(newLangIndex);
-      setLang(langList[newLangIndex].value);
-    }
-  }, [currentLangIndex, setLang]);
+    setOpenLangList(!openLangList);
+  }, [openLangList, setOpenLangList]);
+
+  const selectLang = useCallback(
+    (lang, e) => {
+      if (!openLangList) return;
+      e.preventDefault();
+
+      setLang(lang);
+      setOpenLangList(false);
+    },
+    [setLang, openLangList],
+  );
+
+  const nextLang = useCallback(
+    e => {
+      if (!openLangList) return;
+      e.preventDefault();
+
+      const lastIndex = langList.length - 1;
+      const newHoverIndex = hoverIndex + 1;
+      setHoverIndex(newHoverIndex > lastIndex ? 0 : newHoverIndex);
+    },
+    [hoverIndex, openLangList],
+  );
+
+  const prevLang = useCallback(
+    e => {
+      if (!openLangList) return;
+      e.preventDefault();
+
+      const newHoverIndex = hoverIndex - 1;
+      const lastIndex = langList.length - 1;
+      setHoverIndex(newHoverIndex < 0 ? lastIndex : newHoverIndex);
+    },
+    [hoverIndex, openLangList],
+  );
 
   useEffect(() => {
     Mousetrap.bindGlobal(shortcuts.languageSwitch, toggleLang);
+    Mousetrap.bindGlobal(shortcuts.close, () => setOpenLangList(false));
+    Mousetrap.bindGlobal(shortcuts.up, prevLang);
+    Mousetrap.bindGlobal(shortcuts.down, nextLang);
+    Mousetrap.bindGlobal(shortcuts.languageSelect, e => selectLang(langList[hoverIndex].value, e));
 
-    return () => Mousetrap.unbind(shortcuts.languageSwitch);
-  }, [lang, toggleLang, setLang]);
+    return () => {
+      Mousetrap.unbind(shortcuts.languageSwitch);
+      Mousetrap.unbind(shortcuts.close);
+    };
+  }, [lang, selectLang, toggleLang, setLang, hoverIndex, nextLang, prevLang]);
 
   return (
     <div className={styles.LanguageSwitch}>
@@ -44,6 +81,22 @@ const LanguageSwitch = () => {
         <span>{langNames[lang]}</span>
         <Icon className={styles.LanguageSwitchCurrentIcon} icon="earth" color="#fff" size={16} />
       </div>
+      {openLangList && (
+        <div className={styles.LanguageSwitchList}>
+          {langList.map(({ label, value }, index) => (
+            <div
+              className={cx(styles.LanguageSwitchListItem, {
+                [styles.LanguageSwitchListItemHover]: index === hoverIndex,
+              })}
+              key={value}
+              onClick={e => selectLang(value, e)}
+            >
+              {hoverIndex === index && <Shortcut command={shortcuts.languageSelect} />}
+              <span>{label}</span>
+            </div>
+          ))}
+        </div>
+      )}
     </div>
   );
 };
