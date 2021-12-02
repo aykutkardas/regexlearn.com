@@ -103,11 +103,21 @@ export default function Home() {
           )}
         />
         <div className={cx('row', styles.OurSponsors)}>
-          <h3 className={styles.OurSponsorsTitle}>Our Sponsors</h3>
-          <a href="https://sitechecker.pro" target="_blank" rel="noreferrer">
+          <h3 className={styles.OurSponsorsTitle}>
+            <FormattedMessage id="general.ourSponsors" />
+          </h3>
+          <a
+            href="https://sitechecker.pro/?utm_source=regexlearn&utm_medium=referral&utm_campaign=sponsorship"
+            target="_blank"
+            rel="noreferrer"
+          >
             <img src="/sitechecker.pro.webp" alt="" />
           </a>
-          <a href="https://seo.do" target="_blank" rel="noreferrer">
+          <a
+            href="https://seo.do/?utm_source=regexlearn&utm_medium=referral&utm_campaign=sponsorship"
+            target="_blank"
+            rel="noreferrer"
+          >
             <img src="/seo.do.webp" alt="" />
           </a>
         </div>
