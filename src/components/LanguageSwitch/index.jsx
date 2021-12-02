@@ -24,6 +24,7 @@ const LanguageSwitch = () => {
 
   const toggleLang = useCallback(() => {
     setOpenLangList(!openLangList);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }, [openLangList, setOpenLangList]);
 
   const selectLang = useCallback(
