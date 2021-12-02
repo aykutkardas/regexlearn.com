@@ -34,3 +34,21 @@
   right: 30px;
   z-index: 9999;
 }
+
+.OurSponsors {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.OurSponsorsTitle {
+  color: var(--txt-1);
+  font-weight: normal;
+}
+
+.OurSponsors img {
+  margin: 10px;
+}
+
+.OurSponsors a:hover {
+  opacity: .7;
+}
