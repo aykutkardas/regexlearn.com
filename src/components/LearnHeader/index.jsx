@@ -17,8 +17,8 @@ const Header = ({ steps, step }) => (
         <Progress steps={steps} step={step} />
       </div>
       <div className={cx(styles.LearnHeaderLanguageSwitchWrapper, 'col-xs-4')}>
-        <LanguageSwitch />
         <ShortcutSwitch />
+        <LanguageSwitch />
       </div>
     </header>
   </div>
