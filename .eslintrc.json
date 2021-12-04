@@ -2,6 +2,7 @@
   "extends": "next/core-web-vitals",
   "rules": {
     "@next/next/next-script-for-ga": "off",
-    "@next/next/no-img-element": "off"
+    "@next/next/no-img-element": "off",
+    "@next/next/no-css-tags": "off"
   }
 }

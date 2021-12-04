@@ -1,7 +1,6 @@
 import "../styles/globals.css";
 import "../styles/plugins/bootstrap.css";
 import "react-toastify/dist/ReactToastify.css";
-import "animate.css";
 
 import { useState, useEffect } from "react";
 import { IntlProvider } from "react-intl";

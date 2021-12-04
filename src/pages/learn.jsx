@@ -17,6 +17,7 @@ export default function Learn() {
         <title>{formatMessage({ id: 'page.learn.title' })}</title>
         <link rel="canonical" href="https://regexlearn.com/learn" />
         <meta name="description" content={formatMessage({ id: 'page.learn.description' })} />
+        <link rel="stylesheet" href="/css/animate.css" />
       </Head>
       {!isClient && (
         <div>
