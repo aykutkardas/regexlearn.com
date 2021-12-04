@@ -36,7 +36,7 @@
 
 .LanguageSwitchList {
   position: absolute;
-  top: 30px;
+  top: 20px;
   width: 100%;
   z-index: 99;
 }
@@ -58,10 +58,6 @@
 
 .LanguageSwitchListItem :global(div[role='button']) {
   margin-bottom: 2px;
-}
-
-.LanguageSwitchListItemHover {
-  color: var(--primary);
 }
 
 @media only screen and (max-width: 600px) {
