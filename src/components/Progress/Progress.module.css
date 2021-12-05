@@ -18,10 +18,21 @@
   position: absolute;
 }
 
-.ProgressLine :global(.rc-progress-line-trail) {
-  stroke: var(--bg-4);
+.ProgressBar {
+  width: 100%;
+  max-width: 200px;
+  height: 2px;
+  background-color: var(--bg-4);
+  border-radius: 2px;
 }
 
-.ProgressLine :global(.rc-progress-line-path) {
-  stroke: var(--primary);
+.ProgressLine {
+  height: 6px;
+  border-radius: 3px;
+  position: relative;
+  bottom: 2px;
+  background-color: var(--primary);
+  transition: 0.1s;
+  min-width: 6px;
+  max-width: 100%;
 }

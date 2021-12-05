@@ -3,6 +3,7 @@
   "rules": {
     "@next/next/next-script-for-ga": "off",
     "@next/next/no-img-element": "off",
-    "@next/next/no-css-tags": "off"
+    "@next/next/no-css-tags": "off",
+    "react/self-closing-comp": "error"
   }
 }

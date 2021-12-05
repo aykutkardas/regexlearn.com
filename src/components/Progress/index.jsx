@@ -1,20 +1,14 @@
-import { Line } from "rc-progress";
+import * as styles from './Progress.module.css';
 
-import * as styles from "./Progress.module.css";
-
-const Progress = ({ steps, step }) => {
-  const percent = (step / steps.length) * 100;
+const Progress = ({ current, total, showProgressText = true }) => {
+  const percent = Math.round((current / total) * 100);
 
   return (
     <div className={styles.Progress}>
-      <Line
-        percent={percent}
-        className={styles.ProgressLine}
-        strokeWidth="4"
-      />
-      <div className={styles.ProgressStatus}>
-        {`${step} / ${steps.length - 1}`}
+      <div className={styles.ProgressBar}>
+        <div className={styles.ProgressLine} style={{ width: `${percent}%` }} />
       </div>
+      {showProgressText && <div className={styles.ProgressStatus}>{`${current} / ${total}`}</div>}
     </div>
   );
 };
