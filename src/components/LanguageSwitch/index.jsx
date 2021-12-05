@@ -1,10 +1,12 @@
 import { useContext, useState } from 'react';
+import { useRouter } from 'next/router';
 
 import * as styles from './LanguageSwitch.module.css';
-import Icon from '../Icon';
+import Icon from 'src/components/Icon';
 
-import langs, { langNames } from '../../localization';
-import { Context } from '../../contexts/LanguageContext';
+import langs, { langNames } from 'src/localization';
+import { Context } from 'src/contexts/LanguageContext';
+import getIntlPath from 'src/utils/getIntlPath';
 
 const langList = Object.keys(langs).map(langKey => ({
   value: langKey,
@@ -14,6 +16,7 @@ const langList = Object.keys(langs).map(langKey => ({
 const LanguageSwitch = () => {
   const { lang, setLang } = useContext(Context);
   const [isOpen, setIsOpen] = useState(false);
+  const router = useRouter();
 
   const toggleLang = () => {
     setIsOpen(!isOpen);
@@ -23,7 +26,10 @@ const LanguageSwitch = () => {
     if (!isOpen) return;
     e.preventDefault();
 
-    setLang(lang);
+    const href = getIntlPath(router.pathname, lang);
+    router.push(href);
+
+    // setLang(lang);
     setIsOpen(false);
   };
 

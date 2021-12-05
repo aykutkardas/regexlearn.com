@@ -1,20 +1,17 @@
 import ReactTooltip from 'react-tooltip';
 import { FormattedMessage } from 'react-intl';
-import Link from 'next/link';
 import dynamic from 'next/dynamic';
-import { useRouter } from 'next/router';
 import cx from 'classnames';
 
 import * as styles from './Header.module.css';
 
-import Icon from '../Icon';
-import Logo from '../Logo';
+import Icon from 'src/components/Icon';
+import Logo from 'src/components/Logo';
+import IntlLink from 'src/components/IntlLink';
 
-const LanguageSwitch = dynamic(import('../LanguageSwitch'), { ssr: false });
+const LanguageSwitch = dynamic(import('src/components/LanguageSwitch'), { ssr: false });
 
 function Header() {
-  const { pathname } = useRouter();
-
   return (
     <header className="container">
       <div className="row">
@@ -22,24 +19,28 @@ function Header() {
           <div className={styles.Header}>
             <Logo />
             <div className={styles.HeaderNav}>
-              <Link href="/learn" passHref>
-                <a
-                  className={cx(styles.HeaderLink, {
-                    [styles.HeaderLinkActive]: pathname === '/learn',
-                  })}
-                >
-                  <FormattedMessage id="general.learn" />
-                </a>
-              </Link>
-              <Link href="/cheatsheet" passHref>
-                <a
-                  className={cx(styles.HeaderLink, {
-                    [styles.HeaderLinkActive]: pathname === '/cheatsheet',
-                  })}
-                >
-                  <FormattedMessage id="general.cheatsheet" />
-                </a>
-              </Link>
+              <IntlLink href="/learn" passHref>
+                {({ isActive }) => (
+                  <a
+                    className={cx(styles.HeaderLink, {
+                      [styles.HeaderLinkActive]: isActive,
+                    })}
+                  >
+                    <FormattedMessage id="general.learn" />
+                  </a>
+                )}
+              </IntlLink>
+              <IntlLink href="/cheatsheet" passHref>
+                {({ isActive }) => (
+                  <a
+                    className={cx(styles.HeaderLink, {
+                      [styles.HeaderLinkActive]: isActive,
+                    })}
+                  >
+                    <FormattedMessage id="general.cheatsheet" />
+                  </a>
+                )}
+              </IntlLink>
               <span
                 className={cx(styles.HeaderLink, styles.HeaderLinkDisabled)}
                 data-tip

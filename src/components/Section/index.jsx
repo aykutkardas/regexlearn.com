@@ -1,9 +1,10 @@
-import Link from 'next/link';
 import { FormattedMessage, useIntl } from 'react-intl';
 import cx from 'classnames';
 
-import Button from '../Button';
-import tagWrapper from '../../utils/tagWrapper';
+import Button from 'src/components/Button';
+import IntlLink from 'src/components/IntlLink';
+
+import tagWrapper from 'src/utils/tagWrapper';
 
 import * as styles from './Section.module.css';
 
@@ -41,13 +42,13 @@ export default function Section({
             }}
           />
           {isShowButton && (
-            <Link href={link} passHref>
+            <IntlLink href={link} passHref>
               <a>
                 <Button variant="primary" className={styles.SectionButton}>
                   <FormattedMessage id={buttonText} />
                 </Button>
               </a>
-            </Link>
+            </IntlLink>
           )}
           {customButton?.({ className: styles.SectionButton })}
         </div>

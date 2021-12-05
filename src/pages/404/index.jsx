@@ -1,12 +1,12 @@
 import Head from 'next/head';
-import Link from 'next/link';
 import { FormattedMessage, useIntl } from 'react-intl';
 
 import * as styles from './404.module.css';
 
-import Button from '../../components/Button';
-import Header from '../../components/Header';
-import Footer from '../../components/Footer';
+import Button from 'src/components/Button';
+import Header from 'src/components/Header';
+import Footer from 'src/components/Footer';
+import IntlLink from 'src/components/IntlLink';
 
 export default function Home() {
   const { formatMessage } = useIntl();
@@ -22,11 +22,11 @@ export default function Home() {
           <div className="col-md-12">
             <div className={styles.NotFound}>
               <img className={styles.NotFoundImage} src="/404.webp" alt="404" />
-              <Link href="/" passHref>
+              <IntlLink href="/" passHref>
                 <Button variant="primary">
                   <FormattedMessage id="notFound.button" />
                 </Button>
-              </Link>
+              </IntlLink>
               <p>
                 <FormattedMessage
                   id="notFound.intro"
