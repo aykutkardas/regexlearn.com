@@ -2,7 +2,7 @@ import dynamic from 'next/dynamic';
 import Head from 'next/head';
 import { useIntl } from 'react-intl';
 
-import { locales } from 'src/localization';
+import { defaultLocale, locales } from 'src/localization';
 
 const LearnPage = dynamic(import('src/components/LearnPage'), { ssr: false });
 
@@ -43,10 +43,12 @@ export async function getStaticProps({ params }) {
 export async function getStaticPaths() {
   return {
     fallback: false,
-    paths: locales.map(lang => ({
-      params: {
-        lang,
-      },
-    })),
+    paths: locales
+      .filter(locale => locale !== defaultLocale)
+      .map(lang => ({
+        params: {
+          lang,
+        },
+      })),
   };
 }

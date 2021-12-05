@@ -4,7 +4,7 @@ import Head from 'next/head';
 import cx from 'classnames';
 
 import tagWrapper from 'src/utils/tagWrapper';
-import { locales } from 'src/localization';
+import { defaultLocale, locales } from 'src/localization';
 
 const ProductButton = dynamic(import('src/components/ProductButton'), { ssr: true });
 import Button from 'src/components/Button';
@@ -139,10 +139,12 @@ export async function getStaticProps({ params }) {
 export async function getStaticPaths() {
   return {
     fallback: false,
-    paths: locales.map(lang => ({
-      params: {
-        lang,
-      },
-    })),
+    paths: locales
+      .filter(locale => locale !== defaultLocale)
+      .map(lang => ({
+        params: {
+          lang,
+        },
+      })),
   };
 }

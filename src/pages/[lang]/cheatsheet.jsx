@@ -8,7 +8,7 @@ import CheatsheetItemTitle from 'src/components/CheatsheetItemTitle';
 
 import data from 'src/cheatsheet.json';
 
-import { locales } from 'src/localization';
+import { defaultLocale, locales } from 'src/localization';
 
 export default function Home() {
   const { formatMessage } = useIntl();
@@ -76,21 +76,23 @@ export default function Home() {
   );
 }
 
-export async function getStaticPaths() {
-  return {
-    fallback: false,
-    paths: locales.map(lang => ({
-      params: {
-        lang,
-      },
-    })),
-  };
-}
-
 export async function getStaticProps({ params }) {
   return {
     props: {
       lang: params.lang,
     },
+  };
+}
+
+export async function getStaticPaths() {
+  return {
+    fallback: false,
+    paths: locales
+      .filter(locale => locale !== defaultLocale)
+      .map(lang => ({
+        params: {
+          lang,
+        },
+      })),
   };
 }
