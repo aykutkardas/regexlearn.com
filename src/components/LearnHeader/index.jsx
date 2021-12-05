@@ -2,10 +2,10 @@ import cx from 'classnames';
 
 import * as styles from './LearnHeader.module.css';
 
-import ShortcutSwitch from '../ShortcutSwitch';
-import LanguageSwitch from '../LanguageSwitch';
-import Progress from '../Progress';
-import Logo from '../Logo';
+import ShortcutSwitch from 'src/components/ShortcutSwitch';
+import LanguageSwitch from 'src/components/LanguageSwitch';
+import Progress from 'src/components/Progress';
+import Logo from 'src/components/Logo';
 
 const Header = ({ steps, step }) => (
   <div className={cx(styles.LearnHeader, 'container-fluid')}>

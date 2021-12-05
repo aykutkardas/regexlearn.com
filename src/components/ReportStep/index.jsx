@@ -1,8 +1,8 @@
 import { useContext } from 'react';
 import { FormattedMessage } from 'react-intl';
 
-import Icon from '../Icon';
-import { Context } from '../../contexts/LanguageContext';
+import Icon from 'src/components/Icon';
+import { Context } from 'src/contexts/LanguageContext';
 
 import * as styles from './ReportStep.module.css';
 

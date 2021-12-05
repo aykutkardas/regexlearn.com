@@ -1,11 +1,10 @@
-import { useIntl } from "react-intl";
+import { useIntl } from 'react-intl';
 
-import * as styles from "./Step.module.css";
+import * as styles from './Step.module.css';
 
-import InteractiveArea from "../InteractiveArea";
+import InteractiveArea from 'src/components/InteractiveArea';
 
-import tagWrapper from "../../utils/tagWrapper";
-
+import tagWrapper from 'src/utils/tagWrapper';
 
 function Steps({ data, step, error: parentError, onChangeSuccess }) {
   const { formatMessage } = useIntl();
@@ -13,14 +12,14 @@ function Steps({ data, step, error: parentError, onChangeSuccess }) {
   const title = tagWrapper(
     formatMessage({ id: data.title }),
     /`(\S*?[^`]*)`/gim,
-    styles.StepTitleWord
-  ).replace(/\\n/gim, "<br/>");
+    styles.StepTitleWord,
+  ).replace(/\\n/gim, '<br/>');
 
   const description = tagWrapper(
     formatMessage({ id: data.description }),
     /`(\S*?[^`]*)`/gim,
-    styles.StepDescriptionWord
-  ).replace(/\\n/gim, "<br/>");
+    styles.StepDescriptionWord,
+  ).replace(/\\n/gim, '<br/>');
 
   const isInteractive = data.interactive !== false;
 
@@ -33,10 +32,7 @@ function Steps({ data, step, error: parentError, onChangeSuccess }) {
         dangerouslySetInnerHTML={{ __html: title }}
         data-original-title={data.originalTitle}
       />
-      <p
-        className={styles.StepDescription}
-        dangerouslySetInnerHTML={{ __html: description }}
-      />
+      <p className={styles.StepDescription} dangerouslySetInnerHTML={{ __html: description }} />
       <InteractiveArea
         isShow={isInteractive}
         data={data}

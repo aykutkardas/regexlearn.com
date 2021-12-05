@@ -2,13 +2,13 @@ import { useEffect, useState, useCallback } from 'react';
 
 import lookie from 'lookie';
 
-import Header from '../LearnHeader';
-import Step from '../Step';
-import LearnFooter from '../LearnFooter';
+import Header from 'src/components/LearnHeader';
+import Step from 'src/components/Step';
+import LearnFooter from 'src/components/LearnFooter';
 
-import Mousetrap from '../../utils/mousetrap';
-import data from '../../data';
-import shortcuts from '../../shortcuts';
+import Mousetrap from 'src/utils/mousetrap';
+import data from 'src/data';
+import shortcuts from 'src/shortcuts';
 
 export default function Learn() {
   const lastStep = lookie.get('lastStep') || 0;

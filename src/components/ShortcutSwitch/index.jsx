@@ -2,7 +2,7 @@ import lookie from 'lookie';
 import { useEffect, useState } from 'react';
 import cx from 'classnames';
 
-import Icon from '../Icon';
+import Icon from 'src/components/Icon';
 
 import * as styles from './ShortcutSwitch.module.css';
 

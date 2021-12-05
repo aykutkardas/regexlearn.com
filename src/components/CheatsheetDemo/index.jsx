@@ -4,7 +4,7 @@ import cx from 'classnames';
 
 import * as styles from './CheatsheetDemo.module.css';
 
-import checkRegex from '../../utils/checkRegex';
+import checkRegex from 'src/utils/checkRegex';
 import tagWrapper from 'src/utils/tagWrapper';
 
 function CheatsheetDemo({ data }) {

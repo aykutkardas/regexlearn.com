@@ -1,34 +1,30 @@
-import "../styles/globals.css";
-import "../styles/plugins/bootstrap.css";
+import "src/styles/globals.css";
+import "src/styles/plugins/bootstrap.css";
 import "react-toastify/dist/ReactToastify.css";
 
 import { useState, useEffect } from "react";
 import { IntlProvider } from "react-intl";
-import lookie from "lookie";
 import { ToastContainer } from "react-toastify";
 
-import { Provider as LanguageProvider } from "../contexts/LanguageContext";
-import localization from "../localization";
-
-const defaultLang = "en-us";
+import { Provider as LanguageProvider } from "src/contexts/LanguageContext";
+import localization, { defaultLocale } from "src/localization";
 
 function MyApp({ Component, pageProps }) {
-  const [lang, setLang] = useState(defaultLang);
+  const [lang, setLang] = useState(pageProps.lang || defaultLocale);
 
   const handleChangeLang = (newLang) => {
-    lookie.set("lang", newLang);
     setLang(newLang);
   };
 
   useEffect(() => {
-    setLang(lookie.get("lang") || "en-us");
-  }, []);
+    setLang(pageProps.lang || defaultLocale);
+  }, [pageProps.lang]);
 
   return (
     <IntlProvider
       messages={localization[lang]}
       locale={lang}
-      defaultLocale={defaultLang}
+      defaultLocale={defaultLocale}
     >
       <LanguageProvider lang={lang} setLang={handleChangeLang}>
         <ToastContainer />

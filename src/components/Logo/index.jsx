@@ -1,13 +1,13 @@
-import Link from 'next/link';
 import cx from 'classnames';
 
 import * as styles from './Logo.module.css';
 
-import Icon from '../Icon';
+import Icon from 'src/components/Icon';
+import IntlLink from 'src/components/IntlLink';
 
 const Logo = () => {
   return (
-    <Link href="/">
+    <IntlLink href="/">
       <a className={styles.Brand}>
         <Icon
           className={cx(styles.BrandIcon, 'visible-xs visible-sm')}
@@ -23,7 +23,7 @@ const Logo = () => {
           alt="RegexLearn"
         />
       </a>
-    </Link>
+    </IntlLink>
   );
 };
 

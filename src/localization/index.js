@@ -1,19 +1,21 @@
-import enUS from './en-us';
-import trTR from './tr-tr';
+import en from './en';
+import tr from './tr';
 import ru from './ru';
 
 const messages = {
-  'en-us': enUS,
-  'tr-tr': trTR,
-  ru: ru,
+  en,
+  tr,
+  ru,
 };
 
-const langNames = {
-  'en-us': 'EN',
-  'tr-tr': 'TR',
+export const langNames = {
+  en: 'EN',
+  tr: 'TR',
   ru: 'RU',
 };
 
-export { langNames };
+export const defaultLocale = 'en';
+
+export const locales = Object.keys(langNames);
 
 export default messages;

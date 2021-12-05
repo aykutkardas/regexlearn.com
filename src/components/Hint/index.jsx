@@ -2,9 +2,9 @@ import { useState, useEffect, useRef, useCallback } from 'react';
 import ReactTooltip from 'react-tooltip';
 import { FormattedMessage } from 'react-intl';
 
-import Mousetrap from '../../utils/mousetrap';
-import shortcuts from '../../shortcuts';
-import Shortcut from '../Shortcut';
+import Mousetrap from 'src/utils/mousetrap';
+import shortcuts from 'src/shortcuts';
+import Shortcut from 'src/components/Shortcut';
 
 import * as styles from './Hint.module.css';
 

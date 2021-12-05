@@ -2,8 +2,8 @@ import { useCallback, useEffect, useMemo } from 'react';
 
 import * as styles from './FlagBox.module.css';
 
-import Checkbox from '../Checkbox';
-import Shortcut from '../Shortcut';
+import Checkbox from 'src/components/Checkbox';
+import Shortcut from 'src/components/Shortcut';
 
 import Mousetrap from 'src/utils/mousetrap';
 import tagWrapper from 'src/utils/tagWrapper';

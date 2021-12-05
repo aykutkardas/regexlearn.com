@@ -1,17 +1,16 @@
-import { useState } from "react";
-import lookie from "lookie";
-import cx from "classnames";
+import { useState } from 'react';
+import lookie from 'lookie';
 
-import Icon from "../Icon";
-import * as styles from "./Alert.module.css";
+import Icon from 'src/components/Icon';
+import * as styles from './Alert.module.css';
 
 const Alert = ({ children, ...props }) => {
-  const visible = lookie.get("devAlertStatus") !== "hidden";
+  const visible = lookie.get('devAlertStatus') !== 'hidden';
   const [isVisible, setVisible] = useState(visible);
 
   const handleClose = () => {
     setVisible(false);
-    lookie.set("devAlertStatus", "hidden", "1h");
+    lookie.set('devAlertStatus', 'hidden', '1h');
   };
 
   return (

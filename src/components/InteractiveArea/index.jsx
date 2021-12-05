@@ -5,17 +5,17 @@ import { toast } from 'react-toastify';
 import cx from 'classnames';
 import lookie from 'lookie';
 
-import Mousetrap from '../../utils/mousetrap';
-import setCaretPosition from '../../utils/setCaretPosition';
-import tagWrapper from '../../utils/tagWrapper';
-import isSafari from '../../utils/isSafari';
-import checkRegex from '../../utils/checkRegex';
+import Mousetrap from 'src/utils/mousetrap';
+import setCaretPosition from 'src/utils/setCaretPosition';
+import tagWrapper from 'src/utils/tagWrapper';
+import isSafari from 'src/utils/isSafari';
+import checkRegex from 'src/utils/checkRegex';
 
-import Hint from '../Hint';
-import ReportStep from '../ReportStep';
-import FlagBox from '../FlagBox';
+import Hint from 'src/components/Hint';
+import ReportStep from 'src/components/ReportStep';
+import FlagBox from 'src/components/FlagBox';
 
-import shortcuts from '../../shortcuts';
+import shortcuts from 'src/shortcuts';
 
 import * as styles from './InteractiveArea.module.css';
 
