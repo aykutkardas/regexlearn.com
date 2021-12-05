@@ -19,11 +19,11 @@ const LanguageSwitch = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { pathname } = useRouter();
 
-  const toggleLang = () => {
+  const toggleLanguageList = () => {
     setIsOpen(!isOpen);
   };
 
-  const selectLang = () => {
+  const closeLanguageList = () => {
     setIsOpen(false);
   };
 
@@ -31,21 +31,27 @@ const LanguageSwitch = () => {
 
   return (
     <div className={styles.LanguageSwitch}>
-      <div className={styles.LanguageSwitchCurrent} role="button" tabIndex="0" onClick={toggleLang}>
+      <div
+        className={styles.LanguageSwitchCurrent}
+        role="button"
+        tabIndex="0"
+        onClick={toggleLanguageList}
+      >
         <span>{langNames[lang]}</span>
-        <Icon className={styles.LanguageSwitchCurrentIcon} icon="earth" color="#fff" size={16} />
+        <Icon icon="earth" className={styles.LanguageSwitchCurrentIcon} size={16} />
       </div>
-      {isOpen && (
-        <div className={styles.LanguageSwitchList}>
-          {getAvailableList().map(({ label, value }) => (
-            <Link href={getIntlPath(pathname, value)} key={value}>
-              <a onClick={selectLang} className={styles.LanguageSwitchListItem}>
-                <span>{label}</span>
-              </a>
-            </Link>
-          ))}
-        </div>
-      )}
+      <div
+        className={styles.LanguageSwitchList}
+        style={{ visibility: isOpen ? 'visible' : 'hidden' }}
+      >
+        {getAvailableList().map(({ label, value }) => (
+          <Link href={getIntlPath(pathname, value)} key={value}>
+            <a onClick={closeLanguageList} className={styles.LanguageSwitchListItem}>
+              <span>{label}</span>
+            </a>
+          </Link>
+        ))}
+      </div>
     </div>
   );
 };
