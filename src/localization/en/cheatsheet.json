@@ -56,7 +56,7 @@
   "cheatsheet.quantifiersAndAlternation": "Quantifiers And Alternation",
   "cheatsheet.plus.title": "Plus",
   "cheatsheet.plus.description": "Expression matches one or more.",
-  "cheatsheet.asterisk.title": "Astekrisk",
+  "cheatsheet.asterisk.title": "Asterisk",
   "cheatsheet.asterisk.description": "Expression matches zero or more.",
   "cheatsheet.quantifier.title": "Quantifier",
   "cheatsheet.quantifier.description": "Expression matches within specified ranges.",
