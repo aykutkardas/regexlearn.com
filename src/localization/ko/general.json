@@ -1,0 +1,32 @@
+{
+  "general.prev": "Previous",
+  "general.next": "Next",
+  "general.result": "Result",
+  "general.regex": "Regex",
+  "general.text": "Text",
+  "general.completedStep": "Step Completed!",
+  "general.hintQuestion": "Show Answer",
+  "general.reportStep": "Report a Problem",
+  "general.startLearning": "Start Learning",
+  "general.comingSoon": "Coming Soon",
+  "general.becomeSponsor": "Become a Sponsor",
+  "general.learn": "Learn",
+  "general.playground": "Playground",
+  "general.cheatsheet": "Cheatsheet",
+  "general.ourSponsors": "Our Sponsors",
+
+  "notFound.intro": "The page you are looking for does not exist.",
+  "notFound.button": "Back to home",
+
+  "page.landing.title": "Regex Learn - Step by step, from zero to advanced.",
+  "page.learn.title": "Regex Learn - RegEx Interactive Course",
+  "page.cheatsheet.title": "Regex Learn - RegEx Cheatsheet",
+  "page.404.title": "Regex Learn - Not Found",
+
+  "page.landing.description": "Learn RegEx interactively, practice at your level, test and share your own RegEx.",
+  "page.learn.description": "Learn RegEx step by step. Complete the interactive tutorial that will make your learning easier and faster.",
+  "page.cheatsheet.description": "Sometimes you just need to remember RegEx. Try the cheatsheet that will make it easier for you to understand and remember better.",
+
+  "alert.site.under.development": "This site is still under development. What you see now may change.",
+  "learn.safari.unsupportWarning": "Regular expressions in this step are not supported by the Safari browser. If you have trouble getting past this step. You can click here."
+}
