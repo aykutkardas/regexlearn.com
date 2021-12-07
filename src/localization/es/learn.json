@@ -6,7 +6,7 @@
   "examples.finish.description": " ",
 
   "steps.starter.title": "Intro",
-  "steps.starter.description": "RegEx es la abreviación de `Regular Expression`. Ayudar a coincidir, encontrar o gestionar el texto. Comience escribiendo `OK` en el campo Regex para pasar al primer paso y acceder a la descripción más detallada.",
+  "steps.starter.description": "RegEx es la abreviación de `Regular Expression`. Ayuda a hacer coincidir, buscar o administrar el texto. Comience escribiendo `OK` en el campo Regex para pasar al primer paso y acceder a la descripción más detallada.",
 
   "steps.whatIsRegex.title": "¿Qué son las Expresiones Regulares `RegEx`?",
   "steps.whatIsRegex.description": "Las expresiones regulares son una serie de caracteres que expresan un patrón de búsqueda. A menudo abreviado como `RegEx` o `RegExp`. Se usan especialmente para encontrar o reemplazar palabras en textos. Además, podemos probar si un texto cumple con las reglas que establecemos.\\n\\n Por ejemplo, digamos que tienes una lista de nombres de archivos. Y tu solo quieres encontrar los archivos con extensión `pdf`. Después de escribir la expresión `^\\w+\\.pdf$` funcionará. El significado de las definiciones en esta expresión se volverán más claras a medida que avanzan los pasos.",

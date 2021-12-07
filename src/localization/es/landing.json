@@ -6,8 +6,8 @@
   "section.learn.content": "`Expresiones Regulares`, abreaviado como RegEx o RegExp, son una cadena de caracteres creados dentro del framework de reglas sintácticas de RegEx. Puedes administrar fácilmente sus datos con RegEx, que usa comandos como encontrar, emparejar, y editar. RegEx puede ser usado en lenguajes de programación como Python, SQL, Javascript, R, Google Analytics, Google Data Studio, y durante todo el proceso de codificación. Aprenda regex en línea con ejemplos y tutoriales en Regexlearn ahora.",
 
   "section.cheatsheet.button": "Revise ahora",
-  "section.cheatsheet.title": "Hoja de referencia",
-  "section.cheatsheet.content": "Con la `Hoja de referencia de RegexLearn`, usted podrá ver todos los usos que necesite a la vez y verificarlos directamente desde la página. Explore todos los patrones y símbolos de RegEx con la hoja de referencia",
+  "section.cheatsheet.title": "Cheatsheet",
+  "section.cheatsheet.content": "Con la `Cheatsheet de RegexLearn`, usted podrá ver todos los usos que necesite a la vez y verificarlos directamente desde la página. Explore todos los patrones y símbolos de RegEx con la Cheatsheet",
 
   "section.playground.title": "Playground",
   "section.playground.content": "Si desea generar un RegEx, puede construir y probar fácilmente su patrón de RegEx a través del Playground. Como un probador de RegEx, puede validar y compartir su RegEx con otros para el trabajo colaborativo. Pronto",

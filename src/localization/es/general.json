@@ -12,7 +12,7 @@
   "general.becomeSponsor": "Convertirse en un patrocinador",
   "general.learn": "Aprender",
   "general.playground": "Playground",
-  "general.cheatsheet": "Hoja de referencia",
+  "general.cheatsheet": "Cheatsheet",
   "general.ourSponsors": "Nuestros patrocinadores",
 
   "notFound.intro": "La página que está buscando no existe.",
@@ -20,12 +20,12 @@
 
   "page.landing.title": "Regex Learn - Paso a paso, de cero a avanzado.",
   "page.learn.title": "Regex Learn - RegEx Curso Interactivo",
-  "page.cheatsheet.title": "Regex Learn - Hoja de referencia RegEx",
+  "page.cheatsheet.title": "Regex Learn - RegEx Cheatsheet",
   "page.404.title": "Regex Learn - No encontrado",
 
   "page.landing.description": "Learn RegEx interactivamente, practique a su nivel, pruebe y comparta su propio RegEx",
   "page.learn.description": "Learn RegEx paso a paso. Complete el tutorial interactivo que hará que su aprendizaje sea más fácil y más rápido.",
-  "page.cheatsheet.description": "A veces solo necesitas recordar el RegEx. Pruebe la hoja de referencia, que le faciilitará el entendimiento y a recordar mejor.",
+  "page.cheatsheet.description": "A veces solo necesitas recordar el RegEx. Pruebe la Cheatsheet, que le faciilitará el entendimiento y a recordar mejor.",
 
   "alert.site.under.development": "Este sitio sigue en desarrollo. Lo que ves ahora puede cambiar.",
   "learn.safari.unsupportWarning": "Las expresiones regulares en este paso no son compatibles con el navegador Safari. Si tiene problemas para superar este paso. Puedes hacer clic aquí."
