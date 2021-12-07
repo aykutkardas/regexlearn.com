@@ -20,7 +20,7 @@
   "steps.characterSet.title": "문자열 `[abc]`",
   "steps.characterSet.description": "한단어가 여러 문자열인 경우, 우리는 이를 모두 대괄호`[]`안에 작성합니다. 예를 들어, 문단 안에 있는 모든 단어를 작성하기 위해서, 대괄호 `[]` 안에 `a`, `e`, `i`, `o`, `u` 문자들을 작성합니다..",
 
-  "steps.negatedCharacterSet.title": "문자열`[^abc]` 검색하기",
+  "steps.negatedCharacterSet.title": "부정 문자 집합`[^abc]`",
   "steps.negatedCharacterSet.description": "아래 문단에서 'ber'와 'bo'를 제외한 모든 단어를 찾으려면 대괄호 '[]' 안에 캐럿 '^' 문자 뒤에 'e'와 'o'를 나란히 입력하세요.",
 
   "steps.range.title": "문자 범위`[a-z]`",
@@ -29,104 +29,104 @@
   "steps.rangeNumber.title": "숫자 범위`[0-9]`",
   "steps.rangeNumber.description": "특정 범위내의 숫자를 찾기 위해서, 시작하는 숫자와 끝 숫자가 두 숫자 사이에`-`와 함께 `[]`안에 입력됩니다. 3,6을 포함한 그 사이의 숫자를 찾는 표현을 작성해보세요."
 
-  "examples.basicMatchers.title": "실습: Basic Matcher",
-  "examples.basicMatchers.description": "Write the expression that will select the words `of` in the text.",
+  "examples.basicMatchers.title": "실습: 기본 매칭",
+  "examples.basicMatchers.description": "문단안에 `of`와 함께 쓰이는 단어들을 선택할 표현을 작성하세요.",
 
-  "examples.dotCharacter.title": "Practice: Any Character",
-  "examples.dotCharacter.description": "Type the expression to select individual letters, numbers, spaces, and special characters in the text. The expression you type must match any character.",
+  "examples.dotCharacter.title": "실습: 아무 문자",
+  "examples.dotCharacter.description": "문단에서 개별 문자, 숫자, 공백 및 특수 문자를 선택하기 위한 표현식을 입력합니다. 당신이 작성한 표현법은 어떤 문자든지 매칭되어야 합니다.",
 
-  "examples.characterSet.title": "Practice: Character Sets",
-  "examples.characterSet.description": "Write the phrase that matches each word in the text. The only characters that change are the initials of the words.",
+  "examples.characterSet.title": "실습: ",
+  "examples.characterSet.description": "문단에 각 단어와 일치하는 문구를 쓰세요. 변경되는 문자는 오직 단어의 이니셜뿐입니다.",
 
-  "examples.negatedCharacterSet.title": "Practice: Negated Character Sets",
-  "examples.negatedCharacterSet.description": "Write down the expression that will match anything other than the words `beor` and `beur` in the text. Do this using the negated character set.",
+  "examples.negatedCharacterSet.title": "실습: 부정 문자 집합",
+  "examples.negatedCharacterSet.description": "beor와 beur 이외의 다른 표현과 일치하는 표현을 본문에 적어주세요. 부정 문자 집합을 이용하여 표현해주세요.",
 
-  "examples.range.title": "Practice: Letter Range",
-  "examples.range.description": "Write the expression that will select the letters from `g` to `k` in the text.\\n`g` and `k` letters should also be included in this range.",
+  "examples.range.title": "실습: 문자 범위",
+  "examples.range.description": "글에서 'g'에서 'k'까지 선택할 수 있는 표현을 쓰세요.\\n`g` 및 'k' 문자도 이 범위에 포함되어야 합니다.",
 
-  "examples.rangeNumber.title": "Practice: Number Range",
-  "examples.rangeNumber.description": "Type an expression to select numbers from `2` to `7` in the text.\\n`2` and `7` should also be included in this range.",
+  "examples.rangeNumber.title": "실습: 숫자 범위",
+  "examples.rangeNumber.description": "문단에서 '2'부터 '7'까지의 숫자를 선택하는 식을 입력합니다.\\n`2` 와 `7`또한 범위에 포함되어야 합니다.",
 
-  "steps.repetitions.title": "Repetitions",
-  "steps.repetitions.description": "Some special characters are used to specify how many times a character will be repeated in the text. These special characters are the plus `+`, the asterisk `*`, and the question mark `?`.",
+  "steps.repetitions.title": "반복",
+  "steps.repetitions.description": "일부 특수 문자는 텍스트에서 문자가 반복되는 횟수를 지정하는 데 사용됩니다. 이러한 특수 문자들은 `+`, `*`, `?` 입니다.",
 
-  "steps.asterisk.title": "Asterisk `*`",
-  "steps.asterisk.description": "We put an asterisk `*` at the end to indicate that a character does not match at all or can match many times. For example, indicate that the letter `e` should never occur in the text, or it can occur once or more side by side.",
+  "steps.asterisk.title": "별모양기호 `*`",
+  "steps.asterisk.description": "문자가 전혀 일치하지 않거나 여러 번 일치했음을 나타내기 위해 끝에 별기호 '*'를 붙입니다. 예를 들어, 문자 'e'가 본문에서 나타나면 안됨을 의미하거나, 한 번 이상 나란히 나타남을 의미합니다.",
 
-  "steps.plusCharacter.title": "Plus Sign `+`",
-  "steps.plusCharacter.description": "To indicate that a character can occur one or more times, we put a plus sign `+` at the end. For example, indicate that the letter `e` can occur one or more times in the text.",
+  "steps.plusCharacter.title": "덧셈기호 `+`",
+  "steps.plusCharacter.description": "문자가 한 번 이상 발생할 수 있음을 나타내기 위해 끝에 더하기 기호 '+'를 붙입니다. 예를 들어, 문자 'e'가 본문에서 한 번 이상 나타날 수 있음을 의미합니다.",
 
-  "steps.questionMark.title": "Question Mark `?`",
-  "steps.questionMark.description": "To indicate that a character is optional, we put a `?` question mark at the end. For example, indicate that the following letter `u` is optional.",
+  "steps.questionMark.title": "물음표기호 `?`",
+  "steps.questionMark.description": "문자가 선택 사항임을 나타내기 위해 끝에 물음표를 붙입니다. 예를 들어, 다음 문자 'u'가 선택 사항임을 나타냅니다.",
 
-  "steps.quantifier.title": "Curly Braces - 1",
-  "steps.quantifier.description": "To express a certain number of occurrences of a character, we write curly braces `{n}` along with how many times we want it to occur at the end. For example, indicate that the following letter `e` can occur only `2` times.",
+  "steps.quantifier.title": "중괄호 - 1",
+  "steps.quantifier.description": "우리는 문자의 발생 횟수를 표현하기 위해 마지막에 몇 번이 일어나길 원하는지 중괄호 '{n}'로 나타냅니다. 예를 들어, 다음 문자 'e'는 '2'번만 나타남을 의미합니다.",
 
-  "steps.quantifierMin.title": "Curly Braces - 2",
-  "steps.quantifierMin.description": "To express at least a certain number of occurrences of a character, we write the end of the character at least how many times we want it to occur, with a comma `,` at the end, and inside curly braces `{n, }`. For example, indicate that the following letter `e` can occur at least `3` times.",
+  "steps.quantifierMin.title": "중괄호 - 2",
+  "steps.quantifierMin.description": "최소한 문자의 발생 횟수를 표현하기 위해, 우리는 끝에는 쉼표 ''와, 안쪽에는 중괄호 '{n, }'를 붙여서 문자가 최소한 몇번 나타나는지 표현합니다. 예를 들어, 다음 문자 'e'는 '3'번이상 나타남을 의미합니다",
 
-  "steps.quantifierRange.title": "Curly Braces - 3",
-  "steps.quantifierRange.description": "To express the occurrence of a character in a certain number range, we write curly braces `{x,y}` with the interval we want to go to the end. For example, indicate that the following letter `e` can only occur between `1` and `3`.",
+  "steps.quantifierRange.title": "중괄호 - 3",
+  "steps.quantifierRange.description": "특정 숫자 범위에서 문자의 발생을 표현하기 위해 범위내에 중괄호 '{x,y}'를 씁니다. 예를 들어, `e`는 `1` 과 `3`사이에서만 나타날 수 있습니다.",
 
-  "examples.asterisk.title": "Practice: Asterisk `*`",
-  "examples.asterisk.description": "Use the asterisk `*` to write the expression that will select each word, suitable for the absence of the letter `e` in the text and the presence of more than one.",
+  "examples.asterisk.title": "실습: 별기호 `*`",
+  "examples.asterisk.description": "별기호 '*'를 사용하여 문단에 문자 'e'가 없거나 두 개 이상의 단어가 있는 경우에 적합한 각 단어를 선택하는 식을 작성합니다.",
 
-  "examples.plusCharacter.title": "Practice: Plus Sign `+`",
-  "examples.plusCharacter.description": "Write the expression using the plus sign `+` to select words in which the letter `e` occurs one or more times in the text.",
+  "examples.plusCharacter.title": "실습: 덧셈기호 `+`",
+  "examples.plusCharacter.description": "더하기 기호 '+'를 사용하여 문단에서 문자 'e'가 한 번 이상 나타나는 단어를 선택합니다.",
 
-  "examples.questionMark.title": "Practice: Question Mark `?`",
-  "examples.questionMark.description": "Write the expression indicating that the letter `n` is optional in the text, using the question mark `?`. Thus, both the words `a` and `an` can be selected.",
+  "examples.questionMark.title": "실습: 물음표기호 `?`",
+  "examples.questionMark.description": "문자 'n'이 선택 사항임을 나타내는 식을 물음표 '?'를 통해 사용하세요. 그러면 a와 an을 모두 선택할 수 있습니다.",
 
-  "examples.quantifier.title": "Practice: Curly Braces - 1",
-  "examples.quantifier.description": "Write the expression using curly braces `{}` to select `4` digit numbers from `0` to `9` in the text.",
+  "examples.quantifier.title": "실습: 중괄호 - 1",
+  "examples.quantifier.description": "중괄호{}를 사용하여 문단에서 '0'부터 '9'까지의 4'자리 숫자를 선택하기 위해 식을 쓰세요.",
 
-  "examples.quantifierMin.title": "Practice: Curly Braces - 2",
-  "examples.quantifierMin.description": "Type the expression using curly braces `{}` to select numbers between `0` and `9` that occur at least `2` times in the text.",
+  "examples.quantifierMin.title": "실습: 중괄호 - 2",
+  "examples.quantifierMin.description": "중괄호 '{}'을(를) 사용하여 문단에서 '2'회 이상 발생하는 숫자 '0'과 '9' 사이의 숫자를 선택하세요.",
 
-  "examples.quantifierRange.title": "Practice: Curly Braces - 3",
-  "examples.quantifierRange.description": "Write the expression using curly braces `{}` to select the numbers from `0` to `9` in the text that is at least between `1` and `4`.",
+  "examples.quantifierRange.title": "실습: 즁괄호 - 3",
+  "examples.quantifierRange.description": "중괄호 '{}'를 사용하여 최소한 1에서 4 사이의 문단에서 '0'에서 '9' 사이의 숫자를 선택하세요.",
 
-  "steps.groupping.title": "Parentheses `( )`: Grouping",
-  "steps.groupping.description": "We can group an expression and use these groups to reference or enforce some rules. To group an expression, we enclose `()` in parentheses. For now just group `haa` below.",
+  "steps.groupping.title": "소괄호 `( )`: 그룹화",
+  "steps.groupping.description": "우리는 어떤 규칙을 참조하거나 적용시키기위헤 표현을 그룹화 할 수 있습니다. 표현을 그룹화하기 위해 `()` 소괄호를 사용합니다. 아래와 같이`haa` 를 그룹화 할 수 있습니다.",
 
-  "steps.groupReference.title": "Referencing a Group",
-  "steps.groupReference.description": "The words `ha` and `haa` are grouped below. The first group is used by writing `\\1` to avoid rewriting. Here `1` denotes the order of grouping. Type `\\2` at the end of the expression to refer to the second group.",
+  "steps.groupReference.title": "그룹 참조",
+  "steps.groupReference.description": "단어 `ha` 와 `haa`는 그룹화 되었습니다. 첫번째 그룹은 중복을 피하기 위해 `\\1`로 쓰입니다. 여기서 `1`는 그룹의 순서를 의미합니다. 표현 끝의 형식 `\\2`는 두번째 그룹을 의미합니다.",
 
-  "steps.nonCapturingGroupping.title": "Parentheses `(?: )`: Non-capturing Grouping",
-  "steps.nonCapturingGroupping.description": "You can group an expression and ensure that it is not caught by references. For example, below are two groups. However, the first group reference we denote with `\\1` actually points to the second group, as the first is an uncaught group.",
+  "steps.nonCapturingGroupping.title": "소괄호 `(?: )`: 확인되지 않는 그룹화",
+  "steps.nonCapturingGroupping.description": "표현식을 그룹화하여 참조에 의해 걸리지 않도록 할 수 있습니다. 예를 들어, 아래 그룹들을 보세요. 그러나 우리가 '\\1'로 나타내는 첫 번째 그룹 참조는 사실 두 번째 그룹을 가리키는데, 첫 번째 그룹은 학습되지 않은 그룹이기 때문입니."
 
-  "steps.pipeCharacter.title": "Pipe Character `|`",
-  "steps.pipeCharacter.description": "It allows to specify that an expression can be in different expressions. Thus, all possible statements are written separated by the pipe sign `|`. This differs from charset `[abc]`, charsets operate at the character level. Alternatives are at the expression level. For example, the following expression would select both `cat` and `Cat`. Add another pipe sign `|` to the end of the expression and type `rat` so that all words are selected.",
+  "steps.pipeCharacter.title": "파이프 문자 `|`",
+  "steps.pipeCharacter.description": "표현이 다른 표현 안에 있을 수 있도록 지정할 수 있습니다. 그러므로, 가능한 모든 진술은 파이프 기호 `|`로 구분되어 작성됩니다. 이것은 문자 집합 '[abc]'와 다르며 문자 집합은 문자 수준에서 작동합니다. 대안은 표현 수준에 있습니다. 예를 들어,다음 표현은 'cat'과 'cat'을 모두 선택합니다. 표현식의 끝에 파이프 기호 '|'를 하나 더 추가하고 'rat'를 입력하여 모든 단어가 선택되도록 합니다."
 
-  "steps.escapeCharacter.title": "Escape Character `\\`",
+  "steps.escapeCharacter.title": "탈출 문자  `\\`",
   "steps.escapeCharacter.description": "There are special characters that we use when writing regex. `{ } [ ] / \\ + * . $^ | ?` Before we can select these characters themselves, we need to use an escape character `\\`. For example, to select the dot `.` and asterisk `*` characters in the text, let's add an escape character `\\` before it.",
 
-  "steps.caret.title": "Caret Sign `^`:\\nSelecting by Line Start",
-  "steps.caret.description": "We were using `[0-9]` to find numbers. To find only numbers at the beginning of a line, prefix this expression with the `^` sign.",
+  "steps.caret.title": "캐럿 문자 `^`:\\n라인 시작 선택",
+  "steps.caret.description": "우리는 숫자를 찾기 위해 [0-9]를 사용하고 있었습니다. 의 시작 부분에 있는 숫자만 찾으려면 이 식에 '^' 기호를 붙입니다",
 
-  "steps.dollar.title": "Dollar Sign `$`:\\nSelecting by End of Line",
-  "steps.dollar.description": "Let's use the `$` sign after the `html` value to find the `html` texts only at the end of the line.",
+  "steps.dollar.title": "달러 문자 `$`:\\n라인 끝 선택",
+  "steps.dollar.description": "html 값 뒤에 '$' 기호를 사용하여 줄 끝에만 있는 html 문단를 찾아봅시다.",
 
-  "steps.wordCharacter.title": "Word Character `\\w`: Letter, Number and Underscore",
-  "steps.wordCharacter.description": "The expression `\\w` is used to find letters, numbers and underscore characters. Let's use the expression `\\w` to find word characters in the text.",
+  "steps.wordCharacter.title": "단어 문자`\\w`: 문자, 숫자 및 밑줄",
+  "steps.wordCharacter.description": "표현 `\\w` 는 문자, 숫자 및 밑줄을 찾기 위해 사용됩니다. 문단에 단어들을 찾기위해 `\\w`표현을 사용해 봅시다.",
 
-  "steps.withoutWordCharacter.title": "Except Word Character `\\W`",
-  "steps.withoutWordCharacter.description": "The expression `\\W` is used to find characters other than letters, numbers, and underscores.",
+  "steps.withoutWordCharacter.title": "단어 문자 제외 `\\W`",
+  "steps.withoutWordCharacter.description": "표현 `\\W`는 문자, 숫자 및 밑줄를 제외하고 찾기 위해 사용됩니다.",
 
-  "steps.numberCharacter.title": "Number Character `\\d`",
-  "steps.numberCharacter.description": "`\\d` is used to find only number characters.",
+  "steps.numberCharacter.title": "숫자 문자 `\\d`",
+  "steps.numberCharacter.description": "`\\d`는 숫자를 찾기 위해 사용됩니다.",
 
-  "steps.withoutNumberCharacter.title": "Except Number Character `\\D`",
-  "steps.withoutNumberCharacter.description": "`\\D` is used to find non-numeric characters.",
+  "steps.withoutNumberCharacter.title": "숫자 문자 제외 \\D`",
+  "steps.withoutNumberCharacter.description": "`\\D`는 숫자가 아닌 문자를 찾기 위해 사용됩니다.",
 
-  "steps.spaceCharacter.title": "Space Character `\\s`",
-  "steps.spaceCharacter.description": "`\\s` is used to find only space characters.",
+  "steps.spaceCharacter.title": "공백문자 `\\s`",
+  "steps.spaceCharacter.description": "`\\s`는 공백문자만을 찾기 위해 사용됩니다.",
 
-  "steps.withoutSpaceCharacter.title": "Except Space Character `\\S`",
-  "steps.withoutSpaceCharacter.description": "`\\S` is used to find non-space characters.",
+  "steps.withoutSpaceCharacter.title": "공백문자 제외 `\\S`",
+  "steps.withoutSpaceCharacter.description": "`\\S` 는 공백 문자를 제외하고 찾기 위해 사용됩니다.",
 
   "steps.lookarounds.title": "Lookarounds",
-  "steps.lookarounds.description": "If we want the phrase we're writing to come before or after another phrase, we need to \"lookaround\". Take the next step to learn how to \"lookaround\".",
+  "steps.lookarounds.description": "우리가 쓰고 있는 구절이 다른 구절 앞이나 뒤에 오기를 원한다면, 우리는 \"둘러볼 필요가 있다\". Take the next step to learn how to \"lookaround\".",
 
   "steps.positiveLookahead.title": "Positive Lookahead: `(?=)`",
   "steps.positiveLookahead.description": "For example, we want to select the hour value in the text. Therefore, to select only the numerical values that have `PM` after them, we need to write the positive look-ahead expression `(?=)` after our expression. Include `PM` after the `=` sign inside the parentheses.",
