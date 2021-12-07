@@ -126,19 +126,19 @@
   "steps.withoutSpaceCharacter.description": "`\\S` 는 공백 문자를 제외하고 찾기 위해 사용됩니다.",
 
   "steps.lookarounds.title": "Lookarounds",
-  "steps.lookarounds.description": "우리가 쓰고 있는 구절이 다른 구절 앞이나 뒤에 오기를 원한다면, 우리는 \"둘러볼 필요가 있다\". Take the next step to learn how to \"lookaround\".",
+  "steps.lookarounds.description": "우리가 쓰고 있는 구절이 다른 구절 앞이나 뒤에 오기를 원한다면, 우리는 \"lookaround\"가 필요합니다. \"lookaround\"를 사용하기 위한 다음단계로 진행하세요.",
 
   "steps.positiveLookahead.title": "Positive Lookahead: `(?=)`",
-  "steps.positiveLookahead.description": "For example, we want to select the hour value in the text. Therefore, to select only the numerical values that have `PM` after them, we need to write the positive look-ahead expression `(?=)` after our expression. Include `PM` after the `=` sign inside the parentheses.",
+  "steps.positiveLookahead.description": "예를 들어, 문단에서 시간 값을 선택하려고 합니다. 그러면 그 뒤에 'PM'이 있는 숫자 값만 선택하기 위해서는 우리의 표현 뒤에 긍정적인 예측 표현 '(?=)'를 써야 합니다. 괄호 안의 '=' 기호 뒤에 'PM'을 넣으세요",
 
   "steps.negativeLookahead.title": "Negative Lookahead: `(?!)`",
-  "steps.negativeLookahead.description": "For example, we want to select numbers other than the hour value in the text. Therefore, we need to write the negative look-ahead `(?!)` expression after our expression to select only the numerical values that do not have `PM` after them. Include `PM` after the `!` sign inside the parentheses.",
+  "steps.negativeLookahead.description": "예를 들어, 문단에서 시간 값 이외의 숫자를 선택하려고 합니다. 그러면 음의 예측식 '(?)'을 표현 뒤에 써서 뒤에 'PM'이 없는 숫자 값만 선택해야 합니다. 괄호 안쪽에 '!' 기호 뒤에 'PM'을 넣으십시오.",
   
   "steps.positiveLookbehind.title": "Positive Lookbehind: `(?<=)`",
-  "steps.positiveLookbehind.description": "For example, we want to select the price value in the text. Therefore, to select only the number values that preceded by `$`, we need to write the positive lookbehind expression `(?<=)` before our expression. Add `\\$` after the `=` sign inside the brackets.",
+  "steps.positiveLookbehind.description": "예를 들어, 우리는 문단에서 가격 값을 선택하기를 원합니다. 따라서 '$' 앞에 오는 숫자 값만 선택하기 위해서는 양의 뒷모습 표현 '(?)을 써야 한다.우리 표현 앞에 <=)>. 괄호 안의 '=' 기호 뒤에 '\$'를 추가합니다.",
 
   "steps.negativeLookbehind.title": "Negative Lookbehind: `(?&lt;!)`",
-  "steps.negativeLookbehind.description": "For example, we want to select numbers in the text other than the price value. Therefore, to select only numeric values that do not preceded by `$`, we need to write the negative lookbehind `(?&lt;!)` before our expression. Add `\\$` after the `!` inside the brackets.",
+  "steps.negativeLookbehind.description": "예를 들어, 우리는 문단에서 가격 값 이외의 숫자를 선택하기를 원합니다.Therefore, '$' 앞에 없는 숫자 값만 선택하려면 표현 앞에 `(?&lt;!)` 뒤에 음의 모양을 써야 합니다. 괄호 안의 '!' 뒤에 '\$'를 추가합니다.",
 
   "steps.flags.title": "Flags",
   "steps.flags.description": "Flags는 표현의 결과는 바꿉니다. 이는 `modifiers`로도 불리는 이유입니다. 입력된 식이 문단을 별도의 줄로 처리할지, 대소문자를 구분할지, 모든 일치 항목을 찾을지를 결정하세요. flags을 배우기 위한 다음 단계로 진행하세요.",
