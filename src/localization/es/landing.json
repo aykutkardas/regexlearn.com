@@ -1,0 +1,20 @@
+{
+  "landing.title": "Aprenda RegEx paso a paso, de cero a avanzado.",
+  "landing.description": "Aprender RegEx es más fácil de lo que piensas. Puedes usar esta herramienta para fácilmente `aprender`, `practicar`, `probar` y `compartir` RegEx.",
+
+  "section.learn.title": "Aprender",
+  "section.learn.content": "`Expresiones Regulares`, abreaviado como RegEx o RegExp, son una cadena de caracteres creados dentro del framework de reglas sintácticas de RegEx. Puedes administrar fácilmente sus datos con RegEx, que usa comandos como encontrar, emparejar, y editar. RegEx puede ser usado en lenguajes de programación como Python, SQL, Javascript, R, Google Analytics, Google Data Studio, y durante todo el proceso de codificación. Aprenda regex en línea con ejemplos y tutoriales en Regexlearn ahora.",
+
+  "section.cheatsheet.button": "Revise ahora",
+  "section.cheatsheet.title": "Cheatsheet",
+  "section.cheatsheet.content": "Con la `Cheatsheet de RegexLearn`, usted podrá ver todos los usos que necesite a la vez y verificarlos directamente desde la página. Explore todos los patrones y símbolos de RegEx con la Cheatsheet",
+
+  "section.playground.title": "Playground",
+  "section.playground.content": "Si desea generar un RegEx, puede construir y probar fácilmente su patrón de RegEx a través del Playground. Como un probador de RegEx, puede validar y compartir su RegEx con otros para el trabajo colaborativo. Pronto",
+
+  "section.practice.title": "Practicar",
+  "section.practice.content": "Si completa la parte de aprendizaje, es tiempo de PRACTICAR! En la sección de práctica, usted puede practicar su conocimiento en RegEx y practicar con tutoriales basados en tu nivel. Pronto.",
+
+  "section.opensource.title": "Código abierto",
+  "section.opensource.content": "Regex Learn es un proyecto open-source que acoge con satisfacción las contribuciones de la comunidad y es libre de usar. Trabajar en este proyecto le permite perfeccionar tus habilidades, estudiar, y colaborar. Puede contribuir & apoyar aquí."
+}
