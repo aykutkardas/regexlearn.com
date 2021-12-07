@@ -1,35 +1,35 @@
 {
-  "examples.starter.title": "Practice",
-  "examples.starter.description": "Now it's time to do some practice to consolidate what we've learned.",
+  "examples.starter.title": "실습",
+  "examples.starter.description": "이제 배운 내용을 시도하는 연습을 해볼 차례입니다",
 
-  "examples.finish.title": "Practice completed!",
+  "examples.finish.title": "실습 완료!",
   "examples.finish.description": " ",
 
-  "steps.starter.title": "Intro",
-  "steps.starter.description": "RegEx is short for `Regular Expression`. It helps to match, find or manage text. Start by typing `OK` in the RegEx field to proceed to the first step and access the more detailed description..",
+  "steps.starter.title": "개요",
+  "steps.starter.description": "RegEx는 `Regular Expression`의 줄임말입니다. 이것은 내용을 찾거나 관리하는 데 도움이 됩니다. RegEx 필드에 'OK'를 입력하여 첫 번째 단계를 진행하고 자세한 설명에 접근합니다...",
 
-  "steps.whatIsRegex.title": "What is Regular Expressions `RegEx`?",
-  "steps.whatIsRegex.description": "Regular Expressions are a string of characters that express a search pattern. Often abbreviated as `RegEx` or `RegExp`. It is especially used to find or replace words in texts. In addition, we can test whether a text complies with the rules we set.\\n\\n For example, let's say you have a list of filenames. And you only want to find files with the `pdf` extension. Following typing an expression `^\\w+\\.pdf$` will work. The meaning of the definitions in this expression will become clearer as the steps progress.",
+  "steps.whatIsRegex.title": "Regular Expressions, `RegEx`는 무슨 뜻일까?",
+  "steps.whatIsRegex.description": "Regular Expressions 검색패턴을 표현하는 문자열입니다. 자주 `RegEx` 혹은 `RegExp`로 불립니다. 이것은 내용의 단어를 찾거나 대체하는데 용이합니다. 추가적으로, 내용이 우리가 설정한 규칙에 부합하는지 확인할 수 있습니다.\\n\\n 예를 들어, 파일이름들이 있다고 가정해봅시다. 이때 'pdf'형식의 파일만 찾고싶을때, 이 `^\\w+\\.pdf$` 표현을 입력하면 찾을 수 있을 것 입니다. 진행 단계가 거듭될수록 표현의 정의의 의미는 더 정확해질 것입니다.",
 
-  "steps.basicMatchers.title": "Basic Matchers",
-  "steps.basicMatchers.description": "The character or word we want to find is written directly. It is similar to a normal search process. For example, to find the word `curious` in the text, type the same.",
+  "steps.basicMatchers.title": "기본 매칭",
+  "steps.basicMatchers.description": "우리가 찾고자 하는 단어 내용을 직접 작성합니다. 이는 기본 검색 과정과 동일합니다. 예를 들어, 문단에 'curious'이라는 단어를 찾기 위해서 똑같이 작성하면 됩니다.",
 
-  "steps.dotCharacter.title": "Dot `.`: Any Character",
-  "steps.dotCharacter.description": "The period `.` allows selecting any character, including special characters and spaces.",
+  "steps.dotCharacter.title": "점 `.`: 아무 문자",
+  "steps.dotCharacter.description": "이 `.`기호는 특수문자나 여백을 포함한 아무 문자를 구분합니다.",
 
-  "steps.characterSet.title": "Character Sets `[abc]`",
-  "steps.characterSet.description": "If one of the characters in a word can be various characters, we write it in square brackets `[]` with all alternative characters. For example, to write an expression that can find all the words in the text, type the characters `a`, `e`, `i`, `o`, `u` adjacently within square brackets `[]`.",
+  "steps.characterSet.title": "문자열 `[abc]`",
+  "steps.characterSet.description": "한단어가 여러 문자열인 경우, 우리는 이를 모두 대괄호`[]`안에 작성합니다. 예를 들어, 문단 안에 있는 모든 단어를 작성하기 위해서, 대괄호 `[]` 안에 `a`, `e`, `i`, `o`, `u` 문자들을 작성합니다..",
 
-  "steps.negatedCharacterSet.title": "Negated Character Sets `[^abc]`",
-  "steps.negatedCharacterSet.description": "To find all words in the text below, except for `ber` and `bor`, type `e` and `o` side by side after the caret `^` character inside square brackets `[]`.",
+  "steps.negatedCharacterSet.title": "문자열`[^abc]` 검색하기",
+  "steps.negatedCharacterSet.description": "아래 문단에서 'ber'와 'bo'를 제외한 모든 단어를 찾으려면 대괄호 '[]' 안에 캐럿 '^' 문자 뒤에 'e'와 'o'를 나란히 입력하세요.",
 
-  "steps.range.title": "Letter Range`[a-z]`",
-  "steps.range.description": "To find the letters in the specified range, the starting letter and the ending letter are written in square brackets `[]` with a dash between them `-`. It is case-sensitive. Type the expression that will select all lowercase letters between `e` and `o`, including themselves.",
+  "steps.range.title": "문자 범위`[a-z]`",
+  "steps.range.description": "지정된 범위의 글자를 찾으려면 시작 글자와 끝 글자를 대괄호 '[]' 사이에 대시 '-'로 작성하세요. 이는 대소문자를 구분합니다. 'e'와 'o' 사이의 모든 소문자를 선택하는 식을 입력합니다.",
 
-  "steps.rangeNumber.title": "Number Range`[0-9]`",
-  "steps.rangeNumber.description": "To find the numbers in the specified range, the starting number and the ending number are written in square brackets `[]` with a dash `-` between them. Write an expression that will select all numbers between `3` and `6`, including themselves.",
+  "steps.rangeNumber.title": "숫자 범위`[0-9]`",
+  "steps.rangeNumber.description": "특정 범위내의 숫자를 찾기 위해서, 시작하는 숫자와 끝 숫자가 두 숫자 사이에`-`와 함께 `[]`안에 입력됩니다. 3,6을 포함한 그 사이의 숫자를 찾는 표현을 작성해보세요."
 
-  "examples.basicMatchers.title": "Practice: Basic Matcher",
+  "examples.basicMatchers.title": "실습: Basic Matcher",
   "examples.basicMatchers.description": "Write the expression that will select the words `of` in the text.",
 
   "examples.dotCharacter.title": "Practice: Any Character",
@@ -141,24 +141,24 @@
   "steps.negativeLookbehind.description": "For example, we want to select numbers in the text other than the price value. Therefore, to select only numeric values that do not preceded by `$`, we need to write the negative lookbehind `(?&lt;!)` before our expression. Add `\\$` after the `!` inside the brackets.",
 
   "steps.flags.title": "Flags",
-  "steps.flags.description": "Flags change the output of the expression. That's why flags are also called `modifiers`. Determines whether the typed expression treats text as separate lines, is case sensitive, or finds all matches. Continue to the next step to learn the flags.",
+  "steps.flags.description": "Flags는 표현의 결과는 바꿉니다. 이는 `modifiers`로도 불리는 이유입니다. 입력된 식이 문단을 별도의 줄로 처리할지, 대소문자를 구분할지, 모든 일치 항목을 찾을지를 결정하세요. flags을 배우기 위한 다음 단계로 진행하세요.",
 
-  "steps.flagsGlobal.title": "Global Flag",
-  "steps.flagsGlobal.description": "The `global` flag causes the expression to select all matches. If not used it will only select the first match. Now enable the `global` flag to be able to select all matches.",
+  "steps.flagsGlobal.title": "global flag"
+  "steps.flagsGlobal.description": "`global` flag causes the expression to select all matches. If not used it will only select the first match. Now enable the `global` flag to be able to select all matches.",
 
-  "steps.flagsMultiline.title": "Multiline Flag",
-  "steps.flagsMultiline.description": "RegEx sees all text as one line. But we use the `multiline` flag to handle each line separately. In this way, the expressions we write according to the end of the linework separately for each line. Now enable the `multiline` flag to find all matches.",
+  "steps.flagsMultiline.title": "다중문자열 Flag",
+  "steps.flagsMultiline.description": "RegEx는 모든것을 한 문장으로 봅니다. 하지만 우리는 각 문장을 보기위해 multiline` flag를 사용합니다. 이런 식으로 표현들은 각 줄마다 따로 적용됩니다. 이제 `multiline` flag 모든 매칭을 찾기위해 사용할수 있게 되었습니다.",
 
-  "steps.flagsCaseInsensitive.title": "Case-insensitive Flag",
-  "steps.flagsCaseInsensitive.description": "In order to remove the case-sensitiveness of the expression we have written, we must activate the `case-insensitive` flag.",
+  "steps.flagsCaseInsensitive.title": "대소문자 비구분 Flag",
+  "steps.flagsCaseInsensitive.description": "우리가 쓴 표현의 대/소문자를 구분하지 않으려면 대/소문자를 구분하지 않는 flag를 활성화해야 합니다.",
   
-  "steps.greedyMatching.title": "Greedy Matching",
-  "steps.greedyMatching.description": "RegEx does a greedy match by default. This means that the matchmaking will be as long as possible. Check out the example below. It refers to any match that ends in `r` and can be any character preceded by it. But it does not stop at the first letter `r`.",
+  "steps.greedyMatching.title": "greedy 매칭",
+  "steps.greedyMatching.description": "RegEx 는 기본적으로 greedy 매칭이 아닙니다. 이는 매칭을 가능한만큼 한다는 것을 의미합니다. 아래 예시를 보면, 이것은 `r`로 끝나는 모든 문자와 매칭하므로 그 앞에 있는 모든 단어들이 가능하다는 뜻입니다. 그러나 이는 첫 글자 'r'로 끝나지 않습니다.",
 
-  "steps.lazyMatching.title": "Lazy Matching",
-  "steps.lazyMatching.description": "Lazy matchmaking, unlike greedy matching, stops at the first matching. For example, in the example below, add a `?` after `*` to find the first match that ends with the letter `r` and is preceded by any character. It means that this match will stop at the first letter `r`.",
+  "steps.lazyMatching.title": "Lazy 매칭",
+  "steps.lazyMatching.description": "Lazy 매칭은 greedy과 다르게 처음 매칭에서 종료합니다. 예를 들어, 아래 예시에서 문자 'r'로 끝나고 문자 뒤에 오는 첫 번째 일치를 찾으려면 '*' 뒤에 '?'를 추가하여야 합니다. 이는 매치가 `r`앞에서 멈춘다는 것을 의미합니다.",
 
-  "steps.completeAllSteps.title": "Congratulations you have completed all the steps.",
-  "steps.completeAllSteps.description": "You can return to the previous steps whenever you want, and you can easily navigate through all the steps you have passed."
+  "steps.completeAllSteps.title": "축하합니다. 모든 단계를 완료하셨습니다.",
+  "steps.completeAllSteps.description": "원할 때마다 이전 단계로 돌아갈 수 있으며, 통과한 모든 단계를 쉽게 탐색할 수 있습니다."
 }
 
