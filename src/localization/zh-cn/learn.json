@@ -1,0 +1,163 @@
+{
+  "examples.starter.title": "练习",
+  "examples.starter.description": "现在做些练习来巩固我们学到的东西。",
+
+  "examples.finish.title": "完成练习！",
+  "examples.finish.description": " ",
+
+  "steps.starter.title": "介绍",
+  "steps.starter.description": "RegEx 是正则表达式的简称。它便于匹配、寻找和管理文本。在输入框中键入“OK”开始第一步并了解更多的细节......",
+
+  "steps.whatIsRegex.title": "什么是「正则表达式」？",
+  "steps.whatIsRegex.description": "正则表达式是表示搜索模式的子符串，常缩写成 `RegEx` 或 `RegExp`。通常用于查找和替换文本中的字词。我们可以测试文本是否符合我们设置的规则。\\n\\n 例如，你有一个文件名的列表。你只想查找扩展名是 `pdf` 的文件。你跟着敲打 `^\\w+\\.pdf$` 就找到。随着课程的进行，表达式的含义会变得更加明朗。",
+
+  "steps.basicMatchers.title": "基本匹配",
+  "steps.basicMatchers.description": "我们想要查找的字符或单词是直接输入，就像我们搜索一样。例如，想要找出文本中的单词 `curious` ，敲相同的单词。",
+
+  "steps.dotCharacter.title": "点 `.`: 任何字符",
+  "steps.dotCharacter.description": "点 `.` 允许选择所有字符，包括特殊字符和空格。",
+
+  "steps.characterSet.title": "字符集 `[abc]`",
+  "steps.characterSet.description": "单词中的字符可以是任意一个，我们就将所有的替代字符写进方括号 `[]` 中。例如，为了查找文本中的所有单词，表达式可以用方括号 `[]` 键入所有的相似字符`a`, `e`, `i`, `o`, `u`。",
+
+  "steps.negatedCharacterSet.title": "否定字符集 `[^abc]`",
+  "steps.negatedCharacterSet.description": "为了查找以下文本的所有单词（`ber` 和 `bor` 除外）。在方括号`[]`中的`^`后面并排输入`e`和`o`.",
+
+  "steps.range.title": "字母范围`[a-z]`",
+  "steps.range.description": "要查找指定范围的字母，将起始字母和结束字母写进方括号`[]`中，中间用短划线`-`分隔。它区分大小写，输入表达式以选中`e`和`o`之间所有的小写字母，包括它们自己。",
+
+  "steps.rangeNumber.title": "数字范围`[0-9]`",
+  "steps.rangeNumber.description": "要查找指定范围的数字，在方括号`[]`中键入起始和结束数字，中间用短划线`-`分隔。写一个表达式以选中`3`和`6`之间的所有数字，包括它们自己。",
+
+  "examples.basicMatchers.title": "练习：基本匹配",
+  "examples.basicMatchers.description": "写一个匹配文本中`of`单词的表达式。",
+
+  "examples.dotCharacter.title": "练习：匹配任意字符",
+  "examples.dotCharacter.description": "写一个匹配文本中所有字母、数字、空格和特殊字符的表达式。必须匹配所有字符。",
+
+  "examples.characterSet.title": "练习：字符集",
+  "examples.characterSet.description": "写一个匹配文本中所有只是首字母不同的单词的表达式。",
+
+  "examples.negatedCharacterSet.title": "练习：否定字符集",
+  "examples.negatedCharacterSet.description": "写一个匹配除`beor`和`beur`以外的所有单词的表达式。用否定字符集完成。",
+
+  "examples.range.title": "练习：字母范围",
+  "examples.range.description": "写一个选中从`g`到`k`中间所有字母的，包括它们自己的表达式。",
+
+  "examples.rangeNumber.title": "练习：数字范围",
+  "examples.rangeNumber.description": "写一个选中从`2`到`7`中间所有字母的，包括它们自己的表达式。",
+
+  "steps.repetitions.title": "重复",
+  "steps.repetitions.description": "一些特殊字符用来指定在文本中重复的次数。它们分别是加号`+`、星号`*`和问号`?`。",
+
+  "steps.asterisk.title": "星号 `*`",
+  "steps.asterisk.description": "在字符后面加一个星号`*`，表示字符完全不匹配或匹配多次。比如让`e`不出现在文本中，或者让它并排出现多次",
+
+  "steps.plusCharacter.title": "加号 `+`",
+  "steps.plusCharacter.description": "为了让一个字符出现一次或多次，我们将加号`+`放其后面。比如让`e`在文本中出现一次或多次",
+
+  "steps.questionMark.title": "问号 `?`",
+  "steps.questionMark.description": "为表示一个字符是可选的，我们在其后面加一个问号`?`。比如表示以下字母`u`是可选的。",
+
+  "steps.quantifier.title": "大括号 - 1",
+  "steps.quantifier.description": "为表示一个字符的一定次数，我们在该字符的后面用大括号`{n}`来表示它最终出现的次数。比如以下字母`e`只能出现`2`次。",
+
+  "steps.quantifierMin.title": "大括号 - 2",
+  "steps.quantifierMin.description": "为表示一个字符至少出现一定次数，我们要在该字符的后面用大括号`{n, }`表示至少出现的次数，数字的末尾要加逗号`,`。比如以下字母`e`至少出现`3`次。",
+
+  "steps.quantifierRange.title": "大括号 - 3",
+  "steps.quantifierRange.description": "为表示一些字符在指定数字范围内出现，我们在大括号`{x,y}`中用逗号分隔始末字符表示。比如以下字母`e`只能出现在`1`和`3`之间。",
+
+  "examples.asterisk.title": "练习：星号 `*`",
+  "examples.asterisk.description": "写一个用星号`*`选择下面每个字母，适合文本中没有字母`e`并且存在多个字母的单词的表达式",
+
+  "examples.plusCharacter.title": "练习：加号 `+`",
+  "examples.plusCharacter.description": "写一个用加号`+`以选中文本中字母`e`出现一次或多次的单词。",
+
+  "examples.questionMark.title": "练习：问号 `?`",
+  "examples.questionMark.description": "写一个用问号`?`表示字母`n`在文本中是可选的表达式。使得`a`和`an`均可选中。",
+
+  "examples.quantifier.title": "练习：大括号 - 1",
+  "examples.quantifier.description": "用大括号`{}`写一个表达式，选中文本中从`0`到`9`的`4`位数字。",
+
+  "examples.quantifierMin.title": "练习：大括号 - 2",
+  "examples.quantifierMin.description": "用大括号`{}`写一个表达式，选中文本中至少出现`2`次的`0`和`9`之间的数字。",
+
+  "examples.quantifierRange.title": "练习：大括号 - 3",
+  "examples.quantifierRange.description": "用大括号`{}`写一个表达式，选中文本中介于`1`和`4`之间的从`0`到`9`的数字。",
+
+  "steps.groupping.title": "括号 `( )`: 分组",
+  "steps.groupping.description": "通过对表达示进行分组，来引用或强制执行某些规则。要对表达式分组，只需在表达式中用`()`闭合。现在尝试对`haa`分组。",
+
+  "steps.groupReference.title": "引用组",
+  "steps.groupReference.description": "单词`ha`和`haa`在以下示例中分组。第一组用`\\1`来避免重写。这里的`1`表示分组的顺序。在表达式的末尾键入`\\2`以引用第二组。",
+
+  "steps.nonCapturingGroupping.title": "括号 `(?: )`: 非捕获分组",
+  "steps.nonCapturingGroupping.description": "你可以对表达式进行分组，并确保它不被引用捕获。下面示例中有两个组，但是，我们用`\\1`表示的第一个组引用实际上是指向第二个组，因为第一个组是未被捕获的组。",
+
+  "steps.pipeCharacter.title": "竖线 `|`",
+  "steps.pipeCharacter.description": "竖线允许同一表达式包含多种规则。所有可能的声明用竖线`|`分隔。和字符集不同，字符集`[abc]`在字符层面上运作。分枝条件在表达式层面上运作。例如下面的表达式同时选择`cat`和`Cat`。在末尾添加另一条竖线`|`，键入`rat`以选择所有单词。",
+
+  "steps.escapeCharacter.title": "转义字符 `\\`",
+  "steps.escapeCharacter.description": "我们写正则时会用到一些特殊字符`{ } [ ] / \\ + * . $^ | ?`，因此我们需要通过`\\`转义使用。例如，要选择文本中的点`.`和星号`*`，我们需要在前面添加一个转义字符`\\`。",
+
+  "steps.caret.title": "插入符 `^`:\\n匹配字符串的开始",
+  "steps.caret.description": "我们用`[0-9]`查找数字，若仅查找行首的数字，请在表达式前面加上符号`^`。",
+
+  "steps.dollar.title": "美元符号 `$`:\\n匹配字符串的结束",
+  "steps.dollar.description": "我们在`html`值的后面用符号`$`来查找仅在行末的`html`文本",
+
+  "steps.wordCharacter.title": "文本字符 `\\w`: 字母、数字和下划线",
+  "steps.wordCharacter.description": "表达式`\\w`用于查找字母、数字和下划线。让我们用表达式`\\w`来查找文本中的文本字符。",
+
+  "steps.withoutWordCharacter.title": "非文本字符 `\\W`",
+  "steps.withoutWordCharacter.description": "`\\W` 匹配任意除字母、数字、下划线和汉字之外的字符。",
+
+  "steps.numberCharacter.title": "数字字符 `\\d`",
+  "steps.numberCharacter.description": "`\\d` 仅用来匹配数字",
+
+  "steps.withoutNumberCharacter.title": "非数字字符 `\\D`",
+  "steps.withoutNumberCharacter.description": "`\\D` 匹配任意非数字的字符。",
+
+  "steps.spaceCharacter.title": "空白符 `\\s`",
+  "steps.spaceCharacter.description": "`\\s` 匹配任意的空白符。",
+
+  "steps.withoutSpaceCharacter.title": "非空白符 `\\S`",
+  "steps.withoutSpaceCharacter.description": "`\\S` 匹配任意非空白符的字符",
+
+  "steps.lookarounds.title": "零断宽言",
+  "steps.lookarounds.description": "我们希望正在写的词语出现在另一个词语之前或之后，我们需要用\"lookaround\"。点击下一步开始学习如何使用\"lookaround\"。",
+
+  "steps.positiveLookahead.title": "正先行断言: `(?=)`",
+  "steps.positiveLookahead.description": "我们要在文本中选择小时值，仅选择后面有`PM`的数值。我们需要在表达式后面用正先行断言`(?=)`，在括号内的`=`后面添加`PM。",
+
+  "steps.negativeLookahead.title": "负先行断言: `(?!)`",
+  "steps.negativeLookahead.description": "我们要在文本中选择小时值以外的数字。我们需要在表达式后面用负先行断言`(?!)`选择没有`PM`的数值。在括号内的`!`后面添加`PM`。",
+  
+  "steps.positiveLookbehind.title": "正后发断言: `(?<=)`",
+  "steps.positiveLookbehind.description": "我们要在文本中选择价格，仅选择前面带有`$`的数字。我们要在表达式前面使用正后发断言`(?<=)`。在括号内的`=`后面添加`\\$`。",
+
+  "steps.negativeLookbehind.title": "负后发断言: `(?&lt;!)`",
+  "steps.negativeLookbehind.description": "我们要在文本中选择除价格外的数字，仅选择前面没有`$`的数字。我们要在表达式前用负后发断言`(?&lt;!)`。在括号内的`!`后面添加`\\$`。",
+
+  "steps.flags.title": "模式",
+  "steps.flags.description": "模式改变表达式的输出。这就是为什么模式也叫作`修饰符`。确定表达式的类型是将文本视作单独的行、区分大小写还是查找所有匹配项。继续下一步学习模式。",
+
+  "steps.flagsGlobal.title": "全局模式",
+  "steps.flagsGlobal.description": "全局模式使表达式选中所有的匹配项，否则只选择第一个匹配项。现在启用全局模式，以便选择所有匹配项。",
+
+  "steps.flagsMultiline.title": "多行模式",
+  "steps.flagsMultiline.description": "正则表达式将所有文本视作一行。但如果我们用多行模式就会单独处理每一行。这次，我们根据每一行行末的规律来写出表达式，现在启用多行模式来查找所有匹配。",
+
+  "steps.flagsCaseInsensitive.title": "忽略大小写模式",
+  "steps.flagsCaseInsensitive.description": "用`忽略大小写模式`来避免表达式的大小写敏感。",
+  
+  "steps.greedyMatching.title": "贪婪匹配",
+  "steps.greedyMatching.description": "正则表达式默认指行贪婪匹配。这意味着匹配尽可能长。下面的示例选中以`r`结尾的任何匹配项，并且可以是前面带有它的任何字符，但它并不止于第一个字符`r`。",
+
+  "steps.lazyMatching.title": "懒惰匹配",
+  "steps.lazyMatching.description": "懒惰匹配在第一次匹配时停止。下面的例子中，在`*` 之后添加`?`以查找以`*` 结尾且前面带有任何字符的第一个匹配项。这意味着这次匹配将会在第一个字母`*` 停止。",
+
+  "steps.completeAllSteps.title": "恭喜，您已完成所有步骤！",
+  "steps.completeAllSteps.description": "您可以随时返回到前面的步骤，并且可以轻松浏览已通过的所有步骤。"
+}

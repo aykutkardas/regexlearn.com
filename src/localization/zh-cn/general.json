@@ -1,0 +1,32 @@
+{
+  "general.prev": "上一个",
+  "general.next": "下一个",
+  "general.result": "结果",
+  "general.regex": "正则表达式",
+  "general.text": "文本",
+  "general.completedStep": "完成步骤！",
+  "general.hintQuestion": "显示答案",
+  "general.reportStep": "报告问题",
+  "general.startLearning": "开始学习",
+  "general.comingSoon": "即将推出",
+  "general.becomeSponsor": "成为赞助商",
+  "general.learn": "学习",
+  "general.playground": "游乐场",
+  "general.cheatsheet": "讲义",
+  "general.ourSponsors": "我们的赞助商",
+
+  "notFound.intro": "您要寻找的页面不存在。",
+  "notFound.button": "回到主页",
+
+  "page.landing.title": "正则表达式学习 - 逐步从零基础到高阶。",
+  "page.learn.title": "正则表达式学习 - 正则表达式交互式课程",
+  "page.cheatsheet.title": "正则表达式学习 - 正则表达式讲义",
+  "page.404.title": "正则表达式学习 - 未找到",
+
+  "page.landing.description": "交互式学习正则表达式，在你的阶段练习、测试和分享你自己的正则表达式",
+  "page.learn.description": "逐步学习正则表达式。完成交互式课程会让你的学习更加简单和快速。",
+  "page.cheatsheet.description": "有时你只需记住正则表达式。参考讲义会让你更好理解和掌握。",
+
+  "alert.site.under.development": "网站正在开发中，你看到的内容可能会有所变动。",
+  "learn.safari.unsupportWarning": "Safari 浏览器不支持该步骤中的正则表达式。如果你在这一步遇到问题，你可以点击此处。"
+}
