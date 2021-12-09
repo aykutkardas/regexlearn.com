@@ -18,7 +18,7 @@
   "steps.dotCharacter.description": "El punto `.` permite seleccionar cualquier carácter, incluyendo caracteres especiales y espacios.",
 
   "steps.characterSet.title": "Conjuntos de caracteres `[abc]`",
-  "steps.characterSet.description": "Si uno de los caracteres en una palabra puede ser varios caracteres, lo escribimos en corchetes `[]` con todos los caracteres alternativos. FPor ejemplo, para escribir una expresión que pueda encontrar todas las palabras en el texto, escriba los caracteres `a`, `e`, `i`, `o`, `u` adyacentemente dentro de los corchetes `[]`.",
+  "steps.characterSet.description": "Si uno de los caracteres en una palabra puede ser varios caracteres, lo escribimos en corchetes `[]` con todos los caracteres alternativos. Por ejemplo, para escribir una expresión que pueda encontrar todas las palabras en el texto, escriba los caracteres `a`, `e`, `i`, `o`, `u` adyacentemente dentro de los corchetes `[]`.",
 
   "steps.negatedCharacterSet.title": "Conjuntos de caracteres negados `[^abc]`",
   "steps.negatedCharacterSet.description": "Para encontrar todas las palabras en el texto a continuación, excepto por `ber` y `bor`, escriba `e` y `o` lado a lado después del carácter caret `^` dentro de los corchetes `[]`.",
@@ -133,7 +133,7 @@
 
   "steps.negativeLookahead.title": "Lookahead Negativo: `(?!)`",
   "steps.negativeLookahead.description": "Por ejemplo, queremos seleccionar números distintos del valor de la hora en el texto. Por lo tanto, debemos escribir la expresión look-ahead negativo `(?!)` después de nuestra expresión para seleccionar solo los valores numéricos que no tienen `PM` después. Incluya `PM` después del signo `!` entre paréntesis.",
-  
+
   "steps.positiveLookbehind.title": "Lookbehind Positivo: `(?<=)`",
   "steps.positiveLookbehind.description": "Por ejemplo, queremos seleccionar el valor del precio en el texto. Por lo tanto, para seleccionar solo los valores numéricos precedidos por `$`, necesitamos escribir la expresión lookbehind positiva `(?<=)` antes de nuestra expresión. Agregue `\\$` después del signo `=` entre corchetes.",
 
@@ -151,7 +151,7 @@
 
   "steps.flagsCaseInsensitive.title": "Bandera que no distingue entre mayúsculas y minúsculas",
   "steps.flagsCaseInsensitive.description": "Para eliminar la distinción entre mayúsculas y minúsculas de la expresión que hemos escrito, debemos activar la bandera `no distingue entre mayúsculas y minúsculas`.",
-  
+
   "steps.greedyMatching.title": "Coincidencia codiciosa",
   "steps.greedyMatching.description": "RegEx hace una coincidencia codiciosa de forma predeterminada. Esto significa que el emparejamiento será el mayor tiempo posible. Mira el ejemplo a continuación. Se refiere a cualquier coincidencia que termine en `r` y puede ser cualquier carácter precedido por ella. Pero no se detiene en la primera letra `r`.",
 
