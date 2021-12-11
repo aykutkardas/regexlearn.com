@@ -126,10 +126,10 @@
   "steps.withoutSpaceCharacter.description": "`\\S` 匹配任意非空白符的字符",
 
   "steps.lookarounds.title": "零断宽言",
-  "steps.lookarounds.description": "我们希望正在写的词语出现在另一个词语之前或之后，我们需要用\"lookaround\"。点击下一步开始学习如何使用\"lookaround\"。",
+  "steps.lookarounds.description": "我们希望正在写的词语出现在另一个词语之前或之后，我们需要用「零断宽言」。点击下一步开始学习如何使用「零断宽言」。",
 
   "steps.positiveLookahead.title": "正先行断言: `(?=)`",
-  "steps.positiveLookahead.description": "我们要在文本中选择小时值，仅选择后面有`PM`的数值。我们需要在表达式后面用正先行断言`(?=)`，在括号内的`=`后面添加`PM。",
+  "steps.positiveLookahead.description": "我们要在文本中选择小时值，仅选择后面有`PM`的数值。我们需要在表达式后面用正先行断言`(?=)`，在括号内的`=`后面添加`PM`。",
 
   "steps.negativeLookahead.title": "负先行断言: `(?!)`",
   "steps.negativeLookahead.description": "我们要在文本中选择小时值以外的数字。我们需要在表达式后面用负先行断言`(?!)`选择没有`PM`的数值。在括号内的`!`后面添加`PM`。",
