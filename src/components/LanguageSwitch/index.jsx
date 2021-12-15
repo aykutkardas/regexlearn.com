@@ -1,5 +1,6 @@
 import { useContext, useState } from 'react';
 import { useRouter } from 'next/router';
+import Link from 'next/link';
 
 import * as styles from './LanguageSwitch.module.css';
 import Icon from 'src/components/Icon';
@@ -14,22 +15,15 @@ const langList = Object.keys(langs).map(langKey => ({
 }));
 
 const LanguageSwitch = () => {
-  const { lang, setLang } = useContext(Context);
+  const { lang } = useContext(Context);
   const [isOpen, setIsOpen] = useState(false);
-  const router = useRouter();
+  const { pathname } = useRouter();
 
-  const toggleLang = () => {
+  const toggleLanguageList = () => {
     setIsOpen(!isOpen);
   };
 
-  const selectLang = (lang, e) => {
-    if (!isOpen) return;
-    e.preventDefault();
-
-    const href = getIntlPath(router.pathname, lang);
-    router.push(href);
-
-    // setLang(lang);
+  const closeLanguageList = () => {
     setIsOpen(false);
   };
 
@@ -37,23 +31,27 @@ const LanguageSwitch = () => {
 
   return (
     <div className={styles.LanguageSwitch}>
-      <div className={styles.LanguageSwitchCurrent} role="button" tabIndex="0" onClick={toggleLang}>
+      <div
+        className={styles.LanguageSwitchCurrent}
+        role="button"
+        tabIndex="0"
+        onClick={toggleLanguageList}
+      >
         <span>{langNames[lang]}</span>
-        <Icon className={styles.LanguageSwitchCurrentIcon} icon="earth" color="#fff" size={16} />
+        <Icon icon="earth" className={styles.LanguageSwitchCurrentIcon} size={16} />
       </div>
-      {isOpen && (
-        <div className={styles.LanguageSwitchList}>
-          {getAvailableList().map(({ label, value }) => (
-            <div
-              className={styles.LanguageSwitchListItem}
-              key={value}
-              onClick={e => selectLang(value, e)}
-            >
+      <div
+        className={styles.LanguageSwitchList}
+        style={{ visibility: isOpen ? 'visible' : 'hidden' }}
+      >
+        {getAvailableList().map(({ label, value }) => (
+          <Link href={getIntlPath(pathname, value)} key={value}>
+            <a onClick={closeLanguageList} className={styles.LanguageSwitchListItem}>
               <span>{label}</span>
-            </div>
-          ))}
-        </div>
-      )}
+            </a>
+          </Link>
+        ))}
+      </div>
     </div>
   );
 };

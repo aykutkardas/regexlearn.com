@@ -1,6 +1,5 @@
 import ReactTooltip from 'react-tooltip';
 import { FormattedMessage } from 'react-intl';
-import dynamic from 'next/dynamic';
 import cx from 'classnames';
 
 import * as styles from './Header.module.css';
@@ -8,8 +7,7 @@ import * as styles from './Header.module.css';
 import Icon from 'src/components/Icon';
 import Logo from 'src/components/Logo';
 import IntlLink from 'src/components/IntlLink';
-
-const LanguageSwitch = dynamic(import('src/components/LanguageSwitch'), { ssr: false });
+import LanguageSwitch from 'src/components/LanguageSwitch';
 
 function Header() {
   return (

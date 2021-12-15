@@ -28,6 +28,7 @@
 
 .LanguageSwitchCurrentIcon {
   margin-left: 5px;
+  color: var(--txt-1);
 }
 
 .LanguageSwitchCurrent span {

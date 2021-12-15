@@ -138,7 +138,7 @@
   "steps.positiveLookbehind.description": "For example, we want to select the price value in the text. Therefore, to select only the number values that preceded by `$`, we need to write the positive lookbehind expression `(?<=)` before our expression. Add `\\$` after the `=` sign inside the brackets.",
 
   "steps.negativeLookbehind.title": "Negative Lookbehind: `(?&lt;!)`",
-  "steps.negativeLookbehind.description": "For example, we want to select numbers in the text other than the price value. Therefore, to select only numeric values that do not preceded by `$`, we need to write the negative lookbehind `(?&lt;!)` before our expression. Add `\\$` after the `!` inside the brackets.",
+  "steps.negativeLookbehind.description": "For example, we want to select numbers in the text other than the price value. Therefore, to select only numeric values that are not preceded by `$`, we need to write the negative lookbehind `(?&lt;!)` before our expression. Add `\\$` after the `!` inside the brackets.",
 
   "steps.flags.title": "Flags",
   "steps.flags.description": "Flags change the output of the expression. That's why flags are also called `modifiers`. Determines whether the typed expression treats text as separate lines, is case sensitive, or finds all matches. Continue to the next step to learn the flags.",
@@ -158,7 +158,6 @@
   "steps.lazyMatching.title": "Lazy Matching",
   "steps.lazyMatching.description": "Lazy matchmaking, unlike greedy matching, stops at the first matching. For example, in the example below, add a `?` after `*` to find the first match that ends with the letter `r` and is preceded by any character. It means that this match will stop at the first letter `r`.",
 
-  "steps.completeAllSteps.title": "Congratulations you have completed all the steps.",
+  "steps.completeAllSteps.title": "Congratulations, you have completed all the steps!",
   "steps.completeAllSteps.description": "You can return to the previous steps whenever you want, and you can easily navigate through all the steps you have passed."
 }
-

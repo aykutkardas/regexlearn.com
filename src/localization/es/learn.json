@@ -1,0 +1,163 @@
+{
+  "examples.starter.title": "Práctica",
+  "examples.starter.description": "Ahora es el momento de hacer práctica algo para consolidar lo que hemos aprendido.",
+
+  "examples.finish.title": "¡Practica completada!",
+  "examples.finish.description": " ",
+
+  "steps.starter.title": "Intro",
+  "steps.starter.description": "RegEx es la abreviación de `Regular Expression`. Ayuda a hacer coincidir, buscar o administrar el texto. Comience escribiendo `OK` en el campo Regex para pasar al primer paso y acceder a la descripción más detallada.",
+
+  "steps.whatIsRegex.title": "¿Qué son las Expresiones Regulares `RegEx`?",
+  "steps.whatIsRegex.description": "Las expresiones regulares son una serie de caracteres que expresan un patrón de búsqueda. A menudo abreviado como `RegEx` o `RegExp`. Se usan especialmente para encontrar o reemplazar palabras en textos. Además, podemos probar si un texto cumple con las reglas que establecemos.\\n\\n Por ejemplo, digamos que tienes una lista de nombres de archivos. Y tu solo quieres encontrar los archivos con extensión `pdf`. Después de escribir la expresión `^\\w+\\.pdf$` funcionará. El significado de las definiciones en esta expresión se volverán más claras a medida que avanzan los pasos.",
+
+  "steps.basicMatchers.title": "Matchers básicos",
+  "steps.basicMatchers.description": "El carácter o la palabra que queremos encontrar está escrito directamente. Es similar a un proceso de búsqueda normal. Por ejemplo, para encontrar la palabra `curioso` en el texto, escriba lo mismo.",
+
+  "steps.dotCharacter.title": "Punto `.`: Cualquier carácter",
+  "steps.dotCharacter.description": "El punto `.` permite seleccionar cualquier carácter, incluyendo caracteres especiales y espacios.",
+
+  "steps.characterSet.title": "Conjuntos de caracteres `[abc]`",
+  "steps.characterSet.description": "Si uno de los caracteres en una palabra puede ser varios caracteres, lo escribimos en corchetes `[]` con todos los caracteres alternativos. Por ejemplo, para escribir una expresión que pueda encontrar todas las palabras en el texto, escriba los caracteres `a`, `e`, `i`, `o`, `u` adyacentemente dentro de los corchetes `[]`.",
+
+  "steps.negatedCharacterSet.title": "Conjuntos de caracteres negados `[^abc]`",
+  "steps.negatedCharacterSet.description": "Para encontrar todas las palabras en el texto a continuación, excepto por `ber` y `bor`, escriba `e` y `o` lado a lado después del carácter caret `^` dentro de los corchetes `[]`.",
+
+  "steps.range.title": "Rango de letras `[a-z]`",
+  "steps.range.description": "Para encontrar letras en un rango especificado, la letra de inicio y la letra final se escriben en corchetes `[]` con un guíon `-` entre ellas. Es sensible a mayúsculas y minúsculas. Escriba la expresión que seleccionará todas las letras minúsculas entre `e` y `o`, incluidas ellas.",
+
+  "steps.rangeNumber.title": "Rango de números `[0-9]`",
+  "steps.rangeNumber.description": "Para encontrar números en un rango especificado, el número de inicio y el de final se escriben dentro de corchetes `[]` con un guíon `-` entre ellos. Escriba una expresión que seleccionará todos los números entre `3` y `6`, incluidos ellos.",
+
+  "examples.basicMatchers.title": "Practica: Matcher básico",
+  "examples.basicMatchers.description": "Escriba la expresión que seleccionará las letras `of` en el texto.",
+
+  "examples.dotCharacter.title": "Practica: Cualquier carácter",
+  "examples.dotCharacter.description": "Escriba la expresión para seleccionar letras, números, espacios y caracteres especiales individuales en el texto. La expresión que escribe debe coincidir con cualquier carácter.",
+
+  "examples.characterSet.title": "Practica: Conjunto de caracteres",
+  "examples.characterSet.description": "Escriba la frase que coincida con cada palabra en el texto. Los únicos caracteres que cambian son las iniciales de las palabras.",
+
+  "examples.negatedCharacterSet.title": "Practica: Conjunto de caracteres negados",
+  "examples.negatedCharacterSet.description": "Escriba la expresión que coincidirá con cualquier otra cosa que no sea las palabras `beor` y `beur` en el texto. Haz esto usando el conjunto de caracteres negados.",
+
+  "examples.range.title": "Practica: Rango de letras",
+  "examples.range.description": "Escribe la expresión que seleccionará las letras de `g` a `k` en el texto.\\nlas letras `g` y `k` también deben incluirse en el rango.",
+
+  "examples.rangeNumber.title": "Practica: Rango de letros",
+  "examples.rangeNumber.description": "Escriba la expresión que seleccionará los números de `2` a `7` en el texto.\\n`2` and `7` también deben incluirse en el rango.",
+
+  "steps.repetitions.title": "Repeticiones",
+  "steps.repetitions.description": "Algunos caracteres especiales se utilizan para especificar cuántas veces se repetirá un carácter en el texto. Estos caracteres especiales son el más `+`, el asterisco `*`, y el signo de interrogación `?`.",
+
+  "steps.asterisk.title": "Asterisco `*`",
+  "steps.asterisk.description": "Ponemos un asterisco `*` al inicio para indicar que un carácter no coincide en absoluto o puede coincidir muchas veces. Por ejemplo, indica que la letra `e` nunca debe ocurrir en el texto, o puede ocurrir una o más de lado a lado.",
+
+  "steps.plusCharacter.title": "Signo más `+`",
+  "steps.plusCharacter.description": "Para indicar que un carácter puede ocurrir una o más veces, ponemos el signo más `+` al final. Por ejemplo, indica que la letra `e` puede ocurrir una o más veces en el texto.",
+
+  "steps.questionMark.title": "Signo de interrogación `?`",
+  "steps.questionMark.description": "Para indicar que un carácter es opcional, ponemos un signo de interrogación `?` al final. Por ejemplo, indica que la siguiente letra `u` es opcional.",
+
+  "steps.quantifier.title": "Llaves - 1",
+  "steps.quantifier.description": "Para expresar un cierto número de ocurrencias de un carácter, escribimos llaves `{n}` junto con la cantidad de veces que queremos que ocurra al final. Por ejemplo, indica que la siguiente letra `e` puede ocurrir solo `2` veces.",
+
+  "steps.quantifierMin.title": "Llaves - 2",
+  "steps.quantifierMin.description": "Para expresar al menos un cierto número de apariciones de carácter, escribimos al final de carácter al menos cuántas veces queremos que ocurra, con una coma `,` al final, y dentro de las llaves `{n, }`. Por ejemplo, indica que la siguiente letra `e` puede ocurrir al menos `3` veces.",
+
+  "steps.quantifierRange.title": "Llaves - 3",
+  "steps.quantifierRange.description": "Para expresar la aparición de un carácter en un cierto rango de números, escribimos llaves `{x,y}` con el intervalo queremos ir al final. Por ejemplo, indica que la siguiente letra `e` puede ocurrir entre `1` y `3` veces.",
+
+  "examples.asterisk.title": "Practica: Asterisco `*`",
+  "examples.asterisk.description": "Usa el asterisco `*` para escribir la expresión que seleccionará cada palabra, adecuado para la ausencia de la letra `e` en el texto y la presencia de más de uno.",
+
+  "examples.plusCharacter.title": "Practica: Signo más `+`",
+  "examples.plusCharacter.description": "Escribe la expresión usando el signo más `+` para seleccionar palabras en las que la letra `e` ocurre una o más veces en el texto.",
+
+  "examples.questionMark.title": "Practica: Signo de interrogación `?`",
+  "examples.questionMark.description": "Escriba la expresión indicando que la letra `n` es opcional en el texto, usando el signo de interrogación `?`. Por lo tanto, ambas palabras `a` y `an` pueden ser seleccionadas.",
+
+  "examples.quantifier.title": "Practica: Llaves - 1",
+  "examples.quantifier.description": "Escriba la expresión usando llaves `{}` para seleccionar `4` digitos numéricos de `0` a `9` en el texto.",
+
+  "examples.quantifierMin.title": "Practica: Llaves - 2",
+  "examples.quantifierMin.description": "Escriba la expresión usando llaves `{}` para seleccionar los números entre `0` y `9` que ocurra al menos `2` veces en el texto.",
+
+  "examples.quantifierRange.title": "Practica: Llaves - 3",
+  "examples.quantifierRange.description": "Escriba la expresión usando llaves`{}` para seleccionar los números de `0` a `9` en el texto que está al menos entre `1` y `4`.",
+
+  "steps.groupping.title": "Parentesis `( )`: Agrupamiento",
+  "steps.groupping.description": "Podemos agrupar una expresión y usar estos grupos para hacer referencia o hacer cumplir algunas reglas. Para agrupar una expresión, la encerramos `()` en parentesis. Por ahora solo agrupamos `haa` a continuación.",
+
+  "steps.groupReference.title": "Referenciando un grupo",
+  "steps.groupReference.description": "Las palabras `ha` y `haa` se agrupan a continuación. El primer grupo de utiliza escribiendo `\\1` para evitar reescribirlo. Aquí `1` denota el orden del agrupamiento. Escriba `\\2` al final de una expresión para referirse al segundo grupo.",
+
+  "steps.nonCapturingGroupping.title": "Parentheses `(?: )`: Agrupamiento Non-capturing",
+  "steps.nonCapturingGroupping.description": "Puede agrupar una expresión y asegurarse de que no se vea atrapado por referencias. Por ejemplo, a continuación hay dos grupos. Sin embargo, la primera referencia del grupo la denotamos con `\\1` en realidad apunta al segundo grupo, ya que el primero es un grupo desconocido.",
+
+  "steps.pipeCharacter.title": "Carácter Pipe `|`",
+  "steps.pipeCharacter.description": "Permite especificar que una expresión puede estar en diferentes expresiones. Por lo tanto, todas las declaraciones posibles están escritas separadas por el signo Pipe `|`. Esto difiere del charset `[abc]`, los charsets funcionan a nivel de carácter. Las alternativas están a nivel de expresión. Por ejemplo, la siguiente expresión seleccionaría tanto `cat` y `Cat`. agregue otro signo pipe `|` al final de una expresión y escriba `rat` para que todas las palabras sean seleccionadas.",
+
+  "steps.escapeCharacter.title": "Carácter Escape `\\`",
+  "steps.escapeCharacter.description": "Hay caracteres especiales que usamos al escribir RegEx. `{ } [ ] / \\ + * . $^ | ?` Antes de que podamos seleccionar estos caracteres, necesitamos usar un carácter de escape `\\`. Por ejemplo, para seleccionar los caracteres punto `.` y asterisco `*` en el texto, agreguemos el carácter escape `\\` antes de eso.",
+
+  "steps.caret.title": "Signo Caret `^`:\\nSelección por inicio de la línea",
+  "steps.caret.description": "Estamos usando `[0-9]` para encontrar números. POara encontrar solo números al comienzo de una línea, anteponemos esta expresión con el signo `^` caret.",
+
+  "steps.dollar.title": "Signo pesos `$`:\\nSelección por inicio de la línea",
+  "steps.dollar.description": "Usemos el signo `$` después del valor `html` para encontrar los textos `html` solo al final de la línea.",
+
+  "steps.wordCharacter.title": "Carácter Palabra `\\w`: Letras, Número y Guíon bajo",
+  "steps.wordCharacter.description": "La expresión `\\w` es usada para encontrar letras, números y guiones bajos. Usemos la expresión `\\w` para encontrar el carácter palabra en el texto.",
+
+  "steps.withoutWordCharacter.title": "Carácter excepto Palabra `\\W`",
+  "steps.withoutWordCharacter.description": "La expresión`\\W` se utiliza para encontrar caracteres distintos de letras, números y guiones bajos.",
+
+  "steps.numberCharacter.title": "Carácter Numérico `\\d`",
+  "steps.numberCharacter.description": "`\\d` se usa para encontrar solo caracteres numéricos.",
+
+  "steps.withoutNumberCharacter.title": "Excepto Caracteres Numéricos `\\D`",
+  "steps.withoutNumberCharacter.description": "`\\D` se utiliza para buscar caracteres no numéricos.",
+
+  "steps.spaceCharacter.title": "Carácter Espacial `\\s`",
+  "steps.spaceCharacter.description": "`\\s` se utiliza para buscar solo caracteres de espacio.",
+
+  "steps.withoutSpaceCharacter.title": "Excepto Carácter Espacial `\\S`",
+  "steps.withoutSpaceCharacter.description": "`\\S` se usa para buscar caracteres que no sean espacio",
+
+  "steps.lookarounds.title": "Lookarounds",
+  "steps.lookarounds.description": "Si queremos que la frase que estamos escribiendo venga antes o después de otra frase, necesitamos un \"lookaround\". Da el siguiente paso para aprender a usar \"lookaround\".",
+
+  "steps.positiveLookahead.title": "Lookahead Positivo: `(?=)`",
+  "steps.positiveLookahead.description": "Por ejemplo, queremos seleccionar el valor de la hora en el texto. Por lo tanto, para seleccionar solo los valores numéricos que tienen `PM` después de ellos, necesitamos escribir la expresión look-ahead positiva `(?=)` después de nuestra expresión. Incluya `PM` después del signo `=` entre paréntesis.",
+
+  "steps.negativeLookahead.title": "Lookahead Negativo: `(?!)`",
+  "steps.negativeLookahead.description": "Por ejemplo, queremos seleccionar números distintos del valor de la hora en el texto. Por lo tanto, debemos escribir la expresión look-ahead negativo `(?!)` después de nuestra expresión para seleccionar solo los valores numéricos que no tienen `PM` después. Incluya `PM` después del signo `!` entre paréntesis.",
+
+  "steps.positiveLookbehind.title": "Lookbehind Positivo: `(?<=)`",
+  "steps.positiveLookbehind.description": "Por ejemplo, queremos seleccionar el valor del precio en el texto. Por lo tanto, para seleccionar solo los valores numéricos precedidos por `$`, necesitamos escribir la expresión lookbehind positiva `(?<=)` antes de nuestra expresión. Agregue `\\$` después del signo `=` entre corchetes.",
+
+  "steps.negativeLookbehind.title": "Lookbehind Negativo: `(?&lt;!)`",
+  "steps.negativeLookbehind.description": "Por ejemplo, queremos seleccionar números en el texto que no sean el valor del precio. Por lo tanto, para seleccionar solo valores numéricos que no estén precedidos por `$`, necesitamos escribir la expresión lookbehind negativo `(?&lt;!)` antes de nuestra expresión. Agregue `\\$` después de `!` entre corchetes.",
+
+  "steps.flags.title": "Banderas",
+  "steps.flags.description": "Las banderas cambian la salida de la expresión. Es por eso que las banderas también se llaman `modificadores`. Determina si la expresión escrita trata el texto como líneas independientes, distingue entre mayúsculas y minúsculas o encuentra todas las coincidencias. Continúe con el siguiente paso para aprender las banderas.",
+
+  "steps.flagsGlobal.title": "Bandera Global",
+  "steps.flagsGlobal.description": "La bandera `global` hace que la expresión seleccione todas las coincidencias. Si no se utiliza, solo seleccionará la primera coincidencia. Ahora habilite la bandera `global` para poder seleccionar todas las coincidencias.",
+
+  "steps.flagsMultiline.title": "Bandera Multilínea",
+  "steps.flagsMultiline.description": "RegEx ve todo el texto como una línea. Pero usamos la bandera `multilínea` para manejar cada línea por separado. De esta forma, las expresiones las escribimos de acuerdo al final de la línea de trabajo por separado para cada línea. Ahora habilite la bandera `multilínea` para encontrar todas las coincidencias.",
+
+  "steps.flagsCaseInsensitive.title": "Bandera que no distingue entre mayúsculas y minúsculas",
+  "steps.flagsCaseInsensitive.description": "Para eliminar la distinción entre mayúsculas y minúsculas de la expresión que hemos escrito, debemos activar la bandera `no distingue entre mayúsculas y minúsculas`.",
+
+  "steps.greedyMatching.title": "Coincidencia codiciosa",
+  "steps.greedyMatching.description": "RegEx hace una coincidencia codiciosa de forma predeterminada. Esto significa que el emparejamiento será el mayor tiempo posible. Mira el ejemplo a continuación. Se refiere a cualquier coincidencia que termine en `r` y puede ser cualquier carácter precedido por ella. Pero no se detiene en la primera letra `r`.",
+
+  "steps.lazyMatching.title": "Coincidencia perezosa",
+  "steps.lazyMatching.description": "El emparejamiento perezoso, a diferencia del emparejamiento codicioso, se detiene en el primer emparejamiento. Por ejemplo, en el siguiente ejemplo, agregue un `?` después de `*` para encontrar la primera coincidencia que termine con la letra `r` y esté precedida por cualquier carácter. Significa que esta coincidencia se detendrá en la primera letra `r`.",
+
+  "steps.completeAllSteps.title": "Felicitaciones has completado todos los pasos.",
+  "steps.completeAllSteps.description": "Puede volver a los pasos anteriores cuando lo desee, y puede navegar fácilmente a través de todos los pasos que ha pasado."
+}

@@ -159,6 +159,6 @@
   "steps.lazyMatching.title": "Tembel Eşleştirme",
   "steps.lazyMatching.description": "Tembel eşleştirme, aç gözlü eşleştirmenin aksine ilk uyan eşleşmede durur. Örneğin aşağıdaki örnekte `r` harfi ile biten ve öncesinde herhangi bir karakter olan ilk eşleşmeyi bulmak için `*` 'den sonra bir `?` ekleyin. Bu eşleşmenin ilk `r` harfinde duracağını ifade eder.",
 
-  "steps.completeAllSteps.title": "Tebrikler tüm adımları tamamladın.",
+  "steps.completeAllSteps.title": "Tebrikler tüm adımları tamamladın!",
   "steps.completeAllSteps.description": "İstediğin zaman önceki adımlara dönebilir, geçtiğin tüm adımlar arasında kolayca dolaşabilirsin."
 }

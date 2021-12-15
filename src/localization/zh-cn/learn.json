@@ -126,7 +126,7 @@
   "steps.withoutSpaceCharacter.description": "`\\S` 匹配任意非空白符的字符",
 
   "steps.lookarounds.title": "零断宽言",
-  "steps.lookarounds.description": "我们希望正在写的词语出现在另一个词语之前或之后，我们需要用\"lookaround\"。点击下一步开始学习如何使用\"lookaround\"。",
+  "steps.lookarounds.description": "我们希望正在写的词语出现在另一个词语之前或之后，我们需要用「零断宽言」。点击下一步开始学习如何使用「零断宽言」。",
 
   "steps.positiveLookahead.title": "正先行断言: `(?=)`",
   "steps.positiveLookahead.description": "我们要在文本中选择小时值，仅选择后面有`PM`的数值。我们需要在表达式后面用正先行断言`(?=)`，在括号内的`=`后面添加`PM`。",
@@ -153,7 +153,8 @@
   "steps.flagsCaseInsensitive.description": "用`忽略大小写模式`来避免表达式的大小写敏感。",
   
   "steps.greedyMatching.title": "贪婪匹配",
-  "steps.greedyMatching.description": "正则表达式默认执行贪婪匹配。这意味着匹配尽可能长。下面的示例选中以`r`结尾的任何匹配项，并且可以是前面带有它的任何字符，但它并不止于第一个字符`r`。",
+
+  "steps.greedyMatching.description": "正则表达式默认指行贪婪匹配。这意味着匹配尽可能长。下面的示例选中以`r`结尾的任何匹配项，并且可以是前面带有它的任何字符，但它并不止于第一个字符`r`。",
 
   "steps.lazyMatching.title": "懒惰匹配",
   "steps.lazyMatching.description": "懒惰匹配在第一次匹配时停止。下面的例子中，在`*` 之后添加`?`以查找以`*` 结尾且前面带有任何字符的第一个匹配项。这意味着这次匹配将会在第一个字母`*` 停止。",
