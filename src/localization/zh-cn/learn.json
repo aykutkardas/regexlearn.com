@@ -153,6 +153,7 @@
   "steps.flagsCaseInsensitive.description": "用`忽略大小写模式`来避免表达式的大小写敏感。",
   
   "steps.greedyMatching.title": "贪婪匹配",
+
   "steps.greedyMatching.description": "正则表达式默认指行贪婪匹配。这意味着匹配尽可能长。下面的示例选中以`r`结尾的任何匹配项，并且可以是前面带有它的任何字符，但它并不止于第一个字符`r`。",
 
   "steps.lazyMatching.title": "懒惰匹配",
