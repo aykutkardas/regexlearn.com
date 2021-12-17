@@ -31,11 +31,11 @@
 }
 
 .GitHub {
-  display: flex;
-  font-size: 16px;
-  align-items: baseline;
-  color: var(--txt-1);
+  display: inline-flex;
+  align-items: center;
   background: var(--bg-2);
+  font-size: 16px;
+  color: var(--txt-1);
   border-color: var(--bg-3);
   justify-content: center;
 }
