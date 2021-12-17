@@ -48,6 +48,7 @@ const LanguageSwitch = () => {
           <Link href={getIntlPath(pathname, value)} key={value}>
             <a onClick={closeLanguageList} className={styles.LanguageSwitchListItem}>
               <span>{label}</span>
+              <Icon icon="arrow-left" className={styles.LanguageSwitchListItemIcon} size={16} removeInlineStyle />
             </a>
           </Link>
         ))}
