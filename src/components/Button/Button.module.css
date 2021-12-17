@@ -37,6 +37,7 @@
   font-size: 16px;
   color: var(--txt-1);
   border-color: var(--bg-3);
+  justify-content: center;
 }
 
 .GitHub :global(svg) {
