@@ -24,7 +24,7 @@ function Collapse({ title, data }) {
           size={12}
         />
       </div>
-      <div style={{ height: show ? 190 : 0 }} className={styles.CollapseContent}>
+      <div style={{ height: show ? '100%' : 0 }} className={styles.CollapseContent}>
         <div className={styles.CollapseContentInner}>
           {data.description && (
             <p className={styles.CollapseDescription}>
