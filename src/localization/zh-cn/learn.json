@@ -81,7 +81,7 @@
   "examples.quantifier.description": "用 `{}` 编写表达式，匹配文本中 `4` 位阿拉伯数字。",
 
   "examples.quantifierMin.title": "练习：大括号 - 2",
-  "examples.quantifierMin.description": "用 `{}` 编写表达式，匹配文本中至少为 `2` 位阿拉伯数字。",
+  "examples.quantifierMin.description": "用 `{}` 编写表达式，匹配文本中至少 `2` 位阿拉伯数字。",
 
   "examples.quantifierRange.title": "练习：大括号 - 3",
   "examples.quantifierRange.description": "用 `{}` 编写表达式，匹配文本中 `1` 至 `4` 位阿拉伯数字。",
