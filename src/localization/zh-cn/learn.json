@@ -125,8 +125,8 @@
   "steps.withoutSpaceCharacter.title": "非空白符 `\\S`",
   "steps.withoutSpaceCharacter.description": "`\\S` 匹配除空白符之外的字符。",
 
-  "steps.lookarounds.title": "零断宽言",
-  "steps.lookarounds.description": "如果我们希望正在写的词语出现在另一个词语之前或之后，我们需要使用「零断宽言」。请前往下一步骤，学习如何使用「零断宽言」。",
+  "steps.lookarounds.title": "零宽断言",
+  "steps.lookarounds.description": "如果我们希望正在写的词语出现在另一个词语之前或之后，我们需要使用「零宽断言」。请前往下一步骤，学习如何使用「零宽断言」。",
 
   "steps.positiveLookahead.title": "正向先行断言: `(?=)`",
   "steps.positiveLookahead.description": "例如，我们要匹配文本中的小时值。为了只匹配后面有 `PM` 的数值，我们需要在表达式后面使用正向先行断言 `(?=)`，并在括号内的 `=` 后面添加 `PM`。",
