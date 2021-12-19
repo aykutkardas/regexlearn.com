@@ -5,9 +5,9 @@
   "cheatsheet.dollar.title": "字符串或行的末尾",
   "cheatsheet.dollar.description": "匹配字符串或行的末尾。",
   "cheatsheet.wordBoundary.title": "单词边界",
-  "cheatsheet.wordBoundary.description": "匹配单词末尾的位置。",
-  "cheatsheet.notWordBoundary.title": "非单词边界。",
-  "cheatsheet.notWordBoundary.description": "匹配不在单词末尾的位置。",
+  "cheatsheet.wordBoundary.description": "匹配单词的开头或末尾。",
+  "cheatsheet.notWordBoundary.title": "非单词边界",
+  "cheatsheet.notWordBoundary.description": "匹配不在单词开头或末尾的位置。",
 
   "cheatsheet.characterClasses": "字符类",
   "cheatsheet.characterSet.title": "字符集",
