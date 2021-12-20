@@ -81,10 +81,10 @@
   "examples.quantifier.description": "用 `{}` 编写表达式，匹配文本中的 `4` 位阿拉伯数字。",
 
   "examples.quantifierMin.title": "练习：大括号 - 2",
-  "examples.quantifierMin.description": "用 `{}` 编写表达式，匹配文本中位数至少为 `2` 的阿拉伯数字。",
+  "examples.quantifierMin.description": "用 `{}` 编写表达式，匹配文本中，位数至少为 `2` 的阿拉伯数字。",
 
   "examples.quantifierRange.title": "练习：大括号 - 3",
-  "examples.quantifierRange.description": "用 `{}` 编写表达式，匹配文本中位数为 `1` 至 `4` 的阿拉伯数字。",
+  "examples.quantifierRange.description": "用 `{}` 编写表达式，匹配文本中，位数为 `1` 至 `4` 的阿拉伯数字。",
 
   "steps.groupping.title": "括号 `( )`: 分组",
   "steps.groupping.description": "我们可以对一个表达式进行分组，并用这些分组来引用或执行一些规则。为了给表达式分组，我们需要将文本包裹在 `()` 中。现在，请尝试为下方文本中的 `haa` 构造分组。",
