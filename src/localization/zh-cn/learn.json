@@ -36,7 +36,7 @@
   "examples.dotCharacter.description": "请编写表达式，匹配文本中所有字母、数字、空格和特殊字符。表达式必须匹配任何字符。",
 
   "examples.characterSet.title": "练习：字符集",
-  "examples.characterSet.description": "请编写表达式，匹配文本中所有仅首字母不同的单词。",
+  "examples.characterSet.description": "写出匹配文本中所有单词的表达式。单词首字母是唯一变化的字符。",
 
   "examples.negatedCharacterSet.title": "练习：否定字符集",
   "examples.negatedCharacterSet.description": "请编写表达式，匹配除 `beor` 和 `beur` 以外的所有单词。要求使用否定字符集完成。",
