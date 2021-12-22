@@ -51,7 +51,7 @@
   "steps.repetitions.description": "一些特殊字符用来指定一个字符在文本中重复的次数。它们分别是加号 `+`、星号 `*` 和问号 `?`。",
 
   "steps.asterisk.title": "星号 `*`",
-  "steps.asterisk.description": "我们在字符后面加上 `*`，表示一个字符完全不匹配或可以匹配多次。例如，表示字母 `e` 在下方文本中不出现，只出现一次或者并排出现多次。",
+  "steps.asterisk.description": "我们在字符后面加上 `*`，表示一个字符完全不匹配或可以匹配多次。例如，表示字母 `e` 在下方文本中不出现，只出现 0 次或者并排出现多次。",
 
   "steps.plusCharacter.title": "加号 `+`",
   "steps.plusCharacter.description": "为了表示一个字符可以出现一次或多次，我们将 `+` 放在它后面。例如，表示 `e` 在下方文本中出现一次或多次。",
