@@ -55,7 +55,7 @@ const data = [
     customValidate: regex => {
       const $regex = new RegExp(`^b\\[([aeiou]{5})\\]r$`);
       const result = regex.match($regex) || [];
-      return _.isEmpty(_.xor(result?.[0]?.split(''), 'aeiou'.split('')));
+      return _.isEmpty(_.xor(result?.[1]?.split(''), 'aeiou'.split('')));
     },
     cursorPosition: 2,
     answer: ['bar', 'ber', 'bir', 'bor', 'bur'],
@@ -134,7 +134,7 @@ const data = [
     customValidate: regex => {
       const $regex = new RegExp(`^\\[([bdf]{3})\\]eer$`);
       const result = regex.match($regex);
-      return _.isEmpty(_.xor(result?.[0]?.split(''), 'bdf'.split('')));
+      return _.isEmpty(_.xor(result?.[1]?.split(''), 'bdf'.split('')));
     },
     answer: ['beer', 'deer', 'feer'],
   },
