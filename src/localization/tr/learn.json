@@ -78,13 +78,13 @@
   "examples.questionMark.description": "Metinde geçen `n` harfinin opsiyonel olduğunu bildiren ifadeyi soru işaretini `?` kullanarak yazın. Böylelikle hem `a` hemde `an` sözcükleri seçilebilmiş olsun.",
 
   "examples.quantifier.title": "Pratik: Süslü Parantezler - 1",
-  "examples.quantifier.description": "Metindeki `0` 'dan `9` 'a kadar olan sayıların yan yana geçen `4` tanesini seçecek ifadeyi süslü parantezleri `{}` kullanarak yazın.",
+  "examples.quantifier.description": "Yan yana `4` sayı geçen metinleri bulacak ifadeyi süslü parantez `{}` kullanarak yazın.",
 
   "examples.quantifierMin.title": "Pratik: Süslü Parantezler - 2",
-  "examples.quantifierMin.description": "Metindeki  `0` 'dan `9` 'a kadar olan sayıların yan yana en az `2` kez geçenlerini seçecek ifadeyi süslü parantezleri `{}` kullanarak yazın.",
+  "examples.quantifierMin.description": "Yan yana en az `2` sayı geçen metinleri bulacak ifadeyi süslü parantez `{}` kullanarak yazın.",
 
   "examples.quantifierRange.title": "Pratik: Süslü Parantezler - 3",
-  "examples.quantifierRange.description": "Metindeki  `0` 'dan `9` 'a kadar olan sayıların yan yana en az `1` ile `4` arasında geçenlerini seçecek ifadeyi süslü parantezleri `{}` kullanarak yazın.",
+  "examples.quantifierRange.description": "Yan yana en az `1` en fazla `4` sayı geçen metinleri bulacak ifadeyi süslü parantez `{}` kullanarak yazın.",
 
   "steps.groupping.title": "Parantezler `( )`: Gruplama",
   "steps.groupping.description": "Bir ifadeyi gruplayabilir ve bu grupları referans göstermek ya da bazı kurallar uygulamak için kullanabiliriz. Bir ifadeyi gruplamak için `()` parantez içine alırız. Şimdilik sadece aşağıdaki `haa` kelimesini gruplayın.",

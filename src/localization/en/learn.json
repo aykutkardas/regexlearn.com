@@ -78,13 +78,13 @@
   "examples.questionMark.description": "Write the expression indicating that the letter `n` is optional in the text, using the question mark `?`. Thus, both the words `a` and `an` can be selected.",
 
   "examples.quantifier.title": "Practice: Curly Braces - 1",
-  "examples.quantifier.description": "Write the expression using curly braces `{}` to select `4` digit numbers from `0` to `9` in the text.",
+  "examples.quantifier.description": "Write the expression using curly braces `{}` that will find texts containing `4` numbers side by side.",
 
   "examples.quantifierMin.title": "Practice: Curly Braces - 2",
-  "examples.quantifierMin.description": "Type the expression using curly braces `{}` to select numbers between `0` and `9` that occur at least `2` times in the text.",
+  "examples.quantifierMin.description": "Write the expression using curly braces `{}` that will find texts containing at least `2` numbers side by side.",
 
   "examples.quantifierRange.title": "Practice: Curly Braces - 3",
-  "examples.quantifierRange.description": "Write the expression using curly braces `{}` to select the numbers from `0` to `9` in the text that is at least between `1` and `4`.",
+  "examples.quantifierRange.description": "Write the expression using curly braces `{}` that will find texts containing `4` numbers side by side.",
 
   "steps.groupping.title": "Parentheses `( )`: Grouping",
   "steps.groupping.description": "We can group an expression and use these groups to reference or enforce some rules. To group an expression, we enclose `()` in parentheses. For now just group `haa` below.",
