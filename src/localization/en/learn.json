@@ -93,7 +93,7 @@
   "steps.groupReference.description": "The words `ha` and `haa` are grouped below. The first group is used by writing `\\1` to avoid rewriting. Here `1` denotes the order of grouping. Type `\\2` at the end of the expression to refer to the second group.",
 
   "steps.nonCapturingGroupping.title": "Parentheses `(?: )`: Non-capturing Grouping",
-  "steps.nonCapturingGroupping.description": "You can group an expression and ensure that it is not caught by references. For example, below are two groups. However, the first group reference we denote with `\\1` actually points to the second group, as the first is an uncaught group.",
+  "steps.nonCapturingGroupping.description": "You can group an expression and ensure that it is not captured by references. For example, below are two groups. However, the first group reference we denote with `\\1` actually indicates the second group, as the first is a non-capturing group.",
 
   "steps.pipeCharacter.title": "Pipe Character `|`",
   "steps.pipeCharacter.description": "It allows to specify that an expression can be in different expressions. Thus, all possible statements are written separated by the pipe sign `|`. This differs from charset `[abc]`, charsets operate at the character level. Alternatives are at the expression level. For example, the following expression would select both `cat` and `Cat`. Add another pipe sign `|` to the end of the expression and type `rat` so that all words are selected.",
