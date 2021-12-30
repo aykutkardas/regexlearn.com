@@ -383,7 +383,7 @@ const data = [
     title: 'steps.escapeCharacter.title',
     description: 'steps.escapeCharacter.description',
     originalTitle: 'Escape Character',
-    content: '(*) Asteriks.',
+    content: '(*) Asterisk.',
     initialFlags: 'g',
     initialValue: '(*|.)',
     cursorPosition: 1,
