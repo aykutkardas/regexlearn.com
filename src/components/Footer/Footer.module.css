@@ -33,11 +33,6 @@
   color: var(--primary);
 }
 
-.FooterSocialLink span {
-  font-size: 6px;
-  opacity: 0;
-}
-
 .FooterCopyright {
   display: flex;
   align-items: center;
