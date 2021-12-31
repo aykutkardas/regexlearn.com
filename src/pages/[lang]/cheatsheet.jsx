@@ -77,9 +77,13 @@ export default function Home() {
 }
 
 export async function getStaticProps({ params }) {
+  const lang = params.lang || defaultLocale;
+  const messages = require(`src/localization/${lang}/`)?.default;
+
   return {
     props: {
-      lang: params.lang,
+      lang,
+      messages,
     },
   };
 }

@@ -5,11 +5,11 @@ import Link from 'next/link';
 import * as styles from './LanguageSwitch.module.css';
 import Icon from 'src/components/Icon';
 
-import langs, { langNames } from 'src/localization';
+import { langNames } from 'src/localization';
 import { Context } from 'src/contexts/LanguageContext';
 import getIntlPath from 'src/utils/getIntlPath';
 
-const langList = Object.keys(langs).map(langKey => ({
+const langList = Object.keys(langNames).map(langKey => ({
   value: langKey,
   label: langNames[langKey],
 }));
@@ -45,12 +45,20 @@ const LanguageSwitch = () => {
         style={{ visibility: isOpen ? 'visible' : 'hidden' }}
       >
         {getAvailableList().map(({ label, value }) => (
-          <Link href={getIntlPath(pathname, value)} key={value}>
-            <a onClick={closeLanguageList} className={styles.LanguageSwitchListItem}>
-              <span>{label}</span>
-              <Icon icon="arrow-left" className={styles.LanguageSwitchListItemIcon} size={16} removeInlineStyle />
-            </a>
-          </Link>
+          <a
+            href={getIntlPath(pathname, value)}
+            key={value}
+            onClick={closeLanguageList}
+            className={styles.LanguageSwitchListItem}
+          >
+            <span>{label}</span>
+            <Icon
+              icon="arrow-left"
+              className={styles.LanguageSwitchListItemIcon}
+              size={16}
+              removeInlineStyle
+            />
+          </a>
         ))}
       </div>
     </div>

@@ -14,7 +14,8 @@ const getIntlPath = (href, lang) => {
   if (isDefaultLocale) {
     return href.replace('/[lang]', '');
   }
-  return { pathname: href, query: { lang } };
+
+  return href.replace('[lang]', lang);
 };
 
 export default getIntlPath;

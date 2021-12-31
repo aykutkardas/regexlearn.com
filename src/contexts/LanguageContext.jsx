@@ -1,11 +1,9 @@
-import * as React from "react";
+import { createContext } from 'react';
 
-const Context = React.createContext();
+const Context = createContext();
 
 function Provider({ children, lang, setLang }) {
-  return (
-    <Context.Provider value={{ lang, setLang }}>{children}</Context.Provider>
-  );
+  return <Context.Provider value={{ lang, setLang }}>{children}</Context.Provider>;
 }
 
 export { Provider, Context };

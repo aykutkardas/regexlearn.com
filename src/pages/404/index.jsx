@@ -7,6 +7,7 @@ import Button from 'src/components/Button';
 import Header from 'src/components/Header';
 import Footer from 'src/components/Footer';
 import IntlLink from 'src/components/IntlLink';
+import { defaultLocale } from 'src/localization';
 
 export default function Home() {
   const { formatMessage } = useIntl();
@@ -44,8 +45,13 @@ export default function Home() {
   );
 }
 
-export async function getStaticProps(context) {
+export async function getStaticProps() {
+  const messages = require(`src/localization/${defaultLocale}/`)?.default;
+
   return {
-    props: {},
+    props: {
+      lang: defaultLocale,
+      messages,
+    },
   };
 }
