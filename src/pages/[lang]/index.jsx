@@ -54,7 +54,12 @@ export default function Home() {
             </div>
           </div>
           <div className="col-xs-12 col-sm-12 col-md-6 visible-md visible-lg intro">
-            <img src="/Done.webp" width="100%" alt="a relaxed man with his legs on the table" />
+            <img
+              loading="lazy"
+              src="/Done.webp"
+              width="100%"
+              alt={formatMessage({ id: 'landing.imageAltText' })}
+            />
             <ProductButton className={styles.ProductHuntButton} />
           </div>
         </div>
@@ -63,6 +68,7 @@ export default function Home() {
           title="section.learn.title"
           description="section.learn.content"
           image="/Learn.webp"
+          imageAltText="section.learn.imageAltText"
           link="/learn"
           buttonText="general.startLearning"
         />
@@ -71,6 +77,7 @@ export default function Home() {
           title="section.cheatsheet.title"
           description="section.cheatsheet.content"
           image="/Cheatsheet.webp"
+          imageAltText="section.cheatsheet.imageAltText"
           link="/cheatsheet"
           buttonText="section.cheatsheet.button"
         />
@@ -78,17 +85,20 @@ export default function Home() {
           title="section.playground.title"
           description="section.playground.content"
           image="/Playground.webp"
+          imageAltText="section.playground.imageAltText"
         />
         <Section
           reverse
           title="section.practice.title"
           description="section.practice.content"
           image="/Practise.webp"
+          imageAltText="section.practice.imageAltText"
         />
         <Section
           title="section.opensource.title"
           description="section.opensource.content"
           image="/Open Source.webp"
+          imageAltText="section.opensource.imageAltText"
           link="https://github.com/aykutkardas/regexlearn.com"
           customButton={({ className }) => (
             <a
@@ -112,14 +122,14 @@ export default function Home() {
             target="_blank"
             rel="noreferrer"
           >
-            <img src="/sitechecker.pro.webp" alt="" />
+            <img src="/sitechecker.pro.webp" alt="sitechecker.pro" />
           </a>
           <a
             href="https://seo.do/?utm_source=regexlearn&utm_medium=referral&utm_campaign=sponsorship"
             target="_blank"
             rel="noreferrer"
           >
-            <img src="/seo.do.webp" alt="" />
+            <img src="/seo.do.webp" alt="seo.do" />
           </a>
         </div>
       </div>

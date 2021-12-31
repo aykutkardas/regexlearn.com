@@ -24,7 +24,12 @@ export default function Section({
   return (
     <div className={cx('row', reverse ? styles.SectionReverse : styles.Section)}>
       <div className={cx('col-xs-12 col-sm-12 col-md-6', styles.SectionImageWrapper)}>
-        <img src={image} className={cx('img-responsive', styles.SectionImage)} alt={imageAltText} />
+        <img
+          src={image}
+          loading="lazy"
+          className={cx('img-responsive', styles.SectionImage)}
+          alt={formatMessage({ id: imageAltText })}
+        />
       </div>
       <div className={cx('col-xs-12 col-sm-12 col-md-6', styles.SectionContentWrapper)}>
         <div>
