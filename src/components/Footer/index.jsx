@@ -16,6 +16,7 @@ function Footer() {
                 rel="noreferrer"
                 className={styles.FooterSocialLink}
               >
+                <span>GitHub</span>
                 <Icon icon="github" size={20} color="white" />
               </a>
               <a
@@ -24,6 +25,7 @@ function Footer() {
                 rel="noreferrer"
                 className={styles.FooterSocialLink}
               >
+                <span>Twitter</span>
                 <Icon icon="twitter" size={20} color="white" />
               </a>
             </div>
