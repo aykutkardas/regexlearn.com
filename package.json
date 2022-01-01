@@ -15,7 +15,8 @@
   "license": "MIT",
   "dependencies": {
     "classnames": "^2.3.1",
-    "lodash": "^4.17.21",
+    "lodash.isempty": "^4.4.0",
+    "lodash.xor": "^4.5.0",
     "lookie": "^0.6.0",
     "mousetrap": "^1.6.5",
     "mousetrap-global-bind": "^1.1.0",

@@ -1,4 +1,5 @@
-import _ from 'lodash';
+import isEmpty from 'lodash.isempty';
+import xor from 'lodash.xor';
 
 function checkRegex(data, { regex, flags }) {
   try {
@@ -19,12 +20,12 @@ function checkRegex(data, { regex, flags }) {
     const isMatch =
       data.answer &&
       data.answer.length === regResult.length &&
-      _.isEmpty(_.xor(data.answer, regResult));
+      isEmpty(xor(data.answer, regResult));
 
     const isSuccess =
       isMatch &&
       (data.regex.includes(regex) || data.customValidate?.(regex)) &&
-      _.isEmpty(_.xor(data.flags.split(''), flags.split('')));
+      isEmpty(xor(data.flags.split(''), flags.split('')));
 
     return { isMatch, isSuccess, $regex: reg };
   } catch (err) {
