@@ -51,6 +51,7 @@ function LearnFooter({ steps, step, nextStep, prevStep, success, error }) {
                     [styles.NavigationStepStatusIconUnlock]: success,
                     [styles.NavigationStepStatusIconError]: error,
                     'animate__animated animate__shakeX': error,
+                    'animate__animated animate__shakeY': success,
                   })}
                   icon={success ? 'unlocked' : 'lock'}
                 />

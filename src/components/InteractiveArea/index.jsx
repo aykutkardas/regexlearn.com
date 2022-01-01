@@ -1,7 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useState, useEffect, useRef } from 'react';
 import { FormattedMessage, useIntl } from 'react-intl';
-import { toast } from 'react-toastify';
 import cx from 'classnames';
 import lookie from 'lookie';
 
@@ -32,12 +31,6 @@ function InteractiveArea({ data, step, isShow, parentError, onChangeSuccess }) {
 
   const isSafariAndAccept = isSafari() && data.safariAccept;
 
-  const toastConfig = {
-    theme: 'colored',
-    autoClose: true,
-    position: 'top-center',
-  };
-
   const skipStep = () => {
     setError(false);
     setSuccess(true);
@@ -50,7 +43,6 @@ function InteractiveArea({ data, step, isShow, parentError, onChangeSuccess }) {
       if (data.regex[0] == regex) {
         setError(false);
         setSuccess(true);
-        toast.success(formatMessage({ id: 'general.completedStep' }), toastConfig);
       } else {
         setError(true);
         setSuccess(false);
@@ -59,8 +51,6 @@ function InteractiveArea({ data, step, isShow, parentError, onChangeSuccess }) {
     }
 
     const { isSuccess, isMatch, err, $regex } = checkRegex(data, { regex, flags });
-
-    toast.dismiss();
 
     if (err) {
       setError(err);
@@ -75,7 +65,6 @@ function InteractiveArea({ data, step, isShow, parentError, onChangeSuccess }) {
       }
 
       if (isChanged && isSuccess) {
-        toast.success(formatMessage({ id: 'general.completedStep' }), toastConfig);
         setError(false);
       } else if (isMatch) {
         setError(false);
@@ -105,8 +94,6 @@ function InteractiveArea({ data, step, isShow, parentError, onChangeSuccess }) {
   useEffect(() => {
     setError(false);
     setSuccess(false);
-
-    toast.dismiss();
 
     if (data.interactive === false) {
       setSuccess(true);

@@ -18,10 +18,9 @@
   animation-fill-mode: both;
 }
 
-@-webkit-keyframes shakeX {
+@keyframes shakeY {
   from,
   to {
-    -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
   }
 
@@ -30,18 +29,17 @@
   50%,
   70%,
   90% {
-    -webkit-transform: translate3d(-10px, 0, 0);
-    transform: translate3d(-10px, 0, 0);
+    transform: translate3d(0, -10px, 0);
   }
 
   20%,
   40%,
   60%,
   80% {
-    -webkit-transform: translate3d(10px, 0, 0);
-    transform: translate3d(10px, 0, 0);
+    transform: translate3d(0, 10px, 0);
   }
 }
+
 @keyframes shakeX {
   from,
   to {
@@ -66,7 +64,11 @@
     transform: translate3d(10px, 0, 0);
   }
 }
+
 .animate__shakeX {
-  -webkit-animation-name: shakeX;
   animation-name: shakeX;
+}
+
+.animate__shakeY {
+  animation-name: shakeY;
 }
