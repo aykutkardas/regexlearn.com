@@ -48,10 +48,10 @@
   "cheatsheet.nonCapturingGroup.description": "Создает группу, на которую нельзя ссылаться.",
 
   "cheatsheet.lookarounds": "Поиск",
-  "cheatsheet.positiveLookahead.title": "Положительный ответ",
-  "cheatsheet.negativeLookahead.title": "Отрицательный ответ",
-  "cheatsheet.positiveLookbehind.title": "Положительный ответ сзади",
-  "cheatsheet.negativeLookbehind.title": "Отрицательный ответ сзади",
+  "cheatsheet.positiveLookahead.title": "Позитивная опережающая проверка",
+  "cheatsheet.negativeLookahead.title": "Негативная опережающая проверка",
+  "cheatsheet.positiveLookbehind.title": "Позитивная ретроспективная проверка",
+  "cheatsheet.negativeLookbehind.title": "Негативная ретроспективная проверка",
 
   "cheatsheet.quantifiersAndAlternation": "Квантификаторы и чередование",
   "cheatsheet.plus.title": "Плюс",
