@@ -1,0 +1,32 @@
+{
+  "general.prev": "Anterior",
+  "general.next": "Próximo",
+  "general.result": "Resultado",
+  "general.regex": "Regex",
+  "general.text": "Texto",
+  "general.completedStep": "Passo Completo!",
+  "general.hintQuestion": "Mostrar Resposta",
+  "general.reportStep": "Relatar um Problema",
+  "general.startLearning": "Comece a Aprender",
+  "general.comingSoon": "Em Breve",
+  "general.becomeSponsor": "Seja um Patrocinador",
+  "general.learn": "Aprender",
+  "general.playground": "Playground",
+  "general.cheatsheet": "Cheatsheet",
+  "general.ourSponsors": "Nossos Patrocinadores",
+
+  "notFound.intro": "A página que você esta procurando não existe.",
+  "notFound.button": "Voltar para o Início",
+
+  "page.landing.title": "Regex Learn - Passo a passo, do zero ao avançado.",
+  "page.learn.title": "Regex Learn - Curso Interativo de Expressões Regulares",
+  "page.cheatsheet.title": "Regex Learn - RegEx Cheatsheet",
+  "page.404.title": "Regex Learn - Não localizado",
+
+  "page.landing.description": "Aprenda RegEx interativamente, pratique em seu nível, teste e compartilhe suas próprias expressões.",
+  "page.learn.description": "Aprenda RegEx passo a passo. Complete o tutorial interativo que fara seu aprendizado mais fácil e rápido.",
+  "page.cheatsheet.description": "As vezes você só precisa relembrar sobre RegEx. Tente o cheatsheet que irá deixar tudo mais fácil para você entender e relembrar.",
+
+  "alert.site.under.development": "Este site ainda esta em desenvolvimento. O que vocês esta vendo agora poderá mudar.",
+  "learn.safari.unsupportWarning": "Expressões regulares neste ponto ainda não são suportadas pelo browser Safari. Se você estever tendo problemas para passar por este ponto, você pode clicar aqui."
+}
