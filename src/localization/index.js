@@ -4,6 +4,7 @@ export const langNames = {
   tr: 'TR',
   ru: 'RU',
   'zh-cn': 'ZH-CN',
+  'pt-br': 'PT-BR',
 };
 
 export const defaultLocale = 'en';
