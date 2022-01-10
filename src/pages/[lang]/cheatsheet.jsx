@@ -13,9 +13,7 @@ import { defaultLocale, locales } from 'src/localization';
 export default function Home() {
   const { formatMessage } = useIntl();
 
-  const firstBlockDatas = data.slice(0, 3);
-  const secondBlockDatas = data.slice(3, 4);
-  const thirdBlockDatas = data.slice(4, 6);
+  const columns = [data.slice(0, 3), data.slice(3, 4), data.slice(4, 6)];
 
   return (
     <>
@@ -27,48 +25,22 @@ export default function Home() {
       </Head>
       <div className="container flex-1">
         <div className="row">
-          <div className="col-lg-4 col-md-6">
-            {firstBlockDatas.map(arr => (
-              <div key={arr.title}>
-                <h4>{formatMessage({ id: arr.title })}</h4>
-                {arr.data.map(item => (
-                  <Collapse
-                    key={item.title}
-                    data={item}
-                    title={<CheatsheetItemTitle data={item} />}
-                  />
-                ))}
-              </div>
-            ))}
-          </div>
-          <div className="col-lg-4 col-md-6">
-            {secondBlockDatas.map(arr => (
-              <div key={arr.title}>
-                <h4>{formatMessage({ id: arr.title })}</h4>
-                {arr.data.map(item => (
-                  <Collapse
-                    key={item.title}
-                    data={item}
-                    title={<CheatsheetItemTitle data={item} />}
-                  />
-                ))}
-              </div>
-            ))}
-          </div>
-          <div className="col-lg-4 col-md-6">
-            {thirdBlockDatas.map(arr => (
-              <div key={arr.title}>
-                <h4>{formatMessage({ id: arr.title })}</h4>
-                {arr.data.map(item => (
-                  <Collapse
-                    key={item.title}
-                    data={item}
-                    title={<CheatsheetItemTitle data={item} />}
-                  />
-                ))}
-              </div>
-            ))}
-          </div>
+          {columns.map((column, index) => (
+            <div key={index} className="col-lg-4 col-md-6">
+              {column.map(row => (
+                <div key={row.title}>
+                  <h4>{formatMessage({ id: row.title })}</h4>
+                  {row.data.map(item => (
+                    <Collapse
+                      key={item.title}
+                      data={item}
+                      title={<CheatsheetItemTitle data={item} />}
+                    />
+                  ))}
+                </div>
+              ))}
+            </div>
+          ))}
         </div>
       </div>
       <Footer />
