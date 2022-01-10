@@ -1,17 +1,30 @@
-.Collapse {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  border-radius: 6px;
-}
-
 .CollapseTitle {
   display: flex;
   align-items: center;
-  height: 25px;
+  height: 40px;
   border-radius: 6px;
   cursor: pointer;
   font-size: 14px;
+}
+
+.CollapseTitleIcon {
+  color: var(--gray);
+  transition: 0.3s;
+}
+
+.CollapseTitleIconActive {
+  composes: CollapseTitleIcon;
+  color: var(--txt-1);
+  transform: rotate(180deg);
+}
+
+.CollapseContent {
+  display: flex;
+  flex-direction: column;
+  margin: 6px 0;
+  overflow: hidden;
+  transition: 0.3s;
+  border-bottom: 1px solid var(--gray);
 }
 
 .CollapseDescription {
@@ -19,21 +32,4 @@
   color: var(--txt-3);
   margin: 0;
   margin-left: 80px;
-}
-
-.CollapseTitleIcon {
-  color: var(--gray);
-}
-
-.CollapseContent {
-  display: flex;
-  margin: 6px 0;
-  overflow: hidden;
-  height: 0;
-  transition: .3s;
-}
-
-.CollapseContentInner {
-  width: 100%;
-  border-bottom: 1px solid var(--gray);
 }
