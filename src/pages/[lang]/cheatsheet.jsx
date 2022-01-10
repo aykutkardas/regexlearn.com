@@ -6,7 +6,7 @@ import Footer from 'src/components/Footer';
 import Collapse from 'src/components/Collapse';
 import CheatsheetItemTitle from 'src/components/CheatsheetItemTitle';
 
-import data from 'src/cheatsheet.json';
+import data from 'src/data/cheatsheet.json';
 
 import { defaultLocale, locales } from 'src/localization';
 

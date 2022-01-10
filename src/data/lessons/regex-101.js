@@ -1,7 +1,7 @@
 import isEmpty from 'lodash.isempty';
 import xor from 'lodash.xor';
 
-const data = [
+const regex101 = [
   {
     title: 'steps.starter.title',
     description: 'steps.starter.description',
@@ -607,4 +607,4 @@ const data = [
   },
 ];
 
-export default data;
+export default regex101;

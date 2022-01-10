@@ -7,7 +7,7 @@ import Step from 'src/components/Step';
 import LearnFooter from 'src/components/LearnFooter';
 
 import Mousetrap from 'src/utils/mousetrap';
-import data from 'src/data';
+import data from 'src/data/lessons/regex-101';
 import shortcuts from 'src/shortcuts';
 
 export default function Learn() {
