@@ -37,15 +37,21 @@
   display: flex;
   align-items: center;
   font-size: 14px;
-  margin: 10px 0;
+  margin-top: 10px;
 }
 
 .FooterCopyrightLink {
   text-decoration: none;
   user-select: none;
-  color: var(--txt-3);
+  color: var(--txt-2);
 }
 
 .FooterCopyrightLink:hover {
   opacity: 0.8;
+}
+
+.Version {
+  font-size: 9px;
+  color: var(--txt-3);
+  margin: 5px;
 }

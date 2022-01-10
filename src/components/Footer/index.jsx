@@ -1,6 +1,8 @@
 import { FormattedMessage } from 'react-intl';
 import Icon from 'src/components/Icon';
 
+import { version } from '../../../package.json';
+
 import * as styles from './Footer.module.css';
 
 function Footer() {
@@ -39,6 +41,7 @@ function Footer() {
                 <FormattedMessage id="general.becomeSponsor" />
               </a>
             </div>
+            <span className={styles.Version}>v{version}</span>
           </div>
         </div>
       </div>
