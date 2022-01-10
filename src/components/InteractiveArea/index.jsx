@@ -18,7 +18,7 @@ import shortcuts from 'src/shortcuts';
 
 import * as styles from './InteractiveArea.module.css';
 
-function InteractiveArea({ data, step, isShow, parentError, onChangeSuccess }) {
+function InteractiveArea({ lessonName, data, step, isShow, parentError, onChangeSuccess }) {
   const { formatMessage } = useIntl();
   const regexInput = useRef(null);
   const [regex, setRegex] = useState(data.initialValue || '');
@@ -100,7 +100,7 @@ function InteractiveArea({ data, step, isShow, parentError, onChangeSuccess }) {
       return;
     }
 
-    const lastStep = lookie.get('lastStep') || 0;
+    const lastStep = lookie.get(`lesson.${lessonName}`)?.lastStep || 0;
     const isCompletedStep = step < lastStep;
 
     applyRegex();

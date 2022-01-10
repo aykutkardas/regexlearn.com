@@ -7,6 +7,8 @@ import { IntlProvider } from 'react-intl';
 import { Provider as LanguageProvider } from 'src/contexts/LanguageContext';
 import { defaultLocale } from 'src/localization';
 
+require('src/migration').migration();
+
 function MyApp({ Component, pageProps }) {
   const [messages] = useState(pageProps.messages || {});
   const [lang] = useState(pageProps.lang || defaultLocale);

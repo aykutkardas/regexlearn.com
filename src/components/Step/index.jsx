@@ -6,7 +6,7 @@ import InteractiveArea from 'src/components/InteractiveArea';
 
 import tagWrapper from 'src/utils/tagWrapper';
 
-function Steps({ data, step, error: parentError, onChangeSuccess }) {
+function Step({ lessonName, data, step, error: parentError, onChangeSuccess }) {
   const { formatMessage } = useIntl();
 
   const title = tagWrapper(
@@ -34,6 +34,7 @@ function Steps({ data, step, error: parentError, onChangeSuccess }) {
       />
       <p className={styles.StepDescription} dangerouslySetInnerHTML={{ __html: description }} />
       <InteractiveArea
+        lessonName={lessonName}
         isShow={isInteractive}
         data={data}
         step={step}
@@ -44,4 +45,4 @@ function Steps({ data, step, error: parentError, onChangeSuccess }) {
   );
 }
 
-export default Steps;
+export default Step;

@@ -27,7 +27,7 @@ export default function Learn() {
           <p>{formatMessage({ id: 'steps.whatIsRegex.description' })}</p>
         </div>
       )}
-      <LearnPage />
+      <LearnPage lessonName="regex101" />
     </>
   );
 }

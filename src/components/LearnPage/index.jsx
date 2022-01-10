@@ -10,9 +10,9 @@ import Mousetrap from 'src/utils/mousetrap';
 import data from 'src/data/lessons/regex-101';
 import shortcuts from 'src/shortcuts';
 
-export default function Learn() {
-  const lastStep = lookie.get('lastStep') || 0;
-  const currentStep = lookie.get('currentStep') || lastStep;
+export default function LearnPage({ lessonName }) {
+  const lookieKey = `lesson.${lessonName}`;
+  const { lastStep = 0, currentStep = lastStep } = lookie.get(lookieKey) || {};
   const [step, setStep] = useState(currentStep);
   const [success, setSuccess] = useState(currentStep < lastStep);
   const [error, setError] = useState(false);
@@ -58,9 +58,14 @@ export default function Learn() {
     Mousetrap.bindGlobal(shortcuts.prevStep, prevStep);
     Mousetrap.bindGlobal(shortcuts.nextStep, nextStep);
 
-    lookie.set('currentStep', step);
+    const progress = lookie.get(lookieKey) || {};
+    progress.currentStep = step;
+
+    lookie.set(lookieKey, progress);
+
     if (step > lastStep) {
-      lookie.set('lastStep', step);
+      progress.lastStep = step;
+      lookie.set(lookieKey, progress);
     }
 
     return () => {
@@ -68,12 +73,18 @@ export default function Learn() {
       Mousetrap.unbind(shortcuts.prevStep);
       Mousetrap.unbind(shortcuts.nextStep);
     };
-  }, [step, lastStep, success, prevStep, nextStep]);
+  }, [step, lastStep, success, prevStep, nextStep, lookieKey]);
 
   return (
     <>
       <Header steps={data} step={step} />
-      <Step data={data[step]} step={step} onChangeSuccess={onChangeSuccess} error={error} />
+      <Step
+        lessonName={lessonName}
+        data={data[step]}
+        step={step}
+        onChangeSuccess={onChangeSuccess}
+        error={error}
+      />
       <LearnFooter
         steps={data}
         step={step}
