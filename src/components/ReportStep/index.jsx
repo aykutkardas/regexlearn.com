@@ -4,7 +4,7 @@ import { FormattedMessage } from 'react-intl';
 import Icon from 'src/components/Icon';
 import { Context } from 'src/contexts/LanguageContext';
 
-import { version } from '../../../package.json';
+import packageInfo from '../../../package.json';
 
 import * as styles from './ReportStep.module.css';
 
@@ -16,7 +16,7 @@ const ReportStep = ({ data, step }) => {
 **Step Number:** \`${step}\`
 **Step Name:** \`${data.title}\`
 **Language:** \`${lang}\`
-**Version:** \`${version}\`
+**Version:** \`v${packageInfo.version}\`
 
 **User Agent:** 
 \`${window.navigator.userAgent.replace(/;/g, ',')}\`
