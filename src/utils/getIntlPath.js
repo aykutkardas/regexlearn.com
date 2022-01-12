@@ -1,24 +1,20 @@
 import { defaultLocale } from 'src/localization';
 
-const isDevelopment = process.env.NODE_ENV === "development";
-
 const getIntlPath = (href, lang) => {
   const isDefaultLocale = lang === defaultLocale;
   const isDefaultPath = !href.includes('[lang]');
 
+  let newHref = href;
+
   if (isDefaultPath && !isDefaultLocale) {
-    return `/${lang}${href}`;
+    newHref = `/${lang}${href}`;
   }
 
-  if ((isDefaultPath || href === '/[lang]') && isDefaultLocale) {
-    return isDevelopment ? `/en${href}` : href;
-  }
+  newHref = newHref
+    .replace('/[lang]', `/${lang}`)
+    .replace(`/${defaultLocale}`, '/');
 
-  if (isDefaultLocale) {
-    return href.replace('/[lang]', isDevelopment ? '/en' : '/');
-  }
-
-  return href.replace('[lang]', lang);
+  return newHref;
 };
 
 export default getIntlPath;

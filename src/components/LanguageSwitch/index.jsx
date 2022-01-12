@@ -1,13 +1,12 @@
 import { useContext, useState } from 'react';
 import { useRouter } from 'next/router';
-import Link from 'next/link';
+
+import Icon from 'src/components/Icon';
+import getIntlPath from 'src/utils/getIntlPath';
+import { Context } from 'src/contexts/LanguageContext';
+import { langNames } from 'src/localization';
 
 import * as styles from './LanguageSwitch.module.css';
-import Icon from 'src/components/Icon';
-
-import { langNames } from 'src/localization';
-import { Context } from 'src/contexts/LanguageContext';
-import getIntlPath from 'src/utils/getIntlPath';
 
 const langList = Object.keys(langNames).map(langKey => ({
   value: langKey,
