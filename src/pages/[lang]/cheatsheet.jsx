@@ -1,6 +1,8 @@
 import { useIntl } from 'react-intl';
+import { useRouter } from 'next/router';
 import Head from 'next/head';
 
+import SeoTags from 'src/components/SeoTags';
 import Header from 'src/components/Header';
 import Footer from 'src/components/Footer';
 import Collapse from 'src/components/Collapse';
@@ -12,6 +14,10 @@ import { defaultLocale, locales } from 'src/localization';
 
 export default function Home() {
   const { formatMessage } = useIntl();
+  const { asPath } = useRouter();
+
+  const pageTitle = formatMessage({ id: 'page.cheatsheet.title' });
+  const pageDescription = formatMessage({ id: 'page.cheatsheet.description' });
 
   const columns = [data.slice(0, 3), data.slice(3, 4), data.slice(4, 6)];
 
@@ -19,9 +25,9 @@ export default function Home() {
     <>
       <Header />
       <Head>
-        <title>{formatMessage({ id: 'page.cheatsheet.title' })}</title>
-        <link rel="canonical" href="https://regexlearn.com/cheatsheet" />
-        <meta name="description" content={formatMessage({ id: 'page.cheatsheet.description' })} />
+        <title>{pageTitle}</title>
+        <meta name="description" content={pageDescription} />
+        <SeoTags title={pageTitle} desciption={pageDescription} href={asPath} />
       </Head>
       <div className="container flex-1">
         <div className="row">

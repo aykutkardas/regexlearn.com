@@ -7,10 +7,6 @@ const SeoTags = ({
   image = baseURL + '/images/og-regexlearn-image.jpg',
 }) => (
   <>
-    {/* <!-- Common --> */}
-    <title>{title}</title>
-    <meta name="description" content={description} />
-
     {/* <!-- Facebook Meta Tags --> */}
     <meta property="og:url" content={baseURL + href} />
     <meta property="og:type" content="website" />

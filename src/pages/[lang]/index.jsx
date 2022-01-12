@@ -1,12 +1,13 @@
-import dynamic from 'next/dynamic';
 import { FormattedMessage, useIntl } from 'react-intl';
+import { useRouter } from 'next/router';
 import Head from 'next/head';
 import cx from 'classnames';
 
 import tagWrapper from 'src/utils/tagWrapper';
 import { defaultLocale, locales } from 'src/localization';
 
-const ProductButton = dynamic(import('src/components/ProductButton'), { ssr: true });
+import ProductButton from 'src/components/ProductButton';
+import SeoTags from 'src/components/SeoTags';
 import Button from 'src/components/Button';
 import Icon from 'src/components/Icon';
 import Header from 'src/components/Header';
@@ -18,13 +19,18 @@ import IntlLink from 'src/components/IntlLink';
 
 export default function Home() {
   const { formatMessage } = useIntl();
+  const { asPath } = useRouter();
+
+  const pageTitle = formatMessage({ id: 'page.landing.title' });
+  const pageDescription = formatMessage({ id: 'page.landing.description' });
 
   return (
     <>
       <Header />
       <Head>
-        <title>{formatMessage({ id: 'page.landing.title' })}</title>
-        <meta name="description" content={formatMessage({ id: 'page.landing.description' })} />
+        <title>{pageTitle}</title>
+        <meta name="description" content={pageDescription} />
+        <SeoTags title={pageTitle} desciption={pageDescription} href={asPath} />
       </Head>
       <div className="container">
         <div className={cx('row', styles.LandingMainSection)}>
