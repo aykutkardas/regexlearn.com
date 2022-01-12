@@ -49,7 +49,7 @@ export default function Home() {
                   ),
                 }}
               />
-              <IntlLink href="/learn" passHref>
+              <IntlLink href="/[lang]/learn" passHref>
                 <a className={styles.LandingMainSectionButton}>
                   <Button variant="primary">
                     <FormattedMessage id="general.startLearning" />
@@ -74,7 +74,7 @@ export default function Home() {
           description="section.learn.content"
           image="/Learn.webp"
           imageAltText="section.learn.imageAltText"
-          link="/learn"
+          link="/[lang]/learn"
           buttonText="general.startLearning"
         />
         <Section
@@ -83,7 +83,7 @@ export default function Home() {
           description="section.cheatsheet.content"
           image="/Cheatsheet.webp"
           imageAltText="section.cheatsheet.imageAltText"
-          link="/cheatsheet"
+          link="/[lang]/cheatsheet"
           buttonText="section.cheatsheet.button"
         />
         <Section

@@ -17,4 +17,23 @@ module.exports = {
       },
     ]
   },
+  async redirects() {
+    return [
+      {
+        source: '/en',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/en/learn',
+        destination: '/learn',
+        permanent: true,
+      },
+      {
+        source: '/en/cheatsheet',
+        destination: '/cheatsheet',
+        permanent: true,
+      },
+    ]
+  }
 }

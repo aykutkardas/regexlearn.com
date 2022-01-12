@@ -7,7 +7,7 @@ import IntlLink from 'src/components/IntlLink';
 
 const Logo = () => {
   return (
-    <IntlLink href="/">
+    <IntlLink href="/[lang]">
       <a className={styles.Brand} aria-label="RegexLearn">
         <Icon
           className={cx(styles.BrandIcon, 'visible-xs visible-sm')}

@@ -17,7 +17,7 @@ function Header() {
           <div className={styles.Header}>
             <Logo />
             <div className={styles.HeaderNav}>
-              <IntlLink href="/learn" passHref>
+              <IntlLink href="/[lang]/learn" passHref>
                 {({ isActive }) => (
                   <a
                     className={cx(styles.HeaderLink, {
@@ -28,7 +28,7 @@ function Header() {
                   </a>
                 )}
               </IntlLink>
-              <IntlLink href="/cheatsheet" passHref>
+              <IntlLink href="/[lang]/cheatsheet" passHref>
                 {({ isActive }) => (
                   <a
                     className={cx(styles.HeaderLink, {

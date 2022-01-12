@@ -23,7 +23,7 @@ export default function Home() {
           <div className="col-md-12">
             <div className={styles.NotFound}>
               <img className={styles.NotFoundImage} src="/404.webp" alt="404" />
-              <IntlLink href="/" passHref>
+              <IntlLink href="/[lang]" passHref>
                 <Button variant="primary">
                   <FormattedMessage id="notFound.button" />
                 </Button>

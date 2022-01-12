@@ -2,20 +2,21 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import getIntlPath from 'src/utils/getIntlPath';
 
-const IntlLink = ({ href, children }) => {
-  const { asPath, query } = useRouter();
+const IntlLink = ({ href, children, lang, passHref = false }) => {
+  const { query, pathname } = useRouter();
+  const currentLang = lang || query.lang;
 
-  const intlLink = query.lang ? getIntlPath(href, query.lang) : href;
+  const intlLink = currentLang ? getIntlPath(href, currentLang) : href;
 
   const content =
     typeof children === 'function'
       ? children({
-          isActive: asPath === intlLink,
+          isActive: pathname === intlLink?.pathname,
         })
       : children;
 
   return (
-    <Link href={intlLink} passHref>
+    <Link href={intlLink} passHref={passHref}>
       {content}
     </Link>
   );
