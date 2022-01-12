@@ -1,8 +1,6 @@
-const isDevelopment = process.env.NODE_ENV === "development";
-
 module.exports = {
   async rewrites() {
-    return !isDevelopment ? [] : [
+    return [
       {
         source: '/',
         destination: '/en',

@@ -1,12 +1,26 @@
+import { defaultLocale } from 'src/localization';
+
 const getIntlPath = (href, lang, toString = false) => {
   let pathname = href;
 
-  if (toString) {
-    return pathname
-      .replace('/[lang]', `/${lang}`)
+  if (lang === defaultLocale) {
+    pathname = pathname
+      .replace('/[lang]', `/`)
+      .replace(/\/\//g, '/');
   }
 
-  return { pathname, query: { lang } }
+  if (toString) {
+    return pathname
+      .replace('/[lang]', `/${lang}`);
+  }
+
+  const newHref = { pathname };
+
+  if (lang !== defaultLocale) {
+    newHref.query = { lang };
+  }
+
+  return newHref;
 };
 
 export default getIntlPath;
