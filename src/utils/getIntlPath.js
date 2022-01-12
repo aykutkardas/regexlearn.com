@@ -12,7 +12,7 @@ const getIntlPath = (href, lang) => {
 
   newHref = newHref
     .replace('/[lang]', `/${lang}`)
-    .replace(`/${defaultLocale}`, '/');
+    .replace(`/${defaultLocale}`, '');
 
   return newHref;
 };
