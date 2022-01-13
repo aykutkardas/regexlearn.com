@@ -26,7 +26,7 @@ export default function Learn() {
         <link rel="stylesheet" href="/css/animate.css" />
         <title>{pageTitle}</title>
         <meta name="description" content={pageDescription} />
-        <SeoTags title={pageTitle} desciption={pageDescription} href={asPath} />
+        <SeoTags title={pageTitle} description={pageDescription} href={asPath} />
       </Head>
       {!isClient && (
         <div>

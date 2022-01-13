@@ -30,7 +30,7 @@ export default function Home() {
       <Head>
         <title>{pageTitle}</title>
         <meta name="description" content={pageDescription} />
-        <SeoTags title={pageTitle} desciption={pageDescription} href={asPath} />
+        <SeoTags title={pageTitle} description={pageDescription} href={asPath} />
       </Head>
       <div className="container">
         <div className={cx('row', styles.LandingMainSection)}>

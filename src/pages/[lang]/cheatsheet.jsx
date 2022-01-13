@@ -12,7 +12,7 @@ import data from 'src/data/cheatsheet.json';
 
 import { defaultLocale, locales } from 'src/localization';
 
-export default function Home() {
+export default function Cheatsheet() {
   const { formatMessage } = useIntl();
   const { asPath } = useRouter();
 
@@ -27,7 +27,7 @@ export default function Home() {
       <Head>
         <title>{pageTitle}</title>
         <meta name="description" content={pageDescription} />
-        <SeoTags title={pageTitle} desciption={pageDescription} href={asPath} />
+        <SeoTags key={pageTitle} title={pageTitle} description={pageDescription} href={asPath} />
       </Head>
       <div className="container flex-1">
         <div className="row">
