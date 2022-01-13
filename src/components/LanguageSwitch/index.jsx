@@ -18,6 +18,8 @@ const LanguageSwitch = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { pathname } = useRouter();
 
+  const { query } = useRouter();
+
   const toggleLanguageList = () => {
     setIsOpen(!isOpen);
   };
@@ -45,7 +47,7 @@ const LanguageSwitch = () => {
       >
         {getAvailableList().map(({ label, value }) => (
           <a
-            href={getIntlPath(pathname, value, true)}
+            href={getIntlPath({ href: pathname, lang: value, query, toStringHref: true })}
             key={value}
             onClick={closeLanguageList}
             className={styles.LanguageSwitchListItem}

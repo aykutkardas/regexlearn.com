@@ -4,6 +4,8 @@
   "general.result": "Result",
   "general.regex": "Regex",
   "general.text": "Text",
+  "general.start": "Start",
+  "general.continue": "Continue",
   "general.completedStep": "Step Completed!",
   "general.hintQuestion": "Show Answer",
   "general.reportStep": "Report a Problem",

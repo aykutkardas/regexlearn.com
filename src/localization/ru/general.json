@@ -4,6 +4,8 @@
   "general.result": "Результат",
   "general.regex": "Regex",
   "general.text": "Текст",
+  "general.start": "Начинать",
+  "general.continue": "Продолжать",
   "general.completedStep": "Шаг завершён!",
   "general.hintQuestion": "Показать ответ",
   "general.reportStep": "Сообщить о проблеме",

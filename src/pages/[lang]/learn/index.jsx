@@ -3,9 +3,13 @@ import { useRouter } from 'next/router';
 import { useIntl } from 'react-intl';
 
 import SeoTags from 'src/components/SeoTags';
-import LearnPage from 'src/components/LearnPage';
+import Header from 'src/components/Header';
+import Footer from 'src/components/Footer';
+import LessonBox from 'src/components/LessonBox';
 
 import { defaultLocale, locales } from 'src/localization';
+
+import lessons from 'src/data/lessons/index.json';
 
 export default function Learn() {
   const { formatMessage } = useIntl();
@@ -22,7 +26,17 @@ export default function Learn() {
         <meta name="description" content={pageDescription} />
         <SeoTags title={pageTitle} description={pageDescription} href={asPath} />
       </Head>
-      <LearnPage lessonName="regex101" />
+      <Header />
+      <div className="container">
+        <div className="row">
+          {lessons.map(lesson => (
+            <div key={lesson.key} className="col-xs-12 col-sm-4 col-md-3">
+              <LessonBox data={lesson} />
+            </div>
+          ))}
+        </div>
+      </div>
+      <Footer />
     </>
   );
 }

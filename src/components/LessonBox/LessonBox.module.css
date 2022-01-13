@@ -1,0 +1,77 @@
+.LessonBox {
+  width: 300px;
+  max-width: 100%;
+  height: 200px;
+  background-color: var(--bg-4);
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: var(--txt-1);
+  background-image: url(/images/lesson-card-bg.png);
+  background-size: 100% 100%;
+  transition: 0.3s;
+  background-position: center;
+  border-radius: 12px;
+  padding: 12px;
+}
+
+.LessonBox:hover {
+  background-size: 120% 120%;
+}
+
+.LessonBoxLock {
+  text-align: center;
+  background-image: url(/images/lesson-card-lock-bg.png);
+}
+
+.LessonBoxDetail {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.LessonBoxLock .LessonBoxDetail {
+  align-items: center;
+  justify-content: center;
+}
+
+.LessonBoxDetail svg {
+  margin-right: 5px;
+}
+
+.LessonBoxStatsInfo span {
+  margin-right: 10px;
+  display: inline-flex;
+  align-items: center;
+  font-size: 14px;
+}
+
+.LessonBoxTitle {
+  margin: 5px 0;
+  font-size: 19px;
+  font-weight: normal;
+}
+
+.LessonBoxDescription {
+  margin: 0;
+  color: var(--txt-2);
+  font-size: 14px;
+}
+
+.LessonBoxStats {
+  display: flex;
+  align-items: flex-end;
+  font-size: 14px;
+  flex: 1;
+  justify-content: space-between;
+}
+
+.LessonBoxAction {
+  color: var(--primary);
+  display: inline-flex;
+  align-items: center;
+}
+
+.LessonBoxAction svg {
+  margin-left: 5px;
+}

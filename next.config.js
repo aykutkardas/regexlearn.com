@@ -10,6 +10,10 @@ module.exports = {
         destination: '/en/learn',
       },
       {
+        source: '/learn/:lesson*',
+        destination: '/en/learn/:lesson*',
+      },
+      {
         source: '/cheatsheet',
         destination: '/en/cheatsheet',
       },
@@ -25,6 +29,11 @@ module.exports = {
       {
         source: '/en/learn',
         destination: '/learn',
+        permanent: true,
+      },
+      {
+        source: '/en/learn/:lesson*',
+        destination: '/learn/:lesson*',
         permanent: true,
       },
       {

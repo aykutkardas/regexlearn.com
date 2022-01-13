@@ -3,11 +3,11 @@ import { useRouter } from 'next/router';
 import { defaultLocale } from 'src/localization';
 import getIntlPath from 'src/utils/getIntlPath';
 
-const IntlLink = ({ href, children, lang, passHref = false }) => {
-  const { query, pathname } = useRouter();
-  const currentLang = lang || query.lang;
+const IntlLink = ({ href, children, lang, query, passHref = false }) => {
+  const { query: routerQuery, pathname } = useRouter();
+  const currentLang = lang || routerQuery.lang;
 
-  const intlLink = currentLang ? getIntlPath(href, currentLang) : href;
+  const intlLink = currentLang ? getIntlPath({ href, lang: currentLang, query }) : href;
 
   const newPathname =
     currentLang === defaultLocale ? `/[lang]${intlLink?.pathname}` : intlLink?.pathname;

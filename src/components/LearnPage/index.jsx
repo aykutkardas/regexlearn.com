@@ -5,9 +5,7 @@ import LearnHeader from 'src/components/LearnHeader';
 import LearnFooter from 'src/components/LearnFooter';
 import Step from 'src/components/Step';
 
-import data from 'src/data/lessons/regex-101';
-
-export default function LearnPage({ lessonName }) {
+export default function LearnPage({ data, lessonName }) {
   const lookieKey = `lesson.${lessonName}`;
   const [step, setStep] = useState(0);
   const [lastStep, setLastStep] = useState(0);
@@ -40,7 +38,7 @@ export default function LearnPage({ lessonName }) {
       setError(false);
       setStep(step + 1);
     }
-  }, [step, success]);
+  }, [step, success, data.length]);
 
   const onChangeSuccess = status => setSuccess(status);
 
