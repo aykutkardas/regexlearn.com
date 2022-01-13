@@ -6,7 +6,7 @@ const shortcuts = {
   hint: "alt+h",
   flagGlobal: "alt+g",
   flagMultiline: "alt+m",
-  flagCaseInsenstive: "alt+c",
+  flagCaseInsenstive: "alt+i",
   close: "esc",
 };
 
