@@ -12,11 +12,15 @@ import lessons from 'src/data/lessons/index.json';
 export default function Course({ lessonName }) {
   const data = require(`src/data/lessons/${lessonName}`)?.default;
 
+  const { query } = useRouter();
+
   const { formatMessage } = useIntl();
   const { asPath } = useRouter();
 
-  const pageTitle = formatMessage({ id: 'page.learn.title' });
-  const pageDescription = formatMessage({ id: 'page.learn.description' });
+  const title = formatMessage({ id: `lessons.${lessonName}.title` });
+
+  const pageTitle = `${title} - ${query?.lang.toUpperCase()}`;
+  const pageDescription = formatMessage({ id: `lessons.${lessonName}.description` });
 
   return (
     <>
