@@ -1,9 +1,11 @@
 import cx from 'classnames';
+import dynamic from 'next/dynamic';
 
 import * as styles from './LearnHeader.module.css';
 
-import ShortcutSwitch from 'src/components/ShortcutSwitch';
-import LanguageSwitch from 'src/components/LanguageSwitch';
+const ShortcutSwitch = dynamic(import('src/components/ShortcutSwitch'), { ssr: false });
+const LanguageSwitch = dynamic(import('src/components/LanguageSwitch'), { ssr: false });
+
 import Progress from 'src/components/Progress';
 import Logo from 'src/components/Logo';
 

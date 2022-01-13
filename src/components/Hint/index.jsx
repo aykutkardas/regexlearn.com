@@ -2,7 +2,6 @@ import { useState, useEffect, useRef, useCallback } from 'react';
 import ReactTooltip from 'react-tooltip';
 import { FormattedMessage } from 'react-intl';
 
-import Mousetrap from 'src/utils/mousetrap';
 import shortcuts from 'src/shortcuts';
 import Shortcut from 'src/components/Shortcut';
 
@@ -12,26 +11,31 @@ const Hint = ({ regex, flags }) => {
   const hintRef = useRef(null);
   const [showStatus, setShowStatus] = useState(false);
 
-  useEffect(() => {
-    Mousetrap.bindGlobal(shortcuts.hint, toggleShow);
+  const toggleShow = useCallback(
+    e => {
+      if (!(e.altKey && e.key.toLowerCase() === 'h')) return;
+      e.preventDefault();
 
-    return () => Mousetrap.unbind(shortcuts.hint);
-  }, [toggleShow, showStatus]);
-
-  const toggleShow = useCallback(() => {
-    if (showStatus) {
-      ReactTooltip.hide(hintRef.current);
-      setShowStatus(false);
-    } else {
-      ReactTooltip.show(hintRef.current);
-      setShowStatus(true);
-    }
-  }, [showStatus]);
+      if (showStatus) {
+        ReactTooltip.hide(hintRef.current);
+        setShowStatus(false);
+      } else {
+        ReactTooltip.show(hintRef.current);
+        setShowStatus(true);
+      }
+    },
+    [showStatus],
+  );
 
   useEffect(() => {
     ReactTooltip.hide(hintRef.current);
     setShowStatus(false);
   }, [regex, flags]);
+
+  useEffect(() => {
+    document.addEventListener('keyup', toggleShow);
+    return () => document.removeEventListener('keyup', toggleShow);
+  }, [toggleShow]);
 
   return (
     <div ref={hintRef} className={styles.Hint} data-tip data-for="hint" data-event="click">

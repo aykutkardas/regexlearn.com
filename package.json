@@ -18,8 +18,6 @@
     "lodash.isempty": "^4.4.0",
     "lodash.xor": "^4.5.0",
     "lookie": "^0.6.0",
-    "mousetrap": "^1.6.5",
-    "mousetrap-global-bind": "^1.1.0",
     "next": "12.0.3",
     "react": "17.0.2",
     "react-collapsible": "^2.8.4",

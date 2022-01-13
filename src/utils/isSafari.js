@@ -1,5 +1,7 @@
 function isSafari() {
-  var ua = navigator.userAgent.toLowerCase();
+  if (typeof window === 'undefined') return;
+
+  var ua = window.navigator.userAgent.toLowerCase();
   if (ua.indexOf('safari') != -1) {
     if (ua.indexOf('chrome') < 0) {
       return true;

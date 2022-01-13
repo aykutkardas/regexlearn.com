@@ -1,63 +1,70 @@
-import { useEffect, useState, useCallback } from 'react';
-
+import React, { useEffect, useState, useCallback } from 'react';
 import lookie from 'lookie';
 
-import Header from 'src/components/LearnHeader';
-import Step from 'src/components/Step';
+import LearnHeader from 'src/components/LearnHeader';
 import LearnFooter from 'src/components/LearnFooter';
+import Step from 'src/components/Step';
 
-import Mousetrap from 'src/utils/mousetrap';
 import data from 'src/data/lessons/regex-101';
-import shortcuts from 'src/shortcuts';
 
 export default function LearnPage({ lessonName }) {
   const lookieKey = `lesson.${lessonName}`;
-  const { lastStep = 0, currentStep = lastStep } = lookie.get(lookieKey) || {};
-  const [step, setStep] = useState(currentStep);
-  const [success, setSuccess] = useState(currentStep < lastStep);
+  const [step, setStep] = useState(0);
+  const [lastStep, setLastStep] = useState(0);
+  const [success, setSuccess] = useState(false);
   const [error, setError] = useState(false);
 
-  const prevStep = useCallback(
-    e => {
-      e.preventDefault();
+  useEffect(() => {
+    const { lastStep = 0, currentStep = lastStep } = lookie.get(lookieKey) || {};
 
-      if (step > 0) {
-        setStep(step - 1);
+    setStep(currentStep);
+    setLastStep(lastStep);
+    setSuccess(currentStep < lastStep);
+  }, [lookieKey]);
+
+  const prevStep = useCallback(() => {
+    if (step > 0) {
+      setStep(step - 1);
+    }
+  }, [step, setStep]);
+
+  const nextStep = useCallback(() => {
+    if (!success) {
+      setError(true);
+      clearTimeout(window.learnErrorTimer);
+      window.learnErrorTimer = setTimeout(() => setError(false), 1000);
+      return;
+    }
+
+    if (step < data.length - 1) {
+      setError(false);
+      setStep(step + 1);
+    }
+  }, [step, success]);
+
+  const onChangeSuccess = status => setSuccess(status);
+
+  const handleChangeStep = useCallback(
+    e => {
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        if (e.shiftKey) {
+          prevStep();
+        } else {
+          nextStep();
+        }
       }
     },
-    [step],
+    [nextStep, prevStep],
   );
-
-  const nextStep = useCallback(
-    e => {
-      e.preventDefault();
-
-      if (!success) {
-        setError(true);
-        clearTimeout(window.learnErrorTimer);
-        window.learnErrorTimer = setTimeout(() => {
-          setError(false);
-        }, 1000);
-        return;
-      }
-
-      if (step < data.length - 1) {
-        setError(false);
-        setStep(step + 1);
-      }
-    },
-    [step, success],
-  );
-
-  const onChangeSuccess = status => {
-    setSuccess(status);
-  };
 
   useEffect(() => {
-    Mousetrap.bindGlobal(shortcuts.rootKey, e => e.preventDefault());
-    Mousetrap.bindGlobal(shortcuts.prevStep, prevStep);
-    Mousetrap.bindGlobal(shortcuts.nextStep, nextStep);
+    document.addEventListener('keypress', handleChangeStep);
 
+    return () => document.removeEventListener('keypress', handleChangeStep);
+  }, [step, success, handleChangeStep]);
+
+  useEffect(() => {
     const progress = lookie.get(lookieKey) || {};
     progress.currentStep = step;
 
@@ -67,17 +74,11 @@ export default function LearnPage({ lessonName }) {
       progress.lastStep = step;
       lookie.set(lookieKey, progress);
     }
-
-    return () => {
-      Mousetrap.unbind(shortcuts.rootKey);
-      Mousetrap.unbind(shortcuts.prevStep);
-      Mousetrap.unbind(shortcuts.nextStep);
-    };
-  }, [step, lastStep, success, prevStep, nextStep, lookieKey]);
+  }, [step, lastStep, lookieKey]);
 
   return (
     <>
-      <Header steps={data} step={step} />
+      <LearnHeader steps={data} step={step} />
       <Step
         lessonName={lessonName}
         data={data[step]}

@@ -5,7 +5,6 @@ import * as styles from './FlagBox.module.css';
 import Checkbox from 'src/components/Checkbox';
 import Shortcut from 'src/components/Shortcut';
 
-import Mousetrap from 'src/utils/mousetrap';
 import tagWrapper from 'src/utils/tagWrapper';
 import shortcuts from 'src/shortcuts';
 
@@ -51,21 +50,28 @@ const FlagBox = ({ flags, setFlags, onChange }) => {
     [],
   );
 
+  const handleFlagKey = useCallback(
+    e => {
+      if (!e.altKey) return;
+
+      const key = e.key.toLowerCase();
+
+      switch (key) {
+        case 'g':
+        case 'm':
+        case 'i':
+          e.preventDefault();
+          toggleFlag(key);
+      }
+    },
+    [toggleFlag],
+  );
+
   useEffect(() => {
-    flagList.forEach(flag => {
-      Mousetrap.bindGlobal(flag.command, e => {
-        e.preventDefault();
+    document.addEventListener('keyup', handleFlagKey);
 
-        toggleFlag(flag.code);
-      });
-    });
-
-    return () => {
-      flagList.forEach(flag => {
-        Mousetrap.unbind(flag.code);
-      });
-    };
-  }, [flagList, toggleFlag]);
+    return () => document.removeEventListener('keyup', handleFlagKey);
+  }, [handleFlagKey]);
 
   const style = {};
 

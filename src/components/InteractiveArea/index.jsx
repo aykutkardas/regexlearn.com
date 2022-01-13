@@ -2,19 +2,17 @@
 import { useState, useEffect, useRef } from 'react';
 import { FormattedMessage, useIntl } from 'react-intl';
 import cx from 'classnames';
+import dynamic from 'next/dynamic';
 import lookie from 'lookie';
 
-import Mousetrap from 'src/utils/mousetrap';
 import setCaretPosition from 'src/utils/setCaretPosition';
 import tagWrapper from 'src/utils/tagWrapper';
 import isSafari from 'src/utils/isSafari';
 import checkRegex from 'src/utils/checkRegex';
 
-import Hint from 'src/components/Hint';
-import ReportStep from 'src/components/ReportStep';
-import FlagBox from 'src/components/FlagBox';
-
-import shortcuts from 'src/shortcuts';
+const FlagBox = dynamic(import('src/components/FlagBox'), { ssr: false });
+const ReportStep = dynamic(import('src/components/ReportStep'), { ssr: false });
+const Hint = dynamic(import('src/components/Hint'), { ssr: false });
 
 import * as styles from './InteractiveArea.module.css';
 
@@ -29,7 +27,11 @@ function InteractiveArea({ lessonName, data, step, isShow, parentError, onChange
   const [success, setSuccess] = useState(false);
   const [match, setMatch] = useState(false);
 
-  const isSafariAndAccept = isSafari() && data.safariAccept;
+  const [isSafariAccept, setIsSafariAccept] = useState();
+
+  useState(() => {
+    setIsSafariAccept(isSafari() && data.safariAccept);
+  }, []);
 
   const skipStep = () => {
     setError(false);
@@ -39,14 +41,10 @@ function InteractiveArea({ lessonName, data, step, isShow, parentError, onChange
   const applyRegex = () => {
     if (data.interactive === false) return true;
 
-    if (isSafariAndAccept) {
-      if (data.regex[0] == regex) {
-        setError(false);
-        setSuccess(true);
-      } else {
-        setError(true);
-        setSuccess(false);
-      }
+    if (isSafariAccept) {
+      const isTrueRegex = data.regex[0] == regex;
+      setError(!isTrueRegex);
+      setSuccess(isTrueRegex);
       return true;
     }
 
@@ -80,15 +78,11 @@ function InteractiveArea({ lessonName, data, step, isShow, parentError, onChange
   };
 
   const focusInput = () => {
-    if (regexInput?.current) {
-      regexInput.current.focus();
-    }
+    regexInput?.current.focus();
   };
 
   const blurInput = () => {
-    if (regexInput?.current) {
-      regexInput.current.blur();
-    }
+    regexInput?.current.blur();
   };
 
   useEffect(() => {
@@ -112,20 +106,22 @@ function InteractiveArea({ lessonName, data, step, isShow, parentError, onChange
     setTimeout(() => {
       setCaretPosition(regexInput.current, data.cursorPosition || 0);
       focusInput();
-    }, 300);
+    });
   }, [step, data.cursorPosition]);
 
   useEffect(() => {
     onChangeSuccess(success);
   }, [success, onChangeSuccess]);
 
-  useEffect(() => {
-    Mousetrap.bindGlobal(shortcuts.focus, e => {
-      e.preventDefault();
-      focusInput();
-    });
+  const handleFocus = e => {
+    if (e.keyCode !== 9) return;
+    e.preventDefault();
+    focusInput();
+  };
 
-    return () => Mousetrap.unbind(shortcuts.focus);
+  useEffect(() => {
+    document.addEventListener('keydown', handleFocus);
+    return () => document.removeEventListener('keydown', handleFocus);
   }, []);
 
   useEffect(applyRegex, [regex, flags, step]);
@@ -152,7 +148,7 @@ function InteractiveArea({ lessonName, data, step, isShow, parentError, onChange
         data-title={formatMessage({ id: 'general.text' })}
         dangerouslySetInnerHTML={{ __html: highlightedContent }}
       />
-      {isSafariAndAccept && (
+      {isSafariAccept && (
         <div className={styles.SafariWarning} onClick={skipStep}>
           <FormattedMessage id="learn.safari.unsupportWarning" />
         </div>

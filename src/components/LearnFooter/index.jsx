@@ -1,10 +1,12 @@
 import { FormattedMessage } from 'react-intl';
 import cx from 'classnames';
+import dynamic from 'next/dynamic';
 
 import * as styles from './LearnFooter.module.css';
 
 import Icon from 'src/components/Icon';
-import Shortcut from 'src/components/Shortcut';
+
+const Shortcut = dynamic(import('src/components/Shortcut'), { ssr: false });
 
 import shortcuts from 'src/shortcuts';
 
