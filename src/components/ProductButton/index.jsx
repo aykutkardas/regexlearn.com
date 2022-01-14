@@ -14,7 +14,7 @@ const ProductButton = () => {
         <div>
           <img
             src="https://ph-static.imgix.net/golden-kitty/2021/intro_kitty.png?auto=format&auto=compress&codec=mozjpeg&cs=strip&w=450&h=450&fit=max&dpr=2"
-            alt=""
+            alt="golden cat"
           />
           Vote on Product Hunt
         </div>

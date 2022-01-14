@@ -35,9 +35,9 @@ export default function Learn() {
       <div className="container">
         <div className={cx('row', styles.Section)}>
           <div className={cx('col-xs-12 col-sm-12 col-md-8', styles.SectionContentWrapper)}>
-            <h2 className={styles.SectionTitle}>
+            <h1 className={styles.SectionTitle}>
               <FormattedMessage id={'section.learn.title'} />
-            </h2>
+            </h1>
             <p
               className={styles.SectionDescription}
               dangerouslySetInnerHTML={{

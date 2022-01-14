@@ -27,7 +27,7 @@ function Step({ lessonName, data, step, error: parentError, onChangeSuccess }) {
     <div className={styles.Step}>
       {data.image && <img className={styles.StepImage} src={data.image} alt="" width="100px" />}
       {data.originalTitle && <h4 className={styles.StepTitleOriginal}>{data.originalTitle}</h4>}
-      <h2
+      <h1
         className={styles.StepTitle}
         dangerouslySetInnerHTML={{ __html: title }}
         data-original-title={data.originalTitle}
