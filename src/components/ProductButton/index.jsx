@@ -16,10 +16,10 @@ const ProductButton = () => {
             src="https://ph-static.imgix.net/golden-kitty/2021/intro_kitty.png?auto=format&auto=compress&codec=mozjpeg&cs=strip&w=450&h=450&fit=max&dpr=2"
             alt=""
           />
-          Vote for RegexLearn
+          Vote on Product Hunt
         </div>
-        <i>Product Hunt - Golden Kitty Awards</i>
-        <span>{`Don't forget to press "Complete Voting" after passing the other categories.`}</span>
+        <i>for Golden Kitty Awards</i>
+        <span>{`Don't forget to hit ''Complete Voting'' button after passing other categories`}</span>
       </a>
       {false && (
         <a
