@@ -64,26 +64,31 @@ export default function LearnPage({ data, lessonName }) {
 
   useEffect(() => {
     const progress = lookie.get(lookieKey) || {};
-    progress.currentStep = step;
 
-    lookie.set(lookieKey, progress);
+    progress.currentStep = step;
 
     if (step > lastStep) {
       progress.lastStep = step;
-      lookie.set(lookieKey, progress);
     }
+
+    lookie.set(lookieKey, progress);
   }, [step, lastStep, lookieKey]);
 
   return (
     <>
       <LearnHeader steps={data} step={step} />
-      <Step
-        lessonName={lessonName}
-        data={data[step]}
-        step={step}
-        onChangeSuccess={onChangeSuccess}
-        error={error}
-      />
+      {data.map((item, index) => (
+        <Step
+          key={item.title}
+          lessonName={lessonName}
+          data={data[index]}
+          index={index}
+          step={step}
+          onChangeSuccess={onChangeSuccess}
+          error={error}
+        />
+      ))}
+
       <LearnFooter
         steps={data}
         step={step}
