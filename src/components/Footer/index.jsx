@@ -1,5 +1,6 @@
 import { FormattedMessage } from 'react-intl';
-import Icon from 'src/components/Icon';
+
+import Social from 'src/components/Social';
 
 import packageInfo from '../../../package.json';
 
@@ -12,24 +13,7 @@ function Footer() {
         <div className="col-sm-12">
           <div className={styles.Footer}>
             <div className={styles.FooterSocial}>
-              <a
-                href="https://github.com/aykutkardas/regexlearn.com"
-                target="_blank"
-                rel="noreferrer"
-                aria-label="GitHub"
-                className={styles.FooterSocialLink}
-              >
-                <Icon icon="github" size={20} color="white" />
-              </a>
-              <a
-                href="https://twitter.com/aykutkardas"
-                target="_blank"
-                rel="noreferrer"
-                aria-label="Twitter"
-                className={styles.FooterSocialLink}
-              >
-                <Icon icon="twitter" size={20} color="white" />
-              </a>
+              <Social />
             </div>
             <div className={styles.FooterCopyright}>
               <a

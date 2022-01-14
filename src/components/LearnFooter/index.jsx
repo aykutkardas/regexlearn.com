@@ -5,6 +5,7 @@ import dynamic from 'next/dynamic';
 import * as styles from './LearnFooter.module.css';
 
 import Icon from 'src/components/Icon';
+import Social from 'src/components/Social';
 
 const Shortcut = dynamic(import('src/components/Shortcut'), { ssr: false });
 
@@ -31,12 +32,7 @@ function LearnFooter({ steps, step, nextStep, prevStep, success, error }) {
           )}
         </div>
         <div className={cx(styles.LearnFooterSocialWrapper, 'col-xs-4')}>
-          <a href="https://github.com/aykutkardas/regexlearn.com" target="_blank" rel="noreferrer">
-            <Icon className={styles.NavigationSocialIcon} icon="github" size={20} color="white" />
-          </a>
-          <a href="https://twitter.com/aykutkardas" target="_blank" rel="noreferrer">
-            <Icon className={styles.NavigationSocialIcon} icon="twitter" size={20} color="white" />
-          </a>
+          <Social />
         </div>
         <div className={cx(styles.LearnFooterNextWrapper, 'col-xs-4')}>
           {step < steps.length - 1 && (

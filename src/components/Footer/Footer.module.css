@@ -16,23 +16,6 @@
   font-size: 14px;
 }
 
-.FooterSocialLink {
-  text-decoration: none;
-  margin: 0 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.FooterSocialLink svg {
-  color: var(--txt-1);
-  transition: 0.3s;
-}
-
-.FooterSocialLink:hover svg {
-  color: var(--primary);
-}
-
 .FooterCopyright {
   display: flex;
   align-items: center;

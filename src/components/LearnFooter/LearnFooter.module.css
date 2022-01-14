@@ -102,14 +102,3 @@
 .NavigationStepStatusIconError {
   color: var(--error);
 }
-
-.NavigationSocial {
-  height: 100%;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-}
-
-.NavigationSocialIcon {
-  margin: 0 10px;
-}
