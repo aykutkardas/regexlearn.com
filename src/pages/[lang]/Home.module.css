@@ -28,13 +28,6 @@
   }
 }
 
-.ProductHuntButton {
-  position: fixed;
-  bottom: 10px;
-  right: 30px;
-  z-index: 9999;
-}
-
 .OurSponsors {
   text-align: center;
   margin-bottom: 40px;
@@ -51,4 +44,75 @@
 
 .OurSponsors a:hover {
   opacity: 0.7;
+}
+
+@media only screen and (max-width: 600px) {
+  .LandingMainSectionTitle {
+    font-size: 33px;
+  }
+
+  .LandingMainSectionButton :global(button) {
+    width: 100%;
+  }
+
+  .ProductHuntButton {
+    display: none;
+  }
+}
+
+.ProductHuntButtonWrapper {
+  position: fixed;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  bottom: 10px;
+  right: 30px;
+  z-index: 9999;
+}
+
+.GoldenKittyButton {
+  max-width: 450px;
+  display: inline-flex;
+  flex-direction: column;
+  font-weight: 700;
+  font-size: 18px;
+  background-color: #11100e;
+  color: var(--txt-1);
+  width: 310px;
+  text-align: center;
+  border: 2px solid var(--txt-1);
+  border-radius: 48px;
+  padding: 11px 25px;
+  padding-left: 56px;
+  margin-bottom: 20px;
+  transition: 0.3s;
+  box-shadow: 4px 4px 0 0 #11100e, 8px 8px 0 0 #ffbd29;
+}
+
+.GoldenKittyButton:hover {
+  margin-bottom: 25px;
+}
+
+.GoldenKittyButton div {
+  position: relative;
+}
+
+.GoldenKittyButton img {
+  position: absolute;
+  left: -50px;
+  z-index: -1;
+  width: 50px;
+}
+
+.GoldenKittyButton i {
+  font-size: 10px;
+  font-style: normal;
+  font-weight: normal;
+  color: var(--txt-3);
+}
+
+.GoldenKittyButton span {
+  font-size: 12px;
+  font-weight: normal;
+  color: var(--txt-2);
 }

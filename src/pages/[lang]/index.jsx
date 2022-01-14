@@ -28,6 +28,7 @@ export default function Home() {
     <>
       <Header />
       <Head>
+        <link rel="stylesheet" href="/css/animate.css" />
         <title>{pageTitle}</title>
         <meta name="description" content={pageDescription} />
         <SeoTags title={pageTitle} description={pageDescription} href={asPath} />
@@ -65,8 +66,8 @@ export default function Home() {
               width="100%"
               alt={formatMessage({ id: 'landing.imageAltText' })}
             />
-            <ProductButton className={styles.ProductHuntButton} />
           </div>
+          <ProductButton />
         </div>
 
         <Section
