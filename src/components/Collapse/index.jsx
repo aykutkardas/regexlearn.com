@@ -21,7 +21,7 @@ function Collapse({ title, data }) {
           {title}
           <Icon
             className={cx(show ? styles.CollapseTitleIconActive : styles.CollapseTitleIcon)}
-            icon="caret-up"
+            icon="caret-down"
             size={12}
           />
         </div>
