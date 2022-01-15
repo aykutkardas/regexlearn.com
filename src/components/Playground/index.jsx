@@ -25,10 +25,11 @@ const emptyContentState = convertFromRaw({
 });
 
 export default function Playground() {
+  const editor = useRef(null);
   const regexInput = useRef(null);
   const { formatMessage } = useIntl();
   const [regex, setRegex] = useState('');
-  const [flags, setFlags] = useState('');
+  const [flags, setFlags] = useState('g');
   const [editorState, setEditorState] = useState(EditorState.createWithContent(emptyContentState));
 
   const onChangeRegex = flags => {
@@ -120,8 +121,14 @@ export default function Playground() {
           <div
             className={styles.InteractiveAreaBlockContent}
             data-title={formatMessage({ id: 'general.text' })}
+            onClick={() => editor.current.focus()}
           >
-            <Editor editorState={editorState} onChange={setEditorState} placeholder="Text here" />
+            <Editor
+              ref={editor}
+              editorState={editorState}
+              onChange={setEditorState}
+              placeholder="Text here"
+            />
           </div>
         </div>
       </div>
