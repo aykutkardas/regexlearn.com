@@ -1,4 +1,3 @@
-import ReactTooltip from 'react-tooltip';
 import { FormattedMessage } from 'react-intl';
 import cx from 'classnames';
 
@@ -39,16 +38,17 @@ function Header() {
                   </a>
                 )}
               </IntlLink>
-              <span
-                className={cx(styles.HeaderLink, styles.HeaderLinkDisabled)}
-                data-tip
-                data-for="coming-soon"
-              >
-                <span className="landing-link-disabled-name">
-                  <FormattedMessage id="general.playground" />
-                </span>
-                <Icon icon="lock" size={16} className={styles.HeaderLinkDisabledIcon} />
-              </span>
+              <IntlLink href="/[lang]/playground" passHref>
+                {({ isActive }) => (
+                  <a
+                    className={cx(styles.HeaderLink, {
+                      [styles.HeaderLinkActive]: isActive,
+                    })}
+                  >
+                    <FormattedMessage id="general.playground" />
+                  </a>
+                )}
+              </IntlLink>
               <a
                 href="https://github.com/aykutkardas/regexlearn.com"
                 target="_blank"
@@ -58,16 +58,6 @@ function Header() {
                 <span>GitHub</span>
                 <Icon icon="github" size={16} color="white" />
               </a>
-              <ReactTooltip
-                backgroundColor="#444"
-                arrowColor="#444"
-                clickable
-                id="coming-soon"
-                place="bottom"
-                effect="solid"
-              >
-                <FormattedMessage id="general.comingSoon" />
-              </ReactTooltip>
               <LanguageSwitch />
             </div>
           </div>

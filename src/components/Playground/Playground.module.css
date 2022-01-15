@@ -1,0 +1,163 @@
+.PlaygroundContainer {
+  align-items: center;
+}
+
+.Highlight,
+.PlaygroundContainer span[style='font-weight: bold;'] {
+  display: inline-flex;
+  box-shadow: 3px 3px 2px var(--shadow-1);
+  min-width: 10px;
+  height: 20px;
+  margin: 1px 3px;
+  color: var(--black);
+  font-size: 10px;
+  padding: 2px 5px;
+  border-radius: 5px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  background: var(--primary);
+}
+
+.PlaygroundBlock {
+  background: var(--learn-bg-block);
+  border-radius: 6px;
+  padding: 12px;
+  font-size: 12px;
+  color: var(--learn-text-block);
+  letter-spacing: 1px;
+  margin: 20px 0;
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+
+.PlaygroundBlockRegexInputWrapper {
+  background: var(--bg-3);
+  padding: 7px 15px;
+  border-radius: 5px;
+  width: 100%;
+  padding-right: 40px;
+}
+
+.PlaygroundBlockRegexInput {
+  border: 0px;
+  padding: 5px;
+  margin: 3px;
+  background: none;
+  letter-spacing: 2px;
+  width: 100%;
+  max-width: 100%;
+  font-size: 14px;
+  letter-spacing: 1px;
+  line-height: 1.5em;
+  height: 30px;
+  font-family: 'Open Sans';
+  white-space: nowrap;
+  color: var(--primary);
+  position: relative;
+}
+
+/* .PlaygroundBlockRegexInputWrapper::before {
+  content: "/";
+  color: var(--learn-gray);
+  font-size: 14px;
+  width: 14px;
+  position: absolute;
+}
+
+.PlaygroundBlockRegexInputWrapper::after {
+  content: "/" attr(data-flags);
+  color: var(--learn-gray);
+  font-size: 14px;
+  position: absolute;
+  right: 5px;
+} */
+
+.PlaygroundBlockContent {
+  position: relative;
+  transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+
+.PlaygroundBlockRegexTextarea {
+  background: var(--learn-bg-block-tag);
+  padding: 7px 15px;
+  border-radius: 5px;
+  border: 0px;
+  color: var(--learn-gray);
+  resize: none;
+  width: 100%;
+  min-height: 300px;
+  overflow: hidden;
+  outline: 1px #444 dotted;
+  font-size: 14px;
+  letter-spacing: 1px;
+  line-height: 1.5em;
+  font-family: 'Open Sans';
+}
+
+.PlaygroundBlockRegexTextareaShadow {
+  composes: PlaygroundBlockRegexTextarea;
+  color: var(--learn-gray);
+  color: transparent;
+  background: none;
+  pointer-events: none;
+  white-space: pre-wrap;
+  position: absolute;
+}
+
+.PlaygroundContentHighlight {
+  color: var(--learn-success);
+}
+
+/* width */
+.PlaygroundBlockRegexInputShadow::-webkit-scrollbar {
+  height: 2px;
+}
+
+/* Track */
+.PlaygroundBlockRegexInputShadow::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+.PlaygroundBlockRegexInputShadow::-webkit-scrollbar-thumb {
+  background: transparent;
+}
+
+/* Handle on hover */
+.PlaygroundBlockRegexInputShadow::-webkit-scrollbar-thumb:hover {
+  background: transparent;
+}
+
+.InteractiveAreaBlock {
+  background: var(--bg-2);
+  border-radius: 6px;
+  padding: 12px;
+  font-size: 12px;
+  color: var(--txt-3);
+  letter-spacing: 1px;
+  margin: 20px 0;
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: 0.3s;
+}
+
+.InteractiveAreaBlockContent {
+  composes: InteractiveAreaBlock;
+  display: block;
+  text-align: left;
+  padding: 20px 12px;
+  min-height: 65px;
+}

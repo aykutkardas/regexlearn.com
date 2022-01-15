@@ -6,7 +6,7 @@
     "email": "aykutkrds@gmail.com"
   },
   "scripts": {
-    "dev": "next dev -p 3001",
+    "dev": "next dev -p 3003",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
@@ -15,6 +15,7 @@
   "license": "MIT",
   "dependencies": {
     "classnames": "^2.3.1",
+    "draft-js": "^0.11.7",
     "lodash.isempty": "^4.4.0",
     "lodash.xor": "^4.5.0",
     "lookie": "^0.6.0",
@@ -23,8 +24,7 @@
     "react-collapsible": "^2.8.4",
     "react-dom": "17.0.2",
     "react-icomoon": "^2.4.2",
-    "react-intl": "^5.21.0",
-    "react-tooltip": "^4.2.21"
+    "react-intl": "^5.21.0"
   },
   "devDependencies": {
     "eslint": "7",

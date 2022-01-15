@@ -17,6 +17,10 @@ module.exports = {
         source: '/cheatsheet',
         destination: '/en/cheatsheet',
       },
+      {
+        source: '/playground',
+        destination: '/en/playground',
+      },
     ]
   },
   async redirects() {
@@ -39,6 +43,11 @@ module.exports = {
       {
         source: '/en/cheatsheet',
         destination: '/cheatsheet',
+        permanent: true,
+      },
+      {
+        source: '/en/playground',
+        destination: '/playground',
         permanent: true,
       },
     ]
