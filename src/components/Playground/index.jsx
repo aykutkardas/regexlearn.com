@@ -1,7 +1,8 @@
 import { useState, useRef } from 'react';
 import cx from 'classnames';
 import { useIntl } from 'react-intl';
-import { Editor, EditorState, CompositeDecorator } from 'draft-js';
+import { Editor, EditorState, CompositeDecorator, convertFromRaw } from 'draft-js';
+import 'draft-js/dist/Draft.css';
 
 import * as styles from './Playground.module.css';
 
@@ -11,12 +12,24 @@ const Highlight = ({ children }) => {
   return <span className={styles.Highlight}>{children}</span>;
 };
 
+const emptyContentState = convertFromRaw({
+  entityMap: {},
+  blocks: [
+    {
+      text: '',
+      key: 'foo',
+      type: 'unstyled',
+      entityRanges: [],
+    },
+  ],
+});
+
 export default function Playground() {
   const regexInput = useRef(null);
   const { formatMessage } = useIntl();
   const [regex, setRegex] = useState('');
   const [flags, setFlags] = useState('');
-  const [editorState, setEditorState] = useState(EditorState.createEmpty());
+  const [editorState, setEditorState] = useState(EditorState.createWithContent(emptyContentState));
 
   const onChangeRegex = flags => {
     setFlags(flags);
@@ -35,7 +48,9 @@ export default function Playground() {
         const isGlobal = newFlags.includes('g');
         const isMultiple = newFlags.includes('m');
 
-        if (!isMultiple && rowIndex > 0) return;
+        const isNeededMultiple = newRegex.startsWith('^') || newRegex.endsWith('$');
+
+        if (!isMultiple && isNeededMultiple && rowIndex > 0) return;
         if (!isGlobal && matchCount > 0) return;
 
         const reg = new RegExp(newRegex, isGlobal ? newFlags : `g${newFlags}`);
@@ -84,22 +99,29 @@ export default function Playground() {
     <div className={cx('container', styles.PlaygroundContainer)}>
       <div className="row">
         <div className="col-xs-12 col-md-12 col-lg-8">
-          <div className={styles.PlaygroundBlockRegexInputWrapper}>
-            <input
-              ref={regexInput}
-              className={cx(styles.PlaygroundBlockRegexInput)}
-              type="text"
-              onChange={onChange}
-              value={regex}
-              spellCheck={false}
-            />
+          <div className={styles.InteractiveAreaBlockRegex}>
+            <span
+              className={styles.PlaygroundBlockRegexInputWrapper}
+              data-flags={flags}
+              style={{ paddingRight: flags.length * 13 || 15 }}
+            >
+              <input
+                ref={regexInput}
+                style={{ width: regex.length * 10 || 90 }}
+                className={cx(styles.PlaygroundBlockRegexInput)}
+                type="text"
+                onChange={onChange}
+                value={regex}
+                spellCheck={false}
+              />
+            </span>
           </div>
           <FlagBox flags={flags} setFlags={onChangeRegex} />
           <div
             className={styles.InteractiveAreaBlockContent}
             data-title={formatMessage({ id: 'general.text' })}
           >
-            <Editor editorState={editorState} onChange={setEditorState} />
+            <Editor editorState={editorState} onChange={setEditorState} placeholder="Text here" />
           </div>
         </div>
       </div>
