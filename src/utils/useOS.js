@@ -1,6 +1,8 @@
 // https://stackoverflow.com/questions/38241480/detect-macos-ios-windows-android-and-linux-os-with-js
 
 function getOS() {
+  if (typeof window === "undefined") return;
+
   const { userAgent } = window.navigator;
   const { platform } = window.navigator;
   const macosPlatforms = ["Macintosh", "MacIntel", "MacPPC", "Mac68K"];

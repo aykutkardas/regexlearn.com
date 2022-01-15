@@ -16,7 +16,7 @@ const FlagBox = ({ flags, setFlags, onChange }) => {
       } else {
         setFlags((flags || '') + flag);
       }
-      onChange(true);
+      onChange?.(true);
     },
     [flags, setFlags, onChange],
   );
