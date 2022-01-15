@@ -44,41 +44,41 @@ export default function Playground() {
     let matchCount = 0;
 
     function findWithRegex(content, callback) {
-      try {
-        const isGlobal = newFlags.includes('g');
-        const isMultiple = newFlags.includes('m');
+      const isGlobal = newFlags.includes('g');
+      const isMultiple = newFlags.includes('m');
 
-        const isNeededMultiple = newRegex.startsWith('^') || newRegex.endsWith('$');
+      const isNeededMultiple = newRegex.startsWith('^') || newRegex.endsWith('$');
 
-        if (!isMultiple && isNeededMultiple && rowIndex > 0) return;
-        if (!isGlobal && matchCount > 0) return;
+      if (!isMultiple && isNeededMultiple && rowIndex > 0) return;
+      if (!isGlobal && matchCount > 0) return;
 
-        const reg = new RegExp(newRegex, isGlobal ? newFlags : `g${newFlags}`);
+      const reg = new RegExp(newRegex, isGlobal ? newFlags : `g${newFlags}`);
 
-        const text = content.getText();
+      const text = content.getText();
 
-        let matches = [...text.matchAll(reg)];
+      let matches = [...text.matchAll(reg)];
 
-        if (!isGlobal) {
-          matches = matches.slice(0, 1);
-        }
+      if (!isGlobal) {
+        matches = matches.slice(0, 1);
+      }
 
-        if (newRegex && matches.length) {
-          matches.forEach(match => callback(match.index, match.index + match[0].length));
-        } else {
-          setEditorState(EditorState.createWithText(text));
-        }
+      if (newRegex && matches.length) {
+        matches.forEach(match => callback(match.index, match.index + match[0].length));
+      } else {
+        setEditorState(EditorState.createWithText(text));
+      }
 
-        rowIndex++;
+      rowIndex++;
 
-        if (matches.length) {
-          matchCount++;
-        }
-      } catch (err) {}
+      if (matches.length) {
+        matchCount++;
+      }
     }
 
     function handleStrategy(content, callback) {
-      findWithRegex(content, callback);
+      try {
+        findWithRegex(content, callback);
+      } catch (err) {}
     }
 
     const HighlightDecorator = new CompositeDecorator([
