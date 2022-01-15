@@ -15,8 +15,8 @@
   position: relative;
 }
 
-.FlagBoxItemInput {
-  margin-right: 5px;
+.FlagBoxItemWrapper {
+  display: flex;
 }
 
 .FlagBoxItemHighlight {
@@ -26,8 +26,6 @@
 .FlagBoxShortcutWrapper {
   display: flex;
 }
-
-
 
 @media only screen and (max-width: 374px) {
   .FlagBox {
