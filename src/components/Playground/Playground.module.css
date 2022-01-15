@@ -3,16 +3,11 @@
 }
 
 .Highlight {
-  display: inline-flex;
   margin: 1px;
   color: var(--black);
   font-size: 10px;
   padding: 2px 4px;
   border-radius: 3px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  vertical-align: middle;
   background: var(--primary);
 }
 

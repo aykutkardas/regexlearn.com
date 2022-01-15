@@ -44,6 +44,13 @@ export default function Playground() {
     let rowIndex = 0;
     let matchCount = 0;
 
+    if (!newRegex) {
+      const content = editorState.getCurrentContent();
+      const newEditorState = EditorState.createWithContent(content);
+      setEditorState(newEditorState);
+      return;
+    }
+
     function findWithRegex(content, callback) {
       const isGlobal = newFlags.includes('g');
       const isMultiple = newFlags.includes('m');
@@ -89,9 +96,10 @@ export default function Playground() {
       },
     ]);
 
-    let newEditorState = EditorState.set(editorState, { decorator: null });
-
-    newEditorState = EditorState.set(newEditorState, { decorator: HighlightDecorator });
+    const newEditorState = EditorState.createWithContent(
+      editorState.getCurrentContent(),
+      HighlightDecorator,
+    );
 
     setEditorState(newEditorState);
   };
