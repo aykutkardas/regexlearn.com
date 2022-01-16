@@ -35,7 +35,7 @@
   font-size: 14px;
   letter-spacing: 1px;
   line-height: 1.5em;
-  height: 30px;
+  height: 20px;
   font-family: 'Open Sans';
   white-space: nowrap;
   color: var(--primary);
@@ -75,6 +75,7 @@
 
 .InteractiveAreaBlockRegex {
   composes: InteractiveAreaBlock;
+  padding: 6px;
   background-color: var(--bg-3);
   justify-content: flex-start;
 }
