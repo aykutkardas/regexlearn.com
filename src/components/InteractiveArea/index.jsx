@@ -78,11 +78,11 @@ function InteractiveArea({ lessonName, data, step, isShow, parentError, onChange
   };
 
   const focusInput = () => {
-    regexInput?.current.focus();
+    regexInput?.current?.focus();
   };
 
   const blurInput = () => {
-    regexInput?.current.blur();
+    regexInput?.current?.blur();
   };
 
   useEffect(() => {
@@ -133,6 +133,8 @@ function InteractiveArea({ lessonName, data, step, isShow, parentError, onChange
   const placeholder = formatMessage({
     id: 'general.regex',
   }).toLowerCase();
+
+  console.log({ flags });
 
   return (
     <div

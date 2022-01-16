@@ -73,8 +73,6 @@ const FlagBox = ({ flags, setFlags, onChange }) => {
     return () => document.removeEventListener('keyup', handleFlagKey);
   }, [handleFlagKey]);
 
-  const style = {};
-
   return (
     <div className={styles.FlagBox}>
       {flagList.map(({ name, code, command, regex }) => (
