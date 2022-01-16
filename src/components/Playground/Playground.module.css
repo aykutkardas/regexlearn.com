@@ -1,12 +1,3 @@
-.Highlight {
-  margin: 1px;
-  color: var(--black);
-  font-size: 10px;
-  padding: 2px 4px;
-  border-radius: 3px;
-  background: var(--primary);
-}
-
 .PlaygroundBlockRegexInputWrapper {
   background: var(--bg-3);
   padding: 7px 15px;
@@ -100,5 +91,14 @@
   line-height: 20px;
   padding: 6px;
   border-radius: 5px;
-  height: 600px;
+  height: 350px;
+}
+
+.Highlight {
+  margin: 1px;
+  color: var(--black);
+  font-size: 10px;
+  padding: 2px 4px;
+  border-radius: 3px;
+  background: var(--primary);
 }

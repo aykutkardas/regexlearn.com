@@ -2,6 +2,7 @@
   display: flex;
   margin-top: 10px;
   align-items: flex-start;
+  user-select: none;
 }
 
 .FlagBoxItem {

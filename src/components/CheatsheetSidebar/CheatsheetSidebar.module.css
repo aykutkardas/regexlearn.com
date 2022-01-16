@@ -24,9 +24,18 @@
 .CheatsheetTitle {
   composes: CategoryTitle;
   border-radius: 0;
+  height: 40px;
 }
 
 .CheatsheetTitle:hover {
-  border-left: 2px solid var(--primary);
   padding-left: 15px;
+}
+
+.CheatsheetTitleOpened {
+  composes: CategoryTitle;
+}
+
+.CheatsheetTitle span,
+.CheatsheetTitleOpened span {
+  width: auto !important;
 }

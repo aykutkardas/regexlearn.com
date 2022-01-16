@@ -63,12 +63,13 @@ export default function Playground() {
     }
 
     function findWithRegex(content, callback) {
-      const isGlobal = newFlags.includes('g');
       const isMultiple = newFlags.includes('m');
-
       const isNeededMultiple = newRegex.startsWith('^') || newRegex.endsWith('$');
 
       if (!isMultiple && isNeededMultiple && rowIndex > 0) return;
+
+      const isGlobal = newFlags.includes('g');
+
       if (!isGlobal && matchCount > 0) return;
 
       const reg = new RegExp(newRegex, isGlobal ? newFlags : `g${newFlags}`);

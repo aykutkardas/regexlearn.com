@@ -4,11 +4,11 @@ import { Scrollbars } from 'react-custom-scrollbars';
 
 import Collapse from 'src/components/Collapse';
 import CheatsheetItemTitle from 'src/components/CheatsheetItemTitle';
+import CheatsheetDemo from 'src/components/CheatsheetDemo';
 
 import data from 'src/data/cheatsheet.json';
 
 import { locales } from 'src/localization';
-import CheatsheetDemo from '../CheatsheetDemo';
 
 import * as styles from './CheatsheetSidebar.module.css';
 
@@ -60,6 +60,7 @@ export default function Cheatsheet() {
                   key={item.title}
                   description={item.description}
                   className={styles.CheatsheetTitle}
+                  openedClassName={styles.CheatsheetTitleOpened}
                   title={<CheatsheetItemTitle data={item} />}
                 >
                   <CheatsheetDemo data={item} />
