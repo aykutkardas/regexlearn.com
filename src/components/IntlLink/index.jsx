@@ -11,7 +11,10 @@ const IntlLink = ({ href, children, lang, query, passHref = false }) => {
 
   const intlPathName = intlLink?.pathname || intlLink;
 
-  const newPathname = currentLang === defaultLocale ? `/[lang]${intlPathName}` : intlPathName;
+  const newPathname =
+    currentLang === defaultLocale
+      ? `/[lang]${intlPathName}`
+      : intlPathName.replace(`/${currentLang}`, `/[lang]`);
 
   const content =
     typeof children === 'function'
