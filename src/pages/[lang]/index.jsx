@@ -91,6 +91,8 @@ export default function Home() {
           title="section.playground.title"
           description="section.playground.content"
           image="/Playground.webp"
+          link="/[lang]/playground"
+          buttonText="general.start"
           imageAltText="section.playground.imageAltText"
         />
         <Section
