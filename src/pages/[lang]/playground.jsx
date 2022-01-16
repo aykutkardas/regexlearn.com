@@ -25,6 +25,7 @@ export default function PlaygroundPage() {
     <>
       <Header />
       <Head>
+        <link rel="stylesheet" href="/css/animate.css" />
         <title>{pageTitle}</title>
         <meta name="description" content={pageDescription} />
         <SeoTags key={pageTitle} title={pageTitle} description={pageDescription} href={asPath} />
