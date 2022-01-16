@@ -134,8 +134,6 @@ function InteractiveArea({ lessonName, data, step, isShow, parentError, onChange
     id: 'general.regex',
   }).toLowerCase();
 
-  console.log({ flags });
-
   return (
     <div
       className={cx({
