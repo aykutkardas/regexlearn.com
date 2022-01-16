@@ -24,7 +24,6 @@
   margin: 6px 0;
   overflow: hidden;
   transition: 0.3s;
-  border-bottom: 1px solid var(--gray);
 }
 
 .CollapseDescription {

@@ -11,6 +11,7 @@ import CheatsheetItemTitle from 'src/components/CheatsheetItemTitle';
 import data from 'src/data/cheatsheet.json';
 
 import { defaultLocale, locales } from 'src/localization';
+import CheatsheetDemo from 'src/components/CheatsheetDemo';
 
 export default function Cheatsheet() {
   const { formatMessage } = useIntl();
@@ -39,9 +40,11 @@ export default function Cheatsheet() {
                   {row.data.map(item => (
                     <Collapse
                       key={item.title}
-                      data={item}
                       title={<CheatsheetItemTitle data={item} />}
-                    />
+                      description={item.description}
+                    >
+                      <CheatsheetDemo data={item} />
+                    </Collapse>
                   ))}
                 </div>
               ))}

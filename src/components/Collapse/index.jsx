@@ -3,12 +3,11 @@ import { FormattedMessage } from 'react-intl';
 import Collapsible from 'react-collapsible';
 import cx from 'classnames';
 
-import CheatsheetDemo from 'src/components/CheatsheetDemo';
 import Icon from 'src/components/Icon';
 
 import * as styles from './Collapse.module.css';
 
-function Collapse({ title, data }) {
+function Collapse({ title, description, children, ...props }) {
   const [show, setShow] = useState(false);
 
   return (
@@ -16,6 +15,7 @@ function Collapse({ title, data }) {
       transitionTime={300}
       onOpening={() => setShow(true)}
       onClosing={() => setShow(false)}
+      {...props}
       trigger={
         <div className={styles.CollapseTitle}>
           {title}
@@ -28,12 +28,12 @@ function Collapse({ title, data }) {
       }
     >
       <div className={styles.CollapseContent}>
-        {data.description && (
+        {description && (
           <p className={styles.CollapseDescription}>
-            <FormattedMessage id={data.description} />
+            <FormattedMessage id={description} />
           </p>
         )}
-        <CheatsheetDemo data={data} />
+        {children}
       </div>
     </Collapsible>
   );
