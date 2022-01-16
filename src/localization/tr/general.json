@@ -23,11 +23,13 @@
   "page.landing.title": "Regex Learn - Adım adım, sıfırdan ileri seviyeye.",
   "page.learn.title": "Regex Learn - RegEx İnteraktif Kurs",
   "page.cheatsheet.title": "Regex Learn - RegEx Cheatsheet",
+  "page.playground.title": "Regex Learn - Playground",
   "page.404.title": "Regex Learn - Sayfa Bulunamadı",
 
   "page.landing.description": "İnteraktif bir şekilde RegEx öğren, seviyene uygun pratikler yap, kendi RegEx'ini test et ve paylaş.",
   "page.learn.description": "RegEx'i adım adım öğren. Öğrenmeni kolaylaştırıp hızlandıracak interaktif eğitimi tamamla.",
   "page.cheatsheet.description": "RegEx'i bazen sadece hatırlamaya ihtiyaç duyarsın, anlamanı kolaylaştıracak ve daha iyi hatırlamanı sağlayacak cheatsheet'i dene.",
+  "page.playground.description": "Kendi Regex'inizi Playground aracılığıyla çevrimiçi olarak kolayca oluşturabilir ve test edebilirsiniz.",
 
   "alert.site.under.development": "Bu site hala geliştirme aşamasındadır. Şu an gördüğünüz şeyler değişebilir.",
   "learn.safari.unsupportWarning": "Bu adımdaki düzenli ifadeler Safari tarayıcısı tarafından desteklenmez. Bu adımı geçmekte sorun yaşarsanız. Buraya tıklayabilirsiniz."

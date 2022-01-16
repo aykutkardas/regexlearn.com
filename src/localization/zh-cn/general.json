@@ -23,11 +23,13 @@
   "page.landing.title": "Regex Learn - 逐步从零基础到高阶。",
   "page.learn.title": "Regex Learn - 正则表达式交互式课程",
   "page.cheatsheet.title": "Regex Learn - 正则表达式备忘单",
+  "page.playground.title": "Regex Learn - Playground",
   "page.404.title": "Regex Learn - 未找到",
 
   "page.landing.description": "交互式学习正则表达式，在您所处的阶段练习、测试和分享您自己的正则表达式。",
   "page.learn.description": "逐步学习正则表达式。完成交互式课程会让您的学习更加简单和快速。",
   "page.cheatsheet.description": "有时您只需记住正则表达式。试试备忘单，它可以让您更好地理解和掌握它们。",
+  "page.playground.description": "您可以通过 Playground 在线轻松构建和测试您的正则表达式模式。",
 
   "alert.site.under.development": "网站正在开发中，您看到的内容可能会有所变动。",
   "learn.safari.unsupportWarning": "Safari 浏览器不支持该步骤中的正则表达式。如果您在这一步遇到问题，可以点击此处。"
