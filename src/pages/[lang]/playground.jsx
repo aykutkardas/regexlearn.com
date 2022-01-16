@@ -8,6 +8,7 @@ import Header from 'src/components/Header';
 import Footer from 'src/components/Footer';
 import Playground from 'src/components/Playground';
 import CheatsheetSidebar from 'src/components/CheatsheetSidebar';
+import ProductButton from 'src/components/ProductButton';
 
 import { defaultLocale, locales } from 'src/localization';
 
@@ -29,6 +30,8 @@ export default function PlaygroundPage() {
         <SeoTags key={pageTitle} title={pageTitle} description={pageDescription} href={asPath} />
       </Head>
       <div className={cx('container', styles.PlaygroundContainer)}>
+        <ProductButton />
+
         <div className="row">
           <div className="col-xs-12 col-md-12 col-lg-8">
             <Playground />

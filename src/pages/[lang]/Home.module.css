@@ -100,7 +100,6 @@
 .GoldenKittyButton img {
   position: absolute;
   left: -50px;
-  z-index: -1;
   width: 50px;
 }
 

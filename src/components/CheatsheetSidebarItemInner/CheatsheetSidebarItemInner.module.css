@@ -6,7 +6,7 @@
   transition: 0.1s;
   background-color: var(--bg-3);
   border-radius: 0;
-  /* height: 40px; */
+  height: 100%;
 }
 
 .CheatsheetTitle:hover {
