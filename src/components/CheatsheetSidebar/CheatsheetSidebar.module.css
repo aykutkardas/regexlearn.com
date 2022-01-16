@@ -20,22 +20,3 @@
   padding: 6px;
   border-radius: 5px;
 }
-
-.CheatsheetTitle {
-  composes: CategoryTitle;
-  border-radius: 0;
-  height: 40px;
-}
-
-.CheatsheetTitle:hover {
-  padding-left: 15px;
-}
-
-.CheatsheetTitleOpened {
-  composes: CategoryTitle;
-}
-
-.CheatsheetTitle span,
-.CheatsheetTitleOpened span {
-  width: auto !important;
-}

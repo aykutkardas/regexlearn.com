@@ -1,0 +1,27 @@
+.CheatsheetTitle {
+  padding: 6px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  width: 100%;
+  transition: 0.1s;
+  background-color: var(--bg-3);
+  border-radius: 0;
+  /* height: 40px; */
+}
+
+.CheatsheetTitle:hover {
+  padding-left: 15px;
+}
+
+.CheatsheetTitleOpened {
+  composes: CheatsheetTitle;
+}
+
+.CheatsheetTitleOpened:hover {
+  padding-left: 6px;
+}
+
+.CheatsheetTitle span,
+.CheatsheetTitleOpened span {
+  width: auto !important;
+}

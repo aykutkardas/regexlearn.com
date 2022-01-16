@@ -3,9 +3,9 @@ import cx from 'classnames';
 
 import * as styles from './CheatsheetItemTitle.module.css';
 
-const CheatsheetItemTitle = ({ data, className }) => {
+const CheatsheetItemTitle = ({ data, className, ...props }) => {
   return (
-    <div className={cx(styles.CheatsheetItemTitle, className)}>
+    <div {...props} className={cx(styles.CheatsheetItemTitle, className)}>
       <span className={styles.CheatsheetItemTitleCodeWrapper}>
         <code className={styles.CheatsheetItemTitleCode}>{data.code}</code>
       </span>
