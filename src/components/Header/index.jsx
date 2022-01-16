@@ -44,6 +44,7 @@ function Header() {
                     className={cx(styles.HeaderLink, {
                       [styles.HeaderLinkActive]: isActive,
                     })}
+                    data-beta="true"
                   >
                     <FormattedMessage id="general.playground" />
                   </a>

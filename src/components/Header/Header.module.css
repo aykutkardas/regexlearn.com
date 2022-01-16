@@ -19,12 +19,22 @@
   color: var(--txt-1);
   margin-left: 20px;
   user-select: none;
-  transition: .3s;
+  transition: 0.3s;
+  position: relative;
 }
 
 .HeaderLink :global(svg) {
   margin-left: 5px;
-  transition: .3s;
+  transition: 0.3s;
+}
+
+.HeaderLink[data-beta]::before {
+  content: 'BETA';
+  font-size: 10px;
+  position: absolute;
+  top: -10px;
+  right: 0;
+  color: var(--primary);
 }
 
 .HeaderLinkActive {
