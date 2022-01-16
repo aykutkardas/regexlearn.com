@@ -1,12 +1,14 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, Fragment } from 'react';
 import cx from 'classnames';
 import { useIntl } from 'react-intl';
 import { Editor, EditorState, CompositeDecorator, ContentState } from 'draft-js';
-import 'draft-js/dist/Draft.css';
-
-import * as styles from './Playground.module.css';
+import { Scrollbars } from 'react-custom-scrollbars';
 
 import FlagBox from '../FlagBox';
+import setCaretPosition from 'src/utils/setCaretPosition';
+
+import * as styles from './Playground.module.css';
+import 'draft-js/dist/Draft.css';
 
 const Highlight = ({ children }) => {
   return <span className={styles.Highlight}>{children}</span>;
@@ -23,6 +25,23 @@ export default function Playground() {
   const [regex, setRegex] = useState('[A-Z]\\w+');
   const [flags, setFlags] = useState('g');
   const [editorState, setEditorState] = useState(EditorState.createWithContent(initialContent));
+  const [mounted, setMounted] = useState(false);
+
+  const Wrapper = mounted ? Scrollbars : Fragment;
+  const props = mounted
+    ? {
+        autoHide: true,
+        style: {
+          width: '100%',
+          height: '100%',
+          paddingRight: 30,
+        },
+      }
+    : {};
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const onChangeFlags = flags => {
     setFlags(flags);
@@ -98,6 +117,7 @@ export default function Playground() {
 
   useEffect(() => {
     onChangeFlags(flags);
+    setCaretPosition(regexInput?.current, regex.length);
   }, []);
 
   return (
@@ -130,12 +150,14 @@ export default function Playground() {
         onClick={() => editor.current.focus()}
       >
         <div className={styles.EditorWrapper}>
-          <Editor
-            ref={editor}
-            editorState={editorState}
-            onChange={setEditorState}
-            placeholder="Text here"
-          />
+          <Wrapper {...props}>
+            <Editor
+              ref={editor}
+              editorState={editorState}
+              onChange={setEditorState}
+              placeholder="Text here"
+            />
+          </Wrapper>
         </div>
       </div>
     </>

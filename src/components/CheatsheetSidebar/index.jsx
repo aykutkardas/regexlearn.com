@@ -20,7 +20,16 @@ export default function Cheatsheet() {
   const [mounted, setMounted] = useState(false);
 
   const Wrapper = mounted ? Scrollbars : Fragment;
-  const props = mounted ? { style: { width: '100%', height: '100%', paddingRight: 30 } } : {};
+  const props = mounted
+    ? {
+        autoHide: true,
+        style: {
+          width: '100%',
+          height: '100%',
+          paddingRight: 30,
+        },
+      }
+    : {};
 
   useEffect(() => {
     setMounted(true);
