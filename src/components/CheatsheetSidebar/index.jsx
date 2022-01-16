@@ -1,5 +1,6 @@
-import { useState } from 'react';
+import { useState, useEffect, Fragment } from 'react';
 import { useIntl } from 'react-intl';
+import { Scrollbars } from 'react-custom-scrollbars';
 
 import Collapse from 'src/components/Collapse';
 import CheatsheetItemTitle from 'src/components/CheatsheetItemTitle';
@@ -16,38 +17,49 @@ const CategoryTitle = ({ label, ...props }) => <div {...props}>{label}</div>;
 export default function Cheatsheet() {
   const { formatMessage } = useIntl();
   const [activeCategory, setActiveCategory] = useState();
+  const [mounted, setMounted] = useState(false);
+
+  const Wrapper = mounted ? Scrollbars : Fragment;
+  const props = mounted ? { style: { width: '100%', height: '100%', paddingRight: 30 } } : {};
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   return (
-    <div>
-      {data.map(row => (
-        <div key={row.title}>
-          <Collapse
-            key={row.title}
-            className={styles.CheatsheetTitle}
-            openedClassName={styles.CheatsheetTitle}
-            open={activeCategory === row.title}
-            triggerDisabled={activeCategory !== row.title}
-            title={
-              <CategoryTitle
-                className={styles.CheatsheetTitleInner}
-                onClick={() => setActiveCategory(row.title)}
-                label={formatMessage({ id: row.title })}
-              />
-            }
-            description={row.description}
-          >
-            {row.data.map(item => (
-              <Collapse
-                key={item.title}
-                description={item.description}
-                title={<CheatsheetItemTitle data={item} />}
-              >
-                <CheatsheetDemo data={item} />
-              </Collapse>
-            ))}
-          </Collapse>
-        </div>
-      ))}
+    <div className={styles.CheatsheetSidebar}>
+      <Wrapper {...props}>
+        {data.map(row => (
+          <div key={row.title}>
+            <Collapse
+              key={row.title}
+              className={styles.CategoryTitle}
+              openedClassName={styles.CategoryTitle}
+              open={activeCategory === row.title}
+              triggerDisabled={activeCategory !== row.title}
+              title={
+                <CategoryTitle
+                  className={styles.CategoryTitleInner}
+                  onClick={() => setActiveCategory(row.title)}
+                  label={formatMessage({ id: row.title })}
+                />
+              }
+              description={row.description}
+            >
+              {row.data.map(item => (
+                <Collapse
+                  key={item.title}
+                  description={item.description}
+                  className={styles.CheatsheetTitle}
+                  title={<CheatsheetItemTitle data={item} />}
+                >
+                  <CheatsheetDemo data={item} />
+                </Collapse>
+              ))}
+            </Collapse>
+          </div>
+        ))}
+      </Wrapper>
     </div>
   );
 }
