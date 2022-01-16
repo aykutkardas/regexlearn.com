@@ -1,14 +1,17 @@
 import { useIntl } from 'react-intl';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
-import dynamic from 'next/dynamic';
+import cx from 'classnames';
 
 import SeoTags from 'src/components/SeoTags';
 import Header from 'src/components/Header';
 import Footer from 'src/components/Footer';
 import Playground from 'src/components/Playground';
+import CheatsheetSidebar from 'src/components/CheatsheetSidebar';
 
 import { defaultLocale, locales } from 'src/localization';
+
+import * as styles from './Playground.module.css';
 
 export default function PlaygroundPage() {
   const { formatMessage } = useIntl();
@@ -25,9 +28,14 @@ export default function PlaygroundPage() {
         <meta name="description" content={pageDescription} />
         <SeoTags key={pageTitle} title={pageTitle} description={pageDescription} href={asPath} />
       </Head>
-      <div className="container flex-1">
+      <div className={cx('container', styles.PlaygroundContainer)}>
         <div className="row">
-          <Playground />
+          <div className="col-xs-12 col-md-12 col-lg-8">
+            <Playground />
+          </div>
+          <div className="col-xs-12 col-md-12 col-lg-4">
+            <CheatsheetSidebar />
+          </div>
         </div>
       </div>
       <Footer />

@@ -1,7 +1,7 @@
-import { useState, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import cx from 'classnames';
 import { useIntl } from 'react-intl';
-import { Editor, EditorState, CompositeDecorator, convertFromRaw } from 'draft-js';
+import { Editor, EditorState, CompositeDecorator, ContentState } from 'draft-js';
 import 'draft-js/dist/Draft.css';
 
 import * as styles from './Playground.module.css';
@@ -12,32 +12,24 @@ const Highlight = ({ children }) => {
   return <span className={styles.Highlight}>{children}</span>;
 };
 
-const emptyContentState = convertFromRaw({
-  entityMap: {},
-  blocks: [
-    {
-      text: '',
-      key: 'foo',
-      type: 'unstyled',
-      entityRanges: [],
-    },
-  ],
-});
+const initialText = `Regular Expressions, abbreviated as RegEx or RegExp, are a string of characters created within the framework of RegEx syntax rules. You can easily manage your data with RegEx, which uses commands like finding, matching, and editing. Regex can be used in programming languages such as Python, SQL, Javascript, R, Google Analytics, Google Data Studio, and throughout the coding process. Learn regex online with examples and tutorials on RegexLearn now.`;
+
+const initialContent = ContentState.createFromText(initialText);
 
 export default function Playground() {
   const editor = useRef(null);
   const regexInput = useRef(null);
   const { formatMessage } = useIntl();
-  const [regex, setRegex] = useState('');
+  const [regex, setRegex] = useState('[A-Z]\\w+');
   const [flags, setFlags] = useState('g');
-  const [editorState, setEditorState] = useState(EditorState.createWithContent(emptyContentState));
+  const [editorState, setEditorState] = useState(EditorState.createWithContent(initialContent));
 
-  const onChangeRegex = flags => {
+  const onChangeFlags = flags => {
     setFlags(flags);
-    onChange({ target: { value: regex } }, flags);
+    onChangeRegex({ target: { value: regex } }, flags);
   };
 
-  const onChange = (e, newFlags = flags) => {
+  const onChangeRegex = (e, newFlags = flags) => {
     const newRegex = e.target.value;
     setRegex(newRegex);
 
@@ -104,42 +96,48 @@ export default function Playground() {
     setEditorState(newEditorState);
   };
 
+  useEffect(() => {
+    onChangeFlags(flags);
+  }, []);
+
   return (
-    <div className={cx('container', styles.PlaygroundContainer)}>
-      <div className="row">
-        <div className="col-xs-12 col-md-12 col-lg-8">
-          <div className={styles.InteractiveAreaBlockRegex}>
-            <span
-              className={styles.PlaygroundBlockRegexInputWrapper}
-              data-flags={flags}
-              style={{ paddingRight: flags.length * 13 || 15 }}
-            >
-              <input
-                ref={regexInput}
-                style={{ width: regex.length * 10 || 90 }}
-                className={cx(styles.PlaygroundBlockRegexInput)}
-                type="text"
-                onChange={onChange}
-                value={regex}
-                spellCheck={false}
-              />
-            </span>
-          </div>
-          <FlagBox flags={flags} setFlags={onChangeRegex} />
-          <div
-            className={styles.InteractiveAreaBlockContent}
-            data-title={formatMessage({ id: 'general.text' })}
-            onClick={() => editor.current.focus()}
-          >
-            <Editor
-              ref={editor}
-              editorState={editorState}
-              onChange={setEditorState}
-              placeholder="Text here"
-            />
-          </div>
+    <>
+      <div
+        className={styles.InteractiveAreaBlockRegex}
+        data-title={formatMessage({ id: 'general.regex' })}
+        onClick={() => regexInput.current.focus()}
+      >
+        <span
+          className={styles.PlaygroundBlockRegexInputWrapper}
+          data-flags={flags}
+          style={{ paddingRight: flags.length * 13 || 15 }}
+        >
+          <input
+            ref={regexInput}
+            style={{ width: regex.length * 10 || 90 }}
+            className={cx(styles.PlaygroundBlockRegexInput)}
+            type="text"
+            onChange={onChangeRegex}
+            value={regex}
+            spellCheck={false}
+          />
+        </span>
+      </div>
+      <FlagBox flags={flags} setFlags={onChangeFlags} />
+      <div
+        className={styles.InteractiveAreaBlockContent}
+        data-title={formatMessage({ id: 'general.text' })}
+        onClick={() => editor.current.focus()}
+      >
+        <div className={styles.EditorWrapper}>
+          <Editor
+            ref={editor}
+            editorState={editorState}
+            onChange={setEditorState}
+            placeholder="Text here"
+          />
         </div>
       </div>
-    </div>
+    </>
   );
 }
