@@ -4,7 +4,9 @@ import { useIntl } from 'react-intl';
 import { Editor, EditorState, CompositeDecorator, ContentState } from 'draft-js';
 import { Scrollbars } from 'react-custom-scrollbars';
 
-import FlagBox from '../FlagBox';
+import FlagBox from 'src/components/FlagBox';
+import ReportPlayground from 'src/components/ReportPlayground';
+
 import setCaretPosition from 'src/utils/setCaretPosition';
 
 import * as styles from './Playground.module.css';
@@ -18,7 +20,7 @@ const initialText = `Regular Expressions, abbreviated as RegEx or RegExp, are a 
 
 const initialContent = ContentState.createFromText(initialText);
 
-export default function Playground() {
+const Playground = () => {
   const editor = useRef(null);
   const regexInput = useRef(null);
   const { formatMessage } = useIntl();
@@ -160,7 +162,10 @@ export default function Playground() {
             />
           </Wrapper>
         </div>
+        <ReportPlayground />
       </div>
     </>
   );
-}
+};
+
+export default Playground;
