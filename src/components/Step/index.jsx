@@ -10,6 +10,8 @@ import tagWrapper from 'src/utils/tagWrapper';
 function Step({ lessonName, data, step, index, error: parentError, onChangeSuccess }) {
   const { formatMessage } = useIntl();
 
+  const isCurrentStep = step === index;
+
   const title = tagWrapper(
     formatMessage({ id: data.title }),
     /`(\S*?[^`]*)`/gim,
@@ -27,7 +29,7 @@ function Step({ lessonName, data, step, index, error: parentError, onChangeSucce
   return (
     <div
       className={cx(styles.Step, {
-        [styles.StepHidden]: step !== index,
+        [styles.StepHidden]: !isCurrentStep,
       })}
     >
       {data.image && <img className={styles.StepImage} src={data.image} alt="" width="100px" />}
@@ -38,14 +40,16 @@ function Step({ lessonName, data, step, index, error: parentError, onChangeSucce
         data-original-title={data.originalTitle}
       />
       <p className={styles.StepDescription} dangerouslySetInnerHTML={{ __html: description }} />
-      <InteractiveArea
-        lessonName={lessonName}
-        isShow={isInteractive}
-        data={data}
-        step={step}
-        parentError={parentError}
-        onChangeSuccess={onChangeSuccess}
-      />
+      {isCurrentStep && (
+        <InteractiveArea
+          lessonName={lessonName}
+          isShow={isInteractive}
+          data={data}
+          step={step}
+          parentError={parentError}
+          onChangeSuccess={onChangeSuccess}
+        />
+      )}
     </div>
   );
 }
