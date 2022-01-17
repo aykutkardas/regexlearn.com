@@ -8,8 +8,8 @@ This is a project that makes learning how to write regex easy.
 - **Interactive**
 - **Shortcut Friendly**
 - **Cheatsheet**
+- **Playground**
 - Practice _(Soon)_
-- Playground _(Soon)_
 
 ## Available Languages
 
