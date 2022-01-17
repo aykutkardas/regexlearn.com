@@ -28,6 +28,11 @@ export default function PlaygroundPage() {
         <link rel="stylesheet" href="/css/animate.css" />
         <title>{pageTitle}</title>
         <meta name="description" content={pageDescription} />
+        <link rel="alternate" hrefLang="en" href="https://regexlearn.com/playground" />
+        <link rel="alternate" hrefLang="ru" href="https://regexlearn.com/ru/playground" />
+        <link rel="alternate" hrefLang="es" href="https://regexlearn.com/es/playground" />
+        <link rel="alternate" hrefLang="tr" href="https://regexlearn.com/tr/playground" />
+        <link rel="alternate" hrefLang="zh-cn" href="https://regexlearn.com/zh-cn/playground" />
         <SeoTags key={pageTitle} title={pageTitle} description={pageDescription} href={asPath} />
       </Head>
       <div className={cx('container', styles.PlaygroundContainer)}>

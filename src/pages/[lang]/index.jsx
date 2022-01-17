@@ -31,6 +31,11 @@ export default function Home() {
         <link rel="stylesheet" href="/css/animate.css" />
         <title>{pageTitle}</title>
         <meta name="description" content={pageDescription} />
+        <link rel="alternate" hrefLang="en" href="https://regexlearn.com/" />
+        <link rel="alternate" hrefLang="ru" href="https://regexlearn.com/ru/" />
+        <link rel="alternate" hrefLang="es" href="https://regexlearn.com/es/" />
+        <link rel="alternate" hrefLang="tr" href="https://regexlearn.com/tr/" />
+        <link rel="alternate" hrefLang="zh-cn" href="https://regexlearn.com/zh-cn/" />
         <SeoTags title={pageTitle} description={pageDescription} href={asPath} />
       </Head>
       <div className="container">

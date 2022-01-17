@@ -28,6 +28,27 @@ export default function Course({ lessonName }) {
         <link rel="stylesheet" href="/css/animate.css" />
         <title>{pageTitle}</title>
         <meta name="description" content={pageDescription} />
+        <link rel="alternate" hrefLang="en" href={`https://regexlearn.com/learn/${lessonName}`} />
+        <link
+          rel="alternate"
+          hrefLang="ru"
+          href={`https://regexlearn.com/ru/learn/${lessonName}`}
+        />
+        <link
+          rel="alternate"
+          hrefLang="es"
+          href={`https://regexlearn.com/es/learn/${lessonName}`}
+        />
+        <link
+          rel="alternate"
+          hrefLang="tr"
+          href={`https://regexlearn.com/tr/learn/${lessonName}`}
+        />
+        <link
+          rel="alternate"
+          hrefLang="zh-cn"
+          href={`https://regexlearn.com/zh-cn/learn/${lessonName}`}
+        />
         <SeoTags title={pageTitle} description={pageDescription} href={asPath} />
       </Head>
       <LearnPage data={data} lessonName={lessonName} />

@@ -28,6 +28,11 @@ export default function Cheatsheet() {
       <Head>
         <title>{pageTitle}</title>
         <meta name="description" content={pageDescription} />
+        <link rel="alternate" hrefLang="en" href="https://regexlearn.com/cheatsheet" />
+        <link rel="alternate" hrefLang="ru" href="https://regexlearn.com/ru/cheatsheet" />
+        <link rel="alternate" hrefLang="es" href="https://regexlearn.com/es/cheatsheet" />
+        <link rel="alternate" hrefLang="tr" href="https://regexlearn.com/tr/cheatsheet" />
+        <link rel="alternate" hrefLang="zh-cn" href="https://regexlearn.com/zh-cn/cheatsheet" />
         <SeoTags key={pageTitle} title={pageTitle} description={pageDescription} href={asPath} />
       </Head>
       <div className="container flex-1">
