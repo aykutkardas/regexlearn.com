@@ -43,14 +43,6 @@
   right: calc(10px);
 }
 
-@media only screen and (max-width: 600px) {
-  .PlaygroundBlockRegexInputWrapper::before,
-  .PlaygroundBlockRegexInputWrapper::after,
-  .PlaygroundBlockRegexInput {
-    font-size: 16px;
-  }
-}
-
 .InteractiveAreaBlock {
   background: var(--bg-3);
   border-radius: 6px;
@@ -108,4 +100,13 @@
   padding: 2px 4px;
   border-radius: 3px;
   background: var(--primary);
+}
+
+@media only screen and (max-width: 600px) {
+  .EditorWrapper,
+  .PlaygroundBlockRegexInputWrapper::before,
+  .PlaygroundBlockRegexInputWrapper::after,
+  .PlaygroundBlockRegexInput {
+    font-size: 16px;
+  }
 }
