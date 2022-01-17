@@ -87,7 +87,7 @@
 .InteractiveAreaBlockContent {
   composes: InteractiveAreaBlock;
   display: block;
-  margin: 20px 0;
+  margin: 20px 0 40px;
   text-align: left;
   min-height: 300px;
   height: 100%;

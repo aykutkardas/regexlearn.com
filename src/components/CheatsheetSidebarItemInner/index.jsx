@@ -20,6 +20,7 @@ const CheatsheetSidebarItemInner = ({ data }) => {
           triggerDisabled={activeCheatsheet !== item.title}
           description={item.description}
           className={styles.CheatsheetTitle}
+          contentClassName={styles.CheatsheetContent}
           openedClassName={styles.CheatsheetTitleOpened}
           title={<CheatsheetTitle onClick={() => setActiveCheatsheet(item.title)} data={item} />}
         >

@@ -3,9 +3,7 @@ import { useIntl } from 'react-intl';
 import { Scrollbars } from 'react-custom-scrollbars';
 
 import Collapse from 'src/components/Collapse';
-import CheatsheetItemTitle from 'src/components/CheatsheetItemTitle';
 import CheatsheetSidebarItemInner from 'src/components/CheatsheetSidebarItemInner';
-import CheatsheetDemo from 'src/components/CheatsheetDemo';
 
 import data from 'src/data/cheatsheet.json';
 
@@ -43,6 +41,7 @@ const CheatsheetSidebar = () => {
               key={row.title}
               className={styles.CategoryTitle}
               openedClassName={styles.CategoryTitle}
+              contentClassName={styles.CategoryContent}
               open={activeCategory === row.title}
               triggerDisabled={activeCategory !== row.title}
               title={

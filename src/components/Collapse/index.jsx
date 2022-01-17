@@ -7,7 +7,7 @@ import Icon from 'src/components/Icon';
 
 import * as styles from './Collapse.module.css';
 
-function Collapse({ title, description, children, ...props }) {
+function Collapse({ title, description, children, titleClassName, contentClassName, ...props }) {
   const [show, setShow] = useState(false);
 
   return (
@@ -17,7 +17,7 @@ function Collapse({ title, description, children, ...props }) {
       onClosing={() => setShow(false)}
       {...props}
       trigger={
-        <div className={styles.CollapseTitle}>
+        <div className={cx(styles.CollapseTitle, titleClassName)}>
           {title}
           <Icon
             className={cx(show ? styles.CollapseTitleIconActive : styles.CollapseTitleIcon)}
@@ -27,7 +27,7 @@ function Collapse({ title, description, children, ...props }) {
         </div>
       }
     >
-      <div className={styles.CollapseContent}>
+      <div className={cx(styles.CollapseContent, contentClassName)}>
         {description && (
           <p className={styles.CollapseDescription}>
             <FormattedMessage id={description} />
