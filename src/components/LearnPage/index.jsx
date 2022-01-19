@@ -77,17 +77,13 @@ export default function LearnPage({ data, lessonName }) {
   return (
     <>
       <LearnHeader steps={data} step={step} />
-      {data.map((item, index) => (
-        <Step
-          key={item.title + index}
-          lessonName={lessonName}
-          data={data[index]}
-          index={index}
-          step={step}
-          onChangeSuccess={onChangeSuccess}
-          error={error}
-        />
-      ))}
+      <Step
+        lessonName={lessonName}
+        data={data[step]}
+        step={step}
+        onChangeSuccess={onChangeSuccess}
+        error={error}
+      />
 
       <LearnFooter
         steps={data}

@@ -7,10 +7,8 @@ import InteractiveArea from 'src/components/InteractiveArea';
 
 import tagWrapper from 'src/utils/tagWrapper';
 
-function Step({ lessonName, data, step, index, error: parentError, onChangeSuccess }) {
+function Step({ lessonName, data, step, error: parentError, onChangeSuccess }) {
   const { formatMessage } = useIntl();
-
-  const isCurrentStep = step === index;
 
   const title = tagWrapper(
     formatMessage({ id: data.title }),
@@ -27,11 +25,7 @@ function Step({ lessonName, data, step, index, error: parentError, onChangeSucce
   const isInteractive = data.interactive !== false;
 
   return (
-    <div
-      className={cx(styles.Step, {
-        [styles.StepHidden]: !isCurrentStep,
-      })}
-    >
+    <div className={styles.Step}>
       {data.image && <img className={styles.StepImage} src={data.image} alt="" width="100px" />}
       {data.originalTitle && <h4 className={styles.StepTitleOriginal}>{data.originalTitle}</h4>}
       <h2
@@ -40,16 +34,14 @@ function Step({ lessonName, data, step, index, error: parentError, onChangeSucce
         data-original-title={data.originalTitle}
       />
       <p className={styles.StepDescription} dangerouslySetInnerHTML={{ __html: description }} />
-      {isCurrentStep && (
-        <InteractiveArea
-          lessonName={lessonName}
-          isShow={isInteractive}
-          data={data}
-          step={step}
-          parentError={parentError}
-          onChangeSuccess={onChangeSuccess}
-        />
-      )}
+      <InteractiveArea
+        lessonName={lessonName}
+        isShow={isInteractive}
+        data={data}
+        step={step}
+        parentError={parentError}
+        onChangeSuccess={onChangeSuccess}
+      />
     </div>
   );
 }
