@@ -5,13 +5,22 @@ export async function migration() {
 
   const isOlderCookie = typeof lookie.get('lastStep') === 'number';
 
-  if (!isOlderCookie) return;
+  if (isOlderCookie) {
+    await lookie.set('lesson.regex101', {
+      currentStep: lookie.get('currentStep') || 0,
+      lastStep: lookie.get('lastStep') || 0,
+    });
 
-  await lookie.set('lesson.regex101', {
-    currentStep: lookie.get('currentStep'),
-    lastStep: lookie.get('lastStep'),
-  });
+    await lookie.remove('currentStep');
+    await lookie.remove('lastStep');
+  };
 
-  await lookie.remove('currentStep');
-  await lookie.remove('lastStep');
+  const isValidCurrentStep = typeof lookie.get('lesson.regex101').currentStep === 'number';
+
+  if (!isValidCurrentStep) {
+    await lookie.set('lesson.regex101', {
+      currentStep: 0,
+      lastStep: 0,
+    });
+  }
 }
