@@ -10,7 +10,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "export": "next export"
+    "export": "next export",
+    "html-lang-fixer": "node ./scripts/html-lang-fixer.js"
   },
   "license": "MIT",
   "dependencies": {
