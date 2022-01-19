@@ -31,6 +31,5 @@
   "page.cheatsheet.description": "有时您只需记住正则表达式。试试备忘单，它可以让您更好地理解和掌握它们。",
   "page.playground.description": "您可以通过 Playground 在线轻松构建和测试您的正则表达式模式。",
 
-  "alert.site.under.development": "网站正在开发中，您看到的内容可能会有所变动。",
   "learn.safari.unsupportWarning": "Safari 浏览器不支持该步骤中的正则表达式。如果您在这一步遇到问题，可以点击此处。"
 }

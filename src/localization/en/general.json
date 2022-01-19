@@ -31,6 +31,5 @@
   "page.cheatsheet.description": "Sometimes you just need to remember RegEx. Try the cheatsheet that will make it easier for you to understand and remember better.",
   "page.playground.description": "You can easily build and test your regex pattern online via Playground.",
 
-  "alert.site.under.development": "This site is still under development. What you see now may change.",
   "learn.safari.unsupportWarning": "Regular expressions in this step are not supported by the Safari browser. If you have trouble getting past this step. You can click here."
 }

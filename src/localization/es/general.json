@@ -31,6 +31,5 @@
   "page.cheatsheet.description": "A veces solo necesitas recordar el RegEx. Pruebe la Cheatsheet, que le faciilitará el entendimiento y a recordar mejor.",
   "page.playground.description": "Puede crear y probar fácilmente su patrón de expresiones regulares en línea a través de Playground.",
 
-  "alert.site.under.development": "Este sitio sigue en desarrollo. Lo que ves ahora puede cambiar.",
   "learn.safari.unsupportWarning": "Las expresiones regulares en este paso no son compatibles con el navegador Safari. Si tiene problemas para superar este paso. Puedes hacer clic aquí."
 }

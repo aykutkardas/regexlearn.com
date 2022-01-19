@@ -31,6 +31,5 @@
   "page.cheatsheet.description": "RegEx'i bazen sadece hatırlamaya ihtiyaç duyarsın, anlamanı kolaylaştıracak ve daha iyi hatırlamanı sağlayacak cheatsheet'i dene.",
   "page.playground.description": "Kendi Regex'inizi Playground aracılığıyla çevrimiçi olarak kolayca oluşturabilir ve test edebilirsiniz.",
 
-  "alert.site.under.development": "Bu site hala geliştirme aşamasındadır. Şu an gördüğünüz şeyler değişebilir.",
   "learn.safari.unsupportWarning": "Bu adımdaki düzenli ifadeler Safari tarayıcısı tarafından desteklenmez. Bu adımı geçmekte sorun yaşarsanız. Buraya tıklayabilirsiniz."
 }
