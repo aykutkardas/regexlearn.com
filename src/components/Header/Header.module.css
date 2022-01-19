@@ -7,11 +7,21 @@
   margin-bottom: 30px;
 }
 
+.HeaderArea {
+  flex: 1;
+}
+
+.ProgressArea {
+  display: flex;
+  justify-content: center;
+}
+
 .HeaderNav {
   display: flex;
   align-items: center;
   color: var(--txt-1);
   font-size: 14px;
+  justify-content: flex-end;
 }
 
 .HeaderLink {

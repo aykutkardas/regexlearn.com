@@ -1,14 +1,17 @@
+import ReactDOM from 'react-dom';
+import { useState, useEffect } from 'react';
 import { useIntl } from 'react-intl';
-import cx from 'classnames';
-
-import * as styles from './Step.module.css';
 
 import InteractiveArea from 'src/components/InteractiveArea';
+import Progress from 'src/components/Progress';
 
 import tagWrapper from 'src/utils/tagWrapper';
 
-function Step({ lessonName, data, step, error: parentError, onChangeSuccess }) {
+import * as styles from './Step.module.css';
+
+function Step({ lessonName, data, step, steps, error: parentError, onChangeSuccess }) {
   const { formatMessage } = useIntl();
+  const [mounted, setMounted] = useState();
 
   const title = tagWrapper(
     formatMessage({ id: data.title }),
@@ -21,6 +24,10 @@ function Step({ lessonName, data, step, error: parentError, onChangeSuccess }) {
     /`(\S*?[^`]*)`/gim,
     styles.StepDescriptionWord,
   ).replace(/\\n/gim, '<br/>');
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const isInteractive = data.interactive !== false;
 
@@ -42,6 +49,11 @@ function Step({ lessonName, data, step, error: parentError, onChangeSuccess }) {
         parentError={parentError}
         onChangeSuccess={onChangeSuccess}
       />
+      {mounted &&
+        ReactDOM.createPortal(
+          <Progress total={steps.length - 1} current={step} />,
+          window.document.getElementById('ProgressArea'),
+        )}
     </div>
   );
 }

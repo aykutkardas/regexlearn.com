@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import lookie from 'lookie';
 
-import LearnHeader from 'src/components/LearnHeader';
+import Header from 'src/components/Header';
 import LearnFooter from 'src/components/LearnFooter';
 import Step from 'src/components/Step';
 
@@ -76,11 +76,12 @@ export default function LearnPage({ data, lessonName }) {
 
   return (
     <>
-      <LearnHeader steps={data} step={step} />
+      <Header isLearnPage />
       <Step
         lessonName={lessonName}
         data={data[step]}
         step={step}
+        steps={data}
         onChangeSuccess={onChangeSuccess}
         error={error}
       />
