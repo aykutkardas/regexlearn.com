@@ -1,4 +1,7 @@
 {
+  "cheatsheet.section.title": "Regex Cheatsheet",
+  "cheatsheet.section.description": "Tüm Regex pattern ve sembollerini Regex Cheatsheet ile keşfedin.",
+
   "cheatsheet.anchors": "Çapalar",
   "cheatsheet.caret.title": "Dize veya Satırın Başlangıcı",
   "cheatsheet.caret.description": "Dize veya satırın başlangıcıyla eşleşir.",

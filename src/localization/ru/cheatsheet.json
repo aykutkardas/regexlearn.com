@@ -1,4 +1,7 @@
 {
+  "cheatsheet.section.title": "Regex Cheatsheet",
+  "cheatsheet.section.description": "Изучите все шаблоны и символы RegEx с помощью RegEx Cheatsheet.",
+
   "cheatsheet.anchors": "Основное",
   "cheatsheet.caret.title": "Начало строки",
   "cheatsheet.caret.description": "Соответствует началу строки.",

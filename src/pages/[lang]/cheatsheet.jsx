@@ -1,4 +1,4 @@
-import { useIntl } from 'react-intl';
+import { FormattedMessage, useIntl } from 'react-intl';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
 
@@ -12,6 +12,8 @@ import data from 'src/data/cheatsheet.json';
 
 import { defaultLocale, locales } from 'src/localization';
 import CheatsheetDemo from 'src/components/CheatsheetDemo';
+
+import * as styles from './Cheatsheet.module.css';
 
 export default function Cheatsheet() {
   const { formatMessage } = useIntl();
@@ -36,6 +38,16 @@ export default function Cheatsheet() {
         <SeoTags key={pageTitle} title={pageTitle} description={pageDescription} href={asPath} />
       </Head>
       <div className="container flex-1">
+        <div className="row">
+          <div className="col-lg-12">
+            <h1 className={styles.Title}>
+              <FormattedMessage id="cheatsheet.section.title" />
+            </h1>
+            <p className={styles.Description}>
+              <FormattedMessage id="cheatsheet.section.description" />
+            </p>
+          </div>
+        </div>
         <div className="row">
           {columns.map((column, index) => (
             <div key={index} className="col-lg-4 col-md-6">

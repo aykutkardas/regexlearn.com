@@ -1,4 +1,7 @@
 {
+  "cheatsheet.section.title": "Regex Cheatsheet",
+  "cheatsheet.section.description": "Explore all RegEx patterns and symbols with the RegEx cheatsheet.",
+
   "cheatsheet.anchors": "Anchors",
   "cheatsheet.caret.title": "Start of string or line",
   "cheatsheet.caret.description": "Matches the beginning of the string or line.",

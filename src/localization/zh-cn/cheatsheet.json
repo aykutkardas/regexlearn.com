@@ -1,4 +1,7 @@
 {
+  "cheatsheet.section.title": "备忘单",
+  "cheatsheet.section.description": "使用备忘单来探索正则表达式的所有模式和符号吧。",
+
   "cheatsheet.anchors": "锚点",
   "cheatsheet.caret.title": "字符串或行的开头",
   "cheatsheet.caret.description": "匹配字符串或行的开头。",
