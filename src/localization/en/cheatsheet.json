@@ -1,6 +1,6 @@
 {
   "cheatsheet.section.title": "Regex Cheatsheet",
-  "cheatsheet.section.description": "Explore all RegEx patterns and symbols with the RegEx cheatsheet.",
+  "cheatsheet.section.description": "Explore all Regex patterns and symbols with the Regex cheatsheet.",
 
   "cheatsheet.anchors": "Anchors",
   "cheatsheet.caret.title": "Start of string or line",

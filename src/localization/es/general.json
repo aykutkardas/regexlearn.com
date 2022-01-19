@@ -21,14 +21,14 @@
   "notFound.button": "Volver al home",
 
   "page.landing.title": "Regex Learn - Paso a paso, de cero a avanzado.",
-  "page.learn.title": "Regex Learn - RegEx Curso Interactivo",
-  "page.cheatsheet.title": "Regex Learn - RegEx Cheatsheet",
+  "page.learn.title": "Regex Learn - Regex Curso Interactivo",
+  "page.cheatsheet.title": "Regex Learn - Regex Cheatsheet",
   "page.playground.title": "Regex Learn - Playground",
   "page.404.title": "Regex Learn - No encontrado",
 
-  "page.landing.description": "Learn RegEx interactivamente, practique a su nivel, pruebe y comparta su propio RegEx",
-  "page.learn.description": "Learn RegEx paso a paso. Complete el tutorial interactivo que hará que su aprendizaje sea más fácil y más rápido.",
-  "page.cheatsheet.description": "A veces solo necesitas recordar el RegEx. Pruebe la Cheatsheet, que le faciilitará el entendimiento y a recordar mejor.",
+  "page.landing.description": "Learn Regex interactivamente, practique a su nivel, pruebe y comparta su propio Regex",
+  "page.learn.description": "Learn Regex paso a paso. Complete el tutorial interactivo que hará que su aprendizaje sea más fácil y más rápido.",
+  "page.cheatsheet.description": "A veces solo necesitas recordar el Regex. Pruebe la Cheatsheet, que le faciilitará el entendimiento y a recordar mejor.",
   "page.playground.description": "Puede crear y probar fácilmente su patrón de expresiones regulares en línea a través de Playground.",
 
   "learn.safari.unsupportWarning": "Las expresiones regulares en este paso no son compatibles con el navegador Safari. Si tiene problemas para superar este paso. Puedes hacer clic aquí."

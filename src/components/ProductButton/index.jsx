@@ -30,7 +30,7 @@ const ProductButton = () => {
         >
           <img
             src="https://api.producthunt.com/widgets/embed-image/v1/top-post-badge.svg?post_id=319999&theme=light&period=daily"
-            alt="RegexLearn - Learn RegEx step by step, from zero to advanced | Product Hunt"
+            alt="RegexLearn - Learn Regex step by step, from zero to advanced | Product Hunt"
             style={{ width: 250, height: 54, marginBottom: 30 }}
             width="250"
             height="54"

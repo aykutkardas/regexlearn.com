@@ -6,10 +6,10 @@
   "examples.finish.description": " ",
 
   "steps.starter.title": "介绍",
-  "steps.starter.description": "RegEx 是正则表达式（Regular Expression）的简称。它便于匹配、查找和管理文本。请在输入框中键入 `OK`，开始第一步以了解更多的细节。",
+  "steps.starter.description": "Regex 是正则表达式（Regular Expression）的简称。它便于匹配、查找和管理文本。请在输入框中键入 `OK`，开始第一步以了解更多的细节。",
 
   "steps.whatIsRegex.title": "什么是「正则表达式」？",
-  "steps.whatIsRegex.description": "正则表达式是表示搜索模式的字符串，常缩写成 `RegEx` 或 `RegExp`。它常用于查找和替换文本中的字词。此外，我们可以测试文本是否符合我们设置的规则。\\n\\n 例如，您只想查找文件名列表中，扩展名是 `pdf` 的文件，那您只需跟着输入 `^\\w+\\.pdf$` 就可以找到。随着课程的进行，表达式的含义会变得更加清晰。",
+  "steps.whatIsRegex.description": "正则表达式是表示搜索模式的字符串，常缩写成 `Regex` 或 `Regexp`。它常用于查找和替换文本中的字词。此外，我们可以测试文本是否符合我们设置的规则。\\n\\n 例如，您只想查找文件名列表中，扩展名是 `pdf` 的文件，那您只需跟着输入 `^\\w+\\.pdf$` 就可以找到。随着课程的进行，表达式的含义会变得更加清晰。",
 
   "steps.basicMatchers.title": "基本匹配",
   "steps.basicMatchers.description": "我们想要查找的字符或单词可以直接输入，就像搜索一样。例如，要找出文本中的 `curious` 一词，只需输入同样的内容。",

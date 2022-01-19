@@ -21,14 +21,14 @@
   "notFound.button": "Вернуться домой",
 
   "page.landing.title": "Regex Learn - шаг за шагом, от нуля до продвинутого уровня.",
-  "page.learn.title": "Regex Learn - интерактивный курс RegEx",
-  "page.cheatsheet.title": "Regex Learn - RegEx Cheatsheet",
+  "page.learn.title": "Regex Learn - интерактивный курс Regex",
+  "page.cheatsheet.title": "Regex Learn - Regex Cheatsheet",
   "page.playground.title": "Regex Learn - Playground",
   "page.404.title": "Regex Learn - не найдено",
 
-  "page.landing.description": "Изучайте RegEx в интерактивном режиме, практикуйтесь на своём уровне, протестируйте и поделитесь своими собственными RegEx с другими участниками.",
-  "page.learn.description": "Изучайте RegEx шаг за шагом. Пройдите интерактивное руководство, которое сделает ваше обучение проще и быстрее.",
-  "page.cheatsheet.description": "Иногда вам просто необходимо запомнить RegEx. Попробуйте шпаргалку, которая поможет вам лучше понять и запомнить RegExp.",
+  "page.landing.description": "Изучайте Regex в интерактивном режиме, практикуйтесь на своём уровне, протестируйте и поделитесь своими собственными Regex с другими участниками.",
+  "page.learn.description": "Изучайте Regex шаг за шагом. Пройдите интерактивное руководство, которое сделает ваше обучение проще и быстрее.",
+  "page.cheatsheet.description": "Иногда вам просто необходимо запомнить Regex. Попробуйте шпаргалку, которая поможет вам лучше понять и запомнить Regexp.",
   "page.playground.description": "Вы можете легко создать и протестировать шаблон регулярного выражения онлайн через Playground.",
 
   "learn.safari.unsupportWarning": "Регулярные выражения на этом шаге не поддерживаются браузером Safari. Если у вас возникли проблемы с прохождением этого шага, вы можете нажать здесь"

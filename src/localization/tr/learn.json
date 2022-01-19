@@ -6,10 +6,10 @@
   "examples.finish.description": " ",
 
   "steps.starter.title": "Giriş",
-  "steps.starter.description": "RegEx `Regular Expression` 'in kısaltmasıdır. Metni eşleştirmeye, bulmaya ya da yönetmeye yardımcı olur. İlk adıma geçmek ve daha detaylı açıklamaya erişmek için Regex alanına `OK` yazarak başlayın.",
+  "steps.starter.description": "Regex `Regular Expression` 'in kısaltmasıdır. Metni eşleştirmeye, bulmaya ya da yönetmeye yardımcı olur. İlk adıma geçmek ve daha detaylı açıklamaya erişmek için Regex alanına `OK` yazarak başlayın.",
 
-  "steps.whatIsRegex.title": "Düzenli İfadeler `RegEx` Nedir?",
-  "steps.whatIsRegex.description": "Düzenli İfadeler bir arama modelini ifade eden bir karakter dizisidir. Genellikle `RegEx` ya da `RegExp` olarak kısaltılmıştır. Özelikle metinlerde geçen sözcükleri bulmak veya değiştirmek için kullanılır. Ayrıca bir metnin belirlediğimiz kurallara uyup uymadığı test edilebilir.\\n\\n Örneğin dosya isimlerinden oluşan bir listeniz olduğunu düşünelim. Ve siz sadece `pdf` uzantılı dosyaları bulmak istiyorsunuz. O halde şöyle bir ifade `^\\w+\\.pdf$` yazmak işe yarayacaktır. Bu ifadedeki tanımlamaların ne anlama geldiği adımlar geçtikçe daha anlaşılır olacak.",
+  "steps.whatIsRegex.title": "Düzenli İfadeler `Regex` Nedir?",
+  "steps.whatIsRegex.description": "Düzenli İfadeler bir arama modelini ifade eden bir karakter dizisidir. Genellikle `Regex` ya da `Regexp` olarak kısaltılmıştır. Özelikle metinlerde geçen sözcükleri bulmak veya değiştirmek için kullanılır. Ayrıca bir metnin belirlediğimiz kurallara uyup uymadığı test edilebilir.\\n\\n Örneğin dosya isimlerinden oluşan bir listeniz olduğunu düşünelim. Ve siz sadece `pdf` uzantılı dosyaları bulmak istiyorsunuz. O halde şöyle bir ifade `^\\w+\\.pdf$` yazmak işe yarayacaktır. Bu ifadedeki tanımlamaların ne anlama geldiği adımlar geçtikçe daha anlaşılır olacak.",
 
   "steps.basicMatchers.title": "Temel Eşleştiriciler",
   "steps.basicMatchers.description": "Bulmak istediğimiz karakter ya da sözcük doğrudan yazılır. Normal bir arama işlemine benzer. Örneğin metinde geçen `curious` sözcüğünü bulmak için, aynısını yazın.",
@@ -148,13 +148,13 @@
   "steps.flagsGlobal.description": "`global` bayrağı, ifadenin tüm eşleşmeleri seçmesini sağlar. Eğer kullanılmazsa sadece ilk eşleşmeyi seçecektir. Şimdi tüm eşleşmeleri seçebilmek için `global` bayrağını aktif edin.",
 
   "steps.flagsMultiline.title": "Çoklu Satır Bayrağı",
-  "steps.flagsMultiline.description": "RegEx tüm metni tek satır olarak görür. Fakat her satırı ayrı ayrı ele alabilmek için `multiline` bayrağını kullanırız. Bu sayede satır sonuna göre yazdığımız ifadeler her satır için ayrı ayrı çalışır. Şimdi tüm eşleşmeleri bulabilmek için `multiline` bayrağını aktif edin.",
+  "steps.flagsMultiline.description": "Regex tüm metni tek satır olarak görür. Fakat her satırı ayrı ayrı ele alabilmek için `multiline` bayrağını kullanırız. Bu sayede satır sonuna göre yazdığımız ifadeler her satır için ayrı ayrı çalışır. Şimdi tüm eşleşmeleri bulabilmek için `multiline` bayrağını aktif edin.",
 
   "steps.flagsCaseInsensitive.title": "Büyük/Küçük Harf Duyarsızlık Bayrağı",
   "steps.flagsCaseInsensitive.description": "Yazdığımız ifadenin büyük küçük harf duyarlılığını kaldırmak için `case-insensitive` bayrağını aktif etmeliyiz.",
   
   "steps.greedyMatching.title": "Aç Gözlü Eşleştirme",
-  "steps.greedyMatching.description": "RegEx varsayılan olarak aç gözlü bir eşleştirme yapar. Bu da eşleştirmenin mümkün olduğu kadar uzun olacağı anlamına gelir. Aşağıdaki örneği inceleyin. `r` ile biten ve öncesinde herhangi bir karakter olabilecek tüm eşleştirmeyi ifade eder. Fakat ilk `r` harfinde durmaz.",
+  "steps.greedyMatching.description": "Regex varsayılan olarak aç gözlü bir eşleştirme yapar. Bu da eşleştirmenin mümkün olduğu kadar uzun olacağı anlamına gelir. Aşağıdaki örneği inceleyin. `r` ile biten ve öncesinde herhangi bir karakter olabilecek tüm eşleştirmeyi ifade eder. Fakat ilk `r` harfinde durmaz.",
 
   "steps.lazyMatching.title": "Tembel Eşleştirme",
   "steps.lazyMatching.description": "Tembel eşleştirme, aç gözlü eşleştirmenin aksine ilk uyan eşleşmede durur. Örneğin aşağıdaki örnekte `r` harfi ile biten ve öncesinde herhangi bir karakter olan ilk eşleşmeyi bulmak için `*` 'den sonra bir `?` ekleyin. Bu eşleşmenin ilk `r` harfinde duracağını ifade eder.",
