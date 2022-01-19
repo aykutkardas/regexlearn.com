@@ -69,6 +69,15 @@ export default function Learn() {
               <LessonBox data={lesson} />
             </div>
           ))}
+          <div className="col-xs-12 col-sm-4 col-md-3">
+            <LessonBox
+              lock
+              data={{
+                title: 'lessons.regexForSeo.title',
+                description: 'general.comingSoon',
+              }}
+            />
+          </div>
         </div>
       </div>
       <Footer />

@@ -11,7 +11,11 @@ const LessonBox = ({ data, lock }) => {
   const Wrapper = lock ? Fragment : IntlLink;
   const props = lock ? {} : { href: `/[lang]/learn/[lesson]`, query: { lesson: data.key } };
 
-  const stepCount = require(`src/data/lessons/${data.key}.js`)?.default?.length || 0;
+  let stepCount = 0;
+
+  if (data.key) {
+    stepCount = require(`src/data/lessons/${data.key}.js`)?.default?.length || 0;
+  }
 
   const { formatMessage } = useIntl();
 

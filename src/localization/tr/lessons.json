@@ -1,4 +1,7 @@
 {
   "lessons.regex101.title": "Regex 101",
-  "lessons.regex101.description": "Bu eğitimde RegEx'in temellerini öğrenebilirsin."
+  "lessons.regex101.description": "Bu eğitimde RegEx'in temellerini öğrenebilirsin.",
+
+  "lessons.regexForSeo.title": "SEO için Regex",
+  "lessons.regexForSeo.description": "---"
 }

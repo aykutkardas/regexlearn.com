@@ -13,7 +13,7 @@
   background-position: center;
   border-radius: 12px;
   padding: 12px;
-  margin: 0 auto;
+  margin: 5px auto;
 }
 
 .LessonBox:hover {
@@ -21,6 +21,8 @@
 }
 
 .LessonBoxLock {
+  cursor: normal;
+  user-select: none;
   text-align: center;
   background-image: url(/images/lesson-card-lock-bg.png);
 }
