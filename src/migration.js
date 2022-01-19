@@ -15,7 +15,7 @@ export async function migration() {
     await lookie.remove('lastStep');
   };
 
-  const isValidCurrentStep = typeof lookie.get('lesson.regex101').currentStep === 'number';
+  const isValidCurrentStep = typeof lookie.get('lesson.regex101')?.currentStep === 'number';
 
   if (!isValidCurrentStep) {
     await lookie.set('lesson.regex101', {
