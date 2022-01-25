@@ -13,7 +13,12 @@ const ShortcutSwitch = dynamic(import('src/components/ShortcutSwitch'), { ssr: f
 
 function Header({ isLearnPage }) {
   return (
-    <header className="container">
+    <header
+      className={cx({
+        container: !isLearnPage,
+        'container-fluid': isLearnPage,
+      })}
+    >
       <div className="row">
         <div className="col-sm-12">
           <div className={styles.Header}>
