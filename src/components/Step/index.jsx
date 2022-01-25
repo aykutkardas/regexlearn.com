@@ -1,7 +1,6 @@
 import ReactDOM from 'react-dom';
 import { useState, useEffect } from 'react';
 import { useIntl } from 'react-intl';
-import confetti from 'canvas-confetti';
 
 import InteractiveArea from 'src/components/InteractiveArea';
 import Progress from 'src/components/Progress';
@@ -31,19 +30,6 @@ function Step({ lessonName, data, step, steps, error: parentError, onChangeSucce
   }, []);
 
   const isInteractive = data.interactive !== false;
-
-  if (step === steps.length - 1) {
-    confetti({
-      particleCount: 400,
-      startVelocity: 30,
-      gravity: 0.5,
-      spread: 350,
-      origin: {
-        x: 0.5,
-        y: 0.4,
-      },
-    })
-  }
 
   return (
     <div className={styles.Step}>

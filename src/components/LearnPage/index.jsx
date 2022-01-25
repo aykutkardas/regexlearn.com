@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import lookie from 'lookie';
+import confetti from 'canvas-confetti';
 
 import Header from 'src/components/Header';
 import LearnFooter from 'src/components/LearnFooter';
@@ -11,6 +12,19 @@ export default function LearnPage({ data, lessonName }) {
   const [lastStep, setLastStep] = useState(0);
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState(false);
+
+  const startConfetti = () => {
+    confetti({
+      particleCount: 400,
+      startVelocity: 30,
+      gravity: 0.5,
+      spread: 350,
+      origin: {
+        x: 0.5,
+        y: 0.4,
+      },
+    });
+  };
 
   useEffect(() => {
     const { lastStep = 0, currentStep = lastStep } = lookie.get(lookieKey) || {};
@@ -34,9 +48,17 @@ export default function LearnPage({ data, lessonName }) {
       return;
     }
 
+    const nextStep = step + 1;
+
     if (step < data.length - 1) {
       setError(false);
-      setStep(step + 1);
+      setStep(nextStep);
+    }
+
+    const { lastStep } = lookie.get(lookieKey);
+
+    if (nextStep === data.length - 1 && lastStep < nextStep) {
+      startConfetti();
     }
   }, [step, success, data.length]);
 
