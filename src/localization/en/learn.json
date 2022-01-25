@@ -15,7 +15,7 @@
   "steps.basicMatchers.description": "The character or word we want to find is written directly. It is similar to a normal search process. For example, to find the word `curious` in the text, type the same.",
 
   "steps.dotCharacter.title": "Dot `.`: Any Character",
-  "steps.dotCharacter.description": "The period `.` allows selecting any character, including special characters and spaces.",
+  "steps.dotCharacter.description": "The period `.` allows selecting any character, including special characters and spaces. Type a period (`.`) in the Regex field to proceed.",
 
   "steps.characterSet.title": "Character Sets `[abc]`",
   "steps.characterSet.description": "If one of the characters in a word can be various characters, we write it in square brackets `[]` with all alternative characters. For example, to write an expression that can find all the words in the text, type the characters `a`, `e`, `i`, `o`, `u` adjacently within square brackets `[]`.",
