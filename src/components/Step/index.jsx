@@ -51,7 +51,7 @@ function Step({ lessonName, data, step, steps, error: parentError, onChangeSucce
       />
       {mounted &&
         ReactDOM.createPortal(
-          <Progress total={steps.length - 1} current={step} />,
+          <Progress total={steps.length} current={step + 1} />,
           window.document.getElementById('ProgressArea'),
         )}
     </div>
