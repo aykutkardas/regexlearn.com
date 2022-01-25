@@ -28,7 +28,6 @@ export default function Home() {
     <>
       <Header />
       <Head>
-        <link rel="stylesheet" href="/css/animate.css" />
         <title>{pageTitle}</title>
         <meta name="description" content={pageDescription} />
         <link rel="alternate" hrefLang="en" href="https://regexlearn.com/" />
