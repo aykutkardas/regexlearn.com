@@ -1,18 +1,18 @@
-import { useState, useContext } from 'react';
+import { useState } from 'react';
 import { FormattedMessage } from 'react-intl';
 
 import Icon from 'src/components/Icon';
-import { Context } from 'src/contexts/LanguageContext';
 
 import packageInfo from '../../../package.json';
 
 import * as styles from 'src/components/ReportStep/ReportStep.module.css';
 import { useEffect } from 'react';
+import { useRouter } from 'next/router';
 
 const ReportPlayground = () => {
-  const { lang } = useContext(Context);
-
   const [body, setBody] = useState('');
+  const { query } = useRouter();
+  const { lang } = query;
 
   const title = encodeURI('[Playground]: Type the title here...');
 
@@ -33,7 +33,7 @@ const ReportPlayground = () => {
     
     `),
     );
-  }, []);
+  }, [lang]);
 
   return (
     <div className={styles.ReportStep}>

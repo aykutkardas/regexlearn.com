@@ -1,15 +1,15 @@
-import { useContext } from 'react';
+import { useRouter } from 'next/router';
 import { FormattedMessage } from 'react-intl';
 
 import Icon from 'src/components/Icon';
-import { Context } from 'src/contexts/LanguageContext';
 
 import packageInfo from '../../../package.json';
 
 import * as styles from './ReportStep.module.css';
 
 const ReportStep = ({ data, step }) => {
-  const { lang } = useContext(Context);
+  const { query } = useRouter();
+  const { lang } = query;
 
   const title = encodeURI('[Learn]: Type the title here...');
   const body = encodeURI(`
