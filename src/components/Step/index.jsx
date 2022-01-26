@@ -13,17 +13,17 @@ function Step({ lessonName, data, step, steps, error: parentError, onChangeSucce
   const { formatMessage } = useIntl();
   const [mounted, setMounted] = useState();
 
-  const title = tagWrapper(
-    formatMessage({ id: data.title }),
-    /`(\S*?[^`]*)`/gim,
-    styles.StepTitleWord,
-  ).replace(/\\n/gim, '<br/>');
+  const title = tagWrapper({
+    value: formatMessage({ id: data.title }),
+    regex: /`(\S*?[^`]*)`/gim,
+    attributes: { class: styles.StepTitleWord },
+  }).replace(/\\n/gim, '<br/>');
 
-  const description = tagWrapper(
-    formatMessage({ id: data.description }),
-    /`(\S*?[^`]*)`/gim,
-    styles.StepDescriptionWord,
-  ).replace(/\\n/gim, '<br/>');
+  const description = tagWrapper({
+    value: formatMessage({ id: data.description }),
+    regex: /`(\S*?[^`]*)`/gim,
+    attributes: { class: styles.StepDescriptionWord },
+  }).replace(/\\n/gim, '<br/>');
 
   useEffect(() => {
     setMounted(true);

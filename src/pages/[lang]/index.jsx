@@ -47,11 +47,11 @@ export default function Home() {
               <p
                 className={styles.LandingMainSectionDescription}
                 dangerouslySetInnerHTML={{
-                  __html: tagWrapper(
-                    formatMessage({ id: 'landing.description' }),
-                    /`(\S*?[^`]*)`/gim,
-                    styles.LandingMainSectionDescriptionHighlight,
-                  ),
+                  __html: tagWrapper({
+                    value: formatMessage({ id: 'landing.description' }),
+                    regex: /`(\S*?[^`]*)`/gim,
+                    attributes: { class: styles.LandingMainSectionDescriptionHighlight },
+                  }),
                 }}
               />
               <IntlLink href="/[lang]/learn" passHref>

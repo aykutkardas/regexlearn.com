@@ -69,7 +69,11 @@ const FlagBox = ({ flags, setFlags, onChange }) => {
               <span
                 id={`flag-${name}`}
                 dangerouslySetInnerHTML={{
-                  __html: tagWrapper(name, regex, styles.FlagBoxItemHighlight),
+                  __html: tagWrapper({
+                    value: name,
+                    regex,
+                    attributes: { class: styles.FlagBoxItemHighlight },
+                  }),
                 }}
               />
             </div>

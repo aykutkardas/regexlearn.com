@@ -46,11 +46,11 @@ export default function Learn() {
             <p
               className={styles.SectionDescription}
               dangerouslySetInnerHTML={{
-                __html: tagWrapper(
-                  formatMessage({ id: 'section.learn.content' }),
-                  /`(\S*?[^`]*)`/gim,
-                  styles.SectionHighlight,
-                ),
+                __html: tagWrapper({
+                  value: formatMessage({ id: 'section.learn.content' }),
+                  regex: /`(\S*?[^`]*)`/gim,
+                  attributes: { class: styles.SectionHighlight },
+                }),
               }}
             />
           </div>

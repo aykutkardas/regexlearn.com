@@ -39,11 +39,11 @@ export default function Section({
           <p
             className={styles.SectionDescription}
             dangerouslySetInnerHTML={{
-              __html: tagWrapper(
-                formatMessage({ id: description }),
-                /`(\S*?[^`]*)`/gim,
-                styles.SectionHighlight,
-              ),
+              __html: tagWrapper({
+                value: formatMessage({ id: description }),
+                regex: /`(\S*?[^`]*)`/gim,
+                attributes: { class: styles.SectionHighlight },
+              }),
             }}
           />
           {isShowButton && (

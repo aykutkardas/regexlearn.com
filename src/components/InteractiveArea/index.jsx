@@ -57,7 +57,13 @@ function InteractiveArea({ lessonName, data, step, isShow, parentError, onChange
       setSuccess(isSuccess);
 
       if (regex) {
-        setContent(tagWrapper(data.content, $regex, styles.InteractiveAreaResultTag));
+        setContent(
+          tagWrapper({
+            value: data.content,
+            regex: $regex,
+            attributes: { class: styles.InteractiveAreaResultTag },
+          }),
+        );
       } else {
         setContent(data.content);
       }

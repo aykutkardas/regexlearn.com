@@ -17,7 +17,13 @@ function CheatsheetDemo({ data }) {
     const { $regex } = checkRegex(data, { regex, flags: 'gmi' });
 
     if ($regex) {
-      setContent(tagWrapper(initialContent, $regex, styles.CheatsheetDemoResultTag));
+      setContent(
+        tagWrapper({
+          value: initialContent,
+          regex: $regex,
+          attributes: { class: styles.CheatsheetDemoResultTag },
+        }),
+      );
     } else {
       setContent(initialContent);
     }
