@@ -1,6 +1,6 @@
 import { defaultLocale } from 'src/localization';
 
-const getIntlPath = ({ href, lang, query = {}, toStringHref = false }) => {
+const getIntlPath = ({ href, lang, query = {} }) => {
   let pathname = href;
 
   if (lang === defaultLocale) {
