@@ -44,7 +44,7 @@ const LanguageSwitch = () => {
       >
         {getAvailableList().map(({ label, value }) => (
           <a
-            href={getIntlPath({ href: pathname, lang: value, query, toStringHref: true })}
+            href={getIntlPath({ href: pathname, lang: value, query })}
             key={value}
             onClick={closeLanguageList}
             className={styles.LanguageSwitchListItem}
