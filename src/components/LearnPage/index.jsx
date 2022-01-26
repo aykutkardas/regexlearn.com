@@ -1,4 +1,5 @@
-import React, { useEffect, useState, useCallback } from 'react';
+import React, { useEffect, useState } from 'react';
+import useEventListener from '@use-it/event-listener';
 import lookie from 'lookie';
 import confetti from 'canvas-confetti';
 
@@ -34,13 +35,13 @@ export default function LearnPage({ data, lessonName }) {
     setSuccess(currentStep < lastStep);
   }, [lookieKey]);
 
-  const prevStep = useCallback(() => {
+  const prevStep = () => {
     if (step > 0) {
       setStep(step - 1);
     }
-  }, [step, setStep]);
+  };
 
-  const nextStep = useCallback(() => {
+  const nextStep = () => {
     if (!success) {
       setError(true);
       clearTimeout(window.learnErrorTimer);
@@ -60,29 +61,22 @@ export default function LearnPage({ data, lessonName }) {
     if (nextStep === data.length - 1 && lastStep < nextStep) {
       startConfetti();
     }
-  }, [step, success, data.length]);
+  };
 
   const onChangeSuccess = status => setSuccess(status);
 
-  const handleChangeStep = useCallback(
-    e => {
-      if (e.key === 'Enter') {
-        e.preventDefault();
-        if (e.shiftKey) {
-          prevStep();
-        } else {
-          nextStep();
-        }
+  const handleChangeStep = e => {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      if (e.shiftKey) {
+        prevStep();
+      } else {
+        nextStep();
       }
-    },
-    [nextStep, prevStep],
-  );
+    }
+  };
 
-  useEffect(() => {
-    document.addEventListener('keypress', handleChangeStep);
-
-    return () => document.removeEventListener('keypress', handleChangeStep);
-  }, [step, success, handleChangeStep]);
+  useEventListener('keypress', handleChangeStep);
 
   useEffect(() => {
     const progress = lookie.get(lookieKey) || {};

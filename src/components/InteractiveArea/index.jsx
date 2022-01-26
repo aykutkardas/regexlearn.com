@@ -1,16 +1,16 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import { useState, useEffect, useRef } from 'react';
 import { FormattedMessage, useIntl } from 'react-intl';
+import useEventListener from '@use-it/event-listener';
 import cx from 'classnames';
 import dynamic from 'next/dynamic';
 import lookie from 'lookie';
 
+import FlagBox from 'src/components/FlagBox';
 import setCaretPosition from 'src/utils/setCaretPosition';
 import tagWrapper from 'src/utils/tagWrapper';
 import isSafari from 'src/utils/isSafari';
 import checkRegex from 'src/utils/checkRegex';
 
-const FlagBox = dynamic(import('src/components/FlagBox'), { ssr: false });
 const ReportStep = dynamic(import('src/components/ReportStep'), { ssr: false });
 const Hint = dynamic(import('src/components/Hint'), { ssr: false });
 
@@ -107,6 +107,7 @@ function InteractiveArea({ lessonName, data, step, isShow, parentError, onChange
       setCaretPosition(regexInput.current, data.cursorPosition || 0);
       focusInput();
     });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [step, data.cursorPosition]);
 
   useEffect(() => {
@@ -119,12 +120,9 @@ function InteractiveArea({ lessonName, data, step, isShow, parentError, onChange
     focusInput();
   };
 
-  useEffect(() => {
-    document.addEventListener('keydown', handleFocus);
-    return () => document.removeEventListener('keydown', handleFocus);
-  }, []);
+  useEventListener('keydown', handleFocus);
 
-  useEffect(applyRegex, [regex, flags, step]);
+  useEffect(applyRegex, [regex, flags, step, data, isChanged, isSafariAccept]);
 
   if (!isShow) return null;
 
