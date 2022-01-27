@@ -29,9 +29,9 @@ function InteractiveArea({ lessonName, data, step, isShow, parentError, onChange
 
   const [isSafariAccept, setIsSafariAccept] = useState();
 
-  useState(() => {
+  useEffect(() => {
     setIsSafariAccept(isSafari() && data.safariAccept);
-  }, []);
+  }, [step, data.safariAccept]);
 
   const skipStep = () => {
     setError(false);
