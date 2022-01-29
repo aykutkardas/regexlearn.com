@@ -1,8 +1,9 @@
 export const langNames = {
   en: 'EN',
   es: 'ES',
-  tr: 'TR',
+  'pt-br': 'PT-BR',
   ru: 'RU',
+  tr: 'TR',
   'zh-cn': 'ZH-CN',
 };
 
