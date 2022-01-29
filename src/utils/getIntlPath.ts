@@ -1,19 +1,14 @@
 import { defaultLocale, Locales } from 'src/localization';
 
-type Query = {
+export type Query = {
   lang?: Locales;
   [key: string]: string;
 };
 
 type GetIntlPathArgs = {
   href: string;
-  lang?: Locales;
+  lang?: string | string[];
   query?: Query;
-};
-
-type IntlPath = {
-  pathname: string;
-  query: Query;
 };
 
 const getIntlPath = ({ href, lang, query = {} }: GetIntlPathArgs): string => {

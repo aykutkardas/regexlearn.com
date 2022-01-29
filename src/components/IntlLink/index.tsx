@@ -1,15 +1,26 @@
-import Link from 'next/link';
 import { useRouter } from 'next/router';
+import Link from 'next/link';
 import { defaultLocale } from 'src/localization';
-import getIntlPath from 'src/utils/getIntlPath';
+import getIntlPath, { Query } from 'src/utils/getIntlPath';
 
-const IntlLink = ({ href, children, lang, query, passHref = false }) => {
+type IntlLinkProps = {
+  href: string;
+  lang?: string;
+  query?: Query;
+  passHref: boolean;
+};
+
+const IntlLink: React.FC<IntlLinkProps> = ({
+  href,
+  children,
+  lang,
+  query = {},
+  passHref = false,
+}) => {
   const { query: routerQuery, pathname } = useRouter();
   const currentLang = lang || routerQuery.lang || defaultLocale;
 
-  const intlLink = currentLang ? getIntlPath({ href, lang: currentLang, query }) : href;
-
-  const intlPathName = intlLink?.pathname || intlLink;
+  const intlPathName = currentLang ? getIntlPath({ href, lang: currentLang, query }) : href;
 
   const newPathname =
     currentLang === defaultLocale
@@ -24,7 +35,7 @@ const IntlLink = ({ href, children, lang, query, passHref = false }) => {
       : children;
 
   return (
-    <Link href={intlLink} passHref={passHref}>
+    <Link href={intlPathName} passHref={passHref}>
       {content}
     </Link>
   );
