@@ -4,10 +4,10 @@ import cx from 'classnames';
 
 import Icon from 'src/components/Icon';
 
-import * as styles from './ShortcutSwitch.module.css';
+import styles from './ShortcutSwitch.module.css';
 
-const ShortcutSwitch = () => {
-  const [hidden, setHidden] = useState(false);
+const ShortcutSwitch: React.FC = () => {
+  const [hidden, setHidden] = useState<boolean>(false);
 
   useEffect(() => {
     setHidden(lookie.get('shortcutHidden'));

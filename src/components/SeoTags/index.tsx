@@ -1,6 +1,13 @@
 const baseURL = 'https://regexlearn.com';
 
-const SeoTags = ({
+type SeoTagsProps = {
+  title: string;
+  description: string;
+  href: string;
+  image: string;
+};
+
+const SeoTags: React.FC<SeoTagsProps> = ({
   title,
   description,
   href = '',
