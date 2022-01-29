@@ -7,14 +7,12 @@ import CheatsheetSidebarItemInner from 'src/components/CheatsheetSidebarItemInne
 
 import data from 'src/data/cheatsheet.json';
 
-import * as styles from './CheatsheetSidebar.module.css';
+import styles from './CheatsheetSidebar.module.css';
 
-const CategoryTitle = ({ label, ...props }) => <div {...props}>{label}</div>;
-
-const CheatsheetSidebar = () => {
+const CheatsheetSidebar: React.FC = () => {
   const { formatMessage } = useIntl();
-  const [activeCategory, setActiveCategory] = useState();
-  const [mounted, setMounted] = useState(false);
+  const [activeCategory, setActiveCategory] = useState<string | null>(null);
+  const [mounted, setMounted] = useState<boolean>(false);
 
   const Wrapper = mounted ? Scrollbars : Fragment;
   const props = mounted
@@ -45,13 +43,14 @@ const CheatsheetSidebar = () => {
               open={activeCategory === row.title}
               triggerDisabled={activeCategory !== row.title}
               title={
-                <CategoryTitle
+                <div
                   className={styles.CategoryTitleInner}
                   onClick={() => setActiveCategory(row.title)}
-                  label={formatMessage({ id: row.title })}
+                  children={formatMessage({ id: row.title })}
                 />
               }
-              description={row.description}
+              description={undefined}
+              titleClassName={undefined}
             >
               <CheatsheetSidebarItemInner data={row.data} />
             </Collapse>

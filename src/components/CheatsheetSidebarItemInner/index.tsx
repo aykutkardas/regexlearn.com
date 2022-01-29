@@ -4,12 +4,10 @@ import Collapse from 'src/components/Collapse';
 import CheatsheetItemTitle from 'src/components/CheatsheetItemTitle';
 import CheatsheetDemo from 'src/components/CheatsheetDemo';
 
-import * as styles from './CheatsheetSidebarItemInner.module.css';
-
-const CheatsheetTitle = ({ ...props }) => <CheatsheetItemTitle {...props} />;
+import styles from './CheatsheetSidebarItemInner.module.css';
 
 const CheatsheetSidebarItemInner = ({ data }) => {
-  const [activeCheatsheet, setActiveCheatsheet] = useState();
+  const [activeCheatsheet, setActiveCheatsheet] = useState<string | null>(null);
 
   return (
     <div>
@@ -22,7 +20,9 @@ const CheatsheetSidebarItemInner = ({ data }) => {
           className={styles.CheatsheetTitle}
           contentClassName={styles.CheatsheetContent}
           openedClassName={styles.CheatsheetTitleOpened}
-          title={<CheatsheetTitle onClick={() => setActiveCheatsheet(item.title)} data={item} />}
+          title={
+            <CheatsheetItemTitle onClick={() => setActiveCheatsheet(item.title)} data={item} />
+          }
         >
           <CheatsheetDemo data={item} />
         </Collapse>

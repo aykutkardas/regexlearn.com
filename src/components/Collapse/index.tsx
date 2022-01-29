@@ -5,10 +5,29 @@ import cx from 'classnames';
 
 import Icon from 'src/components/Icon';
 
-import * as styles from './Collapse.module.css';
+import styles from './Collapse.module.css';
 
-function Collapse({ title, description, children, titleClassName, contentClassName, ...props }) {
-  const [show, setShow] = useState(false);
+type CollapseProps = {
+  title: any;
+  className?: string;
+  openedClassName?: string;
+  open?: boolean;
+  triggerDisabled?: boolean;
+  description: string;
+  children: any;
+  titleClassName?: string;
+  contentClassName?: string;
+};
+
+const Collapse: React.FC<CollapseProps> = ({
+  title,
+  description,
+  children,
+  titleClassName,
+  contentClassName,
+  ...props
+}) => {
+  const [show, setShow] = useState<boolean>(false);
 
   return (
     <Collapsible
@@ -37,6 +56,6 @@ function Collapse({ title, description, children, titleClassName, contentClassNa
       </div>
     </Collapsible>
   );
-}
+};
 
 export default Collapse;

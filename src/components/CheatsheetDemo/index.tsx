@@ -2,14 +2,22 @@ import { useState, useEffect } from 'react';
 import { useIntl } from 'react-intl';
 import cx from 'classnames';
 
-import * as styles from './CheatsheetDemo.module.css';
-
 import checkRegex from 'src/utils/checkRegex';
 import tagWrapper from 'src/utils/tagWrapper';
 
-function CheatsheetDemo({ data }) {
-  const [regex] = useState(data.regex || '');
-  const [content, setContent] = useState(null);
+import styles from './CheatsheetDemo.module.css';
+
+type CheatsheetDemoProps = {
+  data: {
+    regex: string;
+    flags: string;
+    content: string;
+  };
+};
+
+const CheatsheetDemo: React.FC<CheatsheetDemoProps> = ({ data }) => {
+  const [regex] = useState<string>(data.regex || '');
+  const [content, setContent] = useState<string | null>(null);
   const { formatMessage } = useIntl();
   const initialContent = data.content;
 
@@ -51,6 +59,6 @@ function CheatsheetDemo({ data }) {
       </div>
     </div>
   );
-}
+};
 
 export default CheatsheetDemo;
