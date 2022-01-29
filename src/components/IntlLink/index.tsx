@@ -8,15 +8,10 @@ type IntlLinkProps = {
   lang?: string;
   query?: Query;
   passHref: boolean;
+  children: any;
 };
 
-const IntlLink: React.FC<IntlLinkProps> = ({
-  href,
-  children,
-  lang,
-  query = {},
-  passHref = false,
-}) => {
+const IntlLink = ({ href, children, lang, query = {}, passHref = false }: IntlLinkProps) => {
   const { query: routerQuery, pathname } = useRouter();
   const currentLang = lang || routerQuery.lang || defaultLocale;
 

@@ -4,15 +4,15 @@ type SeoTagsProps = {
   title: string;
   description: string;
   href: string;
-  image: string;
+  image?: string;
 };
 
-const SeoTags: React.FC<SeoTagsProps> = ({
+const SeoTags = ({
   title,
   description,
   href = '',
   image = baseURL + '/images/og-regexlearn-image.jpg',
-}) => (
+}: SeoTagsProps) => (
   <>
     {/* <!-- Facebook Meta Tags --> */}
     <meta property="og:url" content={baseURL + href} />

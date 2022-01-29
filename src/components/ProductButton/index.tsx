@@ -1,6 +1,6 @@
 import styles from '../../pages/[lang]/Home.module.css';
 
-const ProductButton: React.FC = () => (
+const ProductButton = () => (
   <div className={styles.ProductHuntButtonWrapper}>
     <a
       href="https://www.producthunt.com/posts/regexlearn?utm_source=badge-top-post-badge&utm_medium=badge&utm_souce=badge-regexlearn"

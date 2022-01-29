@@ -2,7 +2,7 @@ import Icon from 'src/components/Icon';
 
 import styles from './Social.module.css';
 
-const Social: React.FC = () => (
+const Social = () => (
   <>
     <a
       href="https://github.com/aykutkardas/regexlearn.com"

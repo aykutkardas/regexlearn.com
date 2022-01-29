@@ -15,7 +15,7 @@ type CheatsheetDemoProps = {
   };
 };
 
-const CheatsheetDemo: React.FC<CheatsheetDemoProps> = ({ data }) => {
+const CheatsheetDemo = ({ data }: CheatsheetDemoProps) => {
   const [regex] = useState<string>(data.regex || '');
   const [content, setContent] = useState<string | null>(null);
   const { formatMessage } = useIntl();

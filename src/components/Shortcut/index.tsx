@@ -5,10 +5,10 @@ import useOS from 'src/utils/useOS';
 import styles from './Shortcut.module.css';
 
 type ShortcutProps = {
-  command?: string;
+  command: string;
 };
 
-const Shortcut: React.FC<ShortcutProps> = ({ command }) => {
+const Shortcut = ({ command }: ShortcutProps) => {
   const { isMacOS, isDesktop } = useOS();
 
   if (!isDesktop) return null;

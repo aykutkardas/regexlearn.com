@@ -19,14 +19,14 @@ type CollapseProps = {
   contentClassName?: string;
 };
 
-const Collapse: React.FC<CollapseProps> = ({
+const Collapse = ({
   title,
   description,
   children,
   titleClassName,
   contentClassName,
   ...props
-}) => {
+}: CollapseProps) => {
   const [show, setShow] = useState<boolean>(false);
 
   return (

@@ -9,7 +9,7 @@ import data from 'src/data/cheatsheet.json';
 
 import styles from './CheatsheetSidebar.module.css';
 
-const CheatsheetSidebar: React.FC = () => {
+const CheatsheetSidebar = () => {
   const { formatMessage } = useIntl();
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
   const [mounted, setMounted] = useState<boolean>(false);
@@ -46,8 +46,9 @@ const CheatsheetSidebar: React.FC = () => {
                 <div
                   className={styles.CategoryTitleInner}
                   onClick={() => setActiveCategory(row.title)}
-                  children={formatMessage({ id: row.title })}
-                />
+                >
+                  {formatMessage({ id: row.title })}
+                </div>
               }
               description={undefined}
               titleClassName={undefined}

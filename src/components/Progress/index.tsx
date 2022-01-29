@@ -8,7 +8,7 @@ type ProgressProps = {
   showProgressText: boolean;
 };
 
-const Progress: React.FC<ProgressProps> = ({ current, total, showProgressText = true }) => (
+const Progress = ({ current, total, showProgressText = true }: ProgressProps) => (
   <div className={styles.Progress}>
     <div className={styles.ProgressBar}>
       <div className={styles.ProgressLine} style={{ width: `${toPercent(current, total)}%` }} />

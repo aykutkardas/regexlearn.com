@@ -6,7 +6,7 @@ import Icon from 'src/components/Icon';
 
 import styles from './ShortcutSwitch.module.css';
 
-const ShortcutSwitch: React.FC = () => {
+const ShortcutSwitch = () => {
   const [hidden, setHidden] = useState<boolean>(false);
 
   useEffect(() => {

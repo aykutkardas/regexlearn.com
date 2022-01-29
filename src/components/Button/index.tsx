@@ -10,9 +10,10 @@ const variants = {
 type ButtonProps = {
   variant: 'primary' | 'github';
   className?: string;
+  children: any;
 };
 
-const Button: React.FC<ButtonProps> = ({ children, variant, className, ...props }) => (
+const Button = ({ children, variant, className, ...props }: ButtonProps) => (
   <button className={cx(styles.Button, variants[variant], className)} {...props}>
     {children}
   </button>

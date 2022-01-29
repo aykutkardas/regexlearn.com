@@ -10,8 +10,6 @@ type IconArgs = {
   onClick?: Function;
 };
 
-const Icon: React.FC<IconArgs> = ({ icon, ...props }) => (
-  <IcoMoon iconSet={iconSet} icon={icon} {...props} />
-);
+const Icon = (props: IconArgs) => <IcoMoon iconSet={iconSet} {...props} />;
 
 export default Icon;

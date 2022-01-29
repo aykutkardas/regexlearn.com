@@ -13,7 +13,7 @@ type CheatsheetItemTitleProps = {
   className?: string;
 };
 
-const CheatsheetItemTitle: React.FC<CheatsheetItemTitleProps> = ({ data, className, ...props }) => (
+const CheatsheetItemTitle = ({ data, className, ...props }: CheatsheetItemTitleProps) => (
   <div {...props} className={cx(styles.CheatsheetItemTitle, className)}>
     <span className={styles.CheatsheetItemTitleCodeWrapper}>
       <code className={styles.CheatsheetItemTitleCode}>{data.code}</code>
