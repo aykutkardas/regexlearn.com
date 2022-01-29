@@ -33,6 +33,8 @@
     "ua-parser-js": "^1.0.2"
   },
   "devDependencies": {
+    "@types/node": "^17.0.13",
+    "@types/react": "^17.0.38",
     "eslint": "7",
     "eslint-config-next": "12.0.3",
     "typescript": "^4.5.5"
