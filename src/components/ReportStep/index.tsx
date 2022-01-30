@@ -3,18 +3,23 @@ import { FormattedMessage } from 'react-intl';
 
 import Icon from 'src/components/Icon';
 
-import packageInfo from '../../../package.json';
+import packageInfo from 'package.json';
 
-import * as styles from './ReportStep.module.css';
+import styles from './ReportStep.module.css';
 
-const ReportStep = ({ data, step }) => {
+type ReportStepProps = {
+  title?: string;
+  step: number;
+};
+
+const ReportStep = ({ title: stepTitle, step }: ReportStepProps) => {
   const { query } = useRouter();
   const { lang } = query;
 
   const title = encodeURI('[Learn]: Type the title here...');
   const body = encodeURI(`
 **Step Number:** \`${step}\`
-**Step Name:** \`${data.title}\`
+**Step Name:** \`${stepTitle}\`
 **Language:** \`${lang}\`
 **Version:** \`v${packageInfo.version}\`
 

@@ -1,13 +1,12 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { FormattedMessage } from 'react-intl';
+import { useRouter } from 'next/router';
 
 import Icon from 'src/components/Icon';
 
-import packageInfo from '../../../package.json';
+import packageInfo from 'package.json';
 
-import * as styles from 'src/components/ReportStep/ReportStep.module.css';
-import { useEffect } from 'react';
-import { useRouter } from 'next/router';
+import styles from 'src/components/ReportStep/ReportStep.module.css';
 
 const ReportPlayground = () => {
   const [body, setBody] = useState('');

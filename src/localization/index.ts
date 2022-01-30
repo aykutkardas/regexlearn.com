@@ -9,5 +9,3 @@ export const langNames = {
 export const defaultLocale = 'en';
 
 export const locales = Object.keys(langNames);
-
-export type Locales = 'en' | 'es' | 'tr' | 'ru' | 'zh-cn';

@@ -1,4 +1,4 @@
-import * as styles from './Checkbox.module.css';
+import styles from './Checkbox.module.css';
 
 const Checkbox = ({ children, ...props }) => (
   <label className={styles.Checkbox} htmlFor={props.id}>

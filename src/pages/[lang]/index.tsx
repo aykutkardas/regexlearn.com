@@ -1,3 +1,4 @@
+import { GetStaticPaths, GetStaticProps } from 'next';
 import { FormattedMessage, useIntl } from 'react-intl';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
@@ -13,11 +14,11 @@ import Icon from 'src/components/Icon';
 import Header from 'src/components/Header';
 import Footer from 'src/components/Footer';
 import Section from 'src/components/Section';
-
-import * as styles from './Home.module.css';
 import IntlLink from 'src/components/IntlLink';
 
-export default function Home() {
+import styles from './Home.module.css';
+
+const PageHome = () => {
   const { formatMessage } = useIntl();
   const { asPath } = useRouter();
 
@@ -26,7 +27,6 @@ export default function Home() {
 
   return (
     <>
-      <Header />
       <Head>
         <title>{pageTitle}</title>
         <meta name="description" content={pageDescription} />
@@ -37,6 +37,7 @@ export default function Home() {
         <link rel="alternate" hrefLang="zh-cn" href="https://regexlearn.com/zh-cn/" />
         <SeoTags title={pageTitle} description={pageDescription} href={asPath} />
       </Head>
+      <Header />
       <div className="container">
         <div className={cx('row', styles.LandingMainSection)}>
           <div className="col-xs-12 col-sm-12 col-md-6">
@@ -148,9 +149,11 @@ export default function Home() {
       <Footer />
     </>
   );
-}
+};
 
-export async function getStaticProps({ params }) {
+export default PageHome;
+
+export const getStaticProps: GetStaticProps = async ({ params }) => {
   const lang = params.lang || defaultLocale;
   const messages = require(`src/localization/${lang}/`)?.default;
 
@@ -160,9 +163,9 @@ export async function getStaticProps({ params }) {
       messages,
     },
   };
-}
+};
 
-export async function getStaticPaths() {
+export const getStaticPaths: GetStaticPaths = async () => {
   return {
     fallback: false,
     paths: locales.map(lang => ({
@@ -171,4 +174,4 @@ export async function getStaticPaths() {
       },
     })),
   };
-}
+};

@@ -5,29 +5,45 @@ import cx from 'classnames';
 import dynamic from 'next/dynamic';
 import lookie from 'lookie';
 
+const ReportStep = dynamic(import('src/components/ReportStep'), { ssr: false });
+const Hint = dynamic(import('src/components/Hint'), { ssr: false });
 import FlagBox from 'src/components/FlagBox';
 import setCaretPosition from 'src/utils/setCaretPosition';
 import tagWrapper from 'src/utils/tagWrapper';
 import isSafari from 'src/utils/isSafari';
 import checkRegex from 'src/utils/checkRegex';
+import { LessonData } from 'src/types';
 
-const ReportStep = dynamic(import('src/components/ReportStep'), { ssr: false });
-const Hint = dynamic(import('src/components/Hint'), { ssr: false });
+import styles from './InteractiveArea.module.css';
 
-import * as styles from './InteractiveArea.module.css';
+type InteractiveAreaProps = {
+  lessonName: string;
+  data: LessonData;
+  step: number;
+  isShow?: boolean;
+  parentError: boolean;
+  onChangeSuccess: Function;
+};
 
-function InteractiveArea({ lessonName, data, step, isShow, parentError, onChangeSuccess }) {
+const InteractiveArea = ({
+  lessonName,
+  data,
+  step,
+  isShow,
+  parentError,
+  onChangeSuccess,
+}: InteractiveAreaProps) => {
   const { formatMessage } = useIntl();
-  const regexInput = useRef(null);
+  const regexInput = useRef<HTMLInputElement>(null);
   const [regex, setRegex] = useState(data.initialValue || '');
   const [flags, setFlags] = useState(data.initialFlags || '');
+  const [content, setContent] = useState('');
   const [isChanged, setIsChanged] = useState(false);
-  const [content, setContent] = useState(null);
   const [error, setError] = useState(false);
   const [success, setSuccess] = useState(false);
   const [match, setMatch] = useState(false);
 
-  const [isSafariAccept, setIsSafariAccept] = useState();
+  const [isSafariAccept, setIsSafariAccept] = useState(false);
 
   useEffect(() => {
     setIsSafariAccept(isSafari() && data.safariAccept);
@@ -39,13 +55,13 @@ function InteractiveArea({ lessonName, data, step, isShow, parentError, onChange
   };
 
   const applyRegex = () => {
-    if (data.interactive === false) return true;
+    if (data.interactive === false) return;
 
     if (isSafariAccept) {
       const isTrueRegex = data.regex[0] == regex;
       setError(!isTrueRegex);
       setSuccess(isTrueRegex);
-      return true;
+      return;
     }
 
     const { isSuccess, isMatch, err, $regex } = checkRegex(data, { regex, flags });
@@ -126,6 +142,11 @@ function InteractiveArea({ lessonName, data, step, isShow, parentError, onChange
     focusInput();
   };
 
+  const handleChangeFlags = flags => {
+    setFlags(flags);
+    setIsChanged(true);
+  };
+
   useEventListener('keydown', handleFocus);
 
   useEffect(applyRegex, [regex, flags, step, data, isChanged, isSafariAccept]);
@@ -161,7 +182,7 @@ function InteractiveArea({ lessonName, data, step, isShow, parentError, onChange
         className={styles.InteractiveAreaBlockRegex}
         data-title={formatMessage({ id: 'general.regex' })}
       >
-        <ReportStep data={data} step={step} />
+        <ReportStep title={data.title} step={step} />
         <Hint regex={data.regex} flags={data.flags} />
         <div className={styles.InteractiveAreaInputWrapper} data-flags={flags}>
           <input
@@ -177,12 +198,10 @@ function InteractiveArea({ lessonName, data, step, isShow, parentError, onChange
             spellCheck={false}
           />
         </div>
-        {data.useFlagsControl && (
-          <FlagBox onChange={setIsChanged} flags={flags} setFlags={setFlags} />
-        )}
+        {data.useFlagsControl && <FlagBox flags={flags} setFlags={handleChangeFlags} />}
       </div>
     </div>
   );
-}
+};
 
 export default InteractiveArea;

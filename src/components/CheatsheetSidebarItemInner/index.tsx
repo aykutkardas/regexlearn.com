@@ -3,11 +3,16 @@ import { useState } from 'react';
 import Collapse from 'src/components/Collapse';
 import CheatsheetItemTitle from 'src/components/CheatsheetItemTitle';
 import CheatsheetDemo from 'src/components/CheatsheetDemo';
+import { CheatsheetData } from 'src/types';
 
 import styles from './CheatsheetSidebarItemInner.module.css';
 
-const CheatsheetSidebarItemInner = ({ data }) => {
-  const [activeCheatsheet, setActiveCheatsheet] = useState<string | null>(null);
+type Props = {
+  data: CheatsheetData[];
+};
+
+const CheatsheetSidebarItemInner = ({ data }: Props) => {
+  const [activeCheatsheet, setActiveCheatsheet] = useState('');
 
   return (
     <div>

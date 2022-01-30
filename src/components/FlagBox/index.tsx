@@ -1,12 +1,11 @@
 import useEventListener from '@use-it/event-listener';
 
-import * as styles from './FlagBox.module.css';
-
 import Checkbox from 'src/components/Checkbox';
 import Shortcut from 'src/components/Shortcut';
-
 import tagWrapper from 'src/utils/tagWrapper';
 import shortcuts from 'src/shortcuts';
+
+import styles from './FlagBox.module.css';
 
 const flagList = [
   {
@@ -29,14 +28,18 @@ const flagList = [
   },
 ];
 
-const FlagBox = ({ flags, setFlags, onChange }) => {
+type FlagBoxProps = {
+  flags: string;
+  setFlags: Function;
+};
+
+const FlagBox = ({ flags, setFlags }: FlagBoxProps) => {
   const toggleFlag = flag => {
     if (flags?.includes(flag)) {
       setFlags(flags.replace(flag, ''));
     } else {
       setFlags((flags || '') + flag);
     }
-    onChange?.(true);
   };
 
   const handleFlagKey = e => {

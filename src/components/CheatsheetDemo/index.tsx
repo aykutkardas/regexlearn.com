@@ -4,25 +4,21 @@ import cx from 'classnames';
 
 import checkRegex from 'src/utils/checkRegex';
 import tagWrapper from 'src/utils/tagWrapper';
+import { CheatsheetData } from 'src/types';
 
 import styles from './CheatsheetDemo.module.css';
 
 type CheatsheetDemoProps = {
-  data: {
-    regex: string;
-    flags: string;
-    content: string;
-  };
+  data: CheatsheetData;
 };
 
 const CheatsheetDemo = ({ data }: CheatsheetDemoProps) => {
-  const [regex] = useState<string>(data.regex || '');
-  const [content, setContent] = useState<string | null>(null);
+  const [content, setContent] = useState('');
   const { formatMessage } = useIntl();
   const initialContent = data.content;
 
   const applyRegex = () => {
-    const { $regex } = checkRegex(data, { regex, flags: 'gmi' });
+    const { $regex } = checkRegex(data, { regex: data.regex, flags: 'gmi' });
 
     if ($regex) {
       setContent(
@@ -54,7 +50,7 @@ const CheatsheetDemo = ({ data }: CheatsheetDemoProps) => {
         data-title={formatMessage({ id: 'general.regex' })}
       >
         <span className={styles.CheatsheetDemoHiglightText} data-flags={data.flags}>
-          {regex}
+          {data.regex}
         </span>
       </div>
     </div>

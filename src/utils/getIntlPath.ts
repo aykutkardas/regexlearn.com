@@ -1,14 +1,10 @@
-import { defaultLocale, Locales } from 'src/localization';
-
-export type Query = {
-  lang?: Locales;
-  [key: string]: string;
-};
+import { ParsedUrlQuery } from 'querystring';
+import { defaultLocale } from 'src/localization';
 
 type GetIntlPathArgs = {
   href: string;
   lang?: string | string[];
-  query?: Query;
+  query?: ParsedUrlQuery;
 };
 
 const getIntlPath = ({ href, lang, query = {} }: GetIntlPathArgs): string => {

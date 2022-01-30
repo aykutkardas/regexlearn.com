@@ -1,25 +1,44 @@
 import { Fragment, useEffect, useState } from 'react';
 import { useIntl, FormattedMessage } from 'react-intl';
-
-import IntlLink from '../IntlLink';
-import Icon from '../Icon';
-import * as styles from './LessonBox.module.css';
-import cx from 'classnames';
 import lookie from 'lookie';
+import cx from 'classnames';
 
-const LessonBox = ({ data, lock }) => {
-  const Wrapper = lock ? Fragment : IntlLink;
-  const props = lock ? {} : { href: `/[lang]/learn/[lesson]`, query: { lesson: data.key } };
+import IntlLink from 'src/components/IntlLink';
+import Icon from 'src/components/Icon';
+
+import styles from './LessonBox.module.css';
+
+type LessonBoxProps = {
+  data: {
+    key: string;
+    title: string;
+    description: string;
+  };
+  lock?: boolean;
+};
+
+const LessonBox = ({ data, lock }: LessonBoxProps) => {
+  const [isVisit, setIsVisit] = useState(false);
+  const { formatMessage } = useIntl();
+
+  let DynamicWrapper;
+
+  if (lock) {
+    DynamicWrapper = Fragment;
+  } else {
+    const WrapperLessonBox = ({ children }) => (
+      <IntlLink href={`/[lang]/learn/[lesson]`} query={{ lesson: data.key }}>
+        {children}
+      </IntlLink>
+    );
+    DynamicWrapper = WrapperLessonBox;
+  }
 
   let stepCount = 0;
 
   if (data.key) {
     stepCount = require(`src/data/lessons/${data.key}.js`)?.default?.length || 0;
   }
-
-  const { formatMessage } = useIntl();
-
-  const [isVisit, setIsVisit] = useState();
 
   useEffect(() => {
     const lessonData = lookie.get(`lesson.${data.key}`);
@@ -30,7 +49,7 @@ const LessonBox = ({ data, lock }) => {
   const startText = formatMessage({ id: isVisit ? 'general.continue' : 'general.start' });
 
   return (
-    <Wrapper {...props}>
+    <DynamicWrapper>
       <a className={cx(styles.LessonBox, { [styles.LessonBoxLock]: lock })}>
         <div className={styles.LessonBoxDetail}>
           <h2 className={styles.LessonBoxTitle}>
@@ -54,7 +73,7 @@ const LessonBox = ({ data, lock }) => {
           )}
         </div>
       </a>
-    </Wrapper>
+    </DynamicWrapper>
   );
 };
 

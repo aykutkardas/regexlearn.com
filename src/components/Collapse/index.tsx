@@ -27,7 +27,7 @@ const Collapse = ({
   contentClassName,
   ...props
 }: CollapseProps) => {
-  const [show, setShow] = useState<boolean>(false);
+  const [show, setShow] = useState(false);
 
   return (
     <Collapsible

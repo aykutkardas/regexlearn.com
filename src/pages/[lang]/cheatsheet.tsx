@@ -1,3 +1,4 @@
+import { GetStaticPaths, GetStaticProps } from 'next';
 import { FormattedMessage, useIntl } from 'react-intl';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
@@ -7,15 +8,13 @@ import Header from 'src/components/Header';
 import Footer from 'src/components/Footer';
 import Collapse from 'src/components/Collapse';
 import CheatsheetItemTitle from 'src/components/CheatsheetItemTitle';
-
+import CheatsheetDemo from 'src/components/CheatsheetDemo';
+import { defaultLocale, locales } from 'src/localization';
 import data from 'src/data/cheatsheet.json';
 
-import { defaultLocale, locales } from 'src/localization';
-import CheatsheetDemo from 'src/components/CheatsheetDemo';
+import styles from './Cheatsheet.module.css';
 
-import * as styles from './Cheatsheet.module.css';
-
-export default function Cheatsheet() {
+const PageCheatsheet = () => {
   const { formatMessage } = useIntl();
   const { asPath } = useRouter();
 
@@ -26,7 +25,6 @@ export default function Cheatsheet() {
 
   return (
     <>
-      <Header />
       <Head>
         <title>{pageTitle}</title>
         <meta name="description" content={pageDescription} />
@@ -37,6 +35,7 @@ export default function Cheatsheet() {
         <link rel="alternate" hrefLang="zh-cn" href="https://regexlearn.com/zh-cn/cheatsheet" />
         <SeoTags key={pageTitle} title={pageTitle} description={pageDescription} href={asPath} />
       </Head>
+      <Header />
       <div className="container flex-1">
         <div className="row">
           <div className="col-lg-12">
@@ -72,9 +71,11 @@ export default function Cheatsheet() {
       <Footer />
     </>
   );
-}
+};
 
-export async function getStaticProps({ params }) {
+export default PageCheatsheet;
+
+export const getStaticProps: GetStaticProps = async ({ params }) => {
   const lang = params.lang || defaultLocale;
   const messages = require(`src/localization/${lang}/`)?.default;
 
@@ -84,9 +85,9 @@ export async function getStaticProps({ params }) {
       messages,
     },
   };
-}
+};
 
-export async function getStaticPaths() {
+export const getStaticPaths: GetStaticPaths = async () => {
   return {
     fallback: false,
     paths: locales.map(lang => ({
@@ -95,4 +96,4 @@ export async function getStaticPaths() {
       },
     })),
   };
-}
+};

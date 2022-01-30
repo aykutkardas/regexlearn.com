@@ -1,13 +1,14 @@
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import { defaultLocale } from 'src/localization';
-import getIntlPath, { Query } from 'src/utils/getIntlPath';
+import getIntlPath from 'src/utils/getIntlPath';
+import { ParsedUrlQuery } from 'querystring';
 
 type IntlLinkProps = {
   href: string;
   lang?: string;
-  query?: Query;
-  passHref: boolean;
+  query?: ParsedUrlQuery;
+  passHref?: boolean;
   children: any;
 };
 

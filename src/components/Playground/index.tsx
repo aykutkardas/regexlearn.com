@@ -1,16 +1,16 @@
-import { useState, useEffect, useRef, Fragment } from 'react';
-import cx from 'classnames';
+import 'draft-js/dist/Draft.css';
+
+import { useState, useEffect, useRef, Fragment, FormEvent } from 'react';
+import { Editor, EditorState, CompositeDecorator, ContentState, ContentBlock } from 'draft-js';
 import { useIntl } from 'react-intl';
-import { Editor, EditorState, CompositeDecorator, ContentState } from 'draft-js';
 import { Scrollbars } from 'react-custom-scrollbars';
+import cx from 'classnames';
 
 import FlagBox from 'src/components/FlagBox';
 import ReportPlayground from 'src/components/ReportPlayground';
-
 import setCaretPosition from 'src/utils/setCaretPosition';
 
-import * as styles from './Playground.module.css';
-import 'draft-js/dist/Draft.css';
+import styles from './Playground.module.css';
 
 const Highlight = ({ children }) => {
   return <span className={styles.Highlight}>{children}</span>;
@@ -21,13 +21,16 @@ const initialText = `Regular Expressions, abbreviated as Regex or Regexp, are a 
 const initialContent = ContentState.createFromText(initialText);
 
 const Playground = () => {
-  const editor = useRef(null);
-  const regexInput = useRef(null);
-  const { formatMessage } = useIntl();
+  const [mounted, setMounted] = useState(false);
   const [regex, setRegex] = useState('[A-Z]\\w+');
   const [flags, setFlags] = useState('g');
-  const [editorState, setEditorState] = useState(EditorState.createWithContent(initialContent));
-  const [mounted, setMounted] = useState(false);
+  const [editorState, setEditorState] = useState<EditorState>(
+    EditorState.createWithContent(initialContent),
+  );
+
+  const { formatMessage } = useIntl();
+  const regexInput = useRef<HTMLInputElement>(null);
+  const editor = useRef(null);
 
   const Wrapper = mounted ? Scrollbars : Fragment;
   const props = mounted
@@ -47,11 +50,15 @@ const Playground = () => {
 
   const onChangeFlags = flags => {
     setFlags(flags);
-    onChangeRegex({ target: { value: regex } }, flags);
+    onChangeRegex(null, flags, regex);
   };
 
-  const onChangeRegex = (e, newFlags = flags) => {
-    const newRegex = e.target.value;
+  const onChangeRegex = (
+    event: FormEvent<HTMLInputElement>,
+    newFlags?: string,
+    defaultRegex?: string,
+  ) => {
+    const newRegex = event?.currentTarget?.value || defaultRegex;
     setRegex(newRegex);
 
     let rowIndex = 0;
@@ -64,17 +71,18 @@ const Playground = () => {
       return;
     }
 
-    function findWithRegex(content, callback) {
-      const isMultiple = newFlags.includes('m');
+    function findWithRegex(content: ContentBlock, callback: Function) {
+      const currentFlags = newFlags || flags;
+      const isMultiple = currentFlags.includes('m');
       const isNeededMultiple = newRegex.startsWith('^') || newRegex.endsWith('$');
 
       if (!isMultiple && isNeededMultiple && rowIndex > 0) return;
 
-      const isGlobal = newFlags.includes('g');
+      const isGlobal = currentFlags.includes('g');
 
       if (!isGlobal && matchCount > 0) return;
 
-      const reg = new RegExp(newRegex, isGlobal ? newFlags : `g${newFlags}`);
+      const reg = new RegExp(newRegex, isGlobal ? currentFlags : `g${currentFlags}`);
 
       const text = content.getText();
 
@@ -87,7 +95,8 @@ const Playground = () => {
       if (newRegex && matches.length) {
         matches.forEach(match => callback(match.index, match.index + match[0].length));
       } else {
-        setEditorState(EditorState.createWithText(text));
+        const newContent = ContentState.createFromText(text);
+        setEditorState(EditorState.createWithContent(newContent));
       }
 
       rowIndex++;
@@ -97,7 +106,7 @@ const Playground = () => {
       }
     }
 
-    function handleStrategy(content, callback) {
+    function handleStrategy(content: ContentBlock, callback: Function) {
       try {
         findWithRegex(content, callback);
       } catch (err) {}
@@ -121,6 +130,7 @@ const Playground = () => {
   useEffect(() => {
     onChangeFlags(flags);
     setCaretPosition(regexInput?.current, regex.length);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
@@ -140,7 +150,7 @@ const Playground = () => {
             style={{ width: regex.length * 10 || 90 }}
             className={cx(styles.PlaygroundBlockRegexInput)}
             type="text"
-            onChange={onChangeRegex}
+            onChange={e => onChangeRegex(e)}
             value={regex}
             spellCheck={false}
           />

@@ -8,6 +8,7 @@ type IconArgs = {
   color?: string;
   className?: string;
   onClick?: Function;
+  removeInlineStyle?: boolean;
 };
 
 const Icon = (props: IconArgs) => <IcoMoon iconSet={iconSet} {...props} />;

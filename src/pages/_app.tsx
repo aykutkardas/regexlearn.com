@@ -1,13 +1,14 @@
 import 'src/styles/globals.css';
 import 'src/styles/plugins/bootstrap.css';
 
+import { AppProps } from 'next/app';
 import { IntlProvider } from 'react-intl';
 
 import { defaultLocale } from 'src/localization';
 
 require('src/migration').migration();
 
-const MyApp = ({ Component, pageProps }) => {
+const MyApp = ({ Component, pageProps }: AppProps) => {
   const { messages, lang } = pageProps;
 
   return (
@@ -16,7 +17,7 @@ const MyApp = ({ Component, pageProps }) => {
         <Component {...pageProps} />
       </div>
     </IntlProvider>
-  )
+  );
 };
 
 export default MyApp;

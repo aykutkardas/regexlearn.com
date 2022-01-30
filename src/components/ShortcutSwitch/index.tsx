@@ -7,7 +7,7 @@ import Icon from 'src/components/Icon';
 import styles from './ShortcutSwitch.module.css';
 
 const ShortcutSwitch = () => {
-  const [hidden, setHidden] = useState<boolean>(false);
+  const [hidden, setHidden] = useState(false);
 
   useEffect(() => {
     setHidden(lookie.get('shortcutHidden'));

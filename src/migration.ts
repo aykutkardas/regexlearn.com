@@ -1,7 +1,7 @@
-const lookie = require("lookie").default;
+import lookie from 'lookie';
 
-export async function migration() {
-  if (typeof window === "undefined") return;
+const migration = async () => {
+  if (typeof window === 'undefined') return;
 
   const isOlderCookie = typeof lookie.get('lastStep') === 'number';
 
@@ -13,7 +13,7 @@ export async function migration() {
 
     await lookie.remove('currentStep');
     await lookie.remove('lastStep');
-  };
+  }
 
   const isValidCurrentStep = typeof lookie.get('lesson.regex101')?.currentStep === 'number';
 
@@ -23,4 +23,6 @@ export async function migration() {
       lastStep: 0,
     });
   }
-}
+};
+
+export { migration };

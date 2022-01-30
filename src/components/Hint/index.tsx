@@ -3,13 +3,18 @@ import ReactTooltip from 'react-tooltip';
 import { FormattedMessage } from 'react-intl';
 import useEventListener from '@use-it/event-listener';
 
-import shortcuts from 'src/shortcuts';
 import Shortcut from 'src/components/Shortcut';
+import shortcuts from 'src/shortcuts';
 
-import * as styles from './Hint.module.css';
+import styles from './Hint.module.css';
 
-const Hint = ({ regex, flags }) => {
-  const hintRef = useRef(null);
+type HintProps = {
+  regex: string[];
+  flags: string;
+};
+
+const Hint = ({ regex, flags }: HintProps) => {
+  const hintRef = useRef<HTMLDivElement>(null);
   const [showStatus, setShowStatus] = useState(false);
 
   const toggleShow = e => {

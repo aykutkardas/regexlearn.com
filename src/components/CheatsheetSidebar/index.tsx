@@ -10,9 +10,9 @@ import data from 'src/data/cheatsheet.json';
 import styles from './CheatsheetSidebar.module.css';
 
 const CheatsheetSidebar = () => {
+  const [activeCategory, setActiveCategory] = useState('');
+  const [mounted, setMounted] = useState(false);
   const { formatMessage } = useIntl();
-  const [activeCategory, setActiveCategory] = useState<string | null>(null);
-  const [mounted, setMounted] = useState<boolean>(false);
 
   const Wrapper = mounted ? Scrollbars : Fragment;
   const props = mounted

@@ -3,16 +3,23 @@ import useEventListener from '@use-it/event-listener';
 import lookie from 'lookie';
 import confetti from 'canvas-confetti';
 
-import Header from 'src/components/Header';
 import LearnFooter from 'src/components/LearnFooter';
 import Step from 'src/components/Step';
+import { LessonData } from 'src/types';
 
-export default function LearnPage({ data, lessonName }) {
+type LearnPageProps = {
+  lessonName: string;
+  data: LessonData[];
+};
+
+const LearnPage = ({ data, lessonName }: LearnPageProps) => {
   const lookieKey = `lesson.${lessonName}`;
   const [step, setStep] = useState(0);
   const [lastStep, setLastStep] = useState(0);
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState(false);
+
+  let learnErrorTimer;
 
   const startConfetti = () => {
     confetti({
@@ -44,8 +51,8 @@ export default function LearnPage({ data, lessonName }) {
   const nextStep = () => {
     if (!success) {
       setError(true);
-      clearTimeout(window.learnErrorTimer);
-      window.learnErrorTimer = setTimeout(() => setError(false), 1000);
+      clearTimeout(learnErrorTimer);
+      learnErrorTimer = setTimeout(() => setError(false), 1000);
       return;
     }
 
@@ -92,7 +99,6 @@ export default function LearnPage({ data, lessonName }) {
 
   return (
     <>
-      <Header isLearnPage />
       <Step
         lessonName={lessonName}
         data={data[step]}
@@ -101,7 +107,6 @@ export default function LearnPage({ data, lessonName }) {
         onChangeSuccess={onChangeSuccess}
         error={error}
       />
-
       <LearnFooter
         steps={data}
         step={step}
@@ -112,10 +117,6 @@ export default function LearnPage({ data, lessonName }) {
       />
     </>
   );
-}
+};
 
-export async function getStaticProps(context) {
-  return {
-    props: {},
-  };
-}
+export default LearnPage;

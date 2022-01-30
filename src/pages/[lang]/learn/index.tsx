@@ -1,3 +1,4 @@
+import { GetStaticPaths, GetStaticProps } from 'next';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { useIntl, FormattedMessage } from 'react-intl';
@@ -7,16 +8,13 @@ import SeoTags from 'src/components/SeoTags';
 import Header from 'src/components/Header';
 import Footer from 'src/components/Footer';
 import LessonBox from 'src/components/LessonBox';
-
 import tagWrapper from 'src/utils/tagWrapper';
-
 import { defaultLocale, locales } from 'src/localization';
-
 import lessons from 'src/data/lessons/index.json';
 
-import * as styles from './Learn.module.css';
+import styles from './Learn.module.css';
 
-export default function Learn() {
+const PageLearn = () => {
   const { formatMessage } = useIntl();
   const { asPath } = useRouter();
 
@@ -73,6 +71,7 @@ export default function Learn() {
             <LessonBox
               lock
               data={{
+                key: null,
                 title: 'lessons.regexForSeo.title',
                 description: 'general.comingSoon',
               }}
@@ -83,9 +82,11 @@ export default function Learn() {
       <Footer />
     </>
   );
-}
+};
 
-export async function getStaticProps({ params }) {
+export default PageLearn;
+
+export const getStaticProps: GetStaticProps = async ({ params }) => {
   const lang = params.lang || defaultLocale;
   const messages = require(`src/localization/${lang}/`)?.default;
 
@@ -95,9 +96,9 @@ export async function getStaticProps({ params }) {
       messages,
     },
   };
-}
+};
 
-export async function getStaticPaths() {
+export const getStaticPaths: GetStaticPaths = async () => {
   return {
     fallback: false,
     paths: locales.map(lang => ({
@@ -106,4 +107,4 @@ export async function getStaticPaths() {
       },
     })),
   };
-}
+};

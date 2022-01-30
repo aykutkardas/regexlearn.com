@@ -5,7 +5,7 @@ import Icon from 'src/components/Icon';
 import getIntlPath from 'src/utils/getIntlPath';
 import { langNames } from 'src/localization';
 
-import * as styles from './LanguageSwitch.module.css';
+import styles from './LanguageSwitch.module.css';
 
 const langList = Object.keys(langNames).map(langKey => ({
   value: langKey,
@@ -16,6 +16,11 @@ const LanguageSwitch = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { pathname, query } = useRouter();
   const { lang } = query;
+  let currentLang;
+
+  if (typeof lang === 'string') {
+    currentLang = langNames[lang];
+  }
 
   const toggleLanguageList = () => {
     setIsOpen(!isOpen);
@@ -32,10 +37,10 @@ const LanguageSwitch = () => {
       <div
         className={styles.LanguageSwitchCurrent}
         role="button"
-        tabIndex="0"
+        tabIndex={0}
         onClick={toggleLanguageList}
       >
-        <span>{langNames[lang]}</span>
+        <span>{currentLang}</span>
         <Icon icon="earth" className={styles.LanguageSwitchCurrentIcon} size={16} />
       </div>
       <div

@@ -1,3 +1,4 @@
+import { GetStaticPaths, GetStaticProps } from 'next';
 import { useIntl } from 'react-intl';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
@@ -9,12 +10,11 @@ import Footer from 'src/components/Footer';
 import Playground from 'src/components/Playground';
 import CheatsheetSidebar from 'src/components/CheatsheetSidebar';
 import ProductButton from 'src/components/ProductButton';
-
 import { defaultLocale, locales } from 'src/localization';
 
-import * as styles from './Playground.module.css';
+import styles from './Playground.module.css';
 
-export default function PlaygroundPage() {
+const PagePlayground = () => {
   const { formatMessage } = useIntl();
   const { asPath } = useRouter();
 
@@ -23,7 +23,6 @@ export default function PlaygroundPage() {
 
   return (
     <>
-      <Header />
       <Head>
         <link rel="stylesheet" href="/css/animate.css" />
         <title>{pageTitle}</title>
@@ -35,9 +34,9 @@ export default function PlaygroundPage() {
         <link rel="alternate" hrefLang="zh-cn" href="https://regexlearn.com/zh-cn/playground" />
         <SeoTags key={pageTitle} title={pageTitle} description={pageDescription} href={asPath} />
       </Head>
+      <Header />
       <div className={cx('container', styles.PlaygroundContainer)}>
         <ProductButton />
-
         <div className="row">
           <div className="col-xs-12 col-md-12 col-lg-8">
             <Playground />
@@ -50,9 +49,11 @@ export default function PlaygroundPage() {
       <Footer />
     </>
   );
-}
+};
 
-export async function getStaticProps({ params }) {
+export default PagePlayground;
+
+export const getStaticProps: GetStaticProps = async ({ params }) => {
   const lang = params.lang || defaultLocale;
   const messages = require(`src/localization/${lang}/`)?.default;
 
@@ -62,9 +63,9 @@ export async function getStaticProps({ params }) {
       messages,
     },
   };
-}
+};
 
-export async function getStaticPaths() {
+export const getStaticPaths: GetStaticPaths = async () => {
   return {
     fallback: false,
     paths: locales.map(lang => ({
@@ -73,4 +74,4 @@ export async function getStaticPaths() {
       },
     })),
   };
-}
+};

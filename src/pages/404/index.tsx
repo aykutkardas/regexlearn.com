@@ -1,7 +1,6 @@
+import { GetStaticProps } from 'next';
 import Head from 'next/head';
 import { FormattedMessage, useIntl } from 'react-intl';
-
-import * as styles from './404.module.css';
 
 import Button from 'src/components/Button';
 import Header from 'src/components/Header';
@@ -9,15 +8,17 @@ import Footer from 'src/components/Footer';
 import IntlLink from 'src/components/IntlLink';
 import { defaultLocale } from 'src/localization';
 
-export default function Home() {
+import styles from './404.module.css';
+
+const Page404 = () => {
   const { formatMessage } = useIntl();
 
   return (
     <>
-      <Header />
       <Head>
         <title>{formatMessage({ id: 'page.404.title' })}</title>
       </Head>
+      <Header />
       <div className="container">
         <div className="row">
           <div className="col-md-12">
@@ -43,9 +44,11 @@ export default function Home() {
       <Footer />
     </>
   );
-}
+};
 
-export async function getStaticProps() {
+export default Page404;
+
+export const getStaticProps: GetStaticProps = async () => {
   const messages = require(`src/localization/${defaultLocale}/`)?.default;
 
   return {
@@ -54,4 +57,4 @@ export async function getStaticProps() {
       messages,
     },
   };
-}
+};

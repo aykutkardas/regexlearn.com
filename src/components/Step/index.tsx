@@ -4,14 +4,30 @@ import { useIntl } from 'react-intl';
 
 import InteractiveArea from 'src/components/InteractiveArea';
 import Progress from 'src/components/Progress';
-
 import tagWrapper from 'src/utils/tagWrapper';
+import { LessonData } from 'src/types';
 
-import * as styles from './Step.module.css';
+import styles from './Step.module.css';
 
-function Step({ lessonName, data, step, steps, error: parentError, onChangeSuccess }) {
+type StepProps = {
+  lessonName: string;
+  step: number;
+  steps: object[];
+  error: boolean;
+  onChangeSuccess: Function;
+  data: LessonData;
+};
+
+const Step = ({
+  lessonName,
+  data,
+  step,
+  steps,
+  error: parentError,
+  onChangeSuccess,
+}: StepProps) => {
+  const [mounted, setMounted] = useState(false);
   const { formatMessage } = useIntl();
-  const [mounted, setMounted] = useState();
 
   const title = tagWrapper({
     value: formatMessage({ id: data.title }),
@@ -56,6 +72,6 @@ function Step({ lessonName, data, step, steps, error: parentError, onChangeSucce
         )}
     </div>
   );
-}
+};
 
 export default Step;

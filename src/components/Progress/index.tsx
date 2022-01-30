@@ -5,7 +5,7 @@ const toPercent = (current: number, total: number) => Math.round((current / tota
 type ProgressProps = {
   current: number;
   total: number;
-  showProgressText: boolean;
+  showProgressText?: boolean;
 };
 
 const Progress = ({ current, total, showProgressText = true }: ProgressProps) => (

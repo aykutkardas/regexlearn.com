@@ -3,12 +3,22 @@ import cx from 'classnames';
 
 import Button from 'src/components/Button';
 import IntlLink from 'src/components/IntlLink';
-
 import tagWrapper from 'src/utils/tagWrapper';
 
-import * as styles from './Section.module.css';
+import styles from './Section.module.css';
 
-export default function Section({
+type SectionProps = {
+  title?: string;
+  description?: string;
+  link?: string;
+  image?: string;
+  imageAltText?: string;
+  buttonText?: string;
+  customButton?: Function;
+  reverse?: boolean;
+};
+
+const Section = ({
   reverse,
   title,
   description,
@@ -17,9 +27,9 @@ export default function Section({
   imageAltText,
   buttonText,
   customButton,
-}) {
+}: SectionProps) => {
   const { formatMessage } = useIntl();
-  const isShowButton = !!(link && buttonText);
+  const isShowButton = Boolean(link && buttonText);
 
   return (
     <div className={cx('row', reverse ? styles.SectionReverse : styles.Section)}>
@@ -60,4 +70,6 @@ export default function Section({
       </div>
     </div>
   );
-}
+};
+
+export default Section;

@@ -1,14 +1,13 @@
+import { MouseEventHandler } from 'react';
 import { FormattedMessage } from 'react-intl';
 import cx from 'classnames';
 
+import { CheatsheetData } from 'src/types';
+
 import styles from './CheatsheetItemTitle.module.css';
-import { MouseEventHandler } from 'react';
 
 type CheatsheetItemTitleProps = {
-  data: {
-    title: string;
-    code: string;
-  };
+  data: CheatsheetData;
   onClick?: MouseEventHandler<Element>;
   className?: string;
 };

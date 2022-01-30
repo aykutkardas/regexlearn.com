@@ -1,25 +1,28 @@
+import { GetStaticPaths, GetStaticProps } from 'next';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { useIntl } from 'react-intl';
 
+import Header from 'src/components/Header';
 import SeoTags from 'src/components/SeoTags';
 import LearnPage from 'src/components/LearnPage';
-
 import { defaultLocale, locales } from 'src/localization';
-
 import lessons from 'src/data/lessons/index.json';
 
-export default function Course({ lessonName }) {
+type PageLessonProps = {
+  lessonName: string;
+};
+
+const PageLesson = ({ lessonName }: PageLessonProps) => {
+  const { query, asPath } = useRouter();
+  const { formatMessage } = useIntl();
+
   const data = require(`src/data/lessons/${lessonName}`)?.default;
 
-  const { query } = useRouter();
-
-  const { formatMessage } = useIntl();
-  const { asPath } = useRouter();
+  const lang = typeof query.lang === 'string' ? query.lang.toUpperCase() : query.lang;
 
   const title = formatMessage({ id: `lessons.${lessonName}.title` });
-
-  const pageTitle = `${title} - ${query?.lang.toUpperCase()}`;
+  const pageTitle = `${title} - ${lang}`;
   const pageDescription = formatMessage({ id: `lessons.${lessonName}.description` });
 
   return (
@@ -51,12 +54,15 @@ export default function Course({ lessonName }) {
         />
         <SeoTags title={pageTitle} description={pageDescription} href={asPath} />
       </Head>
+      <Header isLearnPage />
       <LearnPage data={data} lessonName={lessonName} />
     </>
   );
-}
+};
 
-export async function getStaticProps({ params }) {
+export default PageLesson;
+
+export const getStaticProps: GetStaticProps = async ({ params }) => {
   const lang = params.lang || defaultLocale;
   const messages = require(`src/localization/${lang}/`)?.default;
 
@@ -67,9 +73,9 @@ export async function getStaticProps({ params }) {
       lessonName: params.lesson,
     },
   };
-}
+};
 
-export async function getStaticPaths() {
+export const getStaticPaths: GetStaticPaths = async () => {
   const paths = [];
 
   locales.forEach(lang => {
@@ -87,4 +93,4 @@ export async function getStaticPaths() {
     fallback: false,
     paths,
   };
-}
+};
