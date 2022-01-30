@@ -4,6 +4,7 @@ import { Scrollbars } from 'react-custom-scrollbars';
 
 import Collapse from 'src/components/Collapse';
 import CheatsheetSidebarItemInner from 'src/components/CheatsheetSidebarItemInner';
+import EscapeWrapperSSR from '../EscapeWrapperSSR';
 
 import data from 'src/data/cheatsheet.json';
 
@@ -11,28 +12,19 @@ import styles from './CheatsheetSidebar.module.css';
 
 const CheatsheetSidebar = () => {
   const [activeCategory, setActiveCategory] = useState('');
-  const [mounted, setMounted] = useState(false);
   const { formatMessage } = useIntl();
-
-  const Wrapper = mounted ? Scrollbars : Fragment;
-  const props = mounted
-    ? {
-        autoHide: true,
-        style: {
-          width: '100%',
-          height: '100%',
-          paddingRight: 30,
-        },
-      }
-    : {};
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
 
   return (
     <div className={styles.CheatsheetSidebar}>
-      <Wrapper {...props}>
+      <EscapeWrapperSSR
+        Component={Scrollbars}
+        autoHide={true}
+        style={{
+          width: '100%',
+          height: '100%',
+          paddingRight: 30,
+        }}
+      >
         {data.map(row => (
           <div key={row.title}>
             <Collapse
@@ -57,7 +49,7 @@ const CheatsheetSidebar = () => {
             </Collapse>
           </div>
         ))}
-      </Wrapper>
+      </EscapeWrapperSSR>
     </div>
   );
 };

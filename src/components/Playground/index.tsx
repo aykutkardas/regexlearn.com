@@ -1,6 +1,6 @@
 import 'draft-js/dist/Draft.css';
 
-import { useState, useEffect, useRef, Fragment, FormEvent } from 'react';
+import { useState, useEffect, useRef, FormEvent } from 'react';
 import { Editor, EditorState, CompositeDecorator, ContentState, ContentBlock } from 'draft-js';
 import { useIntl } from 'react-intl';
 import { Scrollbars } from 'react-custom-scrollbars';
@@ -9,6 +9,7 @@ import cx from 'classnames';
 import FlagBox from 'src/components/FlagBox';
 import ReportPlayground from 'src/components/ReportPlayground';
 import setCaretPosition from 'src/utils/setCaretPosition';
+import EscapeWrapperSSR from '../EscapeWrapperSSR';
 
 import styles from './Playground.module.css';
 
@@ -21,7 +22,6 @@ const initialText = `Regular Expressions, abbreviated as Regex or Regexp, are a 
 const initialContent = ContentState.createFromText(initialText);
 
 const Playground = () => {
-  const [mounted, setMounted] = useState(false);
   const [regex, setRegex] = useState('[A-Z]\\w+');
   const [flags, setFlags] = useState('g');
   const [editorState, setEditorState] = useState<EditorState>(
@@ -31,22 +31,6 @@ const Playground = () => {
   const { formatMessage } = useIntl();
   const regexInput = useRef<HTMLInputElement>(null);
   const editor = useRef(null);
-
-  const Wrapper = mounted ? Scrollbars : Fragment;
-  const props = mounted
-    ? {
-        autoHide: true,
-        style: {
-          width: '100%',
-          height: '100%',
-          paddingRight: 30,
-        },
-      }
-    : {};
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
 
   const onChangeFlags = flags => {
     setFlags(flags);
@@ -163,14 +147,22 @@ const Playground = () => {
         onClick={() => editor.current.focus()}
       >
         <div className={styles.EditorWrapper}>
-          <Wrapper {...props}>
+          <EscapeWrapperSSR
+            Component={Scrollbars}
+            autoHide={true}
+            style={{
+              width: '100%',
+              height: '100%',
+              paddingRight: 30,
+            }}
+          >
             <Editor
               ref={editor}
               editorState={editorState}
               onChange={setEditorState}
               placeholder="Text here"
             />
-          </Wrapper>
+          </EscapeWrapperSSR>
         </div>
         <ReportPlayground />
       </div>
