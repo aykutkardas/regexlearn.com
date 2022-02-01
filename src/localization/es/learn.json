@@ -2,7 +2,7 @@
   "examples.starter.title": "Práctica",
   "examples.starter.description": "Ahora es el momento de hacer práctica algo para consolidar lo que hemos aprendido.",
 
-  "examples.finish.title": "¡Practica completada!",
+  "examples.finish.title": "¡Práctica completada!",
   "examples.finish.description": " ",
 
   "steps.starter.title": "Intro",
@@ -24,10 +24,10 @@
   "steps.negatedCharacterSet.description": "Para encontrar todas las palabras en el texto a continuación, excepto por `ber` y `bor`, escriba `e` y `o` lado a lado después del carácter caret `^` dentro de los corchetes `[]`.",
 
   "steps.range.title": "Rango de letras `[a-z]`",
-  "steps.range.description": "Para encontrar letras en un rango especificado, la letra de inicio y la letra final se escriben en corchetes `[]` con un guíon `-` entre ellas. Es sensible a mayúsculas y minúsculas. Escriba la expresión que seleccionará todas las letras minúsculas entre `e` y `o`, incluidas ellas.",
+  "steps.range.description": "Para encontrar letras en un rango especificado, la letra de inicio y la letra final se escriben en corchetes `[]` con un guion `-` entre ellas. Es sensible a mayúsculas y minúsculas. Escriba la expresión que seleccionará todas las letras minúsculas entre `e` y `o`, incluidas ellas.",
 
   "steps.rangeNumber.title": "Rango de números `[0-9]`",
-  "steps.rangeNumber.description": "Para encontrar números en un rango especificado, el número de inicio y el de final se escriben dentro de corchetes `[]` con un guíon `-` entre ellos. Escriba una expresión que seleccionará todos los números entre `3` y `6`, incluidos ellos.",
+  "steps.rangeNumber.description": "Para encontrar números en un rango especificado, el número de inicio y el de final se escriben dentro de corchetes `[]` con un guion `-` entre ellos. Escriba una expresión que seleccionará todos los números entre `3` y `6`, incluidos ellos.",
 
   "examples.basicMatchers.title": "Practica: Matcher básico",
   "examples.basicMatchers.description": "Escriba la expresión que seleccionará las letras `of` en el texto.",
@@ -44,7 +44,7 @@
   "examples.range.title": "Practica: Rango de letras",
   "examples.range.description": "Escribe la expresión que seleccionará las letras de `g` a `k` en el texto.\\nlas letras `g` y `k` también deben incluirse en el rango.",
 
-  "examples.rangeNumber.title": "Practica: Rango de letros",
+  "examples.rangeNumber.title": "Practica: Rango de números",
   "examples.rangeNumber.description": "Escriba la expresión que seleccionará los números de `2` a `7` en el texto.\\n`2` and `7` también deben incluirse en el rango.",
 
   "steps.repetitions.title": "Repeticiones",
@@ -78,7 +78,7 @@
   "examples.questionMark.description": "Escriba la expresión indicando que la letra `n` es opcional en el texto, usando el signo de interrogación `?`. Por lo tanto, ambas palabras `a` y `an` pueden ser seleccionadas.",
 
   "examples.quantifier.title": "Practica: Llaves - 1",
-  "examples.quantifier.description": "Escriba la expresión usando llaves `{}` para seleccionar `4` digitos numéricos de `0` a `9` en el texto.",
+  "examples.quantifier.description": "Escriba la expresión usando llaves `{}` para seleccionar `4` dígitos numéricos de `0` a `9` en el texto.",
 
   "examples.quantifierMin.title": "Practica: Llaves - 2",
   "examples.quantifierMin.description": "Escriba la expresión usando llaves `{}` para seleccionar los números entre `0` y `9` que ocurra al menos `2` veces en el texto.",
@@ -86,23 +86,23 @@
   "examples.quantifierRange.title": "Practica: Llaves - 3",
   "examples.quantifierRange.description": "Escriba la expresión usando llaves`{}` para seleccionar los números de `0` a `9` en el texto que está al menos entre `1` y `4`.",
 
-  "steps.groupping.title": "Parentesis `( )`: Agrupamiento",
-  "steps.groupping.description": "Podemos agrupar una expresión y usar estos grupos para hacer referencia o hacer cumplir algunas reglas. Para agrupar una expresión, la encerramos `()` en parentesis. Por ahora solo agrupamos `haa` a continuación.",
+  "steps.groupping.title": "Paréntesis `( )`: Agrupamiento",
+  "steps.groupping.description": "Podemos agrupar una expresión y usar estos grupos para hacer referencia o hacer cumplir algunas reglas. Para agrupar una expresión, la encerramos `()` en paréntesis. Por ahora solo agrupamos `haa` a continuación.",
 
   "steps.groupReference.title": "Referenciando un grupo",
-  "steps.groupReference.description": "Las palabras `ha` y `haa` se agrupan a continuación. El primer grupo de utiliza escribiendo `\\1` para evitar reescribirlo. Aquí `1` denota el orden del agrupamiento. Escriba `\\2` al final de una expresión para referirse al segundo grupo.",
+  "steps.groupReference.description": "Las palabras `ha` y `haa` se agrupan a continuación. El primer grupo se utiliza escribiendo `\\1` para evitar reescribirlo. Aquí `1` denota el orden del agrupamiento. Escriba `\\2` al final de una expresión para referirse al segundo grupo.",
 
   "steps.nonCapturingGroupping.title": "Parentheses `(?: )`: Agrupamiento Non-capturing",
   "steps.nonCapturingGroupping.description": "Puede agrupar una expresión y asegurarse de que no se vea atrapado por referencias. Por ejemplo, a continuación hay dos grupos. Sin embargo, la primera referencia del grupo la denotamos con `\\1` en realidad apunta al segundo grupo, ya que el primero es un grupo desconocido.",
 
   "steps.pipeCharacter.title": "Carácter Pipe `|`",
-  "steps.pipeCharacter.description": "Permite especificar que una expresión puede estar en diferentes expresiones. Por lo tanto, todas las declaraciones posibles están escritas separadas por el signo Pipe `|`. Esto difiere del charset `[abc]`, los charsets funcionan a nivel de carácter. Las alternativas están a nivel de expresión. Por ejemplo, la siguiente expresión seleccionaría tanto `cat` y `Cat`. agregue otro signo pipe `|` al final de una expresión y escriba `rat` para que todas las palabras sean seleccionadas.",
+  "steps.pipeCharacter.description": "Permite especificar que una expresión puede estar en diferentes expresiones. Por lo tanto, todas las declaraciones posibles están escritas separadas por el signo Pipe `|`. Esto difiere del charset `[abc]`, los charsets funcionan a nivel de carácter. Las alternativas están a nivel de expresión. Por ejemplo, la siguiente expresión seleccionaría tanto `cat` y `Cat`. Agregue otro signo pipe `|` al final de una expresión y escriba `rat` para que todas las palabras sean seleccionadas.",
 
   "steps.escapeCharacter.title": "Carácter Escape `\\`",
   "steps.escapeCharacter.description": "Hay caracteres especiales que usamos al escribir Regex. `{ } [ ] / \\ + * . $^ | ?` Antes de que podamos seleccionar estos caracteres, necesitamos usar un carácter de escape `\\`. Por ejemplo, para seleccionar los caracteres punto `.` y asterisco `*` en el texto, agreguemos el carácter escape `\\` antes de eso.",
 
   "steps.caret.title": "Signo Caret `^`:\\nSelección por inicio de la línea",
-  "steps.caret.description": "Estamos usando `[0-9]` para encontrar números. POara encontrar solo números al comienzo de una línea, anteponemos esta expresión con el signo `^` caret.",
+  "steps.caret.description": "Estamos usando `[0-9]` para encontrar números. Para encontrar solo números al comienzo de una línea, anteponemos esta expresión con el signo `^` caret.",
 
   "steps.dollar.title": "Signo pesos `$`:\\nSelección por inicio de la línea",
   "steps.dollar.description": "Usemos el signo `$` después del valor `html` para encontrar los textos `html` solo al final de la línea.",
