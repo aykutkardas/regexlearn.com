@@ -1,6 +1,7 @@
 export const langNames = {
   en: 'EN',
   es: 'ES',
+  fr: 'FR',
   tr: 'TR',
   ru: 'RU',
   'zh-cn': 'ZH-CN',
