@@ -18,6 +18,7 @@ This is a project that makes learning how to write regex easy.
 - **Russian**
 - **Spanish**
 - **Chinese**
+- _French_ [(Requested)](https://github.com/aykutkardas/regexlearn.com/issues/159)
 - _Korean_ [(Requested)](https://github.com/aykutkardas/regexlearn.com/issues/92)
 - _Brazilian Portuguese_ [(Requested)](https://github.com/aykutkardas/regexlearn.com/issues/39)
 
