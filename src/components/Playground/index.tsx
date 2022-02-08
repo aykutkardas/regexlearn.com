@@ -42,7 +42,7 @@ const Playground = () => {
     newFlags?: string,
     defaultRegex?: string,
   ) => {
-    const newRegex = event?.currentTarget?.value || defaultRegex;
+    const newRegex = event?.currentTarget?.value || defaultRegex || '';
     setRegex(newRegex);
 
     let rowIndex = 0;
