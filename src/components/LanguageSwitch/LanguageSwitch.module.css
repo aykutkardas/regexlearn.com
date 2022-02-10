@@ -23,7 +23,9 @@
 }
 
 .LanguageSwitchCurrentIcon {
-  margin-left: 5px;
+  position: relative;
+  top: 1px;
+  margin-left: 10px;
   color: var(--txt-1);
 }
 
@@ -31,7 +33,7 @@
   position: absolute;
   top: 20px;
   z-index: 99;
-  right: 21px;
+  right: 0px;
   text-align: end;
 }
 
@@ -63,9 +65,13 @@
   display: inline-block;
 }
 
+.LanguageSwitchListItem:nth-child(1) {
+  margin-top: 10px;
+}
 .LanguageSwitchCurrent span,
 .LanguageSwitchListItem span {
   min-width: 20px;
+  font-size: 1.3rem;
 }
 
 .LanguageSwitchListItem :global(div[role='button']) {
