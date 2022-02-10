@@ -14,7 +14,7 @@
   "general.becomeSponsor": "Sponsor werden",
   "general.learn": "Lernen",
   "general.playground": "Spielplatz",
-  "general.cheatsheet": "Cheatsheet",
+  "general.cheatsheet": "Spickzettel",
   "general.ourSponsors": "Unsere Sponsoren",
 
   "notFound.intro": "Die gesuchte Seite existiert nicht.",
@@ -22,8 +22,8 @@
 
   "page.landing.title": "Regex Learn - Schritt für Schritt, von null bis fortgeschritten.",
   "page.learn.title": "Regex Learn - Interaktiver Regex-Kurs",
-  "page.cheatsheet.title": "Regex Learn - Regex-Cheatsheet",
-  "page.playground.title": "Regex lernen - Spielplatz",
+  "page.cheatsheet.title": "Regex Learn - Regex-Spickzettel",
+  "page.playground.title": "Regex Learn - Spielplatz",
   "page.404.title": "Regex Learn - Nicht gefunden",
 
   "page.landing.description": "Regex interaktiv lernen, auf Ihrem Niveau üben, eigene Regex testen und teilen.",
