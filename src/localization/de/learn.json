@@ -1,0 +1,163 @@
+{
+  "examples.starter.title": "Übung",
+  "examples.starter.description": "Jetzt ist es an der Zeit, etwas zu üben, um das Gelernte zu festigen.",
+
+  "examples.finish.title": "Übung abgeschlossen!",
+  "beispiele.finish.description": " ",
+
+  "steps.starter.title": "Einführung",
+  "steps.starter.description": "Regex ist die Abkürzung für `Regular Expression`. Es hilft, Text zuzuordnen, zu finden oder zu verwalten. Beginnen Sie mit der Eingabe von `OK` in das Regex-Feld, um mit dem ersten Schritt fortzufahren und auf die detailliertere Beschreibung zuzugreifen ..",
+
+  "steps.whatIsRegex.title": "Was sind reguläre Ausdrücke `Regex`?",
+  "steps.whatIsRegex.description": "Reguläre Ausdrücke sind eine Zeichenkette, die ein Suchmuster ausdrückt. Oft als `Regex` oder `Regexp` abgekürzt. Sie werden besonders verwendet, um Wörter in Texten zu finden oder zu ersetzen. Darüber hinaus können wir testen, ob ein Text den von uns festgelegten Regeln entspricht.\\n\\n Angenommen, Sie haben eine Liste mit Dateinamen und möchten nur Dateien mit der Erweiterung `pdf` finden. Geben Sie nach Eingabe eines Ausdrucks `^\\w+\\.pdf$` funktioniert. Die Bedeutung der Definitionen in diesem Ausdruck wird im Laufe der Schritte klarer.",
+
+  "steps.basicMatchers.title": "Grundlegende Matcher",
+  "steps.basicMatchers.description": "Das zu findende Zeichen oder Wort wird direkt geschrieben. Es ähnelt einem normalen Suchvorgang. Um beispielsweise das Wort `neugierig` im Text zu finden, geben Sie dasselbe ein.",
+
+  "steps.dotCharacter.title": "Punkt `.`: Beliebiges Zeichen",
+  "steps.dotCharacter.description": "Der Punkt `.` ermöglicht die Auswahl eines beliebigen Zeichens, einschließlich Sonderzeichen und Leerzeichen.",
+
+  "steps.characterSet.title": "Zeichensätze `[abc]`",
+  "steps.characterSet.description": "Wenn eines der Zeichen in einem Wort mehrere Zeichen sein können, schreiben wir es in eckige Klammern `[]` mit allen alternativen Zeichen. Zum Beispiel, um einen Ausdruck zu schreiben, der alle Wörter finden kann Geben Sie im Text die Zeichen `a`, `e`, `i`, `o`, `u` nebeneinander in eckige Klammern `[]` ein.",
+
+  "steps.negatedCharacterSet.title": "Negierte Zeichensätze `[^abc]`",
+  "steps.negatedCharacterSet.description": "Um alle Wörter im folgenden Text außer `ber` und `bor` zu finden, geben Sie `e` und `o` nebeneinander nach dem Caret-Zeichen `^` in eckigen Klammern ` ein []`.",
+
+  "steps.range.title": "Buchstabenbereich`[a-z]`",
+  "steps.range.description": "Um die Buchstaben im angegebenen Bereich zu finden, werden der Anfangsbuchstabe und der Endbuchstabe in eckige Klammern `[]` mit einem Bindestrich dazwischen `-` geschrieben. Es wird zwischen Groß- und Kleinschreibung unterschieden. Typ Der Ausdruck, der alle Kleinbuchstaben zwischen `e` und `o` auswählt, einschließlich sich selbst.",
+
+  "steps.rangeNumber.title": "Nummernbereich`[0-9]`",
+  "steps.rangeNumber.description": "Um die Zahlen im angegebenen Bereich zu finden, werden die Startnummer und die Endnummer in eckige Klammern `[]` mit einem Bindestrich `-` dazwischen geschrieben. Schreiben Sie einen Ausdruck, der alle auswählt Zahlen zwischen `3` und `6`, einschließlich sich selbst.",
+
+  "examples.basicMatchers.title": "Übung: Basic Matcher",
+  "examples.basicMatchers.description": "Schreiben Sie den Ausdruck, der die Wörter `von` im Text auswählt.",
+
+  "examples.dotCharacter.title": "Übung: Beliebiges Zeichen",
+  "examples.dotCharacter.description": "Geben Sie den Ausdruck ein, um einzelne Buchstaben, Zahlen, Leerzeichen und Sonderzeichen im Text auszuwählen. Der eingegebene Ausdruck muss mit jedem Zeichen übereinstimmen.",
+
+  "examples.characterSet.title": "Übung: Zeichensätze",
+  "examples.characterSet.description": "Schreiben Sie die Phrase, die zu jedem Wort im Text passt. Die einzigen Zeichen, die sich ändern, sind die Anfangsbuchstaben der Wörter.",
+
+  "examples.negatedCharacterSet.title": "Übung: Negierte Zeichensätze",
+  "examples.negatedCharacterSet.description": "Schreiben Sie den Ausdruck auf, der mit etwas anderem als den Wörtern `beor` und `beur` im Text übereinstimmt. Verwenden Sie dazu den negierten Zeichensatz.",
+
+  "examples.range.title": "Übung: Buchstabenbereich",
+  "examples.range.description": "Schreiben Sie den Ausdruck, der die Buchstaben von `g` bis `k` im Text auswählt.\\n Die Buchstaben `g` und `k` sollten ebenfalls in diesem Bereich enthalten sein.",
+
+  "examples.rangeNumber.title": "Übung: Nummernkreis",
+  "examples.rangeNumber.description": "Geben Sie einen Ausdruck ein, um Zahlen von `2` bis `7` im Text auszuwählen.\\n`2` und `7` sollten auch in diesem Bereich enthalten sein.",
+
+  "steps.repetitions.title": "Wiederholungen",
+  "steps.repetitions.description": "Einige Sonderzeichen werden verwendet, um anzugeben, wie oft ein Zeichen im Text wiederholt wird. Diese Sonderzeichen sind das Plus `+`, das Sternchen `*` und das Fragezeichen `? `.",
+
+  "steps.asterisk.title": "Sternchen `*`",
+  "steps.asterisk.description": "Wir setzen ein Sternchen `*` an das Ende, um anzuzeigen, dass ein Zeichen überhaupt nicht oder mehrfach übereinstimmen kann. Geben Sie zum Beispiel an, dass der Buchstabe `e` niemals in der vorkommen sollte Text, oder es kann einmal oder mehrmals nebeneinander vorkommen.",
+
+  "steps.plusCharacter.title": "Pluszeichen `+`",
+  "steps.plusCharacter.description": "Um anzuzeigen, dass ein Zeichen einmal oder mehrmals vorkommen kann, setzen wir ein Pluszeichen `+` am Ende. Geben Sie beispielsweise an, dass der Buchstabe `e` einmal oder mehrmals vorkommen kann der Text.",
+
+  "steps.questionMark.title": "Fragezeichen `?`",
+  "steps.questionMark.description": "Um anzuzeigen, dass ein Zeichen optional ist, setzen wir ein `?` Fragezeichen an das Ende. Geben Sie beispielsweise an, dass der folgende Buchstabe `u` optional ist.",
+
+  "steps.quantifier.title": "geschweifte Klammern - 1",
+  "steps.quantifier.description": "Um eine bestimmte Anzahl von Vorkommen eines Zeichens auszudrücken, schreiben wir geschweifte Klammern `{n}` zusammen mit der Häufigkeit, mit der es am Ende vorkommen soll. Geben Sie zum Beispiel Folgendes an Buchstabe `e` darf nur `2` mal vorkommen.",
+
+  "steps.quantifierMin.title": "geschweifte Klammern - 2",
+  "steps.quantifierMin.description": "Um mindestens eine bestimmte Anzahl von Vorkommen eines Zeichens auszudrücken, schreiben wir das Ende des Zeichens mindestens wie oft es vorkommen soll, mit einem Komma `,` am Ende, und in geschweiften Klammern `{n, }`. Geben Sie zum Beispiel an, dass der folgende Buchstabe `e` mindestens `3` Mal vorkommen kann.",
+
+  "steps.quantifierRange.title": "geschweifte Klammern - 3",
+  "steps.quantifierRange.description": "Um das Vorkommen eines Zeichens in einem bestimmten Zahlenbereich auszudrücken, schreiben wir geschweifte Klammern `{x,y}` mit dem Intervall, das wir bis zum Ende gehen möchten. Geben Sie zum Beispiel an, dass die der folgende Buchstabe `e` darf nur zwischen `1` und `3` vorkommen.",
+
+  "examples.asterisk.title": "Übung: Asterisk `*`",
+  "examples.asterisk.description": "Verwenden Sie das Sternchen `*`, um den Ausdruck zu schreiben, der jedes Wort auswählt, geeignet für das Fehlen des Buchstabens `e` im Text und das Vorhandensein von mehr als einem.",
+
+  "examples.plusCharacter.title": "Übung: Pluszeichen `+`",
+  "examples.plusCharacter.description": "Schreiben Sie den Ausdruck mit dem Pluszeichen `+`, um Wörter auszuwählen, in denen der Buchstabe `e` einmal oder mehrmals im Text vorkommt.",
+
+  "examples.questionMark.title": "Übung: Fragezeichen `?`",
+  "examples.questionMark.description": "Schreiben Sie den Ausdruck, der anzeigt, dass der Buchstabe `n` im Text optional ist, indem Sie das Fragezeichen `?` verwenden. Somit können sowohl die Wörter `a` als auch `an` ausgewählt werden." ,
+
+  "examples.quantifier.title": "Übung: Geschweifte Klammern - 1",
+  "examples.quantifier.description": "Schreiben Sie den Ausdruck mit geschweiften Klammern `{}`, der Texte findet, die `4` Zahlen nebeneinander enthalten.",
+
+  "examples.quantifierMin.title": "Übung: Geschweifte Klammern - 2",
+  "examples.quantifierMin.description": "Schreiben Sie den Ausdruck mit geschweiften Klammern `{}`, der Texte findet, die mindestens `2` Zahlen nebeneinander enthalten.",
+
+  "examples.quantifierRange.title": "Übung: Geschweifte Klammern - 3",
+  "examples.quantifierRange.description": "Schreiben Sie den Ausdruck mit geschweiften Klammern `{}`, der Texte findet, die mindestens `1` und höchstens `4` Zahlen nebeneinander enthalten.",
+
+  "steps.groupping.title": "Klammern `( )`: Gruppierung",
+  "steps.groupping.description": "Wir können einen Ausdruck gruppieren und diese Gruppen verwenden, um einige Regeln zu referenzieren oder durchzusetzen. Um einen Ausdruck zu gruppieren, schließen wir `()` in Klammern ein. Fürs Erste gruppieren Sie einfach `haa` unten.",
+
+  "steps.groupReference.title": "Auf eine Gruppe verweisen",
+  "steps.groupReference.description": "Die Wörter `ha` und `haa` sind unten gruppiert. Die erste Gruppe wird verwendet, indem `\\1` geschrieben wird, um ein erneutes Schreiben zu vermeiden. Hier gibt `1` die Reihenfolge der Gruppierung an. Geben Sie ` ein \\2` am Ende des Ausdrucks, um auf die zweite Gruppe zu verweisen.",
+
+  "steps.nonCapturingGroupping.title": "Klammern `(?: )`: Gruppierung ohne Erfassung",
+  "steps.nonCapturingGroupping.description": "Sie können einen Ausdruck gruppieren und sicherstellen, dass er nicht durch Referenzen erfasst wird. Unten sehen Sie beispielsweise zwei Gruppen. Die erste Gruppenreferenz, die wir mit `\\1` bezeichnen, zeigt jedoch tatsächlich die zweite an Gruppe, da die erste eine nicht einfangende Gruppe ist.",
+
+  "steps.pipeCharacter.title": "Pipe-Zeichen `|`",
+  "steps.pipeCharacter.description": "Damit kann festgelegt werden, dass ein Ausdruck in verschiedenen Ausdrücken enthalten sein kann. Daher werden alle möglichen Anweisungen durch das Pipe-Zeichen `|` getrennt geschrieben. Dies unterscheidet sich vom Zeichensatz `[abc]`, Zeichensätze arbeiten auf Zeichenebene. Alternativen befinden sich auf Ausdrucksebene. Beispielsweise würde der folgende Ausdruck sowohl `Katze` als auch `Katze` auswählen. Fügen Sie am Ende des Ausdrucks ein weiteres Pipe-Zeichen `|` hinzu und geben Sie `Ratte` ein, damit alle Wörter werden ausgewählt.",
+
+  "steps.escapeCharacter.title": "Escape-Zeichen `\\`",
+  "steps.escapeCharacter.description": "Es gibt Sonderzeichen, die wir beim Schreiben von Regex verwenden. `{ } [ ] / \\ + * . $^ | ?` Bevor wir diese Zeichen selbst auswählen können, müssen wir ein Escape verwenden Zeichen `\\`. Um beispielsweise die Zeichen Punkt `.` und Sternchen `*` im Text auszuwählen, fügen wir davor ein Escape-Zeichen `\\` ein.",
+
+  "steps.caret.title": "Caret-Zeichen `^`:\\nAuswahl nach Zeilenanfang",
+  "steps.caret.description": "Wir haben `[0-9]` verwendet, um Zahlen zu finden. Um nur Zahlen am Anfang einer Zeile zu finden, stellen Sie diesem Ausdruck das `^`-Zeichen voran.",
+
+  "steps.dollar.title": "Dollarzeichen `$`:\\nAuswahl nach Zeilenende",
+  "steps.dollar.description": "Lassen Sie uns das `$`-Zeichen nach dem `html`-Wert verwenden, um die `html`-Texte nur am Ende der Zeile zu finden.",
+
+  "steps.wordCharacter.title": "Wortzeichen `\\w`: Buchstabe, Zahl und Unterstrich",
+  "steps.wordCharacter.description": "Der Ausdruck `\\w` wird verwendet, um Buchstaben, Zahlen und Unterstriche zu finden. Lassen Sie uns den Ausdruck `\\w` verwenden, um Wortzeichen im Text zu finden.",
+
+  "steps.withoutWordCharacter.title": "Außer Wortzeichen `\\W`",
+  "steps.withoutWordCharacter.description": "Der Ausdruck `\\W` wird verwendet, um andere Zeichen als Buchstaben, Zahlen und Unterstriche zu finden.",
+
+  "steps.numberCharacter.title": "Zahlenzeichen `\\d`",
+  "steps.numberCharacter.description": "`\\d` wird verwendet, um nur Zahlenzeichen zu finden.",
+
+  "steps.withoutNumberCharacter.title": "Außer Zahlenzeichen `\\D`",
+  "steps.withoutNumberCharacter.description": "`\\D` wird verwendet, um nicht-numerische Zeichen zu finden.",
+
+  "steps.spaceCharacter.title": "Leerzeichen `\\s`",
+  "steps.spaceCharacter.description": "`\\s` wird verwendet, um nur Leerzeichen zu finden.",
+
+  "steps.withoutSpaceCharacter.title": "Außer Leerzeichen `\\S`",
+  "steps.withoutSpaceCharacter.description": "`\\S` wird verwendet, um Nicht-Leerzeichen zu finden.",
+
+  "steps.lookarounds.title": "Lookarounds",
+  "steps.lookarounds.description": "Wenn wir möchten, dass der Satz, den wir schreiben, vor oder nach einem anderen Satz steht, müssen wir \"umsehen\". Machen Sie den nächsten Schritt, um zu lernen, wie man \"umsieht\"." ,
+
+  "steps.positiveLookahead.title": "Positiver Lookahead: `(?=)`",
+  "steps.positiveLookahead.description": "Zum Beispiel möchten wir den Stundenwert im Text auswählen. Um daher nur die numerischen Werte auszuwählen, denen `PM` folgt, müssen wir den positiven Look-Ahead-Ausdruck ` schreiben (?=)` nach unserem Ausdruck. Fügen Sie `PM` nach dem `=`-Zeichen in Klammern ein.",
+
+  "steps.negativeLookahead.title": "Negativer Lookahead: `(?!)`",
+  "steps.negativeLookahead.description": "Zum Beispiel möchten wir andere Zahlen als den Stundenwert im Text auswählen. Daher müssen wir den negativen Look-Ahead-Ausdruck `(?!)` nach unserem Ausdruck schreiben, um nur auszuwählen die numerischen Werte, die kein `PM` nach sich haben. Fügen Sie `PM` nach dem `!`-Zeichen in Klammern ein.",
+  
+  "steps.positiveLookbehind.title": "Positiver Lookbehind: `(?<=)`",
+  "steps.positiveLookbehind.description": "Zum Beispiel möchten wir den Preiswert im Text auswählen. Daher müssen wir, um nur die Zahlenwerte auszuwählen, denen `$` vorangestellt ist, den positiven Lookbehind-Ausdruck `(?< schreiben =)` vor unserem Ausdruck. Fügen Sie `\\$` nach dem `=`-Zeichen in den Klammern hinzu.",
+
+  "steps.negativeLookbehind.title": "Negativer Lookbehind: `(?&lt;!)`",
+  "steps.negativeLookbehind.description": "Zum Beispiel möchten wir im Text andere Zahlen als den Preiswert auswählen. Um daher nur numerische Werte auszuwählen, denen kein `$` vorangestellt ist, müssen wir das negative Lookbehind ` schreiben (?&lt;!)` vor unserem Ausdruck. Fügen Sie `\\$` nach dem `!` innerhalb der Klammern hinzu.",
+
+  "steps.flags.title": "Flaggen",
+  "steps.flags.description": "Flags ändern die Ausgabe des Ausdrucks. Aus diesem Grund werden Flags auch als `Modifikatoren` bezeichnet. Legt fest, ob der eingegebene Ausdruck Text als separate Zeilen behandelt, Groß-/Kleinschreibung beachtet oder alle Übereinstimmungen findet. Fahren Sie mit fort nächster Schritt, um die Flaggen zu lernen.",
+
+  "steps.flagsGlobal.title": "Globale Flagge",
+  "steps.flagsGlobal.description": "Das `global`-Flag bewirkt, dass der Ausdruck alle Übereinstimmungen auswählt. Wenn es nicht verwendet wird, wird nur die erste Übereinstimmung ausgewählt. Aktivieren Sie jetzt das `global`-Flag, um alle Übereinstimmungen auswählen zu können.",
+
+  "steps.flagsMultiline.title": "Mehrzeiliges Flag",
+  "steps.flagsMultiline.description": "Regex sieht den gesamten Text als eine Zeile. Aber wir verwenden das `multiline`-Flag, um jede Zeile separat zu behandeln. Auf diese Weise schreiben wir die Ausdrücke entsprechend dem Zeilenende für jede Zeile separat . Aktivieren Sie nun das `multiline`-Flag, um alle Übereinstimmungen zu finden.",
+
+  "steps.flagsCaseInsensitive.title": "Groß-/Kleinschreibung beachten",
+  "steps.flagsCaseInsensitive.description": "Um die Groß-/Kleinschreibung des von uns geschriebenen Ausdrucks zu entfernen, müssen wir das Flag `Groß-/Kleinschreibung ignorieren` aktivieren.",
+  
+  "steps.greedyMatching.title": "Gieriger Abgleich",
+  "steps.greedyMatching.description": "Regex führt standardmäßig einen Greedy-Match durch. Das bedeutet, dass das Matchmaking so lang wie möglich sein wird. Sehen Sie sich das Beispiel unten an. Es bezieht sich auf alle Matches, die auf „r“ enden und beliebig sein können vorangestelltes Zeichen. Aber es hört nicht beim ersten Buchstaben `r` auf.",
+
+  "steps.lazyMatching.title": "Lazy Matching",
+  "steps.lazyMatching.description": "Lazy Matchmaking stoppt im Gegensatz zu Greedy Matching beim ersten Matching. Fügen Sie zum Beispiel im Beispiel unten ein „?“ nach „*“ hinzu, um das erste Match zu finden, das mit dem Buchstaben „`“ endet r` und ihm ein beliebiges Zeichen vorangestellt ist. Dies bedeutet, dass dieser Vergleich beim ersten Buchstaben `r` stoppt.",
+
+  "steps.completeAllSteps.title": "Herzlichen Glückwunsch, Sie haben alle Schritte abgeschlossen!",
+  "steps.completeAllSteps.description": "Sie können jederzeit zu den vorherigen Schritten zurückkehren und einfach durch alle Schritte navigieren, die Sie durchlaufen haben."
+}
