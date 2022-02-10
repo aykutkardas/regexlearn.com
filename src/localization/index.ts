@@ -1,4 +1,5 @@
 export const langNames = {
+  de: "DE",
   en: 'EN',
   es: 'ES',
   tr: 'TR',
