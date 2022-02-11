@@ -152,7 +152,7 @@
   "steps.flagsCaseInsensitive.title": "Groß-/Kleinschreibung beachten",
   "steps.flagsCaseInsensitive.description": "Um die Groß-/Kleinschreibung des von uns geschriebenen Ausdrucks zu entfernen, müssen wir das Flag `Groß-/Kleinschreibung ignorieren` aktivieren.",
   
-  "steps.greedyMatching.title": "Gieriger Heiratsvermittler",
+  "steps.greedyMatching.title": "Gieriger Abgleich",
   "steps.greedyMatching.description": "Regex führt standardmäßig einen Greedy-Match durch. Das bedeutet, dass das Matchmaking so lang wie möglich sein wird. Sehen Sie sich das Beispiel unten an. Es bezieht sich auf alle Matches, die auf „r“ enden und beliebig sein können vorangestelltes Zeichen. Aber es hört nicht beim ersten Buchstaben `r` auf.",
 
   "steps.lazyMatching.title": "Lazy Matching",
