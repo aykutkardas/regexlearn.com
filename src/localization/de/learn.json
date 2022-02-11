@@ -12,7 +12,7 @@
   "steps.whatIsRegex.description": "Reguläre Ausdrücke sind eine Zeichenkette, die ein Suchmuster ausdrückt. Oft als `Regex` oder `Regexp` abgekürzt. Sie werden besonders verwendet, um Wörter in Texten zu finden oder zu ersetzen. Darüber hinaus können wir testen, ob ein Text den von uns festgelegten Regeln entspricht.\\n\\n Angenommen, Sie haben eine Liste mit Dateinamen und möchten nur Dateien mit der Erweiterung `pdf` finden. Geben Sie nach Eingabe eines Ausdrucks `^\\w+\\.pdf$` funktioniert. Die Bedeutung der Definitionen in diesem Ausdruck wird im Laufe der Schritte klarer.",
 
   "steps.basicMatchers.title": "Grundlegende Matcher",
-  "steps.basicMatchers.description": "Das zu findende Zeichen oder Wort wird direkt geschrieben. Es ähnelt einem normalen Suchvorgang. Um beispielsweise das Wort `neugierig` im Text zu finden, geben Sie dasselbe ein.",
+  "steps.basicMatchers.description": "Das zu findende Zeichen oder Wort wird direkt geschrieben. Es ähnelt einem normalen Suchvorgang. Um beispielsweise das Wort `curious` im Text zu finden, geben Sie dasselbe ein.",
 
   "steps.dotCharacter.title": "Punkt `.`: Beliebiges Zeichen",
   "steps.dotCharacter.description": "Der Punkt `.` ermöglicht die Auswahl eines beliebigen Zeichens, einschließlich Sonderzeichen und Leerzeichen.",
@@ -30,7 +30,7 @@
   "steps.rangeNumber.description": "Um die Zahlen im angegebenen Bereich zu finden, werden die Startnummer und die Endnummer in eckige Klammern `[]` mit einem Bindestrich `-` dazwischen geschrieben. Schreiben Sie einen Ausdruck, der alle auswählt Zahlen zwischen `3` und `6`, einschließlich sich selbst.",
 
   "examples.basicMatchers.title": "Übung: Basic Matcher",
-  "examples.basicMatchers.description": "Schreiben Sie den Ausdruck, der die Wörter `von` im Text auswählt.",
+  "examples.basicMatchers.description": "Schreiben Sie den Ausdruck, der die Wörter `of` im Text auswählt.",
 
   "examples.dotCharacter.title": "Übung: Beliebiges Zeichen",
   "examples.dotCharacter.description": "Geben Sie den Ausdruck ein, um einzelne Buchstaben, Zahlen, Leerzeichen und Sonderzeichen im Text auszuwählen. Der eingegebene Ausdruck muss mit jedem Zeichen übereinstimmen.",
@@ -48,7 +48,7 @@
   "examples.rangeNumber.description": "Geben Sie einen Ausdruck ein, um Zahlen von `2` bis `7` im Text auszuwählen.\\n`2` und `7` sollten auch in diesem Bereich enthalten sein.",
 
   "steps.repetitions.title": "Wiederholungen",
-  "steps.repetitions.description": "Einige Sonderzeichen werden verwendet, um anzugeben, wie oft ein Zeichen im Text wiederholt wird. Diese Sonderzeichen sind das Plus `+`, das Sternchen `*` und das Fragezeichen `? `.",
+  "steps.repetitions.description": "Einige Sonderzeichen werden verwendet, um anzugeben, wie oft ein Zeichen im Text wiederholt wird. Diese Sonderzeichen sind das Plus `+`, das Sternchen `*` und das Fragezeichen `?`.",
 
   "steps.asterisk.title": "Sternchen `*`",
   "steps.asterisk.description": "Wir setzen ein Sternchen `*` an das Ende, um anzuzeigen, dass ein Zeichen überhaupt nicht oder mehrfach übereinstimmen kann. Geben Sie zum Beispiel an, dass der Buchstabe `e` niemals in der vorkommen sollte Text, oder es kann einmal oder mehrmals nebeneinander vorkommen.",
@@ -59,13 +59,13 @@
   "steps.questionMark.title": "Fragezeichen `?`",
   "steps.questionMark.description": "Um anzuzeigen, dass ein Zeichen optional ist, setzen wir ein `?` Fragezeichen an das Ende. Geben Sie beispielsweise an, dass der folgende Buchstabe `u` optional ist.",
 
-  "steps.quantifier.title": "geschweifte Klammern - 1",
+  "steps.quantifier.title": "Geschweifte Klammern - 1",
   "steps.quantifier.description": "Um eine bestimmte Anzahl von Vorkommen eines Zeichens auszudrücken, schreiben wir geschweifte Klammern `{n}` zusammen mit der Häufigkeit, mit der es am Ende vorkommen soll. Geben Sie zum Beispiel Folgendes an Buchstabe `e` darf nur `2` mal vorkommen.",
 
-  "steps.quantifierMin.title": "geschweifte Klammern - 2",
+  "steps.quantifierMin.title": "Geschweifte Klammern - 2",
   "steps.quantifierMin.description": "Um mindestens eine bestimmte Anzahl von Vorkommen eines Zeichens auszudrücken, schreiben wir das Ende des Zeichens mindestens wie oft es vorkommen soll, mit einem Komma `,` am Ende, und in geschweiften Klammern `{n, }`. Geben Sie zum Beispiel an, dass der folgende Buchstabe `e` mindestens `3` Mal vorkommen kann.",
 
-  "steps.quantifierRange.title": "geschweifte Klammern - 3",
+  "steps.quantifierRange.title": "Geschweifte Klammern - 3",
   "steps.quantifierRange.description": "Um das Vorkommen eines Zeichens in einem bestimmten Zahlenbereich auszudrücken, schreiben wir geschweifte Klammern `{x,y}` mit dem Intervall, das wir bis zum Ende gehen möchten. Geben Sie zum Beispiel an, dass die der folgende Buchstabe `e` darf nur zwischen `1` und `3` vorkommen.",
 
   "examples.asterisk.title": "Übung: Asterisk `*`",
@@ -96,7 +96,7 @@
   "steps.nonCapturingGroupping.description": "Sie können einen Ausdruck gruppieren und sicherstellen, dass er nicht durch Referenzen erfasst wird. Unten sehen Sie beispielsweise zwei Gruppen. Die erste Gruppenreferenz, die wir mit `\\1` bezeichnen, zeigt jedoch tatsächlich die zweite an Gruppe, da die erste eine nicht einfangende Gruppe ist.",
 
   "steps.pipeCharacter.title": "Pipe-Zeichen `|`",
-  "steps.pipeCharacter.description": "Damit kann festgelegt werden, dass ein Ausdruck in verschiedenen Ausdrücken enthalten sein kann. Daher werden alle möglichen Anweisungen durch das Pipe-Zeichen `|` getrennt geschrieben. Dies unterscheidet sich vom Zeichensatz `[abc]`, Zeichensätze arbeiten auf Zeichenebene. Alternativen befinden sich auf Ausdrucksebene. Beispielsweise würde der folgende Ausdruck sowohl `Katze` als auch `Katze` auswählen. Fügen Sie am Ende des Ausdrucks ein weiteres Pipe-Zeichen `|` hinzu und geben Sie `Ratte` ein, damit alle Wörter werden ausgewählt.",
+  "steps.pipeCharacter.description": "Damit kann festgelegt werden, dass ein Ausdruck in verschiedenen Ausdrücken enthalten sein kann. Daher werden alle möglichen Anweisungen durch das Pipe-Zeichen `|` getrennt geschrieben. Dies unterscheidet sich vom Zeichensatz `[abc]`, Zeichensätze arbeiten auf Zeichenebene. Alternativen befinden sich auf Ausdrucksebene. Beispielsweise würde der folgende Ausdruck sowohl `Cat` als auch `Cat` auswählen. Fügen Sie am Ende des Ausdrucks ein weiteres Pipe-Zeichen `|` hinzu und geben Sie `Rat` ein, damit alle Wörter werden ausgewählt.",
 
   "steps.escapeCharacter.title": "Escape-Zeichen `\\`",
   "steps.escapeCharacter.description": "Es gibt Sonderzeichen, die wir beim Schreiben von Regex verwenden. `{ } [ ] / \\ + * . $^ | ?` Bevor wir diese Zeichen selbst auswählen können, müssen wir ein Escape verwenden Zeichen `\\`. Um beispielsweise die Zeichen Punkt `.` und Sternchen `*` im Text auszuwählen, fügen wir davor ein Escape-Zeichen `\\` ein.",
@@ -126,7 +126,7 @@
   "steps.withoutSpaceCharacter.description": "`\\S` wird verwendet, um Nicht-Leerzeichen zu finden.",
 
   "steps.lookarounds.title": "Lookarounds",
-  "steps.lookarounds.description": "Wenn wir möchten, dass der Satz, den wir schreiben, vor oder nach einem anderen Satz steht, müssen wir \"umsehen\". Machen Sie den nächsten Schritt, um zu lernen, wie man \"umsieht\"." ,
+  "steps.lookarounds.description": "Wenn wir möchten, dass der Satz, den wir schreiben, vor oder nach einem anderen Satz steht, müssen wir \"look around\". Machen Sie den nächsten Schritt, um zu lernen, wie man \"looks around\"." ,
 
   "steps.positiveLookahead.title": "Positiver Lookahead: `(?=)`",
   "steps.positiveLookahead.description": "Zum Beispiel möchten wir den Stundenwert im Text auswählen. Um daher nur die numerischen Werte auszuwählen, denen `PM` folgt, müssen wir den positiven Look-Ahead-Ausdruck ` schreiben (?=)` nach unserem Ausdruck. Fügen Sie `PM` nach dem `=`-Zeichen in Klammern ein.",
@@ -152,7 +152,7 @@
   "steps.flagsCaseInsensitive.title": "Groß-/Kleinschreibung beachten",
   "steps.flagsCaseInsensitive.description": "Um die Groß-/Kleinschreibung des von uns geschriebenen Ausdrucks zu entfernen, müssen wir das Flag `Groß-/Kleinschreibung ignorieren` aktivieren.",
   
-  "steps.greedyMatching.title": "Gieriger Abgleich",
+  "steps.greedyMatching.title": "Gieriger Heiratsvermittler",
   "steps.greedyMatching.description": "Regex führt standardmäßig einen Greedy-Match durch. Das bedeutet, dass das Matchmaking so lang wie möglich sein wird. Sehen Sie sich das Beispiel unten an. Es bezieht sich auf alle Matches, die auf „r“ enden und beliebig sein können vorangestelltes Zeichen. Aber es hört nicht beim ersten Buchstaben `r` auf.",
 
   "steps.lazyMatching.title": "Lazy Matching",

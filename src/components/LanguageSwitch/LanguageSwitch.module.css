@@ -8,6 +8,7 @@
 
 .LanguageSwitch :global(svg) {
   transition: 0.3s;
+  margin-left: 10px;
 }
 
 .LanguageSwitchCurrent {
@@ -31,10 +32,11 @@
 
 .LanguageSwitchList {
   position: absolute;
-  top: 20px;
+  top: 30px;
   z-index: 99;
-  right: 0px;
+  left: 0px;
   text-align: end;
+  transition: all 0.2s linear;
 }
 
 .LanguageSwitchListItem {
@@ -43,7 +45,6 @@
   display: flex;
   align-items: center;
   white-space: nowrap;
-  justify-content: flex-end;
 }
 
 .LanguageSwitchListItem:hover,
@@ -65,13 +66,15 @@
   display: inline-block;
 }
 
-.LanguageSwitchListItem:nth-child(1) {
-  margin-top: 10px;
-}
 .LanguageSwitchCurrent span,
 .LanguageSwitchListItem span {
   min-width: 20px;
   font-size: 1.3rem;
+  transition: transform 0.1s linear;
+}
+
+.LanguageSwitchListItem span:hover {
+  transform: scale(1.3);
 }
 
 .LanguageSwitchListItem :global(div[role='button']) {
