@@ -21,6 +21,7 @@ This is a project that makes learning how to write regex easy.
 - **German**
 - _French_ [(Requested)](https://github.com/aykutkardas/regexlearn.com/issues/159)
 - _Korean_ [(Requested)](https://github.com/aykutkardas/regexlearn.com/issues/92)
+- _Arabic_ [(Requested)](https://github.com/aykutkardas/regexlearn.com/issues/163)
 - _Brazilian Portuguese_ [(Requested)](https://github.com/aykutkardas/regexlearn.com/issues/39)
 
 _Please create an issue to add your own language._
