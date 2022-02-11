@@ -45,7 +45,7 @@ const LanguageSwitch = () => {
       </div>
       <div
         className={styles.LanguageSwitchList}
-        style={{ visibility: isOpen ? 'visible' : 'hidden' }}
+        style={{ visibility: isOpen ? 'visible' : 'hidden', opacity: isOpen ? 1 : 0 }}
       >
         {getAvailableList().map(({ label, value }) => (
           <a
