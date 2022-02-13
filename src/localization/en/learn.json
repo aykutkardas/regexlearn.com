@@ -69,7 +69,7 @@
   "steps.quantifierRange.description": "To express the occurrence of a character in a certain number range, we write curly braces `{x,y}` with the interval we want to go to the end. For example, indicate that the following letter `e` can only occur between `1` and `3`.",
 
   "examples.asterisk.title": "Practice: Asterisk `*`",
-  "examples.asterisk.description": "Use the asterisk `*` to write the expression that will select each word, suitable for the absence of the letter `e` in the text and the presence of more than one.",
+  "examples.asterisk.description": "Use the asterisk `*` to write the expression that will select each word, suitable for the absence of the letter `e` in the text and the presence of one or more.",
 
   "examples.plusCharacter.title": "Practice: Plus Sign `+`",
   "examples.plusCharacter.description": "Write the expression using the plus sign `+` to select words in which the letter `e` occurs one or more times in the text.",
