@@ -31,5 +31,5 @@
   "page.cheatsheet.description": "Manchmal müssen Sie sich Regex nur merken. Probieren Sie das Cheatsheet aus, das es Ihnen leichter macht, es zu verstehen und sich besser zu merken.",
   "page.playground.description": "Sie können Ihr Regex-Muster ganz einfach online über Playground erstellen und testen.",
 
-  "learn.safari.unsupportWarning": "Reguläre Ausdrücke in diesem Schritt werden vom Safari-Browser nicht unterstützt. Wenn Sie Probleme haben, diesen Schritt zu überstehen, können Sie hier klicken."
+  "learn.safari.unsupportWarning": "Regex in diesem Schritt werden von einigen Browsern nicht unterstützt. Wenn Sie Probleme haben, diesen Schritt zu überwinden. Sie können hier klicken."
 }

@@ -43,12 +43,6 @@ const InteractiveArea = ({
   const [success, setSuccess] = useState(false);
   const [match, setMatch] = useState(false);
 
-  const [isSafariAccept, setIsSafariAccept] = useState(false);
-
-  useEffect(() => {
-    setIsSafariAccept(isSafari() && data.safariAccept);
-  }, [step, data.safariAccept]);
-
   const skipStep = () => {
     setError(false);
     setSuccess(true);
@@ -57,7 +51,7 @@ const InteractiveArea = ({
   const applyRegex = () => {
     if (data.interactive === false) return;
 
-    if (isSafariAccept) {
+    if (data.safariAccept) {
       const isTrueRegex = data.regex[0] == regex;
       setError(!isTrueRegex);
       setSuccess(isTrueRegex);
@@ -149,7 +143,7 @@ const InteractiveArea = ({
 
   useEventListener('keydown', handleFocus);
 
-  useEffect(applyRegex, [regex, flags, step, data, isChanged, isSafariAccept]);
+  useEffect(applyRegex, [regex, flags, step, data, isChanged]);
 
   if (!isShow) return null;
 
@@ -168,16 +162,16 @@ const InteractiveArea = ({
         [styles.InteractiveAreaParentError]: parentError,
       })}
     >
+      {data.safariAccept && (
+        <div className={styles.SafariWarning} onClick={skipStep}>
+          <FormattedMessage id="learn.safari.unsupportWarning" />
+        </div>
+      )}
       <div
         className={styles.InteractiveAreaBlockContent}
         data-title={formatMessage({ id: 'general.text' })}
         dangerouslySetInnerHTML={{ __html: highlightedContent }}
       />
-      {isSafariAccept && (
-        <div className={styles.SafariWarning} onClick={skipStep}>
-          <FormattedMessage id="learn.safari.unsupportWarning" />
-        </div>
-      )}
       <div
         className={styles.InteractiveAreaBlockRegex}
         data-title={formatMessage({ id: 'general.regex' })}

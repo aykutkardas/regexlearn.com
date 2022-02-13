@@ -50,12 +50,12 @@
 }
 
 .InteractiveAreaInputWrapper::before {
-  content: "/";
+  content: '/';
   color: var(--gray);
 }
 
 .InteractiveAreaInputWrapper::after {
-  content: "/" attr(data-flags);
+  content: '/' attr(data-flags);
   color: var(--gray);
 }
 
@@ -124,13 +124,15 @@
 }
 
 .SafariWarning {
-  background-color: var(--warning-darken);
-  color: var(--black);
+  background-color: var(--bg-4);
+  border-bottom: 3px solid var(--bg-2);
+  color: var(--txt-2);
   font-size: 12px;
   padding: 5px;
   cursor: pointer;
+  border-radius: 4px;
 }
 
 .SafariWarning:hover {
-  opacity: .8;
+  opacity: 0.8;
 }
