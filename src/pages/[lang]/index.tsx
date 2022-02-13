@@ -1,42 +1,27 @@
 import { GetStaticPaths, GetStaticProps } from 'next';
 import { FormattedMessage, useIntl } from 'react-intl';
-import { useRouter } from 'next/router';
-import Head from 'next/head';
 import cx from 'classnames';
 
 import tagWrapper from 'src/utils/tagWrapper';
 import { defaultLocale, locales } from 'src/localization';
 
 import ProductButton from 'src/components/ProductButton';
-import SeoTags from 'src/components/SeoTags';
 import Button from 'src/components/Button';
 import Icon from 'src/components/Icon';
 import Header from 'src/components/Header';
 import Footer from 'src/components/Footer';
 import Section from 'src/components/Section';
 import IntlLink from 'src/components/IntlLink';
+import CustomHead from 'src/components/CustomHead';
 
 import styles from './Home.module.css';
 
 const PageHome = () => {
   const { formatMessage } = useIntl();
-  const { asPath } = useRouter();
-
-  const pageTitle = formatMessage({ id: 'page.landing.title' });
-  const pageDescription = formatMessage({ id: 'page.landing.description' });
 
   return (
     <>
-      <Head>
-        <title>{pageTitle}</title>
-        <meta name="description" content={pageDescription} />
-        <link rel="alternate" hrefLang="en" href="https://regexlearn.com/" />
-        <link rel="alternate" hrefLang="ru" href="https://regexlearn.com/ru/" />
-        <link rel="alternate" hrefLang="es" href="https://regexlearn.com/es/" />
-        <link rel="alternate" hrefLang="tr" href="https://regexlearn.com/tr/" />
-        <link rel="alternate" hrefLang="zh-cn" href="https://regexlearn.com/zh-cn/" />
-        <SeoTags title={pageTitle} description={pageDescription} href={asPath} />
-      </Head>
+      <CustomHead title="page.landing.title" description="page.landing.description" hrefLang="" />
       <Header />
       <div className="container">
         <div className={cx('row', styles.LandingMainSection)}>

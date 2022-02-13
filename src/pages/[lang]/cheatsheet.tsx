@@ -1,14 +1,13 @@
 import { GetStaticPaths, GetStaticProps } from 'next';
 import { FormattedMessage, useIntl } from 'react-intl';
 import { useRouter } from 'next/router';
-import Head from 'next/head';
 
-import SeoTags from 'src/components/SeoTags';
 import Header from 'src/components/Header';
 import Footer from 'src/components/Footer';
 import Collapse from 'src/components/Collapse';
 import CheatsheetItemTitle from 'src/components/CheatsheetItemTitle';
 import CheatsheetDemo from 'src/components/CheatsheetDemo';
+import CustomHead from 'src/components/CustomHead';
 import { defaultLocale, locales } from 'src/localization';
 import data from 'src/data/cheatsheet.json';
 
@@ -18,23 +17,15 @@ const PageCheatsheet = () => {
   const { formatMessage } = useIntl();
   const { asPath } = useRouter();
 
-  const pageTitle = formatMessage({ id: 'page.cheatsheet.title' });
-  const pageDescription = formatMessage({ id: 'page.cheatsheet.description' });
-
   const columns = [data.slice(0, 3), data.slice(3, 4), data.slice(4, 6)];
 
   return (
     <>
-      <Head>
-        <title>{pageTitle}</title>
-        <meta name="description" content={pageDescription} />
-        <link rel="alternate" hrefLang="en" href="https://regexlearn.com/cheatsheet" />
-        <link rel="alternate" hrefLang="ru" href="https://regexlearn.com/ru/cheatsheet" />
-        <link rel="alternate" hrefLang="es" href="https://regexlearn.com/es/cheatsheet" />
-        <link rel="alternate" hrefLang="tr" href="https://regexlearn.com/tr/cheatsheet" />
-        <link rel="alternate" hrefLang="zh-cn" href="https://regexlearn.com/zh-cn/cheatsheet" />
-        <SeoTags key={pageTitle} title={pageTitle} description={pageDescription} href={asPath} />
-      </Head>
+      <CustomHead
+        title="page.cheatsheet.title"
+        description="page.cheatsheet.description"
+        hrefLang="cheatsheet"
+      />
       <Header />
       <div className="container flex-1">
         <div className="row">

@@ -1,59 +1,35 @@
 import { GetStaticPaths, GetStaticProps } from 'next';
-import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { useIntl } from 'react-intl';
 
 import Header from 'src/components/Header';
-import SeoTags from 'src/components/SeoTags';
 import LearnPage from 'src/components/LearnPage';
 import { defaultLocale, locales } from 'src/localization';
 import lessons from 'src/data/lessons/index.json';
+import CustomHead from 'src/components/CustomHead';
 
 type PageLessonProps = {
   lessonName: string;
 };
 
 const PageLesson = ({ lessonName }: PageLessonProps) => {
-  const { query, asPath } = useRouter();
+  const { query } = useRouter();
   const { formatMessage } = useIntl();
 
   const data = require(`src/data/lessons/${lessonName}`)?.default;
 
   const lang = typeof query.lang === 'string' ? query.lang.toUpperCase() : query.lang;
-
   const title = formatMessage({ id: `lessons.${lessonName}.title` });
-  const pageTitle = `${title} - ${lang}`;
-  const pageDescription = formatMessage({ id: `lessons.${lessonName}.description` });
 
   return (
     <>
-      <Head>
+      <CustomHead
+        title={`${title} - ${lang}`}
+        description={`lessons.${lessonName}.description`}
+        hrefLang={`learn/${lessonName}`}
+      >
         <link rel="stylesheet" href="/css/animate.css" />
-        <title>{pageTitle}</title>
-        <meta name="description" content={pageDescription} />
-        <link rel="alternate" hrefLang="en" href={`https://regexlearn.com/learn/${lessonName}`} />
-        <link
-          rel="alternate"
-          hrefLang="ru"
-          href={`https://regexlearn.com/ru/learn/${lessonName}`}
-        />
-        <link
-          rel="alternate"
-          hrefLang="es"
-          href={`https://regexlearn.com/es/learn/${lessonName}`}
-        />
-        <link
-          rel="alternate"
-          hrefLang="tr"
-          href={`https://regexlearn.com/tr/learn/${lessonName}`}
-        />
-        <link
-          rel="alternate"
-          hrefLang="zh-cn"
-          href={`https://regexlearn.com/zh-cn/learn/${lessonName}`}
-        />
-        <SeoTags title={pageTitle} description={pageDescription} href={asPath} />
-      </Head>
+      </CustomHead>
       <Header isLearnPage />
       <LearnPage data={data} lessonName={lessonName} />
     </>

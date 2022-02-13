@@ -1,13 +1,11 @@
 import { GetStaticPaths, GetStaticProps } from 'next';
-import Head from 'next/head';
-import { useRouter } from 'next/router';
 import { useIntl, FormattedMessage } from 'react-intl';
 import cx from 'classnames';
 
-import SeoTags from 'src/components/SeoTags';
 import Header from 'src/components/Header';
 import Footer from 'src/components/Footer';
 import LessonBox from 'src/components/LessonBox';
+import CustomHead from 'src/components/CustomHead';
 import tagWrapper from 'src/utils/tagWrapper';
 import { defaultLocale, locales } from 'src/localization';
 import lessons from 'src/data/lessons/index.json';
@@ -16,24 +14,12 @@ import styles from './Learn.module.css';
 
 const PageLearn = () => {
   const { formatMessage } = useIntl();
-  const { asPath } = useRouter();
-
-  const pageTitle = formatMessage({ id: 'page.learn.title' });
-  const pageDescription = formatMessage({ id: 'page.learn.description' });
 
   return (
     <>
-      <Head>
+      <CustomHead title="page.learn.title" description="page.learn.description" hrefLang="learn">
         <link rel="stylesheet" href="/css/animate.css" />
-        <title>{pageTitle}</title>
-        <meta name="description" content={pageDescription} />
-        <link rel="alternate" hrefLang="en" href="https://regexlearn.com/learn" />
-        <link rel="alternate" hrefLang="ru" href="https://regexlearn.com/ru/learn" />
-        <link rel="alternate" hrefLang="es" href="https://regexlearn.com/es/learn" />
-        <link rel="alternate" hrefLang="tr" href="https://regexlearn.com/tr/learn" />
-        <link rel="alternate" hrefLang="zh-cn" href="https://regexlearn.com/zh-cn/learn" />
-        <SeoTags title={pageTitle} description={pageDescription} href={asPath} />
-      </Head>
+      </CustomHead>
       <Header />
       <div className="container">
         <div className={cx('row', styles.Section)}>
