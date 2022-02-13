@@ -10,7 +10,6 @@ const Hint = dynamic(import('src/components/Hint'), { ssr: false });
 import FlagBox from 'src/components/FlagBox';
 import setCaretPosition from 'src/utils/setCaretPosition';
 import tagWrapper from 'src/utils/tagWrapper';
-import isSafari from 'src/utils/isSafari';
 import checkRegex from 'src/utils/checkRegex';
 import { LessonData } from 'src/types';
 
