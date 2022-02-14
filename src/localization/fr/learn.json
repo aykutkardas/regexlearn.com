@@ -155,7 +155,7 @@
   "steps.greedyMatching.title": "Correspondance gourmande",
   "steps.greedyMatching.description": "Le Regex effectue une correspondance gourmande par défaut. Cela signifie que la mise en correspondance sera la plus longue possible. Regardez l'exemple ci-dessous. Il s'agit de toute correspondance qui se termine par `r` et peut être n'importe quel caractère précédé par celui-ci. Mais elle ne s'arrête pas à la première lettre `r`.",
 
-  "steps.lazyMatching.title": "Correspondance paresseux",
+  "steps.lazyMatching.title": "Correspondance paresseuse",
   "steps.lazyMatching.description": "La mise en correspondance paresseuse, contrairement à la mise en correspondance gourmande, s'arrête à la première correspondance. Par exemple, dans l'exemple ci-dessous, ajoutez un `?` après `*` pour trouver la première correspondance qui se termine par la lettre `r` et qui est précédée d'un caractère quelconque. Cela signifie que cette correspondance s'arrêtera à la première lettre `r`.",
 
   "steps.completeAllSteps.title": "Félicitations, vous avez terminé toutes les étapes !",
