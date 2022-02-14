@@ -30,7 +30,7 @@ const CustomHead = ({ title, description, children, hrefLang }: CustomHeadProps)
           <link
             key={locale}
             rel="alternate"
-            hrefLang="en"
+            hrefLang={locale}
             href={`https://regexlearn.com/${locale === 'en' ? '' : locale + '/'}${hrefLang}`}
           />
         ))}
