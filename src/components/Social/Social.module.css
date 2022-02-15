@@ -1,3 +1,8 @@
+.SocialLinkWrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
 .SocialLink {
   text-decoration: none;
   margin: 0 10px;

@@ -35,6 +35,16 @@ const LearnFooter = ({ steps, step, nextStep, prevStep, success, error }: LearnF
       </div>
       <div className={cx(styles.LearnFooterSocialWrapper, 'col-xs-4')}>
         <Social />
+        <div className={styles.FooterCopyright}>
+          <a
+            className={styles.FooterCopyrightLink}
+            target="_blank"
+            rel="noreferrer"
+            href="https://github.com/aykutkardas/regexlearn.com#sponsoring"
+          >
+            <FormattedMessage id="general.becomeSponsor" />
+          </a>
+        </div>
       </div>
       <div className={cx(styles.LearnFooterNextWrapper, 'col-xs-4')}>
         {step < steps.length - 1 && (
