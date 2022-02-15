@@ -51,13 +51,13 @@
   "steps.repetitions.description": "Some special characters are used to specify how many times a character will be repeated in the text. These special characters are the plus `+`, the asterisk `*`, and the question mark `?`.",
 
   "steps.asterisk.title": "Asterisk `*`",
-  "steps.asterisk.description": "We put an asterisk `*` at the end to indicate that a character does not match at all or can match many times. For example, indicate that the letter `e` should never occur in the text, or it can occur once or more side by side.",
+  "steps.asterisk.description": "We put an asterisk `*` after a character to indicate that the character may either not match at all or can match many times. For example, indicate that the letter `e` should never occur in the text, or it can occur once or more side by side.",
 
   "steps.plusCharacter.title": "Plus Sign `+`",
-  "steps.plusCharacter.description": "To indicate that a character can occur one or more times, we put a plus sign `+` at the end. For example, indicate that the letter `e` can occur one or more times in the text.",
+  "steps.plusCharacter.description": "To indicate that a character can occur one or more times, we put a plus sign `+` after a character. For example, indicate that the letter `e` can occur one or more times in the text.",
 
   "steps.questionMark.title": "Question Mark `?`",
-  "steps.questionMark.description": "To indicate that a character is optional, we put a `?` question mark at the end. For example, indicate that the following letter `u` is optional.",
+  "steps.questionMark.description": "To indicate that a character is optional, we put a `?` question mark after a character. For example, indicate that the following letter `u` is optional.",
 
   "steps.quantifier.title": "Curly Braces - 1",
   "steps.quantifier.description": "To express a certain number of occurrences of a character, we write curly braces `{n}` along with how many times we want it to occur at the end. For example, indicate that the following letter `e` can occur only `2` times.",
