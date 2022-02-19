@@ -10,7 +10,7 @@
   "general.hintQuestion": "Montrer la réponse",
   "general.reportStep": "Signaler un problème",
   "general.startLearning": "Commencer à apprendre",
-  "general.comingSoon": "A venir",
+  "general.comingSoon": "Bientôt",
   "general.becomeSponsor": "Devenir un sponsor",
   "general.learn": "Apprendre",
   "general.playground": "Terrain de jeux",
@@ -31,5 +31,5 @@
   "page.cheatsheet.description": "Parfois, vous avez besoin de vous souvenir de Regex. Essayez l'antisèche qui vous permettra de mieux comprendre et de mieux mémoriser.",
   "page.playground.description": "Vous pouvez facilement construire et tester votre motif regex en ligne via Playground.",
 
-  "learn.safari.unsupportWarning": "Les expressions régulières de cette étape ne sont pas prises en charge par le navigateur Safari. Si vous avez des difficultés à passer cette étape. Vous pouvez cliquer ici."
+  "learn.safari.unsupportWarning": "Les Regex dans cette étape ne sont pas supportés par certains navigateurs. Si vous avez des difficultés à passer cette étape. Vous pouvez cliquer ici."
 }
