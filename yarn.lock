@@ -2644,10 +2644,10 @@ react-dom@17.0.2:
     object-assign "^4.1.1"
     scheduler "^0.20.2"
 
-react-icomoon@^2.4.2:
-  version "2.4.2"
-  resolved "https://registry.yarnpkg.com/react-icomoon/-/react-icomoon-2.4.2.tgz#390489597be30519f4b9c8d5a701cffc737679c1"
-  integrity sha512-Hw7itIOQV5zRoYFpubr5C52h0qt7Bw00jE6TIFdgR6lH4RZOI0bNao576trW0Y6xxx30JGUOk3KqSagAERKDdg==
+react-icomoon@^2.4.9:
+  version "2.4.9"
+  resolved "https://registry.yarnpkg.com/react-icomoon/-/react-icomoon-2.4.9.tgz#d55d2a33bbc9a130d4c944c92826d14a89e54768"
+  integrity sha512-wtEWY97JBt0fHkZJQRkQTbEeQOkdMXaHNl0znRE1w6+4YPlM8uRzSt5q2o1ppZILSCnsUIOEqG8SnTMq+tkXmg==
 
 react-intl@^5.21.0:
   version "5.21.0"
