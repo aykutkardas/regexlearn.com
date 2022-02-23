@@ -2,9 +2,9 @@ import isEmpty from 'lodash.isempty';
 import xor from 'lodash.xor';
 
 const createGrouppedRegex = (regex: string, flags: string) => {
-  const matches = [...regex.matchAll(/\\(\d+)/g)].map(item => item[1]).map(Number);
-
-  matches.sort((a, b) => b - a);
+  const matches = [...regex.matchAll(/\\(\d+)/g)]
+    .map(item => Number(item[1]))
+    .sort((a, b) => b - a);
 
   let newRegex = regex;
 
