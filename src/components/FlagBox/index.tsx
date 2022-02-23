@@ -28,12 +28,12 @@ const flagList = [
   },
 ];
 
-type FlagBoxProps = {
+interface Props {
   flags: string;
   setFlags: Function;
-};
+}
 
-const FlagBox = ({ flags, setFlags }: FlagBoxProps) => {
+const FlagBox = ({ flags, setFlags }: Props) => {
   const toggleFlag = flag => {
     if (flags?.includes(flag)) {
       setFlags(flags.replace(flag, ''));

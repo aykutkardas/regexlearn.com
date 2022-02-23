@@ -8,11 +8,11 @@ import { CheatsheetData } from 'src/types';
 
 import styles from './CheatsheetDemo.module.css';
 
-type CheatsheetDemoProps = {
+interface Props {
   data: CheatsheetData;
-};
+}
 
-const CheatsheetDemo = ({ data }: CheatsheetDemoProps) => {
+const CheatsheetDemo = ({ data }: Props) => {
   const [content, setContent] = useState('');
   const { formatMessage } = useIntl();
   const initialContent = data.content;

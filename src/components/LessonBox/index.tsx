@@ -8,16 +8,16 @@ import Icon from 'src/components/Icon';
 
 import styles from './LessonBox.module.css';
 
-type LessonBoxProps = {
+interface Props {
   data: {
     key: string;
     title: string;
     description: string;
   };
   lock?: boolean;
-};
+}
 
-const LessonBox = ({ data, lock }: LessonBoxProps) => {
+const LessonBox = ({ data, lock }: Props) => {
   const [isVisit, setIsVisit] = useState(false);
   const { formatMessage } = useIntl();
 

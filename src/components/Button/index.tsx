@@ -7,13 +7,13 @@ const variants = {
   github: styles.GitHub,
 };
 
-type ButtonProps = {
+interface Props {
   variant: 'primary' | 'github';
   className?: string;
   children: any;
-};
+}
 
-const Button = ({ children, variant, className, ...props }: ButtonProps) => (
+const Button = ({ children, variant, className, ...props }: Props) => (
   <button className={cx(styles.Button, variants[variant], className)} {...props}>
     {children}
   </button>

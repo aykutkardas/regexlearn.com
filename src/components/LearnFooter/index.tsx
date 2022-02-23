@@ -10,16 +10,16 @@ import shortcuts from 'src/shortcuts';
 
 import styles from './LearnFooter.module.css';
 
-type LearnFooterProps = {
+interface Props {
   steps: object[];
   step: number;
-  nextStep: MouseEventHandler<HTMLDivElement>;
-  prevStep: MouseEventHandler<HTMLDivElement>;
   success: boolean;
   error: boolean;
-};
+  nextStep: MouseEventHandler<HTMLDivElement>;
+  prevStep: MouseEventHandler<HTMLDivElement>;
+}
 
-const LearnFooter = ({ steps, step, nextStep, prevStep, success, error }: LearnFooterProps) => (
+const LearnFooter = ({ steps, step, nextStep, prevStep, success, error }: Props) => (
   <div className={cx(styles.LearnFooter, 'container-fluid')}>
     <div className={cx(styles.LearnFooterRow, 'row')}>
       <div className={cx(styles.LearnFooterPrevWrapper, 'col-xs-4')}>

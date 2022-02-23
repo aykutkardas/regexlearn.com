@@ -7,12 +7,12 @@ import LearnFooter from 'src/components/LearnFooter';
 import Step from 'src/components/Step';
 import { LessonData } from 'src/types';
 
-type LearnPageProps = {
+interface Props {
   lessonName: string;
   data: LessonData[];
-};
+}
 
-const LearnPage = ({ data, lessonName }: LearnPageProps) => {
+const LearnPage = ({ data, lessonName }: Props) => {
   const lookieKey = `lesson.${lessonName}`;
   const [step, setStep] = useState(0);
   const [lastStep, setLastStep] = useState(0);

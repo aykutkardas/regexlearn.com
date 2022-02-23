@@ -8,12 +8,12 @@ import shortcuts from 'src/shortcuts';
 
 import styles from './Hint.module.css';
 
-type HintProps = {
+interface Props {
   regex: string[];
   flags: string;
-};
+}
 
-const Hint = ({ regex, flags }: HintProps) => {
+const Hint = ({ regex, flags }: Props) => {
   const hintRef = useRef<HTMLDivElement>(null);
   const [showStatus, setShowStatus] = useState(false);
 

@@ -9,23 +9,16 @@ import { LessonData } from 'src/types';
 
 import styles from './Step.module.css';
 
-type StepProps = {
+interface Props {
   lessonName: string;
   step: number;
   steps: object[];
   error: boolean;
   onChangeSuccess: Function;
   data: LessonData;
-};
+}
 
-const Step = ({
-  lessonName,
-  data,
-  step,
-  steps,
-  error: parentError,
-  onChangeSuccess,
-}: StepProps) => {
+const Step = ({ lessonName, data, step, steps, error: parentError, onChangeSuccess }: Props) => {
   const [mounted, setMounted] = useState(false);
   const { formatMessage } = useIntl();
 

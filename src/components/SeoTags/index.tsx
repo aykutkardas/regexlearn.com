@@ -1,18 +1,18 @@
 const baseURL = 'https://regexlearn.com';
 
-type SeoTagsProps = {
+interface Props {
   title: string;
   description: string;
   href: string;
   image?: string;
-};
+}
 
 const SeoTags = ({
   title,
   description,
   href = '',
   image = baseURL + '/images/og-regexlearn-image.jpg',
-}: SeoTagsProps) => (
+}: Props) => (
   <>
     {/* <!-- Facebook Meta Tags --> */}
     <meta property="og:url" content={baseURL + href} />

@@ -6,13 +6,13 @@ import { CheatsheetData } from 'src/types';
 
 import styles from './CheatsheetItemTitle.module.css';
 
-type CheatsheetItemTitleProps = {
+interface Props {
   data: CheatsheetData;
   onClick?: MouseEventHandler<Element>;
   className?: string;
-};
+}
 
-const CheatsheetItemTitle = ({ data, className, ...props }: CheatsheetItemTitleProps) => (
+const CheatsheetItemTitle = ({ data, className, ...props }: Props) => (
   <div {...props} className={cx(styles.CheatsheetItemTitle, className)}>
     <span className={styles.CheatsheetItemTitleCodeWrapper}>
       <code className={styles.CheatsheetItemTitleCode}>{data.code}</code>

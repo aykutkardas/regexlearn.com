@@ -7,7 +7,7 @@ import Icon from 'src/components/Icon';
 
 import styles from './Collapse.module.css';
 
-type CollapseProps = {
+interface Props {
   title: any;
   className?: string;
   openedClassName?: string;
@@ -17,7 +17,7 @@ type CollapseProps = {
   children: any;
   titleClassName?: string;
   contentClassName?: string;
-};
+}
 
 const Collapse = ({
   title,
@@ -26,7 +26,7 @@ const Collapse = ({
   titleClassName,
   contentClassName,
   ...props
-}: CollapseProps) => {
+}: Props) => {
   const [show, setShow] = useState(false);
 
   return (

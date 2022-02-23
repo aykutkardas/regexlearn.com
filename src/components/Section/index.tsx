@@ -7,7 +7,7 @@ import tagWrapper from 'src/utils/tagWrapper';
 
 import styles from './Section.module.css';
 
-type SectionProps = {
+interface Props {
   title?: string;
   description?: string;
   link?: string;
@@ -16,7 +16,7 @@ type SectionProps = {
   buttonText?: string;
   customButton?: Function;
   reverse?: boolean;
-};
+}
 
 const Section = ({
   reverse,
@@ -27,7 +27,7 @@ const Section = ({
   imageAltText,
   buttonText,
   customButton,
-}: SectionProps) => {
+}: Props) => {
   const { formatMessage } = useIntl();
   const isShowButton = Boolean(link && buttonText);
 

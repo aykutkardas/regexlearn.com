@@ -15,14 +15,14 @@ import { LessonData } from 'src/types';
 
 import styles from './InteractiveArea.module.css';
 
-type InteractiveAreaProps = {
+interface Props {
   lessonName: string;
   data: LessonData;
   step: number;
   isShow?: boolean;
   parentError: boolean;
   onChangeSuccess: Function;
-};
+}
 
 const InteractiveArea = ({
   lessonName,
@@ -31,7 +31,7 @@ const InteractiveArea = ({
   isShow,
   parentError,
   onChangeSuccess,
-}: InteractiveAreaProps) => {
+}: Props) => {
   const { formatMessage } = useIntl();
   const regexInput = useRef<HTMLInputElement>(null);
   const [regex, setRegex] = useState(data.initialValue || '');
@@ -60,7 +60,7 @@ const InteractiveArea = ({
     const { isSuccess, isMatch, err, regex: grouppedRegex } = checkRegex(data, { regex, flags });
 
     if (err) {
-      setError(err);
+      setError(Boolean(err));
     } else {
       setMatch(isMatch);
       setSuccess(isSuccess);
