@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, CSSProperties } from 'react';
 import { useRouter } from 'next/router';
 
 import Icon from 'src/components/Icon';
@@ -30,7 +30,12 @@ const LanguageSwitch = () => {
     setIsOpen(false);
   };
 
-  const getAvailableList = () => langList.filter(({ value }) => lang !== value);
+  const availableLangList = langList.filter(({ value }) => lang !== value);
+
+  const languageSwitchListStyle: CSSProperties = {
+    visibility: isOpen ? 'visible' : 'hidden',
+    opacity: isOpen ? 1 : 0,
+  };
 
   return (
     <div className={styles.LanguageSwitch}>
@@ -43,11 +48,8 @@ const LanguageSwitch = () => {
         <span>{currentLang}</span>
         <Icon icon="earth" className={styles.LanguageSwitchCurrentIcon} size={16} />
       </div>
-      <div
-        className={styles.LanguageSwitchList}
-        style={{ visibility: isOpen ? 'visible' : 'hidden', opacity: isOpen ? 1 : 0 }}
-      >
-        {getAvailableList().map(({ label, value }) => (
+      <div className={styles.LanguageSwitchList} style={languageSwitchListStyle}>
+        {availableLangList.map(({ label, value }) => (
           <a
             href={getIntlPath({ href: pathname, lang: value, query })}
             key={value}
