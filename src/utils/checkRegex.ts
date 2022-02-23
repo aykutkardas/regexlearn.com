@@ -1,7 +1,7 @@
 import isEmpty from 'lodash.isempty';
 import xor from 'lodash.xor';
 
-const createGrouppedRegex = (regex: string, flags: string) => {
+const createGrouppedRegex = (regex: string, flags?: string) => {
   const matches = [...regex.matchAll(/\\(\d+)/g)]
     .map(item => Number(item[1]))
     .sort((a, b) => b - a);
@@ -15,7 +15,17 @@ const createGrouppedRegex = (regex: string, flags: string) => {
   return new RegExp(`(${newRegex})`, flags);
 };
 
-function checkRegex(data, { regex, flags }) {
+type CheckRegex = (
+  data,
+  regexObj: { regex: string; flags?: string },
+) => {
+  err?: Error;
+  isMatch?: boolean;
+  isSuccess?: boolean;
+  regex?: RegExp;
+};
+
+const checkRegex: CheckRegex = (data, { regex, flags }) => {
   const isGlobal = flags?.includes('g');
   const isValidRegex = data.regex.includes(regex) || data.customValidate?.(regex);
   const isValidFlags = isEmpty(xor(data.flags.split(''), flags.split('')));
@@ -38,6 +48,6 @@ function checkRegex(data, { regex, flags }) {
     console.error(err);
     return { err };
   }
-}
+};
 
 export default checkRegex;
