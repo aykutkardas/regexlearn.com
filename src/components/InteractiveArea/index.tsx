@@ -57,7 +57,7 @@ const InteractiveArea = ({
       return;
     }
 
-    const { isSuccess, isMatch, err, $regex } = checkRegex(data, { regex, flags });
+    const { isSuccess, isMatch, err, regex: grouppedRegex } = checkRegex(data, { regex, flags });
 
     if (err) {
       setError(err);
@@ -65,21 +65,19 @@ const InteractiveArea = ({
       setMatch(isMatch);
       setSuccess(isSuccess);
 
-      if (regex) {
+      if (!regex) {
+        setContent(data.content);
+      } else {
         setContent(
           tagWrapper({
             value: data.content,
-            regex: $regex,
+            regex: grouppedRegex,
             attributes: { class: styles.InteractiveAreaResultTag },
           }),
         );
-      } else {
-        setContent(data.content);
       }
 
-      if (isChanged && isSuccess) {
-        setError(false);
-      } else if (isMatch) {
+      if ((isChanged && isSuccess) || isMatch) {
         setError(false);
       } else {
         setError(true);
@@ -102,26 +100,28 @@ const InteractiveArea = ({
 
   useEffect(() => {
     setError(false);
-    setSuccess(false);
 
     if (data.interactive === false) {
       setSuccess(true);
       return;
     }
 
+    setSuccess(false);
+
     const lastStep = lookie.get(`lesson.${lessonName}`)?.lastStep || 0;
     const isCompletedStep = step < lastStep;
+    const currentFlags = isCompletedStep ? data.flags : data.initialFlags;
+    const currentRegex = isCompletedStep ? data.regex[0] : data.initialValue;
 
     applyRegex();
     setContent(data.content);
-    setFlags(isCompletedStep ? data.flags : data.initialFlags || '');
-    setRegex((isCompletedStep ? data.regex[0] : data.initialValue) || '');
+    setFlags(currentFlags || '');
+    setRegex(currentRegex || '');
     setIsChanged(false);
     blurInput();
-    setTimeout(() => {
-      setCaretPosition(regexInput.current, data.cursorPosition || 0);
-      focusInput();
-    });
+
+    setTimeout(() => setCaretPosition(regexInput.current, data.cursorPosition || 0));
+
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [step, data.cursorPosition]);
 

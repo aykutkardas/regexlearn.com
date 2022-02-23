@@ -18,13 +18,13 @@ const CheatsheetDemo = ({ data }: CheatsheetDemoProps) => {
   const initialContent = data.content;
 
   const applyRegex = () => {
-    const { $regex } = checkRegex(data, { regex: data.regex, flags: 'gmi' });
+    const { regex } = checkRegex(data, { regex: data.regex, flags: 'gmi' });
 
-    if ($regex) {
+    if (regex) {
       setContent(
         tagWrapper({
+          regex,
           value: initialContent,
-          regex: $regex,
           attributes: { class: styles.CheatsheetDemoResultTag },
         }),
       );
