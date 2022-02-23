@@ -13,13 +13,11 @@ import EscapeWrapperSSR from '../EscapeWrapperSSR';
 
 import styles from './Playground.module.css';
 
-const Highlight = ({ children }) => {
-  return <span className={styles.Highlight}>{children}</span>;
-};
+const Highlight = ({ children }) => <span className={styles.Highlight}>{children}</span>;
 
-const initialText = `Regular Expressions, abbreviated as Regex or Regexp, are a string of characters created within the framework of Regex syntax rules. You can easily manage your data with Regex, which uses commands like finding, matching, and editing. Regex can be used in programming languages such as Python, SQL, Javascript, R, Google Analytics, Google Data Studio, and throughout the coding process. Learn regex online with examples and tutorials on RegexLearn now.`;
-
-const initialContent = ContentState.createFromText(initialText);
+const initialContent = ContentState.createFromText(
+  `Regular Expressions, abbreviated as Regex or Regexp, are a string of characters created within the framework of Regex syntax rules. You can easily manage your data with Regex, which uses commands like finding, matching, and editing. Regex can be used in programming languages such as Python, SQL, Javascript, R, Google Analytics, Google Data Studio, and throughout the coding process. Learn regex online with examples and tutorials on RegexLearn now.`,
+);
 
 const Playground = () => {
   const [regex, setRegex] = useState('[A-Z]\\w+');
@@ -66,11 +64,10 @@ const Playground = () => {
 
       if (!isGlobal && matchCount > 0) return;
 
-      const reg = new RegExp(newRegex, isGlobal ? currentFlags : `g${currentFlags}`);
-
       const text = content.getText();
+      const currentRegex = new RegExp(newRegex, isGlobal ? currentFlags : `g${currentFlags}`);
 
-      let matches = [...text.matchAll(reg)];
+      let matches = [...text.matchAll(currentRegex)];
 
       if (!isGlobal) {
         matches = matches.slice(0, 1);
