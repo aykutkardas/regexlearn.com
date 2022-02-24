@@ -116,6 +116,13 @@ const PageHome = () => {
             <FormattedMessage id="general.ourSponsors" />
           </h3>
           <a
+            href="https://ahrefs.com/?utm_source=regexlearn&utm_medium=referral&utm_campaign=sponsorship"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img src="/ahrefs.webp" alt="ahrefs" />
+          </a>
+          <a
             href="https://sitechecker.pro/?utm_source=regexlearn&utm_medium=referral&utm_campaign=sponsorship"
             target="_blank"
             rel="noreferrer"

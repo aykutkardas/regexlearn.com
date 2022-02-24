@@ -62,6 +62,16 @@ const PageLearn = () => {
                 description: 'general.comingSoon',
               }}
             />
+            <span className={styles.LessonSponsor}>
+              Sponsored by{' '}
+              <a
+                href="https://ahrefs.com/?utm_source=regexlearn&utm_medium=referral&utm_campaign=sponsorship"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img src="/ahrefs.webp" alt="ahrefs" />
+              </a>
+            </span>
           </div>
         </div>
       </div>

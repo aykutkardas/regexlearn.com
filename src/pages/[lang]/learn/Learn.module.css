@@ -21,6 +21,19 @@
   width: 100%;
 }
 
+.LessonSponsor {
+  font-size: 12px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.LessonSponsor img {
+  height: 12px;
+  margin-left: 5px;
+  margin-bottom: 1px;
+}
+
 @media only screen and (max-width: 1200px) {
   .SectionImageWrapper {
     display: none;
