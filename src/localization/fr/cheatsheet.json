@@ -7,9 +7,9 @@
   "cheatsheet.caret.description": "Correspond au début de la chaîne ou de la ligne.",
   "cheatsheet.dollar.title": "Fin de la chaîne ou de la ligne",
   "cheatsheet.dollar.description": "Correspond à la fin de la chaîne ou de la ligne.",
-  "cheatsheet.wordBoundary.title": "Limite de mot",
+  "cheatsheet.wordBoundary.title": "Limite de mots",
   "cheatsheet.wordBoundary.description": "Correspond au caractère du mot ou à la position à la fin d'un mot.",
-  "cheatsheet.notWordBoundary.title": "N'est pas Limite de mot",
+  "cheatsheet.notWordBoundary.title": "N'est pas Limite de mots",
   "cheatsheet.notWordBoundary.description": "Correspond à un caractère ou une position de mot qui n'est pas à la fin d'un mot.",
 
   "cheatsheet.characterClasses": "Classe de caractères",
