@@ -130,11 +130,11 @@ const PageHome = () => {
             <img src="/sitechecker.pro.webp" alt="sitechecker.pro" />
           </a>
           <a
-            href="https://seo.do/?utm_source=regexlearn&utm_medium=referral&utm_campaign=sponsorship"
+            href="https://wope.com/?utm_source=regexlearn&utm_medium=referral&utm_campaign=sponsorship"
             target="_blank"
             rel="noreferrer"
           >
-            <img src="/seo.do.webp" alt="seo.do" />
+            <img src="/wope.webp" alt="wope" />
           </a>
         </div>
       </div>
