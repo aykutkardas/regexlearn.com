@@ -59,7 +59,7 @@ const PageLearn = () => {
               data={{
                 key: null,
                 title: 'lessons.regexForSeo.title',
-                description: 'general.comingSoon',
+                description: '15/04/2022',
               }}
             />
             <span className={styles.LessonSponsor}>
