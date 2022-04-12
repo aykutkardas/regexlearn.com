@@ -51,28 +51,16 @@ const PageLearn = () => {
           {lessons.map(lesson => (
             <div key={lesson.key} className="col-xs-12 col-sm-4 col-md-3">
               <LessonBox data={lesson} />
+              {lesson.sponsor && (
+                <span className={styles.LessonSponsor}>
+                  Sponsored by{' '}
+                  <a href={lesson.sponsorURL} target="_blank" rel="noreferrer">
+                    <img src={lesson.sponsorLogo} alt={lesson.sponsor} />
+                  </a>
+                </span>
+              )}
             </div>
           ))}
-          <div className="col-xs-12 col-sm-4 col-md-3">
-            <LessonBox
-              lock
-              data={{
-                key: null,
-                title: 'lessons.regexForSeo.title',
-                description: '15/04/2022',
-              }}
-            />
-            <span className={styles.LessonSponsor}>
-              Sponsored by{' '}
-              <a
-                href="https://ahrefs.com/?utm_source=regexlearn&utm_medium=referral&utm_campaign=sponsorship"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <img src="/ahrefs.webp" alt="ahrefs" />
-              </a>
-            </span>
-          </div>
         </div>
       </div>
       <Footer />

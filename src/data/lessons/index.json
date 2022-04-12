@@ -3,5 +3,13 @@
     "key": "regex101",
     "title": "lessons.regex101.title",
     "description": "lessons.regex101.description"
+  },
+  {
+    "key": "regex-for-seo",
+    "title": "lessons.regexForSeo.title",
+    "description": "lessons.regexForSeo.description",
+    "sponsor": "ahrefs",
+    "sponsorURL": "https://ahrefs.com/?utm_source=regexlearn&utm_medium=referral&utm_campaign=sponsorship",
+    "sponsorLogo": "/ahrefs.webp"
   }
 ]
