@@ -1,6 +1,6 @@
 {
   "lesson.regexForSeo.starter.title": "SEO için Regex",
-  "lesson.regexForSeo.starter.description": "Regex bir çok alanda, özellikle verimliliğini arttırmak isteyen kişiler tarafından sıkça kullanılan bir kurallı ifadeler dizidir. SEO için kullanmanın avantajları, büyük verileri analiz etmeyi, daha zengin filtreler yazmayı kolaylaştırır. Eğer Regex de yeniyseniz, Regex 101 eğitimi ile başlamınızı tavsiye ederiz. İlk adıma geçmek ve daha detaylı açıklamalara erişmek için Regex alanına `OK` yazarak başlayın.",
+  "lesson.regexForSeo.starter.description": "Regex bir çok alanda, özellikle verimliliğini arttırmak isteyen kişiler tarafından sıkça kullanılan bir kurallı ifadeler dizidir. SEO için kullanmanın avantajları, büyük verileri analiz etmeyi, daha zengin filtreler yazmayı kolaylaştırır. Eğer Regex de yeniyseniz, `Regex 101` eğitimi ile başlamınızı tavsiye ederiz. İlk adıma geçmek ve daha detaylı açıklamalara erişmek için Regex alanına `OK` yazarak başlayın.",
 
   "lesson.regexForSeo.usage.title": "Kullanım Alanları",
   "lesson.regexForSeo.usage.description": "Regex'i SEO için kullanabileceğiniz alanlar. `Google Analitycs`, `Google Data Studio`, `Google Sheets`, `Google Search Console`, `Ahrefs` gibi platformlardır. Bu plaftormlarda verilerinizi daha gelişmiş şekilde filtreleyebilir ya da ayrıştırabilirsiniz. Aşağıda listedeki sadece `Google` ile başlayan metinleri seçecek bir regex yazılmıştır.",
@@ -9,13 +9,13 @@
   "lesson.regexForSeo.basics.description": "Sıkça kullanacağınız bazı Regex'lere sırayla göz atalım. Bunlar hakkında daha detaylı bilgi edinmek için `Regex 101` eğitimini inceleyebilirsiniz. Başlamak için `Yes` yazın.",
 
   "lesson.regexForSeo.or.title": "Ya Da Operatörü `|`",
-  "lesson.regexForSeo.or.description": "Birden fazla ifadeyi filtrelemek için Ya Da operatörünü `|` kullanırız. Örneğin hem `seo` hem de `regexp` içeren metinleri filtrelemek için Ya Da operatörü `|` ile ayırarak iki kelimeyi de yan yana yazın.",
+  "lesson.regexForSeo.or.description": "Birden fazla ifadeyi filtrelemek için Ya Da operatörünü `|` kullanırız. Örneğin hem `seo` hem de `regex` içeren metinleri filtrelemek için Ya Da operatörü `|` ile ayırarak iki kelimeyi de yan yana yazın.",
 
   "lesson.regexForSeo.optional.title": "Opsiyonel Operatörü `?`",
   "lesson.regexForSeo.optional.description": "Bir ifadenin ya da karakterin opsiyonel olduğunu ifade etmek için kullanırız. Örneğin hem `regex` hem de `regexp` içeren metinleri filtrelemek istiyoruz. Ya Da `|` operatörünü kullanabiliriz ama hemen hemen aynı olan bu iki kelime için daha iyi bir yol var. Bu örnekte `p` harfi opsiyoneldir. Sonuna soru işareti `?` koyarak `regexp` yazın.",
 
   "lesson.regexForSeo.any.title": "Herşey `.*`",
-  "lesson.regexForSeo.any.description": "Regex de nokta işareti `.` boşluk dahil her şeyle eşleşebilir. Yıldız karakteri `*` ise kendinden önce verilen şeyin, hiç olmaması ya da metinde birden fazla kez olmasını ifade eder. İkisi birlikte kullanıldığında herşeyle eşleşebilir. Aşağıda çeşitli anahtar kelimeler var. `how to write` ile başlayıp kendinden sonra gelecek herşeyle de eşleşen ifadeyi için, regex in sonuna `.*` ekleyin.",
+  "lesson.regexForSeo.any.description": "Regex de nokta işareti `.` boşluk dahil her şeyle eşleşebilir. Yıldız karakteri `*` ise kendinden önce verilen şeyin, hiç olmaması ya da metinde birden fazla kez olmasını ifade eder. İkisi birlikte kullanıldığında herşeyle eşleşebilir. Aşağıda çeşitli anahtar kelimeler var. `how to write` ile başlayıp kendinden sonra gelecek herşeyle de eşleşen ifadeyi yazmak için regex'in sonuna `.*` ekleyin.",
 
   "lesson.regexForSeo.negated.title": "Negatiflenmiş Karakter Setleri `[^abc]`",
   "lesson.regexForSeo.negated.description": "İçermesini istemediğimiz karakterleri ifade etmek için negatiflenmiş karakter setlerinden `[^abc]` faydalanırız. Geçmesini istemediğimiz karakterler köşeli parantezler içine en başta bir şapka işareti olacak şekilde yazılır. Aşağıda hem `http` hem de `https` bulunur. `http` ifadesi her ikisindede geçtiği için `https` in bir kısmını da seçecektir. `s` harfini hariç tutmak için ifadenin sonuna `[^s]` yazın.",

@@ -63,7 +63,7 @@ const regex101 = [
     title: 'lesson.regexForSeo.caret.title',
     description: 'lesson.regexForSeo.caret.description',
     content:
-      'http://www.google.com/search?q=https\nhttps://developer.mozilla.org/en-US/docs/Glossary/https\nhttp://httpstatus.io/\nhttps://ahrefs.com/',
+      'http://www.google.com/search?q=https\nhttps://developer.mozilla.org/en-US/docs/Glossary/http \nhttp://httpstatus.io/\nhttps://ahrefs.com/',
     initialFlags: 'gm',
     initialValue: 'http[^s].*',
     flags: 'gm',
