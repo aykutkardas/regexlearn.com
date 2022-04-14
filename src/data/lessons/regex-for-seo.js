@@ -38,6 +38,15 @@ const regex101 = [
     answer: ['seo', 'regex'],
   },
   {
+    title: 'lesson.regexForSeo.optional.title',
+    description: 'lesson.regexForSeo.optional.description',
+    content: 'http\nhttps',
+    initialFlags: 'gm',
+    flags: 'gm',
+    regex: ['https?'],
+    answer: ['http', 'https'],
+  },
+  {
     title: 'lesson.regexForSeo.any.title',
     description: 'lesson.regexForSeo.any.description',
     content: 'how to write regex\nhow to write regexp\nhow to write book review',
