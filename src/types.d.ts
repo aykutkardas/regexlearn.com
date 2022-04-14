@@ -12,6 +12,7 @@ export type LessonData = {
   regex?: string[];
   flags?: string;
   content: string;
+  noHint?: boolean;
   cursorPosition?: number;
   readOnly?: boolean;
   visibleRegex?: string;

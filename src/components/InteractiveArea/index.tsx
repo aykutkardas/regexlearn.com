@@ -176,7 +176,7 @@ const InteractiveArea = ({
         data-title={formatMessage({ id: 'general.regex' })}
       >
         <ReportStep title={data.title} step={step} />
-        <Hint regex={data.regex} flags={data.flags} />
+        {!data.noHint && <Hint regex={data.regex} flags={data.flags} />}
         <div className={styles.InteractiveAreaInputWrapper} data-flags={flags}>
           <input
             ref={regexInput}
