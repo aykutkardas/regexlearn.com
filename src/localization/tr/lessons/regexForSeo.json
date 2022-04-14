@@ -12,20 +12,20 @@
   "lesson.regexForSeo.or.description": "Birden fazla ifadeyi filtrelemek için Ya Da operatörünü `|` kullanırız. Örneğin hem `seo` hem de `regex` içeren metinleri filtrelemek için Ya Da operatörü `|` ile ayırarak iki kelimeyi de yan yana yazın.",
 
   "lesson.regexForSeo.optional.title": "Opsiyonel Operatörü `?`",
-  "lesson.regexForSeo.optional.description": "Bir ifadenin ya da karakterin opsiyonel olduğunu ifade etmek için kullanırız. Örneğin hem `http` hem de `https` içeren metinleri filtrelemek istiyoruz. Ya Da `|` operatörünü kullanabiliriz ama hemen hemen aynı olan bu iki kelime için daha iyi bir yol var. Bu örnekte `s` harfi opsiyoneldir. `s` harfinin sonuna bir soru işareti ekleyin.",
+  "lesson.regexForSeo.optional.description": "Bir ifadenin ya da karakterin opsiyonel olduğunu ifade etmek için kullanırız. Örneğin hem `http` hem de `https` içeren metinleri filtrelemek istiyoruz. Bu işlem için Ya Da operatörünü `|` kullanabiliriz ama hemen hemen aynı olan bu iki kelime için daha iyi bir yol var. Bu örnekte `s` harfi opsiyoneldir. `s` harfinin sonuna bir soru işareti ekleyin.",
 
   "lesson.regexForSeo.any.title": "Her şey `.*`",
-  "lesson.regexForSeo.any.description": "Regex'te nokta işareti `.` boşluk dahil her şeyle eşleşebilir. Fakat bu eşleşme sadece kullanıldığı yerdeki tek karater içindir. Yıldız karakteri `*` ise kendinden önce verilen şeyin, hiç olmamasını ya da metinde birden fazla kez olmasını ifade eder. İkisi birlikte kullanıldığında, kullanıldığı yerde sınırsız uzunlukta her şey olabileceği anlamına gelir. Aşağıda çeşitli anahtar kelimeler bulunuyor. `how to write` ile başlayıp kendinden sonra gelecek her şeyle eşleşen ifadeyi yazmak için regex'in sonuna `.*` ekleyin.",
+  "lesson.regexForSeo.any.description": "Regex'te nokta işareti `.` boşluk dahil her şeyle eşleşebilir. Fakat bu eşleşme sadece kullanıldığı yerdeki tek karakter içindir. Yıldız karakteri `*` ise kendinden önce verilen ögenin hiç bulunmadığını ya da metinde birden fazla kez bulunduğunu ifade eder. İkisi birlikte kullanıldığında, kullanıldığı yerde sınırsız uzunlukta öge olabileceği anlamına gelir. Aşağıda çeşitli anahtar kelimeler bulunuyor. `how to write` ile başlayıp kendinden sonra gelecek her şeyle eşleşen ifadeyi yazmak için regex'in sonuna `.*` ekleyin.",
 
   
   "lesson.regexForSeo.contains.title": "İçerenler",
-  "lesson.regexForSeo.contains.description": "Bazı kelimeleri ya da ifadeleri içeren metinleri filtrelemek için her şey ile eşleşen iki ifademizin `.*` arasına aradığımı kelimeyi yazarız. Örneğin içerisinde `buy` geçenleri filtrelemek için `.*buy.*` ifadesini yazın.",
+  "lesson.regexForSeo.contains.description": "Aradığımız kelimeleri ya da ifadeleri içeren metinleri filtrelemek için her şey ile eşleşen iki ifademizin olan `.*`'ın arasına aradığımı kelimeyi yazarız. Örneğin içerisinde `buy` geçenleri filtrelemek için `.*buy.*` ifadesini yazın..",
 
   "lesson.regexForSeo.negated.title": "Negatiflenmiş Karakter Setleri `[^abc]`",
   "lesson.regexForSeo.negated.description": "İçermesini istemediğimiz karakterleri ifade etmek için negatiflenmiş karakter setlerinden `[^abc]` faydalanırız. Geçmesini istemediğimiz karakterler köşeli parantezler içine en başta bir şapka işareti olacak şekilde yazılır. Aşağıda hem `http` hem de `https` bulunur. `http` ifadesi her ikisindede geçtiği için `https` olanı da seçecektir. `s` harfini hariç tutmak için `p` harfinin sonuna `[^s]` yazın.",
 
   "lesson.regexForSeo.caret.title": "Şapka İşareti `^`",
-  "lesson.regexForSeo.caret.description": " Elimizde bir URL listesi olduğunu ve bu URL'lerden sadece `http` ile başlayanları bulmak istediğimizi farz edelim. Fakat URL'ler başlangıcı dışında da `http` içeriyor. Sadece `http` ile başlayanları filtrelemek için aşağıdaki ifadenin başına şapka `^` işareti ekleyin.",
+  "lesson.regexForSeo.caret.description": "Elimizde bir URL listesi olduğunu ve bu URL'lerden sadece `http` ile başlayanları bulmak istediğimizi farz edelim. Fakat URL'ler başlangıcı dışında da `http` içeriyor. Sadece `http` ile başlayanları filtrelemek için aşağıdaki ifadenin başına şapka `^` işareti ekleyin.",
 
   "lesson.regexForSeo.dollarAndEscape.title": "Dolar İşareti `$` ve Kaçış Karakteri `\\`",
   "lesson.regexForSeo.dollarAndEscape.description": "Tekrar elimizde bir URL listesi var. Bu URL lerden sadece `.htm` ile bitenleri bulmak istiyoruz. \\n\\nNokta işareti `.` her şey ile eşleşen özel bir karakter olduğu için öncelikle `htm` den önceki nokta işaretini `.` kaçış karakteri `\\` kullanarak etkisizleştirmemiz gerekir. Bu tüm özel karakterler için geçerlidir.\\n\\nArdından ifadenin sonuna bir `$` işareti ekleyin. Bu filtrelenecek metnin kendinden önce yazılan ifade ile bitmesini sağlar.",

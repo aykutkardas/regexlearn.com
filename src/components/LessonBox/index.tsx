@@ -11,6 +11,7 @@ import styles from './LessonBox.module.css';
 interface Props {
   data: {
     key: string;
+    slug: string;
     title: string;
     description: string;
   };
@@ -27,7 +28,7 @@ const LessonBox = ({ data, lock }: Props) => {
     DynamicWrapper = Fragment;
   } else {
     const WrapperLessonBox = ({ children }) => (
-      <IntlLink href={`/[lang]/learn/[lesson]`} query={{ lesson: data.key }}>
+      <IntlLink href={`/[lang]/learn/[lesson]`} query={{ lesson: data.slug }}>
         {children}
       </IntlLink>
     );

@@ -40,7 +40,7 @@ const regexForSeo = [
   {
     title: 'lesson.regexForSeo.optional.title',
     description: 'lesson.regexForSeo.optional.description',
-    content: 'what is http?\nwhat is https?\n what is html?',
+    content: 'what is http\nwhat is https\n what is html',
     initialFlags: 'gm',
     initialValue: 'https',
     flags: 'gm',
@@ -65,7 +65,7 @@ const regexForSeo = [
     content: 'what is regex?\ni want to buy a boat\nhow to buy a new phone',
     initialFlags: 'gm',
     flags: 'gm',
-    cursorPosition: 3,
+    cursorPosition: 2,
     initialValue: '.*.*',
     regex: ['.*buy.*'],
     answer: ['i want to buy a boat', 'how to buy a new phone'],
