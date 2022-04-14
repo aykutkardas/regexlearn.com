@@ -44,5 +44,9 @@
 
     
   "lesson.regexForSeo.htaccess.title": ".htaccess",
-  "lesson.regexForSeo.htaccess.description": "`.htaccess` dosyasındaki regex kullanımı için aşağıda bir örnek verilmiştir. Örnekte `php` uzantılı bağlantılar, `html` uzantılı hallerine `301` kodu ile yönlendirilmiştir."
+  "lesson.regexForSeo.htaccess.description": "`.htaccess` dosyasındaki regex kullanımı için aşağıda bir örnek verilmiştir. Örnekte `php` uzantılı bağlantılar, `html` uzantılı hallerine `301` kodu ile yönlendirilmiştir.",
+
+      
+  "lesson.regexForSeo.outro.title": "Sonsöz",
+  "lesson.regexForSeo.outro.description": "Regex bilgisi, regex kullanmanıza izin veren tüm platformlarda verimliliğinizi arttıran özel bir beceridir. Kullanmaya başladıktan ve bu becerinizi geliştirdikten sonra tekrar eden bir çok işi daha hızlı tamamlamanıza ve diğer şeyler için zaman kazanmanıza yardım eder. Regex'in temellerini daha iyi anlamak için `Regex 101` eğitimini ziyaret edebilirsiniz. Kendi metinleriniz üzerinde kendi ifadelerinizi test etmek için `Playground` sayfasını kullanabilirsiniz."
 }

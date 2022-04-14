@@ -1,4 +1,4 @@
-const regex101 = [
+const regexForSeo = [
   {
     title: 'lesson.regexForSeo.starter.title',
     description: 'lesson.regexForSeo.starter.description',
@@ -174,6 +174,17 @@ const regex101 = [
     regex: ['^(.*).php$'],
     answer: ['/product/detail.php', '/shop/12/buy.php', '/profile.php'],
   },
+  {
+    title: 'lesson.regexForSeo.outro.title',
+    description: 'lesson.regexForSeo.outro.description',
+    interactive: false,
+  },
+  {
+    title: 'steps.completeAllSteps.title',
+    description: 'steps.completeAllSteps.description',
+    image: '/Learn.webp',
+    interactive: false,
+  },
 ];
 
-export default regex101;
+export default regexForSeo;
