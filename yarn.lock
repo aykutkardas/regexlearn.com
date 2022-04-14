@@ -2069,10 +2069,10 @@ lodash.xor@^4.5.0:
   resolved "https://registry.yarnpkg.com/lodash.xor/-/lodash.xor-4.5.0.tgz#4d48ed7e98095b0632582ba714d3ff8ae8fb1db6"
   integrity sha1-TUjtfpgJWwYyWCunFNP/iuj7HbY=
 
-lookie@^0.6.0:
-  version "0.6.0"
-  resolved "https://registry.yarnpkg.com/lookie/-/lookie-0.6.0.tgz#09f1b8694c2e4eaeb413078fee6118112fa545ea"
-  integrity sha512-mWnuOcUM+I8lcclO8uptYXnwUAEvvpszfoOLelBYHr7V3pGcXlNKKEavuJ4iIYAW+33iDM6gePJPiFF+2hQVAQ==
+lookie@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/lookie/-/lookie-1.0.4.tgz#5ef1fe3c5290653c4d7e1fe01b84d7acd6eb5674"
+  integrity sha512-tdZIrnFuRlZP7DR3Zd/EZKuGtVNiVrER3GqbxT4pErvRZsxewQKkli3h410Efyt2JBX47/X6V6OU33g4ARQj4g==
 
 loose-envify@^1.0.0, loose-envify@^1.1.0, loose-envify@^1.4.0:
   version "1.4.0"
@@ -2644,10 +2644,10 @@ react-dom@17.0.2:
     object-assign "^4.1.1"
     scheduler "^0.20.2"
 
-react-icomoon@^2.4.9:
-  version "2.4.9"
-  resolved "https://registry.yarnpkg.com/react-icomoon/-/react-icomoon-2.4.9.tgz#d55d2a33bbc9a130d4c944c92826d14a89e54768"
-  integrity sha512-wtEWY97JBt0fHkZJQRkQTbEeQOkdMXaHNl0znRE1w6+4YPlM8uRzSt5q2o1ppZILSCnsUIOEqG8SnTMq+tkXmg==
+react-icomoon@^2.5.3:
+  version "2.5.3"
+  resolved "https://registry.yarnpkg.com/react-icomoon/-/react-icomoon-2.5.3.tgz#61f24f7fb0acba7c11baf79a8f93a38efb8e3916"
+  integrity sha512-7qtBJg+rJu6YorDNB173mD9bJyoPr2dueH4QbBrKlU5x2K1TN1v3WVl6yMntyPqJ8nKb5P6a/IPgjQhHU9BPrg==
 
 react-intl@^5.21.0:
   version "5.21.0"
