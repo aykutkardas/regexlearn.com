@@ -13,7 +13,7 @@ interface Props {
 }
 
 const LearnPage = ({ data, lesson }: Props) => {
-  const lookieKey = `lesson.${lesson.slug}`;
+  const lookieKey = `lesson.${lesson.key}`;
   const [step, setStep] = useState(0);
   const [lastStep, setLastStep] = useState(0);
   const [success, setSuccess] = useState(false);
