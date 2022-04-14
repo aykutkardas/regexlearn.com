@@ -1,5 +1,9 @@
 export type Lesson = {
   key: string;
+  slug: string;
+  sponsorURL?: string;
+  sponsorLogo?: string;
+  sponsor?: string;
   title: string;
   description: string;
 };

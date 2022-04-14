@@ -5,12 +5,12 @@ import { useIntl } from 'react-intl';
 import InteractiveArea from 'src/components/InteractiveArea';
 import Progress from 'src/components/Progress';
 import tagWrapper from 'src/utils/tagWrapper';
-import { LessonData } from 'src/types';
+import { Lesson, LessonData } from 'src/types';
 
 import styles from './Step.module.css';
 
 interface Props {
-  lessonName: string;
+  lesson: Lesson;
   step: number;
   steps: object[];
   error: boolean;
@@ -18,7 +18,7 @@ interface Props {
   data: LessonData;
 }
 
-const Step = ({ lessonName, data, step, steps, error: parentError, onChangeSuccess }: Props) => {
+const Step = ({ lesson, data, step, steps, error: parentError, onChangeSuccess }: Props) => {
   const [mounted, setMounted] = useState(false);
   const { formatMessage } = useIntl();
 
@@ -51,7 +51,7 @@ const Step = ({ lessonName, data, step, steps, error: parentError, onChangeSucce
       />
       <p className={styles.StepDescription} dangerouslySetInnerHTML={{ __html: description }} />
       <InteractiveArea
-        lessonName={lessonName}
+        lesson={lesson}
         isShow={isInteractive}
         data={data}
         step={step}

@@ -1,11 +1,13 @@
 [
   {
     "key": "regex101",
+    "slug": "regex101",
     "title": "lessons.regex101.title",
     "description": "lessons.regex101.description"
   },
   {
-    "key": "regex-for-seo",
+    "key": "regexForSeo",
+    "slug": "regex-for-seo",
     "title": "lessons.regexForSeo.title",
     "description": "lessons.regexForSeo.description",
     "sponsor": "ahrefs",

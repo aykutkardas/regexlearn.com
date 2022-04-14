@@ -79,20 +79,6 @@
   outline: 1px saddlebrown solid;
 }
 
-@media only screen and (max-width: 600px) {
-  .InteractiveAreaInputWrapper {
-    min-width: 90%;
-    max-width: 90%;
-    max-width: 100px;
-  }
-
-  .InteractiveAreaInput {
-    font-size: 16px;
-    max-width: 100%;
-    letter-spacing: 1px;
-  }
-}
-
 .InteractiveAreaResultTag {
   box-shadow: 3px 3px 2px var(--shadow-1);
   min-width: 10px;
@@ -136,4 +122,35 @@
 
 .SafariWarning:hover {
   opacity: 0.8;
+}
+
+.LessonSponsor {
+  font-size: 12px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.LessonSponsor img {
+  height: 12px;
+  margin-left: 5px;
+  margin-right: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+  .InteractiveAreaInputWrapper {
+    min-width: 90%;
+    max-width: 90%;
+    max-width: 100px;
+  }
+
+  .InteractiveAreaInput {
+    font-size: 16px;
+    max-width: 100%;
+    letter-spacing: 1px;
+  }
+
+  .LessonSponsor {
+    margin-top: 30px;
+  }
 }

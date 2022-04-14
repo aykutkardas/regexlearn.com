@@ -11,12 +11,12 @@ import FlagBox from 'src/components/FlagBox';
 import setCaretPosition from 'src/utils/setCaretPosition';
 import tagWrapper from 'src/utils/tagWrapper';
 import checkRegex from 'src/utils/checkRegex';
-import { LessonData } from 'src/types';
+import { Lesson, LessonData } from 'src/types';
 
 import styles from './InteractiveArea.module.css';
 
 interface Props {
-  lessonName: string;
+  lesson: Lesson;
   data: LessonData;
   step: number;
   isShow?: boolean;
@@ -24,14 +24,7 @@ interface Props {
   onChangeSuccess: Function;
 }
 
-const InteractiveArea = ({
-  lessonName,
-  data,
-  step,
-  isShow,
-  parentError,
-  onChangeSuccess,
-}: Props) => {
+const InteractiveArea = ({ lesson, data, step, isShow, parentError, onChangeSuccess }: Props) => {
   const { formatMessage } = useIntl();
   const regexInput = useRef<HTMLInputElement>(null);
   const [regex, setRegex] = useState(data.initialValue || '');
@@ -108,7 +101,7 @@ const InteractiveArea = ({
 
     setSuccess(false);
 
-    const lastStep = lookie.get(`lesson.${lessonName}`)?.lastStep || 0;
+    const lastStep = lookie.get(`lesson.${lesson.key}`)?.lastStep || 0;
     const isCompletedStep = step < lastStep;
     const currentFlags = isCompletedStep ? data.flags : data.initialFlags;
     const currentRegex = isCompletedStep ? data.regex[0] : data.initialValue;
@@ -193,6 +186,14 @@ const InteractiveArea = ({
         </div>
         {data.useFlagsControl && <FlagBox flags={flags} setFlags={handleChangeFlags} />}
       </div>
+      {lesson.sponsor && (
+        <span className={styles.LessonSponsor}>
+          Sponsored by{' '}
+          <a href={lesson.sponsorURL} target="_blank" rel="noreferrer">
+            <img src={lesson.sponsorLogo} alt={lesson.sponsor} />
+          </a>
+        </span>
+      )}
     </div>
   );
 };
