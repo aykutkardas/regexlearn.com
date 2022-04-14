@@ -14,6 +14,7 @@ export type LessonData = {
   content: string;
   cursorPosition?: number;
   readOnly?: boolean;
+  visibleRegex?: string;
   useFlagsControl?: boolean;
   title: string;
   originalTitle?: string;
