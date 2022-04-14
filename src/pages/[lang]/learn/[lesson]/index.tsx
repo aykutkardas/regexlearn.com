@@ -17,7 +17,7 @@ const PageLesson = ({ lesson }: PageLessonProps) => {
   const { query } = useRouter();
   const { formatMessage } = useIntl();
 
-  const data = require(`src/data/lessons/${lesson.slug}`)?.default;
+  const data = require(`src/data/lessons/${lesson.key}`)?.default;
 
   const lang = typeof query.lang === 'string' ? query.lang.toUpperCase() : query.lang;
   const title = formatMessage({ id: `lessons.${lesson.key}.title` });
