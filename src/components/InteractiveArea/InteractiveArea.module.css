@@ -124,19 +124,6 @@
   opacity: 0.8;
 }
 
-.LessonSponsor {
-  font-size: 12px;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-
-.LessonSponsor img {
-  height: 12px;
-  margin-left: 5px;
-  margin-right: 10px;
-}
-
 @media only screen and (max-width: 600px) {
   .InteractiveAreaInputWrapper {
     min-width: 90%;
@@ -148,9 +135,5 @@
     font-size: 16px;
     max-width: 100%;
     letter-spacing: 1px;
-  }
-
-  .LessonSponsor {
-    margin-top: 30px;
   }
 }

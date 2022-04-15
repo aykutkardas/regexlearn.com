@@ -186,14 +186,6 @@ const InteractiveArea = ({ lesson, data, step, isShow, parentError, onChangeSucc
         </div>
         {data.useFlagsControl && <FlagBox flags={flags} setFlags={handleChangeFlags} />}
       </div>
-      {lesson.sponsor && (
-        <span className={styles.LessonSponsor}>
-          Sponsored by{' '}
-          <a href={lesson.sponsorURL} target="_blank" rel="noreferrer">
-            <img src={lesson.sponsorLogo} alt={lesson.sponsor} />
-          </a>
-        </span>
-      )}
     </div>
   );
 };

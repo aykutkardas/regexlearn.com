@@ -51,6 +51,19 @@
   white-space: nowrap;
 }
 
+.LessonSponsor {
+  font-size: 12px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.LessonSponsor img {
+  height: 12px;
+  margin-left: 5px;
+  margin-right: 10px;
+}
+
 @media only screen and (max-width: 600px) {
   .StepTitle {
     margin: 0;

@@ -58,6 +58,14 @@ const Step = ({ lesson, data, step, steps, error: parentError, onChangeSuccess }
         parentError={parentError}
         onChangeSuccess={onChangeSuccess}
       />
+      {lesson.sponsor && (
+        <span className={styles.LessonSponsor}>
+          Sponsored by{' '}
+          <a href={lesson.sponsorURL} target="_blank" rel="noreferrer">
+            <img src={lesson.sponsorLogo} alt={lesson.sponsor} />
+          </a>
+        </span>
+      )}
       {mounted &&
         ReactDOM.createPortal(
           <Progress total={steps.length} current={step + 1} />,
