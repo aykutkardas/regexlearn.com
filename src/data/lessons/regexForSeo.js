@@ -17,6 +17,8 @@ const regexForSeo = [
     initialValue: '^Google',
     cursorPosition: 7,
     flags: 'gm',
+    readOnly: true,
+    noHint: true,
     hiddenFlags: true,
     regex: ['^Google'],
     answer: ['Google', 'Google', 'Google', 'Google'],
