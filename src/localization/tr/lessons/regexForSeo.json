@@ -3,7 +3,7 @@
   "lesson.regexForSeo.starter.description": "Regex birçok alanda, özellikle verimliliğini arttırmak isteyen kişiler tarafından sıkça kullanılan bir kurallı ifadeler dizidir. Regex'i SEO için kullanmanın avantajları büyük verileri analiz etmeyi ve daha zengin filtreler yazmayı kolaylaştırmasıdır. Eğer `Regex`'te yeniyseniz, `Regex 101` eğitimi ile başlamanızı tavsiye ederiz. İlk adıma geçmek ve daha detaylı açıklamalara erişmek için Regex alanına `OK` yazarak başlayın.",
 
   "lesson.regexForSeo.usage.title": "Kullanım Alanları",
-  "lesson.regexForSeo.usage.description": "Regex'i SEO için kullanabileceğiniz alanlar: `Google Analitycs`, `Google Data Studio`, `Google Sheets`, `Google Search Console`, `Ahrefs`, `Deepcrawl`, `Screaming Frog` gibi platformlardır. Ayrıca `.htaccess` ve `robots.txt` dosyaslarında sıkça kullanılır. Listedeki sadece `Google` ile başlayan metinleri seçecek örnek bir regex aşağıda yazılmıştır.",
+  "lesson.regexForSeo.usage.description": "Regex'i SEO için kullanabileceğiniz alanlar: `Google Analitycs`, `Google Data Studio`, `Google Sheets`, `Google Search Console`, `Ahrefs`, `Deepcrawl`, `Screaming Frog` gibi platformlardır. Ayrıca `.htaccess` ve `robots.txt` (regex benzeri sözdizimi) dosyalarında sıkça kullanılır. Listedeki sadece `Google` ile başlayan metinleri seçecek örnek bir regex aşağıda yazılmıştır.",
 
   "lesson.regexForSeo.basics.title": "Temeller",
   "lesson.regexForSeo.basics.description": "Sıkça kullanacağınız bazı Regex'lere sırayla göz atalım. Bunlar hakkında daha detaylı bilgi edinmek için `Regex 101` eğitimini incelemenizi tavsiye ederiz. Başlamak için `Yes` yazın.",
@@ -39,8 +39,8 @@
   "lesson.regexForSeo.minLimitation.title": "Uzunluk Kısıtlamaları (Minumum) `{n,}`",
   "lesson.regexForSeo.minLimitation.description": "Minumum `35` karakter uzunluğundaki URL'leri filtrelemek için nokta işaretinin `.` sonuna süslü parantezleri kullanarak, uzunluk için kullanacağımız minumum sayı değerini virgül işareti `,` ile bitirerek `{35,}` yazın.",
   
-  "lesson.regexForSeo.robots.title": "robots.txt",
-  "lesson.regexForSeo.robots.description": "`robots.txt` dosyasındaki regex kullanımı için aşağıda bir örnek verilmiştir. Örnekte `pdf` uzantılı bağlantıların, botlar tarafından taranmaması ifade edilmiştir.",
+  "lesson.regexForSeo.robots.title": "robots.txt (regex benzeri sözdizimi)",
+  "lesson.regexForSeo.robots.description": "`robots.txt` dosyasındaki regex benzeri kullanım için aşağıda bir örnek verilmiştir. Örnekte `pdf` uzantılı bağlantıların, botlar tarafından taranmaması ifade edilmiştir.",
 
     
   "lesson.regexForSeo.htaccess.title": ".htaccess",
