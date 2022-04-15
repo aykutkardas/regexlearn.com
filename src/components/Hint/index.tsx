@@ -7,13 +7,15 @@ import Shortcut from 'src/components/Shortcut';
 import shortcuts from 'src/shortcuts';
 
 import styles from './Hint.module.css';
+import { Fragment } from 'react';
 
 interface Props {
   regex: string[];
   flags: string;
+  hiddenFlags?: boolean;
 }
 
-const Hint = ({ regex, flags }: Props) => {
+const Hint = ({ regex, flags, hiddenFlags }: Props) => {
   const hintRef = useRef<HTMLDivElement>(null);
   const [showStatus, setShowStatus] = useState(false);
 
@@ -55,7 +57,9 @@ const Hint = ({ regex, flags }: Props) => {
         <div className={styles.HintAnswer}>
           {regex.map(answer => (
             <div className={styles.HintAnswerItem} key={answer}>
-              /<span className={styles.HintAnswerHighlight}>{answer}</span>/{flags}
+              {!hiddenFlags && <span>/</span>}
+              <span className={styles.HintAnswerHighlight}>{answer}</span>
+              {!hiddenFlags && <span>/{flags}</span>}
             </div>
           ))}
         </div>

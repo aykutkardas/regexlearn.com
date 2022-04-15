@@ -169,8 +169,15 @@ const InteractiveArea = ({ lesson, data, step, isShow, parentError, onChangeSucc
         data-title={formatMessage({ id: 'general.regex' })}
       >
         <ReportStep title={data.title} step={step} />
-        {!data.noHint && <Hint regex={data.regex} flags={data.flags} />}
-        <div className={styles.InteractiveAreaInputWrapper} data-flags={flags}>
+        {!data.noHint && (
+          <Hint hiddenFlags={data.hiddenFlags} regex={data.regex} flags={data.flags} />
+        )}
+        <div
+          className={cx(styles.InteractiveAreaInputWrapper, {
+            [styles.InteractiveAreaHiddenFlags]: data.hiddenFlags,
+          })}
+          data-flags={flags}
+        >
           <input
             ref={regexInput}
             key={step}

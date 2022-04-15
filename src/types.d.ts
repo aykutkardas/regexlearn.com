@@ -17,6 +17,7 @@ export type LessonData = {
   flags?: string;
   content: string;
   noHint?: boolean;
+  hiddenFlags?: boolean;
   cursorPosition?: number;
   readOnly?: boolean;
   visibleRegex?: string;

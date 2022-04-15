@@ -60,6 +60,11 @@
   color: var(--gray);
 }
 
+.InteractiveAreaHiddenFlags::before,
+.InteractiveAreaHiddenFlags::after {
+  display: none;
+}
+
 .InteractiveAreaInput {
   border: 0px;
   padding: 5px;
