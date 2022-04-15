@@ -100,6 +100,7 @@ const regexForSeo = [
     initialFlags: 'gm',
     initialValue: '.*.htm',
     flags: 'gm',
+    cursorPosition: 2,
     regex: ['.*\\.htm$'],
     answer: ['https://testsite.com/learn-html.htm'],
   },
