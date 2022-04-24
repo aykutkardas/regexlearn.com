@@ -129,6 +129,22 @@
   opacity: 0.8;
 }
 
+.WatchButton {
+  display: inline-flex;
+  align-items: center;
+  margin-right: auto;
+  cursor: pointer;
+  font-size: 10px;
+  color: var(--txt-1);
+}
+
+.WatchButton:hover {
+  color: var(--primary);
+}
+.WatchButton svg {
+  margin-right: 5px;
+}
+
 @media only screen and (max-width: 600px) {
   .InteractiveAreaInputWrapper {
     min-width: 90%;

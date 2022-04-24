@@ -42,6 +42,7 @@ const regexForSeo = [
     hiddenFlags: true,
     regex: ['seo|regex', 'regex|seo'],
     answer: ['seo', 'regex'],
+    videoURL: 'https://www.youtube.com/embed/uRbNjP-dvR0',
   },
   {
     title: 'lesson.regexForSeo.optional.title',
@@ -54,6 +55,7 @@ const regexForSeo = [
     hiddenFlags: true,
     regex: ['https?'],
     answer: ['http', 'https'],
+    videoURL: 'https://www.youtube.com/embed/86eOX7NvCiY',
   },
   {
     title: 'lesson.regexForSeo.any.title',
@@ -66,6 +68,7 @@ const regexForSeo = [
     hiddenFlags: true,
     regex: ['how to write .*'],
     answer: ['how to write regex', 'how to write regexp', 'how to write book review'],
+    videoURL: 'https://www.youtube.com/embed/df-7m24TyQw',
   },
   {
     title: 'lesson.regexForSeo.contains.title',
@@ -78,6 +81,7 @@ const regexForSeo = [
     hiddenFlags: true,
     regex: ['.*buy.*'],
     answer: ['i want to buy a boat', 'how to buy a new phone'],
+    videoURL: 'https://www.youtube.com/embed/jNgTzFWeMyU',
   },
   {
     title: 'lesson.regexForSeo.negated.title',
@@ -90,6 +94,7 @@ const regexForSeo = [
     hiddenFlags: true,
     regex: ['http[^s].*'],
     answer: ['http://testdomain.com'],
+    videoURL: 'https://www.youtube.com/embed/EFEOVild5nU',
   },
   {
     title: 'lesson.regexForSeo.caret.title',
@@ -102,6 +107,7 @@ const regexForSeo = [
     hiddenFlags: true,
     regex: ['^http[^s].*'],
     answer: ['http://www.google.com/search?q=https', 'http://httpstatus.io/'],
+    videoURL: 'https://www.youtube.com/embed/3UUcxGUOVmE',
   },
   {
     title: 'lesson.regexForSeo.dollarAndEscape.title',
@@ -115,6 +121,7 @@ const regexForSeo = [
     hiddenFlags: true,
     regex: ['.*\\.htm$'],
     answer: ['https://testsite.com/learn-html.htm'],
+    videoURL: 'https://www.youtube.com/embed/Tgi3WZ_LFHc',
   },
   {
     title: 'lesson.regexForSeo.limitation.title',
@@ -128,12 +135,14 @@ const regexForSeo = [
     hiddenFlags: true,
     regex: ['^.{35}$'],
     answer: ['https://ahrefs.com/content-explorer'],
+    videoURL: 'https://www.youtube.com/embed/bgNS7ciiZKE',
   },
   {
     title: 'lesson.regexForSeo.maxLimitation.title',
     description: 'lesson.regexForSeo.maxLimitation.description',
     content:
       'https://ahrefs.com/dashboard\nhttps://ahrefs.com/site-explorer\nhttps://ahrefs.com/keywords-explorer\nhttps://ahrefs.com/site-audit\nhttps://ahrefs.com/rank-tracker\nhttps://ahrefs.com/content-explorer',
+    videoURL: 'https://www.youtube.com/embed/xSuTv-O0EUY',
     initialFlags: 'gm',
     initialValue: '^.$',
     flags: 'gm',

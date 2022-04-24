@@ -8,9 +8,10 @@ const variants = {
 };
 
 interface Props {
-  variant: 'primary' | 'github';
+  variant?: 'primary' | 'github';
   className?: string;
   children: any;
+  onClick?: () => void;
 }
 
 const Button = ({ children, variant, className, ...props }: Props) => (

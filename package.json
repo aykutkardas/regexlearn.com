@@ -29,6 +29,7 @@
     "react-dom": "17.0.2",
     "react-icomoon": "^2.5.3",
     "react-intl": "^5.21.0",
+    "react-modal": "^3.14.4",
     "react-tooltip": "^4.2.21",
     "ua-parser-js": "^1.0.2"
   },

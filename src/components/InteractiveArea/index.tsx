@@ -14,6 +14,7 @@ import checkRegex from 'src/utils/checkRegex';
 import { Lesson, LessonData } from 'src/types';
 
 import styles from './InteractiveArea.module.css';
+import Icon from '../Icon';
 
 interface Props {
   lesson: Lesson;
@@ -22,9 +23,18 @@ interface Props {
   isShow?: boolean;
   parentError: boolean;
   onChangeSuccess: Function;
+  setIsOpenModal: Function;
 }
 
-const InteractiveArea = ({ lesson, data, step, isShow, parentError, onChangeSuccess }: Props) => {
+const InteractiveArea = ({
+  lesson,
+  data,
+  step,
+  isShow,
+  parentError,
+  onChangeSuccess,
+  setIsOpenModal,
+}: Props) => {
   const { formatMessage } = useIntl();
   const regexInput = useRef<HTMLInputElement>(null);
   const [regex, setRegex] = useState(data.initialValue || '');
@@ -169,6 +179,7 @@ const InteractiveArea = ({ lesson, data, step, isShow, parentError, onChangeSucc
         data-title={formatMessage({ id: 'general.regex' })}
       >
         <ReportStep title={data.title} step={step} />
+
         {!data.noHint && (
           <Hint hiddenFlags={data.hiddenFlags} regex={data.regex} flags={data.flags} />
         )}
@@ -191,6 +202,12 @@ const InteractiveArea = ({ lesson, data, step, isShow, parentError, onChangeSucc
             spellCheck={false}
           />
         </div>
+        {data.videoURL && (
+          <div className={styles.WatchButton} onClick={() => setIsOpenModal(true)}>
+            <Icon icon="play" size={18} />
+            <FormattedMessage id="general.watch" />
+          </div>
+        )}
         {data.useFlagsControl && <FlagBox flags={flags} setFlags={handleChangeFlags} />}
       </div>
     </div>

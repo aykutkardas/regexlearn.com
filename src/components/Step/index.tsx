@@ -1,9 +1,12 @@
 import ReactDOM from 'react-dom';
 import { useState, useEffect } from 'react';
 import { useIntl } from 'react-intl';
+import Modal from 'react-modal';
+import useEventListener from '@use-it/event-listener';
 
 import InteractiveArea from 'src/components/InteractiveArea';
 import Progress from 'src/components/Progress';
+import Button from 'src/components/Button';
 import tagWrapper from 'src/utils/tagWrapper';
 import { Lesson, LessonData } from 'src/types';
 
@@ -20,6 +23,7 @@ interface Props {
 
 const Step = ({ lesson, data, step, steps, error: parentError, onChangeSuccess }: Props) => {
   const [mounted, setMounted] = useState(false);
+  const [modalIsOpen, setIsOpenModal] = useState(false);
   const { formatMessage } = useIntl();
 
   const title = tagWrapper({
@@ -37,6 +41,14 @@ const Step = ({ lesson, data, step, steps, error: parentError, onChangeSuccess }
   useEffect(() => {
     setMounted(true);
   }, []);
+
+  const handleCloseModal = event => {
+    if (event.key === 'Escape') {
+      setIsOpenModal(false);
+    }
+  };
+
+  useEventListener('keyup', handleCloseModal);
 
   const isInteractive = data.interactive !== false;
 
@@ -57,6 +69,7 @@ const Step = ({ lesson, data, step, steps, error: parentError, onChangeSuccess }
         step={step}
         parentError={parentError}
         onChangeSuccess={onChangeSuccess}
+        setIsOpenModal={setIsOpenModal}
       />
       {lesson.sponsor && (
         <span className={styles.LessonSponsor}>
@@ -65,6 +78,31 @@ const Step = ({ lesson, data, step, steps, error: parentError, onChangeSuccess }
             <img src={lesson.sponsorLogo} alt={lesson.sponsor} />
           </a>
         </span>
+      )}
+      {data.videoURL && (
+        <Modal
+          isOpen={modalIsOpen}
+          style={{
+            overlay: {
+              background: 'rgba(0, 0, 0, 0.7)',
+            },
+            content: {
+              background: 'transparent',
+              border: 'none',
+              textAlign: 'right',
+            },
+          }}
+        >
+          <Button onClick={() => setIsOpenModal(false)}>Close</Button>
+          <iframe
+            width="100%"
+            height="90%"
+            src={data.videoURL}
+            frameBorder={0}
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          />
+        </Modal>
       )}
       {mounted &&
         ReactDOM.createPortal(

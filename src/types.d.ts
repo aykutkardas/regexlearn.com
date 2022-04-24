@@ -24,6 +24,7 @@ export type LessonData = {
   useFlagsControl?: boolean;
   title: string;
   originalTitle?: string;
+  videoURL?: string;
   description: string;
   image?: string;
   answer: string[];
