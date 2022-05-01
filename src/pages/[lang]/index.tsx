@@ -16,6 +16,8 @@ import CustomHead from 'src/components/CustomHead';
 
 import styles from './Home.module.css';
 
+import sponsors from 'sponsors.json';
+
 const PageHome = () => {
   const { formatMessage } = useIntl();
 
@@ -115,27 +117,11 @@ const PageHome = () => {
           <h3 className={styles.OurSponsorsTitle}>
             <FormattedMessage id="general.ourSponsors" />
           </h3>
-          <a
-            href="https://ahrefs.com/?utm_source=regexlearn&utm_medium=referral&utm_campaign=sponsorship"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img src="/ahrefs.webp" alt="ahrefs" />
-          </a>
-          <a
-            href="https://sitechecker.pro/?utm_source=regexlearn&utm_medium=referral&utm_campaign=sponsorship"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img src="/sitechecker.pro.webp" alt="sitechecker.pro" />
-          </a>
-          <a
-            href="https://wope.com/?utm_source=regexlearn&utm_medium=referral&utm_campaign=sponsorship"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img src="/wope.webp" alt="wope" />
-          </a>
+          {sponsors.map(sponsor => (
+            <a key={sponsor.name} href={sponsor.url} target="_blank" rel="noreferrer">
+              <img src={sponsor.logo} alt={sponsor.name} title={sponsor.name} />
+            </a>
+          ))}
         </div>
       </div>
       <Footer />
