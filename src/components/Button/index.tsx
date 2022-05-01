@@ -1,20 +1,23 @@
 import cx from 'classnames';
+import { ButtonHTMLAttributes } from 'react';
 
 import styles from './Button.module.css';
 
-const variants = {
-  primary: styles.Primary,
-  github: styles.GitHub,
-};
-
-interface Props {
-  variant?: 'primary' | 'github';
-  className?: string;
-  children: any;
-  onClick?: () => void;
+export enum ButtonVariants {
+  Primary = 'primary',
+  Github = 'github',
 }
 
-const Button = ({ children, variant, className, ...props }: Props) => (
+const variants = {
+  [ButtonVariants.Primary]: styles.Primary,
+  [ButtonVariants.Github]: styles.GitHub,
+};
+
+interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+  variant?: ButtonVariants;
+}
+
+const Button = ({ children, variant, className, ...props }: ButtonProps) => (
   <button className={cx(styles.Button, variants[variant], className)} {...props}>
     {children}
   </button>

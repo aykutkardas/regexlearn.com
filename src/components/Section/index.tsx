@@ -1,7 +1,7 @@
 import { FormattedMessage, useIntl } from 'react-intl';
 import cx from 'classnames';
 
-import Button from 'src/components/Button';
+import Button, { ButtonVariants } from 'src/components/Button';
 import IntlLink from 'src/components/IntlLink';
 import tagWrapper from 'src/utils/tagWrapper';
 
@@ -59,7 +59,7 @@ const Section = ({
           {isShowButton && (
             <IntlLink href={link} passHref>
               <a>
-                <Button variant="primary" className={styles.SectionButton}>
+                <Button variant={ButtonVariants.Primary} className={styles.SectionButton}>
                   <FormattedMessage id={buttonText} />
                 </Button>
               </a>

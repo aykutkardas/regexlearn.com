@@ -6,7 +6,7 @@ import tagWrapper from 'src/utils/tagWrapper';
 import { defaultLocale, locales } from 'src/localization';
 
 import ProductButton from 'src/components/ProductButton';
-import Button from 'src/components/Button';
+import Button, { ButtonVariants } from 'src/components/Button';
 import Icon from 'src/components/Icon';
 import Header from 'src/components/Header';
 import Footer from 'src/components/Footer';
@@ -42,7 +42,7 @@ const PageHome = () => {
               />
               <IntlLink href="/[lang]/learn" passHref>
                 <a className={styles.LandingMainSectionButton}>
-                  <Button variant="primary">
+                  <Button variant={ButtonVariants.Primary}>
                     <FormattedMessage id="general.startLearning" />
                   </Button>
                 </a>
@@ -104,7 +104,7 @@ const PageHome = () => {
               target="_blank"
               rel="noreferrer"
             >
-              <Button variant="github" className={className}>
+              <Button variant={ButtonVariants.Github} className={className}>
                 <Icon icon="github" size={16} color="white" />
                 <span>GitHub</span>
               </Button>
