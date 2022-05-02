@@ -5,9 +5,9 @@ import Modal from 'react-modal';
 import useEventListener from '@use-it/event-listener';
 
 import InteractiveArea from 'src/components/InteractiveArea';
+import HighlightedText from 'src/components/HighlightedText';
 import Progress from 'src/components/Progress';
 import Button from 'src/components/Button';
-import tagWrapper from 'src/utils/tagWrapper';
 import { Lesson, LessonData } from 'src/types';
 
 import styles from './Step.module.css';
@@ -25,18 +25,6 @@ const Step = ({ lesson, data, step, steps, error: parentError, onChangeSuccess }
   const [mounted, setMounted] = useState(false);
   const [modalIsOpen, setIsOpenModal] = useState(false);
   const { formatMessage } = useIntl();
-
-  const title = tagWrapper({
-    value: formatMessage({ id: data.title }),
-    regex: /`(\S*?[^`]*)`/gim,
-    attributes: { class: styles.StepTitleWord },
-  }).replace(/\\n/gim, '<br/>');
-
-  const description = tagWrapper({
-    value: formatMessage({ id: data.description }),
-    regex: /`(\S*?[^`]*)`/gim,
-    attributes: { class: styles.StepDescriptionWord },
-  }).replace(/\\n/gim, '<br/>');
 
   useEffect(() => {
     setMounted(true);
@@ -56,12 +44,19 @@ const Step = ({ lesson, data, step, steps, error: parentError, onChangeSuccess }
     <div className={styles.Step}>
       {data.image && <img className={styles.StepImage} src={data.image} alt="" width="100px" />}
       {data.originalTitle && <h4 className={styles.StepTitleOriginal}>{data.originalTitle}</h4>}
-      <h2
+      <HighlightedText
+        element="h2"
         className={styles.StepTitle}
-        dangerouslySetInnerHTML={{ __html: title }}
-        data-original-title={data.originalTitle}
+        text={formatMessage({ id: data.title })}
+        attrs={{ className: styles.StepTitleWord }}
       />
-      <p className={styles.StepDescription} dangerouslySetInnerHTML={{ __html: description }} />
+      <HighlightedText
+        element="p"
+        className={styles.StepDescription}
+        text={formatMessage({ id: data.description })}
+        attrs={{ className: styles.StepDescriptionWord }}
+      />
+
       <InteractiveArea
         lesson={lesson}
         isShow={isInteractive}

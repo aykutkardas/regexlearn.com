@@ -2,7 +2,6 @@ import { GetStaticPaths, GetStaticProps } from 'next';
 import { FormattedMessage, useIntl } from 'react-intl';
 import cx from 'classnames';
 
-import tagWrapper from 'src/utils/tagWrapper';
 import { defaultLocale, locales } from 'src/localization';
 
 import ProductButton from 'src/components/ProductButton';
@@ -17,6 +16,7 @@ import CustomHead from 'src/components/CustomHead';
 import styles from './Home.module.css';
 
 import sponsors from 'sponsors.json';
+import HighlightedText from 'src/components/HighlightedText';
 
 const PageHome = () => {
   const { formatMessage } = useIntl();
@@ -32,15 +32,11 @@ const PageHome = () => {
               <h1 className={styles.LandingMainSectionTitle}>
                 <FormattedMessage id="landing.title" />
               </h1>
-              <p
+              <HighlightedText
+                element="p"
                 className={styles.LandingMainSectionDescription}
-                dangerouslySetInnerHTML={{
-                  __html: tagWrapper({
-                    value: formatMessage({ id: 'landing.description' }),
-                    regex: /`(\S*?[^`]*)`/gim,
-                    attributes: { class: styles.LandingMainSectionDescriptionHighlight },
-                  }),
-                }}
+                text={formatMessage({ id: 'landing.description' })}
+                attrs={{ className: styles.LandingMainSectionDescriptionHighlight }}
               />
               <IntlLink href="/[lang]/learn" passHref>
                 <a className={styles.LandingMainSectionButton}>

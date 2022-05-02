@@ -66,6 +66,7 @@ const FlagBox = ({ flags, setFlags }: FlagBoxProps) => {
           >
             <div className={styles.FlagBoxItem}>
               <HighlightedText
+                element="span"
                 id={`flag-${name}`}
                 text={name}
                 search={regex}

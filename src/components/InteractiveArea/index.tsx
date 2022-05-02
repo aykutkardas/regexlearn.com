@@ -149,7 +149,7 @@ const InteractiveArea = ({
 
   if (!isShow) return null;
 
-  const highlightedContent = (content || data.content || '').replace(/\n/gm, '<br />');
+  const readableContent = (content || data.content || '').replace(/\n/gm, '<br />');
 
   const placeholder = formatMessage({
     id: 'general.regex',
@@ -172,7 +172,7 @@ const InteractiveArea = ({
       <div
         className={styles.InteractiveAreaBlockContent}
         data-title={formatMessage({ id: 'general.text' })}
-        dangerouslySetInnerHTML={{ __html: highlightedContent }}
+        dangerouslySetInnerHTML={{ __html: readableContent }}
       />
       <div
         className={styles.InteractiveAreaBlockRegex}

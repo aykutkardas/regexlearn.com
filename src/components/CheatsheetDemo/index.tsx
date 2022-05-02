@@ -36,14 +36,14 @@ const CheatsheetDemo = ({ data }: Props) => {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(applyRegex, []);
 
+  const readableContent = (content || initialContent).replace(/\\n/gm, '<br />');
+
   return (
     <div className={styles.CheatsheetDemo}>
       <div
         className={cx(styles.CheatsheetDemoBlock, styles.CheatsheetDemoBlockContent)}
         data-title={formatMessage({ id: 'general.text' })}
-        dangerouslySetInnerHTML={{
-          __html: (content || initialContent).replace(/\\n/gm, '<br />'),
-        }}
+        dangerouslySetInnerHTML={{ __html: readableContent }}
       />
       <div
         className={cx(styles.CheatsheetDemoBlock, styles.CheatsheetDemoBlockRegex)}

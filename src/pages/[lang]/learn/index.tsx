@@ -6,11 +6,11 @@ import Header from 'src/components/Header';
 import Footer from 'src/components/Footer';
 import LessonBox from 'src/components/LessonBox';
 import CustomHead from 'src/components/CustomHead';
-import tagWrapper from 'src/utils/tagWrapper';
 import { defaultLocale, locales } from 'src/localization';
 import lessons from 'src/data/lessons/index.json';
 
 import styles from './Learn.module.css';
+import HighlightedText from 'src/components/HighlightedText';
 
 const PageLearn = () => {
   const { formatMessage } = useIntl();
@@ -27,15 +27,11 @@ const PageLearn = () => {
             <h1 className={styles.SectionTitle}>
               <FormattedMessage id={'section.learn.title'} />
             </h1>
-            <p
+            <HighlightedText
+              element="p"
               className={styles.SectionDescription}
-              dangerouslySetInnerHTML={{
-                __html: tagWrapper({
-                  value: formatMessage({ id: 'section.learn.content' }),
-                  regex: /`(\S*?[^`]*)`/gim,
-                  attributes: { class: styles.SectionHighlight },
-                }),
-              }}
+              text={formatMessage({ id: 'section.learn.content' })}
+              attrs={{ className: styles.SectionHighlight }}
             />
           </div>
           <div className={cx('col-xs-12 col-sm-12 col-md-4', styles.SectionImageWrapper)}>

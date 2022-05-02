@@ -1,8 +1,11 @@
 import { createElement } from 'react';
+
 import tagWrapper from 'src/utils/tagWrapper';
 
 interface HighlightedTextProps {
   id?: string;
+  className?: string;
+  element?: string;
   tagName?: string;
   search?: RegExp;
   children?: React.ReactNode;
@@ -12,20 +15,22 @@ interface HighlightedTextProps {
 
 const HighlightedText = ({
   children,
-  tagName,
-  search,
+  search = /`(\S*?[^`]*)`/gim,
   text,
+  element = 'div',
+  tagName = 'span',
   attrs = {},
   ...props
 }: HighlightedTextProps) => {
-  return createElement(tagName || 'div', {
+  return createElement(element, {
     ...props,
     dangerouslySetInnerHTML: {
       __html: tagWrapper({
         value: text,
         regex: search,
         attributes: attrs,
-      }),
+        tagName: tagName,
+      }).replace(/\\n/gim, '<br/>'),
     },
   });
 };
