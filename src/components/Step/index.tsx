@@ -1,7 +1,7 @@
 import ReactDOM from 'react-dom';
 import { useState, useEffect } from 'react';
 import { useIntl } from 'react-intl';
-import Modal from 'react-modal';
+import cx from 'classnames';
 import useEventListener from '@use-it/event-listener';
 
 import InteractiveArea from 'src/components/InteractiveArea';
@@ -75,29 +75,19 @@ const Step = ({ lesson, data, step, steps, error: parentError, onChangeSuccess }
         </span>
       )}
       {data.videoURL && (
-        <Modal
-          isOpen={modalIsOpen}
-          style={{
-            overlay: {
-              background: 'rgba(0, 0, 0, 0.7)',
-            },
-            content: {
-              background: 'transparent',
-              border: 'none',
-              textAlign: 'right',
-            },
-          }}
-        >
+        <div className={cx(styles.StepVideoModal, { [styles.StepVideoModalHidden]: !modalIsOpen })}>
+          {modalIsOpen && (
+            <iframe
+              width="90%"
+              height="90%"
+              src={data.videoURL}
+              frameBorder={0}
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          )}
           <Button onClick={() => setIsOpenModal(false)}>Close</Button>
-          <iframe
-            width="100%"
-            height="90%"
-            src={data.videoURL}
-            frameBorder={0}
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          />
-        </Modal>
+        </div>
       )}
       {mounted &&
         ReactDOM.createPortal(
