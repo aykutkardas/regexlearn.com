@@ -2,11 +2,10 @@ import useEventListener from '@use-it/event-listener';
 
 import Checkbox from 'src/components/Checkbox';
 import Shortcut from 'src/components/Shortcut';
-import tagWrapper from 'src/utils/tagWrapper';
+import HighlightedText from 'src/components/HighlightedText';
 import shortcuts from 'src/shortcuts';
 
 import styles from './FlagBox.module.css';
-import HighlightedText from '../HighlightedText/HighlightedText';
 
 const flagList = [
   {
