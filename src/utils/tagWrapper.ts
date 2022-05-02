@@ -5,7 +5,7 @@ const tagWrapper = ({ value, regex, tagName = 'span', attributes = {} }: TagWrap
 
   const setAttributes = attrs =>
     Object.entries(attrs)
-      .map(([key, val]) => `${key}="${val}"`)
+      .map(([key, val]) => `${key === 'className' ? 'class' : key}="${val}"`)
       .join(' ');
 
   return value.replace(regex, `<${tagName} ${setAttributes(attributes)}>$1</${tagName}>`);
