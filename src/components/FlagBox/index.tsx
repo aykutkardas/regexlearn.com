@@ -6,6 +6,7 @@ import tagWrapper from 'src/utils/tagWrapper';
 import shortcuts from 'src/shortcuts';
 
 import styles from './FlagBox.module.css';
+import HighlightedText from '../HighlightedText/HighlightedText';
 
 const flagList = [
   {
@@ -28,31 +29,28 @@ const flagList = [
   },
 ];
 
-interface Props {
+interface FlagBoxProps {
   flags: string;
   setFlags: Function;
 }
 
-const FlagBox = ({ flags, setFlags }: Props) => {
+const FlagBox = ({ flags, setFlags }: FlagBoxProps) => {
   const toggleFlag = flag => {
-    if (flags?.includes(flag)) {
-      setFlags(flags.replace(flag, ''));
-    } else {
-      setFlags((flags || '') + flag);
-    }
+    const isActive = flags?.includes(flag);
+    const newFlags = isActive ? flags.replace(flag, '') : `${flags || ''}${flag}`;
+
+    setFlags(newFlags);
   };
 
-  const handleFlagKey = e => {
-    if (!e.altKey) return;
+  const handleFlagKey = event => {
+    if (!event.altKey) return;
 
-    const key = e.key.toLowerCase();
+    const key = event.key.toLowerCase();
+    const isValidKey = 'gmi'.includes(key);
 
-    switch (key) {
-      case 'g':
-      case 'm':
-      case 'i':
-        e.preventDefault();
-        toggleFlag(key);
+    if (isValidKey) {
+      event.preventDefault();
+      toggleFlag(key);
     }
   };
 
@@ -64,20 +62,15 @@ const FlagBox = ({ flags, setFlags }: Props) => {
         <div className={styles.FlagBoxItemWrapper} key={name}>
           <Checkbox
             id={`flag-${name}`}
-            type="checkbox"
             checked={!!flags?.includes(code)}
             onChange={() => toggleFlag(code)}
           >
             <div className={styles.FlagBoxItem}>
-              <span
+              <HighlightedText
                 id={`flag-${name}`}
-                dangerouslySetInnerHTML={{
-                  __html: tagWrapper({
-                    value: name,
-                    regex,
-                    attributes: { class: styles.FlagBoxItemHighlight },
-                  }),
-                }}
+                text={name}
+                search={regex}
+                attrs={{ className: styles.FlagBoxItemHighlight }}
               />
             </div>
           </Checkbox>
