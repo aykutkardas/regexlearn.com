@@ -50,6 +50,15 @@ const InteractiveArea = ({
     setSuccess(true);
   };
 
+  const checkBrowserSupport = () => {
+    try {
+      checkRegex(data, { regex, flags });
+      return true;
+    } catch (error) {
+      return false;
+    }
+  };
+
   const applyRegex = () => {
     if (data.interactive === false) return;
 
@@ -57,7 +66,8 @@ const InteractiveArea = ({
       const isTrueRegex = data.regex[0] == regex;
       setError(!isTrueRegex);
       setSuccess(isTrueRegex);
-      return;
+
+      if (!checkBrowserSupport()) return;
     }
 
     const { isSuccess, isMatch, err, regex: grouppedRegex } = checkRegex(data, { regex, flags });

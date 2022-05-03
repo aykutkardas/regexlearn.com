@@ -17,7 +17,6 @@ const PageLesson = ({ lesson }: PageLessonProps) => {
   const { query } = useRouter();
   const { formatMessage } = useIntl();
 
-  console.log(lesson.key);
   const data = require(`src/data/lessons/${lesson.key}.js`)?.default;
 
   const lang = typeof query.lang === 'string' ? query.lang.toUpperCase() : query.lang;
