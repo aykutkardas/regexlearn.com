@@ -7,7 +7,6 @@ import Shortcut from 'src/components/Shortcut';
 import shortcuts from 'src/shortcuts';
 
 import styles from './Hint.module.css';
-import { Fragment } from 'react';
 
 interface Props {
   regex: string[];
@@ -23,13 +22,12 @@ const Hint = ({ regex, flags, hiddenFlags }: Props) => {
     if (!(e.altKey && e.key.toLowerCase() === 'h')) return;
 
     e.preventDefault();
+    setShowStatus(!showStatus);
 
     if (showStatus) {
       ReactTooltip.hide(hintRef.current);
-      setShowStatus(false);
     } else {
       ReactTooltip.show(hintRef.current);
-      setShowStatus(true);
     }
   };
 
