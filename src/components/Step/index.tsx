@@ -1,4 +1,4 @@
-import ReactDOM from 'react-dom';
+import { createPortal } from 'react-dom';
 import { useState, useEffect } from 'react';
 import { useIntl } from 'react-intl';
 import useEventListener from '@use-it/event-listener';
@@ -11,7 +11,7 @@ import { Lesson, LessonData } from 'src/types';
 
 import styles from './Step.module.css';
 
-interface Props {
+interface StepProps {
   lesson: Lesson;
   step: number;
   steps: object[];
@@ -20,7 +20,7 @@ interface Props {
   data: LessonData;
 }
 
-const Step = ({ lesson, data, step, steps, error: parentError, onChangeSuccess }: Props) => {
+const Step = ({ lesson, data, step, steps, error, onChangeSuccess }: StepProps) => {
   const [mounted, setMounted] = useState(false);
   const [modalIsOpen, setIsOpenModal] = useState(false);
   const { formatMessage } = useIntl();
@@ -41,7 +41,7 @@ const Step = ({ lesson, data, step, steps, error: parentError, onChangeSuccess }
 
   return (
     <div className={styles.Step}>
-      {data.image && <img className={styles.StepImage} src={data.image} alt="" width="100px" />}
+      {data.image && <img className={styles.StepImage} src={data.image} alt="" width={100} />}
       {data.originalTitle && <h4 className={styles.StepTitleOriginal}>{data.originalTitle}</h4>}
       <HighlightedText
         element="h2"
@@ -55,13 +55,12 @@ const Step = ({ lesson, data, step, steps, error: parentError, onChangeSuccess }
         text={formatMessage({ id: data.description })}
         attrs={{ className: styles.StepDescriptionWord }}
       />
-
       <InteractiveArea
         lesson={lesson}
         isShow={isInteractive}
         data={data}
         step={step}
-        parentError={parentError}
+        parentError={error}
         onChangeSuccess={onChangeSuccess}
         setIsOpenModal={setIsOpenModal}
       />
@@ -87,7 +86,7 @@ const Step = ({ lesson, data, step, steps, error: parentError, onChangeSuccess }
         </div>
       )}
       {mounted &&
-        ReactDOM.createPortal(
+        createPortal(
           <Progress total={steps.length} current={step + 1} />,
           window.document.getElementById('ProgressArea'),
         )}

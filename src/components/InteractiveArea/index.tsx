@@ -64,27 +64,28 @@ const InteractiveArea = ({
 
     if (err) {
       setError(Boolean(err));
+      return;
+    }
+
+    setMatch(isMatch);
+    setSuccess(isSuccess);
+
+    if (!regex) {
+      setContent(data.content);
     } else {
-      setMatch(isMatch);
-      setSuccess(isSuccess);
+      setContent(
+        tagWrapper({
+          value: data.content,
+          regex: grouppedRegex,
+          attributes: { class: styles.InteractiveAreaResultTag },
+        }),
+      );
+    }
 
-      if (!regex) {
-        setContent(data.content);
-      } else {
-        setContent(
-          tagWrapper({
-            value: data.content,
-            regex: grouppedRegex,
-            attributes: { class: styles.InteractiveAreaResultTag },
-          }),
-        );
-      }
-
-      if ((isChanged && isSuccess) || isMatch) {
-        setError(false);
-      } else {
-        setError(true);
-      }
+    if ((isChanged && isSuccess) || isMatch) {
+      setError(false);
+    } else {
+      setError(true);
     }
   };
 
