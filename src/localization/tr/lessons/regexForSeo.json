@@ -34,10 +34,10 @@
   "lesson.regexForSeo.limitation.description": "Sonuçları karakter uzunluklarına göre filtrelemek isteyebiliriz. Örneğin `35` karakter uzunluğundaki URL'leri filtrelemek için nokta işaretinin `.` sonuna süslü parantezleri kullanarak, uzunluk için kullanacağınız sayıyı `{35}` yazın.",
 
   "lesson.regexForSeo.maxLimitation.title": "Uzunluk Kısıtlamaları (Maksimum) `{n,m}`",
-  "lesson.regexForSeo.maxLimitation.description": "Maksimum `35` karakter uzunluğundaki URL'leri filtrelemek için nokta işaretinin `.` sonuna süslü parantezleri kullanarak, uzunluk için kullanacağımız minumum ve maksimum sayı değerlerini `{1,35}` yazın.",
+  "lesson.regexForSeo.maxLimitation.description": "Maksimum `35` karakter uzunluğundaki URL'leri filtrelemek için nokta işaretinin `.` sonuna süslü parantezleri kullanarak, uzunluk için kullanacağımız minimum ve maksimum sayı değerlerini `{1,35}` yazın.",
 
   "lesson.regexForSeo.minLimitation.title": "Uzunluk Kısıtlamaları (Minumum) `{n,}`",
-  "lesson.regexForSeo.minLimitation.description": "Minumum `35` karakter uzunluğundaki URL'leri filtrelemek için nokta işaretinin `.` sonuna süslü parantezleri kullanarak, uzunluk için kullanacağımız minumum sayı değerini virgül işareti `,` ile bitirerek `{35,}` yazın.",
+  "lesson.regexForSeo.minLimitation.description": "Minumum `35` karakter uzunluğundaki URL'leri filtrelemek için nokta işaretinin `.` sonuna süslü parantezleri kullanarak, uzunluk için kullanacağımız minimum sayı değerini virgül işareti `,` ile bitirerek `{35,}` yazın.",
   
   "lesson.regexForSeo.robots.title": "robots.txt (regex benzeri sözdizimi)",
   "lesson.regexForSeo.robots.description": "`robots.txt` dosyasındaki regex benzeri kullanım için aşağıda bir örnek verilmiştir. Örnekte `pdf` uzantılı bağlantıların, botlar tarafından taranmaması ifade edilmiştir.",
