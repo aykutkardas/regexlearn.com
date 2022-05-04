@@ -1,6 +1,5 @@
 import { GetStaticPaths, GetStaticProps } from 'next';
-import { FormattedMessage, useIntl } from 'react-intl';
-import { useRouter } from 'next/router';
+import { FormattedMessage } from 'react-intl';
 
 import Header from 'src/components/Header';
 import Footer from 'src/components/Footer';
@@ -14,9 +13,6 @@ import data from 'src/data/cheatsheet.json';
 import styles from './Cheatsheet.module.css';
 
 const PageCheatsheet = () => {
-  const { formatMessage } = useIntl();
-  const { asPath } = useRouter();
-
   const columns = [data.slice(0, 3), data.slice(3, 4), data.slice(4, 6)];
 
   return (
@@ -43,7 +39,9 @@ const PageCheatsheet = () => {
             <div key={index} className="col-lg-4 col-md-6">
               {column.map(row => (
                 <div key={row.title}>
-                  <h4>{formatMessage({ id: row.title })}</h4>
+                  <h4>
+                    <FormattedMessage id={row.title} />
+                  </h4>
                   {row.data.map(item => (
                     <Collapse
                       key={item.title}
