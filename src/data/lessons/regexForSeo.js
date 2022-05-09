@@ -12,7 +12,7 @@ const regexForSeo = [
   {
     title: 'lesson.regexForSeo.usage.title',
     description: 'lesson.regexForSeo.usage.description',
-    content: 'Google Analitycs\nGoogle Data Studio\nGoogle Sheets\nGoogle Search Console\nAhrefs',
+    content: 'Google Analytics\nGoogle Data Studio\nGoogle Sheets\nGoogle Search Console\nAhrefs',
     initialFlags: 'gm',
     initialValue: '^Google',
     cursorPosition: 7,
