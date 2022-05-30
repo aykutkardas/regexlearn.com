@@ -20,7 +20,15 @@ class MyDocument extends Document {
             `,
                 }}
               />
-
+            </>
+          )}
+          <link rel="shortcut icon" href="/favicon.svg" />
+        </Head>
+        <body>
+          <Main />
+          <NextScript />
+          {!isDevelopment && (
+            <>
               {/* <!-- Google Tag Manager --> */}
               <script
                 dangerouslySetInnerHTML={{
@@ -42,11 +50,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               {/* <!-- End Google Tag Manager (noscript) --> */}
             </>
           )}
-          <link rel="shortcut icon" href="/favicon.svg" />
-        </Head>
-        <body>
-          <Main />
-          <NextScript />
         </body>
       </Html>
     );
