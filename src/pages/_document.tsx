@@ -7,11 +7,6 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          <link rel="shortcut icon" href="/favicon.svg" />
-        </Head>
-        <body>
-          <Main />
-          <NextScript />
           {!isDevelopment && (
             <>
               {/* <!-- Google Tag Manager --> */}
@@ -25,6 +20,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 }}
               />
               {/* <!-- End Google Tag Manager --> */}
+            </>
+          )}
+          <link rel="shortcut icon" href="/favicon.svg" />
+        </Head>
+        <body>
+          <Main />
+          <NextScript />
+          {!isDevelopment && (
+            <>
               {/* <!-- Google Tag Manager (noscript) --> */}
               <noscript>
                 <iframe
