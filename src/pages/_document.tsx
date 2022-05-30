@@ -7,21 +7,6 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          {!isDevelopment && (
-            <>
-              <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZNDXNCMG6E" />
-              <script
-                dangerouslySetInnerHTML={{
-                  __html: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag() {dataLayer.push(arguments); }
-            gtag('js', new Date());
-            gtag('config', 'G-ZNDXNCMG6E');
-            `,
-                }}
-              />
-            </>
-          )}
           <link rel="shortcut icon" href="/favicon.svg" />
         </Head>
         <body>
