@@ -19,7 +19,7 @@ This is a project that makes learning how to write regex easy.
 - **Spanish**
 - **Chinese**
 - **German**
-- **Ukrainia**
+- **Ukrainian**
 - **French**
 - _Korean_ [(Requested)](https://github.com/aykutkardas/regexlearn.com/issues/92)
 - _Arabic_ [(Requested)](https://github.com/aykutkardas/regexlearn.com/issues/163)
