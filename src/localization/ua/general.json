@@ -1,0 +1,35 @@
+{
+  "general.prev": "Попереднє",
+  "general.next": "Наступне",
+  "general.result": "Результат",
+  "general.regex": "Regex",
+  "general.text": "Текст",
+  "general.start": "Почати",
+  "general.continue": "Продовжити",
+  "general.completedStep": "Крок завершено!",
+  "general.hintQuestion": "Показати відповідь",
+  "general.reportStep": "Повідомити про проблему",
+  "general.startLearning": "Почати навчання",
+  "general.comingSoon": "Скоро",
+  "general.becomeSponsor": "Стати спонсором",
+  "general.learn": "Вивчити",
+  "general.playground": "Playground",
+  "general.cheatsheet": "Cheatsheet",
+  "general.ourSponsors": "Наші спонсори",
+
+  "notFound.intro": "Сторінка, яку ви шукаєте, не знайдена.",
+  "notFound.button": "Повернутися додому",
+
+  "page.landing.title": "Regex Learn - крок за кроком, з нуля до просунутого рівня.",
+  "page.learn.title": "Regex Learn - інтерактивний курс Regex",
+  "page.cheatsheet.title": "Regex Learn - Regex Cheatsheet",
+  "page.playground.title": "Regex Learn - Playground",
+  "page.404.title": "Regex Learn - не знайдено",
+
+  "page.landing.description": "Вивчайте Regex в інтерактивному режимі, практикуйтесь на своєму рівні, протестуйте та поділіться своїми власними Regex з іншими учасниками.",
+  "page.learn.description": "Вивчайте Regex крок за кроком. Пройдіть інтерактивне керівництво, яке зробить ваше навчання простішим та швидшим.",
+  "page.cheatsheet.description": "Іноді вам необхідно запам'ятати Regex. Використовуйте шпаргалку, яка допоможе вам краще зрозуміти та запам'ятати Regexp.",
+  "page.playground.description": "Ви можете легко створити та протестувати шаблон регулярного вираження онлайн через Playground.",
+
+  "learn.safari.unsupportWarning": "Регулярні вираження на цьому етапі не підтримуються деякими браузерами. Якщо у вас виникли проблеми з проходженням цього кроку. Ви можете натиснути тут."
+}

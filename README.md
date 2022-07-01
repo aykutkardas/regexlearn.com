@@ -18,7 +18,11 @@ This is a project that makes learning how to write regex easy.
 - **Russian**
 - **Spanish**
 - **Chinese**
+- **German**
+- _Ukrainian_ [(Requested)](https://github.com/aykutkardas/regexlearn.com/issues/169)
+- _French_ [(Requested)](https://github.com/aykutkardas/regexlearn.com/issues/159)
 - _Korean_ [(Requested)](https://github.com/aykutkardas/regexlearn.com/issues/92)
+- _Arabic_ [(Requested)](https://github.com/aykutkardas/regexlearn.com/issues/163)
 - _Brazilian Portuguese_ [(Requested)](https://github.com/aykutkardas/regexlearn.com/issues/39)
 
 _Please create an issue to add your own language._
@@ -28,11 +32,14 @@ _Please create an issue to add your own language._
 <h2 align="center">Our Sponsors</h2>
 
 <p align="center">
+  <a href="https://ahrefs.com/" target="_blank">
+    <img src="preview/ahrefs.png"/>
+  </a>
   <a href="https://sitechecker.pro/" target="_blank">
     <img src="preview/sitechecker.pro.png"/>
   </a>
-  <a href="https://seo.do" target="_blank">
-    <img src="preview/seo.do.png"/>
+  <a href="https://wope.com" target="_blank">
+    <img src="preview/wope.png"/>
   </a>
 </p>
 

@@ -309,6 +309,14 @@
   resolved "https://registry.yarnpkg.com/@rushstack/eslint-patch/-/eslint-patch-1.1.0.tgz#7f698254aadf921e48dda8c0a6b304026b8a9323"
   integrity sha512-JLo+Y592QzIE+q7Dl2pMUtt4q8SKYI5jDrZxrozEQxnGVOyYE+GWK9eLkwTaeN9DDctlaRAQ3TBmzZ1qdLE30A==
 
+"@types/draft-js@^0.11.8":
+  version "0.11.8"
+  resolved "https://registry.yarnpkg.com/@types/draft-js/-/draft-js-0.11.8.tgz#ef1e1dfbb5e3f1d13a8769eb5dfd282cae8b127b"
+  integrity sha512-WddWQKbjbVEeJEuwS7oczvaVGsfML141ywwgpFeKE2E+NI9/Qk+AU/xTd6A7/dNsS8lf3ziubm8WugrttwQk2g==
+  dependencies:
+    "@types/react" "*"
+    immutable "~3.7.4"
+
 "@types/hoist-non-react-statics@^3.3.1":
   version "3.3.1"
   resolved "https://registry.yarnpkg.com/@types/hoist-non-react-statics/-/hoist-non-react-statics-3.3.1.tgz#1124aafe5118cb591977aeb1ceaaed1070eb039f"
@@ -327,6 +335,11 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-16.11.7.tgz#36820945061326978c42a01e56b61cd223dfdc42"
   integrity sha512-QB5D2sqfSjCmTuWcBWyJ+/44bcjO7VbjSbOE0ucoVbAsSNQc4Lt6QkgkVXkTDwkL4z/beecZNDvVX15D4P8Jbw==
 
+"@types/node@^17.0.13":
+  version "17.0.13"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-17.0.13.tgz#5ed7ed7c662948335fcad6c412bb42d99ea754e3"
+  integrity sha512-Y86MAxASe25hNzlDbsviXl8jQHb0RDvKt4c40ZJQ1Don0AAL0STLZSs4N+6gLEO55pedy7r2cLwS+ZDxPm/2Bw==
+
 "@types/prop-types@*":
   version "15.7.4"
   resolved "https://registry.yarnpkg.com/@types/prop-types/-/prop-types-15.7.4.tgz#fcf7205c25dff795ee79af1e30da2c9790808f11"
@@ -336,6 +349,15 @@
   version "17.0.34"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-17.0.34.tgz#797b66d359b692e3f19991b6b07e4b0c706c0102"
   integrity sha512-46FEGrMjc2+8XhHXILr+3+/sTe3OfzSPU9YGKILLrUYbQ1CLQC9Daqo1KzENGXAWwrFwiY0l4ZbF20gRvgpWTg==
+  dependencies:
+    "@types/prop-types" "*"
+    "@types/scheduler" "*"
+    csstype "^3.0.2"
+
+"@types/react@^17.0.38":
+  version "17.0.38"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-17.0.38.tgz#f24249fefd89357d5fa71f739a686b8d7c7202bd"
+  integrity sha512-SI92X1IA+FMnP3qM5m4QReluXzhcmovhZnLNm3pyeQlooi02qI7sLiepEYqT678uNiyc25XfCqxREFpy3W7YhQ==
   dependencies:
     "@types/prop-types" "*"
     "@types/scheduler" "*"
@@ -389,6 +411,11 @@
   dependencies:
     "@typescript-eslint/types" "4.33.0"
     eslint-visitor-keys "^2.0.0"
+
+"@use-it/event-listener@^0.1.7":
+  version "0.1.7"
+  resolved "https://registry.yarnpkg.com/@use-it/event-listener/-/event-listener-0.1.7.tgz#443a9b6df87f2f2961b74d42997ce723a7078623"
+  integrity sha512-hgfExDzUU9uTRTPDCpw2s9jWTxcxmpJya3fK5ADpf5VDpSy8WYwY/kh28XE0tUcbsljeP8wfan48QvAQTSSa3Q==
 
 acorn-jsx@^5.3.1:
   version "5.3.2"
@@ -2042,10 +2069,10 @@ lodash.xor@^4.5.0:
   resolved "https://registry.yarnpkg.com/lodash.xor/-/lodash.xor-4.5.0.tgz#4d48ed7e98095b0632582ba714d3ff8ae8fb1db6"
   integrity sha1-TUjtfpgJWwYyWCunFNP/iuj7HbY=
 
-lookie@^0.6.0:
-  version "0.6.0"
-  resolved "https://registry.yarnpkg.com/lookie/-/lookie-0.6.0.tgz#09f1b8694c2e4eaeb413078fee6118112fa545ea"
-  integrity sha512-mWnuOcUM+I8lcclO8uptYXnwUAEvvpszfoOLelBYHr7V3pGcXlNKKEavuJ4iIYAW+33iDM6gePJPiFF+2hQVAQ==
+lookie@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/lookie/-/lookie-1.0.4.tgz#5ef1fe3c5290653c4d7e1fe01b84d7acd6eb5674"
+  integrity sha512-tdZIrnFuRlZP7DR3Zd/EZKuGtVNiVrER3GqbxT4pErvRZsxewQKkli3h410Efyt2JBX47/X6V6OU33g4ARQj4g==
 
 loose-envify@^1.0.0, loose-envify@^1.1.0, loose-envify@^1.4.0:
   version "1.4.0"
@@ -2617,10 +2644,10 @@ react-dom@17.0.2:
     object-assign "^4.1.1"
     scheduler "^0.20.2"
 
-react-icomoon@^2.4.2:
-  version "2.4.2"
-  resolved "https://registry.yarnpkg.com/react-icomoon/-/react-icomoon-2.4.2.tgz#390489597be30519f4b9c8d5a701cffc737679c1"
-  integrity sha512-Hw7itIOQV5zRoYFpubr5C52h0qt7Bw00jE6TIFdgR6lH4RZOI0bNao576trW0Y6xxx30JGUOk3KqSagAERKDdg==
+react-icomoon@^2.5.3:
+  version "2.5.3"
+  resolved "https://registry.yarnpkg.com/react-icomoon/-/react-icomoon-2.5.3.tgz#61f24f7fb0acba7c11baf79a8f93a38efb8e3916"
+  integrity sha512-7qtBJg+rJu6YorDNB173mD9bJyoPr2dueH4QbBrKlU5x2K1TN1v3WVl6yMntyPqJ8nKb5P6a/IPgjQhHU9BPrg==
 
 react-intl@^5.21.0:
   version "5.21.0"
@@ -3141,10 +3168,20 @@ type-fest@^0.7.1:
   resolved "https://registry.yarnpkg.com/type-fest/-/type-fest-0.7.1.tgz#8dda65feaf03ed78f0a3f9678f1869147f7c5c48"
   integrity sha512-Ne2YiiGN8bmrmJJEuTWTLJR32nh/JdL1+PSicowtNb0WFpn59GK8/lfD61bVtzguz7b3PBt74nxpv/Pw5po5Rg==
 
+typescript@^4.5.5:
+  version "4.5.5"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.5.5.tgz#d8c953832d28924a9e3d37c73d729c846c5896f3"
+  integrity sha512-TCTIul70LyWe6IJWT8QSYeA54WQe8EjQFU4wY52Fasj5UKx88LNYKCgBEHcOMOrFF1rKGbD8v/xcNWVUq9SymA==
+
 ua-parser-js@^0.7.18:
   version "0.7.31"
   resolved "https://registry.yarnpkg.com/ua-parser-js/-/ua-parser-js-0.7.31.tgz#649a656b191dffab4f21d5e053e27ca17cbff5c6"
   integrity sha512-qLK/Xe9E2uzmYI3qLeOmI0tEOt+TBBQyUIAh4aAgU05FVYzeZrKUdkAZfBNVGRaHVgV0TDkdEngJSw/SyQchkQ==
+
+ua-parser-js@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/ua-parser-js/-/ua-parser-js-1.0.2.tgz#e2976c34dbfb30b15d2c300b2a53eac87c57a775"
+  integrity sha512-00y/AXhx0/SsnI51fTc0rLRmafiGOM4/O+ny10Ps7f+j/b8p/ZY11ytMgznXkOVo4GQ+KwQG5UQLkLGirsACRg==
 
 unbox-primitive@^1.0.1:
   version "1.0.1"

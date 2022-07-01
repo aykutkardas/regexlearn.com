@@ -69,7 +69,7 @@
   "steps.quantifierRange.description": "Bir karakterin belirli bir sayı aralığında geçmesini ifade etmek için sonuna geçmesini istediğimiz aralıkla birlikte süslü parantezleri `{x,y}` yazarız. Örneğin aşağıdaki `e` harfinin sadece `1` ile `3` arasında geçebileceğini belirtin.",
 
   "examples.asterisk.title": "Pratik: Yıldız İşareti `*`",
-  "examples.asterisk.description": "Metindeki `e` harfinin olmama ve birden fazla olma durumuna uygun, her kelimeyi seçecek ifadeyi yıldız işaretini `*` kullanarak yazın.",
+  "examples.asterisk.description": "Metindeki `e` harfinin olmama, bir veya daha fazla olma durumuna uygun, her kelimeyi seçecek ifadeyi yıldız işaretini `*` kullanarak yazın.",
 
   "examples.plusCharacter.title": "Pratik: Artı İşareti `+`",
   "examples.plusCharacter.description": "Metindeki `e` harfinin bir veya daha fazla geçtiği kelimeleri seçecek ifadeyi artı işaretini `+` kullanarak yazın.",
