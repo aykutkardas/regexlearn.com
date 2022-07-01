@@ -15,7 +15,7 @@
   "steps.basicMatchers.description": "The character or word we want to find is written directly. It is similar to a normal search process. For example, to find the word `curious` in the text, type the same.",
 
   "steps.dotCharacter.title": "Dot `.`: Any Character",
-  "steps.dotCharacter.description": "The period `.` allows selecting any character, including special characters and spaces.",
+  "steps.dotCharacter.description": "The period `.` allows selecting any character, including special characters and spaces. Type a period `.` in the Regex field to proceed.",
 
   "steps.characterSet.title": "Character Sets `[abc]`",
   "steps.characterSet.description": "If one of the characters in a word can be various characters, we write it in square brackets `[]` with all alternative characters. For example, to write an expression that can find all the words in the text, type the characters `a`, `e`, `i`, `o`, `u` adjacently within square brackets `[]`.",
@@ -133,7 +133,7 @@
 
   "steps.negativeLookahead.title": "Negative Lookahead: `(?!)`",
   "steps.negativeLookahead.description": "For example, we want to select numbers other than the hour value in the text. Therefore, we need to write the negative look-ahead `(?!)` expression after our expression to select only the numerical values that do not have `PM` after them. Include `PM` after the `!` sign inside the parentheses.",
-  
+
   "steps.positiveLookbehind.title": "Positive Lookbehind: `(?<=)`",
   "steps.positiveLookbehind.description": "For example, we want to select the price value in the text. Therefore, to select only the number values that preceded by `$`, we need to write the positive lookbehind expression `(?<=)` before our expression. Add `\\$` after the `=` sign inside the brackets.",
 
@@ -151,7 +151,7 @@
 
   "steps.flagsCaseInsensitive.title": "Case-insensitive Flag",
   "steps.flagsCaseInsensitive.description": "In order to remove the case-sensitivity of the expression we have written, we must activate the `case-insensitive` flag.",
-  
+
   "steps.greedyMatching.title": "Greedy Matching",
   "steps.greedyMatching.description": "Regex does a greedy match by default. This means that the matchmaking will be as long as possible. Check out the example below. It refers to any match that ends in `r` and can be any character preceded by it. But it does not stop at the first letter `r`.",
 
