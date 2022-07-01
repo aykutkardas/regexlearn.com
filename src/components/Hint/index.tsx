@@ -8,12 +8,13 @@ import shortcuts from 'src/shortcuts';
 
 import styles from './Hint.module.css';
 
-type HintProps = {
+interface Props {
   regex: string[];
   flags: string;
-};
+  hiddenFlags?: boolean;
+}
 
-const Hint = ({ regex, flags }: HintProps) => {
+const Hint = ({ regex, flags, hiddenFlags }: Props) => {
   const hintRef = useRef<HTMLDivElement>(null);
   const [showStatus, setShowStatus] = useState(false);
 
@@ -21,13 +22,12 @@ const Hint = ({ regex, flags }: HintProps) => {
     if (!(e.altKey && e.key.toLowerCase() === 'h')) return;
 
     e.preventDefault();
+    setShowStatus(!showStatus);
 
     if (showStatus) {
       ReactTooltip.hide(hintRef.current);
-      setShowStatus(false);
     } else {
       ReactTooltip.show(hintRef.current);
-      setShowStatus(true);
     }
   };
 
@@ -55,7 +55,9 @@ const Hint = ({ regex, flags }: HintProps) => {
         <div className={styles.HintAnswer}>
           {regex.map(answer => (
             <div className={styles.HintAnswerItem} key={answer}>
-              /<span className={styles.HintAnswerHighlight}>{answer}</span>/{flags}
+              {!hiddenFlags && <span>/</span>}
+              <span className={styles.HintAnswerHighlight}>{answer}</span>
+              {!hiddenFlags && <span>/{flags}</span>}
             </div>
           ))}
         </div>

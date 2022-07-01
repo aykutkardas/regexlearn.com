@@ -2,11 +2,10 @@ import { GetStaticPaths, GetStaticProps } from 'next';
 import { FormattedMessage, useIntl } from 'react-intl';
 import cx from 'classnames';
 
-import tagWrapper from 'src/utils/tagWrapper';
 import { defaultLocale, locales } from 'src/localization';
 
 import ProductButton from 'src/components/ProductButton';
-import Button from 'src/components/Button';
+import Button, { ButtonVariants } from 'src/components/Button';
 import Icon from 'src/components/Icon';
 import Header from 'src/components/Header';
 import Footer from 'src/components/Footer';
@@ -15,6 +14,9 @@ import IntlLink from 'src/components/IntlLink';
 import CustomHead from 'src/components/CustomHead';
 
 import styles from './Home.module.css';
+
+import sponsors from 'sponsors.json';
+import HighlightedText from 'src/components/HighlightedText';
 
 const PageHome = () => {
   const { formatMessage } = useIntl();
@@ -30,19 +32,15 @@ const PageHome = () => {
               <h1 className={styles.LandingMainSectionTitle}>
                 <FormattedMessage id="landing.title" />
               </h1>
-              <p
+              <HighlightedText
+                element="p"
                 className={styles.LandingMainSectionDescription}
-                dangerouslySetInnerHTML={{
-                  __html: tagWrapper({
-                    value: formatMessage({ id: 'landing.description' }),
-                    regex: /`(\S*?[^`]*)`/gim,
-                    attributes: { class: styles.LandingMainSectionDescriptionHighlight },
-                  }),
-                }}
+                text={formatMessage({ id: 'landing.description' })}
+                attrs={{ className: styles.LandingMainSectionDescriptionHighlight }}
               />
               <IntlLink href="/[lang]/learn" passHref>
                 <a className={styles.LandingMainSectionButton}>
-                  <Button variant="primary">
+                  <Button variant={ButtonVariants.Primary}>
                     <FormattedMessage id="general.startLearning" />
                   </Button>
                 </a>
@@ -104,7 +102,7 @@ const PageHome = () => {
               target="_blank"
               rel="noreferrer"
             >
-              <Button variant="github" className={className}>
+              <Button variant={ButtonVariants.Github} className={className}>
                 <Icon icon="github" size={16} color="white" />
                 <span>GitHub</span>
               </Button>
@@ -115,20 +113,11 @@ const PageHome = () => {
           <h3 className={styles.OurSponsorsTitle}>
             <FormattedMessage id="general.ourSponsors" />
           </h3>
-          <a
-            href="https://sitechecker.pro/?utm_source=regexlearn&utm_medium=referral&utm_campaign=sponsorship"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img src="/sitechecker.pro.webp" alt="sitechecker.pro" />
-          </a>
-          <a
-            href="https://seo.do/?utm_source=regexlearn&utm_medium=referral&utm_campaign=sponsorship"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img src="/seo.do.webp" alt="seo.do" />
-          </a>
+          {sponsors.map(sponsor => (
+            <a key={sponsor.name} href={sponsor.url} target="_blank" rel="noreferrer">
+              <img src={sponsor.logo} alt={sponsor.name} title={sponsor.name} />
+            </a>
+          ))}
         </div>
       </div>
       <Footer />

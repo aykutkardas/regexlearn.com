@@ -10,11 +10,11 @@ import LanguageSwitch from 'src/components/LanguageSwitch';
 
 import styles from './Header.module.css';
 
-type HeaderProps = {
+interface Props {
   isLearnPage?: boolean;
-};
+}
 
-const Header = ({ isLearnPage }: HeaderProps) => (
+const Header = ({ isLearnPage }: Props) => (
   <header
     className={cx({
       container: !isLearnPage,

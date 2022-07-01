@@ -1,10 +1,10 @@
 import { useState, useEffect, FunctionComponent, Fragment } from 'react';
 
-type Props = {
+interface Props {
   Component: FunctionComponent;
   children: JSX.Element | JSX.Element[];
   [key: string]: any;
-};
+}
 
 const EscapeWrapperSSR = ({ Component, children, ...props }: Props) => {
   const [mounted, setMounted] = useState(false);

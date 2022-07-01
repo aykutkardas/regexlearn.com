@@ -7,9 +7,9 @@ import { CheatsheetData } from 'src/types';
 
 import styles from './CheatsheetSidebarItemInner.module.css';
 
-type Props = {
+interface Props {
   data: CheatsheetData[];
-};
+}
 
 const CheatsheetSidebarItemInner = ({ data }: Props) => {
   const [activeCheatsheet, setActiveCheatsheet] = useState('');

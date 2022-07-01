@@ -90,13 +90,13 @@
   "steps.groupping.description": "Wir können einen Ausdruck gruppieren und diese Gruppen verwenden, um einige Regeln zu referenzieren oder durchzusetzen. Um einen Ausdruck zu gruppieren, schließen wir `()` in Klammern ein. Fürs Erste gruppieren Sie einfach `haa` unten.",
 
   "steps.groupReference.title": "Auf eine Gruppe verweisen",
-  "steps.groupReference.description": "Die Wörter `ha` und `haa` sind unten gruppiert. Die erste Gruppe wird verwendet, indem `\\1` geschrieben wird, um ein erneutes Schreiben zu vermeiden. Hier gibt `1` die Reihenfolge der Gruppierung an. Geben Sie ` ein \\2` am Ende des Ausdrucks, um auf die zweite Gruppe zu verweisen.",
+  "steps.groupReference.description": "Die Wörter `ha` und `haa` sind unten gruppiert. Die erste Gruppe wird verwendet, indem `\\1` geschrieben wird, um ein erneutes Schreiben zu vermeiden. Hier gibt `1` die Reihenfolge der Gruppierung an. Geben Sie ein `\\2` am Ende des Ausdrucks, um auf die zweite Gruppe zu verweisen.",
 
   "steps.nonCapturingGroupping.title": "Klammern `(?: )`: Gruppierung ohne Erfassung",
   "steps.nonCapturingGroupping.description": "Sie können einen Ausdruck gruppieren und sicherstellen, dass er nicht durch Referenzen erfasst wird. Unten sehen Sie beispielsweise zwei Gruppen. Die erste Gruppenreferenz, die wir mit `\\1` bezeichnen, zeigt jedoch tatsächlich die zweite an Gruppe, da die erste eine nicht einfangende Gruppe ist.",
 
   "steps.pipeCharacter.title": "Pipe-Zeichen `|`",
-  "steps.pipeCharacter.description": "Damit kann festgelegt werden, dass ein Ausdruck in verschiedenen Ausdrücken enthalten sein kann. Daher werden alle möglichen Anweisungen durch das Pipe-Zeichen `|` getrennt geschrieben. Dies unterscheidet sich vom Zeichensatz `[abc]`, Zeichensätze arbeiten auf Zeichenebene. Alternativen befinden sich auf Ausdrucksebene. Beispielsweise würde der folgende Ausdruck sowohl `Cat` als auch `Cat` auswählen. Fügen Sie am Ende des Ausdrucks ein weiteres Pipe-Zeichen `|` hinzu und geben Sie `Rat` ein, damit alle Wörter werden ausgewählt.",
+  "steps.pipeCharacter.description": "Damit kann festgelegt werden, dass ein Ausdruck in verschiedenen Ausdrücken enthalten sein kann. Daher werden alle möglichen Anweisungen durch das Pipe-Zeichen `|` getrennt geschrieben. Dies unterscheidet sich vom Zeichensatz `[abc]`, Zeichensätze arbeiten auf Zeichenebene. Alternativen befinden sich auf Ausdrucksebene. Beispielsweise würde der folgende Ausdruck sowohl `cat` als auch `Cat` auswählen. Fügen Sie am Ende des Ausdrucks ein weiteres Pipe-Zeichen `|` hinzu und geben Sie `Rat` ein, damit alle Wörter werden ausgewählt.",
 
   "steps.escapeCharacter.title": "Escape-Zeichen `\\`",
   "steps.escapeCharacter.description": "Es gibt Sonderzeichen, die wir beim Schreiben von Regex verwenden. `{ } [ ] / \\ + * . $^ | ?` Bevor wir diese Zeichen selbst auswählen können, müssen wir ein Escape verwenden Zeichen `\\`. Um beispielsweise die Zeichen Punkt `.` und Sternchen `*` im Text auszuwählen, fügen wir davor ein Escape-Zeichen `\\` ein.",

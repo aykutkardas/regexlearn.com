@@ -1,0 +1,17 @@
+[
+  {
+    "name": "ahrefs",
+    "url": "https://ahrefs.com/?utm_source=regexlearn&utm_medium=referral&utm_campaign=sponsorship",
+    "logo": "/ahrefs.webp"
+  },
+  {
+    "name": "sitechecker.pro",
+    "url": "https://sitechecker.pro/?utm_source=regexlearn&utm_medium=referral&utm_campaign=sponsorship",
+    "logo": "/sitechecker.pro.webp"
+  },
+  {
+    "name": "wope",
+    "url": "https://wope.com/?utm_source=regexlearn&utm_medium=referral&utm_campaign=sponsorship",
+    "logo": "/wope.webp"
+  }
+]

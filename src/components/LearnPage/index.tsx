@@ -5,15 +5,15 @@ import confetti from 'canvas-confetti';
 
 import LearnFooter from 'src/components/LearnFooter';
 import Step from 'src/components/Step';
-import { LessonData } from 'src/types';
+import { Lesson, LessonData } from 'src/types';
 
-type LearnPageProps = {
-  lessonName: string;
+interface Props {
+  lesson: Lesson;
   data: LessonData[];
-};
+}
 
-const LearnPage = ({ data, lessonName }: LearnPageProps) => {
-  const lookieKey = `lesson.${lessonName}`;
+const LearnPage = ({ data, lesson }: Props) => {
+  const lookieKey = `lesson.${lesson.key}`;
   const [step, setStep] = useState(0);
   const [lastStep, setLastStep] = useState(0);
   const [success, setSuccess] = useState(false);
@@ -100,7 +100,7 @@ const LearnPage = ({ data, lessonName }: LearnPageProps) => {
   return (
     <>
       <Step
-        lessonName={lessonName}
+        lesson={lesson}
         data={data[step]}
         step={step}
         steps={data}

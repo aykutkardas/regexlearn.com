@@ -7,31 +7,32 @@ import LearnPage from 'src/components/LearnPage';
 import { defaultLocale, locales } from 'src/localization';
 import lessons from 'src/data/lessons/index.json';
 import CustomHead from 'src/components/CustomHead';
+import { Lesson } from 'src/types';
 
 type PageLessonProps = {
-  lessonName: string;
+  lesson: Lesson;
 };
 
-const PageLesson = ({ lessonName }: PageLessonProps) => {
+const PageLesson = ({ lesson }: PageLessonProps) => {
   const { query } = useRouter();
   const { formatMessage } = useIntl();
 
-  const data = require(`src/data/lessons/${lessonName}`)?.default;
+  const data = require(`src/data/lessons/${lesson.key}.js`)?.default;
 
   const lang = typeof query.lang === 'string' ? query.lang.toUpperCase() : query.lang;
-  const title = formatMessage({ id: `lessons.${lessonName}.title` });
+  const title = formatMessage({ id: `lessons.${lesson.key}.title` });
 
   return (
     <>
       <CustomHead
         title={`${title} - ${lang}`}
-        description={`lessons.${lessonName}.description`}
-        hrefLang={`learn/${lessonName}`}
+        description={`lessons.${lesson.key}.description`}
+        hrefLang={`learn/${lesson.key}`}
       >
         <link rel="stylesheet" href="/css/animate.css" />
       </CustomHead>
       <Header isLearnPage />
-      <LearnPage data={data} lessonName={lessonName} />
+      <LearnPage data={data} lesson={lesson} />
     </>
   );
 };
@@ -41,12 +42,13 @@ export default PageLesson;
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const lang = params.lang || defaultLocale;
   const messages = require(`src/localization/${lang}/`)?.default;
+  const lesson = lessons.find(({ slug }) => slug === params.lesson);
 
   return {
     props: {
       lang,
       messages,
-      lessonName: params.lesson,
+      lesson,
     },
   };
 };
@@ -59,7 +61,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
       paths.push({
         params: {
           lang,
-          lesson: lesson.key,
+          lesson: lesson.slug,
         },
       });
     });

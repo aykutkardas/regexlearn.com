@@ -1,13 +1,13 @@
 import { FormattedMessage, useIntl } from 'react-intl';
 import cx from 'classnames';
 
-import Button from 'src/components/Button';
+import Button, { ButtonVariants } from 'src/components/Button';
 import IntlLink from 'src/components/IntlLink';
-import tagWrapper from 'src/utils/tagWrapper';
+import HighlightedText from 'src/components/HighlightedText';
 
 import styles from './Section.module.css';
 
-type SectionProps = {
+interface Props {
   title?: string;
   description?: string;
   link?: string;
@@ -16,7 +16,7 @@ type SectionProps = {
   buttonText?: string;
   customButton?: Function;
   reverse?: boolean;
-};
+}
 
 const Section = ({
   reverse,
@@ -27,7 +27,7 @@ const Section = ({
   imageAltText,
   buttonText,
   customButton,
-}: SectionProps) => {
+}: Props) => {
   const { formatMessage } = useIntl();
   const isShowButton = Boolean(link && buttonText);
 
@@ -46,20 +46,15 @@ const Section = ({
           <h2 className={styles.SectionTitle}>
             <FormattedMessage id={title} />
           </h2>
-          <p
-            className={styles.SectionDescription}
-            dangerouslySetInnerHTML={{
-              __html: tagWrapper({
-                value: formatMessage({ id: description }),
-                regex: /`(\S*?[^`]*)`/gim,
-                attributes: { class: styles.SectionHighlight },
-              }),
-            }}
+          <HighlightedText
+            element="p"
+            text={formatMessage({ id: description })}
+            attrs={{ className: styles.SectionHighlight }}
           />
           {isShowButton && (
             <IntlLink href={link} passHref>
               <a>
-                <Button variant="primary" className={styles.SectionButton}>
+                <Button variant={ButtonVariants.Primary} className={styles.SectionButton}>
                   <FormattedMessage id={buttonText} />
                 </Button>
               </a>

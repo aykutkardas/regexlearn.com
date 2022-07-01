@@ -1,4 +1,4 @@
-import { useState, useEffect, Fragment } from 'react';
+import { useState } from 'react';
 import { useIntl } from 'react-intl';
 import { Scrollbars } from 'react-custom-scrollbars';
 

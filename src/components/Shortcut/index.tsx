@@ -4,11 +4,11 @@ import useOS from 'src/utils/useOS';
 
 import styles from './Shortcut.module.css';
 
-type ShortcutProps = {
+interface Props {
   command: string;
-};
+}
 
-const Shortcut = ({ command }: ShortcutProps) => {
+const Shortcut = ({ command }: Props) => {
   const { isMacOS, isDesktop } = useOS();
 
   if (!isDesktop) return null;

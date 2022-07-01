@@ -7,12 +7,12 @@ import packageInfo from 'package.json';
 
 import styles from './ReportStep.module.css';
 
-type ReportStepProps = {
+interface Props {
   title?: string;
   step: number;
-};
+}
 
-const ReportStep = ({ title: stepTitle, step }: ReportStepProps) => {
+const ReportStep = ({ title: stepTitle, step }: Props) => {
   const { query } = useRouter();
   const { lang } = query;
 

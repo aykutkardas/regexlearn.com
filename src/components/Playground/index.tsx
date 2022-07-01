@@ -13,81 +13,71 @@ import EscapeWrapperSSR from '../EscapeWrapperSSR';
 
 import styles from './Playground.module.css';
 
-const Highlight = ({ children }) => {
-  return <span className={styles.Highlight}>{children}</span>;
-};
+const Highlight = ({ children }) => <span className={styles.Highlight}>{children}</span>;
 
-const initialText = `Regular Expressions, abbreviated as Regex or Regexp, are a string of characters created within the framework of Regex syntax rules. You can easily manage your data with Regex, which uses commands like finding, matching, and editing. Regex can be used in programming languages such as Python, SQL, Javascript, R, Google Analytics, Google Data Studio, and throughout the coding process. Learn regex online with examples and tutorials on RegexLearn now.`;
+const initText = `Regular Expressions, abbreviated as Regex or Regexp, are a string of characters created within the framework of Regex syntax rules. You can easily manage your data with Regex, which uses commands like finding, matching, and editing. Regex can be used in programming languages such as Python, SQL, Javascript, R, Google Analytics, Google Data Studio, and throughout the coding process. Learn regex online with examples and tutorials on RegexLearn now.`;
 
-const initialContent = ContentState.createFromText(initialText);
+const initialContent = ContentState.createFromText(initText);
 
 const Playground = () => {
+  const { formatMessage } = useIntl();
+  const regexInput = useRef<HTMLInputElement>(null);
+  const editor = useRef(null);
   const [regex, setRegex] = useState('[A-Z]\\w+');
   const [flags, setFlags] = useState('g');
   const [editorState, setEditorState] = useState<EditorState>(
     EditorState.createWithContent(initialContent),
   );
 
-  const { formatMessage } = useIntl();
-  const regexInput = useRef<HTMLInputElement>(null);
-  const editor = useRef(null);
-
   const onChangeFlags = flags => {
     setFlags(flags);
-    onChangeRegex(null, flags, regex);
   };
 
-  const onChangeRegex = (
-    event: FormEvent<HTMLInputElement>,
-    newFlags?: string,
-    defaultRegex?: string,
-  ) => {
-    const newRegex = event?.currentTarget?.value || defaultRegex || '';
-    setRegex(newRegex);
+  const onChangeRegex = (event: FormEvent<HTMLInputElement>) => {
+    setRegex(event?.currentTarget?.value || '');
+  };
 
+  const checkRegex = () => {
     let rowIndex = 0;
     let matchCount = 0;
 
-    if (!newRegex) {
+    if (!regex) {
       const content = editorState.getCurrentContent();
-      const newEditorState = EditorState.createWithContent(content);
-      setEditorState(newEditorState);
+      setEditorState(EditorState.createWithContent(content));
       return;
     }
 
     function findWithRegex(content: ContentBlock, callback: Function) {
-      const currentFlags = newFlags || flags;
-      const isMultiple = currentFlags.includes('m');
-      const isNeededMultiple = newRegex.startsWith('^') || newRegex.endsWith('$');
+      const isMultiple = flags.includes('m');
+      const isNeededMultiple = regex.startsWith('^') || regex.endsWith('$');
 
       if (!isMultiple && isNeededMultiple && rowIndex > 0) return;
 
-      const isGlobal = currentFlags.includes('g');
+      const isGlobal = flags.includes('g');
 
       if (!isGlobal && matchCount > 0) return;
 
-      const reg = new RegExp(newRegex, isGlobal ? currentFlags : `g${currentFlags}`);
-
       const text = content.getText();
+      const currentRegex = new RegExp(regex, isGlobal ? flags : `g${flags}`);
 
-      let matches = [...text.matchAll(reg)];
+      let matches = [...text.matchAll(currentRegex)];
 
       if (!isGlobal) {
         matches = matches.slice(0, 1);
       }
 
-      if (newRegex && matches.length) {
+      if (regex && matches.length) {
         matches.forEach(match => callback(match.index, match.index + match[0].length));
       } else {
         const newContent = ContentState.createFromText(text);
         setEditorState(EditorState.createWithContent(newContent));
       }
 
-      rowIndex++;
-
       if (matches.length) {
         matchCount++;
       }
+
+      rowIndex++;
     }
 
     function handleStrategy(content: ContentBlock, callback: Function) {
@@ -111,8 +101,10 @@ const Playground = () => {
     setEditorState(newEditorState);
   };
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  useEffect(checkRegex, [regex, flags]);
+
   useEffect(() => {
-    onChangeFlags(flags);
     setCaretPosition(regexInput?.current, regex.length);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);

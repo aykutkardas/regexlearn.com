@@ -2,7 +2,7 @@ import { GetStaticProps } from 'next';
 import Head from 'next/head';
 import { FormattedMessage, useIntl } from 'react-intl';
 
-import Button from 'src/components/Button';
+import Button, { ButtonVariants } from 'src/components/Button';
 import Header from 'src/components/Header';
 import Footer from 'src/components/Footer';
 import IntlLink from 'src/components/IntlLink';
@@ -25,7 +25,7 @@ const Page404 = () => {
             <div className={styles.NotFound}>
               <img className={styles.NotFoundImage} src="/404.webp" alt="404" />
               <IntlLink href="/" passHref>
-                <Button variant="primary">
+                <Button variant={ButtonVariants.Primary}>
                   <FormattedMessage id="notFound.button" />
                 </Button>
               </IntlLink>

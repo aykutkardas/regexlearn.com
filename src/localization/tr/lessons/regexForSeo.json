@@ -1,0 +1,52 @@
+{
+  "lesson.regexForSeo.starter.title": "SEO için Regex",
+  "lesson.regexForSeo.starter.description": "Regex birçok alanda, özellikle verimliliğini arttırmak isteyen kişiler tarafından sıkça kullanılan bir kurallı ifadeler dizidir. Regex'i SEO için kullanmanın avantajları büyük verileri analiz etmeyi ve daha zengin filtreler yazmayı kolaylaştırmasıdır. Eğer `Regex`'te yeniyseniz, `Regex 101` eğitimi ile başlamanızı tavsiye ederiz.\\n\\nİlk adıma geçmek ve daha detaylı açıklamalara erişmek için Regex alanına `OK` yazarak başlayın",
+
+  "lesson.regexForSeo.usage.title": "Kullanım Alanları",
+  "lesson.regexForSeo.usage.description": "Regex'i SEO için kullanabileceğiniz alanlar: `Google Analytics`, `Google Data Studio`, `Google Sheets`, `Google Search Console`, `Ahrefs`, `Deepcrawl`, `Screaming Frog` gibi platformlardır. Ayrıca `.htaccess` ve `robots.txt (regex benzeri sözdizimi)` dosyalarında sıkça kullanılır.\\n\\nListedeki sadece `Google` ile başlayan metinleri seçecek örnek bir regex aşağıda yazılmıştır.",
+
+  "lesson.regexForSeo.basics.title": "Temeller",
+  "lesson.regexForSeo.basics.description": "Sıkça kullanacağınız bazı Regex'lere sırayla göz atalım. Bunlar hakkında daha detaylı bilgi edinmek için `Regex 101` eğitimini incelemenizi tavsiye ederiz. Başlamak için `Yes` yazın.",
+
+  "lesson.regexForSeo.or.title": "Ya Da Operatörü `|`",
+  "lesson.regexForSeo.or.description": "Birden fazla ifadeyi filtrelemek için Ya Da operatörünü `|` kullanırız. Örneğin hem `seo` hem de `regex` içeren metinleri filtrelemek için Ya Da operatörü `|` ile ayırarak iki kelimeyi de yan yana yazın.",
+
+  "lesson.regexForSeo.optional.title": "Opsiyonel Operatörü `?`",
+  "lesson.regexForSeo.optional.description": "Bir ifadenin ya da karakterin opsiyonel olduğunu ifade etmek için kullanırız. Örneğin hem `http` hem de `https` içeren metinleri filtrelemek istiyoruz. Bu işlem için Ya da operatörünü `|` kullanabiliriz ama hemen hemen aynı olan bu iki kelime için daha iyi bir yol var.\\n\\nBu örnekte `s` harfi opsiyoneldir. `s` harfinin sonuna bir soru işareti ekleyin.",
+
+  "lesson.regexForSeo.any.title": "Her şey `.*`",
+  "lesson.regexForSeo.any.description": "Regex'te nokta işareti `.` boşluk dahil her şeyle eşleşebilir. Fakat bu eşleşme sadece kullanıldığı yerdeki tek karakter içindir. Yıldız karakteri `*` ise kendinden önce verilen ögenin hiç bulunmadığını ya da metinde birden fazla kez bulunduğunu ifade eder. İkisi birlikte kullanıldığında, kullanıldığı yerde sınırsız uzunlukta öge olabileceği anlamına gelir.\\n\\nAşağıda çeşitli anahtar kelimeler bulunuyor. `how to write` ile başlayıp kendinden sonra gelecek her şeyle eşleşen ifadeyi yazmak için regex'in sonuna `.*` ekleyin.",
+
+  
+  "lesson.regexForSeo.contains.title": "İçerenler",
+  "lesson.regexForSeo.contains.description": "Aradığımız kelimeleri ya da ifadeleri içeren metinleri filtrelemek için her şey ile eşleşen iki ifademizin `.*`'ın arasına aradığımız kelimeyi yazarız. Örneğin içerisinde `buy` geçenleri filtrelemek için `.*buy.*` ifadesini yazın.",
+
+  "lesson.regexForSeo.negated.title": "Negatiflenmiş Karakter Setleri `[^abc]`",
+  "lesson.regexForSeo.negated.description": "İçermesini istemediğimiz karakterleri ifade etmek için negatiflenmiş karakter setlerinden `[^abc]` faydalanırız. Geçmesini istemediğimiz karakterler köşeli parantezler içine en başta bir şapka işareti olacak şekilde yazılır. Aşağıda hem `http` hem de `https` bulunur. `http` ifadesi her ikisinde de geçtiği için `https` olanı da seçecektir.`s` harfini hariç tutmak için `p` harfinin sonuna `[^s]` yazın.",
+
+  "lesson.regexForSeo.caret.title": "Şapka İşareti `^`",
+  "lesson.regexForSeo.caret.description": "Elimizde bir URL listesi olduğunu ve bu URL'lerden sadece `http` ile başlayanları bulmak istediğimizi farz edelim. Fakat URL'ler başlangıcı dışında da `http` içeriyor. Sadece `http` ile başlayanları filtrelemek için aşağıdaki ifadenin başına şapka `^` işareti ekleyin.",
+
+  "lesson.regexForSeo.dollarAndEscape.title": "Dolar İşareti `$` ve Kaçış Karakteri `\\`",
+  "lesson.regexForSeo.dollarAndEscape.description": "Tekrar elimizde bir URL listesi var. Bu URL'lerden sadece `.htm` ile bitenleri bulmak istiyoruz.\\n\\nNokta işareti `.` her şey ile eşleşen özel bir karakter olduğu için öncelikle `htm` den önceki nokta işaretini `.` kaçış karakteri `\\` kullanarak etkisizleştirmemiz gerekir. Bu tüm özel karakterler için geçerlidir.\\n\\nArdından ifadenin sonuna bir `$` işareti ekleyin. Bu filtrelenecek metnin kendinden önce yazılan ifade ile bitmesini sağlar.",
+
+  "lesson.regexForSeo.limitation.title": "Uzunluk Kısıtlamaları `{n}`",
+  "lesson.regexForSeo.limitation.description": "Sonuçları karakter uzunluklarına göre filtrelemek isteyebiliriz. Örneğin `35` karakter uzunluğundaki URL'leri filtrelemek için nokta işaretinin `.` sonuna süslü parantezleri kullanarak, uzunluk için kullanacağınız sayıyı `{35}` yazın.",
+
+  "lesson.regexForSeo.maxLimitation.title": "Uzunluk Kısıtlamaları (Maksimum) `{n,m}`",
+  "lesson.regexForSeo.maxLimitation.description": "Maksimum `35` karakter uzunluğundaki URL'leri filtrelemek için nokta işaretinin `.` sonuna süslü parantezleri kullanarak, uzunluk için kullanacağımız minimum ve maksimum sayı değerlerini `{1,35}` yazın.",
+
+  "lesson.regexForSeo.minLimitation.title": "Uzunluk Kısıtlamaları (Minumum) `{n,}`",
+  "lesson.regexForSeo.minLimitation.description": "Minumum `35` karakter uzunluğundaki URL'leri filtrelemek için nokta işaretinin `.` sonuna süslü parantezleri kullanarak, uzunluk için kullanacağımız minimum sayı değerini virgül işareti `,` ile bitirerek `{35,}` yazın.",
+  
+  "lesson.regexForSeo.robots.title": "robots.txt (regex benzeri sözdizimi)",
+  "lesson.regexForSeo.robots.description": "`robots.txt` dosyasındaki regex benzeri kullanım için aşağıda bir örnek verilmiştir. Örnekte `pdf` uzantılı bağlantıların, botlar tarafından taranmaması ifade edilmiştir.",
+
+    
+  "lesson.regexForSeo.htaccess.title": ".htaccess",
+  "lesson.regexForSeo.htaccess.description": "`.htaccess` dosyasındaki regex kullanımı için aşağıda bir örnek verilmiştir. Örnekte `php` uzantılı bağlantılar, `html` uzantılı hallerine `301` kodu ile yönlendirilmiştir.",
+
+      
+  "lesson.regexForSeo.outro.title": "Sonsöz",
+  "lesson.regexForSeo.outro.description": "Regex bilgisi, regex kullanmanıza izin veren tüm platformlarda verimliliğinizi arttıran özel bir beceridir. Kullanmaya başladıktan ve bu becerinizi geliştirdikten sonra tekrar eden bir çok işi daha hızlı tamamlamanıza ve diğer şeyler için zaman kazanmanıza yardım eder. Regex'in temellerini daha iyi anlamak için `Regex 101` eğitimini ziyaret edebilirsiniz. Kendi metinleriniz üzerinde kendi ifadelerinizi test etmek için `Playground` sayfasını kullanabilirsiniz."
+}

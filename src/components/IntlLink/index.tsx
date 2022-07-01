@@ -4,15 +4,15 @@ import { defaultLocale } from 'src/localization';
 import getIntlPath from 'src/utils/getIntlPath';
 import { ParsedUrlQuery } from 'querystring';
 
-type IntlLinkProps = {
+interface Props {
   href: string;
   lang?: string;
   query?: ParsedUrlQuery;
   passHref?: boolean;
   children: any;
-};
+}
 
-const IntlLink = ({ href, children, lang, query = {}, passHref = false }: IntlLinkProps) => {
+const IntlLink = ({ href, children, lang, query = {}, passHref }: Props) => {
   const { query: routerQuery, pathname } = useRouter();
   const currentLang = lang || routerQuery.lang || defaultLocale;
 

@@ -8,16 +8,17 @@ import Icon from 'src/components/Icon';
 
 import styles from './LessonBox.module.css';
 
-type LessonBoxProps = {
+interface Props {
   data: {
     key: string;
+    slug: string;
     title: string;
     description: string;
   };
   lock?: boolean;
-};
+}
 
-const LessonBox = ({ data, lock }: LessonBoxProps) => {
+const LessonBox = ({ data, lock }: Props) => {
   const [isVisit, setIsVisit] = useState(false);
   const { formatMessage } = useIntl();
 
@@ -27,7 +28,7 @@ const LessonBox = ({ data, lock }: LessonBoxProps) => {
     DynamicWrapper = Fragment;
   } else {
     const WrapperLessonBox = ({ children }) => (
-      <IntlLink href={`/[lang]/learn/[lesson]`} query={{ lesson: data.key }}>
+      <IntlLink href={`/[lang]/learn/[lesson]`} query={{ lesson: data.slug }}>
         {children}
       </IntlLink>
     );
