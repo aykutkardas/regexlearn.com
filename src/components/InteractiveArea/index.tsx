@@ -74,6 +74,8 @@ const InteractiveArea = ({
 
     if (err) {
       setError(Boolean(err));
+      setMatch(false);
+      setSuccess(false);
       return;
     }
 
