@@ -1,0 +1,36 @@
+{
+  "general.prev": "Anterior",
+  "general.next": "Próximo",
+  "general.result": "Resultado",
+  "general.regex": "Regex",
+  "general.text": "Texto",
+  "general.watch": "Assistir",
+  "general.start": "Iniciar",
+  "general.continue": "Continuar",
+  "general.completedStep": "Etapa Concluida",
+  "general.hintQuestion": "Mostrar Resposta",
+  "general.reportStep": "Reportar um Problema",
+  "general.startLearning": "Começar a Aprender",
+  "general.comingSoon": "Em Breve",
+  "general.becomeSponsor": "Seja um Patrocinador",
+  "general.learn": "Aprender",
+  "general.playground": "Playground",
+  "general.cheatsheet": "Cheatsheet",
+  "general.ourSponsors": "Nossos Patrocinadores",
+
+  "notFound.intro": "A pagina que você procura não existe.",
+  "notFound.button": "Voltar para o Início",
+
+  "page.landing.title": "Regex Learn - Passo a passo, do zero ao avançado.",
+  "page.learn.title": "Regex Learn - Regex Curso Interativo",
+  "page.cheatsheet.title": "Regex Learn - Regex Cheatsheet",
+  "page.playground.title": "Regex Learn - Playground",
+  "page.404.title": "Regex Learn - Não encontrado",
+
+  "page.landing.description": "Learn Regex interativamente, pratique em seu nível, teste a compartilhe seu próprio Regex.",
+  "page.learn.description": "Aprenda Regex passo a passo. Complete o tutorial interativo que vai facilitar e acelerar seu aprendizado.",
+  "page.cheatsheet.description": "As vezes você só precisa se lembrar de Regex. Experimente o cheatsheet ele vai facilitar seu entendimento e ajudar a memorizar melhor.",
+  "page.playground.description": "Você pode facilmente montar e testar seu padrão Regex online pelo Playground pattern online via Playground.",
+
+  "learn.safari.unsupportWarning": "Regex nessa etapa pode não funcionar em alguns navegadores. Se tiver problemas para sair desta etapa. clique aqui."
+}
