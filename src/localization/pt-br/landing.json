@@ -1,0 +1,28 @@
+{
+  "landing.title": "Aprenda Regex passo a passo, de zero a avançado",
+  "landing.description": "Aprender Regex é mais facil do que você imagina. Você pode utilizar esta ferramenta para facilmente `aprender`, `praticar`, `testar` e `compartilhar` Regex.",
+  "landing.imageAltText": "Ilustração de um homem relaxado com os pés sobre a mesa.",
+
+  "section.learn.title": "Aprenda",
+  "section.learn.content": "`Expressões Regulares`, abreviadas como Regex ou Regexp, são strings de caractéres criadas dentro da estrutura de regras de sintáxe do Regex. Você consegue manipular seus dados facilmente com Regex, que utiliza comandos como encontrar, comparar, e editar. Regex pode ser usado em linguagens de programção como Python, SQL, Javascript, R, Google Analytics, Google Data Studio, e durante o processo de digitar os códigos. Aprenda Regex online com exemplos e tutoriais de RegexLearn now.",
+  "section.learn.imageAltText": "Ilustração de uma montanha com uma bandeira em seu topo.",
+
+  "section.cheatsheet.button": "Avalie Agora",
+  "section.cheatsheet.title": "Cheatsheet",
+  "section.cheatsheet.content": "Com `Regex Learn Cheatsheet`, Você pode ver todas as utilizações que precisa de uma só vez e checa-las diretamente da primeira página. Explore todos os padrões e símbolos com Regex CheatSheet.",
+  "section.cheatsheet.imageAltText": "Ilustração de um homem lendo páginas utilizando binóculos.",
+
+  "section.playground.title": "Playground",
+  "section.playground.content": "Se você quer gerar Regex, você pode facilmente gerar e testar seus padrões de Regex acessando o Playground. Como um 'Regex Tester', você pode validar e compartilhar seu Regex com outros por trabalho em equipe.",
+  "section.playground.imageAltText": "Ilustração de um gato quase derrubando um copo",
+
+  "section.practice.title": "Practice",
+  "section.practice.content": "Se você completou a parte de aprendizado, chegou a hora de PRATICAR! Na seção de praticar, você pode testar seus conhecimentos sobre Regex e praticar com tutoriais baseados em seu level. Em Breve.",
+  "section.practice.imageAltText": "Ilustração de uma mulher anotando em um livro",
+
+  "section.opensource.title": "Open Source",
+  "section.opensource.content": "Regex Learn é um projeto 'open source' que convida contribuiçoes da comunidade e é gratis para utilização. Trabalhar neste projeto te permite aprimorar suas habilidades, estudar, e colaborar.  Você pode contribuir e auxiliar aqui.",
+  "section.opensource.imageAltText": "Ilustração de uma mulher, um homem e um gato montando um quebra-cabeças"
+
+}
+
