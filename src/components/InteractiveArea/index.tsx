@@ -46,6 +46,8 @@ const InteractiveArea = ({
   const [match, setMatch] = useState(false);
 
   const skipStep = () => {
+    setRegex(data.regex[0]);
+    setFlags(data.flags);
     setError(false);
     setSuccess(true);
   };
