@@ -44,10 +44,15 @@ const InteractiveArea = ({
   const [error, setError] = useState(false);
   const [success, setSuccess] = useState(false);
   const [match, setMatch] = useState(false);
+  const [skip, setSkip] = useState(false);
 
   const skipStep = () => {
+    setRegex(data.regex[0]);
+    setFlags(data.flags);
     setError(false);
     setSuccess(true);
+    setMatch(true);
+    setSkip(true);
   };
 
   const checkBrowserSupport = () => {
@@ -60,6 +65,7 @@ const InteractiveArea = ({
   };
 
   const applyRegex = () => {
+    if (skip) return;
     if (data.interactive === false) return;
 
     if (data.safariAccept) {
@@ -116,6 +122,7 @@ const InteractiveArea = ({
 
   useEffect(() => {
     setError(false);
+    setSkip(false);
 
     if (data.interactive === false) {
       setSuccess(true);
