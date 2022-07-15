@@ -27,7 +27,7 @@ const PageLesson = ({ lesson }: PageLessonProps) => {
       <CustomHead
         title={`${title} - ${lang}`}
         description={`lessons.${lesson.key}.description`}
-        hrefLang={`learn/${lesson.key}`}
+        hrefLang={`learn/${lesson.slug}`}
       >
         <link rel="stylesheet" href="/css/animate.css" />
       </CustomHead>
