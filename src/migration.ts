@@ -3,6 +3,10 @@ import lookie from 'lookie';
 const migration = () => {
   if (typeof window === 'undefined') return;
 
+  // Since the (ShortcutSwitch) component has been removed (v2.11.0), the user cannot modify this value.
+  // Therefore, this value is removed from users' localStorage.
+  lookie.remove('shortcutHidden');
+
   const isOlderCookie = typeof lookie.get('lastStep') === 'number';
 
   if (isOlderCookie) {
