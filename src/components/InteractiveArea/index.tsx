@@ -165,7 +165,7 @@ const InteractiveArea = ({
 
   useEventListener('keydown', handleFocus);
 
-  useEffect(applyRegex, [regex, flags, step, data, isChanged, checkBrowserSupport]);
+  useEffect(applyRegex, [regex, skip, flags, step, data, isChanged, checkBrowserSupport]);
 
   if (!isShow) return null;
 
