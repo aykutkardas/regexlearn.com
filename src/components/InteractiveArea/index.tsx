@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, useCallback } from 'react';
 import { FormattedMessage, useIntl } from 'react-intl';
 import useEventListener from '@use-it/event-listener';
 import cx from 'classnames';
@@ -55,14 +55,14 @@ const InteractiveArea = ({
     setSkip(true);
   };
 
-  const checkBrowserSupport = () => {
+  const checkBrowserSupport = useCallback(() => {
     try {
       checkRegex(data, { regex, flags });
       return true;
     } catch (error) {
       return false;
     }
-  };
+  }, [data, regex, flags]);
 
   const applyRegex = () => {
     if (skip) return;
