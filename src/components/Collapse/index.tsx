@@ -17,6 +17,7 @@ interface Props {
   children: any;
   titleClassName?: string;
   contentClassName?: string;
+  triggerElementProps?: { id: string };
 }
 
 const Collapse = ({

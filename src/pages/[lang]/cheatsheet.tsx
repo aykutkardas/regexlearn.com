@@ -47,6 +47,7 @@ const PageCheatsheet = () => {
                       key={item.title}
                       title={<CheatsheetItemTitle data={item} />}
                       description={item.description}
+                      triggerElementProps={{ id: item.title.toUpperCase() }}
                     >
                       <CheatsheetDemo data={item} />
                     </Collapse>
