@@ -1,6 +1,4 @@
 import { GetStaticPaths, GetStaticProps } from 'next';
-import { useRouter } from 'next/router';
-import { useIntl } from 'react-intl';
 
 import Header from 'src/components/Header';
 import LearnPage from 'src/components/LearnPage';
@@ -14,18 +12,12 @@ type PageLessonProps = {
 };
 
 const PageLesson = ({ lesson }: PageLessonProps) => {
-  const { query } = useRouter();
-  const { formatMessage } = useIntl();
-
   const data = require(`src/data/lessons/${lesson.key}.js`)?.default;
-
-  const lang = typeof query.lang === 'string' ? query.lang.toUpperCase() : query.lang;
-  const title = formatMessage({ id: `lessons.${lesson.key}.title` });
 
   return (
     <>
       <CustomHead
-        title={`${title} - ${lang}`}
+        title={`lessons.${lesson.key}.title`}
         description={`lessons.${lesson.key}.description`}
         hrefLang={`learn/${lesson.slug}`}
       >
