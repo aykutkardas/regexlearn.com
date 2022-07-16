@@ -34,36 +34,30 @@
   position: absolute;
   top: 30px;
   z-index: 99;
-  left: 0px;
+  right: 0px;
   text-align: end;
   transition: all 0.2s linear;
+  background-color: var(--bg-2);
+  margin-top: 5px;
+  width: 120px;
+  padding: 8px;
+  border-radius: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  box-shadow: 3px 3px 2px var(--shadow-1);
 }
 
 .LanguageSwitchListItem {
-  margin: 3px 0;
   color: var(--txt-3);
   display: flex;
   align-items: center;
-  white-space: nowrap;
-}
-
-.LanguageSwitchListItem:hover,
-.LanguageSwitchListItem:hover :global(svg) {
-  color: var(--primary);
-  fill: var(--primary);
+  justify-content: center;
+  width: 33%;
 }
 
 .LanguageSwitchListItem:hover {
-  margin-right: -21px;
-}
-
-.LanguageSwitchListItemIcon {
-  display: none;
-  margin-left: 5px;
-}
-
-.LanguageSwitchListItem:hover .LanguageSwitchListItemIcon {
-  display: inline-block;
+  color: var(--primary);
 }
 
 .LanguageSwitchCurrent span,
@@ -88,10 +82,6 @@
 
   .LanguageSwitchListItem {
     padding-right: 0px;
-  }
-
-  .LanguageSwitchListItemIcon {
-    visibility: hidden;
   }
 
   .LanguageSwitch {

@@ -22,13 +22,9 @@ const LanguageSwitch = () => {
     currentLang = langNames[lang];
   }
 
-  const toggleLanguageList = () => {
-    setIsOpen(!isOpen);
-  };
+  const toggleLanguageList = () => setIsOpen(!isOpen);
 
-  const closeLanguageList = () => {
-    setIsOpen(false);
-  };
+  const closeLanguageList = () => setIsOpen(false);
 
   const availableLangList = langList.filter(({ value }) => lang !== value);
 
@@ -57,12 +53,6 @@ const LanguageSwitch = () => {
             className={styles.LanguageSwitchListItem}
           >
             <span>{label}</span>
-            <Icon
-              icon="arrow-left"
-              className={styles.LanguageSwitchListItemIcon}
-              size={16}
-              removeInlineStyle
-            />
           </a>
         ))}
       </div>
