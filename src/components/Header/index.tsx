@@ -1,8 +1,6 @@
 import { FormattedMessage } from 'react-intl';
 import cx from 'classnames';
-import dynamic from 'next/dynamic';
 
-const ShortcutSwitch = dynamic(import('src/components/ShortcutSwitch'), { ssr: false });
 import Icon from 'src/components/Icon';
 import Logo from 'src/components/Logo';
 import IntlLink from 'src/components/IntlLink';
@@ -82,7 +80,6 @@ const Header = ({ isLearnPage }: Props) => (
                 <span>GitHub</span>
                 <Icon icon="github" size={16} color="white" />
               </a>
-              {isLearnPage && <ShortcutSwitch />}
               <LanguageSwitch />
             </div>
           </div>
