@@ -34,7 +34,7 @@ const CheatsheetSidebar = () => {
               contentClassName={styles.CategoryContent}
               open={activeCategory === row.title}
               triggerDisabled={activeCategory !== row.title}
-              triggerElementProps={{ id: formatMessage({ id: row.title }).toUpperCase() }}
+              triggerElementProps={{ id: row.title.toUpperCase() }}
               title={
                 <div
                   className={styles.CategoryTitleInner}
