@@ -25,6 +25,7 @@ const CheatsheetSidebarItemInner = ({ data }: Props) => {
           className={styles.CheatsheetTitle}
           contentClassName={styles.CheatsheetContent}
           openedClassName={styles.CheatsheetTitleOpened}
+          triggerElementProps={{ id: item.title.toUpperCase() }}
           title={
             <CheatsheetItemTitle onClick={() => setActiveCheatsheet(item.title)} data={item} />
           }
