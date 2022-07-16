@@ -17,6 +17,7 @@ const EscapeWrapperSSR = ({ Component, children, ...props }: Props) => {
     return <Fragment>{children}</Fragment>;
   }
 
+  // @ts-ignore [TODO]: Fix this
   return <Component {...props}>{children}</Component>;
 };
 
