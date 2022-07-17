@@ -29,13 +29,13 @@
   color: var(--txt-1);
   margin-left: 20px;
   user-select: none;
-  transition: 0.3s;
+  transition: color 0.3s;
   position: relative;
 }
 
 .HeaderLink :global(svg) {
   margin-left: 5px;
-  transition: 0.3s;
+  transition: color 0.3s;
 }
 
 .HeaderLink[data-beta]::before {
