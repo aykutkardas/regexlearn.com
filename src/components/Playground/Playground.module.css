@@ -1,23 +1,9 @@
-.PlaygroundBlockRegexInputWrapper {
-  background: var(--bg-3);
-  padding: 7px 15px;
-  border-radius: 5px;
-  max-width: 90%;
-  position: relative;
-  display: flex;
-  background-color: var(--bg-2);
-  align-items: center;
-}
-
 .PlaygroundBlockRegexInput {
   border: 0px;
   margin: 3px;
-  min-width: 90px;
-  text-align: center;
   background: none;
   letter-spacing: 2px;
   width: 100%;
-  max-width: 100%;
   font-size: 14px;
   letter-spacing: 1px;
   line-height: 1.5em;
@@ -26,21 +12,9 @@
   white-space: nowrap;
   color: var(--primary);
   position: relative;
-}
-
-.PlaygroundBlockRegexInputWrapper::before {
-  content: '/';
-  color: var(--learn-gray);
-  font-size: 14px;
-  position: absolute;
-}
-
-.PlaygroundBlockRegexInputWrapper::after {
-  content: '/' attr(data-flags);
-  color: var(--learn-gray);
-  font-size: 14px;
-  position: absolute;
-  right: calc(10px);
+  background-color: var(--bg-2);
+  padding: 20px 15px;
+  border-radius: 5px;
 }
 
 .InteractiveAreaBlock {
@@ -104,8 +78,6 @@
 
 @media only screen and (max-width: 600px) {
   .EditorWrapper,
-  .PlaygroundBlockRegexInputWrapper::before,
-  .PlaygroundBlockRegexInputWrapper::after,
   .PlaygroundBlockRegexInput {
     font-size: 16px;
   }

@@ -116,21 +116,14 @@ const Playground = () => {
         data-title={formatMessage({ id: 'general.regex' })}
         onClick={() => regexInput.current.focus()}
       >
-        <span
-          className={styles.PlaygroundBlockRegexInputWrapper}
-          data-flags={flags}
-          style={{ paddingRight: flags.length * 13 || 15 }}
-        >
-          <input
-            ref={regexInput}
-            style={{ width: regex.length * 10 || 90 }}
-            className={cx(styles.PlaygroundBlockRegexInput)}
-            type="text"
-            onChange={e => onChangeRegex(e)}
-            value={regex}
-            spellCheck={false}
-          />
-        </span>
+        <input
+          ref={regexInput}
+          className={cx(styles.PlaygroundBlockRegexInput)}
+          type="text"
+          onChange={e => onChangeRegex(e)}
+          value={regex}
+          spellCheck={false}
+        />
       </div>
       <FlagBox flags={flags} setFlags={onChangeFlags} />
       <div
