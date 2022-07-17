@@ -21,11 +21,16 @@
   width: 100%;
 }
 
+.LessonBoxWrapper {
+  margin-bottom: 20px;
+}
+
 .LessonSponsor {
   font-size: 12px;
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  color: var(--txt-3);
 }
 
 .LessonSponsor img {

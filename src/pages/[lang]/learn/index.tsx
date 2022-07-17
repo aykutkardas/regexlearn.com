@@ -45,15 +45,27 @@ const PageLearn = () => {
         </div>
         <div className="row">
           {lessons.map(lesson => (
-            <div key={lesson.key} className="col-xs-12 col-sm-4 col-md-3">
+            <div
+              key={lesson.key}
+              className={cx('col-xs-12 col-sm-6 col-md-4', styles.LessonBoxWrapper)}
+            >
               <LessonBox data={lesson} />
-              {lesson.sponsor && (
+              {lesson.sponsor ? (
                 <span className={styles.LessonSponsor}>
                   Sponsored by{' '}
                   <a href={lesson.sponsorURL} target="_blank" rel="noreferrer">
                     <img src={lesson.sponsorLogo} alt={lesson.sponsor} />
                   </a>
                 </span>
+              ) : (
+                <a
+                  target="_blank"
+                  className={styles.LessonSponsor}
+                  rel="noreferrer"
+                  href="https://github.com/aykutkardas/regexlearn.com#sponsoring"
+                >
+                  Become a Sponsor
+                </a>
               )}
             </div>
           ))}

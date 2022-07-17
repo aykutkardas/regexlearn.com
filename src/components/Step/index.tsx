@@ -64,13 +64,22 @@ const Step = ({ lesson, data, step, steps, error, onChangeSuccess }: StepProps) 
         onChangeSuccess={onChangeSuccess}
         setIsOpenModal={setIsOpenModal}
       />
-      {lesson.sponsor && (
+      {lesson.sponsor ? (
         <span className={styles.LessonSponsor}>
           Sponsored by{' '}
           <a href={lesson.sponsorURL} target="_blank" rel="noreferrer">
             <img src={lesson.sponsorLogo} alt={lesson.sponsor} />
           </a>
         </span>
+      ) : (
+        <a
+          target="_blank"
+          className={styles.LessonSponsor}
+          rel="noreferrer"
+          href="https://github.com/aykutkardas/regexlearn.com#sponsoring"
+        >
+          Become a Sponsor
+        </a>
       )}
       {data.videoURL && modalIsOpen && (
         <div className={styles.StepVideoModal}>
