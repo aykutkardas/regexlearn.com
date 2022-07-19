@@ -19,6 +19,7 @@ const CustomHead = ({ title, description, children, hrefLang }: CustomHeadProps)
 
   const pageTitle = formatMessage({ id: title });
   const pageDescription = formatMessage({ id: description });
+  const pageHref = asPath.replace('/en', '/').replace('//', '/');
 
   return (
     <Head>
@@ -34,12 +35,7 @@ const CustomHead = ({ title, description, children, hrefLang }: CustomHeadProps)
             href={`https://regexlearn.com/${locale === 'en' ? '' : locale + '/'}${hrefLang}`}
           />
         ))}
-      <SeoTags
-        key={pageTitle}
-        title={pageTitle}
-        description={pageDescription}
-        href={asPath.replace('/en/', '/')}
-      />
+      <SeoTags key={pageTitle} title={pageTitle} description={pageDescription} href={pageHref} />
     </Head>
   );
 };
