@@ -2,6 +2,13 @@ import styles from '../../pages/[lang]/Home.module.css';
 
 const ProductButton = () => (
   <div className={styles.ProductHuntButtonWrapper}>
+    <a href="https://www.buymeacoffee.com/aykutkardas" target="_blank" rel="noreferrer">
+      <img
+        src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png"
+        alt="Buy Me A Coffee"
+        style={{ height: 50, width: 217 }}
+      />
+    </a>
     <a
       href="https://www.producthunt.com/posts/regexlearn?utm_source=badge-top-post-badge&utm_medium=badge&utm_souce=badge-regexlearn"
       target="_blank"
