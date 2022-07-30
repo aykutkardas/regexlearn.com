@@ -6,6 +6,7 @@ import Header from 'src/components/Header';
 import Footer from 'src/components/Footer';
 import LessonBox from 'src/components/LessonBox';
 import CustomHead from 'src/components/CustomHead';
+import ProductButton from 'src/components/ProductButton';
 import { defaultLocale, locales } from 'src/localization';
 import lessons from 'src/data/lessons/index.json';
 
@@ -22,6 +23,7 @@ const PageLearn = () => {
       </CustomHead>
       <Header />
       <div className="container">
+        <ProductButton />
         <div className={cx('row', styles.Section)}>
           <div className={cx('col-xs-12 col-sm-12 col-md-8', styles.SectionContentWrapper)}>
             <h1 className={styles.SectionTitle}>

@@ -7,6 +7,7 @@ import InteractiveArea from 'src/components/InteractiveArea';
 import HighlightedText from 'src/components/HighlightedText';
 import Progress from 'src/components/Progress';
 import Button from 'src/components/Button';
+import ProductButton from 'src/components/ProductButton';
 import { Lesson, LessonData } from 'src/types';
 
 import styles from './Step.module.css';
@@ -55,6 +56,7 @@ const Step = ({ lesson, data, step, steps, error, onChangeSuccess }: StepProps) 
         text={formatMessage({ id: data.description })}
         attrs={{ className: styles.StepDescriptionWord }}
       />
+      {steps.length === step + 1 && <ProductButton onlyBuyMeACoffee />}
       <InteractiveArea
         lesson={lesson}
         isShow={isInteractive}

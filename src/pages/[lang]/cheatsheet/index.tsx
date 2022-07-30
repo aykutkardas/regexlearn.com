@@ -7,6 +7,7 @@ import Collapse from 'src/components/Collapse';
 import CheatsheetItemTitle from 'src/components/CheatsheetItemTitle';
 import CheatsheetDemo from 'src/components/CheatsheetDemo';
 import CustomHead from 'src/components/CustomHead';
+import ProductButton from 'src/components/ProductButton';
 import { defaultLocale, locales } from 'src/localization';
 import data from 'src/data/cheatsheet.json';
 
@@ -24,6 +25,7 @@ const PageCheatsheet = () => {
       />
       <Header />
       <div className="container flex-1">
+        <ProductButton />
         <div className="row">
           <div className="col-lg-12">
             <h1 className={styles.Title}>
