@@ -13,7 +13,7 @@
   "section.cheatsheet.imageAltText": "",
 
   "section.playground.title": "Playground",
-  "section.playground.content": "RegEx를 만들고 싶다면, Playground를 통해 당신의 RegEx 패턴을 쉽게 만들고 실험해 볼 수 있습니다. RegEx tester로서, 곧 다른사람들과 당신의 RegEx를 공유하며 협업 할 수 있을 것입니다.",
+  "section.playground.content": "Regex를 생성하려면 Playground를 통해 Regex 패턴을 쉽게 빌드하고 테스트할 수 있습니다. 정규식 테스터는 공동 작업을 위해 정규식을 검증하고 다른 사람들과 공유할 수 있습니다.",
   "section.playground.imageAltText": "",
 
   "section.practice.title": "실습",
