@@ -111,7 +111,7 @@
   background: var(--primary);
 }
 
-.InteractiveAreaParentError .InteractiveAreaBlockRegex {
+.InteractiveAreaLockError .InteractiveAreaBlockRegex {
   box-shadow: inset 0px 0px 0px 2px var(--error);
 }
 

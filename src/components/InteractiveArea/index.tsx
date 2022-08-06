@@ -1,9 +1,9 @@
-import { useState, useEffect, useRef, useCallback } from 'react';
+import { useState, useEffect, useRef, useCallback, useContext } from 'react';
 import { FormattedMessage, useIntl } from 'react-intl';
 import useEventListener from '@use-it/event-listener';
 import cx from 'classnames';
 import dynamic from 'next/dynamic';
-import lookie from 'lookie';
+import confetti from 'canvas-confetti';
 
 const ReportStep = dynamic(import('src/components/ReportStep'), { ssr: false });
 const Hint = dynamic(import('src/components/Hint'), { ssr: false });
@@ -11,39 +11,39 @@ import FlagBox from 'src/components/FlagBox';
 import setCaretPosition from 'src/utils/setCaretPosition';
 import tagWrapper from 'src/utils/tagWrapper';
 import checkRegex from 'src/utils/checkRegex';
-import { Lesson, LessonData } from 'src/types';
+import { InteractiveAreaContext } from 'src/context/InteractiveAreaContext';
 
 import styles from './InteractiveArea.module.css';
 import Icon from '../Icon';
 
 interface Props {
-  lesson: Lesson;
-  data: LessonData;
-  step: number;
   isShow?: boolean;
-  parentError: boolean;
-  onChangeSuccess: Function;
   setIsOpenModal: Function;
 }
 
-const InteractiveArea = ({
-  lesson,
-  data,
-  step,
-  isShow,
-  parentError,
-  onChangeSuccess,
-  setIsOpenModal,
-}: Props) => {
+const InteractiveArea = ({ isShow, setIsOpenModal }: Props) => {
+  const {
+    data,
+    lessonData,
+    step,
+    lastStep,
+    nextStep,
+    prevStep,
+    success,
+    setSuccess,
+    match,
+    setMatch,
+    error,
+    setError,
+    lockError,
+  } = useContext(InteractiveAreaContext);
+
   const { formatMessage } = useIntl();
   const regexInput = useRef<HTMLInputElement>(null);
   const [regex, setRegex] = useState(data.initialValue || '');
   const [flags, setFlags] = useState(data.initialFlags || '');
   const [content, setContent] = useState('');
   const [isChanged, setIsChanged] = useState(false);
-  const [error, setError] = useState(false);
-  const [success, setSuccess] = useState(false);
-  const [match, setMatch] = useState(false);
   const [skip, setSkip] = useState(false);
 
   const skipStep = () => {
@@ -55,6 +55,36 @@ const InteractiveArea = ({
     setSkip(true);
   };
 
+  useEffect(() => {
+    setCaretPosition(regexInput.current, data.cursorPosition || 0);
+
+    if (lastStep > step) {
+      const newRegex = data.regex?.[0];
+      const newFlags = data.flags;
+
+      setRegex(newRegex);
+      setFlags(newFlags);
+      setSuccess(true);
+      applyRegex(newRegex, newFlags);
+
+      return;
+    }
+
+    if (step === lessonData.length - 1) {
+      confetti({
+        particleCount: 400,
+        startVelocity: 30,
+        gravity: 0.5,
+        spread: 350,
+        origin: {
+          x: 0.5,
+          y: 0.4,
+        },
+      });
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   const checkBrowserSupport = useCallback(() => {
     try {
       checkRegex(data, { regex, flags });
@@ -64,7 +94,7 @@ const InteractiveArea = ({
     }
   }, [data, regex, flags]);
 
-  const applyRegex = () => {
+  const applyRegex = (regex, flags) => {
     if (skip) return;
     if (data.interactive === false) return;
 
@@ -79,12 +109,13 @@ const InteractiveArea = ({
     const { isSuccess, isMatch, err, regex: grouppedRegex } = checkRegex(data, { regex, flags });
 
     if (err) {
-      setError(Boolean(err));
+      setError(true);
       setMatch(false);
       setSuccess(false);
       return;
     }
 
+    setError(false);
     setMatch(isMatch);
     setSuccess(isSuccess);
 
@@ -110,47 +141,18 @@ const InteractiveArea = ({
   const onChange = e => {
     setIsChanged(true);
     setRegex(e.target.value);
+    applyRegex(e.target.value, flags);
   };
 
   const focusInput = () => {
     regexInput?.current?.focus();
   };
 
-  const blurInput = () => {
-    regexInput?.current?.blur();
+  const handleChangeFlags = flags => {
+    setFlags(flags);
+    setIsChanged(true);
+    applyRegex(regex, flags);
   };
-
-  useEffect(() => {
-    setError(false);
-    setSkip(false);
-
-    if (data.interactive === false) {
-      setSuccess(true);
-      return;
-    }
-
-    setSuccess(false);
-
-    const lastStep = lookie.get(`lesson.${lesson.key}`)?.lastStep || 0;
-    const isCompletedStep = step < lastStep;
-    const currentFlags = isCompletedStep ? data.flags : data.initialFlags;
-    const currentRegex = isCompletedStep ? data.regex[0] : data.initialValue;
-
-    applyRegex();
-    setContent(data.content);
-    setFlags(currentFlags || '');
-    setRegex(currentRegex || '');
-    setIsChanged(false);
-    blurInput();
-
-    setTimeout(() => setCaretPosition(regexInput.current, data.cursorPosition || 0));
-
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [step, data.cursorPosition]);
-
-  useEffect(() => {
-    onChangeSuccess(success);
-  }, [success, onChangeSuccess]);
 
   const handleFocus = e => {
     if (e.keyCode !== 9) return;
@@ -158,14 +160,21 @@ const InteractiveArea = ({
     focusInput();
   };
 
-  const handleChangeFlags = flags => {
-    setFlags(flags);
-    setIsChanged(true);
+  const handleChangeStep = e => {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      if (e.shiftKey) {
+        prevStep();
+      } else {
+        nextStep();
+      }
+    }
   };
 
-  useEventListener('keydown', handleFocus);
-
-  useEffect(applyRegex, [regex, skip, flags, step, data, isChanged, checkBrowserSupport]);
+  useEventListener('keypress', e => {
+    handleChangeStep(e);
+    handleFocus(e);
+  });
 
   if (!isShow) return null;
 
@@ -181,7 +190,7 @@ const InteractiveArea = ({
         [styles.InteractiveAreaError]: error,
         [styles.InteractiveAreaMatch]: match,
         [styles.InteractiveAreaSuccess]: success,
-        [styles.InteractiveAreaParentError]: parentError,
+        [styles.InteractiveAreaLockError]: lockError,
       })}
     >
       {data.safariAccept && (

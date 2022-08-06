@@ -1,18 +1,20 @@
 import { GetStaticPaths, GetStaticProps } from 'next';
 
 import Header from 'src/components/Header';
-import LearnPage from 'src/components/LearnPage';
-import { defaultLocale, locales } from 'src/localization';
-import lessons from 'src/data/lessons/index.json';
 import CustomHead from 'src/components/CustomHead';
+import LearnFooter from 'src/components/LearnFooter';
+import Step from 'src/components/Step';
+import { defaultLocale, locales } from 'src/localization';
 import { Lesson } from 'src/types';
+import lessons from 'src/data/lessons/index.json';
+import { InteractiveAreaProvider } from 'src/context/InteractiveAreaContext';
 
 type PageLessonProps = {
   lesson: Lesson;
 };
 
 const PageLesson = ({ lesson }: PageLessonProps) => {
-  const data = require(`src/data/lessons/${lesson.key}.js`)?.default;
+  const lessonData = require(`src/data/lessons/${lesson.key}.js`)?.default;
 
   return (
     <>
@@ -24,7 +26,10 @@ const PageLesson = ({ lesson }: PageLessonProps) => {
         <link rel="stylesheet" href="/css/animate.css" />
       </CustomHead>
       <Header isLearnPage />
-      <LearnPage data={data} lesson={lesson} />
+      <InteractiveAreaProvider key={lessonData} lesson={lesson} lessonData={lessonData}>
+        <Step />
+        <LearnFooter />
+      </InteractiveAreaProvider>
     </>
   );
 };

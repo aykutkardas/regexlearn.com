@@ -1,5 +1,5 @@
 import { createPortal } from 'react-dom';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import { useIntl } from 'react-intl';
 import useEventListener from '@use-it/event-listener';
 
@@ -8,20 +8,13 @@ import HighlightedText from 'src/components/HighlightedText';
 import Progress from 'src/components/Progress';
 import Button from 'src/components/Button';
 import ProductButton from 'src/components/ProductButton';
-import { Lesson, LessonData } from 'src/types';
+import { InteractiveAreaContext } from 'src/context/InteractiveAreaContext';
 
 import styles from './Step.module.css';
 
-interface StepProps {
-  lesson: Lesson;
-  step: number;
-  steps: object[];
-  error: boolean;
-  onChangeSuccess: Function;
-  data: LessonData;
-}
+const Step = () => {
+  const { lesson, data, lessonData, step } = useContext(InteractiveAreaContext);
 
-const Step = ({ lesson, data, step, steps, error, onChangeSuccess }: StepProps) => {
   const [mounted, setMounted] = useState(false);
   const [modalIsOpen, setIsOpenModal] = useState(false);
   const { formatMessage } = useIntl();
@@ -56,16 +49,8 @@ const Step = ({ lesson, data, step, steps, error, onChangeSuccess }: StepProps) 
         text={formatMessage({ id: data.description })}
         attrs={{ className: styles.StepDescriptionWord }}
       />
-      {steps.length === step + 1 && <ProductButton onlyBuyMeACoffee />}
-      <InteractiveArea
-        lesson={lesson}
-        isShow={isInteractive}
-        data={data}
-        step={step}
-        parentError={error}
-        onChangeSuccess={onChangeSuccess}
-        setIsOpenModal={setIsOpenModal}
-      />
+      {lessonData.length === step + 1 && <ProductButton onlyBuyMeACoffee />}
+      <InteractiveArea key={step} isShow={isInteractive} setIsOpenModal={setIsOpenModal} />
       {lesson.sponsor ? (
         <span className={styles.LessonSponsor}>
           Sponsored by{' '}
@@ -98,7 +83,7 @@ const Step = ({ lesson, data, step, steps, error, onChangeSuccess }: StepProps) 
       )}
       {mounted &&
         createPortal(
-          <Progress total={steps.length} current={step + 1} />,
+          <Progress total={lessonData.length} current={step + 1} />,
           window.document.getElementById('ProgressArea'),
         )}
     </div>
