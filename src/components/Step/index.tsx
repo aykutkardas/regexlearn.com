@@ -1,5 +1,5 @@
 import { createPortal } from 'react-dom';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import { useIntl } from 'react-intl';
 import useEventListener from '@use-it/event-listener';
 
@@ -8,20 +8,13 @@ import HighlightedText from 'src/components/HighlightedText';
 import Progress from 'src/components/Progress';
 import Button from 'src/components/Button';
 import ProductButton from 'src/components/ProductButton';
-import { Lesson, LessonData } from 'src/types';
-
+import { InteractiveAreaContext } from 'src/context/InteractiveAreaContext';
 import styles from './Step.module.css';
 
-interface StepProps {
-  lesson: Lesson;
-  step: number;
-  steps: object[];
-  error: boolean;
-  onChangeSuccess: Function;
-  data: LessonData;
-}
+const Step = () => {
+  const { lesson, data, step } = useContext(InteractiveAreaContext);
+  const stepData = data[step];
 
-const Step = ({ lesson, data, step, steps, error, onChangeSuccess }: StepProps) => {
   const [mounted, setMounted] = useState(false);
   const [modalIsOpen, setIsOpenModal] = useState(false);
   const { formatMessage } = useIntl();
@@ -38,34 +31,30 @@ const Step = ({ lesson, data, step, steps, error, onChangeSuccess }: StepProps) 
 
   useEventListener('keyup', handleCloseModal);
 
-  const isInteractive = data.interactive !== false;
+  const isInteractive = stepData.interactive !== false;
 
   return (
     <div className={styles.Step}>
-      {data.image && <img className={styles.StepImage} src={data.image} alt="" width={100} />}
-      {data.originalTitle && <h4 className={styles.StepTitleOriginal}>{data.originalTitle}</h4>}
+      {stepData.image && (
+        <img className={styles.StepImage} src={stepData.image} alt="" width={100} />
+      )}
+      {stepData.originalTitle && (
+        <h4 className={styles.StepTitleOriginal}>{stepData.originalTitle}</h4>
+      )}
       <HighlightedText
         element="h2"
         className={styles.StepTitle}
-        text={formatMessage({ id: data.title })}
+        text={formatMessage({ id: stepData.title })}
         attrs={{ className: styles.StepTitleWord }}
       />
       <HighlightedText
         element="p"
         className={styles.StepDescription}
-        text={formatMessage({ id: data.description })}
+        text={formatMessage({ id: stepData.description })}
         attrs={{ className: styles.StepDescriptionWord }}
       />
-      {steps.length === step + 1 && <ProductButton onlyBuyMeACoffee />}
-      <InteractiveArea
-        lesson={lesson}
-        isShow={isInteractive}
-        data={data}
-        step={step}
-        parentError={error}
-        onChangeSuccess={onChangeSuccess}
-        setIsOpenModal={setIsOpenModal}
-      />
+      {data.length === step + 1 && <ProductButton onlyBuyMeACoffee />}
+      <InteractiveArea key={step} isShow={isInteractive} setIsOpenModal={setIsOpenModal} />
       {lesson.sponsor ? (
         <span className={styles.LessonSponsor}>
           Sponsored by{' '}
@@ -83,12 +72,12 @@ const Step = ({ lesson, data, step, steps, error, onChangeSuccess }: StepProps) 
           Become a Sponsor
         </a>
       )}
-      {data.videoURL && modalIsOpen && (
+      {stepData.videoURL && modalIsOpen && (
         <div className={styles.StepVideoModal}>
           <iframe
             width="90%"
             height="90%"
-            src={data.videoURL}
+            src={stepData.videoURL}
             frameBorder={0}
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
@@ -98,7 +87,7 @@ const Step = ({ lesson, data, step, steps, error, onChangeSuccess }: StepProps) 
       )}
       {mounted &&
         createPortal(
-          <Progress total={steps.length} current={step + 1} />,
+          <Progress total={data.length} current={step + 1} />,
           window.document.getElementById('ProgressArea'),
         )}
     </div>
