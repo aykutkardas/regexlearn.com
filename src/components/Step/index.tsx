@@ -12,8 +12,8 @@ import { InteractiveAreaContext } from 'src/context/InteractiveAreaContext';
 import styles from './Step.module.css';
 
 const Step = () => {
-  const { lesson, data, step } = useContext(InteractiveAreaContext);
-  const stepData = data[step];
+  const { lesson, lessonData, step } = useContext(InteractiveAreaContext);
+  const data = lessonData[step];
 
   const [mounted, setMounted] = useState(false);
   const [modalIsOpen, setIsOpenModal] = useState(false);
@@ -31,29 +31,25 @@ const Step = () => {
 
   useEventListener('keyup', handleCloseModal);
 
-  const isInteractive = stepData.interactive !== false;
+  const isInteractive = data.interactive !== false;
 
   return (
     <div className={styles.Step}>
-      {stepData.image && (
-        <img className={styles.StepImage} src={stepData.image} alt="" width={100} />
-      )}
-      {stepData.originalTitle && (
-        <h4 className={styles.StepTitleOriginal}>{stepData.originalTitle}</h4>
-      )}
+      {data.image && <img className={styles.StepImage} src={data.image} alt="" width={100} />}
+      {data.originalTitle && <h4 className={styles.StepTitleOriginal}>{data.originalTitle}</h4>}
       <HighlightedText
         element="h2"
         className={styles.StepTitle}
-        text={formatMessage({ id: stepData.title })}
+        text={formatMessage({ id: data.title })}
         attrs={{ className: styles.StepTitleWord }}
       />
       <HighlightedText
         element="p"
         className={styles.StepDescription}
-        text={formatMessage({ id: stepData.description })}
+        text={formatMessage({ id: data.description })}
         attrs={{ className: styles.StepDescriptionWord }}
       />
-      {data.length === step + 1 && <ProductButton onlyBuyMeACoffee />}
+      {lessonData.length === step + 1 && <ProductButton onlyBuyMeACoffee />}
       <InteractiveArea key={step} isShow={isInteractive} setIsOpenModal={setIsOpenModal} />
       {lesson.sponsor ? (
         <span className={styles.LessonSponsor}>
@@ -72,12 +68,12 @@ const Step = () => {
           Become a Sponsor
         </a>
       )}
-      {stepData.videoURL && modalIsOpen && (
+      {data.videoURL && modalIsOpen && (
         <div className={styles.StepVideoModal}>
           <iframe
             width="90%"
             height="90%"
-            src={stepData.videoURL}
+            src={data.videoURL}
             frameBorder={0}
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
@@ -87,7 +83,7 @@ const Step = () => {
       )}
       {mounted &&
         createPortal(
-          <Progress total={data.length} current={step + 1} />,
+          <Progress total={lessonData.length} current={step + 1} />,
           window.document.getElementById('ProgressArea'),
         )}
     </div>

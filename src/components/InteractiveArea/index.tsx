@@ -24,7 +24,7 @@ interface Props {
 
 const InteractiveArea = ({ isShow, setIsOpenModal }: Props) => {
   const {
-    data,
+    lessonData,
     step,
     lastStep,
     nextStep,
@@ -37,19 +37,19 @@ const InteractiveArea = ({ isShow, setIsOpenModal }: Props) => {
     setError,
     lockError,
   } = useContext(InteractiveAreaContext);
-  const stepData: LessonData = data[step];
+  const data: LessonData = lessonData[step];
 
   const { formatMessage } = useIntl();
   const regexInput = useRef<HTMLInputElement>(null);
-  const [regex, setRegex] = useState(stepData.initialValue || '');
-  const [flags, setFlags] = useState(stepData.initialFlags || '');
+  const [regex, setRegex] = useState(data.initialValue || '');
+  const [flags, setFlags] = useState(data.initialFlags || '');
   const [content, setContent] = useState('');
   const [isChanged, setIsChanged] = useState(false);
   const [skip, setSkip] = useState(false);
 
   const skipStep = () => {
-    setRegex(stepData.regex[0]);
-    setFlags(stepData.flags);
+    setRegex(data.regex[0]);
+    setFlags(data.flags);
     setError(false);
     setSuccess(true);
     setMatch(true);
@@ -57,11 +57,11 @@ const InteractiveArea = ({ isShow, setIsOpenModal }: Props) => {
   };
 
   useEffect(() => {
-    setCaretPosition(regexInput.current, stepData.cursorPosition || 0);
+    setCaretPosition(regexInput.current, data.cursorPosition || 0);
 
     if (lastStep > step) {
-      const newRegex = stepData.regex?.[0];
-      const newFlags = stepData.flags;
+      const newRegex = data.regex?.[0];
+      const newFlags = data.flags;
 
       setRegex(newRegex);
       setFlags(newFlags);
@@ -71,7 +71,7 @@ const InteractiveArea = ({ isShow, setIsOpenModal }: Props) => {
       return;
     }
 
-    if (step === data.length - 1) {
+    if (step === lessonData.length - 1) {
       confetti({
         particleCount: 400,
         startVelocity: 30,
@@ -88,31 +88,26 @@ const InteractiveArea = ({ isShow, setIsOpenModal }: Props) => {
 
   const checkBrowserSupport = useCallback(() => {
     try {
-      checkRegex(stepData, { regex, flags });
+      checkRegex(data, { regex, flags });
       return true;
     } catch (error) {
       return false;
     }
-  }, [stepData, regex, flags]);
+  }, [data, regex, flags]);
 
   const applyRegex = (regex, flags) => {
     if (skip) return;
-    if (stepData.interactive === false) return;
+    if (data.interactive === false) return;
 
-    if (stepData.safariAccept) {
-      const isTrueRegex = stepData.regex[0] == regex;
+    if (data.safariAccept) {
+      const isTrueRegex = data.regex[0] == regex;
       setError(!isTrueRegex);
       setSuccess(isTrueRegex);
 
       if (!checkBrowserSupport()) return;
     }
 
-    const {
-      isSuccess,
-      isMatch,
-      err,
-      regex: grouppedRegex,
-    } = checkRegex(stepData, { regex, flags });
+    const { isSuccess, isMatch, err, regex: grouppedRegex } = checkRegex(data, { regex, flags });
 
     if (err) {
       setError(true);
@@ -126,11 +121,11 @@ const InteractiveArea = ({ isShow, setIsOpenModal }: Props) => {
     setSuccess(isSuccess);
 
     if (!regex) {
-      setContent(stepData.content);
+      setContent(data.content);
     } else {
       setContent(
         tagWrapper({
-          value: stepData.content,
+          value: data.content,
           regex: grouppedRegex,
           attributes: { class: styles.InteractiveAreaResultTag },
         }),
@@ -184,7 +179,7 @@ const InteractiveArea = ({ isShow, setIsOpenModal }: Props) => {
 
   if (!isShow) return null;
 
-  const readableContent = (content || stepData.content || '').replace(/\n/gm, '<br />');
+  const readableContent = (content || data.content || '').replace(/\n/gm, '<br />');
 
   const placeholder = formatMessage({
     id: 'general.regex',
@@ -199,7 +194,7 @@ const InteractiveArea = ({ isShow, setIsOpenModal }: Props) => {
         [styles.InteractiveAreaLockError]: lockError,
       })}
     >
-      {stepData.safariAccept && (
+      {data.safariAccept && (
         <div className={styles.SafariWarning} onClick={skipStep}>
           <FormattedMessage id="learn.safari.unsupportWarning" />
         </div>
@@ -213,14 +208,14 @@ const InteractiveArea = ({ isShow, setIsOpenModal }: Props) => {
         className={styles.InteractiveAreaBlockRegex}
         data-title={formatMessage({ id: 'general.regex' })}
       >
-        <ReportStep title={stepData.title} step={step} />
+        <ReportStep title={data.title} step={step} />
 
-        {!stepData.noHint && (
-          <Hint hiddenFlags={stepData.hiddenFlags} regex={stepData.regex} flags={stepData.flags} />
+        {!data.noHint && (
+          <Hint hiddenFlags={data.hiddenFlags} regex={data.regex} flags={data.flags} />
         )}
         <div
           className={cx(styles.InteractiveAreaInputWrapper, {
-            [styles.InteractiveAreaHiddenFlags]: stepData.hiddenFlags,
+            [styles.InteractiveAreaHiddenFlags]: data.hiddenFlags,
           })}
           data-flags={flags}
         >
@@ -230,20 +225,20 @@ const InteractiveArea = ({ isShow, setIsOpenModal }: Props) => {
             type="text"
             className={styles.InteractiveAreaInput}
             style={{ width: regex.length * 15 || 60 }}
-            readOnly={stepData.readOnly}
-            value={stepData.visibleRegex || regex}
+            readOnly={data.readOnly}
+            value={data.visibleRegex || regex}
             onChange={onChange}
             placeholder={placeholder}
             spellCheck={false}
           />
         </div>
-        {stepData.videoURL && (
+        {data.videoURL && (
           <div className={styles.WatchButton} onClick={() => setIsOpenModal(true)}>
             <Icon icon="play" size={18} />
             <FormattedMessage id="general.watch" />
           </div>
         )}
-        {stepData.useFlagsControl && <FlagBox flags={flags} setFlags={handleChangeFlags} />}
+        {data.useFlagsControl && <FlagBox flags={flags} setFlags={handleChangeFlags} />}
       </div>
     </div>
   );

@@ -13,7 +13,7 @@ type PageLessonProps = {
 };
 
 const PageLesson = ({ lesson }: PageLessonProps) => {
-  const data = require(`src/data/lessons/${lesson.key}.js`)?.default;
+  const lessonData = require(`src/data/lessons/${lesson.key}.js`)?.default;
 
   return (
     <>
@@ -25,7 +25,7 @@ const PageLesson = ({ lesson }: PageLessonProps) => {
         <link rel="stylesheet" href="/css/animate.css" />
       </CustomHead>
       <Header isLearnPage />
-      <InteractiveAreaProvider key={data} lesson={lesson} data={data}>
+      <InteractiveAreaProvider key={lessonData} lesson={lesson} lessonData={lessonData}>
         <Step />
         <LearnFooter />
       </InteractiveAreaProvider>
