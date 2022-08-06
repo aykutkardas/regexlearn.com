@@ -6,13 +6,13 @@
   "examples.finish.description": " ",
 
   "steps.starter.title": "개요",
-  "steps.starter.description": "RegEx는 `Regular Expression`의 줄임말입니다. 이것은 내용을 찾거나 관리하는 데 도움이 됩니다. RegEx 필드에 'OK'를 입력하여 첫 번째 단계를 진행하고 자세한 설명에 접근합니다...",
+  "steps.starter.description": "RegEx는 `Regular Expression`의 줄임말입니다. 이것은 내용을 찾거나 관리하는 데 도움이 됩니다. RegEx 필드에 `OK`를 입력하여 첫 번째 단계를 진행하고 자세한 설명에 접근합니다...",
 
   "steps.whatIsRegex.title": "Regular Expressions, `RegEx`는 무슨 뜻일까?",
   "steps.whatIsRegex.description": "Regular Expressions 검색패턴을 표현하는 문자열입니다. 자주 `RegEx` 혹은 `RegExp`로 불립니다. 이것은 내용의 단어를 찾거나 대체하는데 용이합니다. 추가적으로, 내용이 우리가 설정한 규칙에 부합하는지 확인할 수 있습니다.\\n\\n 예를 들어, 파일이름들이 있다고 가정해봅시다. 이때 'pdf'형식의 파일만 찾고싶을때, 이 `^\\w+\\.pdf$` 표현을 입력하면 찾을 수 있을 것 입니다. 진행 단계가 거듭될수록 표현의 정의의 의미는 더 정확해질 것입니다.",
 
   "steps.basicMatchers.title": "기본 매칭",
-  "steps.basicMatchers.description": "우리가 찾고자 하는 단어 내용을 직접 작성합니다. 이는 기본 검색 과정과 동일합니다. 예를 들어, 문단에 'curious'이라는 단어를 찾기 위해서 똑같이 작성하면 됩니다.",
+  "steps.basicMatchers.description": "우리가 찾고자 하는 단어 내용을 직접 작성합니다. 이는 기본 검색 과정과 동일합니다. 예를 들어, 문단에 `curious`이라는 단어를 찾기 위해서 똑같이 작성하면 됩니다.",
 
   "steps.dotCharacter.title": "점 `.`: 아무 문자",
   "steps.dotCharacter.description": "이 `.`기호는 특수문자나 여백을 포함한 아무 문자를 구분합니다.",
