@@ -1,6 +1,7 @@
 import { useState, createContext, useEffect } from 'react';
-import { Lesson, LessonData } from 'src/types';
 import lookie from 'lookie';
+
+import { Lesson, LessonData } from 'src/types';
 
 interface IInteractiveAreaContext {
   step: number;

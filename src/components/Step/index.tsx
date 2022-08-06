@@ -9,6 +9,7 @@ import Progress from 'src/components/Progress';
 import Button from 'src/components/Button';
 import ProductButton from 'src/components/ProductButton';
 import { InteractiveAreaContext } from 'src/context/InteractiveAreaContext';
+
 import styles from './Step.module.css';
 
 const Step = () => {

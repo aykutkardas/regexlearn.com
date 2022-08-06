@@ -5,9 +5,10 @@ import CustomHead from 'src/components/CustomHead';
 import LearnFooter from 'src/components/LearnFooter';
 import Step from 'src/components/Step';
 import { defaultLocale, locales } from 'src/localization';
-import lessons from 'src/data/lessons/index.json';
 import { Lesson } from 'src/types';
+import lessons from 'src/data/lessons/index.json';
 import { InteractiveAreaProvider } from 'src/context/InteractiveAreaContext';
+
 type PageLessonProps = {
   lesson: Lesson;
 };
