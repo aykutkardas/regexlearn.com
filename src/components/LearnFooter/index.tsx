@@ -12,7 +12,8 @@ import { InteractiveAreaContext } from 'src/context/InteractiveAreaContext';
 import styles from './LearnFooter.module.css';
 
 const LearnFooter = () => {
-  const { data, step, nextStep, prevStep, success, error } = useContext(InteractiveAreaContext);
+  const { lessonData, step, nextStep, prevStep, success, error } =
+    useContext(InteractiveAreaContext);
 
   return (
     <div className={cx(styles.LearnFooter, 'container-fluid')}>
@@ -37,7 +38,7 @@ const LearnFooter = () => {
           <Social />
         </div>
         <div className={cx(styles.LearnFooterNextWrapper, 'col-xs-4')}>
-          {step < data.length - 1 && (
+          {step < lessonData.length - 1 && (
             <div
               className={styles.NavigationStepNext}
               role="button"
