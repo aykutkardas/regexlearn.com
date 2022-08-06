@@ -24,6 +24,7 @@ interface Props {
 
 const InteractiveArea = ({ isShow, setIsOpenModal }: Props) => {
   const {
+    data,
     lessonData,
     step,
     lastStep,
@@ -37,7 +38,6 @@ const InteractiveArea = ({ isShow, setIsOpenModal }: Props) => {
     setError,
     lockError,
   } = useContext(InteractiveAreaContext);
-  const data: LessonData = lessonData[step];
 
   const { formatMessage } = useIntl();
   const regexInput = useRef<HTMLInputElement>(null);

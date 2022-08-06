@@ -19,6 +19,7 @@ interface IInteractiveAreaContext {
   nextStep: () => void;
   lesson: Lesson;
   lessonData: LessonData[];
+  data: LessonData;
 }
 
 const InteractiveAreaContext = createContext<IInteractiveAreaContext>({
@@ -38,6 +39,7 @@ const InteractiveAreaContext = createContext<IInteractiveAreaContext>({
   nextStep: () => {},
   lesson: null,
   lessonData: [],
+  data: null,
 });
 
 const InteractiveAreaProvider = ({ lesson, lessonData, children }) => {
@@ -50,15 +52,15 @@ const InteractiveAreaProvider = ({ lesson, lessonData, children }) => {
   const [error, setError] = useState(false);
   const [lockError, setLockError] = useState(false);
 
-  const stepData = lessonData[step];
+  const data = lessonData[step];
 
   useEffect(() => {
     const { lastStep = 0, currentStep = lastStep } = lookie.get(lookieKey) || {};
 
     setStep(currentStep);
     setLastStep(lastStep);
-    setSuccess(currentStep < lastStep || stepData.readOnly || stepData.interactive === false);
-  }, [lookieKey, stepData]);
+    setSuccess(currentStep < lastStep || data.readOnly || data.interactive === false);
+  }, [lookieKey, data]);
 
   const updateStorage = currentStep => {
     lookie.set(lookieKey, {
@@ -121,6 +123,7 @@ const InteractiveAreaProvider = ({ lesson, lessonData, children }) => {
         nextStep,
         lesson,
         lessonData,
+        data,
       }}
     >
       {children}

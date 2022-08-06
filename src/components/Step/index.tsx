@@ -12,8 +12,7 @@ import { InteractiveAreaContext } from 'src/context/InteractiveAreaContext';
 import styles from './Step.module.css';
 
 const Step = () => {
-  const { lesson, lessonData, step } = useContext(InteractiveAreaContext);
-  const data = lessonData[step];
+  const { lesson, data, lessonData, step } = useContext(InteractiveAreaContext);
 
   const [mounted, setMounted] = useState(false);
   const [modalIsOpen, setIsOpenModal] = useState(false);
