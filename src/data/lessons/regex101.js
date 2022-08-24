@@ -376,7 +376,7 @@ const regex101 = [
     initialValue: '(C|c)at',
     initialFlags: 'g',
     flags: 'g',
-    regex: ['(C|c)at|rat'],
+    regex: ['(C|c)at|rat', '(C|c|r)at'],
     cursorPosition: 7,
     answer: ['cat', 'Cat', 'rat'],
   },
