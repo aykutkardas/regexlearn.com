@@ -36,8 +36,11 @@
     "@types/draft-js": "^0.11.8",
     "@types/node": "^18.0.5",
     "@types/react": "^18.0.15",
+    "autoprefixer": "^10.4.8",
     "eslint": "7",
     "eslint-config-next": "12.2.2",
+    "postcss": "^8.4.16",
+    "tailwindcss": "^3.1.8",
     "typescript": "^4.5.5"
   }
 }

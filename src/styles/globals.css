@@ -1,4 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
   --black: #000000;
@@ -25,32 +27,10 @@
   --warning-darken: #ffa347;
 }
 
-* {
-  outline: none;
-}
-
-a {
-  text-decoration: none;
-}
-
-body {
-  margin: 0;
-  font-family: 'Open Sans', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-color: var(--bg-1);
-}
-
-.App {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100vh;
-  color: var(--txt-1);
-}
-
-.flex-1 {
-  flex: 1;
+@layer base {
+  body {
+    background-color: var(--bg-1);
+  }
 }
 
 .container,
