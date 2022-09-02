@@ -23,7 +23,7 @@ const PageHome = () => {
       <CustomHead title="page.landing.title" description="page.landing.description" hrefLang="" />
       <Header />
       <div className="container">
-        <div className="row tw-flex tw-items-center tw-min-h-[calc(100vh-150px)]">
+        <div className="row tw-flex tw-items-center tw-min-h-screen tw-relative -tw-top-12">
           <div className="col-xs-12 col-sm-12 col-md-6">
             <div className="landing">
               <h1 className="tw-font-bold tw-leading-snug tw-font-sans tw-text-[53px] dark:tw-text-white">

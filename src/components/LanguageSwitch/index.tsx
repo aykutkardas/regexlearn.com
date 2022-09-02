@@ -1,11 +1,9 @@
-import { useState, CSSProperties } from 'react';
+import { useState } from 'react';
 import { useRouter } from 'next/router';
+import cx from 'classnames';
 
-import Icon from 'src/components/Icon';
 import getIntlPath from 'src/utils/getIntlPath';
 import { langNames } from 'src/localization';
-
-import styles from './LanguageSwitch.module.css';
 
 const langList = Object.keys(langNames).map(langKey => ({
   value: langKey,
@@ -28,29 +26,28 @@ const LanguageSwitch = () => {
 
   const availableLangList = langList.filter(({ value }) => lang !== value);
 
-  const languageSwitchListStyle: CSSProperties = {
-    visibility: isOpen ? 'visible' : 'hidden',
-    opacity: isOpen ? 1 : 0,
-  };
-
   return (
-    <div className={styles.LanguageSwitch}>
+    <div className="tw-relative tw-cursor-pointer tw-select-none">
       <div
-        className={styles.LanguageSwitchCurrent}
+        className="tw-flex tw-items-center tw-justify-center tw-relative tw-text-2xl"
         role="button"
         tabIndex={0}
         onClick={toggleLanguageList}
       >
         <span>{currentLang}</span>
-        <Icon icon="earth" className={styles.LanguageSwitchCurrentIcon} size={16} />
       </div>
-      <div className={styles.LanguageSwitchList} style={languageSwitchListStyle}>
+      <div
+        className={cx(
+          'tw-absolute tw-top-10 -tw-left-1/2 tw-z-50 dark:tw-bg-neutral-700 tw-p-2 tw-rounded-md tw-shadow-lg',
+          isOpen ? 'tw-block tw-opacity-100' : 'tw-hidden tw-opacity-0',
+        )}
+      >
         {availableLangList.map(({ label, value }) => (
           <a
             href={getIntlPath({ href: pathname, lang: value, query })}
             key={value}
             onClick={closeLanguageList}
-            className={styles.LanguageSwitchListItem}
+            className="tw-flex tw-items-center tw-justify-center w-1/3 tw-text-2xl hover:tw-scale-125"
           >
             <span>{label}</span>
           </a>
