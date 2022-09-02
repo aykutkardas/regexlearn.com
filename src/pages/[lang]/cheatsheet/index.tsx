@@ -24,7 +24,7 @@ const PageCheatsheet = () => {
         hrefLang="cheatsheet"
       />
       <Header />
-      <div className="container flex-1">
+      <div className="container tw-flex-1">
         <ProductButton />
         <div className="row">
           <div className="col-lg-12">

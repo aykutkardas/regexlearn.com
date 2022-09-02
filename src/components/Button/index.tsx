@@ -1,16 +1,12 @@
 import cx from 'classnames';
 import { ButtonHTMLAttributes } from 'react';
 
-import styles from './Button.module.css';
-
 export enum ButtonVariants {
   Primary = 'primary',
-  Github = 'github',
 }
 
 const variants = {
-  [ButtonVariants.Primary]: styles.Primary,
-  [ButtonVariants.Github]: styles.GitHub,
+  [ButtonVariants.Primary]: 'dark:tw-bg-primary dark:hover:tw-bg-green-700 dark:tw-text-white',
 };
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
@@ -18,7 +14,14 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 const Button = ({ children, variant, className, ...props }: ButtonProps) => (
-  <button className={cx(styles.Button, variants[variant], className)} {...props}>
+  <button
+    className={cx(
+      'tw-px-4 tw-py-3 tw-rounded-md disabled:tw-cursor-not-allowed tw-text-sm',
+      variants[variant],
+      className,
+    )}
+    {...props}
+  >
     {children}
   </button>
 );

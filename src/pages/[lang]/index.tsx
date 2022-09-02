@@ -1,22 +1,19 @@
 import { GetStaticPaths, GetStaticProps } from 'next';
 import { FormattedMessage, useIntl } from 'react-intl';
-import cx from 'classnames';
 
 import { defaultLocale, locales } from 'src/localization';
 
-import ProductButton from 'src/components/ProductButton';
-import Button, { ButtonVariants } from 'src/components/Button';
 import Icon from 'src/components/Icon';
 import Header from 'src/components/Header';
 import Footer from 'src/components/Footer';
 import Section from 'src/components/Section';
 import IntlLink from 'src/components/IntlLink';
 import CustomHead from 'src/components/CustomHead';
-
-import styles from './Home.module.css';
+// import ProductButton from 'src/components/ProductButton';
+import HighlightedText from 'src/components/HighlightedText';
+import Button, { ButtonVariants } from 'src/components/Button';
 
 import sponsors from 'sponsors.json';
-import HighlightedText from 'src/components/HighlightedText';
 
 const PageHome = () => {
   const { formatMessage } = useIntl();
@@ -26,21 +23,21 @@ const PageHome = () => {
       <CustomHead title="page.landing.title" description="page.landing.description" hrefLang="" />
       <Header />
       <div className="container">
-        <div className={cx('row', styles.LandingMainSection)}>
+        <div className="row tw-flex tw-items-center tw-min-h-[calc(100vh-150px)]">
           <div className="col-xs-12 col-sm-12 col-md-6">
             <div className="landing">
-              <h1 className={styles.LandingMainSectionTitle}>
+              <h1 className="tw-font-bold tw-leading-snug tw-font-sans tw-text-[53px] dark:tw-text-white">
                 <FormattedMessage id="landing.title" />
               </h1>
               <HighlightedText
                 element="p"
-                className={styles.LandingMainSectionDescription}
+                className="tw-text-xl tw-leading-8 tw-my-3 dark:tw-text-neutral-50"
                 text={formatMessage({ id: 'landing.description' })}
-                attrs={{ className: styles.LandingMainSectionDescriptionHighlight }}
+                attrs={{ className: 'dark:tw-text-green-400' }}
               />
               <IntlLink href="/[lang]/learn" passHref>
-                <a className={styles.LandingMainSectionButton}>
-                  <Button variant={ButtonVariants.Primary}>
+                <a>
+                  <Button variant={ButtonVariants.Primary} className="tw-mt-4">
                     <FormattedMessage id="general.startLearning" />
                   </Button>
                 </a>
@@ -55,7 +52,7 @@ const PageHome = () => {
               alt={formatMessage({ id: 'landing.imageAltText' })}
             />
           </div>
-          <ProductButton />
+          {/* <ProductButton /> */}
         </div>
 
         <Section
@@ -102,22 +99,24 @@ const PageHome = () => {
               target="_blank"
               rel="noreferrer"
             >
-              <Button variant={ButtonVariants.Github} className={className}>
-                <Icon icon="github" size={16} color="white" />
+              <Button className="tw-inline-flex tw-items-center tw-justify-center dark:tw-bg-neutral-600 dark:hover:tw-bg-neutral-700 tw-mt-4">
+                <Icon icon="github" size={16} color="white" className="tw-mr-2" />
                 <span>GitHub</span>
               </Button>
             </a>
           )}
         />
-        <div className={cx('row', styles.OurSponsors)}>
-          <h3 className={styles.OurSponsorsTitle}>
+        <div className="row tw-text-center tw-mb-16 tw-my-52">
+          <h3 className="dark:tw-text-neutral-300 tw-text-md">
             <FormattedMessage id="general.ourSponsors" />
           </h3>
-          {sponsors.map(sponsor => (
-            <a key={sponsor.name} href={sponsor.url} target="_blank" rel="noreferrer">
-              <img src={sponsor.logo} alt={sponsor.name} title={sponsor.name} />
-            </a>
-          ))}
+          <div className="tw-flex tw-gap-3 tw-mt-2 tw-items-center tw-justify-center">
+            {sponsors.map(sponsor => (
+              <a key={sponsor.name} href={sponsor.url} target="_blank" rel="noreferrer">
+                <img src={sponsor.logo} alt={sponsor.name} title={sponsor.name} />
+              </a>
+            ))}
+          </div>
         </div>
       </div>
       <Footer />

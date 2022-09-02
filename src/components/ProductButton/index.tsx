@@ -1,11 +1,9 @@
-import styles from '../../pages/[lang]/Home.module.css';
-
 interface Props {
   onlyBuyMeACoffee?: boolean;
 }
 
 const ProductButton = ({ onlyBuyMeACoffee }: Props) => (
-  <div className={onlyBuyMeACoffee ? null : styles.ProductHuntButtonWrapper}>
+  <div>
     <a href="https://www.buymeacoffee.com/aykutkardas" target="_blank" rel="noreferrer">
       <img
         src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png"
@@ -18,7 +16,6 @@ const ProductButton = ({ onlyBuyMeACoffee }: Props) => (
         href="https://www.producthunt.com/posts/regexlearn?utm_source=badge-top-post-badge&utm_medium=badge&utm_souce=badge-regexlearn"
         target="_blank"
         rel="noreferrer"
-        className={styles.ProductHuntButton}
       >
         <img
           src="https://api.producthunt.com/widgets/embed-image/v1/top-post-badge.svg?post_id=319999&theme=light&period=daily"
