@@ -15,6 +15,8 @@ const CheatsheetCollapse = ({ title, data }: CheatsheetCollapseProps) => {
     if (e.type === 'keydown' && e.key !== 'Enter' && e.key !== ' ') {
       return;
     }
+
+    e.preventDefault();
     setOpen(!open);
   };
 
