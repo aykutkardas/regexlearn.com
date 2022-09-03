@@ -1,21 +1,17 @@
-import cx from 'classnames';
-
 import Icon from 'src/components/Icon';
 import IntlLink from 'src/components/IntlLink';
 
-import styles from './Logo.module.css';
-
 const Logo = () => (
   <IntlLink href="/[lang]">
-    <a className={styles.Brand} aria-label="RegexLearn">
+    <a className="tw-flex tw-items-center" aria-label="RegexLearn">
       <Icon
-        className={cx(styles.BrandIcon, 'visible-xs visible-sm')}
+        className="tw-fill-green-400 tw-block sm:tw-hidden"
         icon="unlocked"
         removeInlineStyle
         size={20}
       />
       <img
-        className="visible-md visible-lg"
+        className="tw-hidden sm:tw-block"
         width={109}
         height={27}
         src="/logo.svg"
