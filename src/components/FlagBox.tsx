@@ -5,8 +5,6 @@ import Shortcut from 'src/components/Shortcut';
 import HighlightedText from 'src/components/HighlightedText';
 import shortcuts from 'src/shortcuts';
 
-import styles from './FlagBox.module.css';
-
 const flagList = [
   {
     name: 'global',
@@ -56,26 +54,22 @@ const FlagBox = ({ flags, setFlags }: FlagBoxProps) => {
   useEventListener('keyup', handleFlagKey);
 
   return (
-    <div className={styles.FlagBox}>
+    <div className="tw-flex tw-flex-col sm:tw-flex-row tw-mt-3 tw-items-start tw-gap-5 tw-select-none">
       {flagList.map(({ name, code, command, regex }) => (
-        <div className={styles.FlagBoxItemWrapper} key={name}>
+        <div className="tw-inline-flex tw-items-center" key={name}>
           <Checkbox
             id={`flag-${name}`}
             checked={!!flags?.includes(code)}
             onChange={() => toggleFlag(code)}
           >
-            <div className={styles.FlagBoxItem}>
-              <HighlightedText
-                element="span"
-                text={name}
-                search={regex}
-                attrs={{ className: styles.FlagBoxItemHighlight }}
-              />
-            </div>
+            <HighlightedText
+              element="span"
+              text={name}
+              search={regex}
+              attrs={{ className: 'dark:tw-text-green-500' }}
+            />
           </Checkbox>
-          <div className={styles.FlagBoxShortcutWrapper}>
-            <Shortcut command={command} />
-          </div>
+          <Shortcut command={command} />
         </div>
       ))}
     </div>

@@ -21,6 +21,6 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/forms')],
   prefix: 'tw-',
 };

@@ -2,8 +2,6 @@ import cx from 'classnames';
 
 import useOS from 'src/utils/useOS';
 
-import styles from './Shortcut.module.css';
-
 interface Props {
   command: string;
 }
@@ -19,7 +17,10 @@ const Shortcut = ({ command }: Props) => {
     .toUpperCase();
 
   return (
-    <div role="button" className={cx(styles.Shortcut, 'visible-md visible-lg')}>
+    <div
+      role="button"
+      className="tw-hidden md:tw-inline-flex tw-p-1 tw-m-1 tw-text-[9px] dark:tw-bg-neutral-500/20 tw-rounded-sm dark:tw-text-neutral-400"
+    >
       {readableCommand}
     </div>
   );
