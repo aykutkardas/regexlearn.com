@@ -6,8 +6,6 @@ import useEventListener from '@use-it/event-listener';
 import Shortcut from 'src/components/Shortcut';
 import shortcuts from 'src/shortcuts';
 
-import styles from './Hint.module.css';
-
 interface Props {
   regex: string[];
   flags: string;
@@ -39,24 +37,39 @@ const Hint = ({ regex, flags, hiddenFlags }: Props) => {
   }, [regex, flags]);
 
   return (
-    <div ref={hintRef} className={styles.Hint} data-tip data-for="hint" data-event="click">
+    <div
+      ref={hintRef}
+      className="tw-select-none tw-cursor-pointer tw-text-[10px] tw-absolute tw-right-2"
+      data-tip
+      data-for="hint"
+      data-event="click"
+    >
       <span
         role="button"
-        className={styles.HintQuestion}
+        className="tw-flex tw-flex-col tw-items-end tw-justify-center tw-cursor-pointer hover:tw-text-green-300"
         onClick={toggleShow}
         onKeyPress={toggleShow}
         tabIndex={0}
       >
-        <FormattedMessage id="general.hintQuestion" />
         <Shortcut command={shortcuts.hint} />
+        <FormattedMessage id="general.hintQuestion" />
       </span>
 
-      <ReactTooltip clickable className={styles.HintTooltip} id="hint" place="top" effect="solid">
-        <div className={styles.HintAnswer}>
+      <ReactTooltip
+        clickable
+        className="tw-shadow-md tw-bg-neutral-800"
+        id="hint"
+        place="top"
+        effect="solid"
+      >
+        <div className="tw-text-green-300">
           {regex.map(answer => (
-            <div className={styles.HintAnswerItem} key={answer}>
+            <div
+              className="tw-px-2 tw-py-1 tw-mt-1 tw-border tw-border-neutral-800 tw-text-neutral-500"
+              key={answer}
+            >
               {!hiddenFlags && <span>/</span>}
-              <span className={styles.HintAnswerHighlight}>{answer}</span>
+              <span className="tw-text-green-400">{answer}</span>
               {!hiddenFlags && <span>/{flags}</span>}
             </div>
           ))}
