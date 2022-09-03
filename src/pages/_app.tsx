@@ -1,5 +1,4 @@
 import 'src/styles/globals.css';
-import 'src/styles/plugins/bootstrap.css';
 
 import { AppProps } from 'next/app';
 import { IntlProvider } from 'react-intl';

@@ -10,7 +10,6 @@
   --bg-2: #333333;
   --bg-3: #272727;
   --bg-4: #444444;
-  --bg-5: #636363;
 
   --txt-1: #ffffff;
   --txt-2: #d0d0d0;
@@ -24,7 +23,6 @@
 
   --error: #ff6347;
   --warning: #ffaa0d;
-  --warning-darken: #ffa347;
 }
 
 @layer base {
@@ -47,9 +45,4 @@
 
 ::-webkit-scrollbar-thumb:hover {
   @apply dark:tw-bg-neutral-600;
-}
-
-.container,
-.container-fluid {
-  width: 100%;
 }
