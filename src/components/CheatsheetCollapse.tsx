@@ -26,7 +26,7 @@ const CheatsheetCollapse = ({ title, data }: CheatsheetCollapseProps) => {
         onClick={toggle}
         onKeyDown={toggle}
         className={cx(
-          'tw-h-6 tw-mr-0 sm:tw-mr-8 tw-select-none tw-cursor-pointer tw-text-sm  dark:hover:tw-text-neutral-300 dark:focus:tw-text-neutral-300 tw-outline-green-400',
+          'tw-h-6 tw-select-none tw-cursor-pointer tw-text-sm  dark:hover:tw-text-neutral-300 dark:focus:tw-text-neutral-300 tw-outline-green-400',
           open ? 'dark:tw-text-neutral-300' : 'dark:tw-text-neutral-400',
         )}
         tabIndex={0}
@@ -42,7 +42,7 @@ const CheatsheetCollapse = ({ title, data }: CheatsheetCollapseProps) => {
         {title}
       </div>
       {open && (
-        <div id={`Collapse-${data.title}`} className="tw-h-auto tw-my-3 tw-mr-0 sm:tw-mr-8">
+        <div id={`Collapse-${data.title}`} className="tw-h-auto tw-my-3">
           <CheatsheetDemo data={data} />
         </div>
       )}

@@ -5,7 +5,6 @@ import Header from 'src/components/Header';
 import Footer from 'src/components/Footer';
 import LessonBox from 'src/components/LessonBox';
 import CustomHead from 'src/components/CustomHead';
-// import ProductButton from 'src/components/ProductButton';
 import HighlightedText from 'src/components/HighlightedText';
 
 import { defaultLocale, locales } from 'src/localization';
@@ -21,7 +20,6 @@ const PageLearn = () => {
       </CustomHead>
       <Header />
       <div className="tw-container">
-        {/* <ProductButton /> */}
         <div className="tw-flex tw-items-center">
           <div className="tw-w-full md:tw-w-2/3 tw-flex tw-flex-col tw-items-start">
             <h1 className="tw-text-3xl dark:tw-text-white">

@@ -4,7 +4,6 @@ import { FormattedMessage, useIntl } from 'react-intl';
 import Header from 'src/components/Header';
 import Footer from 'src/components/Footer';
 import CustomHead from 'src/components/CustomHead';
-// import ProductButton from 'src/components/ProductButton';
 import { defaultLocale, locales } from 'src/localization';
 import data from 'src/data/cheatsheet.json';
 import CheatsheetCollapse from 'src/components/CheatsheetCollapse';
@@ -23,11 +22,10 @@ const PageCheatsheet = () => {
       />
       <Header />
       <div className="tw-container tw-h-auto tw-items-center tw-flex-1">
-        {/* <ProductButton /> */}
         <div className="tw-flex tw-flex-wrap tw-mt-12">
           {columns.map((column, index) => (
             <div key={index} className="tw-w-full sm:tw-w-1/2 md:tw-w-1/3">
-              <div className="tw-flex tw-flex-col">
+              <div className="tw-flex tw-flex-col tw-mr-0 md:tw-mr-8">
                 {column.map(row => (
                   <div key={row.title} className="tw-mb-8">
                     <h4 className="tw-mb-6">

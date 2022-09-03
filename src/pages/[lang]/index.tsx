@@ -9,7 +9,6 @@ import Footer from 'src/components/Footer';
 import Section from 'src/components/Section';
 import IntlLink from 'src/components/IntlLink';
 import CustomHead from 'src/components/CustomHead';
-// import ProductButton from 'src/components/ProductButton';
 import HighlightedText from 'src/components/HighlightedText';
 import Button, { ButtonVariants } from 'src/components/Button';
 
@@ -52,7 +51,6 @@ const PageHome = () => {
               alt={formatMessage({ id: 'landing.imageAltText' })}
             />
           </div>
-          {/* <ProductButton /> */}
         </div>
 
         <Section

@@ -1,24 +1,16 @@
 import { useIntl } from 'react-intl';
-import cx from 'classnames';
 
 import CheatsheetCollapse from 'src/components/CheatsheetCollapse';
 
 import data from 'src/data/cheatsheet.json';
 
-import styles from './CheatsheetSidebar.module.css';
-
-const CheatsheetSidebar = () => {
+const PlaygroundSidebar = () => {
   const { formatMessage } = useIntl();
 
   return (
-    <div
-      className={cx(
-        'tw-h-full tw-overflow-y-hidden hover:tw-overflow-y-scroll tw-rounded-md',
-        styles.CheatsheetSidebar,
-      )}
-    >
+    <div className="tw-overflow-y-hidden hover:tw-overflow-y-scroll tw-rounded-md tw-h-[500px]">
       {data.map(row => (
-        <div key={row.title} className="tw-bg-neutral-800 tw-p-3 tw-mb-3 tw-rounded-md">
+        <div key={row.title} className="tw-bg-neutral-800/60 tw-p-3 tw-mb-3 tw-rounded-md">
           <div className="tw-mb-3">{formatMessage({ id: row.title })}</div>
           {row.data.map(item => (
             <CheatsheetCollapse
@@ -33,4 +25,4 @@ const CheatsheetSidebar = () => {
   );
 };
 
-export default CheatsheetSidebar;
+export default PlaygroundSidebar;
