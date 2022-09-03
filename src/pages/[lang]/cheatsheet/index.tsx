@@ -1,20 +1,18 @@
 import { GetStaticPaths, GetStaticProps } from 'next';
-import { FormattedMessage } from 'react-intl';
+import { FormattedMessage, useIntl } from 'react-intl';
 
 import Header from 'src/components/Header';
 import Footer from 'src/components/Footer';
-import Collapse from 'src/components/Collapse';
-import CheatsheetItemTitle from 'src/components/CheatsheetItemTitle';
-import CheatsheetDemo from 'src/components/CheatsheetDemo';
 import CustomHead from 'src/components/CustomHead';
-import ProductButton from 'src/components/ProductButton';
+// import ProductButton from 'src/components/ProductButton';
 import { defaultLocale, locales } from 'src/localization';
 import data from 'src/data/cheatsheet.json';
+import CheatsheetCollapse from 'src/components/CheatsheetCollapse';
 
-import styles from './Cheatsheet.module.css';
+const columns = [data.slice(0, 3), data.slice(3, 4), data.slice(4, 6)];
 
 const PageCheatsheet = () => {
-  const columns = [data.slice(0, 3), data.slice(3, 4), data.slice(4, 6)];
+  const { formatMessage } = useIntl();
 
   return (
     <>
@@ -24,35 +22,22 @@ const PageCheatsheet = () => {
         hrefLang="cheatsheet"
       />
       <Header />
-      <div className="container tw-flex-1">
-        <ProductButton />
-        <div className="row">
-          <div className="col-lg-12">
-            <h1 className={styles.Title}>
-              <FormattedMessage id="cheatsheet.section.title" />
-            </h1>
-            <p className={styles.Description}>
-              <FormattedMessage id="cheatsheet.section.description" />
-            </p>
-          </div>
-        </div>
-        <div className="row">
+      <div className="tw-container tw-h-auto tw-items-center tw-flex-1">
+        {/* <ProductButton /> */}
+        <div className="tw-flex tw-mt-12 tw-gap-4">
           {columns.map((column, index) => (
-            <div key={index} className="col-lg-4 col-md-6">
+            <div key={index} className="tw-w-full sm:tw-w-1/2 md:tw-w-1/3">
               {column.map(row => (
-                <div key={row.title}>
-                  <h4>
+                <div key={row.title} className="tw-mb-8">
+                  <h4 className="tw-mb-6">
                     <FormattedMessage id={row.title} />
                   </h4>
                   {row.data.map(item => (
-                    <Collapse
+                    <CheatsheetCollapse
                       key={item.title}
-                      title={<CheatsheetItemTitle data={item} />}
-                      description={item.description}
-                      triggerElementProps={{ id: item.title.toUpperCase() }}
-                    >
-                      <CheatsheetDemo data={item} />
-                    </Collapse>
+                      data={item}
+                      title={formatMessage({ id: item.title })}
+                    />
                   ))}
                 </div>
               ))}
