@@ -5,8 +5,6 @@ import Icon from 'src/components/Icon';
 
 import packageInfo from 'package.json';
 
-import styles from './ReportStep.module.css';
-
 interface Props {
   title?: string;
   step: number;
@@ -34,17 +32,15 @@ const ReportStep = ({ title: stepTitle, step }: Props) => {
 `);
 
   return (
-    <div className={styles.ReportStep}>
+    <div className="tw-cursor-default tw-absolute -tw-bottom-6 tw-left-4 tw-select-none">
       <a
-        className={styles.ReportStepLink}
+        className="tw-inline-flex tw-items-center tw-text-[10px] tw-text-neutral-400 hover:tw-text-green-300"
         href={`https://github.com/aykutkardas/regexlearn.com/issues/new?title=${title}&body=${body}`}
         target="_blank"
         rel="noreferrer"
       >
-        <Icon icon="bell" size={10} />
-        <span>
-          <FormattedMessage id="general.reportStep" />
-        </span>
+        <Icon icon="bell" size={10} className="tw-mr-2" />
+        <FormattedMessage id="general.reportStep" />
       </a>
     </div>
   );
