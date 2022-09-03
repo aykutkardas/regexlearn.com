@@ -10,8 +10,6 @@ import Button from 'src/components/Button';
 import ProductButton from 'src/components/ProductButton';
 import { InteractiveAreaContext } from 'src/context/InteractiveAreaContext';
 
-import styles from './Step.module.css';
-
 const Step = () => {
   const { lesson, data, lessonData, step } = useContext(InteractiveAreaContext);
 
@@ -34,42 +32,49 @@ const Step = () => {
   const isInteractive = data.interactive !== false;
 
   return (
-    <div className={styles.Step}>
-      {data.image && <img className={styles.StepImage} src={data.image} alt="" width={100} />}
-      {data.originalTitle && <h4 className={styles.StepTitleOriginal}>{data.originalTitle}</h4>}
+    <div className="tw-flex tw-flex-col tw-flex-1 tw-justify-center tw-max-w-full tw-w-[800px] tw-mx-auto tw-text-center">
+      {data.image && <img className="tw-w-[240px] tw-mx-auto" src={data.image} alt="" />}
+      {data.originalTitle && (
+        <h4 className="tw-text-xs sm:tw-text-sm tw-block tw-mb-2 tw-text-neutral-400">
+          {data.originalTitle}
+        </h4>
+      )}
       <HighlightedText
         element="h2"
-        className={styles.StepTitle}
+        className="tw-text-3xl tw-text-neutral-50 tw-font-bold"
         text={formatMessage({ id: data.title })}
-        attrs={{ className: styles.StepTitleWord }}
+        attrs={{
+          className: 'tw-px-2 tw-py-1 tw-bg-neutral-700 tw-rounded-md tw-mx-1',
+        }}
       />
       <HighlightedText
         element="p"
-        className={styles.StepDescription}
+        className="tw-text-neutral-300 tw-mt-4 tw-tracking-wide"
         text={formatMessage({ id: data.description })}
-        attrs={{ className: styles.StepDescriptionWord }}
+        attrs={{
+          className:
+            'tw-p-1 tw-text-xs tw-whitespace-nowrap tw-rounded-md tw-bg-neutral-700 tw-tracking-widest',
+        }}
       />
       {lessonData.length === step + 1 && <ProductButton onlyBuyMeACoffee />}
       <InteractiveArea key={step} isShow={isInteractive} setIsOpenModal={setIsOpenModal} />
-      {lesson.sponsor ? (
-        <span className={styles.LessonSponsor}>
-          Sponsored by{' '}
-          <a href={lesson.sponsorURL} target="_blank" rel="noreferrer">
-            <img src={lesson.sponsorLogo} alt={lesson.sponsor} />
-          </a>
-        </span>
-      ) : (
-        <a
-          target="_blank"
-          className={styles.LessonSponsor}
-          rel="noreferrer"
-          href="https://github.com/aykutkardas/regexlearn.com#sponsoring"
-        >
-          Become a Sponsor
-        </a>
-      )}
+      <a
+        className="tw-text-xs tw-inline-flex tw-items-center tw-justify-end tw-text-neutral-400 hover:tw-text-neutral-300 tw-relative tw-bottom-3 tw-ml-auto"
+        href={lesson.sponsorURL || 'https://github.com/aykutkardas/regexlearn.com#sponsoring'}
+        target="_blank"
+        rel="noreferrer"
+      >
+        {lesson.sponsor ? (
+          <span className="tw-inline-flex tw-items-center">
+            Sponsored by{' '}
+            <img className="tw-mx-2 tw-h-3" src={lesson.sponsorLogo} alt={lesson.sponsor} />
+          </span>
+        ) : (
+          <span>Become a Sponsor</span>
+        )}
+      </a>
       {data.videoURL && modalIsOpen && (
-        <div className={styles.StepVideoModal}>
+        <div className="tw-fixed tw-flex tw-flex-col tw-items-center tw-justify-center tw-z-50 tw-inset-0 tw-bg-neutral-900/70">
           <iframe
             width="90%"
             height="90%"
@@ -78,7 +83,12 @@ const Step = () => {
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
           />
-          <Button onClick={() => setIsOpenModal(false)}>Close</Button>
+          <Button
+            className="tw-bg-green-700 hover:tw-bg-green-800 tw-mt-2"
+            onClick={() => setIsOpenModal(false)}
+          >
+            Close
+          </Button>
         </div>
       )}
       {mounted &&
