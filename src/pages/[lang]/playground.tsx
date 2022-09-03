@@ -5,11 +5,9 @@ import Header from 'src/components/Header';
 import Footer from 'src/components/Footer';
 import Playground from 'src/components/Playground';
 import CheatsheetSidebar from 'src/components/CheatsheetSidebar';
-import ProductButton from 'src/components/ProductButton';
+// import ProductButton from 'src/components/ProductButton';
 import CustomHead from 'src/components/CustomHead';
 import { defaultLocale, locales } from 'src/localization';
-
-import styles from './Playground.module.css';
 
 const PagePlayground = () => (
   <>
@@ -21,15 +19,15 @@ const PagePlayground = () => (
       <link rel="stylesheet" href="/css/animate.css" />
     </CustomHead>
     <Header />
-    <div className={cx('container', styles.PlaygroundContainer)}>
-      <ProductButton />
-      <div className="row">
-        <div className="col-xs-12 col-md-12 col-lg-8">
+    <div className="tw-container tw-w-full tw-flex-1 tw-flex tw-mt-16">
+      {/* <ProductButton /> */}
+      <div className="tw-w-full lg:tw-w-2/3">
+        <div className="tw-mr-0 lg:tw-mr-6">
           <Playground />
         </div>
-        <div className="col-xs-12 col-md-12 col-lg-4">
-          <CheatsheetSidebar />
-        </div>
+      </div>
+      <div className="tw-w-full lg:tw-w-1/3">
+        <CheatsheetSidebar />
       </div>
     </div>
     <Footer />
