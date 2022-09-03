@@ -27,9 +27,9 @@ const LanguageSwitch = () => {
   const availableLangList = langList.filter(({ value }) => lang !== value);
 
   return (
-    <div className="tw-relative tw-cursor-pointer tw-select-none">
+    <div className="relative cursor-pointer select-none">
       <div
-        className="tw-flex tw-items-center tw-justify-center tw-relative tw-text-2xl"
+        className="flex items-center justify-center relative text-2xl"
         role="button"
         tabIndex={0}
         onClick={toggleLanguageList}
@@ -38,8 +38,8 @@ const LanguageSwitch = () => {
       </div>
       <div
         className={cx(
-          'tw-absolute tw-top-10 -tw-left-1/2 tw-z-50 dark:tw-bg-neutral-700 tw-p-2 tw-rounded-md tw-shadow-lg',
-          isOpen ? 'tw-block tw-opacity-100' : 'tw-hidden tw-opacity-0',
+          'absolute top-10 -left-1/2 z-50 dark:bg-neutral-700 p-2 rounded-md shadow-lg',
+          isOpen ? 'block opacity-100' : 'hidden opacity-0',
         )}
       >
         {availableLangList.map(({ label, value }) => (
@@ -47,7 +47,7 @@ const LanguageSwitch = () => {
             href={getIntlPath({ href: pathname, lang: value, query })}
             key={value}
             onClick={closeLanguageList}
-            className="tw-flex tw-items-center tw-justify-center w-1/3 tw-text-2xl hover:tw-scale-125"
+            className="flex items-center justify-center w-1/3 text-2xl hover:scale-125"
           >
             <span>{label}</span>
           </a>

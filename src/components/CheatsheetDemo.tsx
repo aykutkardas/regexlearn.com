@@ -24,8 +24,7 @@ const CheatsheetDemo = ({ data }: Props) => {
           regex,
           value: initialContent,
           attributes: {
-            class:
-              'tw-bg-emerald-400/70 tw-px-1 tw-py-[1px] tw-h-4 tw-mx-1 tw-rounded-md dark:tw-text-neutral-50',
+            class: 'bg-emerald-400/70 px-1 py-[1px] h-4 mx-1 rounded-md dark:text-neutral-50',
           },
         }),
       );
@@ -40,30 +39,30 @@ const CheatsheetDemo = ({ data }: Props) => {
   const readableContent = (content || initialContent).replace(/\\n/gm, '<br />');
 
   return (
-    <div className="tw-font-mono">
+    <div className="font-mono">
       <div
         className={cx(
-          'tw-flex dark:tw-bg-neutral-800 tw-rounded-md tw-p-3 tw-my-1 tw-items-center tw-justify-center tw-relative tw-mb-3 tw-text-xs dark:tw-text-neutral-400',
-          'before:tw-content-[attr(data-title)] before:tw-block before:tw-absolute before:-tw-top-2 before:tw-right-2 before:tw-text-[9px] before:tw-bg-neutral-700 before:tw-px-2 before:tw-rounded-md before:tw-text-neutral-400 tw-tracking-wide ',
+          'flex dark:bg-neutral-800 rounded-md p-3 my-1 items-center justify-center relative mb-3 text-xs dark:text-neutral-400',
+          'before:content-[attr(data-title)] before:block before:absolute before:-top-2 before:right-2 before:text-[9px] before:bg-neutral-700 before:px-2 before:rounded-md before:text-neutral-400 tracking-wide ',
         )}
         data-title={formatMessage({ id: 'general.text' })}
         dangerouslySetInnerHTML={{ __html: readableContent }}
       />
       <div
         className={cx(
-          'tw-flex tw-flex-wrap dark:tw-bg-neutral-800 tw-rounded-md tw-p-3 tw-my-1 tw-items-center tw-justify-center tw-relative tw-text-xs',
-          'before:tw-content-[attr(data-title)] before:tw-block before:tw-absolute before:-tw-top-2 before:tw-right-2 before:tw-text-[9px] before:tw-bg-neutral-700 before:tw-px-2 before:tw-rounded-md before:tw-text-neutral-400',
+          'flex flex-wrap dark:bg-neutral-800 rounded-md p-3 my-1 items-center justify-center relative text-xs',
+          'before:content-[attr(data-title)] before:block before:absolute before:-top-2 before:right-2 before:text-[9px] before:bg-neutral-700 before:px-2 before:rounded-md before:text-neutral-400',
         )}
         data-title={formatMessage({ id: 'general.regex' })}
       >
         <span
           className={cx(
-            "tw-p-1 before:tw-content-['/'] after:tw-content-['/'_attr(data-flags)] before:tw-text-neutral-500 after:tw-text-neutral-500 tw-text-green-400",
+            "p-1 before:content-['/'] after:content-['/'_attr(data-flags)] before:text-neutral-500 after:text-neutral-500 text-green-400",
           )}
         >
           {data.regex}
         </span>
-        <span className="tw-text-green-400">{data.flags}</span>
+        <span className="text-green-400">{data.flags}</span>
       </div>
     </div>
   );

@@ -8,10 +8,10 @@ const PlaygroundSidebar = () => {
   const { formatMessage } = useIntl();
 
   return (
-    <div className="tw-overflow-y-hidden hover:tw-overflow-y-scroll tw-rounded-md tw-h-[500px]">
+    <div className="overflow-y-hidden hover:overflow-y-scroll rounded-md h-[500px]">
       {data.map(row => (
-        <div key={row.title} className="tw-bg-neutral-800/60 tw-p-3 tw-mb-3 tw-rounded-md">
-          <div className="tw-mb-3">{formatMessage({ id: row.title })}</div>
+        <div key={row.title} className="bg-neutral-800/60 p-3 mb-3 rounded-md">
+          <div className="mb-3">{formatMessage({ id: row.title })}</div>
           {row.data.map(item => (
             <CheatsheetCollapse
               key={item.title}

@@ -7,15 +7,15 @@ interface Props {
 }
 
 const Progress = ({ current, total, showProgressText = true }: Props) => (
-  <div className="tw-w-36 tw-flex tw-items-center tw-flex-col tw-justify-start tw-select-none tw-relative">
-    <div className="tw-w-full tw-max-w-[200px] tw-h-[2px] tw-rounded-sm tw-bg-neutral-600">
+  <div className="w-36 flex items-center flex-col justify-start select-none relative">
+    <div className="w-full max-w-[200px] h-[2px] rounded-sm bg-neutral-600">
       <div
-        className="tw-h-[6px] tw-min-w-[6px] tw-rounded-full tw-bg-green-400 tw-relative tw-bottom-[2px] tw-transition-all tw-duration-300 tw-max-w-full"
+        className="h-[6px] min-w-[6px] rounded-full bg-green-400 relative bottom-[2px] transition-all duration-300 max-w-full"
         style={{ width: `${toPercent(current, total)}%` }}
       />
     </div>
     {showProgressText && (
-      <div className="tw-text-sm tw-font-bold tw-w-full tw-mt-2 tw-absolute tw-text-center tw-text-neutral-400">
+      <div className="text-sm font-bold w-full mt-2 absolute text-center text-neutral-400">
         {`${current} / ${total}`}
       </div>
     )}

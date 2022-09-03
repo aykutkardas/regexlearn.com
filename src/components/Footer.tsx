@@ -5,11 +5,11 @@ import Social from 'src/components/Social';
 import packageInfo from 'package.json';
 
 const Footer = () => (
-  <footer className="tw-flex tw-items-center tw-justify-center tw-flex-col tw-h-20 tw-mt-8 tw-mb-4 tw-w-full">
-    <div className="tw-flex tw-items-center">
+  <footer className="flex items-center justify-center flex-col h-20 mt-8 mb-4 w-full">
+    <div className="flex items-center">
       <Social />
     </div>
-    <div className="tw-flex tw-items-center tw-mt-3 tw-text-sm dark:tw-text-neutral-200 dark:hover:tw-text-neutral-400">
+    <div className="flex items-center mt-3 text-sm dark:text-neutral-200 dark:hover:text-neutral-400">
       <a
         target="_blank"
         rel="noreferrer"
@@ -18,7 +18,7 @@ const Footer = () => (
         <FormattedMessage id="general.becomeSponsor" />
       </a>
     </div>
-    <span className="tw-text-xs tw-mt-1 dark:tw-text-neutral-400">v{packageInfo.version}</span>
+    <span className="text-xs mt-1 dark:text-neutral-400">v{packageInfo.version}</span>
   </footer>
 );
 

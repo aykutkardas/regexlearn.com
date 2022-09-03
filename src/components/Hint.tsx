@@ -39,14 +39,14 @@ const Hint = ({ regex, flags, hiddenFlags }: Props) => {
   return (
     <div
       ref={hintRef}
-      className="tw-select-none tw-cursor-pointer tw-text-[10px] tw-absolute tw-right-2"
+      className="select-none cursor-pointer text-[10px] absolute right-2"
       data-tip
       data-for="hint"
       data-event="click"
     >
       <span
         role="button"
-        className="tw-flex tw-flex-col tw-items-end tw-justify-center tw-cursor-pointer hover:tw-text-green-300"
+        className="flex flex-col items-end justify-center cursor-pointer hover:text-green-300"
         onClick={toggleShow}
         onKeyPress={toggleShow}
         tabIndex={0}
@@ -57,19 +57,16 @@ const Hint = ({ regex, flags, hiddenFlags }: Props) => {
 
       <ReactTooltip
         clickable
-        className="tw-shadow-md tw-bg-neutral-800"
+        className="shadow-md bg-neutral-800"
         id="hint"
         place="top"
         effect="solid"
       >
-        <div className="tw-text-green-300">
+        <div className="text-green-300">
           {regex.map(answer => (
-            <div
-              className="tw-px-2 tw-py-1 tw-mt-1 tw-border tw-border-neutral-800 tw-text-neutral-500"
-              key={answer}
-            >
+            <div className="px-2 py-1 mt-1 border border-neutral-800 text-neutral-500" key={answer}>
               {!hiddenFlags && <span>/</span>}
-              <span className="tw-text-green-400">{answer}</span>
+              <span className="text-green-400">{answer}</span>
               {!hiddenFlags && <span>/{flags}</span>}
             </div>
           ))}

@@ -17,15 +17,15 @@ const Page404 = () => {
         <title>{formatMessage({ id: 'page.404.title' })}</title>
       </Head>
       <Header />
-      <div className="tw-container tw-h-full">
-        <div className="tw-flex tw-flex-col tw-flex-1 tw-items-center tw-justify-center tw-w-full tw-h-full">
-          <img className="tw-w-[300px]" src="/404.webp" alt="404" />
+      <div className="container h-full">
+        <div className="flex flex-col flex-1 items-center justify-center w-full h-full">
+          <img className="w-[300px]" src="/404.webp" alt="404" />
           <IntlLink href="/" passHref>
             <Button variant={ButtonVariants.Primary}>
               <FormattedMessage id="notFound.button" />
             </Button>
           </IntlLink>
-          <p className="tw-mt-3">
+          <p className="mt-3">
             <FormattedMessage
               id="notFound.intro"
               values={{

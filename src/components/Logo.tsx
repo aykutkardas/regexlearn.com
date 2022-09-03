@@ -3,20 +3,14 @@ import IntlLink from 'src/components/IntlLink';
 
 const Logo = () => (
   <IntlLink href="/[lang]">
-    <a className="tw-flex tw-items-center" aria-label="RegexLearn">
+    <a className="flex items-center" aria-label="RegexLearn">
       <Icon
-        className="tw-fill-green-400 tw-block sm:tw-hidden"
+        className="fill-green-400 block sm:hidden"
         icon="unlocked"
         removeInlineStyle
         size={20}
       />
-      <img
-        className="tw-hidden sm:tw-block"
-        width={109}
-        height={27}
-        src="/logo.svg"
-        alt="RegexLearn"
-      />
+      <img className="hidden sm:block" width={109} height={27} src="/logo.svg" alt="RegexLearn" />
     </a>
   </IntlLink>
 );

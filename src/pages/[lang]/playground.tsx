@@ -17,13 +17,13 @@ const PagePlayground = () => (
       <link rel="stylesheet" href="/css/animate.css" />
     </CustomHead>
     <Header />
-    <div className="tw-container tw-w-full tw-flex-1 tw-flex tw-mt-16">
-      <div className="tw-w-full lg:tw-w-2/3">
-        <div className="tw-mr-0 lg:tw-mr-6">
+    <div className="container w-full flex-1 flex mt-16">
+      <div className="w-full lg:w-2/3">
+        <div className="mr-0 lg:mr-6">
           <Playground />
         </div>
       </div>
-      <div className="tw-w-full lg:tw-w-1/3">
+      <div className="w-full lg:w-1/3">
         <PlaygroundSidebar />
       </div>
     </div>

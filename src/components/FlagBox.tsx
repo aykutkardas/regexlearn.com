@@ -54,9 +54,9 @@ const FlagBox = ({ flags, setFlags }: FlagBoxProps) => {
   useEventListener('keyup', handleFlagKey);
 
   return (
-    <div className="tw-flex tw-flex-col sm:tw-flex-row tw-mt-3 tw-items-start tw-gap-5 tw-select-none">
+    <div className="flex flex-col sm:flex-row mt-3 items-start gap-5 select-none">
       {flagList.map(({ name, code, command, regex }) => (
-        <div className="tw-inline-flex tw-items-center" key={name}>
+        <div className="inline-flex items-center" key={name}>
           <Checkbox
             id={`flag-${name}`}
             checked={!!flags?.includes(code)}
@@ -66,7 +66,7 @@ const FlagBox = ({ flags, setFlags }: FlagBoxProps) => {
               element="span"
               text={name}
               search={regex}
-              attrs={{ className: 'dark:tw-text-green-500' }}
+              attrs={{ className: 'dark:text-green-500' }}
             />
           </Checkbox>
           <Shortcut command={command} />

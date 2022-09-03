@@ -1,13 +1,13 @@
 import Icon from 'src/components/Icon';
 
 const Social = () => (
-  <div className="tw-flex tw-justify-between tw-gap-3">
+  <div className="flex justify-between gap-3">
     <a
       href="https://github.com/aykutkardas/regexlearn.com"
       target="_blank"
       rel="noreferrer"
       aria-label="GitHub"
-      className="dark:tw-text-neutral-100 dark:hover:tw-text-green-400"
+      className="dark:text-neutral-100 dark:hover:text-green-400"
     >
       <Icon icon="github" size={20} />
     </a>
@@ -16,7 +16,7 @@ const Social = () => (
       target="_blank"
       rel="noreferrer"
       aria-label="Twitter"
-      className="dark:tw-text-neutral-100 dark:hover:tw-text-green-400"
+      className="dark:text-neutral-100 dark:hover:text-green-400"
     >
       <Icon icon="twitter" size={20} />
     </a>

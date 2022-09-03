@@ -32,17 +32,17 @@
 }
 
 ::-webkit-scrollbar {
-  @apply tw-h-1 tw-w-1;
+  @apply h-1 w-1;
 }
 
 ::-webkit-scrollbar-track {
-  @apply dark:tw-bg-neutral-800;
+  @apply dark:bg-neutral-800;
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply tw-rounded dark:tw-bg-neutral-700;
+  @apply rounded dark:bg-neutral-700;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  @apply dark:tw-bg-neutral-600;
+  @apply dark:bg-neutral-600;
 }

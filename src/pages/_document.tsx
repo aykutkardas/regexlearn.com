@@ -5,7 +5,7 @@ const isDevelopment = process.env.NODE_ENV === 'development';
 class MyDocument extends Document {
   render() {
     return (
-      <Html lang="en" className="tw-dark">
+      <Html lang="en" className="dark">
         <Head>
           {!isDevelopment && (
             <>

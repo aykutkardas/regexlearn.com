@@ -19,20 +19,20 @@ const PageLearn = () => {
         <link rel="stylesheet" href="/css/animate.css" />
       </CustomHead>
       <Header />
-      <div className="tw-container">
-        <div className="tw-flex tw-items-center">
-          <div className="tw-w-full md:tw-w-2/3 tw-flex tw-flex-col tw-items-start">
-            <h1 className="tw-text-3xl dark:tw-text-white">
+      <div className="container">
+        <div className="flex items-center">
+          <div className="w-full md:w-2/3 flex flex-col items-start">
+            <h1 className="text-3xl dark:text-white">
               <FormattedMessage id={'section.learn.title'} />
             </h1>
             <HighlightedText
               element="p"
-              className=" dark:tw-text-neutral-300 tw-mt-4 "
+              className=" dark:text-neutral-300 mt-4 "
               text={formatMessage({ id: 'section.learn.content' })}
-              attrs={{ className: 'dark:tw-text-green-400' }}
+              attrs={{ className: 'dark:text-green-400' }}
             />
           </div>
-          <div className="tw-w-1/3 tw-hidden md:tw-flex">
+          <div className="w-1/3 hidden md:flex">
             <img
               src="/Learn.webp"
               loading="lazy"
@@ -41,21 +41,21 @@ const PageLearn = () => {
             />
           </div>
         </div>
-        <div className="tw-flex tw-flex-col sm:tw-flex-row tw-gap-4 tw-mt-4">
+        <div className="flex flex-col sm:flex-row gap-4 mt-4">
           {lessons.map(lesson => (
-            <div key={lesson.key} className="tw-w-full sm:tw-w-1/2 md:tw-w-1/3 tw-mb-5">
+            <div key={lesson.key} className="w-full sm:w-1/2 md:w-1/3 mb-5">
               <LessonBox data={lesson} />
               {lesson.sponsor ? (
-                <span className="tw-text-xs tw-mt-1 tw-flex tw-justify-end tw-items-center dark:tw-text-neutral-300 dark:hover:tw-text-neutral-400 tw-cursor-pointer">
+                <span className="text-xs mt-1 flex justify-end items-center dark:text-neutral-300 dark:hover:text-neutral-400 cursor-pointer">
                   Sponsored by{' '}
                   <a href={lesson.sponsorURL} target="_blank" rel="noreferrer">
-                    <img className="tw-h-3 tw-mx-1" src={lesson.sponsorLogo} alt={lesson.sponsor} />
+                    <img className="h-3 mx-1" src={lesson.sponsorLogo} alt={lesson.sponsor} />
                   </a>
                 </span>
               ) : (
                 <a
                   target="_blank"
-                  className="tw-text-xs tw-mt-1 tw-flex tw-justify-end tw-items-center dark:tw-text-neutral-300 dark:hover:tw-text-neutral-400 tw-cursor-pointer"
+                  className="text-xs mt-1 flex justify-end items-center dark:text-neutral-300 dark:hover:text-neutral-400 cursor-pointer"
                   rel="noreferrer"
                   href="https://github.com/aykutkardas/regexlearn.com#sponsoring"
                 >

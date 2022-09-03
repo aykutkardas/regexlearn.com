@@ -49,29 +49,27 @@ const LessonBox = ({ data, lock }: Props) => {
 
   return (
     <DynamicWrapper>
-      <a className="tw-relative hover:tw-outline-8">
+      <a className="relative hover:outline-8">
         <div
           className={cx(
-            'tw-bg-[url(/images/lesson-card-bg.png)] tw-bg-[length:100%_100%] tw-transition-all tw-duration-300 tw-w-full tw-h-48 tw-bg-center tw-rounded-xl tw-py-3 tw-px-4 tw-flex tw-flex-col tw-shadow-xl tw-flex-1 tw-select-none',
-            !lock
-              ? 'hover:tw-bg-[length:125%_125%]'
-              : 'tw-cursor-not-allowed tw-text-center tw-grayscale',
+            'bg-[url(/images/lesson-card-bg.png)] bg-[length:100%_100%] transition-all duration-300 w-full h-48 bg-center rounded-xl py-3 px-4 flex flex-col shadow-xl flex-1 select-none',
+            !lock ? 'hover:bg-[length:125%_125%]' : 'cursor-not-allowed text-center grayscale',
           )}
         >
-          <h2 className="tw-mb-1 tw-text-lg">
+          <h2 className="mb-1 text-lg">
             <FormattedMessage id={data.title} />
           </h2>
-          <p className="tw-text-sm dark:tw-text-neutral-400">
+          <p className="text-sm dark:text-neutral-400">
             <FormattedMessage id={data.description} />
           </p>
           {!lock && (
-            <div className="tw-flex tw-items-end tw-text-sm tw-flex-1 tw-justify-between">
-              <span className="tw-inline-flex tw-items-center">
-                <Icon icon="files-empty" size={15} className="tw-mr-1" />
+            <div className="flex items-end text-sm flex-1 justify-between">
+              <span className="inline-flex items-center">
+                <Icon icon="files-empty" size={15} className="mr-1" />
                 {stepCount}
               </span>
-              <span className="tw-inline-flex tw-items-center">
-                {startText} <Icon icon="arrow-right" size={14} className="tw-ml-1" />
+              <span className="inline-flex items-center">
+                {startText} <Icon icon="arrow-right" size={14} className="ml-1" />
               </span>
             </div>
           )}

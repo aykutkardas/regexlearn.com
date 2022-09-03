@@ -21,14 +21,14 @@ const PageCheatsheet = () => {
         hrefLang="cheatsheet"
       />
       <Header />
-      <div className="tw-container tw-h-auto tw-items-center tw-flex-1">
-        <div className="tw-flex tw-flex-wrap tw-mt-12">
+      <div className="container h-auto items-center flex-1">
+        <div className="flex flex-wrap mt-12">
           {columns.map((column, index) => (
-            <div key={index} className="tw-w-full sm:tw-w-1/2 md:tw-w-1/3">
-              <div className="tw-flex tw-flex-col tw-mr-0 md:tw-mr-8">
+            <div key={index} className="w-full sm:w-1/2 md:w-1/3">
+              <div className="flex flex-col mr-0 md:mr-8">
                 {column.map(row => (
-                  <div key={row.title} className="tw-mb-8">
-                    <h4 className="tw-mb-6">
+                  <div key={row.title} className="mb-8">
+                    <h4 className="mb-6">
                       <FormattedMessage id={row.title} />
                     </h4>
                     {row.data.map(item => (

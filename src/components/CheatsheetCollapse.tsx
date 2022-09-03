@@ -21,28 +21,28 @@ const CheatsheetCollapse = ({ title, data }: CheatsheetCollapseProps) => {
   };
 
   return (
-    <div className={cx('tw-w-full tw-mb-3', open ? 'tw-border-b tw-border-neutral-900/20' : '')}>
+    <div className={cx('w-full mb-3', open ? 'border-b border-neutral-900/20' : '')}>
       <div
         onClick={toggle}
         onKeyDown={toggle}
         className={cx(
-          'tw-h-6 tw-select-none tw-cursor-pointer tw-text-sm  dark:hover:tw-text-neutral-300 dark:focus:tw-text-neutral-300 tw-outline-green-400',
-          open ? 'dark:tw-text-neutral-300' : 'dark:tw-text-neutral-400',
+          'h-6 select-none cursor-pointer text-sm  dark:hover:text-neutral-300 dark:focus:text-neutral-300 outline-green-400',
+          open ? 'dark:text-neutral-300' : 'dark:text-neutral-400',
         )}
         tabIndex={0}
         role="button"
         aria-expanded={open}
         aria-controls={`Collapse-${data.title}`}
       >
-        <div className="tw-w-14 tw-inline-block">
-          <span className="tw-p-1 tw-text-xs tw-font-mono dark:tw-text-neutral-100 dark:tw-bg-[#333] tw-rounded-md">
+        <div className="w-14 inline-block">
+          <span className="p-1 text-xs font-mono dark:text-neutral-100 dark:bg-[#333] rounded-md">
             {data.code}
           </span>
         </div>
         {title}
       </div>
       {open && (
-        <div id={`Collapse-${data.title}`} className="tw-h-auto tw-my-3">
+        <div id={`Collapse-${data.title}`} className="h-auto my-3">
           <CheatsheetDemo data={data} />
         </div>
       )}

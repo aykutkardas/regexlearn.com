@@ -129,7 +129,7 @@ const Playground = () => {
         data-title={formatMessage({ id: 'general.text' })}
         onClick={() => editor.current.focus()}
       >
-        <div className={cx('tw-overflow-y-scroll', styles.EditorWrapper)}>
+        <div className={cx('overflow-y-scroll', styles.EditorWrapper)}>
           <Editor
             ref={editor}
             editorState={editorState}

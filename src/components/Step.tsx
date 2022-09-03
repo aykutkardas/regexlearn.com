@@ -32,49 +32,45 @@ const Step = () => {
   const isInteractive = data.interactive !== false;
 
   return (
-    <div className="tw-flex tw-flex-col tw-flex-1 tw-justify-center tw-max-w-full tw-w-[800px] tw-mx-auto tw-text-center">
-      {data.image && <img className="tw-w-[240px] tw-mx-auto" src={data.image} alt="" />}
+    <div className="flex flex-col flex-1 justify-center max-w-full w-[800px] mx-auto text-center">
+      {data.image && <img className="w-[240px] mx-auto" src={data.image} alt="" />}
       {data.originalTitle && (
-        <h4 className="tw-text-xs sm:tw-text-sm tw-block tw-mb-2 tw-text-neutral-400">
-          {data.originalTitle}
-        </h4>
+        <h4 className="text-xs sm:text-sm block mb-2 text-neutral-400">{data.originalTitle}</h4>
       )}
       <HighlightedText
         element="h2"
-        className="tw-text-3xl tw-text-neutral-50 tw-font-bold"
+        className="text-3xl text-neutral-50 font-bold"
         text={formatMessage({ id: data.title })}
         attrs={{
-          className: 'tw-px-2 tw-py-1 tw-bg-neutral-700 tw-rounded-md tw-mx-1',
+          className: 'px-2 py-1 bg-neutral-700 rounded-md mx-1',
         }}
       />
       <HighlightedText
         element="p"
-        className="tw-text-neutral-300 tw-mt-4 tw-tracking-wide"
+        className="text-neutral-300 mt-4 tracking-wide"
         text={formatMessage({ id: data.description })}
         attrs={{
-          className:
-            'tw-p-1 tw-text-xs tw-whitespace-nowrap tw-rounded-md tw-bg-neutral-700 tw-tracking-widest',
+          className: 'p-1 text-xs whitespace-nowrap rounded-md bg-neutral-700 tracking-widest',
         }}
       />
       {lessonData.length === step + 1 && <ProductButton onlyBuyMeACoffee />}
       <InteractiveArea key={step} isShow={isInteractive} setIsOpenModal={setIsOpenModal} />
       <a
-        className="tw-text-xs tw-inline-flex tw-items-center tw-justify-end tw-text-neutral-400 hover:tw-text-neutral-300 tw-relative tw-bottom-3 tw-ml-auto"
+        className="text-xs inline-flex items-center justify-end text-neutral-400 hover:text-neutral-300 relative bottom-3 ml-auto"
         href={lesson.sponsorURL || 'https://github.com/aykutkardas/regexlearn.com#sponsoring'}
         target="_blank"
         rel="noreferrer"
       >
         {lesson.sponsor ? (
-          <span className="tw-inline-flex tw-items-center">
-            Sponsored by{' '}
-            <img className="tw-mx-2 tw-h-3" src={lesson.sponsorLogo} alt={lesson.sponsor} />
+          <span className="inline-flex items-center">
+            Sponsored by <img className="mx-2 h-3" src={lesson.sponsorLogo} alt={lesson.sponsor} />
           </span>
         ) : (
           <span>Become a Sponsor</span>
         )}
       </a>
       {data.videoURL && modalIsOpen && (
-        <div className="tw-fixed tw-flex tw-flex-col tw-items-center tw-justify-center tw-z-50 tw-inset-0 tw-bg-neutral-900/70">
+        <div className="fixed flex flex-col items-center justify-center z-50 inset-0 bg-neutral-900/70">
           <iframe
             width="90%"
             height="90%"
@@ -84,7 +80,7 @@ const Step = () => {
             allowFullScreen
           />
           <Button
-            className="tw-bg-green-700 hover:tw-bg-green-800 tw-mt-2"
+            className="bg-green-700 hover:bg-green-800 mt-2"
             onClick={() => setIsOpenModal(false)}
           >
             Close

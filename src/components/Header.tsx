@@ -11,17 +11,17 @@ interface Props {
 }
 
 const Header = ({ isLearnPage }: Props) => (
-  <header className={cx('tw-z-50', isLearnPage ? 'tw-w-full tw-px-3' : 'tw-container')}>
-    <div className="tw-flex tw-items-center tw-justify-center tw-h-20">
-      <div className="tw-flex-1">
+  <header className={cx('z-50', isLearnPage ? 'w-full px-3' : 'container')}>
+    <div className="flex items-center justify-center h-20">
+      <div className="flex-1">
         <Logo />
       </div>
-      {isLearnPage && <div id="ProgressArea" className="tw-flex tw-justify-center tw-flex-1" />}
-      <div className="tw-flex-1">
-        <div className="tw-flex tw-items-center tw-text-sm tw-justify-end tw-gap-2 sm:tw-gap-4">
+      {isLearnPage && <div id="ProgressArea" className="flex justify-center flex-1" />}
+      <div className="flex-1">
+        <div className="flex items-center text-sm justify-end gap-2 sm:gap-4">
           <IntlLink href="/[lang]/learn" passHref>
             {({ isActive }) => (
-              <a className={isActive ? 'dark:tw-text-green-400' : 'dark:tw-text-neutral-200'}>
+              <a className={isActive ? 'dark:text-green-400' : 'dark:text-neutral-200'}>
                 <FormattedMessage id="general.learn" />
               </a>
             )}
@@ -29,9 +29,9 @@ const Header = ({ isLearnPage }: Props) => (
           <IntlLink href="/[lang]/cheatsheet" passHref>
             {({ isActive }) => (
               <a
-                className={cx('dark:tw-text-neutral-200 dark:hover:tw-text-green-400', {
-                  'dark:tw-text-green-400': isActive,
-                  'tw-hidden md:tw-block': isLearnPage,
+                className={cx('dark:text-neutral-200 dark:hover:text-green-400', {
+                  'dark:text-green-400': isActive,
+                  'hidden md:block': isLearnPage,
                 })}
               >
                 <FormattedMessage id="general.cheatsheet" />
@@ -42,11 +42,11 @@ const Header = ({ isLearnPage }: Props) => (
             {({ isActive }) => (
               <a
                 className={cx(
-                  'dark:tw-text-neutral-200 dark:hover:tw-text-green-400',
-                  "tw-relative after:tw-right-0 after:tw-content-['BETA'] after:tw-text-[10px] dark:after:tw-text-green-400 after:tw-absolute after:-tw-top-3",
+                  'dark:text-neutral-200 dark:hover:text-green-400',
+                  "relative after:right-0 after:content-['BETA'] after:text-[10px] dark:after:text-green-400 after:absolute after:-top-3",
                   {
-                    'dark:tw-text-green-400': isActive,
-                    'tw-hidden md:tw-block': isLearnPage,
+                    'dark:text-green-400': isActive,
+                    'hidden md:block': isLearnPage,
                   },
                 )}
                 data-beta="true"
@@ -61,13 +61,13 @@ const Header = ({ isLearnPage }: Props) => (
             target="_blank"
             rel="noreferrer"
             className={cx(
-              'dark:tw-text-neutral-200 dark:hover:tw-text-green-400',
-              'tw-select-none tw-relative tw-items-baseline',
-              isLearnPage ? 'sm:tw-hidden' : 'tw-hidden sm:tw-flex tw-justify-center',
+              'dark:text-neutral-200 dark:hover:text-green-400',
+              'select-none relative items-baseline',
+              isLearnPage ? 'sm:hidden' : 'hidden sm:flex justify-center',
             )}
           >
             <span>GitHub</span>
-            <Icon icon="github" size={16} className="tw-ml-1 tw-w-4 tw-h-4 dark:text-neutral-200" />
+            <Icon icon="github" size={16} className="ml-1 w-4 h-4 dark:text-neutral-200" />
           </a>
           <LanguageSwitch />
         </div>

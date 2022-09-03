@@ -6,7 +6,7 @@ export enum ButtonVariants {
 }
 
 const variants = {
-  [ButtonVariants.Primary]: 'dark:tw-bg-primary dark:hover:tw-bg-green-700 dark:tw-text-white',
+  [ButtonVariants.Primary]: 'dark:bg-primary dark:hover:bg-green-700 dark:text-white',
 };
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
@@ -16,7 +16,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 const Button = ({ children, variant, className, ...props }: ButtonProps) => (
   <button
     className={cx(
-      'tw-px-4 tw-py-3 tw-rounded-md disabled:tw-cursor-not-allowed tw-text-sm',
+      'px-4 py-3 rounded-md disabled:cursor-not-allowed text-sm',
       variants[variant],
       className,
     )}
