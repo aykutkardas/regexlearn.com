@@ -372,11 +372,6 @@ acorn@^7.0.0, acorn@^7.4.0:
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-7.4.1.tgz#feaed255973d2e77555b83dbc08851a6c63520fa"
   integrity sha512-nQyp0o1/mNdbTO1PO6kHkwSrmgZ0MT/jCCpNiwbUjGoRN4dlBhqJtoQuCnEOKzgTVwg0ZWiCoQy6SxMebQVh8A==
 
-add-px-to-style@1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/add-px-to-style/-/add-px-to-style-1.0.0.tgz#d0c135441fa8014a8137904531096f67f28f263a"
-  integrity sha1-0ME1RB+oAUqBN5BFMQlvZ/KPJjo=
-
 ajv@^6.10.0, ajv@^6.12.4:
   version "6.12.6"
   resolved "https://registry.yarnpkg.com/ajv/-/ajv-6.12.6.tgz#baf5a62e802b07d977034586f8c3baf5adf26df4"
@@ -799,15 +794,6 @@ doctrine@^3.0.0:
   integrity sha512-yS+Q5i3hBf7GBkd4KG8a7eBNNWNGLTaEwwYWUijIYM7zrlYDM0BFXHjjPWlWZ1Rg7UaddZeIDmi9jF3HmqiQ2w==
   dependencies:
     esutils "^2.0.2"
-
-dom-css@^2.0.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/dom-css/-/dom-css-2.1.0.tgz#fdbc2d5a015d0a3e1872e11472bbd0e7b9e6a202"
-  integrity sha1-/bwtWgFdCj4YcuEUcrvQ57nmogI=
-  dependencies:
-    add-px-to-style "1.0.0"
-    prefix-style "2.0.1"
-    to-camel-case "1.0.0"
 
 draft-js@^0.11.7:
   version "0.11.7"
@@ -1991,11 +1977,6 @@ path-type@^4.0.0:
   resolved "https://registry.yarnpkg.com/path-type/-/path-type-4.0.0.tgz#84ed01c0a7ba380afe09d90a8c180dcd9d03043b"
   integrity sha512-gDKb8aZMDeD/tZWs9P6+q0J9Mwkdl6xMV8TjnGP3qJVJ06bdMgkbBlLU8IdfOsIsFz2BW1rNVT3XuNEl8zPAvw==
 
-performance-now@^2.1.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/performance-now/-/performance-now-2.1.0.tgz#6309f4e0e5fa913ec1c69307ae364b4b377c9e7b"
-  integrity sha1-Ywn04OX6kT7BxpMHrjZLSzd8nns=
-
 picocolors@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/picocolors/-/picocolors-1.0.0.tgz#cb5bdc74ff3f51892236eaf79d68bc44564ab81c"
@@ -2078,11 +2059,6 @@ postcss@^8.4.14, postcss@^8.4.16:
     picocolors "^1.0.0"
     source-map-js "^1.0.2"
 
-prefix-style@2.0.1:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/prefix-style/-/prefix-style-2.0.1.tgz#66bba9a870cfda308a5dc20e85e9120932c95a06"
-  integrity sha1-ZrupqHDP2jCKXcIOhekSCTLJWgY=
-
 prelude-ls@^1.2.1:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/prelude-ls/-/prelude-ls-1.2.1.tgz#debc6489d7a6e6b0e7611888cec880337d316396"
@@ -2100,15 +2076,6 @@ promise@^7.1.1:
   dependencies:
     asap "~2.0.3"
 
-prop-types@^15.5.10, prop-types@^15.8.1:
-  version "15.8.1"
-  resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.8.1.tgz#67d87bf1a694f48435cf332c24af10214a3140b5"
-  integrity sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg==
-  dependencies:
-    loose-envify "^1.4.0"
-    object-assign "^4.1.1"
-    react-is "^16.13.1"
-
 prop-types@^15.7.2:
   version "15.7.2"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.7.2.tgz#52c41e75b8c87e72b9d9360e0206b99dcbffa6c5"
@@ -2117,6 +2084,15 @@ prop-types@^15.7.2:
     loose-envify "^1.4.0"
     object-assign "^4.1.1"
     react-is "^16.8.1"
+
+prop-types@^15.8.1:
+  version "15.8.1"
+  resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.8.1.tgz#67d87bf1a694f48435cf332c24af10214a3140b5"
+  integrity sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg==
+  dependencies:
+    loose-envify "^1.4.0"
+    object-assign "^4.1.1"
+    react-is "^16.13.1"
 
 punycode@^2.1.0:
   version "2.1.1"
@@ -2133,26 +2109,10 @@ quick-lru@^5.1.1:
   resolved "https://registry.yarnpkg.com/quick-lru/-/quick-lru-5.1.1.tgz#366493e6b3e42a3a6885e2e99d18f80fb7a8c932"
   integrity sha512-WuyALRjWPDGtt/wzJiadO5AXY+8hZ80hVpe6MyivgraREW751X3SbhRvG3eLKOYN+8VEvqLcf3wdnt44Z4S4SA==
 
-raf@^3.1.0:
-  version "3.4.1"
-  resolved "https://registry.yarnpkg.com/raf/-/raf-3.4.1.tgz#0742e99a4a6552f445d73e3ee0328af0ff1ede39"
-  integrity sha512-Sq4CW4QhwOHE8ucn6J34MqtZCeWFP2aQSmrlroYgqAV1PjStIhJXxYuTgUIfkEk7zTLjmIjLmU5q+fbD1NnOJA==
-  dependencies:
-    performance-now "^2.1.0"
-
 react-collapsible@^2.8.4:
   version "2.10.0"
   resolved "https://registry.yarnpkg.com/react-collapsible/-/react-collapsible-2.10.0.tgz#57330f9f4f968a41ece49c651b56cf30f9a06d19"
   integrity sha512-kEVsmlFfXBMTCnU5gwIv19MdmPAhbIPzz5Er37TiJSzRKS0IHrqAKQyQeHEmtoGIQMTcVI46FzE4z3NlVTx77A==
-
-react-custom-scrollbars@^4.2.1:
-  version "4.2.1"
-  resolved "https://registry.yarnpkg.com/react-custom-scrollbars/-/react-custom-scrollbars-4.2.1.tgz#830fd9502927e97e8a78c2086813899b2a8b66db"
-  integrity sha1-gw/ZUCkn6X6KeMIIaBOJmyqLZts=
-  dependencies:
-    dom-css "^2.0.0"
-    prop-types "^15.5.10"
-    raf "^3.1.0"
 
 react-dom@18.2.0:
   version "18.2.0"
@@ -2508,31 +2468,12 @@ text-table@^0.2.0:
   resolved "https://registry.yarnpkg.com/text-table/-/text-table-0.2.0.tgz#7f5ee823ae805207c00af2df4a84ec3fcfa570b4"
   integrity sha1-f17oI66AUgfACvLfSoTsP8+lcLQ=
 
-to-camel-case@1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/to-camel-case/-/to-camel-case-1.0.0.tgz#1a56054b2f9d696298ce66a60897322b6f423e46"
-  integrity sha1-GlYFSy+daWKYzmamCJcyK29CPkY=
-  dependencies:
-    to-space-case "^1.0.0"
-
-to-no-case@^1.0.0:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/to-no-case/-/to-no-case-1.0.2.tgz#c722907164ef6b178132c8e69930212d1b4aa16a"
-  integrity sha1-xyKQcWTvaxeBMsjmmTAhLRtKoWo=
-
 to-regex-range@^5.0.1:
   version "5.0.1"
   resolved "https://registry.yarnpkg.com/to-regex-range/-/to-regex-range-5.0.1.tgz#1648c44aae7c8d988a326018ed72f5b4dd0392e4"
   integrity sha512-65P7iz6X5yEr1cwcgvQxbbIw7Uk3gOy5dIdtZ4rDveLqhrdJP+Li/Hx6tyK0NEb+2GCyneCMJiGqrADCSNk8sQ==
   dependencies:
     is-number "^7.0.0"
-
-to-space-case@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/to-space-case/-/to-space-case-1.0.0.tgz#b052daafb1b2b29dc770cea0163e5ec0ebc9fc17"
-  integrity sha1-sFLar7Gysp3HcM6gFj5ewOvJ/Bc=
-  dependencies:
-    to-no-case "^1.0.0"
 
 tsconfig-paths@^3.14.1:
   version "3.14.1"

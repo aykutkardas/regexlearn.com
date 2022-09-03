@@ -3,13 +3,11 @@ import 'draft-js/dist/Draft.css';
 import { useState, useEffect, useRef, FormEvent } from 'react';
 import { Editor, EditorState, CompositeDecorator, ContentState, ContentBlock } from 'draft-js';
 import { useIntl } from 'react-intl';
-import { Scrollbars } from 'react-custom-scrollbars';
 import cx from 'classnames';
 
 import FlagBox from 'src/components/FlagBox';
 import ReportPlayground from 'src/components/ReportPlayground';
 import setCaretPosition from 'src/utils/setCaretPosition';
-import EscapeWrapperSSR from '../EscapeWrapperSSR';
 
 import styles from './Playground.module.css';
 
@@ -131,23 +129,13 @@ const Playground = () => {
         data-title={formatMessage({ id: 'general.text' })}
         onClick={() => editor.current.focus()}
       >
-        <div className={styles.EditorWrapper}>
-          <EscapeWrapperSSR
-            Component={Scrollbars}
-            autoHide={true}
-            style={{
-              width: '100%',
-              height: '100%',
-              paddingRight: 30,
-            }}
-          >
-            <Editor
-              ref={editor}
-              editorState={editorState}
-              onChange={setEditorState}
-              placeholder="Text here"
-            />
-          </EscapeWrapperSSR>
+        <div className={cx('tw-overflow-y-scroll', styles.EditorWrapper)}>
+          <Editor
+            ref={editor}
+            editorState={editorState}
+            onChange={setEditorState}
+            placeholder="Text here"
+          />
         </div>
         <ReportPlayground />
       </div>

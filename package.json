@@ -25,7 +25,6 @@
     "next": "12.2.2",
     "react": "18.2.0",
     "react-collapsible": "^2.8.4",
-    "react-custom-scrollbars": "^4.2.1",
     "react-dom": "18.2.0",
     "react-icomoon": "^2.5.3",
     "react-intl": "^6.0.5",
