@@ -1,5 +1,5 @@
-import cx from 'classnames';
 import { ButtonHTMLAttributes } from 'react';
+import cx from 'classnames';
 
 export enum ButtonVariants {
   Primary = 'primary',

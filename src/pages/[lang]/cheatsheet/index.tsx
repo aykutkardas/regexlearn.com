@@ -24,23 +24,25 @@ const PageCheatsheet = () => {
       <Header />
       <div className="tw-container tw-h-auto tw-items-center tw-flex-1">
         {/* <ProductButton /> */}
-        <div className="tw-flex tw-mt-12 tw-gap-4">
+        <div className="tw-flex tw-flex-wrap tw-mt-12">
           {columns.map((column, index) => (
             <div key={index} className="tw-w-full sm:tw-w-1/2 md:tw-w-1/3">
-              {column.map(row => (
-                <div key={row.title} className="tw-mb-8">
-                  <h4 className="tw-mb-6">
-                    <FormattedMessage id={row.title} />
-                  </h4>
-                  {row.data.map(item => (
-                    <CheatsheetCollapse
-                      key={item.title}
-                      data={item}
-                      title={formatMessage({ id: item.title })}
-                    />
-                  ))}
-                </div>
-              ))}
+              <div className="tw-flex tw-flex-col">
+                {column.map(row => (
+                  <div key={row.title} className="tw-mb-8">
+                    <h4 className="tw-mb-6">
+                      <FormattedMessage id={row.title} />
+                    </h4>
+                    {row.data.map(item => (
+                      <CheatsheetCollapse
+                        key={item.title}
+                        data={item}
+                        title={formatMessage({ id: item.title })}
+                      />
+                    ))}
+                  </div>
+                ))}
+              </div>
             </div>
           ))}
         </div>
