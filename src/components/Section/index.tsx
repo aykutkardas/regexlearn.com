@@ -30,8 +30,8 @@ const Section = ({
   const isShowButton = Boolean(link && buttonText);
 
   return (
-    <div className="row tw-flex tw-items-center tw-mb-12">
-      <div className="col-xs-12 col-sm-12 col-md-6 tw-order-2">
+    <div className="tw-w-full tw-flex tw-flex-col md:tw-flex-row tw-items-center tw-mb-12">
+      <div className="md:tw-w-1/2 tw-order-1 md:tw-order-2">
         <img
           src={image}
           loading="lazy"
@@ -39,7 +39,12 @@ const Section = ({
           alt={formatMessage({ id: imageAltText })}
         />
       </div>
-      <div className={cx('col-xs-12 col-sm-12 col-md-6', { 'tw-order-2': !reverse })}>
+      <div
+        className={cx(
+          'md:tw-w-1/2 tw-my-auto tw-text-center md:tw-text-left',
+          reverse ? 'tw-order-1' : 'tw-order-2',
+        )}
+      >
         <div>
           <h2 className="tw-text-2xl tw-font-bold tw-mb-4 dark:tw-text-white">
             <FormattedMessage id={title} />

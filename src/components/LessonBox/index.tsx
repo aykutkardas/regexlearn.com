@@ -6,8 +6,6 @@ import cx from 'classnames';
 import IntlLink from 'src/components/IntlLink';
 import Icon from 'src/components/Icon';
 
-import styles from './LessonBox.module.css';
-
 interface Props {
   data: {
     key: string;
@@ -51,24 +49,29 @@ const LessonBox = ({ data, lock }: Props) => {
 
   return (
     <DynamicWrapper>
-      <a className={cx(styles.LessonBox, { [styles.LessonBoxLock]: lock })}>
-        <div className={styles.LessonBoxDetail}>
-          <h2 className={styles.LessonBoxTitle}>
+      <a className="tw-relative hover:tw-outline-8">
+        <div
+          className={cx(
+            'tw-bg-[url(/images/lesson-card-bg.png)] tw-bg-[length:100%_100%] tw-transition-all tw-duration-300 tw-w-full tw-h-48 tw-bg-center tw-rounded-xl tw-py-3 tw-px-4 tw-flex tw-flex-col tw-shadow-xl tw-flex-1 tw-select-none',
+            !lock
+              ? 'hover:tw-bg-[length:125%_125%]'
+              : 'tw-cursor-not-allowed tw-text-center tw-grayscale',
+          )}
+        >
+          <h2 className="tw-mb-1 tw-text-lg">
             <FormattedMessage id={data.title} />
           </h2>
-          <p className={styles.LessonBoxDescription}>
+          <p className="tw-text-sm dark:tw-text-neutral-400">
             <FormattedMessage id={data.description} />
           </p>
           {!lock && (
-            <div className={styles.LessonBoxStats}>
-              <div className={styles.LessonBoxStatsInfo}>
-                <span>
-                  <Icon icon="files-empty" size={15} />
-                  {stepCount}
-                </span>
-              </div>
-              <span className={styles.LessonBoxAction}>
-                {startText} <Icon icon="arrow-right" size={14} />
+            <div className="tw-flex tw-items-end tw-text-sm tw-flex-1 tw-justify-between">
+              <span className="tw-inline-flex tw-items-center">
+                <Icon icon="files-empty" size={15} className="tw-mr-1" />
+                {stepCount}
+              </span>
+              <span className="tw-inline-flex tw-items-center">
+                {startText} <Icon icon="arrow-right" size={14} className="tw-ml-1" />
               </span>
             </div>
           )}

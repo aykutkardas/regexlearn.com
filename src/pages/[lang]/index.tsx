@@ -22,16 +22,16 @@ const PageHome = () => {
     <>
       <CustomHead title="page.landing.title" description="page.landing.description" hrefLang="" />
       <Header />
-      <div className="container">
-        <div className="row tw-flex tw-items-center tw-min-h-screen tw-relative -tw-top-12">
-          <div className="col-xs-12 col-sm-12 col-md-6">
+      <div className="tw-container">
+        <div className="tw-w-full tw-flex tw-items-center tw-min-h-screen tw-relative -tw-top-12">
+          <div className="tw-w-full md:tw-w-1/2">
             <div className="landing">
-              <h1 className="tw-font-bold tw-leading-snug tw-font-sans tw-text-[53px] dark:tw-text-white">
+              <h1 className="tw-text-3xl tw-font-bold sm:tw-leading-snug tw-font-sans lg:tw-text-[53px] dark:tw-text-white">
                 <FormattedMessage id="landing.title" />
               </h1>
               <HighlightedText
                 element="p"
-                className="tw-text-xl tw-leading-8 tw-my-3 dark:tw-text-neutral-50"
+                className="md:tw-text-xl md:tw-leading-8 tw-my-1 md:tw-my-3 dark:tw-text-neutral-50"
                 text={formatMessage({ id: 'landing.description' })}
                 attrs={{ className: 'dark:tw-text-green-400' }}
               />
@@ -44,7 +44,7 @@ const PageHome = () => {
               </IntlLink>
             </div>
           </div>
-          <div className="col-xs-12 col-sm-12 col-md-6 visible-md visible-lg intro">
+          <div className="tw-w-full md:tw-w-1/2 tw-hidden sm:tw-flex intro">
             <img
               loading="lazy"
               src="/Done.webp"
@@ -106,7 +106,7 @@ const PageHome = () => {
             </a>
           )}
         />
-        <div className="row tw-text-center tw-mb-16 tw-my-52">
+        <div className="tw-w-full tw-text-center tw-mb-16 tw-my-52">
           <h3 className="dark:tw-text-neutral-300 tw-text-md">
             <FormattedMessage id="general.ourSponsors" />
           </h3>
@@ -118,8 +118,8 @@ const PageHome = () => {
             ))}
           </div>
         </div>
+        <Footer />
       </div>
-      <Footer />
     </>
   );
 };

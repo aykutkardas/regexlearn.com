@@ -20,21 +20,21 @@ const PageLearn = () => {
         <link rel="stylesheet" href="/css/animate.css" />
       </CustomHead>
       <Header />
-      <div className="container">
+      <div className="tw-container">
         {/* <ProductButton /> */}
-        <div className="row tw-flex tw-items-center">
-          <div className="col-xs-12 col-sm-12 col-md-8 tw-flex tw-flex-col tw-items-start">
-            <h1 className="tw-text-3xl">
+        <div className="tw-flex tw-items-center">
+          <div className="tw-w-full md:tw-w-2/3 tw-flex tw-flex-col tw-items-start">
+            <h1 className="tw-text-3xl dark:tw-text-white">
               <FormattedMessage id={'section.learn.title'} />
             </h1>
             <HighlightedText
               element="p"
-              className="tw-text-[18px] dark:tw-text-neutral-200 tw-mt-4 tw-leading-8"
+              className=" dark:tw-text-neutral-300 tw-mt-4 "
               text={formatMessage({ id: 'section.learn.content' })}
               attrs={{ className: 'dark:tw-text-green-400' }}
             />
           </div>
-          <div className="col-xs-12 col-sm-12 col-md-4 tw-hidden lg:tw-flex">
+          <div className="tw-w-1/3 tw-hidden md:tw-flex">
             <img
               src="/Learn.webp"
               loading="lazy"
@@ -43,12 +43,12 @@ const PageLearn = () => {
             />
           </div>
         </div>
-        <div className="row">
+        <div className="tw-flex tw-flex-col sm:tw-flex-row tw-gap-4 tw-mt-4">
           {lessons.map(lesson => (
-            <div key={lesson.key} className="col-xs-12 col-sm-6 col-md-4 tw-mb-5">
+            <div key={lesson.key} className="tw-w-full sm:tw-w-1/2 md:tw-w-1/3 tw-mb-5">
               <LessonBox data={lesson} />
               {lesson.sponsor ? (
-                <span className="tw-text-xs tw-flex tw-justify-end tw-items-center dark:tw-text-neutral-300 dark:hover:tw-text-neutral-400 tw-cursor-pointer">
+                <span className="tw-text-xs tw-mt-1 tw-flex tw-justify-end tw-items-center dark:tw-text-neutral-300 dark:hover:tw-text-neutral-400 tw-cursor-pointer">
                   Sponsored by{' '}
                   <a href={lesson.sponsorURL} target="_blank" rel="noreferrer">
                     <img className="tw-h-3 tw-mx-1" src={lesson.sponsorLogo} alt={lesson.sponsor} />
@@ -57,7 +57,7 @@ const PageLearn = () => {
               ) : (
                 <a
                   target="_blank"
-                  className="tw-text-xs tw-flex tw-justify-end tw-items-center dark:tw-text-neutral-300 dark:hover:tw-text-neutral-400 tw-cursor-pointer"
+                  className="tw-text-xs tw-mt-1 tw-flex tw-justify-end tw-items-center dark:tw-text-neutral-300 dark:hover:tw-text-neutral-400 tw-cursor-pointer"
                   rel="noreferrer"
                   href="https://github.com/aykutkardas/regexlearn.com#sponsoring"
                 >
