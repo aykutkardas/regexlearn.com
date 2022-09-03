@@ -11,7 +11,7 @@ interface Props {
 }
 
 const Header = ({ isLearnPage }: Props) => (
-  <header className={cx('tw-z-50', isLearnPage ? 'tw-w-full' : 'tw-container')}>
+  <header className={cx('tw-z-50', isLearnPage ? 'tw-w-full tw-px-3' : 'tw-container')}>
     <div className="tw-flex tw-items-center tw-justify-center tw-h-20">
       <div className="tw-flex-1">
         <Logo />
@@ -21,13 +21,7 @@ const Header = ({ isLearnPage }: Props) => (
         <div className="tw-flex tw-items-center tw-text-sm tw-justify-end tw-gap-2 sm:tw-gap-4">
           <IntlLink href="/[lang]/learn" passHref>
             {({ isActive }) => (
-              <a
-                className={cx(
-                  ' dark:hover:tw-text-green-400',
-                  isActive ? 'dark:tw-text-green-400' : 'dark:tw-text-neutral-200',
-                  { 'tw-block': isLearnPage },
-                )}
-              >
+              <a className={isActive ? 'dark:tw-text-green-400' : 'dark:tw-text-neutral-200'}>
                 <FormattedMessage id="general.learn" />
               </a>
             )}
@@ -36,7 +30,7 @@ const Header = ({ isLearnPage }: Props) => (
             {({ isActive }) => (
               <a
                 className={cx('dark:tw-text-neutral-200 dark:hover:tw-text-green-400', {
-                  ['dark:tw-text-green-400']: isActive,
+                  'dark:tw-text-green-400': isActive,
                   'tw-hidden md:tw-block': isLearnPage,
                 })}
               >
@@ -51,7 +45,7 @@ const Header = ({ isLearnPage }: Props) => (
                   'dark:tw-text-neutral-200 dark:hover:tw-text-green-400',
                   "tw-relative after:tw-right-0 after:tw-content-['BETA'] after:tw-text-[10px] dark:after:tw-text-green-400 after:tw-absolute after:-tw-top-3",
                   {
-                    ['dark:tw-text-green-400']: isActive,
+                    'dark:tw-text-green-400': isActive,
                     'tw-hidden md:tw-block': isLearnPage,
                   },
                 )}
@@ -68,8 +62,8 @@ const Header = ({ isLearnPage }: Props) => (
             rel="noreferrer"
             className={cx(
               'dark:tw-text-neutral-200 dark:hover:tw-text-green-400',
-              'tw-select-none tw-relative tw-hidden sm:tw-flex tw-items-baseline tw-justify-center',
-              { 'md:tw-inline-flex': isLearnPage },
+              'tw-select-none tw-relative tw-items-baseline',
+              isLearnPage ? 'sm:tw-hidden' : 'tw-hidden sm:tw-flex tw-justify-center',
             )}
           >
             <span>GitHub</span>
