@@ -31,7 +31,7 @@ const Section = ({
 
   return (
     <div className="w-full flex flex-col md:flex-row items-center mb-12">
-      <div className="md:w-1/2 order-1 md:order-2">
+      <div className={cx('md:w-1/2 order-1 md:order-2', reverse ? 'md:pl-10' : 'md:pr-10')}>
         <img
           src={image}
           loading="lazy"

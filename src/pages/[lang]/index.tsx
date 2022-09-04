@@ -1,5 +1,6 @@
 import { GetStaticPaths, GetStaticProps } from 'next';
 import { FormattedMessage, useIntl } from 'react-intl';
+import cx from 'classnames';
 
 import { defaultLocale, locales } from 'src/localization';
 
@@ -13,6 +14,7 @@ import HighlightedText from 'src/components/HighlightedText';
 import Button, { ButtonVariants } from 'src/components/Button';
 
 import sponsors from 'sponsors.json';
+import ProductHuntBadges from 'src/components/ProductHuntBadges';
 
 const PageHome = () => {
   const { formatMessage } = useIntl();
@@ -23,31 +25,33 @@ const PageHome = () => {
       <Header />
       <div className="container">
         <div className="w-full flex items-center min-h-screen relative -top-12">
-          <div className="w-full md:w-1/2">
-            <div className="landing">
-              <h1 className="text-3xl font-bold sm:leading-snug font-sans lg:text-[53px] dark:text-white">
-                <FormattedMessage id="landing.title" />
-              </h1>
-              <HighlightedText
-                element="p"
-                className="md:text-xl md:leading-8 my-1 md:my-3 dark:text-neutral-50"
-                text={formatMessage({ id: 'landing.description' })}
-                attrs={{ className: 'dark:text-green-400' }}
-              />
-              <IntlLink href="/[lang]/learn" passHref>
-                <a>
-                  <Button variant={ButtonVariants.Primary} className="mt-4">
-                    <FormattedMessage id="general.startLearning" />
-                  </Button>
-                </a>
-              </IntlLink>
+          <div className="w-full md:w-7/10">
+            <h1 className="text-3xl font-bold sm:leading-snug mb-3 font-sans lg:text-[45px] dark:text-white">
+              <FormattedMessage id="landing.title" />
+            </h1>
+            <HighlightedText
+              element="p"
+              className="md:text-lg md:leading-8 my-1 mb-5 dark:text-neutral-200"
+              text={formatMessage({ id: 'landing.description' })}
+              attrs={{ className: 'underline underline-offset-2 decoration-green-300' }}
+            />
+            <div className="">
+              <ProductHuntBadges />
             </div>
+
+            <IntlLink href="/[lang]/learn" passHref>
+              <a>
+                <Button variant={ButtonVariants.Primary} className="mt-4">
+                  <FormattedMessage id="general.startLearning" />
+                </Button>
+              </a>
+            </IntlLink>
           </div>
-          <div className="w-full md:w-1/2 hidden sm:flex intro">
+          <div className="w-full md:w-3/10 hidden sm:flex">
             <img
               loading="lazy"
+              className="w-full"
               src="/Done.webp"
-              width="100%"
               alt={formatMessage({ id: 'landing.imageAltText' })}
             />
           </div>
