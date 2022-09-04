@@ -129,7 +129,9 @@ const Playground = () => {
           spellCheck={false}
         />
       </div>
-      <FlagBox flags={flags} setFlags={onChangeFlags} />
+      <div className="mb-5 pb-3 pl-3">
+        <FlagBox flags={flags} setFlags={onChangeFlags} />
+      </div>
       <div
         className={cx(
           'bg-neutral-800 my-5 p-2 text-xs rounded-md relative shadow-lg tracking-wider text-neutral-300',

@@ -1,7 +1,7 @@
 const Checkbox = ({ children, ...props }) => (
   <label className="inline-flex items-center cursor-pointer" htmlFor={props.id}>
     <input
-      className="appearance-none text-green-300 checked:bg-green-400 focus:outline-0 focus:ring-0 focus:border-0 rounded-sm"
+      className="appearance-none w-3 h-3 text-green-300 checked:bg-green-400 focus:outline-0 focus:ring-0 focus:border-0 rounded-sm"
       type="checkbox"
       {...props}
     />

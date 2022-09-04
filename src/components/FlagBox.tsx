@@ -54,7 +54,7 @@ const FlagBox = ({ flags, setFlags }: FlagBoxProps) => {
   useEventListener('keyup', handleFlagKey);
 
   return (
-    <div className="flex flex-col sm:flex-row mt-3 items-start gap-5 select-none">
+    <div className="flex flex-row items-start gap-5 select-none text-xs">
       {flagList.map(({ name, code, command, regex }) => (
         <div className="inline-flex items-center" key={name}>
           <Checkbox
