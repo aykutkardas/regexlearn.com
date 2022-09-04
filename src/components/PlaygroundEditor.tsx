@@ -9,9 +9,11 @@ import FlagBox from 'src/components/FlagBox';
 import ReportPlayground from 'src/components/ReportPlayground';
 import setCaretPosition from 'src/utils/setCaretPosition';
 
-import styles from './Playground.module.css';
-
-const Highlight = ({ children }) => <span className={styles.Highlight}>{children}</span>;
+const Highlight = ({ children }) => (
+  <span className="shadow-sm h-3 mx-1 my-[1px] px-1 py-[2px] rounded-md text-white bg-green-500">
+    {children}
+  </span>
+);
 
 const initText = `Regular Expressions, abbreviated as Regex or Regexp, are a string of characters created within the framework of Regex syntax rules. You can easily manage your data with Regex, which uses commands like finding, matching, and editing. Regex can be used in programming languages such as Python, SQL, Javascript, R, Google Analytics, Google Data Studio, and throughout the coding process. Learn regex online with examples and tutorials on RegexLearn now.`;
 
@@ -110,13 +112,17 @@ const Playground = () => {
   return (
     <>
       <div
-        className={styles.InteractiveAreaBlockRegex}
+        className={cx(
+          'bg-neutral-800 my-5 p-2 text-xs rounded-md relative shadow-lg tracking-wider text-neutral-300',
+          'block text-left w-full items-start',
+          'before:content-[attr(data-title)] before:absolute before:-top-4 before:left-2 before:bg-neutral-800 before:text-[10px] before:text-neutral-400 before:py-1 before:px-2 before:rounded-md',
+        )}
         data-title={formatMessage({ id: 'general.regex' })}
         onClick={() => regexInput.current.focus()}
       >
         <input
           ref={regexInput}
-          className={cx(styles.PlaygroundBlockRegexInput)}
+          className="border-0 rounded-md tracking-wider w-full text-sm leading-5 text-green-400 bg-neutral-600/40 h-7"
           type="text"
           onChange={e => onChangeRegex(e)}
           value={regex}
@@ -125,11 +131,15 @@ const Playground = () => {
       </div>
       <FlagBox flags={flags} setFlags={onChangeFlags} />
       <div
-        className={styles.InteractiveAreaBlockContent}
+        className={cx(
+          'bg-neutral-800 my-5 p-2 text-xs rounded-md relative shadow-lg tracking-wider text-neutral-300',
+          'block text-left w-full items-start',
+          'before:content-[attr(data-title)] before:absolute before:-top-4 before:left-2 before:bg-neutral-800 before:text-[10px] before:text-neutral-400 before:py-1 before:px-2 before:rounded-md',
+        )}
         data-title={formatMessage({ id: 'general.text' })}
         onClick={() => editor.current.focus()}
       >
-        <div className={cx('overflow-y-scroll', styles.EditorWrapper)}>
+        <div className="overflow-y-scroll bg-neutral-700/40 rounded-lg w-full overflow-x-hidden leading-6 p-2 h-[350px]">
           <Editor
             ref={editor}
             editorState={editorState}

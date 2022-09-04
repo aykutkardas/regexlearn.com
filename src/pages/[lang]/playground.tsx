@@ -2,7 +2,7 @@ import { GetStaticPaths, GetStaticProps } from 'next';
 
 import Header from 'src/components/Header';
 import Footer from 'src/components/Footer';
-import Playground from 'src/components/Playground';
+import PlaygroundEditor from 'src/components/PlaygroundEditor';
 import PlaygroundSidebar from 'src/components/PlaygroundSidebar';
 import CustomHead from 'src/components/CustomHead';
 import { defaultLocale, locales } from 'src/localization';
@@ -20,7 +20,7 @@ const PagePlayground = () => (
     <div className="container w-full flex-1 flex mt-16">
       <div className="w-full lg:w-2/3">
         <div className="mr-0 lg:mr-6">
-          <Playground />
+          <PlaygroundEditor />
         </div>
       </div>
       <div className="w-full lg:w-1/3">
