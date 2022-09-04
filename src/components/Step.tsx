@@ -32,27 +32,30 @@ const Step = () => {
   const isInteractive = data.interactive !== false;
 
   return (
-    <div className="flex flex-col flex-1 justify-center max-w-full w-[800px] mx-auto text-center">
-      {data.image && <img className="w-[240px] mx-auto" src={data.image} alt="" />}
-      {data.originalTitle && (
-        <h4 className="text-xs sm:text-sm block mb-2 text-neutral-400">{data.originalTitle}</h4>
-      )}
-      <HighlightedText
-        element="h2"
-        className="text-3xl text-neutral-50 font-bold"
-        text={formatMessage({ id: data.title })}
-        attrs={{
-          className: 'px-2 py-1 bg-neutral-700 rounded-md mx-1',
-        }}
-      />
-      <HighlightedText
-        element="p"
-        className="text-neutral-300 mt-4 tracking-wide"
-        text={formatMessage({ id: data.description })}
-        attrs={{
-          className: 'p-1 text-xs whitespace-nowrap rounded-md bg-neutral-700 tracking-widest',
-        }}
-      />
+    <div className="flex flex-col flex-1 justify-center max-w-full w-[800px] mx-auto">
+      <div className="flex flex-col text-center mx-auto">
+        {data.image && <img className="w-[240px] mx-auto" src={data.image} alt="" />}
+        {data.originalTitle && (
+          <h4 className="text-xs sm:text-sm block mb-2 text-neutral-400">{data.originalTitle}</h4>
+        )}
+        <HighlightedText
+          element="h2"
+          className="text-3xl text-neutral-50 font-bold"
+          text={formatMessage({ id: data.title })}
+          attrs={{
+            className: 'px-2 py-1 bg-neutral-700 rounded-md mx-1',
+          }}
+        />
+        <HighlightedText
+          element="p"
+          className="text-neutral-300 mt-4 tracking-wide"
+          text={formatMessage({ id: data.description })}
+          attrs={{
+            className: 'p-1 text-xs whitespace-nowrap rounded-md bg-neutral-700 tracking-widest',
+          }}
+        />
+      </div>
+
       {lessonData.length === step + 1 && <ProductButton onlyBuyMeACoffee />}
       <InteractiveArea key={step} isShow={isInteractive} setIsOpenModal={setIsOpenModal} />
       <a

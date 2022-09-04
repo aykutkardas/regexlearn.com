@@ -8,13 +8,13 @@ import confetti from 'canvas-confetti';
 const ReportStep = dynamic(import('src/components/ReportStep'), { ssr: false });
 const Hint = dynamic(import('src/components/Hint'), { ssr: false });
 import FlagBox from 'src/components/FlagBox';
+import Icon from 'src/components/Icon';
 import setCaretPosition from 'src/utils/setCaretPosition';
 import tagWrapper from 'src/utils/tagWrapper';
 import checkRegex from 'src/utils/checkRegex';
 import { InteractiveAreaContext } from 'src/context/InteractiveAreaContext';
 
 import styles from './InteractiveArea.module.css';
-import Icon from '../Icon';
 
 interface Props {
   isShow?: boolean;
@@ -126,7 +126,9 @@ const InteractiveArea = ({ isShow, setIsOpenModal }: Props) => {
         tagWrapper({
           value: data.content,
           regex: grouppedRegex,
-          attributes: { class: styles.InteractiveAreaResultTag },
+          attributes: {
+            class: 'highlight shadow-sm h-3 mx-1 my-[1px] px-1 py-[2px] rounded-md text-white',
+          },
         }),
       );
     }
@@ -187,24 +189,36 @@ const InteractiveArea = ({ isShow, setIsOpenModal }: Props) => {
   return (
     <div
       className={cx({
-        [styles.InteractiveAreaError]: error,
-        [styles.InteractiveAreaMatch]: match,
-        [styles.InteractiveAreaSuccess]: success,
-        [styles.InteractiveAreaLockError]: lockError,
+        '[&_.highlight]:bg-red-500': error,
+        '[&_.highlight]:bg-orange-500': match,
+        '[&_.highlight]:bg-green-500': success,
+        '[&_.regex-block]:outline [&_.regex-block]:outline-1  [&_.regex-block]:outline-red-500':
+          lockError,
       })}
     >
       {data.safariAccept && (
-        <div className={styles.SafariWarning} onClick={skipStep}>
+        <button
+          className="text-yellow-500 hover:text-yellow-400 text-xs px-3 py-1 rounded-md mt-3 underline underline-offset-2"
+          onClick={skipStep}
+        >
           <FormattedMessage id="learn.safari.unsupportWarning" />
-        </div>
+        </button>
       )}
       <div
-        className={styles.InteractiveAreaBlockContent}
+        className={cx(
+          'bg-neutral-700 my-5 p-3 pt-5 text-xs rounded-md relative shadow-lg tracking-wider text-neutral-300',
+          'block text-left w-full items-start',
+          'before:content-[attr(data-title)] before:absolute before:-top-3 before:left-2 before:bg-neutral-800 before:text-[10px] before:text-neutral-400 before:py-1 before:px-2 before:rounded-md',
+        )}
         data-title={formatMessage({ id: 'general.text' })}
         dangerouslySetInnerHTML={{ __html: readableContent }}
       />
       <div
-        className={styles.InteractiveAreaBlockRegex}
+        className={cx(
+          'bg-neutral-700 my-5 p-3 pt-5 text-xs rounded-md relative shadow-lg tracking-wider text-neutral-300 flex items-center justify-center',
+          'regex-block',
+          'before:content-[attr(data-title)] before:absolute before:-top-3 before:left-2 before:bg-neutral-800 before:text-[10px] before:text-neutral-400 before:py-1 before:px-2 before:rounded-md',
+        )}
         data-title={formatMessage({ id: 'general.regex' })}
       >
         <ReportStep title={data.title} step={step} />
@@ -213,17 +227,20 @@ const InteractiveArea = ({ isShow, setIsOpenModal }: Props) => {
           <Hint hiddenFlags={data.hiddenFlags} regex={data.regex} flags={data.flags} />
         )}
         <div
-          className={cx(styles.InteractiveAreaInputWrapper, {
-            [styles.InteractiveAreaHiddenFlags]: data.hiddenFlags,
-          })}
+          className={cx(
+            'bg-neutral-800 px-4 py-1 rounded-md flex items-center justify-center max-w-[90%]',
+            "before:content-['/'] before:text-neutral-500",
+            "after:content-['/'_attr(data-flags)] after:text-neutral-500",
+            { 'after:hidden before:hidden': data.hiddenFlags },
+          )}
           data-flags={flags}
         >
           <input
             ref={regexInput}
             key={step}
             type="text"
-            className={styles.InteractiveAreaInput}
-            style={{ width: regex.length * 15 || 60 }}
+            className="bg-transparent border-0 text-center max-w-[440px] min-w-[60px] px-2 text-sm tracking-widest text-green-400"
+            style={{ width: regex.length * 12 || 60 }}
             readOnly={data.readOnly}
             value={data.visibleRegex || regex}
             onChange={onChange}
@@ -232,8 +249,11 @@ const InteractiveArea = ({ isShow, setIsOpenModal }: Props) => {
           />
         </div>
         {data.videoURL && (
-          <div className={styles.WatchButton} onClick={() => setIsOpenModal(true)}>
-            <Icon icon="play" size={18} />
+          <div
+            className="inline-flex items-center mr-auto text-[10px] opacity-80 hover:opacity-100 text-neutral-100 cursor-pointer font-sans font-normal"
+            onClick={() => setIsOpenModal(true)}
+          >
+            <Icon icon="play" size={16} className="mr-1 text-red-500" />
             <FormattedMessage id="general.watch" />
           </div>
         )}
