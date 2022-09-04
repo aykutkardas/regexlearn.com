@@ -22,14 +22,14 @@ const PageLearn = () => {
       <div className="container">
         <div className="flex items-center">
           <div className="w-full md:w-2/3 flex flex-col items-start">
-            <h1 className="text-3xl dark:text-white">
+            <h1 className="text-3xl text-white">
               <FormattedMessage id={'section.learn.title'} />
             </h1>
             <HighlightedText
               element="p"
-              className=" dark:text-neutral-300 mt-4 "
+              className=" text-neutral-300 mt-4 "
               text={formatMessage({ id: 'section.learn.content' })}
-              attrs={{ className: 'dark:text-green-400' }}
+              attrs={{ className: 'text-green-400' }}
             />
           </div>
           <div className="w-1/3 hidden md:flex">
@@ -46,7 +46,7 @@ const PageLearn = () => {
             <div key={lesson.key} className="w-full sm:w-1/2 md:w-1/3 mb-5">
               <LessonBox data={lesson} />
               {lesson.sponsor ? (
-                <span className="text-xs mt-1 flex justify-end items-center dark:text-neutral-300 dark:hover:text-neutral-400 cursor-pointer">
+                <span className="text-xs mt-1 flex justify-end items-center text-neutral-300 hover:text-neutral-400 cursor-pointer">
                   Sponsored by{' '}
                   <a href={lesson.sponsorURL} target="_blank" rel="noreferrer">
                     <img className="h-3 mx-1" src={lesson.sponsorLogo} alt={lesson.sponsor} />
@@ -55,7 +55,7 @@ const PageLearn = () => {
               ) : (
                 <a
                   target="_blank"
-                  className="text-xs mt-1 flex justify-end items-center dark:text-neutral-300 dark:hover:text-neutral-400 cursor-pointer"
+                  className="text-xs mt-1 flex justify-end items-center text-neutral-300 hover:text-neutral-400 cursor-pointer"
                   rel="noreferrer"
                   href="https://github.com/aykutkardas/regexlearn.com#sponsoring"
                 >

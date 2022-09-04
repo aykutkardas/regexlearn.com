@@ -24,7 +24,7 @@ const CheatsheetDemo = ({ data }: Props) => {
           regex,
           value: initialContent,
           attributes: {
-            class: 'bg-emerald-400/70 px-1 py-[1px] h-4 mx-1 rounded-md dark:text-neutral-50',
+            class: 'bg-emerald-400/70 px-1 py-[1px] h-4 mx-1 rounded-md text-neutral-50',
           },
         }),
       );
@@ -42,7 +42,7 @@ const CheatsheetDemo = ({ data }: Props) => {
     <div className="font-mono">
       <div
         className={cx(
-          'flex dark:bg-neutral-800 rounded-md p-3 my-1 items-center justify-center relative mb-3 text-xs dark:text-neutral-400',
+          'flex bg-neutral-800 rounded-md p-3 my-1 items-center justify-center relative mb-3 text-xs text-neutral-400',
           'before:content-[attr(data-title)] before:block before:absolute before:-top-2 before:right-2 before:text-[9px] before:bg-neutral-700 before:px-2 before:rounded-md before:text-neutral-400 tracking-wide ',
         )}
         data-title={formatMessage({ id: 'general.text' })}
@@ -50,7 +50,7 @@ const CheatsheetDemo = ({ data }: Props) => {
       />
       <div
         className={cx(
-          'flex flex-wrap dark:bg-neutral-800 rounded-md p-3 my-1 items-center justify-center relative text-xs',
+          'flex flex-wrap bg-neutral-800 rounded-md p-3 my-1 items-center justify-center relative text-xs',
           'before:content-[attr(data-title)] before:block before:absolute before:-top-2 before:right-2 before:text-[9px] before:bg-neutral-700 before:px-2 before:rounded-md before:text-neutral-400',
         )}
         data-title={formatMessage({ id: 'general.regex' })}

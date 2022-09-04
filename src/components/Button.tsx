@@ -6,7 +6,7 @@ export enum ButtonVariants {
 }
 
 const variants = {
-  [ButtonVariants.Primary]: 'dark:bg-primary dark:hover:bg-green-700 dark:text-white',
+  [ButtonVariants.Primary]: 'bg-primary hover:bg-green-700 text-white',
 };
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {

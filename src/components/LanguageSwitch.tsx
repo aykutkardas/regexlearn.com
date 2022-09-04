@@ -38,7 +38,7 @@ const LanguageSwitch = () => {
       </div>
       <div
         className={cx(
-          'absolute top-10 -left-1/2 z-50 dark:bg-neutral-700 p-2 rounded-md shadow-lg',
+          'absolute top-10 -left-1/2 z-50 bg-neutral-700 p-2 rounded-md shadow-lg',
           isOpen ? 'block opacity-100' : 'hidden opacity-0',
         )}
       >

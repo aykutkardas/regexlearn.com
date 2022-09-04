@@ -43,14 +43,14 @@ const Section = ({
         className={cx('md:w-1/2 my-auto text-center md:text-left', reverse ? 'order-1' : 'order-2')}
       >
         <div>
-          <h2 className="text-2xl font-bold mb-4 dark:text-white">
+          <h2 className="text-2xl font-bold mb-4 text-white">
             <FormattedMessage id={title} />
           </h2>
           <HighlightedText
             element="p"
-            className="dark:text-neutral-300"
+            className="text-neutral-300"
             text={formatMessage({ id: description })}
-            attrs={{ className: 'dark:text-green-400' }}
+            attrs={{ className: 'text-green-400' }}
           />
           {isShowButton && (
             <IntlLink href={link} passHref>

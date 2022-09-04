@@ -5,7 +5,7 @@ const Checkbox = ({ children, ...props }) => (
       type="checkbox"
       {...props}
     />
-    {children && <span className="ml-1 dark:text-neutral-300">{children}</span>}
+    {children && <span className="ml-1 text-neutral-300">{children}</span>}
   </label>
 );
 

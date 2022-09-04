@@ -66,7 +66,7 @@ const FlagBox = ({ flags, setFlags }: FlagBoxProps) => {
               element="span"
               text={name}
               search={regex}
-              attrs={{ className: 'dark:text-green-500' }}
+              attrs={{ className: 'text-green-500' }}
             />
           </Checkbox>
           <Shortcut command={command} />

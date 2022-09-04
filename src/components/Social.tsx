@@ -7,7 +7,7 @@ const Social = () => (
       target="_blank"
       rel="noreferrer"
       aria-label="GitHub"
-      className="dark:text-neutral-100 dark:hover:text-green-400"
+      className="text-neutral-100 hover:text-green-400"
     >
       <Icon icon="github" size={20} />
     </a>
@@ -16,7 +16,7 @@ const Social = () => (
       target="_blank"
       rel="noreferrer"
       aria-label="Twitter"
-      className="dark:text-neutral-100 dark:hover:text-green-400"
+      className="text-neutral-100 hover:text-green-400"
     >
       <Icon icon="twitter" size={20} />
     </a>

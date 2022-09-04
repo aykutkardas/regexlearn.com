@@ -59,7 +59,7 @@ const LessonBox = ({ data, lock }: Props) => {
           <h2 className="mb-1 text-lg">
             <FormattedMessage id={data.title} />
           </h2>
-          <p className="text-sm dark:text-neutral-400">
+          <p className="text-sm text-neutral-400">
             <FormattedMessage id={data.description} />
           </p>
           {!lock && (

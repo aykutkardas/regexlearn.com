@@ -26,8 +26,8 @@ const CheatsheetCollapse = ({ title, data }: CheatsheetCollapseProps) => {
         onClick={toggle}
         onKeyDown={toggle}
         className={cx(
-          'h-6 select-none cursor-pointer text-sm  dark:hover:text-neutral-300 dark:focus:text-neutral-300 outline-green-400',
-          open ? 'dark:text-neutral-300' : 'dark:text-neutral-400',
+          'h-6 select-none cursor-pointer text-sm  hover:text-neutral-300 focus:text-neutral-300 outline-green-400',
+          open ? 'text-neutral-300' : 'text-neutral-400',
         )}
         tabIndex={0}
         role="button"
@@ -35,7 +35,7 @@ const CheatsheetCollapse = ({ title, data }: CheatsheetCollapseProps) => {
         aria-controls={`Collapse-${data.title}`}
       >
         <div className="w-14 inline-block">
-          <span className="p-1 text-xs font-mono dark:text-neutral-100 dark:bg-[#333] rounded-md">
+          <span className="p-1 text-xs font-mono text-neutral-100 bg-[#333] rounded-md">
             {data.code}
           </span>
         </div>

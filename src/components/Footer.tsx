@@ -9,7 +9,7 @@ const Footer = () => (
     <div className="flex items-center">
       <Social />
     </div>
-    <div className="flex items-center mt-3 text-sm dark:text-neutral-200 dark:hover:text-neutral-400">
+    <div className="flex items-center mt-3 text-sm text-neutral-200 hover:text-neutral-400">
       <a
         target="_blank"
         rel="noreferrer"
@@ -18,7 +18,7 @@ const Footer = () => (
         <FormattedMessage id="general.becomeSponsor" />
       </a>
     </div>
-    <span className="text-xs mt-1 dark:text-neutral-400">v{packageInfo.version}</span>
+    <span className="text-xs mt-1 text-neutral-400">v{packageInfo.version}</span>
   </footer>
 );
 

@@ -21,7 +21,7 @@ const Header = ({ isLearnPage }: Props) => (
         <div className="flex items-center text-sm justify-end gap-2 sm:gap-4">
           <IntlLink href="/[lang]/learn" passHref>
             {({ isActive }) => (
-              <a className={isActive ? 'dark:text-green-400' : 'dark:text-neutral-200'}>
+              <a className={isActive ? 'text-green-400' : 'text-neutral-200'}>
                 <FormattedMessage id="general.learn" />
               </a>
             )}
@@ -29,8 +29,8 @@ const Header = ({ isLearnPage }: Props) => (
           <IntlLink href="/[lang]/cheatsheet" passHref>
             {({ isActive }) => (
               <a
-                className={cx('dark:text-neutral-200 dark:hover:text-green-400', {
-                  'dark:text-green-400': isActive,
+                className={cx('text-neutral-200 hover:text-green-400', {
+                  'text-green-400': isActive,
                   'hidden md:block': isLearnPage,
                 })}
               >
@@ -42,10 +42,10 @@ const Header = ({ isLearnPage }: Props) => (
             {({ isActive }) => (
               <a
                 className={cx(
-                  'dark:text-neutral-200 dark:hover:text-green-400',
-                  "relative after:right-0 after:content-['BETA'] after:text-[10px] dark:after:text-green-400 after:absolute after:-top-3",
+                  'text-neutral-200 hover:text-green-400',
+                  "relative after:right-0 after:content-['BETA'] after:text-[10px] after:text-green-400 after:absolute after:-top-3",
                   {
-                    'dark:text-green-400': isActive,
+                    'text-green-400': isActive,
                     'hidden md:block': isLearnPage,
                   },
                 )}
@@ -61,13 +61,13 @@ const Header = ({ isLearnPage }: Props) => (
             target="_blank"
             rel="noreferrer"
             className={cx(
-              'dark:text-neutral-200 dark:hover:text-green-400',
+              'text-neutral-200 hover:text-green-400',
               'select-none relative items-baseline hidden justify-center',
               isLearnPage ? 'lg:flex' : 'sm:flex',
             )}
           >
             <span>GitHub</span>
-            <Icon icon="github" size={16} className="ml-1 w-4 h-4 dark:text-neutral-200" />
+            <Icon icon="github" size={16} className="ml-1 w-4 h-4 text-neutral-200" />
           </a>
           <LanguageSwitch />
         </div>

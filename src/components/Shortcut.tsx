@@ -19,7 +19,7 @@ const Shortcut = ({ command }: Props) => {
   return (
     <div
       role="button"
-      className="hidden md:inline-flex p-1 m-1 text-[9px] dark:bg-neutral-500/20 rounded-sm dark:text-neutral-400"
+      className="hidden md:inline-flex p-1 m-1 text-[9px] bg-neutral-500/20 rounded-sm text-neutral-400"
     >
       {readableCommand}
     </div>

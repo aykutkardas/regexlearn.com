@@ -36,13 +36,13 @@
 }
 
 ::-webkit-scrollbar-track {
-  @apply dark:bg-neutral-800;
+  @apply bg-neutral-800;
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply rounded dark:bg-neutral-700;
+  @apply rounded bg-neutral-700;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  @apply dark:bg-neutral-600;
+  @apply bg-neutral-600;
 }
