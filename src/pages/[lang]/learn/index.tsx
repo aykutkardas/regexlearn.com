@@ -19,8 +19,8 @@ const PageLearn = () => {
         <link rel="stylesheet" href="/css/animate.css" />
       </CustomHead>
       <Header />
-      <div className="container">
-        <div className="flex items-center">
+      <div className="container h-full">
+        <div className="flex items-center mt-6">
           <div className="w-full md:w-2/3 flex flex-col items-start">
             <h1 className="text-3xl text-white">
               <FormattedMessage id={'section.learn.title'} />
