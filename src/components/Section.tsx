@@ -35,7 +35,7 @@ const Section = ({
         <img
           src={image}
           loading="lazy"
-          className="w-full"
+          className="w-full drop-shadow-2xl"
           alt={formatMessage({ id: imageAltText })}
         />
       </div>

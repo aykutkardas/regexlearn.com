@@ -22,7 +22,7 @@ const PageCheatsheet = () => {
       />
       <Header />
       <div className="container h-auto items-center flex-1">
-        <div className="flex flex-wrap mt-12">
+        <div className="flex flex-wrap mt-28">
           {columns.map((column, index) => (
             <div key={index} className="w-full sm:w-1/2 md:w-1/3">
               <div className="flex flex-col mr-0 md:mr-8">

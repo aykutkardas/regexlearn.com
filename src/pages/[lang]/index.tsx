@@ -45,7 +45,7 @@ const PageHome = () => {
           <div className="w-full md:w-3/10 hidden sm:flex">
             <img
               loading="lazy"
-              className="w-full"
+              className="w-full drop-shadow-xl"
               src="/Done.webp"
               alt={formatMessage({ id: 'landing.imageAltText' })}
             />

@@ -36,7 +36,7 @@ const PageLearn = () => {
             <img
               src="/Learn.webp"
               loading="lazy"
-              className="w-full"
+              className="w-full drop-shadow-xl"
               alt={formatMessage({ id: 'section.learn.imageAltText' })}
             />
           </div>
