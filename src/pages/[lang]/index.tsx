@@ -26,19 +26,14 @@ const PageHome = () => {
       <div className="container">
         <div className="w-full flex items-center min-h-screen relative -top-12">
           <div className="w-full md:w-7/10">
-            <h1 className="text-3xl font-bold sm:leading-snug mb-3 font-sans lg:text-[45px] dark:text-white">
+            <h1 className="text-3xl font-bold sm:leading-snug mb-3 font-sans lg:text-[45px] text-white">
               <FormattedMessage id="landing.title" />
             </h1>
             <HighlightedText
               element="p"
-              className="md:text-lg md:leading-8 my-1 mb-5 dark:text-neutral-200"
+              className="md:text-lg md:leading-8 my-1 text-neutral-200/80"
               text={formatMessage({ id: 'landing.description' })}
-              attrs={{ className: 'underline underline-offset-2 decoration-green-300' }}
             />
-            <div className="">
-              <ProductHuntBadges />
-            </div>
-
             <IntlLink href="/[lang]/learn" passHref>
               <a>
                 <Button variant={ButtonVariants.Primary} className="mt-4">
@@ -55,6 +50,10 @@ const PageHome = () => {
               alt={formatMessage({ id: 'landing.imageAltText' })}
             />
           </div>
+        </div>
+
+        <div className="max-w-lg mx-auto bg-gradient-to-r from-green-50/0 via-green-500/30 to-green-50/0 flex items-center justify-center h-[60px] relative -top-[110px]">
+          <ProductHuntBadges />
         </div>
 
         <Section
@@ -101,7 +100,7 @@ const PageHome = () => {
               target="_blank"
               rel="noreferrer"
             >
-              <Button className="inline-flex items-center justify-center dark:bg-neutral-600 dark:hover:bg-neutral-700 mt-4">
+              <Button className="inline-flex items-center justify-center bg-neutral-600 hover:bg-neutral-700 mt-4">
                 <Icon icon="github" size={16} color="white" className="mr-2" />
                 <span>GitHub</span>
               </Button>
@@ -109,12 +108,18 @@ const PageHome = () => {
           )}
         />
         <div className="w-full text-center mb-16 my-52">
-          <h3 className="dark:text-neutral-300 text-md">
+          <h3 className="text-neutral-300 text-md">
             <FormattedMessage id="general.ourSponsors" />
           </h3>
-          <div className="flex gap-3 mt-2 items-center justify-center">
+          <div className="flex gap-3 mt-2 items-center justify-center max-w-lg mx-auto bg-gradient-to-r from-green-50/0 via-neutral-500/30 to-green-50/0 h-16">
             {sponsors.map(sponsor => (
-              <a key={sponsor.name} href={sponsor.url} target="_blank" rel="noreferrer">
+              <a
+                key={sponsor.name}
+                href={sponsor.url}
+                target="_blank"
+                rel="noreferrer"
+                className="opacity-70 hover:opacity-100"
+              >
                 <img src={sponsor.logo} alt={sponsor.name} title={sponsor.name} />
               </a>
             ))}
