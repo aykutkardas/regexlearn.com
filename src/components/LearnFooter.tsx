@@ -37,7 +37,7 @@ const LearnFooter = () => {
       <div className="w-1/3 h-full flex items-end">
         {step < lessonData.length - 1 && (
           <div
-            className="ml-auto flex flex-col items-start text-right hover:opacity-60"
+            className="ml-auto flex flex-col items-end text-right hover:opacity-60"
             role="button"
             tabIndex={0}
             onClick={nextStep}

@@ -62,8 +62,8 @@ const Header = ({ isLearnPage }: Props) => (
             rel="noreferrer"
             className={cx(
               'dark:text-neutral-200 dark:hover:text-green-400',
-              'select-none relative items-baseline',
-              isLearnPage ? 'sm:hidden' : 'hidden sm:flex justify-center',
+              'select-none relative items-baseline hidden justify-center',
+              isLearnPage ? 'lg:flex' : 'sm:flex',
             )}
           >
             <span>GitHub</span>

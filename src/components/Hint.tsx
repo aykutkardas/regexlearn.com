@@ -39,7 +39,7 @@ const Hint = ({ regex, flags, hiddenFlags }: Props) => {
   return (
     <div
       ref={hintRef}
-      className="select-none cursor-pointer text-[10px] absolute right-2"
+      className="select-none cursor-pointer text-[10px] absolute right-2 bottom-1"
       data-tip
       data-for="hint"
       data-event="click"
