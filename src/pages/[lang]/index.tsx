@@ -63,9 +63,9 @@ const PageHome = () => {
           imageAltText="section.learn.imageAltText"
           link="/[lang]/learn"
           buttonText="general.startLearning"
+          reverse
         />
         <Section
-          reverse
           title="section.cheatsheet.title"
           description="section.cheatsheet.content"
           image="/Cheatsheet.webp"
@@ -80,9 +80,9 @@ const PageHome = () => {
           link="/[lang]/playground"
           buttonText="general.start"
           imageAltText="section.playground.imageAltText"
+          reverse
         />
         <Section
-          reverse
           title="section.practice.title"
           description="section.practice.content"
           image="/Practise.webp"
@@ -94,6 +94,7 @@ const PageHome = () => {
           image="/Open Source.webp"
           imageAltText="section.opensource.imageAltText"
           link="https://github.com/aykutkardas/regexlearn.com"
+          reverse
           customButton={({ className }) => (
             <a
               href="https://github.com/aykutkardas/regexlearn.com"
