@@ -20,7 +20,7 @@ const PagePlayground = () => (
       <Header />
       <div className="flex flex-1 h-full flex-col items-center justify-center lg:flex-row ">
         <div className="w-full lg:w-2/3">
-          <div className="mr-0 lg:mr-6">
+          <div className="mr-0 lg:mr-6 mt-[42px]">
             <PlaygroundEditor />
           </div>
         </div>
