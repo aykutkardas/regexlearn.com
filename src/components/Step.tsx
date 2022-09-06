@@ -32,7 +32,7 @@ const Step = () => {
   const isInteractive = data.interactive !== false;
 
   return (
-    <div className="flex flex-col flex-1 justify-center max-w-full w-[800px] mx-auto px-3">
+    <div className="flex flex-col flex-1 justify-center max-w-full w-[800px] mx-auto">
       <div className="flex flex-col text-center mx-auto">
         {data.image && <img className="w-[240px] mx-auto" src={data.image} alt="" />}
         {data.originalTitle && (

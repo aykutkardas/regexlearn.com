@@ -25,10 +25,12 @@ const PageLesson = ({ lesson }: PageLessonProps) => {
       >
         <link rel="stylesheet" href="/css/animate.css" />
       </CustomHead>
-      <Header isLearnPage />
       <InteractiveAreaProvider key={lessonData} lesson={lesson} lessonData={lessonData}>
-        <Step />
-        <LearnFooter />
+        <div className="px-3 flex flex-col flex-1 justify-between">
+          <Header isLearnPage />
+          <Step />
+          <LearnFooter />
+        </div>
       </InteractiveAreaProvider>
     </>
   );

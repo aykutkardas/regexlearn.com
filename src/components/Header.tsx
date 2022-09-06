@@ -11,7 +11,7 @@ interface Props {
 }
 
 const Header = ({ isLearnPage }: Props) => (
-  <header className={cx('z-50', isLearnPage ? 'w-full px-3' : 'container')}>
+  <header className="relative z-40">
     <div className="flex items-center justify-center h-20">
       <div className="flex-1">
         <Logo />
@@ -21,7 +21,11 @@ const Header = ({ isLearnPage }: Props) => (
         <div className="flex items-center text-sm justify-end gap-2 sm:gap-4">
           <IntlLink href="/[lang]/learn" passHref>
             {({ isActive }) => (
-              <a className={isActive ? 'text-regreen-400' : 'text-neutral-200'}>
+              <a
+                className={
+                  isActive ? 'text-regreen-400' : 'text-neutral-200 hover:text-regreen-400'
+                }
+              >
                 <FormattedMessage id="general.learn" />
               </a>
             )}
@@ -29,10 +33,12 @@ const Header = ({ isLearnPage }: Props) => (
           <IntlLink href="/[lang]/cheatsheet" passHref>
             {({ isActive }) => (
               <a
-                className={cx('text-neutral-200 hover:text-regreen-400', {
-                  'text-regreen-400': isActive,
-                  'hidden md:block': isLearnPage,
-                })}
+                className={cx(
+                  isActive ? 'text-regreen-400' : 'text-neutral-200 hover:text-regreen-400',
+                  {
+                    'hidden md:block': isLearnPage,
+                  },
+                )}
               >
                 <FormattedMessage id="general.cheatsheet" />
               </a>
@@ -42,10 +48,10 @@ const Header = ({ isLearnPage }: Props) => (
             {({ isActive }) => (
               <a
                 className={cx(
-                  'text-neutral-200 hover:text-regreen-400',
+                  isActive ? 'text-regreen-400' : 'text-neutral-200 hover:text-regreen-400',
+
                   "relative after:right-0 after:content-['BETA'] after:text-[10px] after:text-regreen-400 after:absolute after:-top-3",
                   {
-                    'text-regreen-400': isActive,
                     'hidden md:block': isLearnPage,
                   },
                 )}

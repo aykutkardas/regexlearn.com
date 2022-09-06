@@ -18,55 +18,57 @@ const PageLearn = () => {
       <CustomHead title="page.learn.title" description="page.learn.description" hrefLang="learn">
         <link rel="stylesheet" href="/css/animate.css" />
       </CustomHead>
-      <Header />
-      <div className="container h-full">
-        <div className="flex items-center mt-6">
-          <div className="w-full md:w-2/3 flex flex-col items-start">
-            <h1 className="text-3xl text-white">
-              <FormattedMessage id={'section.learn.title'} />
-            </h1>
-            <HighlightedText
-              element="p"
-              className=" text-neutral-300 mt-4 "
-              text={formatMessage({ id: 'section.learn.content' })}
-              attrs={{ className: 'text-regreen-400' }}
-            />
-          </div>
-          <div className="w-1/3 hidden md:flex">
-            <img
-              src="/Learn.webp"
-              loading="lazy"
-              className="w-full drop-shadow-xl"
-              alt={formatMessage({ id: 'section.learn.imageAltText' })}
-            />
-          </div>
-        </div>
-        <div className="flex flex-col sm:flex-row gap-4 mt-4">
-          {lessons.map(lesson => (
-            <div key={lesson.key} className="w-full sm:w-1/2 md:w-1/3 mb-5">
-              <LessonBox data={lesson} />
-              {lesson.sponsor ? (
-                <span className="text-xs mt-1 flex justify-end items-center text-neutral-300 hover:text-neutral-400 cursor-pointer">
-                  Sponsored by{' '}
-                  <a href={lesson.sponsorURL} target="_blank" rel="noreferrer">
-                    <img className="h-3 mx-1" src={lesson.sponsorLogo} alt={lesson.sponsor} />
-                  </a>
-                </span>
-              ) : (
-                <a
-                  target="_blank"
-                  className="text-xs mt-1 flex justify-end items-center text-neutral-300 hover:text-neutral-400 cursor-pointer"
-                  rel="noreferrer"
-                  href="https://github.com/aykutkardas/regexlearn.com#sponsoring"
-                >
-                  Become a Sponsor
-                </a>
-              )}
+      <div className="container flex flex-1 flex-col items-between h-full">
+        <Header />
+        <div className="flex flex-col justify-center flex-1">
+          <div className="flex items-center mt-6">
+            <div className="w-full md:w-2/3 flex flex-col items-start">
+              <h1 className="text-3xl text-white">
+                <FormattedMessage id={'section.learn.title'} />
+              </h1>
+              <HighlightedText
+                element="p"
+                className=" text-neutral-300 mt-4 "
+                text={formatMessage({ id: 'section.learn.content' })}
+                attrs={{ className: 'text-regreen-400' }}
+              />
             </div>
-          ))}
+            <div className="w-1/3 hidden md:flex">
+              <img
+                src="/Learn.webp"
+                loading="lazy"
+                className="w-full pl-8 drop-shadow-xl"
+                alt={formatMessage({ id: 'section.learn.imageAltText' })}
+              />
+            </div>
+          </div>
+          <div className="flex flex-col sm:flex-row gap-4 mt-4">
+            {lessons.map(lesson => (
+              <div key={lesson.key} className="w-full sm:w-1/2 md:w-1/3 mb-5">
+                <LessonBox data={lesson} />
+                {lesson.sponsor ? (
+                  <span className="text-xs mt-1 flex justify-end items-center text-neutral-300 hover:text-neutral-400 cursor-pointer">
+                    Sponsored by{' '}
+                    <a href={lesson.sponsorURL} target="_blank" rel="noreferrer">
+                      <img className="h-3 mx-1" src={lesson.sponsorLogo} alt={lesson.sponsor} />
+                    </a>
+                  </span>
+                ) : (
+                  <a
+                    target="_blank"
+                    className="text-xs mt-1 flex justify-end items-center text-neutral-300 hover:text-neutral-400 cursor-pointer"
+                    rel="noreferrer"
+                    href="https://github.com/aykutkardas/regexlearn.com#sponsoring"
+                  >
+                    Become a Sponsor
+                  </a>
+                )}
+              </div>
+            ))}
+          </div>
         </div>
+        <Footer />
       </div>
-      <Footer />
     </>
   );
 };

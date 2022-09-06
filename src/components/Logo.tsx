@@ -3,7 +3,7 @@ import IntlLink from 'src/components/IntlLink';
 
 const Logo = () => (
   <IntlLink href="/[lang]">
-    <a className="flex items-center" aria-label="RegexLearn">
+    <a className="inline-flex items-center" aria-label="RegexLearn">
       <Icon
         className="fill-regreen-400 block sm:hidden"
         icon="unlocked"

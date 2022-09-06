@@ -14,7 +14,7 @@ const LearnFooter = () => {
     useContext(InteractiveAreaContext);
 
   return (
-    <div className="full px-3 mb-5 flex select-none">
+    <div className="my-5 flex select-none">
       <div className="w-1/3 h-full flex items-end">
         {step > 0 && (
           <div

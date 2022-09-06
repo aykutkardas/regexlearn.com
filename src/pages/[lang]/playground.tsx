@@ -16,18 +16,20 @@ const PagePlayground = () => (
     >
       <link rel="stylesheet" href="/css/animate.css" />
     </CustomHead>
-    <Header />
-    <div className="container w-full flex-1 flex flex-col lg:flex-row mt-16">
-      <div className="w-full lg:w-2/3">
-        <div className="mr-0 lg:mr-6">
-          <PlaygroundEditor />
+    <div className="container flex flex-col items-between flex-1">
+      <Header />
+      <div className="flex flex-1 h-full flex-col items-center justify-center lg:flex-row ">
+        <div className="w-full lg:w-2/3">
+          <div className="mr-0 lg:mr-6">
+            <PlaygroundEditor />
+          </div>
+        </div>
+        <div className="w-full lg:w-1/3 mt-5 lg:mt-0">
+          <PlaygroundSidebar />
         </div>
       </div>
-      <div className="w-full lg:w-1/3 mt-5 lg:mt-0">
-        <PlaygroundSidebar />
-      </div>
+      <Footer />
     </div>
-    <Footer />
   </>
 );
 

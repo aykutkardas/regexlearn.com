@@ -22,8 +22,8 @@ const PageHome = () => {
   return (
     <>
       <CustomHead title="page.landing.title" description="page.landing.description" hrefLang="" />
-      <Header />
       <div className="container">
+        <Header />
         <div className="w-full flex items-center min-h-screen relative -top-12">
           <div className="w-full md:w-7/10">
             <h1 className="text-3xl font-bold sm:leading-snug mb-3 font-sans lg:text-[45px] text-white">

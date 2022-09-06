@@ -32,7 +32,7 @@ const Section = ({
   return (
     <div
       className={cx(
-        'w-full flex flex-col  items-center mb-12',
+        'w-full flex flex-col-reverse  items-center mb-12',
         reverse ? 'md:flex-row-reverse' : 'md:flex-row',
       )}
     >
