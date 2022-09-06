@@ -213,7 +213,7 @@ const InteractiveArea = ({ isShow, setIsOpenModal }: Props) => {
       />
       <div
         className={cx(
-          'bg-neutral-800 my-5 p-3 pt-5 text-xs rounded-md relative shadow-lg tracking-wider text-neutral-300 flex items-center justify-center',
+          'bg-neutral-800 my-5 p-3 pt-5 text-xs rounded-md relative shadow-lg tracking-wider text-neutral-300 flex flex-col items-center justify-center',
           'regex-block',
           'before:content-[attr(data-title)] before:absolute before:-top-3 before:left-2 before:bg-neutral-700 before:text-[10px] before:text-neutral-400 before:py-1 before:px-2 before:rounded-md',
         )}
@@ -226,7 +226,7 @@ const InteractiveArea = ({ isShow, setIsOpenModal }: Props) => {
         )}
         <div
           className={cx(
-            'bg-neutral-900 px-4 py-1 rounded-md flex items-center justify-center max-w-[90%]',
+            'bg-neutral-900 px-4 py-1 mb-3 rounded-md flex items-center justify-center max-w-[90%]',
             "before:content-['/'] before:text-neutral-500",
             "after:content-['/'_attr(data-flags)] after:text-neutral-500",
             { 'after:hidden before:hidden': data.hiddenFlags },
@@ -237,7 +237,7 @@ const InteractiveArea = ({ isShow, setIsOpenModal }: Props) => {
             ref={regexInput}
             key={step}
             type="text"
-            className="bg-transparent border-0 outline-none !ring-0 text-center max-w-[440px] min-w-[60px] px-2 text-sm tracking-widest text-green-400"
+            className="bg-transparent border-0 outline-none !ring-0 text-center max-w-[440px] min-w-[60px] px-2 text-sm tracking-widest text-regreen-400"
             style={{ width: regex.length * 12 || 60 }}
             readOnly={data.readOnly}
             value={data.visibleRegex || regex}

@@ -10,7 +10,7 @@ const Progress = ({ current, total, showProgressText = true }: Props) => (
   <div className="w-36 flex items-center flex-col justify-start select-none relative">
     <div className="w-full max-w-[200px] h-[2px] rounded-sm bg-neutral-600">
       <div
-        className="h-[6px] min-w-[6px] rounded-full bg-green-400 relative bottom-[2px] transition-all duration-300 max-w-full"
+        className="h-[6px] min-w-[6px] rounded-full bg-regreen-400 relative bottom-[2px] transition-all duration-300 max-w-full"
         style={{ width: `${toPercent(current, total)}%` }}
       />
     </div>

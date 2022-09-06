@@ -17,7 +17,11 @@ module.exports = {
         sans: ["'Open Sans'", ...defaultTheme.fontFamily.sans],
       },
       colors: {
-        primary: '#328554',
+        regreen: {
+          400: '#5ff59b',
+          500: '#328554',
+          600: '#29593c',
+        },
       },
     },
   },

@@ -29,7 +29,7 @@ const PageLearn = () => {
               element="p"
               className=" text-neutral-300 mt-4 "
               text={formatMessage({ id: 'section.learn.content' })}
-              attrs={{ className: 'text-green-400' }}
+              attrs={{ className: 'text-regreen-400' }}
             />
           </div>
           <div className="w-1/3 hidden md:flex">

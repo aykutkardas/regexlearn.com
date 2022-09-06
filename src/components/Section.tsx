@@ -45,7 +45,7 @@ const Section = ({
             element="p"
             className="text-neutral-300"
             text={formatMessage({ id: description })}
-            attrs={{ className: 'text-green-400' }}
+            attrs={{ className: 'text-regreen-400' }}
           />
           {isShowButton && (
             <IntlLink href={link} passHref>

@@ -41,7 +41,7 @@ const Hint = ({ regex, flags, hiddenFlags }: Props) => {
             <div className="mt-1 border border-neutral-800 text-neutral-500" key={answer}>
               <span
                 data-flags={flags}
-                className={cx('text-green-400', {
+                className={cx('text-regreen-400', {
                   "before:content-['/'] before:text-neutral-500 after:content-['/'_attr(data-flags)] after:text-neutral-500":
                     !hiddenFlags,
                 })}

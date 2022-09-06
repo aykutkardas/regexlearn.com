@@ -57,12 +57,12 @@ const CheatsheetDemo = ({ data }: Props) => {
       >
         <span
           className={cx(
-            "p-1 before:content-['/'] after:content-['/'_attr(data-flags)] before:text-neutral-500 after:text-neutral-500 text-green-400",
+            "p-1 before:content-['/'] after:content-['/'_attr(data-flags)] before:text-neutral-500 after:text-neutral-500 text-regreen-400",
           )}
         >
           {data.regex}
         </span>
-        <span className="text-green-400">{data.flags}</span>
+        <span className="text-regreen-400">{data.flags}</span>
       </div>
     </div>
   );

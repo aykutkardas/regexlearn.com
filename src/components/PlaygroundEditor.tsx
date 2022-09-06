@@ -122,7 +122,7 @@ const Playground = () => {
       >
         <input
           ref={regexInput}
-          className="border-0 rounded-md tracking-wider w-full text-sm leading-5 text-green-400 bg-neutral-600/40 h-7"
+          className="border-0 rounded-md tracking-wider w-full text-sm leading-5 text-regreen-400 bg-neutral-600/40 h-7"
           type="text"
           onChange={e => onChangeRegex(e)}
           value={regex}

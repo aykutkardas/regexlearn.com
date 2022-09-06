@@ -5,7 +5,7 @@ const Logo = () => (
   <IntlLink href="/[lang]">
     <a className="flex items-center" aria-label="RegexLearn">
       <Icon
-        className="fill-green-400 block sm:hidden"
+        className="fill-regreen-400 block sm:hidden"
         icon="unlocked"
         removeInlineStyle
         size={20}

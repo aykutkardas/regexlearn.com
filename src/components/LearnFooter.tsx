@@ -46,7 +46,7 @@ const LearnFooter = () => {
               <Shortcut command={shortcuts.nextStep} />
               <Icon
                 className={cx('ml-1', {
-                  'text-green-400': success,
+                  'text-regreen-400': success,
                   'text-red-400': error,
                   'animate__animated animate__shakeY': success,
                   'animate__animated animate__shakeX': error,
