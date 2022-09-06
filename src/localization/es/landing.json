@@ -4,7 +4,7 @@
   "landing.imageAltText": "Ilustración de un hombre relajado con las piernas sobre la mesa.",
 
   "section.learn.title": "Aprender",
-  "section.learn.content": "`Expresiones Regulares`, abreaviado como Regex o Regexp, son una cadena de caracteres creados dentro del framework de reglas sintácticas de Regex. Puedes administrar fácilmente sus datos con Regex, que usa comandos como encontrar, emparejar, y editar. Regex puede ser usado en lenguajes de programación como Python, SQL, Javascript, R, Google Analytics, Google Data Studio, y durante todo el proceso de codificación. Aprenda regex en línea con ejemplos y tutoriales en Regexlearn ahora.",
+  "section.learn.content": "`Expresiones Regulares`, abreaviado como Regex o Regexp, son una cadena de caracteres creados dentro del framework de reglas sintácticas de Regex. Puedes administrar fácilmente sus datos con Regex, que usa comandos como encontrar, emparejar, y editar. Regex puede ser usado en lenguajes de programación como Python, SQL, JavaScript, R, Google Analytics, Google Data Studio, y durante todo el proceso de codificación. Aprenda regex en línea con ejemplos y tutoriales en Regexlearn ahora.",
   "section.learn.imageAltText": "Ilustración de una montaña con una bandera en su cima.",
 
   "section.cheatsheet.button": "Revise ahora",
