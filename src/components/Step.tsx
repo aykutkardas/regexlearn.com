@@ -7,7 +7,7 @@ import InteractiveArea from 'src/components/InteractiveArea';
 import HighlightedText from 'src/components/HighlightedText';
 import Progress from 'src/components/Progress';
 import Button, { ButtonVariants } from 'src/components/Button';
-import ProductButton from 'src/components/ProductButton';
+import SupportButton from 'src/components/SupportButton';
 import { InteractiveAreaContext } from 'src/context/InteractiveAreaContext';
 
 const Step = () => {
@@ -56,7 +56,7 @@ const Step = () => {
         />
       </div>
 
-      {lessonData.length === step + 1 && <ProductButton onlyBuyMeACoffee />}
+      {lessonData.length === step + 1 && <SupportButton />}
       <InteractiveArea key={step} isShow={isInteractive} setIsOpenModal={setIsOpenModal} />
       <a
         className="text-xs inline-flex items-center justify-end text-neutral-400 hover:text-neutral-300 relative bottom-3 ml-auto mt-4"
