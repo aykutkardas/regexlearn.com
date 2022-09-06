@@ -30,18 +30,13 @@ const Section = ({
   const isShowButton = Boolean(link && buttonText);
 
   return (
-    <div className="w-full flex flex-col md:flex-row items-center mb-12">
-      <div className={cx('md:w-1/2 order-1 md:order-2', reverse ? 'md:pl-10' : 'md:pr-10')}>
-        <img
-          src={image}
-          loading="lazy"
-          className="w-full drop-shadow-2xl"
-          alt={formatMessage({ id: imageAltText })}
-        />
-      </div>
-      <div
-        className={cx('md:w-1/2 my-auto text-center md:text-left', reverse ? 'order-1' : 'order-2')}
-      >
+    <div
+      className={cx(
+        'w-full flex flex-col  items-center mb-12',
+        reverse ? 'md:flex-row-reverse' : 'md:flex-row',
+      )}
+    >
+      <div className="md:w-1/2 my-auto text-center md:text-left">
         <div>
           <h2 className="text-2xl font-bold mb-4 text-white">
             <FormattedMessage id={title} />
@@ -63,6 +58,14 @@ const Section = ({
           )}
           {customButton?.({ className: 'mt-4' })}
         </div>
+      </div>
+      <div className={cx('md:w-1/2 order-1 md:order-2', reverse ? 'md:pr-10' : 'md:pl-10')}>
+        <img
+          src={image}
+          loading="lazy"
+          className="w-full drop-shadow-2xl"
+          alt={formatMessage({ id: imageAltText })}
+        />
       </div>
     </div>
   );
