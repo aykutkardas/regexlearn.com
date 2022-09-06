@@ -43,7 +43,7 @@ const Step = () => {
           className="text-3xl text-neutral-50 font-bold"
           text={formatMessage({ id: data.title })}
           attrs={{
-            className: 'px-2 py-1 bg-neutral-700 rounded-md mx-1',
+            className: 'px-2 my-1 bg-neutral-700 rounded-md mx-1 whitespace-nowrap',
           }}
         />
         <HighlightedText
