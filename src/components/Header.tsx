@@ -59,12 +59,10 @@ const Header = ({ isLearnPage }: Props) => (
           rel="noreferrer"
           className={cx(
             'text-neutral-200 hover:text-regreen-400',
-            'select-none relative items-baseline hidden justify-center',
-            isLearnPage ? 'lg:flex' : 'sm:flex',
+            'select-none relative items-baseline inline-flex justify-center',
           )}
         >
-          <span>GitHub</span>
-          <Icon icon="github" size={16} className="ml-1 w-4 h-4 text-neutral-200" />
+          <Icon icon="github" size={18} />
         </a>
         <LanguageSelect />
       </div>
