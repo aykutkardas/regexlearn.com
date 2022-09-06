@@ -1,5 +1,5 @@
 const SupportButton = () => (
-  <div className="mx-auto mt-4">
+  <div className="mx-auto mt-4 hover:scale-110 transition">
     <a href="https://www.buymeacoffee.com/aykutkardas" target="_blank" rel="noreferrer">
       <img
         src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png"
