@@ -25,7 +25,7 @@ const CheatsheetDemo = ({ data }: Props) => {
           value: initialContent,
           attributes: {
             class:
-              'shadow-sm mx-1 my-[1px] px-1 py-[2px] rounded-md text-white bg-regreen-400 text-black h-5',
+              'shadow-sm mx-1 my-[2px] px-1 py-[2px] rounded-md text-white bg-regreen-400 text-black inline-block',
           },
         }),
       );
@@ -43,7 +43,7 @@ const CheatsheetDemo = ({ data }: Props) => {
     <div className="font-mono">
       <div
         className={cx(
-          'flex bg-jet-400 rounded-md p-3 my-1 items-center justify-center relative mb-3 text-xs text-neutral-400',
+          'inline-block bg-jet-400 rounded-md p-3 my-1 text-center w-full relative mb-3 text-xs text-neutral-400',
           'before:content-[attr(data-title)] before:block before:absolute before:-top-2 before:left-2 before:text-[9px] before:bg-jet-500 before:px-2 before:py-[2px] before:rounded-md before:text-neutral-400 tracking-wide ',
         )}
         data-title={formatMessage({ id: 'general.text' })}

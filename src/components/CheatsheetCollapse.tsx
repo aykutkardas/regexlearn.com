@@ -28,7 +28,7 @@ const CheatsheetCollapse = ({ title, data }: CheatsheetCollapseProps) => {
         onKeyDown={toggle}
         className={cx(
           'h-6 select-none cursor-pointer text-sm  hover:text-neutral-50 focus:text-neutral-50 outline-regreen-400',
-          open ? 'text-neutral-50' : 'text-neutral-200',
+          open ? 'text-neutral-50' : 'text-neutral-300',
         )}
         tabIndex={0}
         role="button"
@@ -43,7 +43,7 @@ const CheatsheetCollapse = ({ title, data }: CheatsheetCollapseProps) => {
         {title}
       </div>
       {open && (
-        <div id={`Collapse-${data.title}`} className="h-auto my-3">
+        <div id={`Collapse-${data.title}`} className="h-auto mb-3">
           {data.description && (
             <p className="text-xs text-neutral-400 mb-4 pl-14">
               <FormattedMessage id={data.description} />
