@@ -29,7 +29,7 @@ const Hint = ({ regex, flags, hiddenFlags }: Props) => {
   useEventListener('keyup', toggleShow);
 
   return (
-    <Popover className="select-none cursor-pointer text-[10px] absolute right-2 bottom-1">
+    <Popover className="select-none cursor-pointer text-[10px] absolute right-2 top-1 md:top-auto md:bottom-1">
       <Popover.Button ref={popoverButtonRef} className="flex flex-col items-end">
         <Shortcut command={shortcuts.hint} />
         <FormattedMessage id="general.hintQuestion" />

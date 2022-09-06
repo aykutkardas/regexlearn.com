@@ -6,7 +6,7 @@ import useEventListener from '@use-it/event-listener';
 import InteractiveArea from 'src/components/InteractiveArea';
 import HighlightedText from 'src/components/HighlightedText';
 import Progress from 'src/components/Progress';
-import Button from 'src/components/Button';
+import Button, { ButtonVariants } from 'src/components/Button';
 import ProductButton from 'src/components/ProductButton';
 import { InteractiveAreaContext } from 'src/context/InteractiveAreaContext';
 
@@ -59,7 +59,7 @@ const Step = () => {
       {lessonData.length === step + 1 && <ProductButton onlyBuyMeACoffee />}
       <InteractiveArea key={step} isShow={isInteractive} setIsOpenModal={setIsOpenModal} />
       <a
-        className="text-xs inline-flex items-center justify-end text-neutral-400 hover:text-neutral-300 relative bottom-3 ml-auto"
+        className="text-xs inline-flex items-center justify-end text-neutral-400 hover:text-neutral-300 relative bottom-3 ml-auto mt-4"
         href={lesson.sponsorURL || 'https://github.com/aykutkardas/regexlearn.com#sponsoring'}
         target="_blank"
         rel="noreferrer"
@@ -83,7 +83,8 @@ const Step = () => {
             allowFullScreen
           />
           <Button
-            className="bg-green-700 hover:bg-green-800 mt-2"
+            variant={ButtonVariants.Primary}
+            className="mt-2"
             onClick={() => setIsOpenModal(false)}
           >
             Close

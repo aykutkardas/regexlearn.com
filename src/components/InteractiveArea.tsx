@@ -125,7 +125,7 @@ const InteractiveArea = ({ isShow, setIsOpenModal }: Props) => {
           value: data.content,
           regex: grouppedRegex,
           attributes: {
-            class: 'highlight shadow-sm h-3 mx-1 my-[1px] px-1 py-[2px] rounded-md',
+            class: 'highlight shadow-sm h-3 mx-1 my-[1px] px-1 py-[2px] rounded-md text-black',
           },
         }),
       );
@@ -186,11 +186,11 @@ const InteractiveArea = ({ isShow, setIsOpenModal }: Props) => {
 
   return (
     <div
-      className={cx(success ? '[&_.highlight]:text-black' : '[&_.highlight]:text-white', {
-        '[&_.highlight]:bg-red-400': error,
-        '[&_.highlight]:bg-yellow-500': match,
+      className={cx({
+        '[&_.highlight]:bg-red-400 ': error,
+        '[&_.highlight]:bg-yellow-600': match,
         '[&_.highlight]:!bg-regreen-400': success,
-        '[&_.regex-block]:outline [&_.regex-block]:outline-1  [&_.regex-block]:outline-red-500':
+        '[&_.regex-block]:outline [&_.regex-block]:outline-1  [&_.regex-block]:outline-red-400':
           lockError,
       })}
     >
@@ -213,7 +213,7 @@ const InteractiveArea = ({ isShow, setIsOpenModal }: Props) => {
       />
       <div
         className={cx(
-          'bg-jet-400 my-5 p-3 pt-5 text-xs rounded-md relative tracking-wider text-neutral-300 flex flex-col items-center justify-center',
+          'bg-jet-400 mt-5 p-3 pt-5 text-xs rounded-md relative tracking-wider text-neutral-300 flex flex-col items-center justify-center',
           'regex-block',
           'before:content-[attr(data-title)] before:absolute before:-top-3 before:left-2 before:bg-jet-500 before:text-[10px] before:text-neutral-400 before:py-1 before:px-2 before:rounded-md',
         )}
