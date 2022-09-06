@@ -4,7 +4,7 @@ const ProductHuntBadges = () => {
     <div className="flex gap-3">
       <a href={productHuntURL} target="_blank" rel="noreferrer">
         <svg
-          className="h-[37px] cursor-pointer transition text-[#282c34] hover:text-green-400"
+          className="h-[37px] cursor-pointer transition text-green-400 hover:text-white"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 122 37"
         >
@@ -16,7 +16,7 @@ const ProductHuntBadges = () => {
       </a>
       <a href={productHuntURL} target="_blank" rel="noreferrer">
         <svg
-          className="h-[37px] cursor-pointer transition text-[#282c34] hover:text-green-400"
+          className="h-[37px] cursor-pointer transition text-green-400 hover:text-white"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 122 37"
         >
