@@ -1,7 +1,8 @@
-import { useState, useEffect, useRef } from 'react';
-import ReactTooltip from 'react-tooltip';
-import { FormattedMessage } from 'react-intl';
+import { useRef } from 'react';
+import cx from 'classnames';
+import { Popover } from '@headlessui/react';
 import useEventListener from '@use-it/event-listener';
+import { FormattedMessage } from 'react-intl';
 
 import Shortcut from 'src/components/Shortcut';
 import shortcuts from 'src/shortcuts';
@@ -13,66 +14,45 @@ interface Props {
 }
 
 const Hint = ({ regex, flags, hiddenFlags }: Props) => {
-  const hintRef = useRef<HTMLDivElement>(null);
-  const [showStatus, setShowStatus] = useState(false);
+  const popoverButtonRef = useRef<HTMLButtonElement>(null);
 
   const toggleShow = e => {
-    if (!(e.altKey && e.key.toLowerCase() === 'h')) return;
-
     e.preventDefault();
-    setShowStatus(!showStatus);
+    const lastActiveElement = window.document.activeElement;
 
-    if (showStatus) {
-      ReactTooltip.hide(hintRef.current);
-    } else {
-      ReactTooltip.show(hintRef.current);
+    if (e.altKey && e.key.toLowerCase() === 'h') {
+      popoverButtonRef.current.click();
+      (lastActiveElement as HTMLElement).focus();
     }
   };
 
   useEventListener('keyup', toggleShow);
 
-  useEffect(() => {
-    ReactTooltip.hide(hintRef.current);
-    setShowStatus(false);
-  }, [regex, flags]);
-
   return (
-    <div
-      ref={hintRef}
-      className="select-none cursor-pointer text-[10px] absolute right-2 bottom-1"
-      data-tip
-      data-for="hint"
-      data-event="click"
-    >
-      <span
-        role="button"
-        className="flex flex-col items-end justify-center cursor-pointer hover:text-green-300"
-        onClick={toggleShow}
-        onKeyPress={toggleShow}
-        tabIndex={0}
-      >
+    <Popover className="select-none cursor-pointer text-[10px] absolute right-2 bottom-1">
+      <Popover.Button ref={popoverButtonRef} className="flex flex-col items-end">
         <Shortcut command={shortcuts.hint} />
         <FormattedMessage id="general.hintQuestion" />
-      </span>
+      </Popover.Button>
 
-      <ReactTooltip
-        clickable
-        className="shadow-md bg-neutral-800"
-        id="hint"
-        place="top"
-        effect="solid"
-      >
-        <div className="text-green-300">
+      <Popover.Panel className="absolute z-10 mt-2 p-2 border border-neutral-700 bg-neutral-800 shadow-md rounded-md">
+        <div className="text-green-300 flex flex-col gap-3">
           {regex.map(answer => (
-            <div className="px-2 py-1 mt-1 border border-neutral-800 text-neutral-500" key={answer}>
-              {!hiddenFlags && <span>/</span>}
-              <span className="text-green-400">{answer}</span>
-              {!hiddenFlags && <span>/{flags}</span>}
+            <div className="mt-1 border border-neutral-800 text-neutral-500" key={answer}>
+              <span
+                data-flags={flags}
+                className={cx('text-green-400', {
+                  "before:content-['/'] before:text-neutral-500 after:content-['/'_attr(data-flags)] after:text-neutral-500":
+                    !hiddenFlags,
+                })}
+              >
+                {answer}
+              </span>
             </div>
           ))}
         </div>
-      </ReactTooltip>
-    </div>
+      </Popover.Panel>
+    </Popover>
   );
 };
 
