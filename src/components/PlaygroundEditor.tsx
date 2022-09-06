@@ -113,16 +113,16 @@ const Playground = () => {
     <>
       <div
         className={cx(
-          'bg-neutral-800 my-5 p-2 text-xs rounded-md relative shadow-lg tracking-wider text-neutral-300',
+          'bg-jet-500 my-5 p-2 text-xs rounded-md relative shadow-lg tracking-wider text-neutral-300',
           'block text-left w-full items-start',
-          'before:content-[attr(data-title)] before:absolute before:-top-4 before:left-2 before:bg-neutral-800 before:text-[10px] before:text-neutral-400 before:py-1 before:px-2 before:rounded-md',
+          'before:content-[attr(data-title)] before:absolute before:-top-4 before:left-2 before:bg-jet-500 before:text-[10px] before:text-neutral-400 before:py-1 before:px-2 before:rounded-md',
         )}
         data-title={formatMessage({ id: 'general.regex' })}
         onClick={() => regexInput.current.focus()}
       >
         <input
           ref={regexInput}
-          className="border-0 rounded-md tracking-wider w-full text-sm leading-5 text-regreen-400 bg-neutral-600/40 h-7"
+          className="border-0 rounded-md py-5 m-1 focus:outline-none focus:ring-neutral-700 tracking-wider w-full text-sm leading-5 text-regreen-400 bg-neutral-600/40 h-7"
           type="text"
           onChange={e => onChangeRegex(e)}
           value={regex}
@@ -134,9 +134,9 @@ const Playground = () => {
       </div>
       <div
         className={cx(
-          'bg-neutral-800 my-5 p-2 text-xs rounded-md relative shadow-lg tracking-wider text-neutral-300',
+          'bg-jet-500 my-5 p-3 text-xs rounded-md relative shadow-lg tracking-wider text-neutral-300',
           'block text-left w-full items-start',
-          'before:content-[attr(data-title)] before:absolute before:-top-4 before:left-2 before:bg-neutral-800 before:text-[10px] before:text-neutral-400 before:py-1 before:px-2 before:rounded-md',
+          'before:content-[attr(data-title)] before:absolute before:-top-4 before:left-2 before:bg-jet-500 before:text-[10px] before:text-neutral-400 before:py-1 before:px-2 before:rounded-md',
         )}
         data-title={formatMessage({ id: 'general.text' })}
         onClick={() => editor.current.focus()}

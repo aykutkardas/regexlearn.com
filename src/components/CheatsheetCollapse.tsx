@@ -2,6 +2,7 @@ import { useState } from 'react';
 import cx from 'classnames';
 
 import CheatsheetDemo from './CheatsheetDemo';
+import { FormattedMessage } from 'react-intl';
 
 interface CheatsheetCollapseProps {
   title: string;
@@ -26,8 +27,8 @@ const CheatsheetCollapse = ({ title, data }: CheatsheetCollapseProps) => {
         onClick={toggle}
         onKeyDown={toggle}
         className={cx(
-          'h-6 select-none cursor-pointer text-sm  hover:text-neutral-300 focus:text-neutral-300 outline-regreen-400',
-          open ? 'text-neutral-300' : 'text-neutral-400',
+          'h-6 select-none cursor-pointer text-sm  hover:text-neutral-50 focus:text-neutral-50 outline-regreen-400',
+          open ? 'text-neutral-50' : 'text-neutral-200',
         )}
         tabIndex={0}
         role="button"
@@ -43,6 +44,11 @@ const CheatsheetCollapse = ({ title, data }: CheatsheetCollapseProps) => {
       </div>
       {open && (
         <div id={`Collapse-${data.title}`} className="h-auto my-3">
+          {data.description && (
+            <p className="text-xs text-neutral-400 mb-4 pl-14">
+              <FormattedMessage id={data.description} />
+            </p>
+          )}
           <CheatsheetDemo data={data} />
         </div>
       )}

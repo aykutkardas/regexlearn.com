@@ -24,7 +24,8 @@ const CheatsheetDemo = ({ data }: Props) => {
           regex,
           value: initialContent,
           attributes: {
-            class: 'shadow-sm mx-1 my-[1px] px-1 py-[2px] rounded-md text-white bg-green-500',
+            class:
+              'shadow-sm mx-1 my-[1px] px-1 py-[2px] rounded-md text-white bg-regreen-400 text-black h-5',
           },
         }),
       );
@@ -42,16 +43,16 @@ const CheatsheetDemo = ({ data }: Props) => {
     <div className="font-mono">
       <div
         className={cx(
-          'flex bg-neutral-800 rounded-md p-3 my-1 items-center justify-center relative mb-3 text-xs text-neutral-400',
-          'before:content-[attr(data-title)] before:block before:absolute before:-top-2 before:right-2 before:text-[9px] before:bg-neutral-700 before:px-2 before:rounded-md before:text-neutral-400 tracking-wide ',
+          'flex bg-jet-400 rounded-md p-3 my-1 items-center justify-center relative mb-3 text-xs text-neutral-400',
+          'before:content-[attr(data-title)] before:block before:absolute before:-top-2 before:left-2 before:text-[9px] before:bg-jet-500 before:px-2 before:py-[2px] before:rounded-md before:text-neutral-400 tracking-wide ',
         )}
         data-title={formatMessage({ id: 'general.text' })}
         dangerouslySetInnerHTML={{ __html: readableContent }}
       />
       <div
         className={cx(
-          'flex flex-wrap bg-neutral-800 rounded-md p-3 my-1 items-center justify-center relative text-xs',
-          'before:content-[attr(data-title)] before:block before:absolute before:-top-2 before:right-2 before:text-[9px] before:bg-neutral-700 before:px-2 before:rounded-md before:text-neutral-400',
+          'flex flex-wrap bg-jet-400 rounded-md p-3 my-1 items-center justify-center relative text-xs',
+          'before:content-[attr(data-title)] before:block before:absolute before:-top-2 before:left-2 before:text-[9px] before:bg-jet-500 before:px-2 before:py-[2px] before:rounded-md before:text-neutral-400',
         )}
         data-title={formatMessage({ id: 'general.regex' })}
       >

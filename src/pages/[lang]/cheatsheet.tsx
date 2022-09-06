@@ -28,7 +28,7 @@ const PageCheatsheet = () => {
               <div className="flex flex-col mr-0 md:mr-8">
                 {column.map(row => (
                   <div key={row.title} className="mb-8">
-                    <h4 className="mb-6">
+                    <h4 className="mb-6 text-white">
                       <FormattedMessage id={row.title} />
                     </h4>
                     {row.data.map(item => (

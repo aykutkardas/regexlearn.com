@@ -125,7 +125,7 @@ const InteractiveArea = ({ isShow, setIsOpenModal }: Props) => {
           value: data.content,
           regex: grouppedRegex,
           attributes: {
-            class: 'highlight shadow-sm h-3 mx-1 my-[1px] px-1 py-[2px] rounded-md text-white',
+            class: 'highlight shadow-sm h-3 mx-1 my-[1px] px-1 py-[2px] rounded-md',
           },
         }),
       );
@@ -186,10 +186,10 @@ const InteractiveArea = ({ isShow, setIsOpenModal }: Props) => {
 
   return (
     <div
-      className={cx({
-        '[&_.highlight]:bg-red-500': error,
-        '[&_.highlight]:bg-orange-500': match,
-        '[&_.highlight]:bg-green-500': success,
+      className={cx(success ? '[&_.highlight]:text-black' : '[&_.highlight]:text-white', {
+        '[&_.highlight]:bg-red-400': error,
+        '[&_.highlight]:bg-yellow-500': match,
+        '[&_.highlight]:!bg-regreen-400': success,
         '[&_.regex-block]:outline [&_.regex-block]:outline-1  [&_.regex-block]:outline-red-500':
           lockError,
       })}
@@ -204,18 +204,18 @@ const InteractiveArea = ({ isShow, setIsOpenModal }: Props) => {
       )}
       <div
         className={cx(
-          'bg-neutral-800 my-5 p-3 pt-5 text-xs rounded-md relative tracking-wider text-neutral-300',
+          'bg-jet-400 my-5 p-3 pt-5 text-xs rounded-md relative tracking-wider text-neutral-300 leading-5',
           'block text-left w-full items-start',
-          'before:content-[attr(data-title)] before:absolute before:-top-3 before:left-2 before:bg-neutral-700 before:text-[10px] before:text-neutral-400 before:py-1 before:px-2 before:rounded-md',
+          'before:content-[attr(data-title)] before:absolute before:-top-3 before:left-2 before:bg-jet-500 before:text-[10px] before:text-neutral-400 before:py-1 before:px-2 before:rounded-md',
         )}
         data-title={formatMessage({ id: 'general.text' })}
         dangerouslySetInnerHTML={{ __html: readableContent }}
       />
       <div
         className={cx(
-          'bg-neutral-800 my-5 p-3 pt-5 text-xs rounded-md relative shadow-lg tracking-wider text-neutral-300 flex flex-col items-center justify-center',
+          'bg-jet-400 my-5 p-3 pt-5 text-xs rounded-md relative tracking-wider text-neutral-300 flex flex-col items-center justify-center',
           'regex-block',
-          'before:content-[attr(data-title)] before:absolute before:-top-3 before:left-2 before:bg-neutral-700 before:text-[10px] before:text-neutral-400 before:py-1 before:px-2 before:rounded-md',
+          'before:content-[attr(data-title)] before:absolute before:-top-3 before:left-2 before:bg-jet-500 before:text-[10px] before:text-neutral-400 before:py-1 before:px-2 before:rounded-md',
         )}
         data-title={formatMessage({ id: 'general.regex' })}
       >
@@ -226,7 +226,7 @@ const InteractiveArea = ({ isShow, setIsOpenModal }: Props) => {
         )}
         <div
           className={cx(
-            'bg-neutral-900 px-4 py-1 mb-3 rounded-md flex items-center justify-center max-w-[90%]',
+            'bg-jet-500 px-4 py-1 mb-3 rounded-md flex items-center justify-center max-w-[90%]',
             "before:content-['/'] before:text-neutral-500",
             "after:content-['/'_attr(data-flags)] after:text-neutral-500",
             { 'after:hidden before:hidden': data.hiddenFlags },
