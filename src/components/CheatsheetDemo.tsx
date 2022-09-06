@@ -24,7 +24,7 @@ const CheatsheetDemo = ({ data }: Props) => {
           regex,
           value: initialContent,
           attributes: {
-            class: 'bg-emerald-400/70 px-1 py-[1px] h-4 mx-1 rounded-md text-neutral-50',
+            class: 'shadow-sm mx-1 my-[1px] px-1 py-[2px] rounded-md text-white bg-green-500',
           },
         }),
       );
