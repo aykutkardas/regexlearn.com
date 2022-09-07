@@ -4,7 +4,7 @@
   "landing.imageAltText": "Bacakları masanın üzerinde olan rahat bir adamın illüstrasyonu.",
 
   "section.learn.title": "Öğren",
-  "section.learn.content": "`Regular Expressions` (Düzenli İfadeler)'in kısaltması olan Regex veya Regexp söz dizimi (syntax) kuralları çerçevesinde oluşturulan bir karakter dizisidir. Bulma, eşleştirme, düzenleme gibi komutları uygulayabileceğiniz Regex ile hızlı ve pratik bir şekilde verilerinizi yönetebilirsiniz. Python, SQL, Javascript, R gibi programlama dillerinde, Google Analytics, Google Data Studio ve kod işlemlerinde kullanabileceğiniz Regex'i `RegexLearn` üzerinden örneklerle online bir şekilde hemen öğrenin.",
+  "section.learn.content": "`Regular Expressions` (Düzenli İfadeler)'in kısaltması olan Regex veya Regexp söz dizimi (syntax) kuralları çerçevesinde oluşturulan bir karakter dizisidir. Bulma, eşleştirme, düzenleme gibi komutları uygulayabileceğiniz Regex ile hızlı ve pratik bir şekilde verilerinizi yönetebilirsiniz. Python, SQL, JavaScript, R gibi programlama dillerinde, Google Analytics, Google Data Studio ve kod işlemlerinde kullanabileceğiniz Regex'i `RegexLearn` üzerinden örneklerle online bir şekilde hemen öğrenin.",
   "section.learn.imageAltText": "Zirvesinde bayrak olan bir dağın illüstrasyonu.",
 
   "section.cheatsheet.button": "Şimdi İncele",

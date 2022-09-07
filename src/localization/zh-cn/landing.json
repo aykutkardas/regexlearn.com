@@ -4,7 +4,7 @@
   "landing.imageAltText": "一个轻松的人，他的腿在桌子上的插图。",
 
   "section.learn.title": "学习",
-  "section.learn.content": "`正则表达式`，即 Regular Expressions，缩写为 Regex 或 Regexp，是在正则表达式语法框架内创建的字符串。您可以用正则表达式轻松管理数据，执行查找、匹配或编辑等命令。正则表达式适用于 Python、SQL、Javascript、R、Google Analytics、Google Data Studio 等编程语言和整个编程过程。现在，就通过 RegexLearn 的教程和示例，在线学习正则表达式吧。",
+  "section.learn.content": "`正则表达式`，即 Regular Expressions，缩写为 Regex 或 Regexp，是在正则表达式语法框架内创建的字符串。您可以用正则表达式轻松管理数据，执行查找、匹配或编辑等命令。正则表达式适用于 Python、SQL、JavaScript、R、Google Analytics、Google Data Studio 等编程语言和整个编程过程。现在，就通过 RegexLearn 的教程和示例，在线学习正则表达式吧。",
   "section.learn.imageAltText": "山峰上有一面旗帜的插图。",
 
   "section.cheatsheet.button": "立即查看",

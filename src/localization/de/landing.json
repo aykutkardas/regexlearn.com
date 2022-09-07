@@ -4,7 +4,7 @@
   "landing.imageAltText": "Illustration eines entspannten mannes mit seinen beinen auf dem tisch.",
 
   "section.learn.title": "Lernen",
-  "section.learn.content": "`Regular Expressions`, abgekürzt als Regex oder Regexp, sind eine zeichenfolge, die im rahmen der Regex-Syntaxregeln erstellt wird. Sie können Ihre Daten einfach mit Regex verwalten, das Befehle wie Suchen, Abgleichen und Bearbeiten verwendet. Regex kann verwendet werden in Programmiersprachen wie Python, SQL, Javascript, R, Google Analytics, Google Data Studio und während des gesamten Codierungsprozesses Lernen Sie Regex jetzt online mit Beispielen und Tutorials auf RegexLearn.",
+  "section.learn.content": "`Regular Expressions`, abgekürzt als Regex oder Regexp, sind eine zeichenfolge, die im rahmen der Regex-Syntaxregeln erstellt wird. Sie können Ihre Daten einfach mit Regex verwalten, das Befehle wie Suchen, Abgleichen und Bearbeiten verwendet. Regex kann verwendet werden in Programmiersprachen wie Python, SQL, JavaScript, R, Google Analytics, Google Data Studio und während des gesamten Codierungsprozesses Lernen Sie Regex jetzt online mit Beispielen und Tutorials auf RegexLearn.",
   "section.learn.imageAltText": "Abbildung eines Berges mit einer Flagge auf seinem Gipfel.",
 
   "section.cheatsheet.button": "Jetzt überprüfen",
