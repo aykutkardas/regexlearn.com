@@ -2,7 +2,7 @@ const ProductHuntBadges = () => {
   const productHuntURL = 'https://www.producthunt.com/products/regexlearn';
   return (
     <div className="flex gap-3">
-      <a href={productHuntURL} target="_blank" rel="noreferrer">
+      <a href={productHuntURL} target="_blank" rel="noreferrer" aria-label="Product of the Day">
         <svg
           className="h-[37px] cursor-pointer transition text-green-400 hover:text-white"
           xmlns="http://www.w3.org/2000/svg"
@@ -14,7 +14,7 @@ const ProductHuntBadges = () => {
           />
         </svg>
       </a>
-      <a href={productHuntURL} target="_blank" rel="noreferrer">
+      <a href={productHuntURL} target="_blank" rel="noreferrer" aria-label="Product of the Week">
         <svg
           className="h-[37px] cursor-pointer transition text-green-400 hover:text-white"
           xmlns="http://www.w3.org/2000/svg"

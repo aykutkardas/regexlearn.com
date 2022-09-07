@@ -77,7 +77,7 @@ const PageHome = () => {
           description="section.playground.content"
           image="/Playground.webp"
           link="/[lang]/playground"
-          buttonText="general.start"
+          buttonText="section.cheatsheet.button"
           imageAltText="section.playground.imageAltText"
           reverse
         />
