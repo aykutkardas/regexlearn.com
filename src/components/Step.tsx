@@ -56,17 +56,28 @@ const Step = () => {
         />
       </div>
 
-      {lessonData.length === step + 1 && <SupportButton />}
+      {lessonData.length === step + 1 && (
+        <div className="mx-auto mt-4 hover:scale-110 transition">
+          <a href="https://www.buymeacoffee.com/aykutkardas" target="_blank" rel="noreferrer">
+            <img
+              src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png"
+              alt="Buy Me A Coffee"
+              style={{ height: 50, width: 217 }}
+            />
+          </a>
+        </div>
+      )}
+
       <InteractiveArea key={step} isShow={isInteractive} setIsOpenModal={setIsOpenModal} />
       <a
-        className="text-xs inline-flex items-center justify-end text-neutral-400 hover:text-neutral-300 relative bottom-3 ml-auto mt-4"
+        className="text-xs inline-flex items-center justify-end text-neutral-300 opacity-70 hover:opacity-100 relative bottom-3 ml-auto mt-5"
         href={lesson.sponsorURL || 'https://github.com/aykutkardas/regexlearn.com#sponsoring'}
         target="_blank"
         rel="noreferrer"
       >
         {lesson.sponsor ? (
-          <span className="inline-flex items-center">
-            Sponsored by <img className="mx-2 h-3" src={lesson.sponsorLogo} alt={lesson.sponsor} />
+          <span className="flex items-center">
+            Sponsored by <img className="mx-1 h-3" src={lesson.sponsorLogo} alt={lesson.sponsor} />
           </span>
         ) : (
           <span>Become a Sponsor</span>
