@@ -35,7 +35,7 @@ const PageHome = () => {
               text={formatMessage({ id: 'landing.description' })}
             />
             <IntlLink href="/[lang]/learn" passHref>
-              <a>
+              <a tabIndex={-1}>
                 <Button variant={ButtonVariants.Primary} className="mt-4">
                   <FormattedMessage id="general.startLearning" />
                 </Button>
@@ -95,11 +95,12 @@ const PageHome = () => {
           imageAltText="section.opensource.imageAltText"
           link="https://github.com/aykutkardas/regexlearn.com"
           reverse
-          customButton={({ className }) => (
+          customButton={() => (
             <a
               href="https://github.com/aykutkardas/regexlearn.com"
               target="_blank"
               rel="noreferrer"
+              tabIndex={-1}
             >
               <Button className="inline-flex items-center justify-center bg-neutral-600 hover:bg-neutral-700 mt-4">
                 <Icon icon="github" size={16} color="white" className="mr-2" />

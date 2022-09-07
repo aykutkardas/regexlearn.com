@@ -10,6 +10,10 @@
   body {
     background-color: var(--background);
   }
+
+  * {
+    @apply focus-visible:ring focus-visible:ring-regreen-400 focus-visible:outline-none focus-visible:rounded-sm;
+  }
 }
 
 ::-webkit-scrollbar {

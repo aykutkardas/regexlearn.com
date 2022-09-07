@@ -43,7 +43,7 @@ const CheatsheetCollapse = ({ title, data }: CheatsheetCollapseProps) => {
         {title}
       </div>
       {open && (
-        <div id={`Collapse-${data.title}`} className="h-auto mb-3">
+        <div id={`Collapse-${data.title}`} className="h-auto mb-3 mt-2">
           {data.description && (
             <p className="text-xs text-neutral-400 mb-4 pl-14">
               <FormattedMessage id={data.description} />

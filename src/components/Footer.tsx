@@ -9,7 +9,7 @@ const Footer = () => (
     <div className="flex items-center">
       <Social />
     </div>
-    <div className="flex items-center mt-3 text-sm text-neutral-200 hover:text-neutral-400">
+    <div className="flex items-center mt-3 text-sm text-regreen-400 hover:text-regreen-400/80">
       <a
         target="_blank"
         rel="noreferrer"

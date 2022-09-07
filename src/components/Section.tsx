@@ -49,7 +49,7 @@ const Section = ({
           />
           {isShowButton && (
             <IntlLink href={link} passHref>
-              <a>
+              <a tabIndex={-1}>
                 <Button variant={ButtonVariants.Primary} className="mt-4">
                   <FormattedMessage id={buttonText} />
                 </Button>

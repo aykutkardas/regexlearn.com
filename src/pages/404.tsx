@@ -16,8 +16,8 @@ const Page404 = () => {
       <Head>
         <title>{formatMessage({ id: 'page.404.title' })}</title>
       </Head>
-      <Header />
-      <div className="container h-full">
+      <div className="container flex flex-col h-full">
+        <Header />
         <div className="flex flex-col flex-1 items-center justify-center w-full h-full">
           <img className="w-[300px]" src="/404.webp" alt="404" />
           <IntlLink href="/" passHref>
@@ -34,8 +34,8 @@ const Page404 = () => {
             />
           </p>
         </div>
+        <Footer />
       </div>
-      <Footer />
     </>
   );
 };
