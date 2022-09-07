@@ -4,9 +4,10 @@ import { FormattedMessage, useIntl } from 'react-intl';
 import Header from 'src/components/Header';
 import Footer from 'src/components/Footer';
 import CustomHead from 'src/components/CustomHead';
+import SupportButton from 'src/components/SupportButton';
+import CheatsheetCollapse from 'src/components/CheatsheetCollapse';
 import { defaultLocale, locales } from 'src/localization';
 import data from 'src/data/cheatsheet.json';
-import CheatsheetCollapse from 'src/components/CheatsheetCollapse';
 
 const columns = [data.slice(0, 3), data.slice(3, 4), data.slice(4, 6)];
 
@@ -43,6 +44,9 @@ const PageCheatsheet = () => {
               </div>
             </div>
           ))}
+        </div>
+        <div className="fixed bottom-4 right-4 hidden sm:block">
+          <SupportButton small />
         </div>
         <Footer />
       </div>

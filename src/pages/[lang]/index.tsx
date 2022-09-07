@@ -10,6 +10,7 @@ import Section from 'src/components/Section';
 import IntlLink from 'src/components/IntlLink';
 import CustomHead from 'src/components/CustomHead';
 import HighlightedText from 'src/components/HighlightedText';
+import SupportButton from 'src/components/SupportButton';
 import Button, { ButtonVariants } from 'src/components/Button';
 
 import sponsors from 'sponsors.json';
@@ -130,6 +131,9 @@ const PageHome = () => {
               </a>
             ))}
           </div>
+        </div>
+        <div className="fixed bottom-4 right-4 hidden sm:block">
+          <SupportButton small />
         </div>
         <Footer />
       </div>
