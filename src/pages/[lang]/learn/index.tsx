@@ -5,6 +5,7 @@ import Header from 'src/components/Header';
 import Footer from 'src/components/Footer';
 import LessonBox from 'src/components/LessonBox';
 import CustomHead from 'src/components/CustomHead';
+import SupportButton from 'src/components/SupportButton';
 import HighlightedText from 'src/components/HighlightedText';
 
 import { defaultLocale, locales } from 'src/localization';
@@ -46,27 +47,28 @@ const PageLearn = () => {
             {lessons.map(lesson => (
               <div key={lesson.key} className="w-full sm:w-1/2 md:w-1/3 mb-5">
                 <LessonBox data={lesson} />
-                {lesson.sponsor ? (
-                  <span className="text-xs mt-1 flex justify-end items-center text-neutral-300 hover:text-neutral-400 cursor-pointer">
-                    Sponsored by{' '}
-                    <a href={lesson.sponsorURL} target="_blank" rel="noreferrer">
-                      <img className="h-3 mx-1" src={lesson.sponsorLogo} alt={lesson.sponsor} />
-                    </a>
-                  </span>
-                ) : (
-                  <a
-                    target="_blank"
-                    className="text-xs mt-1 flex justify-end items-center text-neutral-300 hover:text-neutral-400 cursor-pointer"
-                    rel="noreferrer"
-                    href="https://github.com/aykutkardas/regexlearn.com#sponsoring"
-                  >
-                    Become a Sponsor
-                  </a>
-                )}
+                <a
+                  className="text-xs flex items-center justify-end text-neutral-300 opacity-70 hover:opacity-100 relative bottom-3 ml-auto mt-5"
+                  href={
+                    lesson.sponsorURL || 'https://github.com/aykutkardas/regexlearn.com#sponsoring'
+                  }
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  {lesson.sponsor ? (
+                    <span className="flex items-center">
+                      Sponsored by{' '}
+                      <img className="mx-1 h-3" src={lesson.sponsorLogo} alt={lesson.sponsor} />
+                    </span>
+                  ) : (
+                    <span>Become a Sponsor</span>
+                  )}
+                </a>
               </div>
             ))}
           </div>
         </div>
+        <SupportButton />
         <Footer />
       </div>
     </>

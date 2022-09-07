@@ -5,6 +5,7 @@ import Footer from 'src/components/Footer';
 import PlaygroundEditor from 'src/components/PlaygroundEditor';
 import PlaygroundSidebar from 'src/components/PlaygroundSidebar';
 import CustomHead from 'src/components/CustomHead';
+import SupportButton from 'src/components/SupportButton';
 import { defaultLocale, locales } from 'src/localization';
 
 const PagePlayground = () => (
@@ -28,6 +29,7 @@ const PagePlayground = () => (
           <PlaygroundSidebar />
         </div>
       </div>
+      <SupportButton />
       <Footer />
     </div>
   </>

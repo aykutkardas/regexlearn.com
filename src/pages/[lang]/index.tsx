@@ -9,12 +9,12 @@ import Footer from 'src/components/Footer';
 import Section from 'src/components/Section';
 import IntlLink from 'src/components/IntlLink';
 import CustomHead from 'src/components/CustomHead';
-import HighlightedText from 'src/components/HighlightedText';
 import SupportButton from 'src/components/SupportButton';
+import HighlightedText from 'src/components/HighlightedText';
 import Button, { ButtonVariants } from 'src/components/Button';
+import ProductHuntBadges from 'src/components/ProductHuntBadges';
 
 import sponsors from 'sponsors.json';
-import ProductHuntBadges from 'src/components/ProductHuntBadges';
 
 const PageHome = () => {
   const { formatMessage } = useIntl();
@@ -132,9 +132,7 @@ const PageHome = () => {
             ))}
           </div>
         </div>
-        <div className="fixed bottom-4 right-4 hidden sm:block">
-          <SupportButton small />
-        </div>
+        <SupportButton />
         <Footer />
       </div>
     </>

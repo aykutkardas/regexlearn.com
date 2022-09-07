@@ -45,9 +45,7 @@ const PageCheatsheet = () => {
             </div>
           ))}
         </div>
-        <div className="fixed bottom-4 right-4 hidden sm:block">
-          <SupportButton small />
-        </div>
+        <SupportButton />
         <Footer />
       </div>
     </>
