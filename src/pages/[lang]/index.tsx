@@ -1,6 +1,5 @@
 import { GetStaticPaths, GetStaticProps } from 'next';
 import { FormattedMessage, useIntl } from 'react-intl';
-import cx from 'classnames';
 
 import { defaultLocale, locales } from 'src/localization';
 
@@ -42,10 +41,9 @@ const PageHome = () => {
               </a>
             </IntlLink>
           </div>
-          <div className="w-full md:w-3/10 hidden sm:flex">
+          <div className="w-full md:w-3/10 hidden sm:flex justify-end">
             <img
-              loading="lazy"
-              className="w-full drop-shadow-xl"
+              className="w-80 h-80 lg:w-[500px] lg:h-[500px] drop-shadow-xl"
               src="/Done.webp"
               alt={formatMessage({ id: 'landing.imageAltText' })}
             />
@@ -120,9 +118,15 @@ const PageHome = () => {
                 href={sponsor.url}
                 target="_blank"
                 rel="noreferrer"
-                className="opacity-70 hover:opacity-100"
+                className="opacity-70 hover:opacity-100 w-auto h-auto"
               >
-                <img src={sponsor.logo} alt={sponsor.name} title={sponsor.name} />
+                <img
+                  src={sponsor.logo.url}
+                  width={sponsor.logo.width}
+                  height={sponsor.logo.height}
+                  alt={sponsor.name}
+                  title={sponsor.name}
+                />
               </a>
             ))}
           </div>
