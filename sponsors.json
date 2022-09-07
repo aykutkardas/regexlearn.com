@@ -2,16 +2,28 @@
   {
     "name": "ahrefs",
     "url": "https://ahrefs.com/?utm_source=regexlearn&utm_medium=referral&utm_campaign=sponsorship",
-    "logo": "/ahrefs.webp"
+    "logo": {
+      "url": "/ahrefs.webp",
+      "width": 71,
+      "height": 20
+    }
   },
   {
     "name": "sitechecker.pro",
     "url": "https://sitechecker.pro/?utm_source=regexlearn&utm_medium=referral&utm_campaign=sponsorship",
-    "logo": "/sitechecker.pro.webp"
+    "logo": {
+      "url": "/sitechecker.pro.webp",
+      "width": 161,
+      "height": 35
+    }
   },
   {
     "name": "wope",
     "url": "https://wope.com/?utm_source=regexlearn&utm_medium=referral&utm_campaign=sponsorship",
-    "logo": "/wope.webp"
+    "logo": {
+      "url": "/wope.webp",
+      "width": 84,
+      "height": 23
+    }
   }
 ]

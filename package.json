@@ -15,6 +15,7 @@
   },
   "license": "MIT",
   "dependencies": {
+    "@headlessui/react": "^1.6.6",
     "@use-it/event-listener": "^0.1.7",
     "canvas-confetti": "^1.4.0",
     "classnames": "^2.3.1",
@@ -24,20 +25,21 @@
     "lookie": "^1.0.4",
     "next": "12.2.2",
     "react": "18.2.0",
-    "react-collapsible": "^2.8.4",
-    "react-custom-scrollbars": "^4.2.1",
     "react-dom": "18.2.0",
     "react-icomoon": "^2.5.3",
     "react-intl": "^6.0.5",
-    "react-tooltip": "^4.2.21",
     "ua-parser-js": "^1.0.2"
   },
   "devDependencies": {
+    "@tailwindcss/forms": "^0.5.3",
     "@types/draft-js": "^0.11.8",
     "@types/node": "^18.0.5",
     "@types/react": "^18.0.15",
+    "autoprefixer": "^10.4.8",
     "eslint": "7",
     "eslint-config-next": "12.2.2",
+    "postcss": "^8.4.16",
+    "tailwindcss": "^3.1.8",
     "typescript": "^4.5.5"
   }
 }

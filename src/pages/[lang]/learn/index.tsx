@@ -1,17 +1,14 @@
 import { GetStaticPaths, GetStaticProps } from 'next';
 import { useIntl, FormattedMessage } from 'react-intl';
-import cx from 'classnames';
 
 import Header from 'src/components/Header';
 import Footer from 'src/components/Footer';
 import LessonBox from 'src/components/LessonBox';
 import CustomHead from 'src/components/CustomHead';
-import ProductButton from 'src/components/ProductButton';
+import HighlightedText from 'src/components/HighlightedText';
+
 import { defaultLocale, locales } from 'src/localization';
 import lessons from 'src/data/lessons/index.json';
-
-import styles from './Learn.module.css';
-import HighlightedText from 'src/components/HighlightedText';
 
 const PageLearn = () => {
   const { formatMessage } = useIntl();
@@ -21,59 +18,57 @@ const PageLearn = () => {
       <CustomHead title="page.learn.title" description="page.learn.description" hrefLang="learn">
         <link rel="stylesheet" href="/css/animate.css" />
       </CustomHead>
-      <Header />
-      <div className="container">
-        <ProductButton />
-        <div className={cx('row', styles.Section)}>
-          <div className={cx('col-xs-12 col-sm-12 col-md-8', styles.SectionContentWrapper)}>
-            <h1 className={styles.SectionTitle}>
-              <FormattedMessage id={'section.learn.title'} />
-            </h1>
-            <HighlightedText
-              element="p"
-              className={styles.SectionDescription}
-              text={formatMessage({ id: 'section.learn.content' })}
-              attrs={{ className: styles.SectionHighlight }}
-            />
-          </div>
-          <div className={cx('col-xs-12 col-sm-12 col-md-4', styles.SectionImageWrapper)}>
-            <img
-              src="/Learn.webp"
-              loading="lazy"
-              className={cx('img-responsive', styles.SectionImage)}
-              alt={formatMessage({ id: 'section.learn.imageAltText' })}
-            />
-          </div>
-        </div>
-        <div className="row">
-          {lessons.map(lesson => (
-            <div
-              key={lesson.key}
-              className={cx('col-xs-12 col-sm-6 col-md-4', styles.LessonBoxWrapper)}
-            >
-              <LessonBox data={lesson} />
-              {lesson.sponsor ? (
-                <span className={styles.LessonSponsor}>
-                  Sponsored by{' '}
-                  <a href={lesson.sponsorURL} target="_blank" rel="noreferrer">
-                    <img src={lesson.sponsorLogo} alt={lesson.sponsor} />
-                  </a>
-                </span>
-              ) : (
-                <a
-                  target="_blank"
-                  className={styles.LessonSponsor}
-                  rel="noreferrer"
-                  href="https://github.com/aykutkardas/regexlearn.com#sponsoring"
-                >
-                  Become a Sponsor
-                </a>
-              )}
+      <div className="container flex flex-1 flex-col items-between h-full">
+        <Header />
+        <div className="flex flex-col justify-center flex-1">
+          <div className="flex items-center mt-6">
+            <div className="w-full md:w-2/3 flex flex-col items-start">
+              <h1 className="text-3xl text-white">
+                <FormattedMessage id={'section.learn.title'} />
+              </h1>
+              <HighlightedText
+                element="p"
+                className=" text-neutral-300 mt-4 "
+                text={formatMessage({ id: 'section.learn.content' })}
+                attrs={{ className: 'text-regreen-400' }}
+              />
             </div>
-          ))}
+            <div className="w-1/3 hidden md:flex">
+              <img
+                src="/Learn.webp"
+                loading="lazy"
+                className="w-full pl-8 drop-shadow-xl"
+                alt={formatMessage({ id: 'section.learn.imageAltText' })}
+              />
+            </div>
+          </div>
+          <div className="flex flex-col sm:flex-row gap-4 mt-4">
+            {lessons.map(lesson => (
+              <div key={lesson.key} className="w-full sm:w-1/2 md:w-1/3 mb-5">
+                <LessonBox data={lesson} />
+                {lesson.sponsor ? (
+                  <span className="text-xs mt-1 flex justify-end items-center text-neutral-300 hover:text-neutral-400 cursor-pointer">
+                    Sponsored by{' '}
+                    <a href={lesson.sponsorURL} target="_blank" rel="noreferrer">
+                      <img className="h-3 mx-1" src={lesson.sponsorLogo} alt={lesson.sponsor} />
+                    </a>
+                  </span>
+                ) : (
+                  <a
+                    target="_blank"
+                    className="text-xs mt-1 flex justify-end items-center text-neutral-300 hover:text-neutral-400 cursor-pointer"
+                    rel="noreferrer"
+                    href="https://github.com/aykutkardas/regexlearn.com#sponsoring"
+                  >
+                    Become a Sponsor
+                  </a>
+                )}
+              </div>
+            ))}
+          </div>
         </div>
+        <Footer />
       </div>
-      <Footer />
     </>
   );
 };

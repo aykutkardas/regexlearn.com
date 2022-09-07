@@ -1,59 +1,33 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
-  --black: #000000;
-  --gray: #808080;
-
-  --bg-1: #282c34;
-  --bg-2: #333333;
-  --bg-3: #272727;
-  --bg-4: #444444;
-  --bg-5: #636363;
-
-  --txt-1: #ffffff;
-  --txt-2: #d0d0d0;
-  --txt-3: #999999;
-
-  --shadow-1: #21212173;
-
-  --primary: #5ff59b;
-  --primary-darken: #29593c;
-  --secondary: #328554;
-
-  --error: #ff6347;
-  --warning: #ffaa0d;
-  --warning-darken: #ffa347;
+  --background: #282c34;
 }
 
-* {
-  outline: none;
+@layer base {
+  body {
+    background-color: var(--background);
+  }
+
+  * {
+    @apply focus-visible:ring focus-visible:ring-regreen-400 focus-visible:outline-none focus-visible:rounded-sm;
+  }
 }
 
-a {
-  text-decoration: none;
+::-webkit-scrollbar {
+  @apply h-1 w-1;
 }
 
-body {
-  margin: 0;
-  font-family: 'Open Sans', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-color: var(--bg-1);
+::-webkit-scrollbar-track {
+  @apply bg-neutral-800;
 }
 
-.App {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100vh;
-  color: var(--txt-1);
+::-webkit-scrollbar-thumb {
+  @apply rounded bg-neutral-700;
 }
 
-.flex-1 {
-  flex: 1;
-}
-
-.container,
-.container-fluid {
-  width: 100%;
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-neutral-600;
 }
