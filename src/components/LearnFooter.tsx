@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import { FormattedMessage } from 'react-intl';
-import cx from 'classnames';
+import cx from 'clsx';
 import dynamic from 'next/dynamic';
 
 const Shortcut = dynamic(import('src/components/Shortcut'), { ssr: false });

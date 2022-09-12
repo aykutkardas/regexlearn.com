@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef, useCallback, useContext } from 'react';
 import { FormattedMessage, useIntl } from 'react-intl';
 import useEventListener from '@use-it/event-listener';
-import cx from 'classnames';
+import cx from 'clsx';
 import dynamic from 'next/dynamic';
 import confetti from 'canvas-confetti';
 

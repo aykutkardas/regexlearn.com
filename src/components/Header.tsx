@@ -1,5 +1,5 @@
 import { FormattedMessage } from 'react-intl';
-import cx from 'classnames';
+import cx from 'clsx';
 
 import Icon from 'src/components/Icon';
 import Logo from 'src/components/Logo';
