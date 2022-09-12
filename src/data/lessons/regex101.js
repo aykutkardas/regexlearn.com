@@ -1,4 +1,3 @@
-import isEmpty from 'lodash.isempty';
 import xor from 'lodash.xor';
 
 const regex101 = [
@@ -56,7 +55,7 @@ const regex101 = [
     customValidate: regex => {
       const $regex = new RegExp(`^b\\[([aeiou]{5})\\]r$`);
       const result = regex.match($regex) || [];
-      return isEmpty(xor(result?.[1]?.split(''), 'aeiou'.split('')));
+      return xor(result?.[1]?.split(''), 'aeiou'.split('')).length === 0;
     },
     cursorPosition: 2,
     answer: ['bar', 'ber', 'bir', 'bor', 'bur'],
@@ -135,7 +134,7 @@ const regex101 = [
     customValidate: regex => {
       const $regex = new RegExp(`^\\[([bdf]{3})\\]eer$`);
       const result = regex.match($regex);
-      return isEmpty(xor(result?.[1]?.split(''), 'bdf'.split('')));
+      return xor(result?.[1]?.split(''), 'bdf'.split('')).length === 0;
     },
     answer: ['beer', 'deer', 'feer'],
   },
