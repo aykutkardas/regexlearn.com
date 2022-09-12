@@ -1,5 +1,5 @@
 import { useRef } from 'react';
-import cx from 'classnames';
+import cx from 'clsx';
 import { Popover } from '@headlessui/react';
 import useEventListener from '@use-it/event-listener';
 import { FormattedMessage } from 'react-intl';

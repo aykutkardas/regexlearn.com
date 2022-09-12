@@ -3,7 +3,7 @@ import 'draft-js/dist/Draft.css';
 import { useState, useEffect, useRef, FormEvent } from 'react';
 import { Editor, EditorState, CompositeDecorator, ContentState, ContentBlock } from 'draft-js';
 import { useIntl } from 'react-intl';
-import cx from 'classnames';
+import cx from 'clsx';
 
 import FlagBox from 'src/components/FlagBox';
 import ReportPlayground from 'src/components/ReportPlayground';

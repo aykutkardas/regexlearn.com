@@ -1,5 +1,5 @@
 import { FormattedMessage, useIntl } from 'react-intl';
-import cx from 'classnames';
+import cx from 'clsx';
 
 import Button, { ButtonVariants } from 'src/components/Button';
 import IntlLink from 'src/components/IntlLink';

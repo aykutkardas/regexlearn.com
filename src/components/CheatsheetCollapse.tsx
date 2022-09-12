@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import cx from 'classnames';
+import cx from 'clsx';
 
 import CheatsheetDemo from './CheatsheetDemo';
 import { FormattedMessage } from 'react-intl';

@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useIntl } from 'react-intl';
-import cx from 'classnames';
+import cx from 'clsx';
 
 import checkRegex from 'src/utils/checkRegex';
 import tagWrapper from 'src/utils/tagWrapper';

@@ -1,7 +1,7 @@
 import { Fragment, useEffect, useState } from 'react';
 import { useIntl, FormattedMessage } from 'react-intl';
 import lookie from 'lookie';
-import cx from 'classnames';
+import cx from 'clsx';
 
 import IntlLink from 'src/components/IntlLink';
 import Icon from 'src/components/Icon';
