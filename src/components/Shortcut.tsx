@@ -1,20 +1,15 @@
-import cx from 'classnames';
-
-import useOS from 'src/utils/useOS';
+import { isMacOS, isMobile } from 'src/utils/useOS';
 
 interface Props {
   command: string;
 }
 
 const Shortcut = ({ command }: Props) => {
-  const { isMacOS, isDesktop } = useOS();
+  if (isMobile()) return null;
 
-  if (!isDesktop) return null;
+  const altKey = isMacOS() ? '⌥' : 'Alt';
 
-  const readableCommand = command
-    .replace(/\+/g, ' + ')
-    .replace(/alt/g, isMacOS ? 'option' : 'alt')
-    .toUpperCase();
+  const readableCommand = command.replace(/\+/g, ' + ').replace(/alt/g, altKey).toUpperCase();
 
   return (
     <div
