@@ -1,9 +1,25 @@
 import 'draft-js/dist/Draft.css';
 
 import { useState, useEffect, useRef, FormEvent } from 'react';
-import { Editor, EditorState, CompositeDecorator, ContentState, ContentBlock } from 'draft-js';
 import { useIntl } from 'react-intl';
 import cx from 'clsx';
+
+import {
+  Editor,
+  EditorState,
+  CompositeDecorator,
+  ContentState,
+  ContentBlock,
+  getDefaultKeyBinding,
+} from 'draft-js';
+
+function myKeyBindingFn(e): string | null {
+  if (e.ctrlKey && e.key.toLowerCase() === 'm') {
+    e.preventDefault();
+    return null;
+  }
+  return getDefaultKeyBinding(e);
+}
 
 import FlagBox from 'src/components/FlagBox';
 import ReportPlayground from 'src/components/ReportPlayground';
@@ -153,6 +169,7 @@ const Playground = () => {
             editorState={editorState}
             onChange={setEditorState}
             placeholder="Text here"
+            keyBindingFn={myKeyBindingFn}
           />
         </div>
         <ReportPlayground />
