@@ -8,13 +8,18 @@ const Shortcut = ({ command }: Props) => {
   if (isMobile()) return null;
 
   const altKey = isMacOS() ? '⌥' : 'Alt';
+  const ctrlKey = !isMacOS() ? 'Cmd' : 'Ctrl';
 
-  const readableCommand = command.replace(/\+/g, ' + ').replace(/alt/g, altKey).toUpperCase();
+  const readableCommand = command
+    .replace(/\+/g, ' + ')
+    .replace(/alt/g, altKey)
+    .replace(/ctrl/g, ctrlKey)
+    .toUpperCase();
 
   return (
     <div
       role="button"
-      className="hidden md:inline-flex p-1 m-1 text-[9px] bg-neutral-500/20 rounded-sm text-neutral-400"
+      className="hidden font-[arial] tracking-tighter  md:inline-flex px-2 py-1 border-b-2 border-neutral-600  m-1 text-[9px] bg-neutral-500/20 rounded-md text-neutral-400"
     >
       {readableCommand}
     </div>

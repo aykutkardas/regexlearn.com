@@ -40,7 +40,7 @@ const FlagBox = ({ flags, setFlags }: FlagBoxProps) => {
   };
 
   const handleFlagKey = event => {
-    if (!event.altKey) return;
+    if (!event.ctrlKey && !event.metaKey) return;
 
     const key = event.key.toLowerCase();
     const isValidKey = 'gmi'.includes(key);
