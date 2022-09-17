@@ -28,7 +28,7 @@ const CheatsheetCollapse = ({ title, data }: CheatsheetCollapseProps) => {
         onKeyDown={toggle}
         className={cx(
           'h-6 select-none cursor-pointer text-sm  hover:text-neutral-50 focus:text-neutral-50 outline-regreen-400',
-          open ? 'text-neutral-50' : 'text-neutral-300',
+          open ? 'text-neutral-50' : 'text-neutral-400',
         )}
         tabIndex={0}
         role="button"

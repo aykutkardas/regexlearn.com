@@ -33,17 +33,17 @@ const ReportPlayground = () => {
   }, [lang]);
 
   return (
-    <div className="cursor-default absolute -bottom-6 left-4 select-none">
-      <a
-        className="inline-flex items-center text-[10px] text-neutral-400 hover:text-green-300"
-        href={`https://github.com/aykutkardas/regexlearn.com/issues/new?title=${title}&body=${body}`}
-        target="_blank"
-        rel="noreferrer"
-      >
-        <Icon icon="bell" size={10} className="mr-2" />
+    <a
+      className="inline-flex items-center text-xs p-2 text-neutral-400 hover:opacity-70 transition h-4"
+      href={`https://github.com/aykutkardas/regexlearn.com/issues/new?title=${title}&body=${body}`}
+      target="_blank"
+      rel="noreferrer"
+    >
+      <Icon icon="bug" size={16} className="mr-1" />
+      <span className="text-neutral-300">
         <FormattedMessage id="general.reportStep" />
-      </a>
-    </div>
+      </span>
+    </a>
   );
 };
 

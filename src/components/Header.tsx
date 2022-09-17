@@ -6,6 +6,8 @@ import Logo from 'src/components/Logo';
 import IntlLink from 'src/components/IntlLink';
 import LanguageSelect from 'src/components/LanguageSelect';
 
+import packageInfo from 'package.json';
+
 interface Props {
   page?: 'home' | 'learn' | 'learn-detail' | 'cheatsheet' | 'playground';
 }
@@ -21,8 +23,13 @@ const Header = ({ page }: Props) => {
       })}
     >
       <div className="flex items-center justify-center h-20">
-        <div className="flex-1">
+        <div className="flex-1 inline-flex items-baseline">
           <Logo />
+          {isPlaygroundPage && (
+            <span className="text-xs ml-1 relative bottom-1 text-neutral-500">
+              v{packageInfo.version}
+            </span>
+          )}
         </div>
         {isLearnDetail && <div id="ProgressArea" className="flex justify-center flex-1" />}
         <div className="flex flex-1 items-center text-sm justify-end gap-2 sm:gap-4">

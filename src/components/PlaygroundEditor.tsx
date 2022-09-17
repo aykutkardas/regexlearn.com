@@ -22,7 +22,6 @@ function myKeyBindingFn(e): string | null {
 }
 
 import FlagBox from 'src/components/FlagBox';
-import ReportPlayground from 'src/components/ReportPlayground';
 import setCaretPosition from 'src/utils/setCaretPosition';
 
 const Highlight = ({ children }) => (
@@ -172,7 +171,6 @@ const Playground = () => {
             keyBindingFn={myKeyBindingFn}
           />
         </div>
-        <ReportPlayground />
       </div>
     </>
   );
