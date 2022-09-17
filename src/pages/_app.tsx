@@ -11,7 +11,7 @@ require('src/migration').migration();
 const MyApp = ({ Component, pageProps }: AppProps) => {
   useEffect(() => {
     const preventBrowserShortcut = e => {
-      if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'g') {
+      if (e.ctrlKey && e.key.toLowerCase() === 'g') {
         e.preventDefault();
       }
     };

@@ -161,7 +161,7 @@ const InteractiveArea = ({ isShow, setIsOpenModal }: Props) => {
   };
 
   const handleChangeStep = e => {
-    if (e.ctrlKey || e.metaKey) return;
+    if (e.ctrlKey) return;
 
     if (e.key === 'Enter') {
       e.preventDefault();
