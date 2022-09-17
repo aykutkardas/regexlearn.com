@@ -113,35 +113,41 @@ const Playground = () => {
     <>
       <div
         className={cx(
-          'bg-jet-500 my-5 p-3 text-xs rounded-md relative shadow-lg tracking-wider text-neutral-300',
-          'block text-left w-full items-start',
-          'before:content-[attr(data-title)] before:absolute before:-top-4 before:left-2 before:bg-jet-500 before:text-[10px] before:text-neutral-400 before:py-1 before:px-2 before:rounded-md',
+          'bg-jet-500 rounded-md relative tracking-wider text-neutral-300',
+          'w-full items-start flex flex-col',
         )}
-        data-title={formatMessage({ id: 'general.regex' })}
-        onClick={() => regexInput.current.focus()}
       >
+        <span className="mb-2 text-[10px] text-neutral-400">
+          {formatMessage({ id: 'general.regex' })}
+        </span>
         <input
           ref={regexInput}
-          className="border-0 rounded-md py-5 focus:outline-none focus:ring-neutral-700 tracking-wider w-full text-sm leading-5 text-regreen-400 bg-neutral-600/40 h-7"
+          className="border-0 rounded-md py-5 focus:outline-none focus:ring-neutral-700 tracking-wider w-full md:text-sm leading-5 text-regreen-400 bg-neutral-600/40 h-7"
           type="text"
           onChange={e => onChangeRegex(e)}
           value={regex}
           spellCheck={false}
         />
       </div>
-      <div className="mb-5 pb-3 pl-3">
+      <div className="py-3">
         <FlagBox flags={flags} setFlags={onChangeFlags} />
       </div>
       <div
         className={cx(
-          'bg-jet-500 my-5 p-3 text-xs rounded-md relative shadow-lg tracking-wider text-neutral-300',
-          'block text-left w-full items-start',
-          'before:content-[attr(data-title)] before:absolute before:-top-4 before:left-2 before:bg-jet-500 before:text-[10px] before:text-neutral-400 before:py-1 before:px-2 before:rounded-md',
+          'bg-jet-500 rounded-md relative tracking-wider text-neutral-300 h-auto',
+          'flex flex-col text-left w-full items-start',
         )}
-        data-title={formatMessage({ id: 'general.text' })}
         onClick={() => editor.current.focus()}
       >
-        <div className="overflow-y-scroll bg-neutral-700/40 rounded-lg w-full overflow-x-hidden leading-6 p-2 h-[350px]">
+        <span className="mb-2 text-[10px] text-neutral-400">
+          {formatMessage({ id: 'general.text' })}
+        </span>
+        <div
+          className={cx(
+            'overflow-y-scroll md:text-sm bg-neutral-700/40 rounded-lg w-full overflow-x-hidden !leading-7 p-2',
+            '[&_.public-DraftEditor-content]:min-h-[calc(100vh-5rem-13rem)]  [&_.public-DraftEditor-content]:ring-0',
+          )}
+        >
           <Editor
             ref={editor}
             editorState={editorState}
