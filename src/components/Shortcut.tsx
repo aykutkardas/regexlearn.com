@@ -8,7 +8,7 @@ const Shortcut = ({ command }: Props) => {
   if (isMobile()) return null;
 
   const altKey = isMacOS() ? '⌥' : 'Alt';
-  const ctrlKey = !isMacOS() ? 'Cmd' : 'Ctrl';
+  const ctrlKey = isMacOS() ? 'Cmd' : 'Ctrl';
 
   const readableCommand = command
     .replace(/\+/g, ' + ')
