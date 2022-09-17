@@ -27,7 +27,7 @@ const PageLesson = ({ lesson }: PageLessonProps) => {
       </CustomHead>
       <InteractiveAreaProvider key={lessonData} lesson={lesson} lessonData={lessonData}>
         <div className="px-3 flex flex-col flex-1 justify-between">
-          <Header isLearnPage />
+          <Header page="learn-detail" />
           <Step />
           <LearnFooter />
         </div>
