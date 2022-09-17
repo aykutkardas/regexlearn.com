@@ -19,7 +19,7 @@ const Shortcut = ({ command }: Props) => {
   return (
     <div
       role="button"
-      className="hidden font-[arial] tracking-tighter  md:inline-flex px-2 py-1 border-b-2 border-neutral-600  m-1 text-[9px] bg-neutral-500/20 rounded-md text-neutral-400"
+      className="hidden tracking-tighter md:inline-flex p-1 border-b-2 border-neutral-600 m-1 text-[9px] bg-neutral-500/20 rounded-md text-neutral-400"
     >
       {readableCommand}
     </div>
