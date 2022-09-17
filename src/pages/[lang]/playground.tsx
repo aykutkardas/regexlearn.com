@@ -20,10 +20,10 @@ const PagePlayground = () => (
     <div className="container-full flex flex-col h-screen items-between flex-1 bg-neutral-800">
       <Header page="playground" />
       <div className="flex flex-1 h-full flex-col items-center justify-center sm:flex-row ">
-        <div className="w-full sm:w-4/6 xl:w-5/6 h-[calc(100vh-5rem)] overflow-y-scroll p-4">
+        <div className="w-full  h-[calc(100vh-5rem)] overflow-y-scroll p-4">
           <PlaygroundEditor />
         </div>
-        <div className="w-full hidden sm:block sm:w-2/6 xl:w-1/6 h-full border-l border-neutral-700">
+        <div className="hidden sm:block w-[400px] h-full border-l border-neutral-700">
           <PlaygroundSidebar />
         </div>
       </div>
