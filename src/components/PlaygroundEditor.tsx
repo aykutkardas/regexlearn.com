@@ -45,7 +45,17 @@ const Playground = () => {
   );
 
   const onChangeFlags = flags => {
-    setFlags(flags);
+    let newFlags = '';
+    if (flags.includes('g')) {
+      newFlags += 'g';
+    }
+    if (flags.includes('m')) {
+      newFlags += 'm';
+    }
+    if (flags.includes('i')) {
+      newFlags += 'i';
+    }
+    setFlags(newFlags);
   };
 
   const onChangeRegex = (event: FormEvent<HTMLInputElement>) => {
@@ -135,14 +145,20 @@ const Playground = () => {
         <span className="mb-2 text-[10px] text-neutral-400">
           {formatMessage({ id: 'general.regex' })}
         </span>
-        <input
-          ref={regexInput}
-          className="border-0 rounded-md py-5 focus:outline-none focus:ring-neutral-700 tracking-wider w-full md:text-sm leading-5 text-regreen-400 bg-neutral-600/40 h-7"
-          type="text"
-          onChange={e => onChangeRegex(e)}
-          value={regex}
-          spellCheck={false}
-        />
+        <div className="flex items-center px-2 text-neutral-500 tracking-wider w-full rounded-md bg-neutral-600/40 h-7 md:text-sm">
+          <span>/</span>
+          <input
+            ref={regexInput}
+            className="border-0 py-5 flex-1 focus:outline-none md:text-sm leading-5 text-regreen-400 bg-transparent focus:ring-0"
+            type="text"
+            onChange={e => onChangeRegex(e)}
+            value={regex}
+            spellCheck={false}
+          />
+          <span>
+            /<span className="text-green-500">{flags}</span>
+          </span>
+        </div>
       </div>
       <div className="py-3">
         <FlagBox flags={flags} setFlags={onChangeFlags} />
