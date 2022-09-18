@@ -149,9 +149,19 @@ const InteractiveArea = ({ isShow, setIsOpenModal }: Props) => {
   };
 
   const handleChangeFlags = flags => {
-    setFlags(flags);
+    let newFlags = '';
+    if (flags.includes('g')) {
+      newFlags += 'g';
+    }
+    if (flags.includes('m')) {
+      newFlags += 'm';
+    }
+    if (flags.includes('i')) {
+      newFlags += 'i';
+    }
+    setFlags(newFlags);
     setIsChanged(true);
-    applyRegex(regex, flags);
+    applyRegex(regex, newFlags);
   };
 
   const handleFocus = e => {
