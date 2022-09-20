@@ -13,6 +13,9 @@ import {
   getDefaultKeyBinding,
 } from 'draft-js';
 
+import setCaretPosition from 'src/utils/setCaretPosition';
+import FlagSelect from './FlagSelect';
+
 function myKeyBindingFn(e): string | null {
   if (e.ctrlKey && e.key.toLowerCase() === 'm') {
     e.preventDefault();
@@ -20,9 +23,6 @@ function myKeyBindingFn(e): string | null {
   }
   return getDefaultKeyBinding(e);
 }
-
-import FlagBox from 'src/components/FlagBox';
-import setCaretPosition from 'src/utils/setCaretPosition';
 
 const Highlight = ({ children }) => (
   <span className="shadow-sm h-3 mx-1 my-[1px] px-1 py-[2px] rounded-md text-white bg-green-500">
@@ -138,18 +138,18 @@ const Playground = () => {
     <>
       <div
         className={cx(
-          'bg-jet-500 rounded-md relative tracking-wider text-neutral-300',
+          'bg-jet-500 rounded-md relative tracking-wider text-neutral-300 mb-5',
           'w-full items-start flex flex-col',
         )}
       >
-        <span className="mb-2 text-[10px] text-neutral-400">
+        <span className="bg-neutral-600/40 px-2 py-1 rounded-t-md ml-3 relative text-[10px] text-neutral-400">
           {formatMessage({ id: 'general.regex' })}
         </span>
-        <div className="flex items-center px-2 text-neutral-500 tracking-wider w-full rounded-md bg-neutral-600/40 h-7 md:text-sm">
-          <span>/</span>
+        <div className="flex items-center px-1 py-6 text-neutral-500 tracking-wider w-full rounded-md bg-neutral-600/40 h-7 md:text-sm">
+          <span className="ml-3">/</span>
           <input
             ref={regexInput}
-            className="border-0 py-5 flex-1 focus:outline-none md:text-sm leading-5 text-regreen-400 bg-transparent focus:ring-0"
+            className="border-0 px-1 flex-1 focus:outline-none md:text-sm leading-5 text-regreen-400 bg-transparent focus:ring-0"
             type="text"
             onChange={e => onChangeRegex(e)}
             value={regex}
@@ -158,11 +158,10 @@ const Playground = () => {
           <span>
             /<span className="text-green-500">{flags}</span>
           </span>
+          <FlagSelect flags={flags} setFlags={onChangeFlags} />
         </div>
       </div>
-      <div className="py-3">
-        <FlagBox flags={flags} setFlags={onChangeFlags} />
-      </div>
+
       <div
         className={cx(
           'bg-jet-500 rounded-md relative tracking-wider text-neutral-300 h-auto',
@@ -170,13 +169,13 @@ const Playground = () => {
         )}
         onClick={() => editor.current.focus()}
       >
-        <span className="mb-2 text-[10px] text-neutral-400">
+        <span className="bg-neutral-700/40 px-2 py-1 rounded-t-md ml-3 relative text-[10px] text-neutral-400">
           {formatMessage({ id: 'general.text' })}
         </span>
         <div
           className={cx(
             'overflow-y-scroll md:text-sm bg-neutral-700/40 rounded-lg w-full overflow-x-hidden !leading-7 p-2',
-            '[&_.public-DraftEditor-content]:min-h-[calc(100vh-5rem-13rem)]  [&_.public-DraftEditor-content]:ring-0',
+            '[&_.public-DraftEditor-content]:min-h-[calc(100vh-5rem-10rem)]  [&_.public-DraftEditor-content]:ring-0',
           )}
         >
           <Editor
