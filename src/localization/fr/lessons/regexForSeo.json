@@ -6,7 +6,7 @@
   "lesson.regexForSeo.usage.description": "Vous pouvez utiliser les Regex pour le référencement sur des plateformes telles que `Google Analytics`, `Google Data Studio`, `Google Sheets`, `Google Search Console`, `Ahrefs`, `Deepcrawl`, `Screaming Frog`. Elle est également fréquemment utilisée dans les fichiers `.htaccess` et `robots.txt (syntaxe de type regex)`. Voici un exemple de regex qui sélectionnera uniquement les textes de la liste commençant par `Google`.",
 
   "lesson.regexForSeo.basics.title": "Principes de base",
-  "lesson.regexForSeo.basics.description": "Jetons un coup d'œil à certaines Regex que vous utiliserez fréquemment. Nous vous recommandons de consulter le tutoriel `Regex 101` pour en savoir plus. Tapez `Oui` pour commencer.",
+  "lesson.regexForSeo.basics.description": "Jetons un coup d'œil à certaines Regex que vous utiliserez fréquemment. Nous vous recommandons de consulter le tutoriel `Regex 101` pour en savoir plus. Tapez `Yes` pour commencer.",
 
   "lesson.regexForSeo.or.title": "Opérateur Ou `|`",
   "lesson.regexForSeo.or.description": "Nous utilisons l'opérateur Ou `|` pour filtrer des expressions multiples. Par exemple, filtrez un texte contenant `seo` et `regex` en écrivant les deux mots, en les séparant avec l'opérateur Ou `|`.",
@@ -27,7 +27,7 @@
   "lesson.regexForSeo.caret.description": "Disons que nous avons une liste d'URLs, et que nous voulons trouver seulement les URLs qui commencent par `http`. Mais les URLs contiennent aussi `http` dans d'autres parties que leur début. Ajoutez donc un signe d'insertion `^` au début de l'expression suivante pour filtrer uniquement celles qui commencent par `http`.",
 
   "lesson.regexForSeo.dollarAndEscape.title": "Signe du Dollard `$` et l'anti-slash `\\`",
-  "lesson.regexForSeo.dollarAndEscape.description": "Nous avons à nouveau une liste d'URL. Nous voulons trouver uniquement les URLs se terminant par `.htm`.\nComme le point `.` est un caractère spécial qui correspond à tout, nous devons d'abord désactiver le point avant `htm` en utilisant le caractère d'échappement `\\`. Ceci s'applique à tous les caractères spéciaux.\\n\\nAjoutez ensuite un signe `$` à la fin de l'expression. Cela garantit que le texte à filtrer se termine par l'expression écrite avant.",
+  "lesson.regexForSeo.dollarAndEscape.description": "Nous avons à nouveau une liste d'URL. Nous voulons trouver uniquement les URLs se terminant par `.htm`.\\n\\nComme le point `.` est un caractère spécial qui correspond à tout, nous devons d'abord désactiver le point avant `htm` en utilisant le caractère d'échappement `\\`. Ceci s'applique à tous les caractères spéciaux.\\n\\nAjoutez ensuite un signe `$` à la fin de l'expression. Cela garantit que le texte à filtrer se termine par l'expression écrite avant.",
 
   "lesson.regexForSeo.limitation.title": "Restrictions de longueur `{n}`",
   "lesson.regexForSeo.limitation.description": "On peut vouloir filtrer les résultats par longueur de caractères. Par exemple, pour filtrer les URL qui font `35` caractères, tapez le nombre que vous voulez utiliser pour la longueur, `{35}`, en utilisant des accolades à la fin du point `.`.",
