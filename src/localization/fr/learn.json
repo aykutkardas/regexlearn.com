@@ -21,7 +21,7 @@
   "steps.characterSet.description": "Si l'un des caractères d'un mot peut être divers, on l'écrit entre crochets `[]` avec tous les caractères alternatifs. Par exemple, pour écrire une expression qui peut trouver tous les mots du texte, on tape les caractères `a`, `e`, `i`, `o`, `u` adjacents entre crochets `[]`.",
 
   "steps.negatedCharacterSet.title": "Jeux de caractères négatifs `[^abc]`",
-  "steps.negatedCharacterSet.description": "Pour trouver tous les mots du texte ci-dessous, à l'exception de `ber` et `bor`, tapez `e` et `o` côte à côte après le signe d'insertion `^` entre crochets `[]`.",
+  "steps.negatedCharacterSet.description": "Pour trouver tous les mots du texte ci-dessous, à l'exception de `ber` et `bor`, tapez `e` et `o` successivement après le signe d'insertion `^` entre crochets `[]`.",
 
   "steps.range.title": "Plage de lettres  `[a-z]`",
   "steps.range.description": "Pour trouver les lettres dans l'intervalle spécifié, la lettre de départ et la lettre d'arrivée sont écrites entre crochets `[]` avec un tiret entre les deux `-`. Cette expression est sensible à la casse. Tapez l'expression qui sélectionnera toutes les lettres minuscules entre `e` et `o`, y compris elles-mêmes.",
@@ -51,7 +51,7 @@
   "steps.repetitions.description": "Certains caractères spéciaux sont utilisés pour indiquer combien de fois un caractère sera répété dans le texte. Ces caractères spéciaux sont le plus `+`, l'astérisque `*`, et le point d'interrogation `?`.",
 
   "steps.asterisk.title": "Astérisque `*`",
-  "steps.asterisk.description": "Nous mettons un astérisque `*` à la fin pour indiquer qu'un caractère ne correspond pas du tout ou peut correspondre plusieurs fois. Par exemple, indiquer que la lettre `e` ne doit jamais apparaître dans le texte, ou qu'elle peut apparaître une ou plusieurs fois côte à côte.",
+  "steps.asterisk.description": "Nous mettons un astérisque `*` à la fin pour indiquer qu'un caractère ne correspond pas du tout ou peut correspondre plusieurs fois. Par exemple, indiquer que la lettre `e` ne doit jamais apparaître dans le texte, ou qu'elle peut apparaître une ou plusieurs fois successivement.",
 
   "steps.plusCharacter.title": "Signe Plus `+`",
   "steps.plusCharacter.description": "Pour indiquer qu'un caractère peut apparaître une ou plusieurs fois, nous mettons un signe plus `+` à la fin. Par exemple, pour indiquer que la lettre `e` peut apparaître une ou plusieurs fois dans le texte.",
@@ -78,13 +78,13 @@
   "examples.questionMark.description": "Écrivez l'expression indiquant que la lettre `n` est facultative dans le texte, en utilisant le point d'interrogation `?`. Ainsi, les deux mots `a` et `an` peuvent être sélectionnés.",
 
   "examples.quantifier.title": "Practique: Accolades - 1",
-  "examples.quantifier.description": "Écrivez l'expression utilisant les accolades `{}` qui trouvera les textes contenant les chiffres `4` côte à côte.",
+  "examples.quantifier.description": "Écrivez l'expression utilisant les accolades `{}` qui trouvera les textes contenant les chiffres `4` chiffres successifs. Pour rappel, la plage `[0-9]` correspondra à un seul chiffre.",
 
   "examples.quantifierMin.title": "Practique: Accolades - 2",
-  "examples.quantifierMin.description": "Écrivez l'expression utilisant les accolades `{}` qui trouvera les textes contenant au moins `2` chiffres côte à côte.",
+  "examples.quantifierMin.description": "Écrivez l'expression utilisant les accolades `{}` qui trouvera les textes contenant au moins `2` chiffres successifs.",
 
   "examples.quantifierRange.title": "Practique: Accolades - 3",
-  "examples.quantifierRange.description": "Écrivez l'expression utilisant les accolades `{}` qui trouvera les textes contenant au moins `1` et au plus `4` chiffres côte à côte.",
+  "examples.quantifierRange.description": "Écrivez l'expression utilisant les accolades `{}` qui trouvera les textes contenant au moins `1` et au plus `4` chiffres successifs.",
 
   "steps.groupping.title": "Parenthèses `( )`: Grouper",
   "steps.groupping.description": "Nous pouvons grouper une expression et utiliser ces groupes pour faire référence ou appliquer certaines règles. Pour grouper une expression, on met `()` entre parenthèses. Pour l'instant, regroupons simplement `haa` ci-dessous.",
@@ -133,7 +133,7 @@
 
   "steps.negativeLookahead.title": "Regard avant Négatif: `(?!)`",
   "steps.negativeLookahead.description": "Par exemple, nous voulons sélectionner des chiffres autres que la valeur de l'heure dans le texte. Par conséquent, nous devons écrire l'expression négative `( ?!)` après notre expression pour sélectionner uniquement les valeurs numériques qui n'ont pas `PM` après elles. Inclure `PM` après le signe `!` à l'intérieur des parenthèses",
-  
+
   "steps.positiveLookbehind.title": "Regard derrière positif: `(?<=)`",
   "steps.positiveLookbehind.description": "Par exemple, nous voulons sélectionner la valeur du prix dans le texte. Par conséquent, pour sélectionner uniquement les valeurs numériques précédées de `$`, nous devons écrire l'expression positive lookbehind `(?<=)` avant notre expression. Ajoutez `\\$` après le signe `=` à l'intérieur des parenthèses.",
 
@@ -151,7 +151,7 @@
 
   "steps.flagsCaseInsensitive.title": "Drapeau insensible à la casse",
   "steps.flagsCaseInsensitive.description": "Afin de supprimer la sensibilité à la casse de l'expression que nous avons écrite, nous devons activer le drapeau `case-insensitive`.",
-  
+
   "steps.greedyMatching.title": "Correspondance gourmande",
   "steps.greedyMatching.description": "Le Regex effectue une correspondance gourmande par défaut. Cela signifie que la mise en correspondance sera la plus longue possible. Regardez l'exemple ci-dessous. Il s'agit de toute correspondance qui se termine par `r` et peut être n'importe quel caractère précédé par celui-ci. Mais elle ne s'arrête pas à la première lettre `r`.",
 
