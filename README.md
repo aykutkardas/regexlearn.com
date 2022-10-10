@@ -49,8 +49,6 @@ _Please create an issue to add your own language._
 
 <h4 align="center"><a href="https://www.buymeacoffee.com/aykutkardas">Buy Me a Coffee!</a></h4>
 
-<h4 align="center"><a href="https://www.patreon.com/bePatron?u=65063346">Become a Patron!</a></h4>
-
 <br>
 
 <h2 align="center">Preview</h2>
