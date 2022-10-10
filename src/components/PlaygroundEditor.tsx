@@ -175,8 +175,8 @@ const Playground = () => {
         <div className="bg-neutral-700/40 rounded-lg w-full p-2 flex">
           <div
             className={cx(
-              'overflow-y-scroll h-[calc(100vh-5rem-10rem)] flex md:text-sm  overflow-x-hidden !leading-7',
-              '[&_.public-DraftEditor-content]:min-h-full  [&_.public-DraftEditor-content]:ring-0',
+              'overflow-y-scroll h-[calc(100vh-5rem-10rem)] w-full flex md:text-sm  overflow-x-hidden !leading-7',
+              '[&_.public-DraftEditor-content]:min-h-full [&_.DraftEditor-root]:w-full  [&_.public-DraftEditor-content]:ring-0',
             )}
           >
             <Editor
