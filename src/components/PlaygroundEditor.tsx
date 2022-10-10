@@ -172,19 +172,21 @@ const Playground = () => {
         <span className="bg-neutral-700/40 px-2 py-1 rounded-t-md ml-3 relative text-[10px] text-neutral-400">
           {formatMessage({ id: 'general.text' })}
         </span>
-        <div
-          className={cx(
-            'overflow-y-scroll md:text-sm bg-neutral-700/40 rounded-lg w-full overflow-x-hidden !leading-7 p-2',
-            '[&_.public-DraftEditor-content]:min-h-[calc(100vh-5rem-10rem)]  [&_.public-DraftEditor-content]:ring-0',
-          )}
-        >
-          <Editor
-            ref={editor}
-            editorState={editorState}
-            onChange={setEditorState}
-            placeholder="Text here"
-            keyBindingFn={myKeyBindingFn}
-          />
+        <div className="bg-neutral-700/40 rounded-lg w-full p-2 flex">
+          <div
+            className={cx(
+              'overflow-y-scroll h-[calc(100vh-5rem-10rem)] flex md:text-sm  overflow-x-hidden !leading-7',
+              '[&_.public-DraftEditor-content]:min-h-full  [&_.public-DraftEditor-content]:ring-0',
+            )}
+          >
+            <Editor
+              ref={editor}
+              editorState={editorState}
+              onChange={setEditorState}
+              placeholder="Text here"
+              keyBindingFn={myKeyBindingFn}
+            />
+          </div>
         </div>
       </div>
     </>
