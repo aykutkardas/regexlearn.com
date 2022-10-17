@@ -43,6 +43,6 @@
   "lesson.regexForSeo.htaccess.title": ".htaccess",
   "lesson.regexForSeo.htaccess.description": "Aquí hay un ejemplo de uso de regex en el archivo `.htaccess`. En el ejemplo los enlaces con extensión `php` son dirigidos a extensiones `html` con código `301`.",
 
-  "lesson.regexForSeo.outro.title": "Otro",
+  "lesson.regexForSeo.outro.title": "Final",
   "lesson.regexForSeo.outro.description": "Conocer Regex es una habilidad que incrementa la productividad en cualquier plataforma que permita usar regex. Una vez que empieces a usar y a mejorar esta habilidad te ayudará a completar muchas tareas repetitivas rápidamente y te ahorrará tiempo para otras cosas. Para entender mejor los fundamentos de Regex puedes visitar el tutorial de `Regex 101`. Puedes usar la página de `Playground` para probar tus expresiones en tus propios textos."
 }
