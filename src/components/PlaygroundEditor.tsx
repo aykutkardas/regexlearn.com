@@ -3,6 +3,8 @@ import 'draft-js/dist/Draft.css';
 import { useState, useEffect, useRef, FormEvent } from 'react';
 import { useIntl } from 'react-intl';
 import cx from 'clsx';
+import { parse } from 'query-string';
+import axios from 'axios';
 
 import {
   Editor,
@@ -15,6 +17,9 @@ import {
 
 import setCaretPosition from 'src/utils/setCaretPosition';
 import FlagSelect from './FlagSelect';
+import Button, { ButtonVariants } from './Button';
+
+axios.defaults.baseURL = process.env.NEXT_PUBLIC_BASE_URL;
 
 function myKeyBindingFn(e): string | null {
   if (e.ctrlKey && e.key.toLowerCase() === 'm') {
@@ -38,11 +43,11 @@ const Playground = () => {
   const { formatMessage } = useIntl();
   const regexInput = useRef<HTMLInputElement>(null);
   const editor = useRef(null);
-  const [regex, setRegex] = useState('[A-Z]\\w+');
-  const [flags, setFlags] = useState('g');
-  const [editorState, setEditorState] = useState<EditorState>(
-    EditorState.createWithContent(initialContent),
-  );
+  const [state, setState] = useState({
+    regex: '[A-Z]\\w+',
+    flags: 'g',
+    editorState: EditorState.createEmpty(),
+  });
 
   const onChangeFlags = flags => {
     let newFlags = '';
@@ -55,20 +60,25 @@ const Playground = () => {
     if (flags.includes('i')) {
       newFlags += 'i';
     }
-    setFlags(newFlags);
+    setState({
+      regex: state.regex,
+      flags: newFlags,
+      editorState: checkRegex(state.regex, newFlags, state.editorState),
+    });
   };
 
   const onChangeRegex = (event: FormEvent<HTMLInputElement>) => {
-    setRegex(event?.currentTarget?.value || '');
+    const regex = event?.currentTarget?.value || '';
+    setState({ ...state, regex, editorState: checkRegex(regex, state.flags, state.editorState) });
   };
 
-  const checkRegex = () => {
+  const checkRegex = (regex, flags, editorState) => {
     let rowIndex = 0;
     let matchCount = 0;
 
-    if (!regex) {
+    if (!state.regex) {
       const content = editorState.getCurrentContent();
-      setEditorState(EditorState.createWithContent(content));
+      setState({ ...state, editorState: EditorState.createWithContent(content) });
       return;
     }
 
@@ -93,9 +103,6 @@ const Playground = () => {
 
       if (regex && matches.length) {
         matches.forEach(match => callback(match.index, match.index + match[0].length));
-      } else {
-        const newContent = ContentState.createFromText(text);
-        setEditorState(EditorState.createWithContent(newContent));
       }
 
       if (matches.length) {
@@ -118,31 +125,69 @@ const Playground = () => {
       },
     ]);
 
-    const newEditorState = EditorState.createWithContent(
-      editorState.getCurrentContent(),
-      HighlightDecorator,
-    );
-
-    setEditorState(newEditorState);
+    return EditorState.createWithContent(editorState.getCurrentContent(), HighlightDecorator);
   };
 
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  useEffect(checkRegex, [regex, flags]);
+  const handleShare = () => {
+    axios
+      .post('/shares', {
+        regex: state.regex,
+        flags: state.flags,
+        text: state.editorState.getCurrentContent().getPlainText(),
+      })
+      .then(res => {
+        let newURL = window.location.href;
+
+        if (window.location.href.includes('?id=')) {
+          newURL = window.location.href.replace(/id=.*/, `id=${res.data._id}`);
+        } else {
+          newURL = `${window.location.href}?id=${res.data._id}`;
+        }
+        window.location.href = newURL;
+      })
+      .catch(err => {});
+  };
 
   useEffect(() => {
-    setCaretPosition(regexInput?.current, regex.length);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    const { id } = parse(window.location.search);
+
+    if (!id) {
+      setState({
+        ...state,
+        editorState: checkRegex(
+          state.regex,
+          state.flags,
+          EditorState.createWithContent(initialContent),
+        ),
+      });
+      setCaretPosition(regexInput?.current, state.regex.length);
+      return;
+    }
+
+    axios.get(`/shares/${id}`).then(res => {
+      const { regex, flags, text } = res.data;
+      setState({
+        flags,
+        regex,
+        editorState: checkRegex(
+          regex,
+          flags,
+          EditorState.createWithContent(ContentState.createFromText(text)),
+        ),
+      });
+      setCaretPosition(regexInput?.current, regex.length);
+    });
   }, []);
 
   return (
     <>
       <div
         className={cx(
-          'bg-jet-500 rounded-md relative tracking-wider text-neutral-300 mb-5',
-          'w-full items-start flex flex-col',
+          'bg-jet-500 rounded-md relative tracking-wider text-neutral-300 mb-5 mt-4',
+          'w-full flex items-center',
         )}
       >
-        <span className="bg-neutral-600/40 px-2 py-1 rounded-t-md ml-3 relative text-[10px] text-neutral-400">
+        <span className="bg-neutral-600/40 px-2 py-1 rounded-t-md ml-3 text-[10px] text-neutral-400 absolute -top-[23px]">
           {formatMessage({ id: 'general.regex' })}
         </span>
         <div className="flex items-center px-1 py-6 text-neutral-500 tracking-wider w-full rounded-md bg-neutral-600/40 h-7 md:text-sm">
@@ -152,14 +197,21 @@ const Playground = () => {
             className="border-0 px-1 flex-1 focus:outline-none md:text-sm leading-5 text-regreen-400 bg-transparent focus:ring-0"
             type="text"
             onChange={e => onChangeRegex(e)}
-            value={regex}
+            value={state.regex}
             spellCheck={false}
           />
           <span>
-            /<span className="text-green-500">{flags}</span>
+            /<span className="text-green-500">{state.flags}</span>
           </span>
-          <FlagSelect flags={flags} setFlags={onChangeFlags} />
+          <FlagSelect flags={state.flags} setFlags={onChangeFlags} />
         </div>
+        <Button
+          className="h-12 py-0 ml-2 relative after:right-2 after:content-['BETA'] after:text-[10px] after:text-regreen-400 after:absolute after:-top-5"
+          variant={ButtonVariants.Primary}
+          onClick={handleShare}
+        >
+          Share
+        </Button>
       </div>
 
       <div
@@ -181,8 +233,8 @@ const Playground = () => {
           >
             <Editor
               ref={editor}
-              editorState={editorState}
-              onChange={setEditorState}
+              editorState={state.editorState}
+              onChange={editorState => setState({ ...state, editorState })}
               placeholder="Text here"
               keyBindingFn={myKeyBindingFn}
             />

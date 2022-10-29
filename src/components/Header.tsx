@@ -61,7 +61,6 @@ const Header = ({ page }: Props) => {
               <a
                 className={cx(
                   isActive ? 'text-regreen-400' : 'text-neutral-200 hover:text-regreen-400',
-                  "relative after:right-0 after:content-['BETA'] after:text-[10px] after:text-regreen-400 after:absolute after:-top-3",
                   { 'hidden md:block': isLearnDetail },
                 )}
               >
