@@ -5,6 +5,7 @@ import { useIntl } from 'react-intl';
 import cx from 'clsx';
 import { parse } from 'query-string';
 import axios from 'axios';
+import { Toaster, toast } from 'react-hot-toast';
 
 import {
   Editor,
@@ -18,6 +19,7 @@ import {
 import setCaretPosition from 'src/utils/setCaretPosition';
 import FlagSelect from './FlagSelect';
 import Button, { ButtonVariants } from './Button';
+import copy from 'copy-to-clipboard';
 
 axios.defaults.baseURL = process.env.NEXT_PUBLIC_BASE_URL;
 
@@ -43,10 +45,18 @@ const Playground = () => {
   const { formatMessage } = useIntl();
   const regexInput = useRef<HTMLInputElement>(null);
   const editor = useRef(null);
+  const [hasChange, setHasChange] = useState(false);
+
   const [state, setState] = useState({
     regex: '[A-Z]\\w+',
     flags: 'g',
     editorState: EditorState.createEmpty(),
+  });
+
+  const [initial, setInitial] = useState({
+    regex: state.regex,
+    flags: state.flags,
+    text: state.editorState.getCurrentContent().getPlainText(),
   });
 
   const onChangeFlags = flags => {
@@ -65,11 +75,21 @@ const Playground = () => {
       flags: newFlags,
       editorState: checkRegex(state.regex, newFlags, state.editorState),
     });
+    setHasChange(initial.flags !== newFlags);
   };
 
   const onChangeRegex = (event: FormEvent<HTMLInputElement>) => {
     const regex = event?.currentTarget?.value || '';
     setState({ ...state, regex, editorState: checkRegex(regex, state.flags, state.editorState) });
+    setHasChange(initial.regex !== regex);
+  };
+
+  const onChangeContent = (editorState: EditorState) => {
+    setState({ ...state, editorState });
+    const nextText = editorState.getCurrentContent().getPlainText();
+    if (initial.text !== nextText) {
+      setHasChange(true);
+    }
   };
 
   const checkRegex = (regex, flags, editorState) => {
@@ -136,16 +156,19 @@ const Playground = () => {
         text: state.editorState.getCurrentContent().getPlainText(),
       })
       .then(res => {
-        let newURL = window.location.href;
-
-        if (window.location.href.includes('?id=')) {
-          newURL = window.location.href.replace(/id=.*/, `id=${res.data._id}`);
-        } else {
-          newURL = `${window.location.href}?id=${res.data._id}`;
-        }
-        window.location.href = newURL;
+        history.replaceState(null, '', `?id=${res.data._id}`);
+        setInitial({
+          regex: state.regex,
+          flags: state.flags,
+          text: state.editorState.getCurrentContent().getPlainText(),
+        });
+        setHasChange(false);
+        copy(window.location.href);
+        toast.success('Share link copied!');
       })
-      .catch(err => {});
+      .catch(err => {
+        toast.error('Something went wrong!');
+      });
   };
 
   useEffect(() => {
@@ -160,6 +183,7 @@ const Playground = () => {
           EditorState.createWithContent(initialContent),
         ),
       });
+      setInitial({ regex: state.regex, flags: state.flags, text: initialContent.getPlainText() });
       setCaretPosition(regexInput?.current, state.regex.length);
       return;
     }
@@ -175,6 +199,7 @@ const Playground = () => {
           EditorState.createWithContent(ContentState.createFromText(text)),
         ),
       });
+      setInitial({ regex, flags, text });
       setCaretPosition(regexInput?.current, regex.length);
     });
   }, []);
@@ -209,6 +234,7 @@ const Playground = () => {
           className="h-12 py-0 ml-2 relative after:right-2 after:content-['BETA'] after:text-[10px] after:text-regreen-400 after:absolute after:-top-5"
           variant={ButtonVariants.Primary}
           onClick={handleShare}
+          disabled={!hasChange}
         >
           Share
         </Button>
@@ -234,13 +260,19 @@ const Playground = () => {
             <Editor
               ref={editor}
               editorState={state.editorState}
-              onChange={editorState => setState({ ...state, editorState })}
+              onChange={onChangeContent}
               placeholder="Text here"
               keyBindingFn={myKeyBindingFn}
             />
           </div>
         </div>
       </div>
+      <Toaster
+        position="top-center"
+        toastOptions={{
+          className: 'dark:bg-neutral-700 dark:text-neutral-50 text-sm',
+        }}
+      />
     </>
   );
 };
