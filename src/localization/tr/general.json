@@ -17,6 +17,9 @@
   "general.playground": "Playground",
   "general.cheatsheet": "Cheatsheet",
   "general.ourSponsors": "Sponsorlarımız",
+  "general.share": "Paylaş",
+  "general.shareLinkCopied": "Paylaş linki kopyalandı!",
+  "general.somethingWentWrong": "Bir şeyler ters gitti!",
 
   "notFound.intro": "Aradığın sayfa mevcut değil.",
   "notFound.button": "Anasayfaya dön",

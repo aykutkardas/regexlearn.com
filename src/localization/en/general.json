@@ -17,6 +17,9 @@
   "general.playground": "Playground",
   "general.cheatsheet": "Cheatsheet",
   "general.ourSponsors": "Our Sponsors",
+  "general.share": "Share",
+  "general.shareLinkCopied": "Share link copied!",
+  "general.somethingWentWrong": "Something went wrong!",
 
   "notFound.intro": "The page you are looking for does not exist.",
   "notFound.button": "Back to home",

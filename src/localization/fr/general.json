@@ -16,6 +16,9 @@
   "general.playground": "Terrain de jeux",
   "general.cheatsheet": "Aide-mémoire",
   "general.ourSponsors": "Nos sponsors",
+  "general.share": "Partager",
+  "general.shareLinkCopied": "Lien de partage copié!",
+  "general.somethingWentWrong": "Quelque chose s'est mal passé!",
 
   "notFound.intro": "La page que vous recherchez n'existe pas.",
   "notFound.button": "Retour à l'accueil",

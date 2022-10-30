@@ -17,6 +17,9 @@
   "general.playground": "游乐场",
   "general.cheatsheet": "备忘单",
   "general.ourSponsors": "我们的赞助商",
+  "general.share": "分享",
+  "general.shareLinkCopied": "分享链接已复制！",
+  "general.somethingWentWrong": "出问题了！",
 
   "notFound.intro": "您要寻找的页面不存在。",
   "notFound.button": "回到主页",

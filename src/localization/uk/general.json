@@ -16,6 +16,9 @@
   "general.playground": "Playground",
   "general.cheatsheet": "Cheatsheet",
   "general.ourSponsors": "Наші спонсори",
+  "general.share": "Поділіться",
+  "general.shareLinkCopied": "Посилання для обміну скопійовано!",
+  "general.somethingWentWrong": "Щось пішло не так!",
 
   "notFound.intro": "Сторінка, яку ви шукаєте, не знайдена.",
   "notFound.button": "Повернутися додому",

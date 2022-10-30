@@ -17,6 +17,9 @@
   "general.playground": "Spielplatz",
   "general.cheatsheet": "Spickzettel",
   "general.ourSponsors": "Unsere Sponsoren",
+  "general.share": "Teilen",
+  "general.shareLinkCopied": "Link teilen kopiert!",
+  "general.somethingWentWrong": "Etwas ist schief gelaufen!",
 
   "notFound.intro": "Die gesuchte Seite existiert nicht.",
   "notFound.button": "Zurück zur Startseite",

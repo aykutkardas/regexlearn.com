@@ -32,7 +32,7 @@ function myKeyBindingFn(e): string | null {
 }
 
 const Highlight = ({ children }) => (
-  <span className="shadow-sm h-3 mx-1 my-[1px] px-1 py-[2px] rounded-md text-white bg-green-500">
+  <span className="shadow-sm h-3 px-[3px] mx-[1px] py-[2px] rounded-md text-white bg-green-500">
     {children}
   </span>
 );
@@ -48,8 +48,8 @@ const Playground = () => {
   const [hasChange, setHasChange] = useState(false);
 
   const [state, setState] = useState({
-    regex: '[A-Z]\\w+',
-    flags: 'g',
+    regex: '',
+    flags: '',
     editorState: EditorState.createEmpty(),
   });
 
@@ -163,10 +163,10 @@ const Playground = () => {
         });
         setHasChange(false);
         copy(window.location.href);
-        toast.success('Share link copied!');
+        toast.success(formatMessage({ id: 'general.shareLinkCopied' }));
       })
-      .catch(err => {
-        toast.error('Something went wrong!');
+      .catch(() => {
+        toast.error(formatMessage({ id: 'general.somethingWentWrong' }));
       });
   };
 
@@ -174,11 +174,14 @@ const Playground = () => {
     const { id } = parse(window.location.search);
 
     if (!id) {
+      const regex = '[A-Z]\\w+';
+      const flags = 'g';
       setState({
-        ...state,
+        regex,
+        flags,
         editorState: checkRegex(
-          state.regex,
-          state.flags,
+          regex,
+          flags,
           EditorState.createWithContent(initialContent),
         ),
       });
@@ -230,12 +233,12 @@ const Playground = () => {
           <FlagSelect flags={state.flags} setFlags={onChangeFlags} />
         </div>
         <Button
-          className="h-12 py-0 ml-2 relative after:right-2 after:content-['BETA'] after:text-[10px] after:text-regreen-400 after:absolute after:-top-5"
+          className="h-12 py-0 ml-2 min-w-[70px] relative after:right-2 after:content-['BETA'] after:text-[10px] after:text-regreen-400 after:absolute after:-top-5"
           variant={ButtonVariants.Primary}
           onClick={handleShare}
           disabled={!hasChange}
         >
-          Share
+          {formatMessage({ id: 'general.share' })}
         </Button>
       </div>
 
