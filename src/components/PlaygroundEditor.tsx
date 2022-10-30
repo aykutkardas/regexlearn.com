@@ -56,7 +56,7 @@ const Playground = () => {
   const [initial, setInitial] = useState({
     regex: state.regex,
     flags: state.flags,
-    text: state.editorState.getCurrentContent().getPlainText(),
+    text: state.editorState?.getCurrentContent()?.getPlainText() || '',
   });
 
   const onChangeFlags = flags => {
@@ -96,10 +96,9 @@ const Playground = () => {
     let rowIndex = 0;
     let matchCount = 0;
 
-    if (!state.regex) {
+    if (!regex) {
       const content = editorState.getCurrentContent();
-      setState({ ...state, editorState: EditorState.createWithContent(content) });
-      return;
+      return EditorState.createWithContent(content);
     }
 
     function findWithRegex(content: ContentBlock, callback: Function) {
