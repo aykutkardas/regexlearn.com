@@ -25,32 +25,47 @@ const PagePlayground = () => (
         </div>
         <div className="hidden sm:flex flex-col w-[400px] h-full border-l border-neutral-700">
           <PlaygroundSidebar />
-          <div className="h-44 border-t py-2 border-neutral-700 sticky bottom-0">
+          <div className="h-44 border-t py-2 flex flex-col items-center justify-between border-neutral-700 sticky bottom-0">
+
+            <div className='flex text-xs items-center text-neutral-300'>Sponsored by <a
+                href={"https://www.altogic.com/"}
+                target="_blank"
+                rel="noreferrer"
+                className="opacity-100 hover:opacity-70 w-auto h-auto"
+              >
+                <img
+                className='w-16 ml-1'
+                  src={"/altogic.svg"}
+                  alt={"Altogic"}
+                  title={"Altogic"}
+                />
+              </a></div> 
+
+            <div className='flex gap-x-2 justify-center'>
+              <a
+                href="https://github.com/sponsors/aykutkardas"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Sponsor Me"
+                title="Sponsor Me"
+              >
+                <div className="w-6 h-6 cursor-pointer hover:scale-110 transition inline-flex items-center justify-center rounded-full bg-gradient-to-tr from-purple-600 to-pink-500 shadow-xl">
+                  <Icon icon="hearth" className="text-white" size={14} />
+                </div>
+              </a>
+              <a
+                href="https://www.buymeacoffee.com/aykutkardas"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Buy Me a Coffee"
+                title="Buy Me a Coffee"
+              >
+                <div className="w-6 h-6 cursor-pointer hover:scale-110 transition inline-flex items-center justify-center rounded-full bg-gradient-to-tr from-yellow-600 to-yellow-500 shadow-xl">
+                  <Icon icon="coffee" className="text-white" size={14} />
+                </div>
+              </a>
+            </div>
             <ReportPlayground />
-            <a
-              href="https://github.com/sponsors/aykutkardas"
-              target="_blank"
-              rel="noreferrer"
-              aria-label="Sponsor Me"
-              title="Sponsor Me"
-            >
-              <div className="w-full h-6 text-xs cursor-pointer hover:opacity-70 transition inline-flex items-center p-2">
-                <Icon icon="hearth" className="mr-1 text-fuchsia-500" size={18} />
-                <span className="text-neutral-300">Sponsor Me</span>
-              </div>
-            </a>
-            <a
-              href="https://www.buymeacoffee.com/aykutkardas"
-              target="_blank"
-              rel="noreferrer"
-              aria-label="Buy Me a Coffee"
-              title="Buy Me a Coffee"
-            >
-              <div className="w-full h-6 text-xs cursor-pointer hover:opacity-70 transition inline-flex items-center p-2">
-                <Icon icon="coffee" className="mr-1 text-yellow-500" size={18} />
-                <span className="text-neutral-300">Buy Me a Coffee</span>
-              </div>
-            </a>
           </div>
         </div>
       </div>
