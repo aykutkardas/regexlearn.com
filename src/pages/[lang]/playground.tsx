@@ -26,22 +26,19 @@ const PagePlayground = () => (
         <div className="hidden sm:flex flex-col w-[400px] h-full border-l border-neutral-700">
           <PlaygroundSidebar />
           <div className="h-44 border-t py-2 flex flex-col items-center justify-between border-neutral-700 sticky bottom-0">
-
-            <div className='flex text-xs items-center text-neutral-300'>Sponsored by <a
-                href={"https://www.altogic.com/"}
+            <div className="flex text-xs items-center text-neutral-300">
+              Supported by{' '}
+              <a
+                href="https://www.altogic.com/?utm_source=regexlearn&utm_medium=referral&utm_campaign=sponsorship"
                 target="_blank"
                 rel="noreferrer"
                 className="opacity-100 hover:opacity-70 w-auto h-auto"
               >
-                <img
-                className='w-16 ml-1'
-                  src={"/altogic.svg"}
-                  alt={"Altogic"}
-                  title={"Altogic"}
-                />
-              </a></div> 
+                <img className="w-16 ml-1" src={'/altogic.svg'} alt={'Altogic'} title={'Altogic'} />
+              </a>
+            </div>
 
-            <div className='flex gap-x-2 justify-center'>
+            <div className="flex gap-x-2 justify-center">
               <a
                 href="https://github.com/sponsors/aykutkardas"
                 target="_blank"
