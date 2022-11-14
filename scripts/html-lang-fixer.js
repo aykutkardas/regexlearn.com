@@ -4,7 +4,7 @@ const BASE_PATH = './out';
 
 function replaceLangTag(path, locale) {
   const content = fs.readFileSync(path, { encoding: 'utf-8' });
-  fs.writeFileSync(path, content.replace(/(<html lang=")en(">)/, `$1${locale}$2`));
+  fs.writeFileSync(path, content.replace(/(<html lang=")en(" class="dark">)/, `$1${locale}$2`));
 }
 
 function htmlLangFixer(path) {
