@@ -254,6 +254,7 @@ const InteractiveArea = ({ isShow, setIsOpenModal }: Props) => {
             readOnly={data.readOnly}
             value={data.visibleRegex || regex}
             onChange={onChange}
+            onFocus={onChange}
             placeholder={placeholder}
             spellCheck={false}
           />
