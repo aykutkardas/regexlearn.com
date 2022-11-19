@@ -18,7 +18,7 @@ const Header = ({ page }: Props) => {
 
   return (
     <header
-      className={cx('relative z-40', {
+      className={cx('relative z-40 h-20', {
         'bg-neutral-800 px-4 border-b border-neutral-700': isPlaygroundPage,
       })}
     >
