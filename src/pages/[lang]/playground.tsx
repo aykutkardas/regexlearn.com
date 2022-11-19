@@ -25,7 +25,7 @@ const PagePlayground = () => (
         </div>
         <div className="hidden sm:flex flex-col w-[400px] h-full border-l border-neutral-700">
           <PlaygroundSidebar />
-          <div className="h-44 border-t py-2 flex flex-col items-center justify-between border-neutral-700 sticky bottom-0">
+          <div className="h-44 min-h-[100px] border-t py-2 flex flex-col items-center justify-between border-neutral-700 sticky bottom-0">
             <div className="flex text-xs items-center text-neutral-300">
               Supported by{' '}
               <a
