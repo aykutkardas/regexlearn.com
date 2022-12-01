@@ -1,0 +1,26 @@
+{
+  "landing.title": "一步步學習正規表示式，從入門到進階。",
+  "landing.description": "學習正規表示式比你想像得還要容易，你可以使用這工具來輕鬆`學習`、`練習`、`測驗`與`分享`正規表示式。",
+  "landing.imageAltText": "一個男士坐姿輕鬆腿放在桌子上的插圖。",
+
+  "section.learn.title": "學習",
+  "section.learn.content": "`正規表示式`，英文叫 Regex 或是 Regexp，是一組藉由正規表示式語法規則創造，由字元組成的字串。You can easily manage your data with Regex, which uses commands like finding, matching, and editing. Regex can be used in programming languages such as Python, SQL, JavaScript, R, Google Analytics, Google Data Studio, and throughout the coding process. Learn regex online with examples and tutorials on RegexLearn now.",
+  "section.learn.imageAltText": "Illustration of a mountain with a flag on its summit.",
+
+  "section.cheatsheet.button": "現在檢視吧！",
+  "section.cheatsheet.title": "Cheatsheet",
+  "section.cheatsheet.content": "With `RegexLearn Cheatsheet`, you can see all of the usages you need at once and check them directly from the one page. Explore all Regex patterns and symbols with the Regex cheat sheet.",
+  "section.cheatsheet.imageAltText": "Illustration of a man viewing pages through binoculars.",
+
+  "section.playground.title": "遊樂場",
+  "section.playground.content": "If you want to generate a Regex, you can easily build and test your Regex pattern via the Playground. As a Regex tester, you can validate and share your Regex with others for collaborative work.",
+  "section.playground.imageAltText": "Illustration of a cat about to drop a full glass.",
+
+  "section.practice.title": "練習",
+  "section.practice.content": "If you complete the learning part, it's time to PRACTICE! In the practice section, you can test your Regex knowledge and practice with Regex tutorials based on your level. Soon.",
+  "section.practice.imageAltText": "Illustration of a woman taking notes from a book.",
+
+  "section.opensource.title": "開放原始碼",
+  "section.opensource.content": "Regex Learn is an open-source project that welcomes community contributions and is free to use. Working on this project allows you to hone your skills, study, and collaborate.  You can contribute & support here.",
+  "section.opensource.imageAltText": "Illustration of a woman, a man, and a cat putting together puzzle pieces."
+}
