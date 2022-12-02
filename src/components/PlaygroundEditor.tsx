@@ -221,7 +221,7 @@ const Playground = () => {
           <span className="ml-3">/</span>
           <input
             ref={regexInput}
-            className="border-0 px-1 flex-1 focus:outline-none md:text-sm leading-5 text-regreen-400 bg-transparent focus:ring-0"
+            className="border-0 px-1 flex-1 focus:outline-none md:text-sm leading-5 text-regreen-400 bg-transparent focus:ring-0 w-full"
             type="text"
             onChange={e => onChangeRegex(e)}
             value={state.regex}
@@ -233,7 +233,7 @@ const Playground = () => {
           <FlagSelect flags={state.flags} setFlags={onChangeFlags} />
         </div>
         <Button
-          className="h-12 py-0 ml-2 min-w-[70px] relative after:right-2 after:content-['BETA'] after:text-[10px] after:text-regreen-400 after:absolute after:-top-5"
+          className="h-12 py-0 ml-2 w-fit relative"
           variant={ButtonVariants.Primary}
           onClick={handleShare}
           disabled={!hasChange}
