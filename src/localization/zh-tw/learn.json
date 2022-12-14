@@ -6,7 +6,7 @@
   "examples.finish.description": " ",
 
   "steps.starter.title": "介紹",
-  "steps.starter.description": "Regex is short for `Regular Expression`. It helps to match, find or manage text. Start by typing `OK` in the Regex field to proceed to the first step and access the more detailed description..",
+  "steps.starter.description": "Regex 是`正規表示式`(Regular Expression)的縮寫，能幫助你吻合、尋找與管理文字。先從在正規表示式欄位輸入`OK`開始第一步，並且察看更為詳細的說明。",
 
   "steps.whatIsRegex.title": "什麼是正規表示式 `Regex`？",
   "steps.whatIsRegex.description": "Regular Expressions are a string of characters that express a search pattern. Often abbreviated as `Regex` or `Regexp`. It is especially used to find or replace words in texts. In addition, we can test whether a text complies with the rules we set.\\n\\n For example, let's say you have a list of filenames. And you only want to find files with the `pdf` extension. Following typing an expression `^\\w+\\.pdf$` will work. The meaning of the definitions in this expression will become clearer as the steps progress.",
@@ -80,16 +80,16 @@
   "examples.quantifier.title": "練習：大括號 - 1",
   "examples.quantifier.description": "Write the expression using curly braces `{}` that will find texts containing `4` numbers side by side. Remember that the range `[0-9]` will match a single digit.",
 
-  "examples.quantifierMin.title": "Practice: Curly Braces - 2",
+  "examples.quantifierMin.title": "練習：大括號 - 2",
   "examples.quantifierMin.description": "Write the expression using curly braces `{}` that will find texts containing at least `2` numbers side by side.",
 
-  "examples.quantifierRange.title": "Practice: Curly Braces - 3",
+  "examples.quantifierRange.title": "練習：大括號 - 3",
   "examples.quantifierRange.description": "Write the expression using curly braces `{}` that will find texts containing at least `1` and at most `4` numbers side by side.",
 
-  "steps.groupping.title": "Parentheses `( )`: Grouping",
+  "steps.groupping.title": "Parentheses `( )`: 群組",
   "steps.groupping.description": "We can group an expression and use these groups to reference or enforce some rules. To group an expression, we enclose `()` in parentheses. For now just group `haa` below.",
 
-  "steps.groupReference.title": "Referencing a Group",
+  "steps.groupReference.title": "參照群組",
   "steps.groupReference.description": "The words `ha` and `haa` are grouped below. The first group is used by writing `\\1` to avoid rewriting. Here `1` denotes the order of grouping. Type `\\2` at the end of the expression to refer to the second group.",
 
   "steps.nonCapturingGroupping.title": "Parentheses `(?: )`: Non-capturing Grouping",
