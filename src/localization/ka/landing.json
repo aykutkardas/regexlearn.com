@@ -1,26 +1,26 @@
 {
-  "landing.title": "Learn Regex step by step, from zero to advanced.",
-  "landing.description": "Learning Regex is easier than you think. You can use this tool to easily `learn`, `practice`, `test` and `share` Regex.",
-  "landing.imageAltText": "Illustration of a relaxed man with his legs on the table.",
+  "landing.title": "ისწავლეთ Regex-ი ნაბიჯ-ნაბიჯ, ნულიდან მაღალ დონემდე.",
+  "landing.description": "Regex-ის შესწავლა იმაზე მარტივია, ვიდრე წარმოგიდგენიათ. შეგიძლიათ გამოიყენოთ წინამდებარე ინსტრუმენტი, რათა `ისწავლოთ`, `ივარჯიშოთ`, `გამოსცადოთ` და `გააზიაროთ` Regex-ი მარტივად.",
+  "landing.imageAltText": "ილუსტრაცია მოდუნებული კაცისა, რომელსაც ფეხები მაგიდაზე შემოუწყვია.",
 
-  "section.learn.title": "Learn",
-  "section.learn.content": "`Regular Expressions`, abbreviated as Regex or Regexp, are a string of characters created within the framework of Regex syntax rules. You can easily manage your data with Regex, which uses commands like finding, matching, and editing. Regex can be used in programming languages such as Python, SQL, JavaScript, R, Google Analytics, Google Data Studio, and throughout the coding process. Learn regex online with examples and tutorials on RegexLearn now.",
-  "section.learn.imageAltText": "Illustration of a mountain with a flag on its summit.",
+  "section.learn.title": "სწავლა",
+  "section.learn.content": "`რეგულარული გამოსახულება`, შემოკლებით Regex ან Regexp, არის სიმბოლოებისგან შემდგარი სტრიქონი, რომელიც შექმნილია Regex-ის სინტაქსის წესებზე დაყრდნობით. Regex-ით, რომელიც იყენებს ბრძანებებს, როგორიცაა ძიება, მსგავსება და რედაქტირება, შეგიძლიათ მარტივად მართოთ თქვენი მონაცემები. Regex-ი შეიძლება გამოყენებულ იქნეს პროგრამირების ენებში, როგორიცაა Python, SQL, JavaScript, R, Google Analytics, Google Data Studio და უშუალოდ კოდირების პროცესში. ისწავლეთ Regex-ი ონლაინ ახლავე, მაგალითებითა და გაკვეთილებით, RegexLearn-ზე.",
+  "section.learn.imageAltText": "ილუსტრაცია მთისა, რომლის მწვერვალზეც დროშა არის აღმართული.",
 
-  "section.cheatsheet.button": "Review Now",
-  "section.cheatsheet.title": "Cheatsheet",
-  "section.cheatsheet.content": "With `RegexLearn Cheatsheet`, you can see all of the usages you need at once and check them directly from the one page. Explore all Regex patterns and symbols with the Regex cheat sheet.",
-  "section.cheatsheet.imageAltText": "Illustration of a man viewing pages through binoculars.",
+  "section.cheatsheet.button": "გადახედვა",
+  "section.cheatsheet.title": "შპარგალკა",
+  "section.cheatsheet.content": "`RegexLearn შპარგალკის` დახმარებით შეგიძლიათ ერთბაშად იხილოთ Regex-ის მოხმარების ყველა მაგალითი და გამოსცადოთ ისინი უშუალოდ ერთი გვერდიდან. გამოიკვლიეთ Regex-ის ყველა ნიმუში და სიმბოლო Regex-შპარგალკის გამოყენებით.",
+  "section.cheatsheet.imageAltText": "ილუსტრაცია კაცისა, რომელიც გვერდებს ბინოკლით აკვირდება.",
 
-  "section.playground.title": "Playground",
-  "section.playground.content": "If you want to generate a Regex, you can easily build and test your Regex pattern via the Playground. As a Regex tester, you can validate and share your Regex with others for collaborative work.",
-  "section.playground.imageAltText": "Illustration of a cat about to drop a full glass.",
+  "section.playground.title": "სათამაშო მოედანი",
+  "section.playground.content": "თუ გსურთ, დააგენერიროთ Regex-ი, ამაში სათამაშო მოედანი (Playground) დაგეხმარებათ, სადაც შეგიძლიათ ძალიან მარტივად ააგოთ და გამოსცადოთ Regex-ნიმუშები. თქვენ, როგორც Regex-ის ტესტერს, შეგიძლიათ დაადასტუროთ ამა თუ იმ Regex-ის სისწორე და გაუზიაროთ იგი სხვებს ერთობლივი მუშაობის მიზნით.",
+  "section.playground.imageAltText": "ილუსტრაცია კატისა, რომელიც სადაცაა პირთამდე სავსე ჭურჭელს გადმოაგდებს.",
 
-  "section.practice.title": "Practice",
-  "section.practice.content": "If you complete the learning part, it's time to PRACTICE! In the practice section, you can test your Regex knowledge and practice with Regex tutorials based on your level. Soon.",
-  "section.practice.imageAltText": "Illustration of a woman taking notes from a book.",
+  "section.practice.title": "პრაქტიკა",
+  "section.practice.content": "როდესაც სწავლის ნაწილს ამოწურავ, დგება დრო ცოდნის პრაქტიკაში გამოყენებისა! პრაქტიკის განყოფილებაში შეგიძლიათ შეამოწმოთ თქვენი ცოდნა Regex-თან დაკავშირებით და ივარჯიშოთ სათანადო გაკვეთილებზე დაყრდნობით თქვენი ცოდნის შესაბამისად. მალე.",
+  "section.practice.imageAltText": "ილუსტრაცია ქალბატონისა, რომელიც ახორციელებს შენიშვნების ამოკრებას წიგნიდან.",
 
-  "section.opensource.title": "Open Source",
-  "section.opensource.content": "Regex Learn is an open-source project that welcomes community contributions and is free to use. Working on this project allows you to hone your skills, study, and collaborate.  You can contribute & support here.",
-  "section.opensource.imageAltText": "Illustration of a woman, a man, and a cat putting together puzzle pieces."
+  "section.opensource.title": "ღია წყარო",
+  "section.opensource.content": "Regex Learn — ეს არის ღია პროექტი, რომელიც მიესალმება ნებისმიერი მსურველის მიერ წვლილის შეტანას და არის სრულიად უფასო. ამ პროექტზე მუშაობა საშუალებას მოგცემთ, გაიუმჯობესოთ უნარები, ისწავლოთ და ითანამშრომლოთ სხვებთან. შეგიძლიათ ხელი შეუწყოთ და მხარში ამოუდგეთ პროექტს.",
+  "section.opensource.imageAltText": "ილუსტრაცია ქალბატონისა, ბატონისა და კატისა, რომლებიც თავსატეხის ფრაგმენტებს ერთად უყრიან თავს."
 }
