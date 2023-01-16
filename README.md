@@ -35,9 +35,6 @@ _Please create an issue to add your own language._
   <a href="https://ahrefs.com/" target="_blank">
     <img src="preview/ahrefs.png"/>
   </a>
-  <a href="https://sitechecker.pro/" target="_blank">
-    <img src="preview/sitechecker.pro.png"/>
-  </a>
   <a href="https://wope.com" target="_blank">
     <img src="preview/wope.png"/>
   </a>
