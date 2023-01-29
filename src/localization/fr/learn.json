@@ -86,14 +86,14 @@
   "examples.quantifierRange.title": "Practique: Accolades - 3",
   "examples.quantifierRange.description": "Écrivez l'expression utilisant les accolades `{}` qui trouvera les textes contenant au moins `1` et au plus `4` chiffres successifs.",
 
-  "steps.groupping.title": "Parenthèses `( )`: Grouper",
-  "steps.groupping.description": "Nous pouvons grouper une expression et utiliser ces groupes pour faire référence ou appliquer certaines règles. Pour grouper une expression, on met `()` entre parenthèses. Pour l'instant, regroupons simplement `haa` ci-dessous.",
+  "steps.grouping.title": "Parenthèses `( )`: Grouper",
+  "steps.grouping.description": "Nous pouvons grouper une expression et utiliser ces groupes pour faire référence ou appliquer certaines règles. Pour grouper une expression, on met `()` entre parenthèses. Pour l'instant, regroupons simplement `haa` ci-dessous.",
 
   "steps.groupReference.title": "Référencer un groupe",
   "steps.groupReference.description": "Les mots `ha` et `haa` sont regroupés ci-dessous. Le premier groupe est utilisé en écrivant `\\1` pour éviter la réécriture. Ici, `1` indique l'ordre de regroupement. Type `\\1` pour éviter la réécriture. Ici, `1` indique l'ordre de regroupement. Type `\\2` à la fin de l'expression pour faire référence au deuxième groupe.",
 
-  "steps.nonCapturingGroupping.title": "Parenthèses `(?: )`: Groupe non capturant",
-  "steps.nonCapturingGroupping.description": "Vous pouvez regrouper une expression et faire en sorte qu'elle ne soit pas capturée par des références. Par exemple, ci-dessous, nous avons deux groupes. Cependant, la première référence de groupe que nous désignons par `\\1` indique en fait le deuxième groupe, car le premier est un groupe non capturant.",
+  "steps.nonCapturingGrouping.title": "Parenthèses `(?: )`: Groupe non capturant",
+  "steps.nonCapturingGrouping.description": "Vous pouvez regrouper une expression et faire en sorte qu'elle ne soit pas capturée par des références. Par exemple, ci-dessous, nous avons deux groupes. Cependant, la première référence de groupe que nous désignons par `\\1` indique en fait le deuxième groupe, car le premier est un groupe non capturant.",
 
   "steps.pipeCharacter.title": "Caractère Pipe `|`",
   "steps.pipeCharacter.description": "Il permet de spécifier qu'une expression peut être dans différentes expressions. Ainsi, toutes les expressions possibles sont écrites séparées par le signe pipe `|`. Ceci diffère du charset `[abc]`, les charsets opèrent au niveau des caractères. Les alternatives se situent au niveau de l'expression. Par exemple, l'expression suivante sélectionnerait à la fois `cat` et `rat`. Ajoutez un autre signe pipe `|` à la fin de l'expression et tapez `dog` pour que tous les mots soient sélectionnés.",
