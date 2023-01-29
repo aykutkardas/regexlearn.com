@@ -125,7 +125,7 @@ const InteractiveArea = ({ isShow, setIsOpenModal }: Props) => {
           value: data.content,
           regex: grouppedRegex,
           attributes: {
-            class: 'highlight shadow-sm h-3 mx-1 my-[1px] px-1 py-[2px] rounded-md text-black',
+            class: 'highlight shadow-sm h-3 mr-[1px] my-[1px] px-1 py-[2px] rounded-md text-black',
           },
         }),
       );
