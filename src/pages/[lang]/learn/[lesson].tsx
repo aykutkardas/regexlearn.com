@@ -4,6 +4,7 @@ import Header from 'src/components/Header';
 import CustomHead from 'src/components/CustomHead';
 import LearnFooter from 'src/components/LearnFooter';
 import Step from 'src/components/Step';
+import LearnProgress from 'src/components/LearnProgress';
 import { defaultLocale, locales } from 'src/localization';
 import { Lesson } from 'src/types';
 import lessons from 'src/data/lessons/index.json';
@@ -28,6 +29,7 @@ const PageLesson = ({ lesson }: PageLessonProps) => {
       <InteractiveAreaProvider key={lessonData} lesson={lesson} lessonData={lessonData}>
         <div className="px-3 flex flex-col flex-1 justify-between">
           <Header page="learn-detail" />
+          <LearnProgress />
           <Step />
           <LearnFooter />
         </div>
