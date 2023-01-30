@@ -9,8 +9,7 @@ const LearnProgress = () => {
   const [open, setOpen] = useState(false);
   const learnProgressRef = useRef<HTMLDivElement>(null);
   const { formatMessage } = useIntl();
-  const { lessonData, step, setStep, lastStep, resetStep, updateStorage } =
-    useContext(InteractiveAreaContext);
+  const { lessonData, step, setStep, lastStep, updateStorage } = useContext(InteractiveAreaContext);
 
   useEffect(() => {
     const activeitem = [...document.querySelectorAll('.step-item')][step];
@@ -23,7 +22,6 @@ const LearnProgress = () => {
     if (step > lastStep) return;
 
     updateStorage(step);
-    resetStep();
     setStep(step);
   };
 
@@ -32,7 +30,7 @@ const LearnProgress = () => {
   return (
     <div
       className={clsx(
-        'hidden lg:block text-xs top-[50%] -translate-y-[50%] absolute pl-5 z-10 transition-all',
+        'hidden lg:block text-xs top-[50%] -translate-y-[50%] absolute pl-5 z-10 transition-all select-none',
         open ? 'left-0 ' : '-left-[204px]',
       )}
     >
@@ -56,21 +54,20 @@ const LearnProgress = () => {
             )}
           />
         </div>
-        <div className="flex h-10 w-72 bg-gradient-to-b from-[#282c34] z-20 to-neutral-50/0 fixed top-0" />
-        <div className="flex h-10 w-72 bg-gradient-to-t from-[#282c34] z-20 to-neutral-50/0 fixed bottom-0" />
+        <div className="flex h-10 w-72 bg-gradient-to-b pointer-events-none from-[#282c34] z-20 to-neutral-50/0 fixed top-0" />
+        <div className="flex h-10 w-72 bg-gradient-to-t pointer-events-none from-[#282c34] z-20 to-neutral-50/0 fixed bottom-0" />
         {lessonData.map((lesson, index) => (
           <div
             key={lesson.title + index}
             className={clsx(
               {
                 'active-step text-green-400': step === index,
-                'cursor-pointer': lastStep >= index && step !== index,
+                '': lastStep >= index && step !== index,
               },
               'step-item relative truncate max-w-[80%] flex items-center',
               index !== lessonData.length - 1 &&
                 "pb-10 after:content-[''] after:block after:w-[2px] after:h-6 after:bg-neutral-700 after:rounded-md after:left-[7px] after:top-6 after:absolute",
             )}
-            onClick={() => handleChangeStep(index)}
           >
             {step === index && (
               <Icon icon="play" size={16} className="text-green-400 mr-2 flex-shrink-0" />
@@ -88,9 +85,10 @@ const LearnProgress = () => {
                 'truncate transition-all',
                 index === step
                   ? '!pl-2 text-neutral-50'
-                  : 'text-neutral-300 hover:text-neutral-100 pl-0',
+                  : 'text-neutral-300 hover:text-neutral-100 pl-0 cursor-pointer',
               )}
               text={formatMessage({ id: lesson.title })}
+              onClick={() => handleChangeStep(index)}
               attrs={{
                 className: step === index ? 'text-emerald-400' : 'text-emerald-600',
               }}

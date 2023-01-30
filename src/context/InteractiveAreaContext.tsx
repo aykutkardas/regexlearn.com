@@ -18,7 +18,6 @@ interface IInteractiveAreaContext {
   setLockError: (lockError: boolean) => void;
   prevStep: () => void;
   nextStep: () => void;
-  resetStep: () => void;
   updateStorage: (step: number) => void;
   lesson: Lesson;
   lessonData: LessonData[];
@@ -40,7 +39,6 @@ const InteractiveAreaContext = createContext<IInteractiveAreaContext>({
   setMatch: () => {},
   prevStep: () => {},
   nextStep: () => {},
-  resetStep: () => {},
   updateStorage: () => {},
   lesson: null,
   lessonData: [],
@@ -72,13 +70,6 @@ const InteractiveAreaProvider = ({ lesson, lessonData, children }) => {
       currentStep,
       lastStep: currentStep > lastStep ? currentStep : lastStep,
     });
-  };
-
-  const resetStep = () => {
-    setSuccess(false);
-    setError(false);
-    setLockError(false);
-    setMatch(false);
   };
 
   const prevStep = () => {
@@ -131,7 +122,6 @@ const InteractiveAreaProvider = ({ lesson, lessonData, children }) => {
         setError,
         lockError,
         setLockError,
-        resetStep,
         prevStep,
         nextStep,
         updateStorage,
