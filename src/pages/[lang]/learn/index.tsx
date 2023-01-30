@@ -22,8 +22,8 @@ const PageLearn = () => {
       <div className="container flex flex-1 flex-col items-between h-full">
         <Header />
         <div className="flex flex-col justify-center flex-1">
-          <div className="flex items-center mt-6">
-            <div className="w-full md:w-2/3 flex flex-col items-start">
+          <div className="flex flex-col md:flex-row items-start mt-6">
+            <div className="w-full md:w-1/2 flex flex-col items-start">
               <h1 className="text-3xl text-white">
                 <FormattedMessage id={'section.learn.title'} />
               </h1>
@@ -34,38 +34,36 @@ const PageLearn = () => {
                 attrs={{ className: 'text-regreen-400' }}
               />
             </div>
-            <div className="w-1/3 hidden md:flex">
-              <img
-                src="/Learn.webp"
-                loading="lazy"
-                className="w-full pl-8 drop-shadow-xl"
-                alt={formatMessage({ id: 'section.learn.imageAltText' })}
-              />
+            <div className="w-full md:w-1/2 lg:w-1/3 md:pl-10 lg:pl-0 ml-auto flex flex-col gap-4 mt-8 md:mt-0 mb-10">
+              {lessons.map(lesson => (
+                <div key={lesson.key} className="w-full mb-3">
+                  <LessonBox
+                    data={lesson}
+                    bgColor={
+                      lesson.key === 'regexForSeo' ? 'bg-[#af6b21]/80 hover:bg-[#af6b21]' : null
+                    }
+                  />
+                  <a
+                    className="text-xs flex items-center justify-end text-neutral-300 opacity-70 hover:opacity-100 relative ml-auto mt-2 mr-2"
+                    href={
+                      lesson.sponsorURL ||
+                      'https://github.com/aykutkardas/regexlearn.com#sponsoring'
+                    }
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    {lesson.sponsor ? (
+                      <span className="flex items-center">
+                        Sponsored by{' '}
+                        <img className="mx-1 h-3" src={lesson.sponsorLogo} alt={lesson.sponsor} />
+                      </span>
+                    ) : (
+                      <span>Become a Sponsor</span>
+                    )}
+                  </a>
+                </div>
+              ))}
             </div>
-          </div>
-          <div className="flex flex-col sm:flex-row gap-4 mt-4">
-            {lessons.map(lesson => (
-              <div key={lesson.key} className="w-full sm:w-1/2 md:w-1/3 mb-5">
-                <LessonBox data={lesson} />
-                <a
-                  className="text-xs flex items-center justify-end text-neutral-300 opacity-70 hover:opacity-100 relative bottom-3 ml-auto mt-5"
-                  href={
-                    lesson.sponsorURL || 'https://github.com/aykutkardas/regexlearn.com#sponsoring'
-                  }
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  {lesson.sponsor ? (
-                    <span className="flex items-center">
-                      Sponsored by{' '}
-                      <img className="mx-1 h-3" src={lesson.sponsorLogo} alt={lesson.sponsor} />
-                    </span>
-                  ) : (
-                    <span>Become a Sponsor</span>
-                  )}
-                </a>
-              </div>
-            ))}
           </div>
         </div>
         <SupportButton />

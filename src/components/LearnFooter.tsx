@@ -52,7 +52,7 @@ const LearnFooter = () => {
                   'animate__animated animate__shakeX': error,
                 })}
                 size={20}
-                icon={success ? 'unlocked' : 'lock'}
+                icon={success ? 'lock-closed' : 'lock-open'}
               />
             </div>
             <div className="inline-flex items-center ml-auto">

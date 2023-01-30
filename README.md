@@ -24,6 +24,7 @@ This is a project that makes learning how to write regex easy.
 - _Korean_ [(Requested)](https://github.com/aykutkardas/regexlearn.com/issues/92)
 - _Arabic_ [(Requested)](https://github.com/aykutkardas/regexlearn.com/issues/163)
 - _Brazilian Portuguese_ [(Requested)](https://github.com/aykutkardas/regexlearn.com/issues/39)
+- _Georgian_ [(Requested)](https://github.com/aykutkardas/regexlearn.com/issues/274)
 
 _Please create an issue to add your own language._
 
@@ -34,9 +35,6 @@ _Please create an issue to add your own language._
 <p align="center">
   <a href="https://ahrefs.com/" target="_blank">
     <img src="preview/ahrefs.png"/>
-  </a>
-  <a href="https://sitechecker.pro/" target="_blank">
-    <img src="preview/sitechecker.pro.png"/>
   </a>
   <a href="https://wope.com" target="_blank">
     <img src="preview/wope.png"/>
