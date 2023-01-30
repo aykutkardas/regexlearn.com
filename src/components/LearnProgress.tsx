@@ -1,11 +1,12 @@
 import clsx from 'clsx';
-import { useContext, useEffect, useRef } from 'react';
+import { useContext, useEffect, useRef, useState } from 'react';
 import { useIntl } from 'react-intl';
 import Icon from './Icon';
 import { InteractiveAreaContext } from 'src/context/InteractiveAreaContext';
 import HighlightedText from './HighlightedText';
 
 const LearnProgress = () => {
+  const [open, setOpen] = useState(false);
   const learnProgressRef = useRef<HTMLDivElement>(null);
   const { formatMessage } = useIntl();
   const { lessonData, step, setStep, lastStep, resetStep, updateStorage } =
@@ -15,7 +16,7 @@ const LearnProgress = () => {
     const activeitem = [...document.querySelectorAll('.step-item')][step];
     if (!activeitem) return;
     const topPos = (activeitem as HTMLDivElement).offsetTop;
-    learnProgressRef.current.scrollTop = topPos - 150;
+    learnProgressRef.current.scrollTop = topPos - 153;
   }, [step]);
 
   const handleChangeStep = (step: number) => {
@@ -26,12 +27,35 @@ const LearnProgress = () => {
     setStep(step);
   };
 
+  const toggleProgress = () => setOpen(!open);
+
   return (
-    <div className="hidden lg:block text-xs top-[50%] -translate-y-[50%] left-0 absolute pl-5 z-10">
+    <div
+      className={clsx(
+        'hidden lg:block text-xs top-[50%] -translate-y-[50%] absolute pl-5 z-10 transition-all',
+        open ? 'left-0 ' : '-left-[204px]',
+      )}
+    >
       <div
         ref={learnProgressRef}
-        className="hidden-scrollbar scroll-smooth bg-[#282c34] relative w-56 overflow-y-scroll overflow-x-hidden py-10  h-[320px]"
+        className="hidden-scrollbar scroll-smooth bg-[#282c34] shadow-2xl shadow-[#282c34] relative w-56 overflow-y-scroll overflow-x-hidden py-10  h-[320px]"
       >
+        <div
+          onClick={toggleProgress}
+          className={clsx(
+            'w-10 h-10 cursor-pointer rounded-full  flex fixed top-[50%] -translate-x-[50%] -translate-y-[50%] transition-all duration-50',
+            open ? ' left-0 bg-neutral-600/40' : 'left-[204px] bg-emerald-600',
+          )}
+        >
+          <Icon
+            icon="arrow-left"
+            size={15}
+            className={clsx(
+              'ml-auto my-auto mr-1 text-neutral-100',
+              open ? 'rotate-0' : 'rotate-180',
+            )}
+          />
+        </div>
         <div className="flex h-10 w-72 bg-gradient-to-b from-[#282c34] z-20 to-neutral-50/0 fixed top-0" />
         <div className="flex h-10 w-72 bg-gradient-to-t from-[#282c34] z-20 to-neutral-50/0 fixed bottom-0" />
         {lessonData.map((lesson, index) => (
