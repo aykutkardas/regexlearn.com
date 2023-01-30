@@ -7,7 +7,6 @@ import InteractiveArea from 'src/components/InteractiveArea';
 import HighlightedText from 'src/components/HighlightedText';
 import Progress from 'src/components/Progress';
 import Button, { ButtonVariants } from 'src/components/Button';
-import SupportButton from 'src/components/SupportButton';
 import { InteractiveAreaContext } from 'src/context/InteractiveAreaContext';
 
 const Step = () => {

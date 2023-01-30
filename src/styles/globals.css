@@ -16,6 +16,10 @@
   }
 }
 
+.hidden-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
 ::-webkit-scrollbar {
   @apply h-1 w-1;
 }
