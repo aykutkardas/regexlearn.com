@@ -27,7 +27,7 @@ const PageLesson = ({ lesson }: PageLessonProps) => {
         <link rel="stylesheet" href="/css/animate.css" />
       </CustomHead>
       <InteractiveAreaProvider key={lessonData} lesson={lesson} lessonData={lessonData}>
-        <div className="px-3 flex flex-col flex-1 justify-between">
+        <div className="px-3 flex flex-col flex-1 justify-between relative overflow-x-hidden">
           <Header page="learn-detail" />
           <LearnProgress />
           <Step />
