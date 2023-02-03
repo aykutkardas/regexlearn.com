@@ -48,10 +48,10 @@ const LessonBox = ({ data, lock, bgColor }: Props) => {
 
   return (
     <DynamicWrapper>
-      <a className="relative hover:outline-8">
+      <a className="hover:outline-8">
         <div
           className={cx(
-            'bg-[url(/images/noise.png)] bg-repeat bg-contain  transition-all duration-300 w-full h-44 bg-center rounded-xl py-3 px-4 flex flex-col shadow-xl hover:shadow-2xl flex-1 select-none',
+            'bg-[url(/images/noise.png)] relative bg-repeat bg-contain  transition-all duration-300 w-full h-44 bg-center rounded-xl py-3 px-4 flex flex-col shadow-xl hover:shadow-2xl flex-1 select-none',
             bgColor || 'bg-[#324A34]/80 hover:bg-[#324A34]',
             !lock ? '' : 'cursor-not-allowed text-center grayscale',
           )}
