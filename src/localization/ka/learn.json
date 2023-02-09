@@ -1,51 +1,79 @@
 {
-  "examples.starter.title": "Practice",
+  "examples.starter.title": "სავარჯიშო",
   "examples.starter.description": "Now it's time to do some practice to consolidate what we've learned.",
+  "examples.starter.description": "ახლა კი დროა, ახლად ათვისებული საკითხების შესაჯამებლად, ცოტა წავივარჯიშოთ.",
 
-  "examples.finish.title": "Practice completed!",
+  "examples.finish.title": "სავარჯიშო დასრულებულია!",
   "examples.finish.description": " ",
 
-  "steps.starter.title": "Intro",
+  "steps.starter.title": "შესავალი",
   "steps.starter.description": "Regex is short for `Regular Expression`. It helps to match, find or manage text. Start by typing `OK` in the Regex field to proceed to the first step and access the more detailed description..",
+  "steps.starter.description": "Regex-ი არის `Regular Expression`-ის შემოკლებული ჩანაწერი. იგი გვეხმარება, შევამოწმოთ ტექსტში არსებული მსგავსებები, მოვახდინოთ ძიება ან მართვა ტექსტისა. მოდი, დავიწყოთ შემდეგით: ქვემოთ მოცემულ ველში ლათინური სიმბოლოებით შეიყვანეთ ტექსტი `OK`, რათა გადახვიდეთ პირველ საფეხურზე, სადაც მოცემული იქნება უფრო დეტალური აღწერა..",
 
   "steps.whatIsRegex.title": "What is Regular Expressions `Regex`?",
+  "steps.whatIsRegex.title": "რა არის რეგულარული გამოსახულება (`Regex`)?",
   "steps.whatIsRegex.description": "Regular Expressions are a string of characters that express a search pattern. Often abbreviated as `Regex` or `Regexp`. It is especially used to find or replace words in texts. In addition, we can test whether a text complies with the rules we set.\\n\\n For example, let's say you have a list of filenames. And you only want to find files with the `pdf` extension. Following typing an expression `^\\w+\\.pdf$` will work. The meaning of the definitions in this expression will become clearer as the steps progress.",
+  "steps.whatIsRegex.description": "რეგულარული გამოსახულება არის სიმბოლოებისგან შემდგარი სტრიქონი, რომელიც გამოხატავს საძიებო ნიმუშს. ხშირად, შემოკლებით მოიხსენიებენ, როგორც `Regex` ან `Regexp`. განსაკუთრებით აქტიურად გამოიყენება ტექსტებში გარკვეული სიტყვების მოსაძებნად ან ჩასანაცვლებლად. გარდა ამისა, მისი მეშვეობით შეგვიძლია შევამოწმოთ, აკმაყოფილებს თუ არა ესა თუ ის ტექსტი ჩვენ მიერ განსაზღვრულ ნორმებს.\\n\\n მაგალითად, ვთქვათ, მოცემული გვაქვს ფაილების სახელთა სია და გვინდა, რომ მათ შორის მოვძებნოთ მხოლოდ `pdf` გაფართოების მქონე ფაილები. სასურველ შედეგს მივაღწევთ, თუ შევადგენთ შემდეგი სახის გამოსახულებას: `^\\w+\\.pdf$`. მომდევნო საფეხურების გავლასთან ერთად აღნიშნული გამოსახულების მუშაობის პრინციპი თანდათანობით გასაგები გახდება.",
 
   "steps.basicMatchers.title": "Basic Matchers",
+  "steps.basicMatchers.title": "მსგავსებათა ძიება (საბაზისო)",
   "steps.basicMatchers.description": "The character or word we want to find is written directly. It is similar to a normal search process. For example, to find the word `curious` in the text, type the same.",
+  "steps.basicMatchers.description": "სიტყვისა თუ ბგერის, — რომლის მოძებნაც გვსურს, — ჩაწერა უშუალოდ ხდება, მსგავსად სტანდარტული ძიების პროცესისა. მაგალითად, ტექსტში სიტყვა `curious`-ის  მოსაძებნად, შეიყვანეთ იგივე სიტყვა.",
 
   "steps.dotCharacter.title": "Dot `.`: Any Character",
+  "steps.dotCharacter.title": "წერტილი `.`: ნებისმიერი სიმბოლო",
   "steps.dotCharacter.description": "The period `.` allows selecting any character, including special characters and spaces. Type a period `.` in the Regex field to proceed.",
+  "steps.dotCharacter.description": "წერტილი `.` საშუალებას გაძლევთ აირჩიოთ ნებისმიერი სიმბოლო, მათ შორის სპეციალური სიმბოლოები და ინტერვალები. გასაგრძელებლად, Regex-ის ველში შეიყვანეთ წერტილი.",
 
   "steps.characterSet.title": "Character Sets `[abc]`",
+  "steps.characterSet.title": "სიმბოლოთა ნაკრები `[abc]`",
   "steps.characterSet.description": "If one of the characters in a word can be various characters, we write it in square brackets `[]` with all alternative characters. For example, to write an expression that can find all the words in the text, type the characters `a`, `e`, `i`, `o`, `u` adjacently within square brackets `[]`.",
+  "steps.characterSet.description": "როდესაც სიტყვაში შემავალი ერთ-ერთი სიმბოლოსთვის საჭიროა რამდენიმე ალტერნატიული შესაბამისობის განსაზღვრა, კვადრატულ ფრჩხილებში `[]` ვწერთ ყველა ალტერნატიულ სიმბოლოს. მაგალითად, რათა შეადგინოთ ისეთი გამოსახულება, რომელსაც შეეძლება [ქვემოთ მოცემულ] ტექსტში შემავალი ყოველი სიტყვის პოვნა, კვადრატულ ფრჩხილებში `[]`, გამყოფი ინტერვალების გარეშე შეიყვანეთ შემდეგი სიმბოლოები: `a`, `e`, `i`, `o`, `u`.",
 
   "steps.negatedCharacterSet.title": "Negated Character Sets `[^abc]`",
+  "steps.negatedCharacterSet.title": "უარყოფილ სიმბოლოთა ნაკრები `[^abc]`",
   "steps.negatedCharacterSet.description": "To find all words in the text below, except for `ber` and `bor`, type `e` and `o` side by side after the caret `^` character inside square brackets `[]`.",
+  "steps.negatedCharacterSet.description": "იმისათვის, რომ ქვემოთ მოცემულ ტექსტში იპოვოთ ყველა სიტყვა, გარდა `ber`-ისა და `bor`-ისა, კვადრატულ ფრჩხილებში `[]`, ახარისხების სიმბოლოს `^` შემდეგ შეიყვანეთ `e` და `o` სიმბოლოები გვერდი-გვერდ.",
 
   "steps.range.title": "Letter Range`[a-z]`",
+  "steps.range.title": "ასოთა დიაპაზონი `[a-z]`",
   "steps.range.description": "To find the letters in the specified range, the starting letter and the ending letter are written in square brackets `[]` with a dash between them `-`. It is case-sensitive. Type the expression that will select all lowercase letters between `e` and `o`, including themselves.",
+  "steps.range.description": "იმისათვის, რომ განსაზღვრულ დიაპაზონში ვიპოვოთ ასოები, საწყისსა და საბოლოო ასოებს ვწერთ კვადრატულ ფრჩხილებში `[]` და ერთმანეთისაგან დეფისით `-` გამოვყოფთ. აღსანიშნავია, რომ მსგავსი ჩანაწერი რეგისტრის მიმართ მგრძნობიარეა. შეადგინეთ ისეთი გამოსახულება, რომელიც აარჩევს ყველა ასოს `e`-სა და `o`-ს შორის, საწყისი და საბოლოო ასოების (`e` და `o`) ჩათვლით.",
 
   "steps.rangeNumber.title": "Number Range`[0-9]`",
+  "steps.rangeNumber.title": "ციფრთა დიაპაზონი `[0-9]`",
   "steps.rangeNumber.description": "To find the numbers in the specified range, the starting number and the ending number are written in square brackets `[]` with a dash `-` between them. Write an expression that will select all numbers between `3` and `6`, including themselves.",
+  "steps.rangeNumber.description": "იმისათვის, რომ განსაზღვრულ დიაპაზონში ვიპოვოთ ციფრები, საწყისსა (უმცირესი) და საბოლოო (უდიდესი) ციფრებს ვწერთ კვადრატულ ფრჩხილებში `[]` და ერთმანეთისაგან დეფისით `-` გამოვყოფთ. შეადგინეთ ისეთი გამოსახულება, რომელიც აარჩევს ყველა ციფრს `3`-სა და `6`-ს შორის, საწყისი და საბოლოო ციფრების (`3` და `6`) ჩათვლით.",
 
   "examples.basicMatchers.title": "Practice: Basic Matcher",
+  "examples.basicMatchers.title": "სავარჯიშო: მსგავსებათა ძიება (საბაზისო)",
   "examples.basicMatchers.description": "Write the expression that will select the words `of` in the text.",
+  "examples.basicMatchers.description": "დაწერეთ გამოსახულება, რომელიც ტექსტში აარჩევს ყველა დამთხვევას სიტყვისთვის `of`.",
 
   "examples.dotCharacter.title": "Practice: Any Character",
+  "examples.dotCharacter.title": "სავარჯიშო: ნებისმიერი სიმბოლო",
   "examples.dotCharacter.description": "Type the expression to select individual letters, numbers, spaces, and special characters in the text. The expression you type must match any character.",
+  "examples.dotCharacter.description": "დაწერეთ გამოსახულება ტექსტში ცალკეული ასოების, ციფრების, ინტერვალებისა და სპეციალური სიმბოლოების ასარჩევად. თქვენ მიერ შეყვანილი გამოსახულება შესაბამისობაში უნდა მოდიოდეს ნებისმიერ სიმბოლოსთან.",
 
   "examples.characterSet.title": "Practice: Character Sets",
+  "examples.characterSet.title": "სავარჯიშო: სიმბოლოთა ნაკრები",
   "examples.characterSet.description": "Write the phrase that matches each word in the text. The only characters that change are the initials of the words.",
+  "examples.characterSet.description": "დაწერეთ ფრაზა, რომელიც შესაბამისობაში მოვა ტექსტის თითოეულ სიტყვასთან. გაითვალისწინეთ, რომ სიტყვებს შორის განმასხვავებელი ერთადერთი სიმბოლო პირველი ასოა.",
 
   "examples.negatedCharacterSet.title": "Practice: Negated Character Sets",
+  "examples.negatedCharacterSet.title": "სავარჯიშო: უარყოფილ სიმბოლოთა ნაკრები",
   "examples.negatedCharacterSet.description": "Write down the expression that will match anything other than the words `beor` and `beur` in the text. Do this using the negated character set.",
+  "examples.negatedCharacterSet.description": "დაწერეთ გამოსახოლება, რომელიც ტექსში მოცემულ ყველა სიტყვასთან მოვა შესაბამისობაში, გარდა სიტყვებისა - `beor` და `beur`. განახორციელეთ ეს უარყოფილ სიმბოლოთა ნაკრების გამოყენებით.",
 
   "examples.range.title": "Practice: Letter Range",
+  "examples.range.title": "სავარჯიშო: ასოთა დიაპაზონი",
   "examples.range.description": "Write the expression that will select the letters from `g` to `k` in the text.\\n`g` and `k` letters should also be included in this range.",
+  "examples.range.description": "დაწერეთ გამოსახულება, რომელიც ტექსტში აარჩევს ასოებს `g`-დან `k`-მდე.\\nდიაპაზონში ასევე უნდა შედიოდეს `g` და `k` ასოებიც.",
 
   "examples.rangeNumber.title": "Practice: Number Range",
+  "examples.rangeNumber.title": "სავარჯიშო: ციფრთა დიაპაზონი",
   "examples.rangeNumber.description": "Type an expression to select numbers from `2` to `7` in the text.\\n`2` and `7` should also be included in this range.",
+  "examples.rangeNumber.description": "დაწერეთ გამოსახულება, რათა ტექსტში აირჩიოთ ციფრები `2`-დან `7`-მდე.\\nდიაპაზონში ასევე უნდა შედიოდეს `2` და `7`.",
 
   "steps.repetitions.title": "Repetitions",
   "steps.repetitions.description": "Some special characters are used to specify how many times a character will be repeated in the text. These special characters are the plus `+`, the asterisk `*`, and the question mark `?`.",
