@@ -34,12 +34,10 @@ const PageHome = () => {
               className="md:text-lg md:leading-8 my-1 text-neutral-200/80"
               text={formatMessage({ id: 'landing.description' })}
             />
-            <IntlLink href="/[lang]/learn" passHref>
-              <a tabIndex={-1}>
+            <IntlLink href="/[lang]/learn" tabIndex={-1}>
                 <Button variant={ButtonVariants.Primary} className="mt-4">
                   <FormattedMessage id="general.startLearning" />
                 </Button>
-              </a>
             </IntlLink>
           </div>
           <div className="w-full md:w-3/10 hidden sm:flex justify-end">

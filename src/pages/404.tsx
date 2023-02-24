@@ -20,7 +20,7 @@ const Page404 = () => {
         <Header />
         <div className="flex flex-col flex-1 items-center justify-center w-full h-full">
           <img className="w-[300px]" src="/404.webp" alt="404" />
-          <IntlLink href="/" passHref>
+          <IntlLink href="/">
             <Button variant={ButtonVariants.Primary}>
               <FormattedMessage id="notFound.button" />
             </Button>

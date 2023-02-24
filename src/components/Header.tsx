@@ -33,40 +33,14 @@ const Header = ({ page }: Props) => {
         </div>
         {isLearnDetail && <div id="ProgressArea" className="flex justify-center flex-1" />}
         <div className="flex flex-1 items-center text-sm justify-end gap-2 sm:gap-4">
-          <IntlLink href="/[lang]/learn" passHref>
-            {({ isActive }) => (
-              <a
-                className={
-                  isActive ? 'text-regreen-400' : 'text-neutral-200 hover:text-regreen-400'
-                }
-              >
-                <FormattedMessage id="general.learn" />
-              </a>
-            )}
+          <IntlLink navLink href="/[lang]/learn">
+            <FormattedMessage id="general.learn" />
           </IntlLink>
-          <IntlLink href="/[lang]/cheatsheet" passHref>
-            {({ isActive }) => (
-              <a
-                className={cx(
-                  isActive ? 'text-regreen-400' : 'text-neutral-200 hover:text-regreen-400',
-                  { 'hidden md:block': isLearnDetail },
-                )}
-              >
-                <FormattedMessage id="general.cheatsheet" />
-              </a>
-            )}
+          <IntlLink navLink href="/[lang]/cheatsheet">
+            <FormattedMessage id="general.cheatsheet" />
           </IntlLink>
-          <IntlLink href="/[lang]/playground" passHref>
-            {({ isActive }) => (
-              <a
-                className={cx(
-                  isActive ? 'text-regreen-400' : 'text-neutral-200 hover:text-regreen-400',
-                  { 'hidden md:block': isLearnDetail },
-                )}
-              >
-                <FormattedMessage id="general.playground" />
-              </a>
-            )}
+          <IntlLink navLink href="/[lang]/playground">
+            <FormattedMessage id="general.playground" />
           </IntlLink>
 
           <a
