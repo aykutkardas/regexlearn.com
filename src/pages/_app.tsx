@@ -23,7 +23,6 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
     return () => window.removeEventListener('keydown', preventBrowserShortcut);
   }, []);
 
-  console.log('pageProps', pageProps ? pageProps.metadata : 1);
   const { metadata } = pageProps || {};
   const baseURL = process.env.NEXT_PUBLIC_BASE_URL;
   const { asPath } = useRouter();
