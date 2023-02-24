@@ -21,7 +21,7 @@ import FlagSelect from './FlagSelect';
 import Button, { ButtonVariants } from './Button';
 import copy from 'copy-to-clipboard';
 
-axios.defaults.baseURL = process.env.NEXT_PUBLIC_BASE_URL;
+axios.defaults.baseURL = process.env.NEXT_PUBLIC_API_BASE_URL;
 
 function myKeyBindingFn(e): string | null {
   if (e.ctrlKey && e.key.toLowerCase() === 'm') {
@@ -179,11 +179,7 @@ const Playground = () => {
       setState({
         regex,
         flags,
-        editorState: checkRegex(
-          regex,
-          flags,
-          EditorState.createWithContent(initialContent),
-        ),
+        editorState: checkRegex(regex, flags, EditorState.createWithContent(initialContent)),
       });
       setInitial({ regex: state.regex, flags: state.flags, text: initialContent.getPlainText() });
       setCaretPosition(regexInput?.current, state.regex.length);
