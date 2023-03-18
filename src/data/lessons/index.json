@@ -4,6 +4,10 @@
     "slug": "regex101",
     "title": "lessons.regex101.title",
     "description": "lessons.regex101.description",
+    "creator": "Interactively",
+    "creatorURL": "https://interactively.info/?utm_source=regexlearn&utm_medium=referral",
+    "creatorLogo": "/interactively.webp",
+    "logoHeight": 18,
     "stepCount": 56
   },
   {

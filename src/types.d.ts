@@ -1,6 +1,10 @@
 export type Lesson = {
   key: string;
   slug: string;
+  creator?: string;
+  creatorURL?: string;
+  creatorLogo?: string;
+  logoHeight?: number;
   sponsorURL?: string;
   sponsorLogo?: string;
   sponsor?: string;
