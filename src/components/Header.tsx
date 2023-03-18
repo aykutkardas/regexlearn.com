@@ -33,13 +33,13 @@ const Header = ({ page }: Props) => {
         </div>
         {isLearnDetail && <div id="ProgressArea" className="flex justify-center flex-1" />}
         <div className="flex flex-1 items-center text-sm justify-end gap-2 sm:gap-4">
-          <IntlLink navLink href="/[lang]/learn">
+          <IntlLink className="hidden md:block" navLink href="/[lang]/learn">
             <FormattedMessage id="general.learn" />
           </IntlLink>
-          <IntlLink navLink href="/[lang]/cheatsheet">
+          <IntlLink className="hidden md:block" navLink href="/[lang]/cheatsheet">
             <FormattedMessage id="general.cheatsheet" />
           </IntlLink>
-          <IntlLink navLink href="/[lang]/playground">
+          <IntlLink className="hidden md:block" navLink href="/[lang]/playground">
             <FormattedMessage id="general.playground" />
           </IntlLink>
 
