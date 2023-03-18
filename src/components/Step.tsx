@@ -70,7 +70,11 @@ const Step = () => {
       <InteractiveArea key={step} isShow={isInteractive} setIsOpenModal={setIsOpenModal} />
       <a
         className="text-xs inline-flex items-center justify-end text-neutral-400 hover:text-neutral-100 relative bottom-3 ml-auto mt-5"
-        href={lesson.sponsorURL || 'https://github.com/aykutkardas/regexlearn.com#sponsoring'}
+        href={
+          lesson.sponsorURL ||
+          lesson.creatorURL ||
+          'https://github.com/aykutkardas/regexlearn.com#sponsoring'
+        }
         target="_blank"
         rel="noreferrer"
       >
