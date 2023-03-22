@@ -63,8 +63,8 @@
   "cheatsheet.asterisk.description": "Вираз відповідає нулю чи більше.",
   "cheatsheet.quantifier.title": "Квантифікатор",
   "cheatsheet.quantifier.description": "Вираз відповідає зазначеним діапазонам.",
-  "cheatsheet.optional.title": "Не обов'язково",
-  "cheatsheet.optional.description": "Робить вираз необов'язковим.",
+  "cheatsheet.optional.title": "Не обовʼязково",
+  "cheatsheet.optional.description": "Робить вираз необовʼязковим.",
   "cheatsheet.alternation.title": "Чергування",
   "cheatsheet.alternation.description": "Очікується збіг одного із зарезервованих виразів."
 }
