@@ -16,7 +16,7 @@
   "cheatsheet.characterSet.title": "Zbiór znaków",
   "cheatsheet.characterSet.description": "Dopasowuje dowolny znak z podanego zbioru.",
   "cheatsheet.negatedCharacterSet.title": "Negacja zbioru znaków",
-  "cheatsheet.negatedCharacterSet.description": "Dopasowuje dowolny znak, który nie znajdje się w podanym zbiorze.",
+  "cheatsheet.negatedCharacterSet.description": "Dopasowuje dowolny znak, który nie znajduje się w podanym zbiorze.",
   "cheatsheet.range.title": "Zakres",
   "cheatsheet.range.description": "Dopasowuje wszystkie znaki znajdujące się pomiędzy podanymi dwoma znakami, włączając w to te dwa znaki.",
   "cheatsheet.dot.title": "Kropka",

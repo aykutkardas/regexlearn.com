@@ -24,11 +24,11 @@
   "notFound.intro": "Strona, której szukasz, nie istnieje.",
   "notFound.button": "Wróć do strony głównej",
 
-  "page.landing.title": "Regex Learn - Krok po kroku, od zera do bohatera.",
-  "page.learn.title": "Regex Learn - Interaktywny kurs wyrażeń regularnych",
-  "page.cheatsheet.title": "Regex Learn - Ściągawka wyrażeń regularnych",
-  "page.playground.title": "Regex Learn - Piaskownica",
-  "page.404.title": "Regex Learn - Nie znaleziono strony",
+  "page.landing.title": "RegexLearn - Krok po kroku, od zera do bohatera.",
+  "page.learn.title": "RegexLearn - Interaktywny kurs wyrażeń regularnych",
+  "page.cheatsheet.title": "RegexLearn - Ściągawka wyrażeń regularnych",
+  "page.playground.title": "RegexLearn - Piaskownica",
+  "page.404.title": "RegexLearn - Nie znaleziono strony",
 
   "page.landing.description": "Naucz się wyrażeń regularnych interaktywnie, ćwicz na swoim poziomie wiedzy, testuj i udostępniaj własne wyrażenia regularne.",
   "page.learn.description": "Naucz się wyrażeń regularnych krok po kroku. Ukończ interaktywny samouczek, który ułatwi i przyspieszy Twoją naukę.",

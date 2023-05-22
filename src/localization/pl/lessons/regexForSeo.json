@@ -1,5 +1,5 @@
 {
-  "lesson.regexForSeo.starter.title": "Regex dla SEO",
+  "lesson.regexForSeo.starter.title": "Wyrażenia regularne w SEO",
   "lesson.regexForSeo.starter.description": "Regexy to zbiór wyrażeń regularnych często używanych w wielu dziedzinach, zwłaszcza przez osoby pragnące zwiększyć swoją produktywność. Zalety korzystania z regexów w SEO to łatwiejsza analiza dużych zbiorów danych i tworzenie bardziej zaawansowanych filtrów. Jeśli dopiero zaczynasz przygodę z wyrażeniami regularnymi, to zalecamy rozpoczęcie od samouczka `Regex 101`. \n\nZacznij od wpisania `OK` w polu \"Regex\", aby przejść do kolejnej sekcji i uzyskać bardziej szczegółowe wyjaśnienia.",
 
   "lesson.regexForSeo.usage.title": "Przykłady użycia",
