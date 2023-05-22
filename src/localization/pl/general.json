@@ -1,0 +1,39 @@
+{
+  "general.prev": "Poprzedni",
+  "general.next": "Następny",
+  "general.result": "Wynik",
+  "general.regex": "Wyrażenie regularne",
+  "general.text": "Tekst",
+  "general.watch": "Obejrzyj",
+  "general.start": "Rozpocznij",
+  "general.continue": "Kontynuuj",
+  "general.completedStep": "Krok ukończony!",
+  "general.hintQuestion": "Pokaż odpowiedź",
+  "general.reportStep": "Zgłoś problem",
+  "general.startLearning": "Rozpocznij naukę",
+  "general.comingSoon": "Już wkrótce",
+  "general.becomeSponsor": "Zostań sponsorem",
+  "general.learn": "Nauka",
+  "general.playground": "Piaskownica",
+  "general.cheatsheet": "Ściągawka",
+  "general.ourSponsors": "Nasi sponsorzy",
+  "general.share": "Udostępnij",
+  "general.shareLinkCopied": "Link do udostępniania skopiowany!",
+  "general.somethingWentWrong": "Coś poszło nie tak!",
+
+  "notFound.intro": "Strona, której szukasz, nie istnieje.",
+  "notFound.button": "Wróć do strony głównej",
+
+  "page.landing.title": "Regex Learn - Krok po kroku, od zera do bohatera.",
+  "page.learn.title": "Regex Learn - Interaktywny kurs wyrażeń regularnych",
+  "page.cheatsheet.title": "Regex Learn - Ściągawka wyrażeń regularnych",
+  "page.playground.title": "Regex Learn - Piaskownica",
+  "page.404.title": "Regex Learn - Nie znaleziono strony",
+
+  "page.landing.description": "Naucz się wyrażeń regularnych interaktywnie, ćwicz na swoim poziomie wiedzy, testuj i udostępniaj własne wyrażenia regularne.",
+  "page.learn.description": "Naucz się wyrażeń regularnych krok po kroku. Ukończ interaktywny samouczek, który ułatwi i przyspieszy Twoją naukę.",
+  "page.cheatsheet.description": "Czasami trzeba po prostu zapamiętać pewne wyrażenia regularne. Sprawdź ściągawkę, która ułatwi Ci ich zrozumienie i lepsze zapamiętywanie.",
+  "page.playground.description": "Możesz łatwo tworzyć i testować wzorce wyrażeń regularnych za pomocą Piaskownicy.",
+
+  "learn.safari.unsupportWarning": "Wyrażenia regularne użyte w tym kroku nie są obsługiwane przez niektóre przeglądarki. Jeśli masz problemy z przejściem tego kroku, możesz kliknąć tutaj."
+}
