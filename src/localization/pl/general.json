@@ -1,8 +1,8 @@
 {
-  "general.prev": "Poprzedni",
-  "general.next": "Następny",
+  "general.prev": "Wstecz",
+  "general.next": "Dalej",
   "general.result": "Wynik",
-  "general.regex": "Wyrażenie regularne",
+  "general.regex": "Regex",
   "general.text": "Tekst",
   "general.watch": "Obejrzyj",
   "general.start": "Rozpocznij",
