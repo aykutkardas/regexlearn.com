@@ -1,72 +1,72 @@
 {
-  "examples.starter.title": "Practice",
-  "examples.starter.description": "Now it's time to do some practice to consolidate what we've learned.",
+  "examples.starter.title": "Ćwiczenia",
+  "examples.starter.description": "Nadszedł czas na wykonanie kilku ćwiczeń, aby utrwalić to, czego się nauczyliśmy.",
 
-  "examples.finish.title": "Practice completed!",
+  "examples.finish.title": "Koniec ćwiczeń!",
   "examples.finish.description": " ",
 
-  "steps.starter.title": "Intro",
-  "steps.starter.description": "Regex is short for `Regular Expression`. It helps to match, find or manage text. Start by typing `OK` in the Regex field to proceed to the first step and access the more detailed description..",
+  "steps.starter.title": "Wstęp",
+  "steps.starter.description": "Regex to skrót od `Regular Expression` (wyrażenie regularne). Pomaga dopasować, znaleźć lub zarządzać tekstem. Aby przejść do kolejnej sekcji i by uzyskać bardziej szczegółowy opis, wpisz `OK` w polu Regex.",
 
-  "steps.whatIsRegex.title": "What is Regular Expressions `Regex`?",
-  "steps.whatIsRegex.description": "Regular Expressions are a string of characters that express a search pattern. Often abbreviated as `Regex` or `Regexp`. It is especially used to find or replace words in texts. In addition, we can test whether a text complies with the rules we set.\\n\\n For example, let's say you have a list of filenames. And you only want to find files with the `pdf` extension. Following typing an expression `^\\w+\\.pdf$` will work. The meaning of the definitions in this expression will become clearer as the steps progress.",
+  "steps.whatIsRegex.title": "Czym jest wyrażenie regularne `Regex`?",
+  "steps.whatIsRegex.description": "Wyrażenia regularne to ciągi znaków, które określaja wzorzec wyszukiwania. Ich skrótowym określeniem jest `Regex` lub `Regexp`. W szczególności wykorzystuje się je do wyszukiwania lub zamiany słów w tekstach. Ponadto, dzięki nim możemy sprawdzić, czy tekst spełnia określone przez nas zasady.\\n\\n Na przykład, przyjmijmy, że masz listę nazw plików i chcesz znaleźć tylko pliki o rozszerzeniu `pdf`. Wpisując wyrażenie `^\\w+\\.pdf$` osiągniesz zamierzony efekt. Znaczenie poszczególnych elementów tego wyrażenia regularnego stanie się dla Ciebie bardziej jasne wraz z kolejnymi sekcjami tego samouczka.",
 
-  "steps.basicMatchers.title": "Basic Matchers",
-  "steps.basicMatchers.description": "The character or word we want to find is written directly. It is similar to a normal search process. For example, to find the word `curious` in the text, type the same.",
+  "steps.basicMatchers.title": "Podstawowe dopasowania",
+  "steps.basicMatchers.description": "Znak lub słowo, które chcemy znaleźć, wpisujemy wprost. Jest to podobne do normalnego procesu wyszukiwania. Na przykład, aby znaleźć w tekście słowo `curious`, wpisz je tak samo.",
 
-  "steps.dotCharacter.title": "Dot `.`: Any Character",
-  "steps.dotCharacter.description": "The period `.` allows selecting any character, including special characters and spaces. Type a period `.` in the Regex field to proceed.",
+  "steps.dotCharacter.title": "Kropka `.`: dowolny znak",
+  "steps.dotCharacter.description": "Kropka `.` umożliwia wybranie dowolnego znaku, w tym znaków specjalnych i spacji. Aby kontynuować, wpisz kropkę `.` w polu Regex.",
 
-  "steps.characterSet.title": "Character Sets `[abc]`",
-  "steps.characterSet.description": "If one of the characters in a word can be various characters, we write it in square brackets `[]` with all alternative characters. For example, to write an expression that can find all the words in the text, type the characters `a`, `e`, `i`, `o`, `u` adjacently within square brackets `[]`.",
+  "steps.characterSet.title": "Zbiór znaków `[abc]`",
+  "steps.characterSet.description": "Jeśli w danym wyraze jeden ze znaków może być różnymi znakami, zapisujemy to stosując nawiasy kwadratowe `[]`, a w nim wszystkie alternatywy znaków. Na przykład, aby napisać wyrażenie, które może znaleźć wszystkie słowa w poniższym tekście, wpisz wewnątrz nawiasów kwadratowych `[]` kolejno litery `a`, `e`, `i`, `o`, `u`.",
 
-  "steps.negatedCharacterSet.title": "Negated Character Sets `[^abc]`",
-  "steps.negatedCharacterSet.description": "To find all words in the text below, except for `ber` and `bor`, type `e` and `o` side by side after the caret `^` character inside square brackets `[]`.",
+  "steps.negatedCharacterSet.title": "Negacja zbioru znaków `[^abc]`",
+  "steps.negatedCharacterSet.description": "Aby znaleźć wszystkie słowa w poniższym tekście, z wyjątkiem `ber` i `bor`, wewnątrz nawiasów kwadratowych `[]` po znaku `^` wpisz kolejno litery `e` i `o`.",
 
-  "steps.range.title": "Letter Range`[a-z]`",
-  "steps.range.description": "To find the letters in the specified range, the starting letter and the ending letter are written in square brackets `[]` with a dash between them `-`. It is case-sensitive. Type the expression that will select all lowercase letters between `e` and `o`, including themselves.",
+  "steps.range.title": "Zakres liter `[a-z]`",
+  "steps.range.description": "Aby znaleźć litery w określonym zakresie, w nawiasach kwadratowych `[]` podaje się literę początkową i końcową oddzielone myślnikiem `-`. Wielkość liter ma znaczenie. Wpisz wyrażenie, które dopasuje wszystkie małe litery między `e` i `o`, włączając w to te litery.",
 
-  "steps.rangeNumber.title": "Number Range`[0-9]`",
-  "steps.rangeNumber.description": "To find the numbers in the specified range, the starting number and the ending number are written in square brackets `[]` with a dash `-` between them. Write an expression that will select all numbers between `3` and `6`, including themselves.",
+  "steps.rangeNumber.title": "Zakres cyfry `[0-9]`",
+  "steps.rangeNumber.description": "Aby znaleźć cyfry w określonym zakresie, w nawiasach kwadratowych `[]` podaje się początkową i końcową cyfrę oddzielone myślnikiem `-`. Wpisz wyrażenie, które dopasuje wszystkie cyfry między `3` i `6`, włączając w to te cyfry.",
 
-  "examples.basicMatchers.title": "Practice: Basic Matcher",
-  "examples.basicMatchers.description": "Write the expression that will select the words `of` in the text.",
+  "examples.basicMatchers.title": "Ćwiczenie: podstawowe dopasowanie",
+  "examples.basicMatchers.description": "Napisz wyrażenie, które dopasuje w tekście słowo `of`.",
 
-  "examples.dotCharacter.title": "Practice: Any Character",
-  "examples.dotCharacter.description": "Type the expression to select individual letters, numbers, spaces, and special characters in the text. The expression you type must match any character.",
+  "examples.dotCharacter.title": "Ćwiczenie: dowolny znak",
+  "examples.dotCharacter.description": "Napisz wyrażenie, tak aby dopasować w tekście pojedyncze litery, cyfry, spacje i znaki specjalne. Wyrażenie, które wpiszesz, musi pasować do dowolnego znaku.",
 
-  "examples.characterSet.title": "Practice: Character Sets",
-  "examples.characterSet.description": "Write the phrase that matches each word in the text. The only characters that change are the initials of the words.",
+  "examples.characterSet.title": "Ćwiczenie: zbiór znaków",
+  "examples.characterSet.description": "Napisz wyrażenie, które dopasuje każde słowo w tekście. Jedne co się zmienia w poniższych słowach to początkowe litery.",
 
-  "examples.negatedCharacterSet.title": "Practice: Negated Character Sets",
-  "examples.negatedCharacterSet.description": "Write down the expression that will match anything other than the words `beor` and `beur` in the text. Do this using the negated character set.",
+  "examples.negatedCharacterSet.title": "Ćwiczenie: negacja zbioru znaków",
+  "examples.negatedCharacterSet.description": "Napisz wyrażenie, które w poniższym tekście będzie pasować do wszystkiego, oprócz słów `beor` i `beur`. Użyj negacji zbioru znaków.",
 
-  "examples.range.title": "Practice: Letter Range",
-  "examples.range.description": "Write the expression that will select the letters from `g` to `k` in the text.\\n`g` and `k` letters should also be included in this range.",
+  "examples.range.title": "Ćwiczenie: zakres liter",
+  "examples.range.description": "Napisz wyrażenie, które w poniższym tekście będzie dopasowywać litery od `g` do `k`.\\n\\nLitery `g` i `k` powinny również być uwzględnione w tym dopasowaniu.",
 
-  "examples.rangeNumber.title": "Practice: Number Range",
-  "examples.rangeNumber.description": "Type an expression to select numbers from `2` to `7` in the text.\\n`2` and `7` should also be included in this range.",
+  "examples.rangeNumber.title": "Ćwiczenie: zakres cyfr",
+  "examples.rangeNumber.description": "Napisz wyrażenie, które w poniższym tekście będzie dopasowywać cyfry od `2` do `7`.\\n\\Cyfry `2` i `7` powinny również być uwzględnione w tym dopasowaniu.",
 
-  "steps.repetitions.title": "Repetitions",
-  "steps.repetitions.description": "Some special characters are used to specify how many times a character will be repeated in the text. These special characters are the plus `+`, the asterisk `*`, and the question mark `?`.",
+  "steps.repetitions.title": "Powtórzenia",
+  "steps.repetitions.description": "Niektóre specjalne znaki służą do określenia ile razy dany znak może powtórzyć się w tekście. Te specjalne znaki to plus `+`, gwiazdka `*` i znak zapytania `?`.",
 
-  "steps.asterisk.title": "Asterisk `*`",
-  "steps.asterisk.description": "We put an asterisk `*` after a character to indicate that the character may either not match at all or can match many times. For example, indicate that the letter `e` should never occur in the text, or it can occur once or more side by side.",
+  "steps.asterisk.title": "Gwiazdka `*`",
+  "steps.asterisk.description": "Aby wskazać, że dany znak może się nie pojawić wcale lub może się pojawić wiele razy, umieszczamy po nim gwiazdkę `*`. Na przykład, możemy wskazać, że litera `e` nie powinna występować w tekście, może wystąpić raz lub więcej razy obok siebie.",
 
-  "steps.plusCharacter.title": "Plus Sign `+`",
-  "steps.plusCharacter.description": "To indicate that a character can occur one or more times, we put a plus sign `+` after a character. For example, indicate that the letter `e` can occur one or more times in the text.",
+  "steps.plusCharacter.title": "Plus `+`",
+  "steps.plusCharacter.description": "Aby wskazać, że dany znak może wystąpić jeden lub więcej razy, umieszczamy po nim znak plusa `+`. Na przykład, możemy wskazać, że litera `e` może wystąpić w tekście jeden lub więcej razy obok siebie.",
 
-  "steps.questionMark.title": "Question Mark `?`",
-  "steps.questionMark.description": "To indicate that a character is optional, we put a `?` question mark after a character. For example, indicate that the following letter `u` is optional.",
+  "steps.questionMark.title": "Znak zapytania `?`",
+  "steps.questionMark.description": "Aby wskazać, że dany znak jest opcjonalny, umieszczamy po nim znak zapytania `?`. Na przykład, możemy wskazać, że następna litera `u` jest opcjonalna.",
 
-  "steps.quantifier.title": "Curly Braces - 1",
-  "steps.quantifier.description": "To express a certain number of occurrences of a character,  at the end we write curly braces `{n}` along with how many times we want it to occur. For example, indicate that the following letter `e` can occur only `2` times.",
+  "steps.quantifier.title": "Nawiasy klamrowe - 1",
+  "steps.quantifier.description": "Aby określić liczbę wystąpień po sobie danego znaku, umieszczamy po nim nawiasy klamrowe `{n}` razem z liczbą określającą, ile razy ma się pojawić. Na przykład, możemy wskazać, że następna litera `e` może wystąpić obok siebie dokładnie `2` razy.",
 
-  "steps.quantifierMin.title": "Curly Braces - 2",
-  "steps.quantifierMin.description": "To express at least a certain number of occurrences of a character, immediately after the character we write at least how many times we want it to occur followed by a comma `,` and wrapped inside curly braces `{n, }`. For example, indicate that the following letter `e` can occur at least `3` times.",
+  "steps.quantifierMin.title": "Nawiasy klamrowe - 2",
+  "steps.quantifierMin.description": "Aby określić minimalną liczbę wystąpień po sobie danego znaku, wskazujemy przynajmniej ile razy ma się on pojawić, następnie przecinek `,` i umieszczamy to w nawiasach klamrowych `{n, }`. Na przykład, możemy wskazać, że litera `e` może wystąpić obok siebie przynajmniej `3` razy.",
 
-  "steps.quantifierRange.title": "Curly Braces - 3",
-  "steps.quantifierRange.description": "To express the occurrence of a character in a certain number range, we write curly braces `{x,y}` with the interval we want to go to the end. For example, indicate that the following letter `e` can only occur between `1` and `3`.",
+  "steps.quantifierRange.title": "Nawiasy klamrowe - 3",
+  "steps.quantifierRange.description": "Aby określić liczbę wystąpień znaku po sobie danego znaku w określonym zakresie, stosujemy nawiasy klamrowe `{x,y}` z podanym zakresem powtórzeń, który nas interesuje. Na przykład, możemy wskazać, że litera `e` może wystąpić po sobie tylko od `1` do `3` razy.",
 
   "examples.asterisk.title": "Practice: Asterisk `*`",
   "examples.asterisk.description": "Use the asterisk `*` to write the expression that will select each word, suitable for the absence of the letter `e` in the text and the presence of one or more.",
