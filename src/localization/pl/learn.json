@@ -45,7 +45,7 @@
   "examples.range.description": "Napisz wyrażenie, które w poniższym tekście będzie dopasowywać litery od `g` do `k`.\\n\\nLitery `g` i `k` powinny również być uwzględnione w tym dopasowaniu.",
 
   "examples.rangeNumber.title": "Ćwiczenie: zakres cyfr",
-  "examples.rangeNumber.description": "Napisz wyrażenie, które w poniższym tekście będzie dopasowywać cyfry od `2` do `7`.\\n\\Cyfry `2` i `7` powinny również być uwzględnione w tym dopasowaniu.",
+  "examples.rangeNumber.description": "Napisz wyrażenie, które w poniższym tekście będzie dopasowywać cyfry od `2` do `7`.\\n\\nCyfry `2` i `7` powinny również być uwzględnione w tym dopasowaniu.",
 
   "steps.repetitions.title": "Powtórzenia",
   "steps.repetitions.description": "Niektóre specjalne znaki służą do określenia ile razy dany znak może powtórzyć się w tekście. Te specjalne znaki to plus `+`, gwiazdka `*` i znak zapytania `?`.",
@@ -68,29 +68,29 @@
   "steps.quantifierRange.title": "Nawiasy klamrowe - 3",
   "steps.quantifierRange.description": "Aby określić liczbę wystąpień znaku po sobie danego znaku w określonym zakresie, stosujemy nawiasy klamrowe `{x,y}` z podanym zakresem powtórzeń, który nas interesuje. Na przykład, możemy wskazać, że litera `e` może wystąpić po sobie tylko od `1` do `3` razy.",
 
-  "examples.asterisk.title": "Practice: Asterisk `*`",
-  "examples.asterisk.description": "Use the asterisk `*` to write the expression that will select each word, suitable for the absence of the letter `e` in the text and the presence of one or more.",
+  "examples.asterisk.title": "Ćwiczenie: gwiazdka `*`",
+  "examples.asterisk.description": "Użyj gwiazdki `*` do napisania wyrażenia, które dopasuje w poniższym tekście każde słowo, w którym nie ma litery `e` lub występuje w nim co najmniej raz.",
 
-  "examples.plusCharacter.title": "Practice: Plus Sign `+`",
-  "examples.plusCharacter.description": "Write the expression using the plus sign `+` to select words in which the letter `e` occurs one or more times in the text.",
+  "examples.plusCharacter.title": "Ćwiczenie: plus `+`",
+  "examples.plusCharacter.description": "Napisz wyrażenie używając znaku plus `+`, tak aby dopasować słowa, w których litera `e` występuje co najmniej raz.",
 
-  "examples.questionMark.title": "Practice: Question Mark `?`",
-  "examples.questionMark.description": "Write the expression indicating that the letter `n` is optional in the text, using the question mark `?`. Thus, both the words `a` and `an` can be selected.",
+  "examples.questionMark.title": "Ćwiczenie: znak zapytania `?`",
+  "examples.questionMark.description": "Napisz wyrażenie używając znaku zapytania `?`, tak aby wskazać, że litera `n` jest opcjonalna. Dzięki temu zarówno `a`, jak i `an` mogą być dopasowane.",
 
-  "examples.quantifier.title": "Practice: Curly Braces - 1",
-  "examples.quantifier.description": "Write the expression using curly braces `{}` that will find texts containing `4` numbers side by side. Remember that the range `[0-9]` will match a single digit.",
+  "examples.quantifier.title": "Ćwiczenie: nawiasy klamrowe - 1",
+  "examples.quantifier.description": "Napisz wyrażenie używając nawiasów klamrowych `{}`, które dopasuje napisy zawierające 4 cyfry obok siebie. Pamiętaj, że zakres `[0-9]` dopasowuje pojedynczą cyfrę.",
 
-  "examples.quantifierMin.title": "Practice: Curly Braces - 2",
-  "examples.quantifierMin.description": "Write the expression using curly braces `{}` that will find texts containing at least `2` numbers side by side.",
+  "examples.quantifierMin.title": "Ćwiczenie: nawiasy klamrowe - 2",
+  "examples.quantifierMin.description": "Napisz wyrażenie używając nawiasów klamrowych `{}`, które znajdzie napisy zawierające co najmniej `2` cyfry obok siebie.",
 
-  "examples.quantifierRange.title": "Practice: Curly Braces - 3",
-  "examples.quantifierRange.description": "Write the expression using curly braces `{}` that will find texts containing at least `1` and at most `4` numbers side by side.",
+  "examples.quantifierRange.title": "Ćwiczenie: nawiasy klamrowe - 3",
+  "examples.quantifierRange.description": "Napisz wyrażenie używając nawiasów klamrowych `{}`, które znajdzie napisy zawierające co najmniej `1` i co najwyżej `4` cyfry obok siebie.",
 
-  "steps.grouping.title": "Parentheses `( )`: Grouping",
-  "steps.grouping.description": "We can group an expression and use these groups to reference or enforce some rules. To group an expression, we enclose `()` in parentheses. For now just group `haa` below.",
+  "steps.grouping.title": "Nawiasy okrągłe `( )`: grupowanie",
+  "steps.grouping.description": "Możemy grupować wyrażenia i używać tych grup do odwoływania się do nich lub do narzucania pewnych reguł. Aby zgrupować wyrażenie, umieszczamy je w nawiasach okrągłych `()`. W poniższym przypadku po prostu zgrupuj `haa`.",
 
-  "steps.groupReference.title": "Referencing a Group",
-  "steps.groupReference.description": "The words `ha` and `haa` are grouped below. The first group is used by writing `\\1` to avoid rewriting. Here `1` denotes the order of grouping. Type `\\2` at the end of the expression to refer to the second group.",
+  "steps.groupReference.title": "Referencja do grupy",
+  "steps.groupReference.description": "Poniżej znajdują się zgrupowane wyrazy `ha` i `haa`. Pierwszą grupę można użyć, pisząc `\\1`, tak aby uniknąć powtarzania. W tym przypadku `1` oznacza kolejność zgrupowania. Wpisz na końcu wyrażenia `\\2`, tak aby odwołać się do drugiej grupy.",
 
   "steps.nonCapturingGrouping.title": "Parentheses `(?: )`: Non-capturing Grouping",
   "steps.nonCapturingGrouping.description": "You can group an expression and ensure that it is not captured by references. For example, below are two groups. However, the first group reference we denote with `\\1` actually indicates the second group, as the first is a non-capturing group.",
