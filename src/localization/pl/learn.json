@@ -92,38 +92,38 @@
   "steps.groupReference.title": "Referencja do grupy",
   "steps.groupReference.description": "Poniżej znajdują się zgrupowane wyrazy `ha` i `haa`. Pierwszą grupę można użyć, pisząc `\\1`, tak aby uniknąć powtarzania. W tym przypadku `1` oznacza kolejność zgrupowania. Wpisz na końcu wyrażenia `\\2`, tak aby odwołać się do drugiej grupy.",
 
-  "steps.nonCapturingGrouping.title": "Parentheses `(?: )`: Non-capturing Grouping",
-  "steps.nonCapturingGrouping.description": "You can group an expression and ensure that it is not captured by references. For example, below are two groups. However, the first group reference we denote with `\\1` actually indicates the second group, as the first is a non-capturing group.",
+  "steps.nonCapturingGrouping.title": "Nawiasy okrągłe `(?: )`: grupowanie bez referencji",
+  "steps.nonCapturingGrouping.description": "Możesz zgrupować dane wyrażenie i zapewnić, że nie będzie możliwe odwołanie do niego przez referencję. Na przykład, poniżej znajdują się dwie grupy. Jednak odwołanie do pierwszej grupy, które oznaczamy jako `\\1`, faktycznie odnosi się do drugiej grupy, ponieważ pierwsza grupa jest grupą bez referencji.",
 
-  "steps.pipeCharacter.title": "Pipe Character `|`",
-  "steps.pipeCharacter.description": "It allows to specify that an expression can be in different expressions. Thus, all possible statements are written separated by the pipe sign `|`. This differs from charset `[abc]`, charsets operate at the character level. Alternatives are at the expression level. For example, the following expression would select both `cat` and `rat`. Add another pipe sign `|` to the end of the expression and type `dog` so that all words are selected.",
+  "steps.pipeCharacter.title": "Kreska pionowa `|`",
+  "steps.pipeCharacter.description": "Istnieje znak, który pozwala określić, że wyrażenie może znajdować się w różnych wariantach. Wszystkie możliwe wyrażenia są oddzielone znakiem pionowej kreski `|` - jest to znak alternatywy. W odróżnieniu do zbioru znaków `[abc]`, który działa na poziomie znaków, alternatywy działają na poziomie wyrażeń. Na przykład, poniższe wyrażenie dopasuje zarówno `cat`, jak i `rat`. Dodaj na końcu wyrażenia kolejny znak pionowej kreski `|` i wpisz `dog`, tak aby dopasować wszystkie słowa.",
 
-  "steps.escapeCharacter.title": "Escape Character `\\`",
-  "steps.escapeCharacter.description": "There are special characters that we use when writing regex. `{ } [ ] / \\ + * . $^ | ?` Before we can select these characters themselves, we need to use an escape character `\\`. For example, to select the dot `.` and asterisk `*` characters in the text, let's add an escape character `\\` before it.",
+  "steps.escapeCharacter.title": "Znak ucieczki `\\`",
+  "steps.escapeCharacter.description": "Istnieją specjalne znaki, których używamy podczas pisania wyrażeń regularnych. Są to: `{ } [ ] / \\ + * . $ ^ | ?`. Aby dopasować w tekście któryś z tych znaków, musimy użyć przed dnim znaku ucieczki (modyfikacji) `\\`. Na przykład, aby dopasować w tekście znaki kropki `.` i gwiazdki `*`, dodajmy przed nimi znak ucieczki `\\`.",
 
-  "steps.caret.title": "Caret Sign `^`:\\nSelecting by Line Start",
-  "steps.caret.description": "We were using `[0-9]` to find numbers. To find only numbers at the beginning of a line, prefix this expression with the `^` sign.",
+  "steps.caret.title": "Daszek `^`:\\nDopasowanie od początku linii",
+  "steps.caret.description": "Dotychczas używaliśmy `[0-9]` do znajdowania cyfr. Aby znaleźć cyfry znajdujące się tylko na początku linii, poprzedź poniższe wyrażenie znakiem `^`.",
 
-  "steps.dollar.title": "Dollar Sign `$`:\\nSelecting by End of Line",
-  "steps.dollar.description": "Let's use the `$` sign after the `html` value to find the `html` texts only at the end of the line.",
+  "steps.dollar.title": "Dolar `$`:\\nDopasowanie od końca linii",
+  "steps.dollar.description": "Dodajmy znak `$` po wartości `html`, tak aby znaleźć tylko wyrazy `html` znajdujące się na końcu linii.",
 
-  "steps.wordCharacter.title": "Word Character `\\w`: Letter, Number and Underscore",
-  "steps.wordCharacter.description": "The expression `\\w` is used to find letters, numbers and underscore characters. Let's use the expression `\\w` to find word characters in the text.",
+  "steps.wordCharacter.title": "Znak słowa `\\w`: litra, cyfra i podkreślnik",
+  "steps.wordCharacter.description": "Wyrażenie `\\w` służy do wyszukiwania liter, cyfr i znaków podkreślenia. Użyjmy wyrażenia `\\w`, tak aby znaleźć w tekście znaki należące do słów.",
 
-  "steps.withoutWordCharacter.title": "Except Word Character `\\W`",
-  "steps.withoutWordCharacter.description": "The expression `\\W` is used to find characters other than letters, numbers, and underscores.",
+  "steps.withoutWordCharacter.title": "Znak niesłowa `\\W`",
+  "steps.withoutWordCharacter.description": "Wyrażenie `\\W` służy do wyszukiwania znaków innych niż litery, cyfry i znak podkreślenia.",
 
-  "steps.numberCharacter.title": "Number Character `\\d`",
-  "steps.numberCharacter.description": "`\\d` is used to find only number characters.",
+  "steps.numberCharacter.title": "Cyfra `\\d`",
+  "steps.numberCharacter.description": "Wyrażenie `\\d` służy do wyszukiwania cyfr.",
 
-  "steps.withoutNumberCharacter.title": "Except Number Character `\\D`",
-  "steps.withoutNumberCharacter.description": "`\\D` is used to find non-numeric characters.",
+  "steps.withoutNumberCharacter.title": "Niecyfra `\\D`",
+  "steps.withoutNumberCharacter.description": "Wyrażenie `\\D` służy do wyszukiwania znaków innych niż cyfry.",
 
-  "steps.spaceCharacter.title": "Space Character `\\s`",
-  "steps.spaceCharacter.description": "`\\s` is used to find only space characters.",
+  "steps.spaceCharacter.title": "Biały znak `\\s`",
+  "steps.spaceCharacter.description": "Wyrażenie `\\s` służy do wyszukiwania tzw. białych znaków, np. spacji, tabulacji i znaków nowej linii.",
 
-  "steps.withoutSpaceCharacter.title": "Except Space Character `\\S`",
-  "steps.withoutSpaceCharacter.description": "`\\S` is used to find non-space characters.",
+  "steps.withoutSpaceCharacter.title": "Niebiały znak `\\S`",
+  "steps.withoutSpaceCharacter.description": "Wyrażenie `\\S` służy do wyszukiwania niebiałych znaków.",
 
   "steps.lookarounds.title": "Lookarounds",
   "steps.lookarounds.description": "If we want the phrase we're writing to come before or after another phrase, we need to \"lookaround\". Take the next step to learn how to \"lookaround\".",
