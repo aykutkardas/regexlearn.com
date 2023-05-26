@@ -28,6 +28,7 @@ Embark on an exciting journey to learn and master regular expressions with **[re
 - 🇩🇪 German
 - 🇺🇦 Ukrainian
 - 🇫🇷 French
+- 🇵🇱 Polish
 - 🇰🇷 Korean [(Requested)](https://github.com/aykutkardas/regexlearn.com/issues/92)
 - 🇦🇪 Arabic [(Requested)](https://github.com/aykutkardas/regexlearn.com/issues/163)
 - 🇧🇷 Brazilian Portuguese [(Requested)](https://github.com/aykutkardas/regexlearn.com/issues/39)
