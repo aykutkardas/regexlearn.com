@@ -1,0 +1,49 @@
+{
+    "lesson.regexForSeo.starter.title": "Regex para SEO",
+    "lesson.regexForSeo.starter.description": "Regex é um conjunto de expressões regulares frequentemente usadas em muitos campos, especialmente por pessoas que desejam aumentar sua produtividade. As vantagens de usar Regex no SEO são que facilita a análise de grandes dados e escrever filtros mais ricos. Recomendamos começar com o tutorial `Regex 101` se você for novo no Regex. \\n\\nComece digitando `OK` no campo Regex para prosseguir para a primeira etapa e acessar explicações mais detalhadas. ",
+
+    "lesson.regexForSeo.usage.title": "Casos de Uso",
+    "lesson.regexForSeo.usage.description": "Você pode usar o Regex no SEO em plataformas como `Google Analytics`, `Google Data Studio`, `Google Sheets`, `Google Search Console`, `Ahrefs`, `Deepcrawl` , `Screaming Frog`. Também é frequentemente usado em arquivos `.htaccess` e `robots.txt (sintaxe semelhante a regex)`.\\n\\nAbaixo está um exemplo de regex que selecionará apenas os textos na lista que começam com `Google`.",
+
+    "lesson.regexForSeo.basics.title": "Fundamentos",
+    "lesson.regexForSeo.basics.description": "Vamos dar uma olhada em alguns Regexes que você usará com frequência. Recomendamos que você revise o tutorial `Regex 101` para saber mais sobre eles. Digite `Yes` para começar." ,
+
+    "lesson.regexForSeo.or.title": "Operador Ou `|`",
+    "lesson.regexForSeo.or.description": "Usamos o operador Ou `|` para filtrar várias expressões. Por exemplo, filtre o texto contendo `seo` e `regex` escrevendo as duas palavras, separando-as com o operador Ou `|`.",
+
+    "lesson.regexForSeo.optional.title": "Operador Opcional `?`",
+    "lesson.regexForSeo.optional.description": "Usamos para expressar que uma expressão ou caractere é opcional. Por exemplo, queremos filtrar o texto contendo `http` e `https`. Podemos usar o operador Ou `| ` para esta operação, mas há uma maneira melhor para essas duas palavras quase idênticas.\\n\\nNeste exemplo, a letra `s` é opcional. Em vez disso, adicione um ponto de interrogação `?` ao final da letra `s`.",
+
+    "lesson.regexForSeo.any.title": "Qualquer Coisa `.*`",
+    "lesson.regexForSeo.any.description": "Em regex, o ponto `.` pode corresponder a qualquer coisa, incluindo espaços. Mas esta correspondência é apenas para um único caractere onde é usado. O caractere asterisco `*` significa que o item precedente não existe ou ocorre mais de uma vez no texto. Quando os dois são usados juntos, significa que pode haver um elemento de comprimento ilimitado onde usado.\\n\\nAbaixo estão várias palavras-chave. Adicione `.* ` ao final da regex para escrever a expressão que começa com `how to write` e corresponde a tudo depois dela.",
+
+    "lesson.regexForSeo.contains.title": "Contém",
+    "lesson.regexForSeo.contains.description": "Para filtrar o texto que contém as palavras ou frases que procuramos, escrevemos a palavra que procuramos entre nossas duas sentenças `.*` que correspondem a tudo. Por exemplo , digite `.*buy.*` para filtrar o que inclui `buy`.",
+
+    "lesson.regexForSeo.negated.title": "Conjuntos de Caracteres Negados `[^abc]`",
+    "lesson.regexForSeo.negated.description": "Usamos os conjuntos de caracteres negados `[^]` para denotar caracteres que não queremos incluir. Os caracteres que não queremos incluir são escritos entre colchetes com um acento circunflexo no início. Abaixo estão `http` e `https`. Como `http` ocorre em ambos, ele também escolherá `https`. Digite `[^s]` após a letra `p` para excluir a letra `s`.",
+
+    "lesson.regexForSeo.caret.title": "Sinal de Circunflexo `^`",
+    "lesson.regexForSeo.caret.description": "Digamos que temos uma lista de URLs e queremos encontrar apenas os URLs que começam com `http`. Mas os URLs também contêm `http` em diferentes partes além do início. Portanto, adicione um circunflexo `^` no início da expressão para filtrar apenas aquelas que começam com `http`.",
+
+    "lesson.regexForSeo.dollarAndEscape.title": "Cifrão `$` e Caractere de Escape `\\`",
+    "lesson.regexForSeo.dollarAndEscape.description": "Novamente, temos uma lista de URLs. Queremos encontrar apenas os URLs que terminam em `.htm`.\\n\\nComo o ponto `.` é um caractere especial que corresponde tudo, primeiro precisamos desativar o ponto antes de `htm` usando o caractere de escape `\\`. Isso se aplica a todos os caracteres especiais.\\n\\nEm seguida, adicione um sinal de `$` ao final da expressão. Isso garante que o texto a ser filtrado termine com a expressão escrita antes dele.",
+
+    "lesson.regexForSeo.limitation.title": "Restrições de Comprimento `{n}`",
+    "lesson.regexForSeo.limitation.description": "Podemos querer filtrar os resultados por quantidade de caracteres. Por exemplo, para filtrar URLs com `35` caracteres, digite o número que deseja usar para a quantidade, `{35}`, usando chaves depois do ponto `.`.",
+
+    "lesson.regexForSeo.maxLimitation.title": "Restrições de Comprimento (máximo) `{n,m}`",
+    "lesson.regexForSeo.maxLimitation.description": "Para filtrar URLs com comprimento máximo de `35` caracteres, digite `{1,35}` os valores numéricos mínimo e máximo que usaremos para o comprimento, usando chaves depois do ponto `.`.",
+
+    "lesson.regexForSeo.minLimitation.title": "Restrições de Comprimento (mínimo) `{n,}`",
+    "lesson.regexForSeo.minLimitation.description": "Para filtrar URLs com comprimento mínimo de `35` caracteres, digite `{35,}` usando chaves no final do ponto e terminando com uma vírgula para o valor numérico mínimo que usaremos para o comprimento.",
+
+    "lesson.regexForSeo.robots.title": "robots.txt (sintaxe do tipo regex)",
+    "lesson.regexForSeo.robots.description": "Aqui está um exemplo de uso do tipo regex no arquivo `robots.txt`. O exemplo afirma que bots não devem rastrear links com a extensão `pdf`.",
+
+    "lesson.regexForSeo.htaccess.title": ".htaccess",
+    "lesson.regexForSeo.htaccess.description": "Aqui está um exemplo de uso de regex no arquivo `.htaccess`. No exemplo, os links de extensão `php` são direcionados para extensões `html` com código `301`.",
+
+    "lesson.regexForSeo.outro.title": "Conclusão",
+    "lesson.regexForSeo.outro.description": "O conhecimento de regex é uma habilidade que aumenta a produtividade em qualquer plataforma que permita o uso de regex. Assim que você começar a usar e melhorar essa habilidade, ela o ajudará a concluir muitas tarefas repetitivas mais rapidamente e economizar tempo para outras coisas. Para entender melhor os fundamentos do Regex, você pode visitar o tutorial `Regex 101`. Você pode usar a página `Playground` para testar suas expressões em seus textos."
+}

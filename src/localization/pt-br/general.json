@@ -1,0 +1,39 @@
+{
+  "general.prev": "Anterior",
+  "general.next": "Próximo",
+  "general.result": "Resultado",
+  "general.regex": "Regex",
+  "general.text": "Texto",
+  "general.watch": "Assistir",
+  "general.start": "Começar",
+  "general.continue": "Continuar",
+  "general.completedStep": "Etapa Concluida!",
+  "general.hintQuestion": "Mostrar Resposta",
+  "general.reportStep": "Reportar um Problema",
+  "general.startLearning": "Comece a Aprender",
+  "general.comingSoon": "Em Breve",
+  "general.becomeSponsor": "Vire um Patrocinador",
+  "general.learn": "Aprender",
+  "general.playground": "Playground",
+  "general.cheatsheet": "Cheatsheet",
+  "general.ourSponsors": "Nossos Patrocinadores",
+  "general.share": "Compartilhar",
+  "general.shareLinkCopied": "Link de compartilhamento copiado!",
+  "general.somethingWentWrong": "Algo deu errado!",
+
+  "notFound.intro": "A pagina que você está procurando não existe.",
+  "notFound.button": "Voltar à página inicial",
+
+  "page.landing.title": "Regex Learn - Passo a passo, do zero ao avançado.",
+  "page.learn.title": "Regex Learn - Curso Interativo de Regex",
+  "page.cheatsheet.title": "Regex Learn - Regex Cheatsheet",
+  "page.playground.title": "Regex Learn - Playground",
+  "page.404.title": "Regex Learn - Não Encontrado",
+
+  "page.landing.description": "Aprenda Regex interativamente, pratique no seu nível, teste e compartilhe o seu própio Regex.",
+  "page.learn.description": "Aprenda Regex passo a passo. Complete o tutorial interativo que vai fazer seu aprendizado mais rápido e fácil.",
+  "page.cheatsheet.description": "As vezes você só precisa se relembrar de Regex. Experimente nosso cheatsheet que vai facilitar você entender e memorizar.",
+  "page.playground.description": "Você pode facilmente construir e testar seu padrão Regex através do nosso Playground online.",
+
+  "learn.safari.unsupportWarning": "O Regex desta etapa não é suportado por alguns navegadores. Se você estiver com problemas para passar deste nível, você pode clicar aqui."
+}
