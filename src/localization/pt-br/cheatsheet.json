@@ -35,7 +35,7 @@
   "cheatsheet.notSpace.description": "Corresponde a qualquer caracatere que não seja barra de espaço.",
 
   "cheatsheet.flags": "Bandeiras",
-  "cheatsheet.caseInsensitiveFlag.title": "Ignorar case",
+  "cheatsheet.caseInsensitiveFlag.title": "Ignorar maiscúlas e minúsculas",
   "cheatsheet.caseInsensitiveFlag.description": "Faz a expressão não diferenciar maiscúlas e minúsculas",
   "cheatsheet.globalFlag.title": "Global",
   "cheatsheet.globalFlag.description": "Garante que a expressão não pare na primeira correspondencia.",
@@ -50,11 +50,11 @@
   "cheatsheet.nonCapturingGroup.title": "Não Capturar Grupo",
   "cheatsheet.nonCapturingGroup.description": "Faz o agrupamento não ser referenciavel",
 
-  "cheatsheet.lookarounds": "Lookarounds",
-  "cheatsheet.positiveLookahead.title": "Lookahead Positivo",
-  "cheatsheet.negativeLookahead.title": "Lookahead Negativo",
-  "cheatsheet.positiveLookbehind.title": "Lookbehind Positivo",
-  "cheatsheet.negativeLookbehind.title": "Lookbehind Negativo",
+  "cheatsheet.lookarounds": "Olhar ao Redor",
+  "cheatsheet.positiveLookahead.title": "Olhar para Frente Positivo",
+  "cheatsheet.negativeLookahead.title": "Olhar para Frente Negativo",
+  "cheatsheet.positiveLookbehind.title": "Olhar para Trás Positivo",
+  "cheatsheet.negativeLookbehind.title": "Olhar para Trás Negativo",
 
   "cheatsheet.quantifiersAndAlternation": "Quantificadores e Alternância",
   "cheatsheet.plus.title": "Mais",
