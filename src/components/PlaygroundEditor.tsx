@@ -229,7 +229,7 @@ const Playground = () => {
           <FlagSelect flags={state.flags} setFlags={onChangeFlags} />
         </div>
         <Button
-          className="h-12 py-0 ml-2 w-fit relative"
+          className="h-12 py-0 ml-2 w-fit relative whitespace-nowrap"
           variant={ButtonVariants.Primary}
           onClick={handleShare}
           disabled={!hasChange}
