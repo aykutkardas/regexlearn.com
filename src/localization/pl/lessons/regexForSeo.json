@@ -1,0 +1,49 @@
+{
+  "lesson.regexForSeo.starter.title": "Wyrażenia regularne w SEO",
+  "lesson.regexForSeo.starter.description": "Regexy to zbiór wyrażeń regularnych często używanych w wielu dziedzinach, zwłaszcza przez osoby pragnące zwiększyć swoją produktywność. Zalety korzystania z regexów w SEO to łatwiejsza analiza dużych zbiorów danych i tworzenie bardziej zaawansowanych filtrów. Jeśli dopiero zaczynasz przygodę z wyrażeniami regularnymi, to zalecamy rozpoczęcie od samouczka `Regex 101`. \\n\\nZacznij od wpisania `OK` w polu \"Regex\", aby przejść do kolejnej sekcji i uzyskać bardziej szczegółowe wyjaśnienia.",
+
+  "lesson.regexForSeo.usage.title": "Przykłady użycia",
+  "lesson.regexForSeo.usage.description": "Możesz używać wyrażeń regularnych w SEO na takich platformach jak `Google Analytics`, `Google Data Studio`, `Google Sheets`, `Google Search Console`, `Ahrefs`, `Deepcrawl` czy też `Screaming Frog`. Często stosuje się je również w plikach `.htaccess` i `robots.txt` (ze składnią podobną do regexów).\\n\\nPoniżej znajduje się przykładowe wyrażenie regularne, które zaznaczy na liście tylko teksty, które rozpoczynają się od `Google`.",
+
+  "lesson.regexForSeo.basics.title": "Podstawy",
+  "lesson.regexForSeo.basics.description": "Przyjrzyjmy się niektórym często używanym wyrażeniom regularnym. Zalecamy zapoznanie się z samouczkiem `Regex 101`, aby dowiedzieć się więcej na ich temat. Aby rozpocząć, wpisz `Yes`.",
+
+  "lesson.regexForSeo.or.title": "Operator \"lub\" `|`",
+  "lesson.regexForSeo.or.description": "Używamy operatora \"lub\" `|`, aby filtrować wiele wyrażeń jednocześnie. Na przykład, aby przefiltrować tekst jednocześnie pod kątem słów `seo`, jak i `regex`, należy wpisać oba słowa, oddzielając je operatorem `|`.",
+
+  "lesson.regexForSeo.optional.title": "Operator opcjonalności `?`",
+  "lesson.regexForSeo.optional.description": "Używamy go aby wskazać, że wyrażenie lub znak jest opcjonalny. Na przykład, jeśli chcemy przefiltrować tekst zawierający zarówno `http`, jak i `https`, możemy użyć operatora `|`, ale istnieje lepszy sposób dla tych dwóch prawie identycznych słów.\\n\\nW tym przykładzie litera `s` jest opcjonalna. Dodaj znak zapytania `?` na końcu litery `s`.",
+
+  "lesson.regexForSeo.any.title": "Wszystko `.*`",
+  "lesson.regexForSeo.any.description": "W wyrażeniach regularnych kropka `.` może dopasować dowolny znak, włącznie ze spacjami. Jednak dopasowanie to dotyczy tylko pojedynczego znaku. Znak gwiazdki `*` oznacza, że poprzedni element nie istnieje w ogóle lub występuje w tekście wiele razy. Gdy oba znaki są używane razem, oznacza to, że w dopasowaniu może występować element o nieograniczonej długości.\\n\\nPoniżej znajdują się różne słowa kluczowe. Dodaj `.*` na końcu wyrażenia regularnego, tak aby napisać wyrażenie, które dopasowuje tekst `how to write `&nbsp;i wszystko po nim.",
+
+  "lesson.regexForSeo.contains.title": "Zawieranie",
+  "lesson.regexForSeo.contains.description": "Aby przefiltrować tekst pod kątem danego słowa lub frazy, należy wprowadzić szukane słowo lub frazę między dwoma wyrażeniami `.*`, które dopasowują wszystko. Na przykład, wpisz `.*buy.*`, aby przefiltrować te wiersze, które zawierają `buy`.",
+
+  "lesson.regexForSeo.negated.title": "Negacja zbioru znaków `[^abc]`",
+  "lesson.regexForSeo.negated.description": "Negacji zbioru znaków `[^]` używamy by wykluczyć określone znaki. Niechciane znaki zapisujemy w nawiasach kwadratowych z daszkiem na początku. W poniższej liście występują zarówno słowa `http`, jak i `https`. Ponieważ `http` występuje w obu, wyrażenie regularne wybierze również `https`. Wpisz `[^s]` po literze `p`, aby wykluczyć literę `s`.",
+
+  "lesson.regexForSeo.caret.title": "Znak daszka `^`",
+  "lesson.regexForSeo.caret.description": "Załóżmy, że mamy listę adresów URL i chcemy znaleźć tylko te adresy URL, które zaczynają się od `http`. Adresy URL mogą zawierać ciąg znaków `http` w różnych częściach adresu, nie tylko na ich początku. Dodaj daszek `^` na początku poniższego wyrażenia, aby przefiltrować tylko te wiersze, które zaczynają się od `http`.",
+
+  "lesson.regexForSeo.dollarAndEscape.title": "Znak dolara `$` oraz znak ucieczki `\\`",
+  "lesson.regexForSeo.dollarAndEscape.description": "Znowu mamy listę adresów URL. Chcemy znaleźć tylko te adresy, które kończą się na `.htm`.\\n\\nPonieważ kropka `.` jest znakiem specjalnym dopasowującym wszystko, najpierw musimy wyłączyć jej specjalne działanie przed `htm`, używając znaku ucieczki `\\`. Operacja ta dotyczy wszystkich specjalnych znaków.\\n\\nNastępnie dodaj znak dolara `$` na końcu wyrażenia. Zapewnia to, że tekst do przefiltrowania kończy się wyrażeniem napisanym przed tym znakiem.",
+  
+  "lesson.regexForSeo.limitation.title": "Ograniczenia długości `{n}`",
+  "lesson.regexForSeo.limitation.description": "Może zdarzyć się, że chcemy przefiltrować wyniki według długości znaków. Na przykład, aby przefiltrować adresy URL o długości `35` znaków, wpisz liczbę, którą chcesz użyć jako długość, `{35}`, używając nawiasów klamrowych na końcu kropki `.`.",
+
+  "lesson.regexForSeo.maxLimitation.title": "Ograniczenia długości (maksimum) `{n,m}`",
+  "lesson.regexForSeo.maxLimitation.description": "Aby przefiltrować adresy URL o maksymalnej długości `35` znaków, wpisz `{1,35}`. Wartość minimalną i maksymalną liczby używanej jako długość podaj używając nawiasów klamrowych zaraz za kropką `.`.",
+
+  "lesson.regexForSeo.minLimitation.title": "Ograniczenia długości (minimum) `{n,}`",
+  "lesson.regexForSeo.minLimitation.description": "Aby przefiltrować adresy URL o minimalnej długości `35` znaków, wpisz za kropką `{35,}` używając nawiasów klamrowych i kończąc przecinkiem podając tylko minimalną liczbę używaną jako długość.",
+
+  "lesson.regexForSeo.robots.title": "robots.txt (składnia podobna do regexów)",
+  "lesson.regexForSeo.robots.description": "Poniżej znajduje się przykład pliku `robots.txt` zawierającego elementy podobne do wyrażeń regularnych. W przykładzie mamy, że roboty internetowe nie powinny przeszukiwać linków o rozszerzeniu `pdf`.",
+
+  "lesson.regexForSeo.htaccess.title": ".htaccess",
+  "lesson.regexForSeo.htaccess.description": "Oto przykład użycia wyrażeń regularnych w pliku `.htaccess`. Linki z rozszerzeniem `php` są przekierowywane z kodem `301` na linki z rozszerzeniem `html`.",
+
+  "lesson.regexForSeo.outro.title": "Zakończenie",
+  "lesson.regexForSeo.outro.description": "Wiedza o wyrażeniach regularnych to umiejętność, która zwiększa produktywność na dowolnej platformie, która pozwala na ich użycie. Gdy już zaczniesz z nich korzystać i będziesz szlifować umiejętność korzystania z regexów, szybciej wykonasz wielu powtarzalnych zadań i zaoszczędzisz czas na inne rzeczy. Aby lepiej zrozumieć podstawy wyrażeń regularnych, możesz odwiedzić przewodnik `Regexy 101`, gdzie możesz testować i eksperymentować z różnymi wyrażeniami. Możesz użyć `Piaskownicy` do przetestowania swoich wyrażeń regularnych na swoich tekstach."
+}
