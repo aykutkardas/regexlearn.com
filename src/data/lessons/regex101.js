@@ -1,4 +1,3 @@
-import isEmpty from 'lodash.isempty';
 import xor from 'lodash.xor';
 
 const regex101 = [
@@ -56,7 +55,7 @@ const regex101 = [
     customValidate: regex => {
       const $regex = new RegExp(`^b\\[([aeiou]{5})\\]r$`);
       const result = regex.match($regex) || [];
-      return isEmpty(xor(result?.[1]?.split(''), 'aeiou'.split('')));
+      return xor(result?.[1]?.split(''), 'aeiou'.split('')).length === 0;
     },
     cursorPosition: 2,
     answer: ['bar', 'ber', 'bir', 'bor', 'bur'],
@@ -135,7 +134,7 @@ const regex101 = [
     customValidate: regex => {
       const $regex = new RegExp(`^\\[([bdf]{3})\\]eer$`);
       const result = regex.match($regex);
-      return isEmpty(xor(result?.[1]?.split(''), 'bdf'.split('')));
+      return xor(result?.[1]?.split(''), 'bdf'.split('')).length === 0;
     },
     answer: ['beer', 'deer', 'feer'],
   },
@@ -333,9 +332,9 @@ const regex101 = [
     interactive: false,
   },
   {
-    title: 'steps.groupping.title',
-    description: 'steps.groupping.description',
-    originalTitle: 'Groupping',
+    title: 'steps.grouping.title',
+    description: 'steps.grouping.description',
+    originalTitle: 'Grouping',
     content: 'ha-ha,haa-haa',
     initialValue: '(h)',
     initialFlags: 'g',
@@ -357,9 +356,9 @@ const regex101 = [
     answer: ['ha-ha,haa-haa'],
   },
   {
-    title: 'steps.nonCapturingGroupping.title',
-    description: 'steps.nonCapturingGroupping.description',
-    originalTitle: 'Non-capturing Groupping',
+    title: 'steps.nonCapturingGrouping.title',
+    description: 'steps.nonCapturingGrouping.description',
+    originalTitle: 'Non-capturing Grouping',
     content: 'ha-ha,haa-haa',
     initialValue: '(?:ha)-ha,(haa)-',
     initialFlags: 'g',
@@ -372,13 +371,13 @@ const regex101 = [
     title: 'steps.pipeCharacter.title',
     description: 'steps.pipeCharacter.description',
     originalTitle: 'Alternation',
-    content: 'cat Cat rat',
-    initialValue: '(C|c)at',
+    content: 'cat rat dog',
+    initialValue: '(c|r)at',
     initialFlags: 'g',
     flags: 'g',
-    regex: ['(C|c)at|rat'],
+    regex: ['(c|r)at|dog'],
     cursorPosition: 7,
-    answer: ['cat', 'Cat', 'rat'],
+    answer: ['cat', 'rat', 'dog'],
   },
   {
     title: 'steps.escapeCharacter.title',

@@ -1,4 +1,3 @@
-import isEmpty from 'lodash.isempty';
 import xor from 'lodash.xor';
 
 const createGrouppedRegex = (regex: string, flags?: string) => {
@@ -28,7 +27,7 @@ type CheckRegex = (
 const checkRegex: CheckRegex = (data, { regex, flags }) => {
   const isGlobal = flags?.includes('g');
   const isValidRegex = data.regex.includes(regex) || data.customValidate?.(regex);
-  const isValidFlags = isEmpty(xor(data.flags.split(''), flags.split('')));
+  const isValidFlags = xor(data.flags.split(''), flags.split('')).length === 0;
 
   try {
     const grouppedRegex = createGrouppedRegex(regex, flags);
@@ -40,7 +39,8 @@ const checkRegex: CheckRegex = (data, { regex, flags }) => {
       results = [...data.content.match(grouppedRegex)].filter(Boolean);
     }
 
-    const isMatch = data.answer?.length === results.length && isEmpty(xor(data.answer, results));
+    const isMatch =
+      data.answer?.length === results.length && xor(data.answer, results).length === 0;
     const isSuccess = isMatch && isValidRegex && isValidFlags;
 
     return { isMatch, isSuccess, regex: grouppedRegex };

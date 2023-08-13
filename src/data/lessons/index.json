@@ -3,7 +3,12 @@
     "key": "regex101",
     "slug": "regex101",
     "title": "lessons.regex101.title",
-    "description": "lessons.regex101.description"
+    "description": "lessons.regex101.description",
+    "creator": "Interactively",
+    "creatorURL": "https://interactively.info/?utm_source=regexlearn&utm_medium=referral",
+    "creatorLogo": "/interactively.webp",
+    "logoHeight": 18,
+    "stepCount": 56
   },
   {
     "key": "regexForSeo",
@@ -12,6 +17,8 @@
     "description": "lessons.regexForSeo.description",
     "sponsor": "ahrefs",
     "sponsorURL": "https://ahrefs.com/?utm_source=regexlearn&utm_medium=referral&utm_campaign=sponsorship",
-    "sponsorLogo": "/ahrefs.webp"
+    "sponsorLogo": "/ahrefs.webp",
+    "stepCount": 17,
+    "videoCount": 9
   }
 ]

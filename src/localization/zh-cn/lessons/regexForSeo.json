@@ -1,49 +1,49 @@
 {
-  "lesson.regexForSeo.starter.title": "Regex for SEO",
-  "lesson.regexForSeo.starter.description": "Regex is a set of regular expressions frequently used in many fields, especially by people who want to increase their productivity. The advantages of using Regex for SEO are that it makes it easier to analyze big data and write richer filters. We recommend starting with the `Regex 101` tutorial if you are new to Regex. \\n\\nStart by typing `OK` in the Regex field to proceed to the first step and access more detailed explanations.",
+  "lesson.regexForSeo.starter.title": "用于SEO的Regex",
+  "lesson.regexForSeo.starter.description": "Regex 是一组在许多领域中经常使用的正则表达式，尤其是被那些想提高生产力的人使用。使用正则表达式进行 SEO 的好处是，能够更加容易的分析大数据和编写更丰富的过滤器。如果你是正则表达式新手，我们建议从 `Regex 101` 教程开始学习。 \\n\\n 请在正则表达式输入框中输入 `OK`开始开始第一步以了解更多的细节。",
 
-  "lesson.regexForSeo.usage.title": "Use Cases",
-  "lesson.regexForSeo.usage.description": "You can use Regex for SEO on platforms such as `Google Analytics`, `Google Data Studio`, `Google Sheets`, `Google Search Console`, `Ahrefs`, `Deepcrawl`, `Screaming Frog`. It is also frequently used in `.htaccess` and `robots.txt (regex-like syntax)` files.\\n\\nBelow is a sample regex that will select only texts in the list that start with `Google`.",
+  "lesson.regexForSeo.usage.title": "使用案例",
+  "lesson.regexForSeo.usage.description": "你可以在 `Google Analytics`, `Google Data Studio`, `Google Sheets`, `Google Search Console`, `Ahrefs`, `Deepcrawl`, `Screaming Frog` 等平台上使用正则表达式进行SEO。它也经常用于 `.htaccess` 和 `robots.txt (类似于正则表达式的语法)` 文件中。\\n\\n下面是一个正则表达式样本，将只选择列表中以 `Google` 开头的文本。",
 
-  "lesson.regexForSeo.basics.title": "Basics",
-  "lesson.regexForSeo.basics.description": "Let's take a look at some Regexes that you will use frequently. We recommend that you review the `Regex 101` tutorial to learn more about these. Type `Yes` to get started.",
+  "lesson.regexForSeo.basics.title": "基础知识",
+  "lesson.regexForSeo.basics.description": "让我们来看一些你经常会使用的正则表达式。我们建议你回顾 `Regex 101` 教程以了解更多相关的信息。请输入`Yes`开始",
 
-  "lesson.regexForSeo.or.title": "Or Operator `|`",
-  "lesson.regexForSeo.or.description": "We use the Or operator `|` to filter out multiple expressions. For example, filter text containing `seo` and `regex` by writing the two words, separating them with the Or operator `|`.",
+  "lesson.regexForSeo.or.title": "或 运算符 `|`",
+  "lesson.regexForSeo.or.description": "我们使用 `|` 运算符来过滤多个表达式。例如，过滤含有 `seo` 和 `regex` 的表达式，写下这两个单词，用 `|` 运算符将它们分开。",
 
-  "lesson.regexForSeo.optional.title": "Optional Operator `?`",
-  "lesson.regexForSeo.optional.description": "We use it to express that an expression or character is optional. For example, we want to filter text containing both `http` and `https`. We can use the Or operator `|` for this operation, but there is a better way for these two almost identical words.\\n\\nIn this example, the letter `s` is optional. Instead, add a question mark `?` to the end of the letter `s`.",
+  "lesson.regexForSeo.optional.title": "可选 运算符 `?`",
+  "lesson.regexForSeo.optional.description": "我们用它来表达一个表达式或字符是可选的。例如，我们想过滤同时包含 `http` 和 `https` 的文本。我们可以使用 或 操作符 `|` 来进行这个操作，但是对于这两个几乎相同的单词，有一个更好的方法。\\n\\n在这个例子中，字母 `s` 是可选的. 因此，在字母 `s` 的后面加上一个问号 `?` ",
 
-  "lesson.regexForSeo.any.title": "Anything `.*`",
-  "lesson.regexForSeo.any.description": "In regex, the period `.` can match anything, including spaces. But this match is only for a single character where it is used. The asterisk character `*` means that the preceding item does not exist at all or occurs more than once in the text. When the two are used together, it means that there can be an element of unlimited length where used.\\n\\nBelow are various keywords. Add `.*` to the end of the regex to write the expression that starts with `how to write` and matches everything after it.",
+  "lesson.regexForSeo.any.title": "任何 `.*`",
+  "lesson.regexForSeo.any.description": "在正则表达式中，点 `.` 可以匹配任何东西，包括空格。 但使用它只能匹配单个字符。星号字符 `*` 的意思是匹配它前面的表达式零次或者多次。当同时使用两个字符的时候，会匹配无限长的字符。\\n\\n下面是各种关键词。在正则表达式的末尾添加 `.*` 来匹配以 `how to write` 开头的表达式，并匹配后面的所有内容。",
 
-  "lesson.regexForSeo.contains.title": "Contains",
-  "lesson.regexForSeo.contains.description": "To filter the text that contains the words or phrases we're looking for, we write the word we're looking for between our two phrases `.*` that match everything. For example, type `.*buy.*` to filter out what includes `buy`.",
+  "lesson.regexForSeo.contains.title": "包含",
+  "lesson.regexForSeo.contains.description": "为了过滤包含我们要找的单词或短语的文本，我们在两个 `.*` 之间写上我们要查找的字段，以匹配所有的内容。例如，输入`.*buy.*`来过滤包括 `buy` 的内容。",
 
-  "lesson.regexForSeo.negated.title": "Negated Character Sets `[^abc]`",
-  "lesson.regexForSeo.negated.description": "We use the negated character sets `[^]` to denote characters we don't want to be included. The characters we do not want to be included are written in square brackets with a caret at the beginning. Below are both `http` and `https`. Since `http` occurs in both, it will also choose `https`. Type `[^s]` after the letter `p` to exclude the letter `s`.",
+  "lesson.regexForSeo.negated.title": "否定字符集 `[^abc]`",
+  "lesson.regexForSeo.negated.description": "我们使用否定的字符集 `[^]` 来表示我们不希望包括的字符。把不希望被包含的字符写在方括号里，并且在开头加上这个符号。下面有 `http` 和 `https`。由于 `http` 出现在两者中，所以 `https` 也会被选中，在字母 `p` 后面输入 `[^s]` 以排除字母`s`。",
 
-  "lesson.regexForSeo.caret.title": "Caret Sign `^`",
-  "lesson.regexForSeo.caret.description": "Let's say we have a list of URLs, and we want to find only those URLs that start with `http`. But URLs also contain `http` in different parts other than their beginning. So add a caret `^` to the beginning of the following expression to filter out only those starting with `http`.",
+  "lesson.regexForSeo.caret.title": "开始位置符号 `^`",
+  "lesson.regexForSeo.caret.description": "假设我们有一个 URL 的列表, 我们只想找到那些以 `http` 开头的URL。但是除了开头之外，URL还在不同的部分包含`http`。因此，在下面的表达式的开头添加一个符号 `^`，以便过滤出那些只以 `http` 开头的网址。",
 
-  "lesson.regexForSeo.dollarAndEscape.title": "Dollar Sign `$` and Escape Character `\\`",
-  "lesson.regexForSeo.dollarAndEscape.description": "Again we have a list of URLs. We want to find only those URLs ending in `.htm`.\\n\\nSince the period `.` is a special character that matches everything, we first need to disable the period before `htm` using the escape character `\\`. This applies to all special characters.\\n\\nThen add a `$` sign to the end of the expression. This ensures that the text to be filtered ends with the expression written before it.",
+  "lesson.regexForSeo.dollarAndEscape.title": "美元符号 `$` 和转义字符 `\\`",
+  "lesson.regexForSeo.dollarAndEscape.description": "我们有另外一个URL的列表。我们只想找到那些以 `.htm` 结尾的URL。\\n\\n因为点 `.` 是一个特殊字符，可以匹配一切字符，我们首先需要使用转义字符 `\\` 禁用 `htm` 前面的点。这适用于所有的特殊字符。\\n\\n然后在表达式的末尾添加一个 `$` 符号。这可以确保匹配结尾的文本。",
 
-  "lesson.regexForSeo.limitation.title": "Length Restrictions `{n}`",
-  "lesson.regexForSeo.limitation.description": "We may want to filter the results by character lengths. For example, to filter URLs that are `35` characters long, type the number you want to use for the length, `{35}`, using curly braces at the end of the period `.`.",
+  "lesson.regexForSeo.limitation.title": "长度限制 `{n}`",
+  "lesson.regexForSeo.limitation.description": "我们可能想通过字符长度来过滤结果。例如，要过滤长度为`35`个字符的URL，请在点 `.` 的后面用大括号输入你想匹配的长度数字 `{35}`。",
 
-  "lesson.regexForSeo.maxLimitation.title": "Length Restrictions (Maximum) `{n,m}`",
-  "lesson.regexForSeo.maxLimitation.description": "To filter URLs with a maximum length of `35` characters, type `{1,35}` the minimum and maximum number values we will use for the length, using curly braces at the end of the period `.`.",
+  "lesson.regexForSeo.maxLimitation.title": "长度限制（最大值） `{n,m}`",
+  "lesson.regexForSeo.maxLimitation.description": "要过滤最大长度为 `35` 个字符的URL，请在点 `.` 的后面使用大括号，输入要使用的最大值和最小值 `{1,35}`。",
 
-  "lesson.regexForSeo.minLimitation.title": "Length Restrictions (Minumum) `{n,}`",
-  "lesson.regexForSeo.minLimitation.description": "To filter URLs with a minimum length of `35` characters, type `{35,}` using curly braces at the end of the period and ending with a comma for the minimum number value we will use for the length.",
+  "lesson.regexForSeo.minLimitation.title": "长度限制（最小值） `{n,}`",
+  "lesson.regexForSeo.minLimitation.description": "要过滤最小长度为`35`个字符的URL，请输入`{35,}`，在点的末尾使用大括号，并以逗号结束，我们将使用这个值作为最小长度。",
 
-  "lesson.regexForSeo.robots.title": "robots.txt (regex-like syntax)",
-  "lesson.regexForSeo.robots.description": "Here is an example of regex-like usage in the `robots.txt` file. The example states that bots should not crawl links with the extension `pdf`.",
+  "lesson.regexForSeo.robots.title": "robots.txt (类似于正则表达式的语法)",
+  "lesson.regexForSeo.robots.description": "下面是一个在`robots.txt`文件中使用正则表达式的例子。这个例子说明，机器人不应该抓取扩展名为 `pdf` 的链接。",
 
   "lesson.regexForSeo.htaccess.title": ".htaccess",
-  "lesson.regexForSeo.htaccess.description": "Here is an example of using regex in the `.htaccess` file. In the example, `php` extension links are directed to `html` extensions with `301` code.",
+  "lesson.regexForSeo.htaccess.description": "下面是一个在 `.htaccess` 文件中使用正则表达式的例子。在这个例子中，`php` 扩展链接指向具有 `301` 返回码的 `html` 扩展。",
 
-  "lesson.regexForSeo.outro.title": "Outro",
-  "lesson.regexForSeo.outro.description": "Regex knowledge is a skill that increases productivity on any platform that allows you to use regex. Once you start using it and improve this skill, it will help you complete many repetitive tasks faster and save time for other things. To better understand the basics of Regex, you can visit the `Regex 101` tutorial. You can use the `Playground` page to test your expressions on your texts."
+  "lesson.regexForSeo.outro.title": "结束语",
+  "lesson.regexForSeo.outro.description": "正则知识是一种技能，可以在任何允许你使用正则表达式的平台上提高生产力。一旦你开始使用它并提高这项技能，它将帮助你更快地完成许多重复性任务，并为其他事情节省时间。为了更好地了解正则表达式的基础知识，你可以访问`Regex 101`教程。你可以使用 `游乐场` 页面在文本段落上测试你的正则表达式。"
 }

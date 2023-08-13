@@ -17,6 +17,9 @@
   "general.playground": "Playground",
   "general.cheatsheet": "Cheatsheet",
   "general.ourSponsors": "Наши спонсоры",
+  "general.share": "Делиться",
+  "general.shareLinkCopied": "Ссылка на общий доступ скопирована!",
+  "general.somethingWentWrong": "Что-то пошло не так!",
 
   "notFound.intro": "Страница, которую вы ищете, не найдена.",
   "notFound.button": "Вернуться домой",

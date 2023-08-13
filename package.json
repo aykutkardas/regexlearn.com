@@ -1,6 +1,6 @@
 {
   "name": "regexlearn",
-  "version": "2.13.1",
+  "version": "2.24.0",
   "author": {
     "name": "Aykut Kardaş",
     "email": "aykutkrds@gmail.com"
@@ -8,6 +8,7 @@
   "scripts": {
     "dev": "next dev -p 3003",
     "build": "next build",
+    "postbuild": "next-sitemap",
     "start": "next start",
     "lint": "next lint",
     "export": "next export",
@@ -15,29 +16,34 @@
   },
   "license": "MIT",
   "dependencies": {
+    "@headlessui/react": "^1.7.11",
     "@use-it/event-listener": "^0.1.7",
+    "axios": "^1.1.3",
     "canvas-confetti": "^1.4.0",
-    "classnames": "^2.3.1",
+    "clsx": "^1.2.1",
+    "copy-to-clipboard": "^3.3.2",
     "draft-js": "^0.11.7",
-    "lodash.isempty": "^4.4.0",
     "lodash.xor": "^4.5.0",
     "lookie": "^1.0.4",
-    "next": "12.2.2",
-    "react": "18.2.0",
-    "react-collapsible": "^2.8.4",
-    "react-custom-scrollbars": "^4.2.1",
-    "react-dom": "18.2.0",
-    "react-icomoon": "^2.5.3",
-    "react-intl": "^6.0.5",
-    "react-tooltip": "^4.2.21",
-    "ua-parser-js": "^1.0.2"
+    "next": "^13.2.1",
+    "query-string": "^7.1.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-hot-toast": "^2.4.0",
+    "react-icomoon": "^2.5.7",
+    "react-intl": "^6.2.10"
   },
   "devDependencies": {
+    "@tailwindcss/forms": "^0.5.3",
     "@types/draft-js": "^0.11.8",
     "@types/node": "^18.0.5",
-    "@types/react": "^18.0.15",
-    "eslint": "7",
-    "eslint-config-next": "12.2.2",
-    "typescript": "^4.5.5"
+    "@types/react": "^18.0.28",
+    "autoprefixer": "^10.4.13",
+    "eslint": "^8.34.0",
+    "eslint-config-next": "^13.2.1",
+    "next-sitemap": "^4.1.8",
+    "postcss": "^8.4.21",
+    "tailwindcss": "^3.2.7",
+    "typescript": "^4.9.5"
   }
 }

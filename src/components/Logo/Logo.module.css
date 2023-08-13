@@ -1,8 +1,0 @@
-.Brand {
-  display: flex;
-  align-items: center;
-}
-
-.BrandIcon {
-  fill: var(--primary);
-}

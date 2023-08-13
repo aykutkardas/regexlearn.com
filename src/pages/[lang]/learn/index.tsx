@@ -1,80 +1,75 @@
 import { GetStaticPaths, GetStaticProps } from 'next';
 import { useIntl, FormattedMessage } from 'react-intl';
-import cx from 'classnames';
 
 import Header from 'src/components/Header';
 import Footer from 'src/components/Footer';
 import LessonBox from 'src/components/LessonBox';
-import CustomHead from 'src/components/CustomHead';
-import ProductButton from 'src/components/ProductButton';
-import { defaultLocale, locales } from 'src/localization';
-import lessons from 'src/data/lessons/index.json';
-
-import styles from './Learn.module.css';
+import SupportButton from 'src/components/SupportButton';
 import HighlightedText from 'src/components/HighlightedText';
+import { defaultLocale, locales } from 'src/localization';
+import globalIntl from 'src/utils/globalIntl';
+import lessons from 'src/data/lessons/index.json';
 
 const PageLearn = () => {
   const { formatMessage } = useIntl();
 
   return (
-    <>
-      <CustomHead title="page.learn.title" description="page.learn.description" hrefLang="learn">
-        <link rel="stylesheet" href="/css/animate.css" />
-      </CustomHead>
+    <div className="container flex flex-1 flex-col items-between h-full">
       <Header />
-      <div className="container">
-        <ProductButton />
-        <div className={cx('row', styles.Section)}>
-          <div className={cx('col-xs-12 col-sm-12 col-md-8', styles.SectionContentWrapper)}>
-            <h1 className={styles.SectionTitle}>
+      <div className="flex flex-col justify-center flex-1">
+        <div className="flex flex-col md:flex-row items-start mt-6">
+          <div className="w-full md:w-1/2 flex flex-col items-start">
+            <h1 className="text-3xl text-white">
               <FormattedMessage id={'section.learn.title'} />
             </h1>
             <HighlightedText
               element="p"
-              className={styles.SectionDescription}
+              className=" text-neutral-300 mt-4 "
               text={formatMessage({ id: 'section.learn.content' })}
-              attrs={{ className: styles.SectionHighlight }}
+              attrs={{ className: 'text-regreen-400' }}
             />
           </div>
-          <div className={cx('col-xs-12 col-sm-12 col-md-4', styles.SectionImageWrapper)}>
-            <img
-              src="/Learn.webp"
-              loading="lazy"
-              className={cx('img-responsive', styles.SectionImage)}
-              alt={formatMessage({ id: 'section.learn.imageAltText' })}
-            />
-          </div>
-        </div>
-        <div className="row">
-          {lessons.map(lesson => (
-            <div
-              key={lesson.key}
-              className={cx('col-xs-12 col-sm-6 col-md-4', styles.LessonBoxWrapper)}
-            >
-              <LessonBox data={lesson} />
-              {lesson.sponsor ? (
-                <span className={styles.LessonSponsor}>
-                  Sponsored by{' '}
-                  <a href={lesson.sponsorURL} target="_blank" rel="noreferrer">
-                    <img src={lesson.sponsorLogo} alt={lesson.sponsor} />
-                  </a>
-                </span>
-              ) : (
+          <div className="w-full md:w-1/2 lg:w-1/3 md:pl-10 lg:pl-0 ml-auto flex flex-col gap-4 mt-8 md:mt-0 mb-10">
+            {lessons.map(lesson => (
+              <div key={lesson.key} className="w-full mb-3">
+                <LessonBox
+                  data={lesson}
+                  bgColor={
+                    lesson.key === 'regexForSeo' ? 'bg-[#af6b21]/80 hover:bg-[#af6b21]' : null
+                  }
+                />
                 <a
+                  className="text-xs flex items-center justify-end text-neutral-400 hover:text-neutral-100 relative ml-auto mt-2 mr-2"
+                  href={
+                    lesson.sponsorURL ||
+                    lesson.creatorURL ||
+                    'https://github.com/aykutkardas/regexlearn.com#sponsoring'
+                  }
                   target="_blank"
-                  className={styles.LessonSponsor}
                   rel="noreferrer"
-                  href="https://github.com/aykutkardas/regexlearn.com#sponsoring"
                 >
-                  Become a Sponsor
+                  {lesson.sponsor || lesson.creator ? (
+                    <span className="flex items-center">
+                      {lesson.sponsor ? 'Sponsored' : 'Created'} by{' '}
+                      <img
+                        className="mx-1"
+                        style={{ height: lesson.logoHeight || 12 }}
+                        src={lesson.sponsorLogo || lesson.creatorLogo}
+                        alt={lesson.sponsor || lesson.creator}
+                      />
+                    </span>
+                  ) : (
+                    <span>Become a Sponsor</span>
+                  )}
                 </a>
-              )}
-            </div>
-          ))}
+              </div>
+            ))}
+          </div>
         </div>
       </div>
+      <SupportButton />
       <Footer />
-    </>
+    </div>
   );
 };
 
@@ -83,11 +78,17 @@ export default PageLearn;
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const lang = params.lang || defaultLocale;
   const messages = require(`src/localization/${lang}/`)?.default;
+  const intl = globalIntl(lang, messages);
 
   return {
     props: {
       lang,
       messages,
+      metadata: {
+        title: intl.formatMessage({ id: 'page.learn.title' }),
+        description: intl.formatMessage({ id: 'page.learn.description' }),
+        hrefLang: 'learn',
+      },
     },
   };
 };

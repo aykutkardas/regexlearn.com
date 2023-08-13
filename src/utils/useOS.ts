@@ -1,25 +1,16 @@
-import UAParser from 'ua-parser-js';
-
-const getOS = (): string | null => {
-  if (typeof window === 'undefined') return null;
-
-  return new UAParser().getOS().name;
+const MobileRegexes = {
+  iPhone: /ihone/i,
+  iPod: /iod/i,
+  iPad: /iad/i,
+  Android: /android/i,
+  BlackBerry: /blackberry/i,
+  Mobile: /webos/i,
 };
 
-type UseOS = {
-  os: string | null;
-  isDesktop: boolean;
-  isMobile: boolean;
-  isMacOS: boolean;
-};
+const passWhenSSR = fn => (typeof window === 'undefined' ? new Function() : fn);
 
-const useOS = (): UseOS => {
-  const os = getOS();
-  const isDesktop = ['Windows', 'Mac OS', 'Linux'].includes(os);
-  const isMobile = ['Android', 'iOS'].includes(os);
-  const isMacOS = 'Mac OS' === os;
+export const isMacOS = passWhenSSR(() => /macintosh|mac os x/i.test(window.navigator.userAgent));
 
-  return { os, isMacOS, isDesktop, isMobile };
-};
-
-export default useOS;
+export const isMobile = passWhenSSR(() =>
+  Object.values(MobileRegexes).some(regex => regex.test(window.navigator.userAgent)),
+);

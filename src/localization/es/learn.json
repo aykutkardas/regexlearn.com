@@ -86,17 +86,17 @@
   "examples.quantifierRange.title": "Practica: Llaves - 3",
   "examples.quantifierRange.description": "Escriba la expresión usando llaves`{}` para seleccionar los números de `0` a `9` en el texto que está al menos entre `1` y `4`.",
 
-  "steps.groupping.title": "Paréntesis `( )`: Agrupamiento",
-  "steps.groupping.description": "Podemos agrupar una expresión y usar estos grupos para hacer referencia o hacer cumplir algunas reglas. Para agrupar una expresión, la encerramos `()` en paréntesis. Por ahora solo agrupamos `haa` a continuación.",
+  "steps.grouping.title": "Paréntesis `( )`: Agrupamiento",
+  "steps.grouping.description": "Podemos agrupar una expresión y usar estos grupos para hacer referencia o hacer cumplir algunas reglas. Para agrupar una expresión, la encerramos `()` en paréntesis. Por ahora solo agrupamos `haa` a continuación.",
 
   "steps.groupReference.title": "Referenciando un grupo",
   "steps.groupReference.description": "Las palabras `ha` y `haa` se agrupan a continuación. El primer grupo se utiliza escribiendo `\\1` para evitar reescribirlo. Aquí `1` denota el orden del agrupamiento. Escriba `\\2` al final de una expresión para referirse al segundo grupo.",
 
-  "steps.nonCapturingGroupping.title": "Parentheses `(?: )`: Agrupamiento Non-capturing",
-  "steps.nonCapturingGroupping.description": "Puede agrupar una expresión y asegurarse de que no se vea atrapado por referencias. Por ejemplo, a continuación hay dos grupos. Sin embargo, la primera referencia del grupo la denotamos con `\\1` en realidad apunta al segundo grupo, ya que el primero es un grupo desconocido.",
+  "steps.nonCapturingGrouping.title": "Parentheses `(?: )`: Agrupamiento Non-capturing",
+  "steps.nonCapturingGrouping.description": "Puede agrupar una expresión y asegurarse de que no se vea atrapado por referencias. Por ejemplo, a continuación hay dos grupos. Sin embargo, la primera referencia del grupo la denotamos con `\\1` en realidad apunta al segundo grupo, ya que el primero es un grupo desconocido.",
 
   "steps.pipeCharacter.title": "Carácter Pipe `|`",
-  "steps.pipeCharacter.description": "Permite especificar que una expresión puede estar en diferentes expresiones. Por lo tanto, todas las declaraciones posibles están escritas separadas por el signo Pipe `|`. Esto difiere del charset `[abc]`, los charsets funcionan a nivel de carácter. Las alternativas están a nivel de expresión. Por ejemplo, la siguiente expresión seleccionaría tanto `cat` y `Cat`. Agregue otro signo pipe `|` al final de una expresión y escriba `rat` para que todas las palabras sean seleccionadas.",
+  "steps.pipeCharacter.description": "Permite especificar que una expresión puede estar en diferentes expresiones. Por lo tanto, todas las declaraciones posibles están escritas separadas por el signo Pipe `|`. Esto difiere del charset `[abc]`, los charsets funcionan a nivel de carácter. Las alternativas están a nivel de expresión. Por ejemplo, la siguiente expresión seleccionaría tanto `cat` y `rat`. Agregue otro signo pipe `|` al final de una expresión y escriba `dog` para que todas las palabras sean seleccionadas.",
 
   "steps.escapeCharacter.title": "Carácter Escape `\\`",
   "steps.escapeCharacter.description": "Hay caracteres especiales que usamos al escribir Regex. `{ } [ ] / \\ + * . $^ | ?` Antes de que podamos seleccionar estos caracteres, necesitamos usar un carácter de escape `\\`. Por ejemplo, para seleccionar los caracteres punto `.` y asterisco `*` en el texto, agreguemos el carácter escape `\\` antes de eso.",

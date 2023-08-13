@@ -86,17 +86,17 @@
   "examples.quantifierRange.title": "Pratik: Süslü Parantezler - 3",
   "examples.quantifierRange.description": "Yan yana en az `1` en fazla `4` sayı geçen metinleri bulacak ifadeyi süslü parantez `{}` kullanarak yazın.",
 
-  "steps.groupping.title": "Parantezler `( )`: Gruplama",
-  "steps.groupping.description": "Bir ifadeyi gruplayabilir ve bu grupları referans göstermek ya da bazı kurallar uygulamak için kullanabiliriz. Bir ifadeyi gruplamak için `()` parantez içine alırız. Şimdilik sadece aşağıdaki `haa` kelimesini gruplayın.",
+  "steps.grouping.title": "Parantezler `( )`: Gruplama",
+  "steps.grouping.description": "Bir ifadeyi gruplayabilir ve bu grupları referans göstermek ya da bazı kurallar uygulamak için kullanabiliriz. Bir ifadeyi gruplamak için `()` parantez içine alırız. Şimdilik sadece aşağıdaki `haa` kelimesini gruplayın.",
 
   "steps.groupReference.title": "Bir Gruba Referans Göstermek",
   "steps.groupReference.description": "Aşağıda `ha` ve `haa` kelimeleri gruplanmıştır. İlk grup tekrar yazılmamak için `\\1` yazılarak kullanılır. Buradaki `1` gruplanma sırasını ifade eder. İkinci gruba refarans göstermek için ifadenin sonun `\\2` yazın.",
 
-  "steps.nonCapturingGroupping.title": "Parantezler `(?: )`: Yakalanmayan Gruplama",
-  "steps.nonCapturingGroupping.description": "Aşağıda `ha` ve `haa` kelimeleri gruplanmıştır. İlk grup yakalanmayan bir gruptur. Bu yüzden referans verilemez. Gruplanmış `haa` kelimesine referans göstermek için ifadenin sonuna `\\1` yazın. Buradaki `1` yakalanan grupların sırasını ifade eder.",
+  "steps.nonCapturingGrouping.title": "Parantezler `(?: )`: Yakalanmayan Gruplama",
+  "steps.nonCapturingGrouping.description": "Aşağıda `ha` ve `haa` kelimeleri gruplanmıştır. İlk grup yakalanmayan bir gruptur. Bu yüzden referans verilemez. Gruplanmış `haa` kelimesine referans göstermek için ifadenin sonuna `\\1` yazın. Buradaki `1` yakalanan grupların sırasını ifade eder.",
 
   "steps.pipeCharacter.title": "Boru Karakteri `|`",
-  "steps.pipeCharacter.description": "Bir ifadenin farklı ifadelerde olabileceğini belirmeyi sağlar. Böylece olabilecek tüm ifadeler boru işareti `|` ile birbirinden ayrılarak yazılır. Bunun karakter setinden `[abc]` farkı, karakter setleri karakter seviyesinde çalışır. Alternatifler ise ifade düzeyindedir. Örneğin aşağıdaki ifade hem `cat` hemde `Cat` sözcüklerini seçecek şekildedir. İfadenin sonuna bir boru işareti `|` daha ekleyip `rat` yazarak tüm sözcüklerin seçilmesini sağlayın.",
+  "steps.pipeCharacter.description": "Bir ifadenin farklı ifadelerde olabileceğini belirmeyi sağlar. Böylece olabilecek tüm ifadeler boru işareti `|` ile birbirinden ayrılarak yazılır. Bunun karakter setinden `[abc]` farkı, karakter setleri karakter seviyesinde çalışır. Alternatifler ise ifade düzeyindedir. Örneğin aşağıdaki ifade hem `cat` hemde `rat` sözcüklerini seçecek şekildedir. İfadenin sonuna bir boru işareti `|` daha ekleyip `dog` yazarak tüm sözcüklerin seçilmesini sağlayın.",
 
   "steps.escapeCharacter.title": "Kaçış Karakteri `\\`",
   "steps.escapeCharacter.description": "Regex yazarken kullandığımız özel karakterler vardır. `{ } [ ] / \\ + * . $ ^ | ?` Bu karakterlerin kendilerini seçebilmek için öncesinde bir kaçış karakteri `\\` kullanmamız gerekir. Örneğin metindeki nokta `.` ve yıldız `*` karakterlerini seçmek için öncesine bir kaçış karakteri `\\` ekleyelim.",

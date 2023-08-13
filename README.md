@@ -1,61 +1,58 @@
-# [regexlearn.com](https://regexlearn.com)
+# **🔓 [regexlearn.com](http://regexlearn.com/): Unlock the Secrets of Regex**
 
-This is a project that makes learning how to write regex easy.
 
-## Features
-
-- **Step by Step Learn**
-- **Interactive**
-- **Shortcut Friendly**
-- **Cheatsheet**
-- **Playground**
-- Practice _(Soon)_
-
-## Available Languages
-
-- **English**
-- **Turkish**
-- **Russian**
-- **Spanish**
-- **Chinese**
-- **German**
-- **Ukrainian**
-- **French**
-- _Korean_ [(Requested)](https://github.com/aykutkardas/regexlearn.com/issues/92)
-- _Arabic_ [(Requested)](https://github.com/aykutkardas/regexlearn.com/issues/163)
-- _Brazilian Portuguese_ [(Requested)](https://github.com/aykutkardas/regexlearn.com/issues/39)
-
-_Please create an issue to add your own language._
+Embark on an exciting journey to learn and master regular expressions with **[regexlearn.com](https://regexlearn.com/)**. Our engaging, step-by-step approach and feature-rich platform ensure a smooth learning experience that will have you writing regex like a pro in no time!
 
 <br>
 
-<h2 align="center">Our Sponsors</h2>
+## **🌟 Features**
 
-<p align="center">
-  <a href="https://ahrefs.com/" target="_blank">
-    <img src="preview/ahrefs.png"/>
-  </a>
-  <a href="https://sitechecker.pro/" target="_blank">
-    <img src="preview/sitechecker.pro.png"/>
-  </a>
-  <a href="https://wope.com" target="_blank">
-    <img src="preview/wope.png"/>
-  </a>
-</p>
-
-<h2 align="center">Sponsoring</h2>
-
-<p align="center">This project is developed as open-source in our spare time. <a href="mailto:aykutkrds@gmail.com">Contact</a> to support and appear as a sponsor.</p>
-
-<h4 align="center"><a href="https://www.buymeacoffee.com/aykutkardas">Buy Me a Coffee!</a></h4>
-
-<h4 align="center"><a href="https://www.patreon.com/bePatron?u=65063346">Become a Patron!</a></h4>
+- **🚶 Step-by-Step Learning:** Progress through thoughtfully crafted lessons and examples at your own pace, catering to both beginners and experienced users.
+- **🎓 Interactive:** Immerse yourself in hands-on activities to reinforce your understanding and boost retention.
+- **🚀 Shortcut Friendly:** Uncover valuable shortcuts and tips that will streamline and optimize your regex-writing process.
+- **📚 Cheatsheet:** Keep a handy, concise summary of regex syntax and usage at your fingertips for quick reference.
+- **🔬 Playground:** Freely experiment and test your regex patterns in a dedicated sandbox environment without limitations.
+- **💡 Practice:** Coming soon - Challenge yourself with a wide range of practical exercises to refine and enhance your regex skills.
 
 <br>
 
-<h2 align="center">Preview</h2>
+## **🌍 Supported Languages**
+
+**[regexlearn.com](http://regexlearn.com/)** is available in the following languages, with more on the way:
+
+- 🇺🇸 English
+- 🇹🇷 Turkish
+- 🇷🇺 Russian
+- 🇪🇸 Spanish
+- 🇨🇳 Chinese
+- 🇩🇪 German
+- 🇺🇦 Ukrainian
+- 🇫🇷 French
+- 🇵🇱 Polish
+- 🇰🇷 Korean [(Requested)](https://github.com/aykutkardas/regexlearn.com/issues/92)
+- 🇦🇪 Arabic [(Requested)](https://github.com/aykutkardas/regexlearn.com/issues/163)
+- 🇧🇷 Brazilian Portuguese [(Requested)](https://github.com/aykutkardas/regexlearn.com/issues/39)
+- 🇬🇪 Georgian [(Requested)](https://github.com/aykutkardas/regexlearn.com/issues/274)
+
+Interested in adding your language? Please **[create an issue](https://github.com/aykutkardas/regexlearn.com/issues/new)** and let us know!
 
 <br>
+
+## Our Sponsors
+
+[![Ahrefs](preview/ahrefs.png)](https://ahrefs.com/) [![Wope](preview/wope.png)](https://wope.com)
+
+<br>
+
+## **💖 Sponsorship**
+
+This project is a labor of love, developed as open-source during our free time. If you'd like to support our mission and be featured as a sponsor, please **[contact us](mailto:aykutkrds@gmail.com)**. Your generous contribution allows us to continue enhancing regexlearn.com, fostering growth and learning within the community.
+
+[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/aykutkardas)
+
+<br>
+
+## Preview
 
 ![Preview](preview/preview-landing.png)
 
