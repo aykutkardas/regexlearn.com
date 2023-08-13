@@ -48,10 +48,10 @@
   "cheatsheet.nonCapturingGroup.description": "참조할 수 없는 그룹식을 만듭니다.",
 
   "cheatsheet.lookarounds": "찾아보기",
-  "cheatsheet.positiveLookahead.title": "앞에서 부터 맞는것 찾기 (Positive Lookahead)",
-  "cheatsheet.negativeLookahead.title": "앞에서 부터 다른것 찾기 (Negative Lookahead)",
-  "cheatsheet.positiveLookbehind.title": "뒤에서 부터 맞는것 찾기 (Positive Lookbehind)",
-  "cheatsheet.negativeLookbehind.title": "뒤에서 부터 다른것 찾기 (Negative Lookbehind)",
+  "cheatsheet.positiveLookahead.title": "앞에서 부터 맞는것 찾기",
+  "cheatsheet.negativeLookahead.title": "앞에서 부터 다른것 찾기",
+  "cheatsheet.positiveLookbehind.title": "뒤에서 부터 맞는것 찾기",
+  "cheatsheet.negativeLookbehind.title": "뒤에서 부터 다른것 찾기",
 
   "cheatsheet.quantifiersAndAlternation": "수량 및 대체",
   "cheatsheet.plus.title": "더하기",
