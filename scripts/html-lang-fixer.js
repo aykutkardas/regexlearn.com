@@ -15,7 +15,7 @@ function htmlLangFixer(path) {
     const stats = fs.lstatSync(currentPath);
 
     if (stats.isFile() && el.endsWith('.html')) {
-      const result = currentPath.match(/^\.\/out\/(en|es|de|tr|uk|fr|ru|pl|zh-cn)\/?/);
+      const result = currentPath.match(/^\.\/out\/(en|es|de|tr|uk|fr|ru|pl|ko|zh-cn)\/?/);
 
       if (result) {
         replaceLangTag(currentPath, result[1]);
