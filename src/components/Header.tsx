@@ -33,15 +33,19 @@ const Header = ({ page }: Props) => {
         </div>
         {isLearnDetail && <div id="ProgressArea" className="flex justify-center flex-1" />}
         <div className="flex flex-1 items-center text-sm justify-end gap-2 sm:gap-4">
-          <IntlLink className="hidden md:block" navLink href="/[lang]/learn">
-            <FormattedMessage id="general.learn" />
-          </IntlLink>
-          <IntlLink className="hidden md:block" navLink href="/[lang]/cheatsheet">
-            <FormattedMessage id="general.cheatsheet" />
-          </IntlLink>
-          <IntlLink className="hidden md:block" navLink href="/[lang]/playground">
-            <FormattedMessage id="general.playground" />
-          </IntlLink>
+          {!isLearnDetail && (
+            <>
+              <IntlLink className="block" navLink href="/[lang]/learn">
+                <FormattedMessage id="general.learn" />
+              </IntlLink>
+              <IntlLink className="block" navLink href="/[lang]/cheatsheet">
+                <FormattedMessage id="general.cheatsheet" />
+              </IntlLink>
+              <IntlLink className="block" navLink href="/[lang]/playground">
+                <FormattedMessage id="general.playground" />
+              </IntlLink>
+            </>
+          )}
 
           <a
             href="https://github.com/aykutkardas/regexlearn.com"
