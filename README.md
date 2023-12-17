@@ -39,7 +39,7 @@ the way:
 - 🇵🇱 Polish
 - 🇰🇷 Korean
 - 🇦🇪 Arabic [(Requested)](https://github.com/aykutkardas/regexlearn.com/issues/163)
-- 🇧🇷 Brazilian Portuguese [(Requested)](https://github.com/aykutkardas/regexlearn.com/issues/39)
+- 🇧🇷 Brazilian Portuguese
 - 🇬🇪 Georgian [(Requested)](https://github.com/aykutkardas/regexlearn.com/issues/274)
 
 Interested in adding your language? Please

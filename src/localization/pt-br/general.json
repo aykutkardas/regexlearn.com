@@ -1,0 +1,39 @@
+{
+  "general.prev": "Anterior",
+  "general.next": "Próximo",
+  "general.result": "Resultado",
+  "general.regex": "Expressão Regular",
+  "general.text": "Texto",
+  "general.watch": "Relógio",
+  "general.start": "Iniciar",
+  "general.continue": "Continuar",
+  "general.completedStep": "Passo Concluído!",
+  "general.hintQuestion": "Mostrar resposta",
+  "general.reportStep": "Reportar um problema",
+  "general.startLearning": "Começar a aprender",
+  "general.comingSoon": "Em breve",
+  "general.becomeSponsor": "Torne-se um patrocinador",
+  "general.learn": "Aprender",
+  "general.playground": "Playground",
+  "general.cheatsheet": "Cheatsheet",
+  "general.ourSponsors": "Nossos patrocinadores",
+  "general.share": "Compartilhar",
+  "general.shareLinkCopied": "Link de compartilhamento copiado!",
+  "general.somethingWentWrong": "Algo deu errado!",
+
+  "notFound.intro": "A página que você está procurando não existe.",
+  "notFound.button": "Voltar para a página inicial",
+
+  "page.landing.title": "Regex Learn - Passo a passo, do básico ao avançado.",
+  "page.learn.title": "Regex Learn - Curso Interativo de Expressões Regulares",
+  "page.cheatsheet.title": "Regex Learn - Cheatsheet de Expressões Regulares",
+  "page.playground.title": "Regex Learn - Playground",
+  "page.404.title": "Regex Learn - Página não encontrada",
+
+  "page.landing.description": "Aprenda Expressões Regulares de forma interativa, pratique no seu próprio ritmo, teste e compartilhe suas próprias Expressões Regulares",
+  "page.learn.description": "Aprenda Expressões Regulares passo a passo. Complete o tutorial interativo que tornará seu aprendizado mais fácil e rápido.",
+  "page.cheatsheet.description": "Às vezes você só precisa lembrar da sintaxe das Expressões Regulares. Experimente a Cheatsheet, que facilitará o entendimento e a memorização.",
+  "page.playground.description": "Você pode criar e testar facilmente seu padrão de Expressões Regulares online através do Playground.",
+
+  "learn.safari.unsupportWarning": "A Expressão Regular neste passo não é suportada por alguns navegadores. Se você estiver tendo problemas para passar por este passo, clique aqui."
+}
