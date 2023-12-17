@@ -9,7 +9,7 @@ export const langNames = {
   uk: '🇺🇦',
   ko: '🇰🇷',
   pl: '🇵🇱',
-  'pt-br': '🇧🇷',
+  'pt-br': '🇵🇹',
 };
 
 export const defaultLocale = 'en';
