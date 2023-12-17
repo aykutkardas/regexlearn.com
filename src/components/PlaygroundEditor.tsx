@@ -228,14 +228,15 @@ const Playground = () => {
           </span>
           <FlagSelect flags={state.flags} setFlags={onChangeFlags} />
         </div>
-        <Button
-          className="h-12 py-0 ml-2 w-fit relative"
+        {/* [TODO]: Temporarily disabled */}
+        {/* <Button
+          className="h-12 py-0 ml-2 w-fit relative whitespace-nowrap"
           variant={ButtonVariants.Primary}
           onClick={handleShare}
           disabled={!hasChange}
         >
           {formatMessage({ id: 'general.share' })}
-        </Button>
+        </Button> */}
       </div>
 
       <div

@@ -1,0 +1,26 @@
+{
+  "landing.title": "RegEx를 처음부터 차근차근 배우세요.",
+  "landing.description": "RegEx 을 배우는 것은 생각보다 쉽습니다. 당신은 RegEx 를 쉽게 `배우고`, `연습하고`, `실험해보고` 그리고 `나눌 수` 있습니다.",
+  "landing.imageAltText": "",
+
+  "section.learn.title": "학습하기",
+  "section.learn.content": "`Regular Expressions`, 축약해서 RegEx 혹은 RegExp 로 불리며, RegEx 구문 규칙 프레임워크안에서 생성된 문자열입니다. RegEx와 함께 검색,매칭,편집 명령어를 이용하여 데이터를 쉽게 관리하고 처리할수 있습니다. Regex는 Python, SQL, Javascript, R, Google Analytics, Google Data Studio와 같은 모든 코딩 프로세스 프로그래밍 언어안에서 사용될 수 있습니다. 지금 당장 RegexLearn에서 예제와 튜토리얼을 통해 regex를 배우세요.",
+  "section.learn.imageAltText": "",
+
+  "section.cheatsheet.button": "지금 리뷰하기",
+  "section.cheatsheet.title": "Cheatsheet",
+  "section.cheatsheet.content": "하나의 페이지안에서 `RegexLearn Cheatsheet`로 모든 사용법을 알 수 있습니다.  RegEx cheat sheet과 함께 모든 RegEx 패턴과 기호를 찾아보세요.",
+  "section.cheatsheet.imageAltText": "",
+
+  "section.playground.title": "Playground",
+  "section.playground.content": "Regex를 생성하려면 Playground를 통해 Regex 패턴을 쉽게 빌드하고 테스트할 수 있습니다. 정규식 테스터는 공동 작업을 위해 정규식을 검증하고 다른 사람들과 공유할 수 있습니다.",
+  "section.playground.imageAltText": "",
+
+  "section.practice.title": "실습",
+  "section.practice.content": "학습 부분을 완료했다면 이제 연습할 시간입니다! 연습 섹션에서는 레벨에 따라 RegEx 튜토리얼을 통해 RegEx 지식과 연습을 테스트할 수 있습니다. 곧.",
+  "section.practice.imageAltText": "",
+
+  "section.opensource.title": "오픈 소스",
+  "section.opensource.content": "Regex 배우기는 자유롭게 이용 가능하고 모든 커뮤니티의 contributions을 환영하는 오픈소스 프로젝트입니다. 이 프로젝트를 통해 능력을 연마하고 공부하고 협업할 수 있습니다.  여기서 contribute & support 할 수 있습니다.",
+  "section.opensource.imageAltText": ""
+}

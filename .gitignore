@@ -26,3 +26,5 @@ yarn-error.log*
 .idea
 .next
 out
+public/robots.txt
+public/sitemap*

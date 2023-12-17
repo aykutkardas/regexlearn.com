@@ -25,7 +25,7 @@ const CheatsheetDemo = ({ data }: Props) => {
           value: initialContent,
           attributes: {
             class:
-              'shadow-sm mx-1 my-[2px] px-1 py-[2px] rounded-md text-white bg-regreen-400 text-black inline-block',
+              'shadow-sm mx-1 my-[2px] px-1 py-[2px] rounded-md text-white bg-green-500 text-black inline-block',
           },
         }),
       );
