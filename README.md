@@ -41,6 +41,7 @@ the way:
 - 🇦🇪 Arabic [(Requested)](https://github.com/aykutkardas/regexlearn.com/issues/163)
 - 🇧🇷 Brazilian Portuguese
 - 🇬🇪 Georgian [(Requested)](https://github.com/aykutkardas/regexlearn.com/issues/274)
+- 🇨🇿 Czech
 
 Interested in adding your language? Please
 **[create an issue](https://github.com/aykutkardas/regexlearn.com/issues/new)** and let us know!
