@@ -7,7 +7,6 @@ import InteractiveArea from 'src/components/InteractiveArea';
 import HighlightedText from 'src/components/HighlightedText';
 import Progress from 'src/components/Progress';
 import Button, { ButtonVariants } from 'src/components/Button';
-import SupportButton from 'src/components/SupportButton';
 import { InteractiveAreaContext } from 'src/context/InteractiveAreaContext';
 
 const Step = () => {
@@ -70,14 +69,24 @@ const Step = () => {
 
       <InteractiveArea key={step} isShow={isInteractive} setIsOpenModal={setIsOpenModal} />
       <a
-        className="text-xs inline-flex items-center justify-end text-neutral-300 opacity-70 hover:opacity-100 relative bottom-3 ml-auto mt-5"
-        href={lesson.sponsorURL || 'https://github.com/aykutkardas/regexlearn.com#sponsoring'}
+        className="text-xs inline-flex items-center justify-end text-neutral-400 hover:text-neutral-100 relative bottom-3 ml-auto mt-5"
+        href={
+          lesson.sponsorURL ||
+          lesson.creatorURL ||
+          'https://github.com/aykutkardas/regexlearn.com#sponsoring'
+        }
         target="_blank"
         rel="noreferrer"
       >
-        {lesson.sponsor ? (
+        {lesson.sponsor || lesson.creator ? (
           <span className="flex items-center">
-            Sponsored by <img className="mx-1 h-3" src={lesson.sponsorLogo} alt={lesson.sponsor} />
+            {lesson.sponsor ? 'Sponsored' : 'Created'} by{' '}
+            <img
+              className="mx-1"
+              style={{ height: lesson.logoHeight || 12 }}
+              src={lesson.sponsorLogo || lesson.creatorLogo}
+              alt={lesson.sponsor || lesson.creator}
+            />
           </span>
         ) : (
           <span>Become a Sponsor</span>

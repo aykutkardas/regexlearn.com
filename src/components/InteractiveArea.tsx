@@ -125,7 +125,7 @@ const InteractiveArea = ({ isShow, setIsOpenModal }: Props) => {
           value: data.content,
           regex: grouppedRegex,
           attributes: {
-            class: 'highlight shadow-sm h-3 mx-1 my-[1px] px-1 py-[2px] rounded-md text-black',
+            class: 'highlight shadow-sm h-3 mr-[1px] my-[1px] px-1 py-[2px] rounded-md text-black',
           },
         }),
       );
@@ -261,10 +261,10 @@ const InteractiveArea = ({ isShow, setIsOpenModal }: Props) => {
         </div>
         {data.videoURL && (
           <div
-            className="inline-flex items-center mr-auto text-[10px] opacity-80 hover:opacity-100 text-neutral-100 cursor-pointer font-sans font-normal"
+            className="inline-flex items-center mr-auto text-[10px] opacity-70 transition-opacity hover:opacity-100 text-neutral-100 cursor-pointer font-sans font-normal"
             onClick={() => setIsOpenModal(true)}
           >
-            <Icon icon="play" size={16} className="mr-1 text-red-500" />
+            <Icon icon="video-camera" size={16} className="mr-1 text-red-400" />
             <FormattedMessage id="general.watch" />
           </div>
         )}

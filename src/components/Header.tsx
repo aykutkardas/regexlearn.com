@@ -33,41 +33,19 @@ const Header = ({ page }: Props) => {
         </div>
         {isLearnDetail && <div id="ProgressArea" className="flex justify-center flex-1" />}
         <div className="flex flex-1 items-center text-sm justify-end gap-2 sm:gap-4">
-          <IntlLink href="/[lang]/learn" passHref>
-            {({ isActive }) => (
-              <a
-                className={
-                  isActive ? 'text-regreen-400' : 'text-neutral-200 hover:text-regreen-400'
-                }
-              >
+          {!isLearnDetail && (
+            <>
+              <IntlLink className="block" navLink href="/[lang]/learn">
                 <FormattedMessage id="general.learn" />
-              </a>
-            )}
-          </IntlLink>
-          <IntlLink href="/[lang]/cheatsheet" passHref>
-            {({ isActive }) => (
-              <a
-                className={cx(
-                  isActive ? 'text-regreen-400' : 'text-neutral-200 hover:text-regreen-400',
-                  { 'hidden md:block': isLearnDetail },
-                )}
-              >
+              </IntlLink>
+              <IntlLink className="block" navLink href="/[lang]/cheatsheet">
                 <FormattedMessage id="general.cheatsheet" />
-              </a>
-            )}
-          </IntlLink>
-          <IntlLink href="/[lang]/playground" passHref>
-            {({ isActive }) => (
-              <a
-                className={cx(
-                  isActive ? 'text-regreen-400' : 'text-neutral-200 hover:text-regreen-400',
-                  { 'hidden md:block': isLearnDetail },
-                )}
-              >
+              </IntlLink>
+              <IntlLink className="block" navLink href="/[lang]/playground">
                 <FormattedMessage id="general.playground" />
-              </a>
-            )}
-          </IntlLink>
+              </IntlLink>
+            </>
+          )}
 
           <a
             href="https://github.com/aykutkardas/regexlearn.com"

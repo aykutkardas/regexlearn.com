@@ -12,11 +12,14 @@ interface Props {
     slug: string;
     title: string;
     description: string;
+    stepCount: number;
+    videoCount?: number;
   };
+  bgColor?: string;
   lock?: boolean;
 }
 
-const LessonBox = ({ data, lock }: Props) => {
+const LessonBox = ({ data, lock, bgColor }: Props) => {
   const [isVisit, setIsVisit] = useState(false);
   const { formatMessage } = useIntl();
 
@@ -33,48 +36,51 @@ const LessonBox = ({ data, lock }: Props) => {
     DynamicWrapper = WrapperLessonBox;
   }
 
-  let stepCount = 0;
-
-  if (data.key) {
-    stepCount = require(`src/data/lessons/${data.key}.js`)?.default?.length || 0;
-  }
-
   useEffect(() => {
     const lessonData = lookie.get(`lesson.${data.key}`);
 
-    setIsVisit(!!lessonData);
+    if (lessonData && lessonData.lastStep > 0) {
+      setIsVisit(true);
+    }
   }, [data.key]);
 
   const startText = formatMessage({ id: isVisit ? 'general.continue' : 'general.start' });
 
   return (
-    <DynamicWrapper>
-      <a className="relative hover:outline-8">
-        <div
-          className={cx(
-            'bg-[url(/images/lesson-card-bg.png)] bg-[length:100%_100%] transition-all duration-300 w-full h-48 bg-center rounded-xl py-3 px-4 flex flex-col shadow-xl flex-1 select-none',
-            !lock ? 'hover:bg-[length:125%_125%]' : 'cursor-not-allowed text-center grayscale',
-          )}
-        >
-          <h2 className="mb-1 text-lg">
-            <FormattedMessage id={data.title} />
-          </h2>
-          <p className="text-sm text-neutral-400">
-            <FormattedMessage id={data.description} />
-          </p>
-          {!lock && (
-            <div className="flex items-end text-sm flex-1 justify-between">
-              <span className="inline-flex items-center">
-                <Icon icon="files-empty" size={15} className="mr-1" />
-                {stepCount}
-              </span>
-              <span className="inline-flex items-center">
-                {startText} <Icon icon="arrow-right" size={14} className="ml-1" />
+    <DynamicWrapper className="hover:outline-8">
+      <div
+        className={cx(
+          'bg-[url(/images/noise.png)] relative bg-repeat bg-contain  transition-all duration-300 w-full h-44 bg-center rounded-xl py-3 px-4 flex flex-col shadow-xl hover:shadow-2xl flex-1 select-none',
+          bgColor || 'bg-[#324A34]/80 hover:bg-[#324A34]',
+          !lock ? '' : 'cursor-not-allowed text-center grayscale',
+        )}
+      >
+        <h2 className="mb-1 text-lg font-bold">
+          <FormattedMessage id={data.title} />
+        </h2>
+        <p className="text-sm text-neutral-300 max-w-[70%] mt-2">
+          <FormattedMessage id={data.description} />
+        </p>
+        {!lock && (
+          <div className="flex items-end text-sm flex-1 justify-between">
+            <div className="inline-flex items-center text-sm text-neutral-300 absolute top-5 right-4 space-x-2">
+              {data.videoCount && (
+                <span className="inline-flex items-center ">
+                  <Icon icon="video-camera" size={16} className="mr-1" />
+                  {data.videoCount}
+                </span>
+              )}
+              <span className="inline-flex items-center ">
+                <Icon icon="document-duplicate" size={16} className="mr-1" />
+                {data.stepCount}
               </span>
             </div>
-          )}
-        </div>
-      </a>
+            <span className="inline-flex items-center  ml-auto bg-neutral-800 px-2 py-1 rounded-md text-xs text-neutral-300 hover:text-neutral-50">
+              {startText} <Icon icon="arrow-right" size={14} className="ml-1" />
+            </span>
+          </div>
+        )}
+      </div>
     </DynamicWrapper>
   );
 };

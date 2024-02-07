@@ -48,12 +48,10 @@ const Section = ({
             attrs={{ className: 'text-regreen-400' }}
           />
           {isShowButton && (
-            <IntlLink href={link} passHref>
-              <a tabIndex={-1}>
-                <Button variant={ButtonVariants.Primary} className="mt-4">
-                  <FormattedMessage id={buttonText} />
-                </Button>
-              </a>
+            <IntlLink href={link} passHref tabIndex={-1}>
+              <Button variant={ButtonVariants.Primary} className="mt-4">
+                <FormattedMessage id={buttonText} />
+              </Button>
             </IntlLink>
           )}
           {customButton?.({ className: 'mt-4' })}

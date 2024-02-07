@@ -78,7 +78,7 @@
   "examples.questionMark.description": "请编写表达式，用 `?` 表示字母 `n` 在文本中是可选的，使 `a` 和 `an` 都可以匹配到。",
 
   "examples.quantifier.title": "练习：大括号 - 1",
-  "examples.quantifier.description": "用 `{}` 编写表达式，匹配文本中的 `4` 位阿拉伯数字。",
+  "examples.quantifier.description": "用 `{}` 编写表达式，匹配文本中，位数为 `4` 的阿拉伯数字。",
 
   "examples.quantifierMin.title": "练习：大括号 - 2",
   "examples.quantifierMin.description": "用 `{}` 编写表达式，匹配文本中，位数至少为 `2` 的阿拉伯数字。",
@@ -86,14 +86,14 @@
   "examples.quantifierRange.title": "练习：大括号 - 3",
   "examples.quantifierRange.description": "用 `{}` 编写表达式，匹配文本中，位数为 `1` 至 `4` 的阿拉伯数字。",
 
-  "steps.groupping.title": "括号 `( )`: 分组",
-  "steps.groupping.description": "我们可以对一个表达式进行分组，并用这些分组来引用或执行一些规则。为了给表达式分组，我们需要将文本包裹在 `()` 中。现在，请尝试为下方文本中的 `haa` 构造分组。",
+  "steps.grouping.title": "括号 `( )`: 分组",
+  "steps.grouping.description": "我们可以对一个表达式进行分组，并用这些分组来引用或执行一些规则。为了给表达式分组，我们需要将文本包裹在 `()` 中。现在，请尝试为下方文本中的 `haa` 构造分组。",
 
   "steps.groupReference.title": "引用组",
   "steps.groupReference.description": "单词 `ha` 和 `haa` 分组如下。第一组用 `\\1` 来避免重复书写。这里的 `1` 表示分组的顺序。请在表达式的末尾键入 `\\2` 以引用第二组。",
 
-  "steps.nonCapturingGroupping.title": "括号 `(?: )`: 非捕获分组",
-  "steps.nonCapturingGroupping.description": "您可以对表达式进行分组，并确保它不被引用捕获。例如，下面有两个分组，但我们用 `\\1` 引用的第一个组实际上是指向第二个组，因为第一个是未被捕获的分组。",
+  "steps.nonCapturingGrouping.title": "括号 `(?: )`: 非捕获分组",
+  "steps.nonCapturingGrouping.description": "您可以对表达式进行分组，并确保它不被引用捕获。例如，下面有两个分组，但我们用 `\\1` 引用的第一个组实际上是指向第二个组，因为第一个是未被捕获的分组。",
 
   "steps.pipeCharacter.title": "竖线 `|`",
   "steps.pipeCharacter.description": "竖线允许一个表达式包含多个不同的分支。所有分支用 `|` 分隔。和在字符层面上运作的字符集 `[abc]` 不同，分支在表达式层面上运作。例如，下面的表达式同时匹配 `cat` 和 `rat`。请在末尾添加另一个 `|`，并输入 `dog` 以匹配所有单词。",
