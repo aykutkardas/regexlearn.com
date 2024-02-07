@@ -1,0 +1,164 @@
+{
+  "examples.starter.title": "Procvičování",
+  "examples.starter.description": "Nyní je čas procvičovat k upevnění toho, co jste se naučili.",
+
+  "examples.finish.title": "Procvičování dokončeno!",
+  "examples.finish.description": " ",
+
+  "steps.starter.title": "Úvod",
+  "steps.starter.description": "Regex (regular expressions) zkráceně znamená `regulární výrazy`. Pomáhá nám najít, nebo spravovat text. Napište `OK` do pole regex, abyste přešli na první krok a získali podrobnější popis..",
+
+  "steps.whatIsRegex.title": "Co jsou regulární výrazy `Regex`?",
+  "steps.whatIsRegex.description": "Regulární výrazy jsou řetězce znaků, které vyjadřují hledací vzor. Často zkráceně jako `Regex` nebo `Regexp`. Používá se zejména k hledání nebo nahrazování slov v textech. Navíc můžeme testovat, zda text splňuje pravidla, která jsme nastavili.\\n\\n Například, představte si, že máte seznam názvů souborů a chcete najít pouze soubory s příponou `pdf`. Psaním výrazu `^\\w+\\.pdf$` toho dosáhnete. S postupem kroků tento výraz pochopíte.",
+
+  "steps.basicMatchers.title": "Základní shodovač",
+  "steps.basicMatchers.description": "Znak nebo slovo, které chceme najít, je napsáno přímo. Podobá se běžnému procesu hledání. Například k nalezení slova `curious` v textu napište totéž.",
+
+  "steps.dotCharacter.title": "Tečka `.`: libovolný znak",
+  "steps.dotCharacter.description": "Tečka `.` umožňuje vybrat libovolný znak, včetně speciálních znaků a mezer. Napište tečku `.` do pole a postupujte dál.",
+
+  "steps.characterSet.title": "Znakové sady `[abc]`",
+  "steps.characterSet.description": "Pokud může jeden ze znaků ve slově být různými znaky, zapíšeme jej do hranatých závorek `[]` se všemi alternativními znaky. Například k napsání výrazu, který najde všechna slova v textu, napište znaky `a`, `e`, `i`, `o`, `u` vedle sebe do hranatých závorek `[]`.",
+
+  "steps.negatedCharacterSet.title": "Negované znakové sady `[^abc]`",
+  "steps.negatedCharacterSet.description": "Pro nalezení všech slov v textu níže, kromě `ber` a `bor`, napište `e` a `o` za znakem `^` uvnitř hranatých závorek `[]`.",
+
+  "steps.range.title": "Rozsah písmen `[a-z]`",
+  "steps.range.description": "K nalezení písmen v určeném rozsahu podle abecedy se začínající písmeno a koncové písmeno zapíší do hranatých závorek `[]` s pomlčkou mezi nimi `-`. Je citlivý na velikost písmen. Napište výraz, který vybere všechna malá písmena mezi `e` a `o`, včetně jich samotných.",
+
+  "steps.rangeNumber.title": "Rozsah čísel `[0-9]`",
+  "steps.rangeNumber.description": "K nalezení čísel v určeném rozsahu se začínající číslo a koncové číslo zapíší do hranatých závorek `[]` s pomlčkou `-` mezi nimi. Napište výraz, který vybere všechna čísla mezi `3` a `6`, včetně jich samotných.",
+
+  "examples.basicMatchers.title": "Procvičování: základní shodovač",
+  "examples.basicMatchers.description": "Napište výraz, který vybere slova `of` v textu.",
+
+  "examples.dotCharacter.title": "Procvičování: libovolný znak",
+  "examples.dotCharacter.description": "Napište výraz, který vybere jednotlivé písmena, čísla, mezery a speciální znaky v textu. Výraz, který napíšete, musí vyhovovat libovolnému znaku.",
+
+  "examples.characterSet.title": "Procvičování: znakové sady",
+  "examples.characterSet.description": "Napište frázi, která se shoduje s každým slovem v textu. Jediné znaky, které se mění, jsou počáteční písmena slov.",
+
+  "examples.negatedCharacterSet.title": "Procvičování: negované znakové sady",
+  "examples.negatedCharacterSet.description": "Napište výraz, který se shoduje s čímkoli kromě slov `beor` a `beur` v textu. Učiňte tak pomocí negované znakové sady.",
+
+  "examples.range.title": "Procvičování: rozsah písmen",
+  "examples.range.description": "Napište výraz, který vybere písmena od `g` do `k` v textu.\\nPísmena `g` a `k` by měla být také zahrnuta v tomto rozsahu.",
+
+  "examples.rangeNumber.title": "Procvičování: rozsah čísel",
+  "examples.rangeNumber.description": "Napište výraz, který vybere čísla od `2` do `7` v textu.\\n`2` a `7` by měly být také zahrnuty v tomto rozsahu.",
+
+  "steps.repetitions.title": "Opakování",
+  "steps.repetitions.description": "Některé speciální znaky slouží k určení toho, kolikrát se znak v textu bude opakovat. Tyto speciální znaky jsou plus `+`, hvězdička `*` a otazník `?`.",
+
+  "steps.asterisk.title": "Hvězdička `*`",
+  "steps.asterisk.description": "Přidáme hvězdičku `*` za znak, abychom naznačili, že se znak buď vůbec nemusí opakovat vůbec (není v textu), nebo se může opakovat mnohokrát. Naznačte, že písmeno `e` by se v textu nemělo vůbec vyskytovat, nebo se může vyskytovat jednou i vícekrát za sebou.",
+
+  "steps.plusCharacter.title": "Znaménko plus `+`",
+  "steps.plusCharacter.description": "Abychom naznačili, že se znak může vyskytovat jednou nebo vícekrát, přidáme za znak znaménko plus `+`. Naznačte, že písmeno `e` se může v textu vyskytovat jednou nebo vícekrát.",
+
+  "steps.questionMark.title": "Otazník `?`",
+  "steps.questionMark.description": "Abychom naznačili, že je znak volitelný, přidáme k němu otazník `?`. Naznačte, že následující písmeno `u` je volitelné.",
+
+  "steps.quantifier.title": "Kudrlinky - 1",
+  "steps.quantifier.description": "K vyjádření určitého počtu výskytů znaku napíšeme na konci kudrlinky `{n}` spolu s tím, kolikrát chceme, aby se vyskytoval. Například naznačte, že následující písmeno `e` se může vyskytovat pouze `2` krát.",
+
+  "steps.quantifierMin.title": "Kudrlinky - 2",
+  "steps.quantifierMin.description": "Pro vyjádření alespoň určitého počtu výskytů znaku napíšeme ihned po znaku, kolikrát bychom si přáli, aby se vyskytoval, následované čárkou `,` a zabaleno do kudrlinek `{n, }`. Například naznačte, že následující písmeno `e` se musí vyskytovat alespoň `3` krát.",
+
+  "steps.quantifierRange.title": "Kudrlinky - 3",
+  "steps.quantifierRange.description": "Pro vyjádření výskytu znaku v určitém rozsahu napíšeme kudrlinky `{x,y}` s rozsahem od `x` do `y`. Například naznačte, že následující písmeno `e` se může vyskytovat pouze `1` až `3` krát.",
+
+  "examples.asterisk.title": "Procvičování: hvězdička `*`",
+  "examples.asterisk.description": "Použijte hvězdičku `*` k napsání výrazu, který vybere každé slovo, kde se `e` vyskytuje nula a vícekrát.",
+
+  "examples.plusCharacter.title": "Procvičování: znaménko plus `+`",
+  "examples.plusCharacter.description": "Napište výraz s použitím znaménka plus `+`, který vybere slova, ve kterých se písmeno `e` vyskytuje jednou nebo vícekrát.",
+
+  "examples.questionMark.title": "Procvičování: otazník `?`",
+  "examples.questionMark.description": "Napište výraz, který naznačuje, že písmeno `n` je volitelné, pomocí otazníku `?`. Takto mohou být vybrána jak slova `a`, tak `an`.",
+
+  "examples.quantifier.title": "Procvičování: kudrlinky - 1",
+  "examples.quantifier.description": "Napište výraz s kudrlinkami `{}`, který najde texty obsahující `4` čísla za sebou. Pamatujte, že rozsah `[0-9]` odpovídá jednomu číslu.",
+
+  "examples.quantifierMin.title": "Procvičování: kudrlinky - 2",
+  "examples.quantifierMin.description": "Napište výraz s kudrlinkami `{}`, který najde texty obsahující alespoň `2` čísla za sebou.",
+
+  "examples.quantifierRange.title": "Procvičování: kudrlinky - 3",
+  "examples.quantifierRange.description": "Napište výraz s kudrlinkami `{}`, který najde texty obsahující alespoň `1` a nejvýše `4` čísla za sebou.",
+
+  "steps.grouping.title": "Závorky `( )`: seskupování",
+  "steps.grouping.description": "Můžeme seskupit výraz a tyto skupiny použít k odkazování nebo vynucování některých pravidel. K seskupení výrazu uzavřeme `()` do závorek. Zatím jen seskupte `haa` níže.",
+
+  "steps.groupReference.title": "Odkazování na skupinu",
+  "steps.groupReference.description": "Slova `ha` a `haa` jsou níže seskupena. První skupina se používá tím, že napíšeme `\\1`, abychom se vyhnuli opisování. Zde `1` označuje pořadí seskupení. Napište na konec výrazu `\\2`, abyste se odkázali na druhou skupinu.",
+
+  "steps.nonCapturingGrouping.title": "Závorky `(?: )`: seskupení bez odkazování",
+  "steps.nonCapturingGrouping.description": "Můžeme seskupit výraz a zajistit, že není odkazatelný. Například níže jsou dvě skupiny. Skupina, na kterou nyní odkážeme pomocí `\\1` je ve skutečnosti druhá skupina, protože první skupina je neodkazatelná.",
+
+  "steps.pipeCharacter.title": "Znak `|` (nebo)",
+  "steps.pipeCharacter.description": "Umožňuje specifikovat, že výraz může být v různých výrazech. Všechny možné výroky jsou napsány odděleně pomocí znaku svislé čáry `|`. Na rozdíl od znakových sad `[abc]` tak, které pracují na úrovni znaků, svislé čáry pracují na úrovni výrazů. Například následující výraz by vybral jak `cat`, tak `rat`. Přidejte další znak svislé čáry `|` na konec výrazu a napište `dog`, aby byla vybrána všechna slova.",
+
+  "steps.escapeCharacter.title": "Zpětné lomítko `\\`",
+  "steps.escapeCharacter.description": "Existují speciální znaky, které používáme při psaní regexu. `{ } [ ] / \\ + * . $^ | ?` Abychom vybrali tyto znaky samotné, musíme použít zpětné lomítko `\\`. Například k výběru tečky `.` a hvězdičky `*` před ně přidejte zpětné lomítko `\\`.",
+
+  "steps.caret.title": "Znak stříšky `^`:\\nvýběr podle začátku řádku",
+  "steps.caret.description": "Používali jsme `[0-9]` k nalezení čísel. Abychom našli pouze čísla na začátku řádku, před tímto výrazem přidejte znak stříšky `^`.",
+
+  "steps.dollar.title": "Znak dolaru `$`:\\nvýběr podle konce řádku",
+  "steps.dollar.description": "Použijte znak dolaru `$` za hodnotou `html` k vybrání textů `html` pouze na konci řádku.",
+
+  "steps.wordCharacter.title": "Znak slova `\\w`: písmena, čísla a podtržítka",
+  "steps.wordCharacter.description": "Výraz `\\w` slouží k nalezení písmen, čísel a podtržítek. Použijte výraz `\\w` k nalezení znaků slov v textu.",
+
+  "steps.withoutWordCharacter.title": "Znegovaný znak slova `\\W`",
+  "steps.withoutWordCharacter.description": "Výraz `\\W` slouží k nalezení znaků jiných než písmena, čísla a podtržítka.",
+
+  "steps.numberCharacter.title": "Znak čísla `\\d`",
+  "steps.numberCharacter.description": "`\\d` slouží k nalezení pouze číselných znaků.",
+
+  "steps.withoutNumberCharacter.title": "Znegovaný znak čísla `\\D`",
+  "steps.withoutNumberCharacter.description": "`\\D` slouží k nalezení nečíselných znaků.",
+
+  "steps.spaceCharacter.title": "Znak mezery `\\s`",
+  "steps.spaceCharacter.description": "`\\s` slouží k nalezení pouze znaků mezery.",
+
+  "steps.withoutSpaceCharacter.title": "Znegovaný znak mezery `\\S`",
+  "steps.withoutSpaceCharacter.description": "`\\S` slouží k nalezení znaků jiných než mezera.",
+
+  "steps.lookarounds.title": "Pohledy dopředu a dozadu",
+  "steps.lookarounds.description": "Pokud chceme, aby fráze, kterou píšeme, přišla před nebo po jiné frázi, musíme provádět \"pohledy dopředu a dozadu\". Přejděte na další krok a naučte se, jak provádět.",
+
+  "steps.positiveLookahead.title": "Pohled dopředu: `(?=)`",
+  "steps.positiveLookahead.description": "Například, chceme vybrat hodinovou hodnotu v textu. Chceme tedy vybrat pouze číselné hodnoty, které následují za `PM`. Pro tento účel musíme napsat výraz pohledu dopředu `(?=)` po našem výrazu. Vložte `PM` za znaménko `=` uvnitř závorek.",
+
+  "steps.negativeLookahead.title": "Znegovaný pohled dopředu: `(?!)`",
+  "steps.negativeLookahead.description": "Například, chceme vybrat čísla jiná než hodinová hodnota v textu. Musíme proto napsat výraz záporného pohledu dopředu `(?!)` po našem výrazu, abychom vybrali pouze číselné hodnoty, které nemají za sebou `PM`. Vložte `PM` za znaménko `!` uvnitř závorek.",
+
+  "steps.positiveLookbehind.title": "Pohled dozadu: `(?<=)`",
+  "steps.positiveLookbehind.description": "Například, chceme vybrat hodnotu ceny v textu. Abychom vybrali pouze číselné hodnoty, které jsou předcházeny znakem `$`, musíme napsat regulární výraz kladného pohledu dozadu `(?<=)` před naším výrazem. Přidejte `\\$` za znaménko `=` uvnitř závorek.",
+
+  "steps.negativeLookbehind.title": "Znegovaný pohled dozadu: `(?&lt;!)`",
+  "steps.negativeLookbehind.description": "Například, chceme vybrat čísla v textu, která nejsou hodnotou ceny. Proto musíme napsat regulární výraz záporného pohledu dozadu `(?&lt;!)` před naším výrazem, abychom vybrali pouze číselné hodnoty, které nejsou předcházeny znakem `$`. Přidejte `\\$` za znaménko `!` uvnitř závorek.",
+
+  "steps.flags.title": "Vlajky",
+  "steps.flags.description": "Vlajky mění výstup výrazu. Proto se jim také říká `modifikátory`. Vlajky určují, zda se má text považovat za oddělené řádky, zda má rozlišovat velikost písmen nebo zda má najít všechna shoda. Pokračujte na další krok a dozvíte se více o vlajkách.",
+
+  "steps.flagsGlobal.title": "Globální vlajka",
+  "steps.flagsGlobal.description": "Vlajka `global` způsobí, že výraz vybere všechny shody. Pokud není použita, vybere pouze první shodu. Nyní aktivujte globální vlajku, abyste mohli vybírat všechny shody.",
+
+  "steps.flagsMultiline.title": "Víceřádková vlajka",
+  "steps.flagsMultiline.description": "Regex vidí veškerý text jako jeden řádek. Ale používáme vlajku `multiline`, abychom každý řádek zpracovávali samostatně. Tímto způsobem se výrazy, které píšeme k identifikaci na konců řádků, zpracují samostatně pro každý řádek. Nyní povolte víceřádkovou vlajku, abyste mohli najít všechny shody.",
+
+  "steps.flagsCaseInsensitive.title": "Vlakja pro odstranění citlivosti na velikost písmen",
+  "steps.flagsCaseInsensitive.description": "Abychom odstranili citlivost na velikost písmen v napsaném výrazu, musíme aktivovat vlajku `case-insensitive`.",
+
+  "steps.greedyMatching.title": "Lakomé shody",
+  "steps.greedyMatching.description": "Regex automaticky provádí lakomou shodu. To znamená, že shoda bude co nejdelší. Podívejte se na příklad níže. Odkazuje na jakoukoli shodu končící písmenem `r` a může být libovolným znakem před ním. Ale neskončí u prvního písmena `r`.",
+
+  "steps.lazyMatching.title": "Líné shody",
+  "steps.lazyMatching.description": "Líná shoda, na rozdíl od lakomé shody, se zastaví u první shody. Například v následujícím příkladu přidejte `?` za `*`, abyste našli první shodu končící písmenem `r` a před ním libovolným znakem. To znamená, že tato shoda se zastaví u prvního písmene `r`.",
+
+  "steps.completeAllSteps.title": "Gratulujeme, dokončili jste všechny kroky!",
+  "steps.completeAllSteps.description": "Můžete se kdykoli vrátit zpět ke předchozím krokům a snadno procházet všemi kroky, kterými jste prošli."
+}
+
