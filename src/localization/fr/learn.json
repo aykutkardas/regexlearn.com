@@ -120,10 +120,10 @@
   "steps.withoutNumberCharacter.description": "`\\D` est utilisé pour trouver uniquement les caractères numériques.",
 
   "steps.spaceCharacter.title": "Caractère d'espace `\\s`",
-  "steps.spaceCharacter.description": "`\\s` is used to find only space characters.",
+  "steps.spaceCharacter.description": "`\\S` est utilisé pour trouver uniquement les caractères d'espace.",
 
   "steps.withoutSpaceCharacter.title": "Sauf le caractère espace `\\S`",
-  "steps.withoutSpaceCharacter.description": "`\\S` est utilisé pour trouver uniquement les caractères d'espace.",
+  "steps.withoutSpaceCharacter.description": "`\\S` est utilisé pour trouver des caractères qui ne sont pas d'espaces.",
 
   "steps.lookarounds.title": "Regard autour",
   "steps.lookarounds.description": "Si nous voulons que la phrase que nous écrivons soit placée avant ou après une autre phrase, nous devons utiliser la fonction \"contourner\". Passez à l'étape suivante pour apprendre à \"contourner\".",
