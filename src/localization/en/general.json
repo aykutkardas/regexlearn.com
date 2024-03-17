@@ -35,5 +35,5 @@
   "page.cheatsheet.description": "Sometimes you just need to remember Regex. Try the cheatsheet that will make it easier for you to understand and remember better.",
   "page.playground.description": "You can easily build and test your regex pattern online via Playground.",
 
-  "learn.safari.unsupportWarning": "Regex in this step are not supported by the some browsers. If you have trouble getting past this step, you can click here."
+  "learn.safari.unsupportWarning": "Regex in this step is not supported by some browsers. If you have trouble getting past this step, click here."
 }
