@@ -79,7 +79,7 @@ const Step = () => {
         rel="noreferrer"
       >
         {lesson.sponsor || lesson.creator ? (
-          <span className="flex items-center">
+          <span dir='ltr' className="flex items-center">
             {lesson.sponsor ? 'Sponsored' : 'Created'} by{' '}
             <img
               className="mx-1"

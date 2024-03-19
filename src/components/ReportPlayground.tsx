@@ -39,7 +39,7 @@ const ReportPlayground = () => {
       target="_blank"
       rel="noreferrer"
     >
-      <Icon icon="chat-bubble" size={16} className="mr-1" />
+      <Icon icon="chat-bubble" size={16} className="ltr:mr-1 rtl:ml-1" />
       <FormattedMessage id="general.reportStep" />
     </a>
   );

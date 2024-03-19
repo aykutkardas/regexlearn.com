@@ -204,7 +204,7 @@ const Playground = () => {
 
   return (
     <>
-      <div
+      <div dir='ltr'
         className={cx(
           'bg-jet-500 rounded-md relative tracking-wider text-neutral-300 mb-5 mt-4',
           'w-full flex items-center',

@@ -5,6 +5,7 @@ import cx from 'clsx';
 
 import IntlLink from 'src/components/IntlLink';
 import Icon from 'src/components/Icon';
+import { useLanguageDirection } from 'src/utils/useLanguageDirection';
 
 interface Props {
   data: {
@@ -46,6 +47,9 @@ const LessonBox = ({ data, lock, bgColor }: Props) => {
 
   const startText = formatMessage({ id: isVisit ? 'general.continue' : 'general.start' });
 
+  const direction = useLanguageDirection();
+  const arrowDirectionName = direction === 'rtl' ? 'arrow-left' : 'arrow-right';
+
   return (
     <DynamicWrapper className="hover:outline-8">
       <div
@@ -63,21 +67,23 @@ const LessonBox = ({ data, lock, bgColor }: Props) => {
         </p>
         {!lock && (
           <div className="flex items-end text-sm flex-1 justify-between">
-            <div className="inline-flex items-center text-sm text-neutral-300 absolute top-5 right-4 space-x-2">
+            <div className="inline-flex items-center text-sm text-neutral-300 absolute top-5 ltr:right-4 rtl:left-4 space-x-2">
               {data.videoCount && (
-                <span className="inline-flex items-center ">
-                  <Icon icon="video-camera" size={16} className="mr-1" />
+                <span className="inline-flex items-center rtl:right-0 ">
+                  <Icon icon="video-camera" size={16} className="mx-1" />
                   {data.videoCount}
                 </span>
               )}
               <span className="inline-flex items-center ">
-                <Icon icon="document-duplicate" size={16} className="mr-1" />
+                <Icon icon="document-duplicate" size={16}  className="mx-1"/>
                 {data.stepCount}
               </span>
             </div>
-            <span className="inline-flex items-center  ml-auto bg-neutral-800 px-2 py-1 rounded-md text-xs text-neutral-300 hover:text-neutral-50">
-              {startText} <Icon icon="arrow-right" size={14} className="ml-1" />
-            </span>
+            <span className="inline-flex items-center rtl:mr-auto ltr:ml-auto bg-neutral-800 px-2 py-1 rounded-md text-xs text-neutral-300 hover:text-neutral-50">
+  {startText} <Icon icon={arrowDirectionName} size={14} className="rtl:mr-1 ltr:ml-1" />
+</span>
+
+
           </div>
         )}
       </div>

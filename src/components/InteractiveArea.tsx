@@ -197,7 +197,7 @@ const InteractiveArea = ({ isShow, setIsOpenModal }: Props) => {
   }).toLowerCase();
 
   return (
-    <div
+    <div dir='ltr'
       className={cx({
         '[&_.highlight]:bg-red-400 ': error,
         '[&_.highlight]:bg-yellow-600': match,
