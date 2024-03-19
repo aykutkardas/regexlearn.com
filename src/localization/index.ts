@@ -13,8 +13,7 @@ export const langNames = {
   'cs-cz': '🇨🇿',
 };
 
-// TODO: Add rtlSupported languages
-export const rtlSupported = ['tr'];
+export const rtlSupported = [];
 
 export const defaultLocale = 'en';
 
