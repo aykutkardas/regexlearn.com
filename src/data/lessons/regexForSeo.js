@@ -181,7 +181,7 @@ const regexForSeo = [
     noHint: true,
     cursorPosition: 2,
     readOnly: true,
-    visibleRegex: '/*.pdf$',
+    visibleRegex: '/.*.pdf$',
     hiddenFlags: true,
     regex: ['/.*.pdf$'],
     answer: ['/document.pdf', '/introduction.pdf'],
