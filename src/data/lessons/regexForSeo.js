@@ -192,13 +192,13 @@ const regexForSeo = [
     content:
       'RewriteEngine On\nRewriteCond %{REQUEST_URI} .php$\nRewriteRule ^(.*).php$ /$1.html [R=301,L]\n\n----------\n\n/about.html\n/home.html\n/product/detail.php\n/shop/12/buy.php\n/profile.php',
     initialFlags: 'gm',
-    initialValue: '^(.*).php$',
+    initialValue: '^(.*)\.php$',
     flags: 'gm',
     noHint: true,
     cursorPosition: 2,
     readOnly: true,
     hiddenFlags: true,
-    regex: ['^(.*).php$'],
+    regex: ['^(.*)\.php$'],
     answer: ['/product/detail.php', '/shop/12/buy.php', '/profile.php'],
   },
   {
