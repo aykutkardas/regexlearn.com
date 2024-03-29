@@ -1,0 +1,26 @@
+{
+  "landing.title": "Naučte se regex krok za krokem, od nuly do sta.",
+  "landing.description": "Naučit se regex je snazší, než si myslíte. Tento nástroj můžete použít k jednoduchému `učení`, `procvičování`, `testování` a `sdílení` regexu.",
+  "landing.imageAltText": "Ilustrace uvolněného muže s nohama na stole.",
+
+  "section.learn.title": "Učit se",
+  "section.learn.content": "`Regulární výrazy`, zkráceně Regex nebo Regexp, jsou řetězce znaků vytvořené v rámci pravidel syntaxe regexu. S regexem, který používá příkazy jako hledání, shoda a úpravy, můžete snadno spravovat svá data. Regex lze používat v programovacích jazycích jako Python, SQL, JavaScript, R, Google Analytics, Google Data Studio a po celý průběh programování. Naučte se regex online s příklady a tutoriály na RegexLearn.",
+  "section.learn.imageAltText": "Ilustrace hory s vlajkou na jejím vrcholu.",
+
+  "section.cheatsheet.button": "Procvičit regex",
+  "section.cheatsheet.title": "Tahák",
+  "section.cheatsheet.content": "S `RegexLearn Cheatsheet` (tahákem pro regex) můžete rychle vidět všechny použití, která potřebujete najednou, a zkontrolovat je přímo z jedné stránky. Prozkoumejte všechny vzory a symboly regexu s tahákem regexu.",
+  "section.cheatsheet.imageAltText": "Ilustrace muže, který prohlíží stránky dalekohledem.",
+
+  "section.playground.title": "Playground (hřiště)",
+  "section.playground.content": "Pokud chcete vytvořit regex, můžete ho snadno vytvářet a testovat prostřednictvím Playgroundu. Jako tester regexu můžete ověřovat a sdílet svůj regex s ostatními.",
+  "section.playground.imageAltText": "Ilustrace kočky, která shazuje plnou sklenici.",
+
+  "section.practice.title": "Procvičování",
+  "section.practice.content": "Pokud dokončíte kurzy, je čas na PROCVIČOVÁNÍ! V části procvičování můžete otestovat své znalosti regexu a procvičovat s tutoriály podle své úrovně. Již brzy.",
+  "section.practice.imageAltText": "Ilustrace ženy, která dělá poznámky z knihy.",
+
+  "section.opensource.title": "Open Source",
+  "section.opensource.content": "Regex Learn je open-source projekt, který vítá příspěvky komunity a je zdarma k použití. Práce na tomto projektu vám umožní zdokonalit své dovednosti, studovat a spolupracovat. Můžete přispívat a podporovat zde.",
+  "section.opensource.imageAltText": "Ilustrace ženy, muže a kočky skládajících skládačky."
+}

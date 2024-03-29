@@ -7,10 +7,12 @@ import { useRouter } from 'next/router';
 import { IntlProvider } from 'react-intl';
 
 import { defaultLocale, locales } from 'src/localization';
+import { useLanguageDirection } from 'src/utils/useLanguageDirection';
 
 require('src/migration').migration();
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
+
   useEffect(() => {
     const preventBrowserShortcut = e => {
       if (e.ctrlKey && 'gmi'.includes(e.key.toLowerCase())) {
@@ -28,6 +30,9 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
   const { asPath } = useRouter();
 
   const href = asPath.replace('/en', '/').replace('//', '/');
+
+  const direction = useLanguageDirection()
+
   return (
     <IntlProvider
       messages={pageProps.messages}
@@ -44,9 +49,8 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
                 key={locale}
                 rel="alternate"
                 hrefLang={locale}
-                href={`${process.env.NEXT_PUBLIC_BASE_URL}${locale === 'en' ? '' : locale + '/'}${
-                  metadata.hrefLang
-                }`}
+                href={`${process.env.NEXT_PUBLIC_BASE_URL}${locale === 'en' ? '' : locale + '/'}${metadata.hrefLang
+                  }`}
               />
             ))}
           {/* <!-- Facebook Meta Tags --> */}
@@ -65,7 +69,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
           <meta name="twitter:image" content={baseURL + '/images/og-regexlearn-image.jpg'} />
         </Head>
       )}
-      <div className="flex flex-col h-screen text-neutral-50 font-openSans">
+      <div dir={direction} className="flex flex-col h-screen text-neutral-50 font-openSans">
         <Component {...pageProps} />
       </div>
     </IntlProvider>

@@ -1,0 +1,39 @@
+{
+  "general.prev": "Zpět",
+  "general.next": "Další",
+  "general.result": "Výsledek",
+  "general.regex": "Regex",
+  "general.text": "Text",
+  "general.watch": "Sledovat",
+  "general.start": "Start",
+  "general.continue": "Pokračovat",
+  "general.completedStep": "Krok dokončen!",
+  "general.hintQuestion": "Zobrazit odpověď",
+  "general.reportStep": "Nahlásit problém",
+  "general.startLearning": "Začít se učit",
+  "general.comingSoon": "Již brzy",
+  "general.becomeSponsor": "Stát se sponzorem",
+  "general.learn": "Učit",
+  "general.playground": "Playground",
+  "general.cheatsheet": "Tahák",
+  "general.ourSponsors": "Naši sponzoři",
+  "general.share": "Sdílet",
+  "general.shareLinkCopied": "Sdílejte zkopírovaný link!",
+  "general.somethingWentWrong": "Něco se pokazilo!",
+
+  "notFound.intro": "Stránku, kterou hledáte neexistuje.",
+  "notFound.button": "Zpět na hlavní stránku",
+
+  "page.landing.title": "Regex Learn - Krok po kroku, od nuly to sta.",
+  "page.learn.title": "Regex Learn - Interaktivní kurz regexu",
+  "page.cheatsheet.title": "Regex Learn - Regex tahák",
+  "page.playground.title": "Regex Learn - Playground",
+  "page.404.title": "Regex Learn - Stránka nenalezena",
+
+  "page.landing.description": "Naučte se regex interaktivně, procvičujte na své úrovni, testujte a sdílejte svůj vlastní regex.",
+  "page.learn.description": "Naučte se regex krok po kroku. Dokončete interaktivní kurz, který vám učení usnadní a zrychlí.",
+  "page.cheatsheet.description": "Někdy si jen potřebujete vzpomenout na regex. Vyzkoušejte tahák, který vám usnadní porozumění a lepší zapamatování.",
+  "page.playground.description": "Vyzkoušejte si svůj regex na našem Playgroundu (hřišti). Sledujte, jak se váš regex chová v reálném čase.",
+
+  "learn.safari.unsupportWarning": "Regex v tomto kroku není podporován některými prohlížeči. Pokud máte problém, klikněte zde."
+}
