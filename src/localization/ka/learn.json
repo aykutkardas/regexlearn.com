@@ -101,7 +101,9 @@
   "steps.quantifier.description": "იმის განსაზღვრისთვის, თუ კონკრეტულად რამდენჯერ უნდა მეორდებოდეს ესა თუ ის სიმბოლო ტექსტში, სიმბოლოს შემდეგ, ფიგურულს ფრჩხილებს შორის ვწერთ რიცხვს `{n}`, რომლითაც აღვნიშნავთ, რამდენჯერ უნდა მეორდებოდეს ეს კონკრეტული სიმბოლო ტექსტში. მაგალითად, ქვემოთ მოცემული ტექსტისათვის შეადგინეთ რეგულარული გამოსახულება, რომლითაც აღნიშნავთ, რომ ასო `e` უნდა მეორდებოდეს მხოლოდ `2`-ჯერ.",
 
   "steps.quantifierMin.title": "Curly Braces - 2",
+  "steps.quantifierMin.title": "ფიგურული ფრჩხილები - 2",
   "steps.quantifierMin.description": "To express at least a certain number of occurrences of a character, immediately after the character we write at least how many times we want it to occur followed by a comma `,` and wrapped inside curly braces `{n, }`. For example, indicate that the following letter `e` can occur at least `3` times.",
+  "steps.quantifierMin.description": "იმის განსაზღვრისთვის, თუ მინიმუმ რამდენჯერ უნდა მეორდებოდეს ესა თუ ის სიმბოლო ტექსტში, სიმბოლოს შემდეგ, ფიგურულ ფრჩხილებს შორის ვწერთ მინიმალური გამეორებების რიცხვს და შემდეგ მძიმეს `{n, }`. მაგალითად, ქვემოთ მოცემული ტექსტისათვის შეადგინეთ რეგულარული გამოსახულება, რომლითაც აღნიშნავთ, რომ ასო `e` უნდა მეორდებოდეს მინიმუმ `3`-ჯერ.",
 
   "steps.quantifierRange.title": "Curly Braces - 3",
   "steps.quantifierRange.description": "To express the occurrence of a character in a certain number range, we write curly braces `{x,y}` with the interval we want to go to the end. For example, indicate that the following letter `e` can only occur between `1` and `3`.",
