@@ -186,7 +186,9 @@
   "steps.withoutWordCharacter.description": "ჩანაწერი `\\W` გამოიყენება ტექსტში შემავალი ყველა სიმბოლოს მოსაძიებლად, გარდა ასოებისა, ციფრებისა და ქვეტირეებისა. გამოიყენეთ აღნიშნული ჩანაწერი ქვემოთ მოცემულ გამოსახულებაში.",
 
   "steps.numberCharacter.title": "Number Character `\\d`",
+  "steps.numberCharacter.title": "ციფრები `\\d`",
   "steps.numberCharacter.description": "`\\d` is used to find only number characters.",
+  "steps.numberCharacter.description": "ჩანაწერი `\\d` გამოიყენება მხოლოდ ციფრების მოსაძიებლად. გამოიყენეთ აღნიშნული ჩანაწერი ქვემოთ მოცემულ გამოსახულებაში.",
 
   "steps.withoutNumberCharacter.title": "Except Number Character `\\D`",
   "steps.withoutNumberCharacter.description": "`\\D` is used to find non-numeric characters.",
