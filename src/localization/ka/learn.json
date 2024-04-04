@@ -206,7 +206,9 @@
   "steps.withoutSpaceCharacter.description": "ჩანაწერი `\\S` გამოიყენება ტექსტში შემავალი ყველა სიმბოლოს მოსაძიებლად, გარდა ინტერვალებისა. გამოიყენეთ აღნიშნული ჩანაწერი ქვემოთ მოცემულ გამოსახულებაში.",
 
   "steps.lookarounds.title": "Lookarounds",
+  "steps.lookarounds.title": "მიმოხედვა",
   "steps.lookarounds.description": "If we want the phrase we're writing to come before or after another phrase, we need to \"lookaround\". Take the next step to learn how to \"lookaround\".",
+  "steps.lookarounds.description": "თუ გვინდა, რომ ფრაზა, რომელსაც ვწერთ, მოსდევდეს ანდ წინ უსწრებდეს რაიმე სხვა ფრაზას, უნდა „მიმოვიხედოთ“. გადადით შემდეგ საფეხურზე, რათა შეისწავლოთ, თუ როგორ ხდება Regex-ში „მიმოხედვა“.",
 
   "steps.positiveLookahead.title": "Positive Lookahead: `(?=)`",
   "steps.positiveLookahead.description": "For example, we want to select the hour value in the text. Therefore, to select only the numerical values that have `PM` after them, we need to write the positive look-ahead expression `(?=)` after our expression. Include `PM` after the `=` sign inside the parentheses.",
