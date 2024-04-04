@@ -126,7 +126,9 @@
   "examples.questionMark.description": "შეადგინეთ რეგულარული გამოსახულება, რომელიც აღნიშნავს, რომ ასო `n` ტექსტში არასავალდებულოა. გამოიყენეთ კითხვის ნიშანი `?`. გამოსახულება შესაბასობაში უნდა მოდიოდეს ორივე (`a` და `an`) სიტყვასთან.",
 
   "examples.quantifier.title": "Practice: Curly Braces - 1",
+  "examples.quantifier.title": "სავარჯიშო: ფიგურული ფრჩხილები - 1",
   "examples.quantifier.description": "Write the expression using curly braces `{}` that will find texts containing `4` numbers side by side. Remember that the range `[0-9]` will match a single digit.",
+  "examples.quantifier.description": "ფიგურული ფრჩხილების `{}` გამოყენებით შეადგინეთ რეგულარული გამოსახულება, რომელიც შესაბამისობაში მოვა ტექსტის იმ ფრაგმენტთან ან ფრაგმენტებთან, სადაც ზედიზედ `4` ციფრია წარმოდგენილი. გახსოვდეთ, რომ დიაპაზონი `[0-9]` შესაბამისობაში მოდის მხოლოდ ერთ ციფრთან.",
 
   "examples.quantifierMin.title": "Practice: Curly Braces - 2",
   "examples.quantifierMin.description": "Write the expression using curly braces `{}` that will find texts containing at least `2` numbers side by side.",
