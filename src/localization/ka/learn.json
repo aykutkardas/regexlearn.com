@@ -116,7 +116,9 @@
   "examples.asterisk.description": "ვარსკვლავის `*` გამოყენებით შეადგინეთ რეგულარული გამოსახულება, რომელიც შესაბამისობაში მოვა ყველა სიტყვასთან და დაუშვებს, რომ ასო `e` შეიძლება საერთოდ არ შედიოდეს ტექსტში, ანდა შედიოდეს ერთხელ ან ზედიზედ მრავალჯერ.",
 
   "examples.plusCharacter.title": "Practice: Plus Sign `+`",
+  "examples.plusCharacter.title": "სავარჯიშო: პლიუსი `+`",
   "examples.plusCharacter.description": "Write the expression using the plus sign `+` to select words in which the letter `e` occurs one or more times in the text.",
+  "examples.plusCharacter.description": "პლიუსის `+` გამოყენებით შეადგინეთ რეგულარული გამოსახულება, რომელიც შესაბამისობაში მოვა ყველა იმ სიტყვასთან, რომელშიც ასო `e` შედის ერთხელ ან ზედიზედ მრავალჯერ.",
 
   "examples.questionMark.title": "Practice: Question Mark `?`",
   "examples.questionMark.description": "Write the expression indicating that the letter `n` is optional in the text, using the question mark `?`. Thus, both the words `a` and `an` can be selected.",
