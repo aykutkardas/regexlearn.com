@@ -166,7 +166,9 @@
   "steps.escapeCharacter.description": "არსებობს სპეციალური სიმბოლები, რომლებსაც რეგულარული გამოსახულებების ჩაწერისას ვიყენებთ. `{ } [ ] / \\ + * . $^ | ?` იმისათვის, რომ ეს სიმბოლოები გამოსახულებაში აღქმულ იქნეს, როგორც ჩვეულებრივი სიმბოლოები, ვიყენებთ უკან გადახრილ წილადის ხაზს `\\`. მაგალითად, იმისათვის, რომ ქვემოთ მოცემულ ტექსტში მოძიებულ იქნეს წერტილი `.` და ვარსკვლავი `*`, რეგულარულ გამოსახულებაში ორივე სიმბოლოს (`.` და `*`) წინ დაამატეთ უკან გადახრილი წილადის ხაზი `\\`.",
 
   "steps.caret.title": "Caret Sign `^`:\\nSelecting by Line Start",
+  "steps.caret.title": "ახარისხების ნიშანი `^`:\\nშერჩევა ხაზის დასაწყისის მიხედვით",
   "steps.caret.description": "We were using `[0-9]` to find numbers. To find only numbers at the beginning of a line, prefix this expression with the `^` sign.",
+  "steps.caret.description": "როგორც ადრე აღვნიშნეთ, რეგულარულ გამოსახულებებში ციფრების მოძიებისთვის ვიყენებთ შემდეგნაირ ჩანაწერს: `[0-9]`. იმისათვის, რომ ქვემოთ მოცემული ტექსტის ყოველი ხაზის მხოლოდ დასაწყისში არსებული ციფრები იქნეს მოძიებული, გამოსახულებას თავსართის სახით დაურთეთ ახარისხების ნიშანი `^`.",
 
   "steps.dollar.title": "Dollar Sign `$`:\\nSelecting by End of Line",
   "steps.dollar.description": "Let's use the `$` sign after the `html` value to find the `html` texts only at the end of the line.",
