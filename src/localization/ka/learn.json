@@ -141,7 +141,9 @@
   "examples.quantifierRange.description": "ფიგურული ფრჩხილების `{}` გამოყენებით შეადგინეთ რეგულარული გამოსახულება, რომელიც შესაბამისობაში მოვა ტექსტის იმ ფრაგმენტთან ან ფრაგმენტებთან, სადაც ზედიზედ მინიმუმ `1` და მაქსიმუმ `4` ციფრია წარმოდგენილი.",
 
   "steps.grouping.title": "Parentheses `( )`: Grouping",
+  "steps.grouping.title": "ფრჩხილები `( )`: კლასიფიცირება",
   "steps.grouping.description": "We can group an expression and use these groups to reference or enforce some rules. To group an expression, we enclose `()` in parentheses. For now just group `haa` below.",
+  "steps.grouping.description": "Regex-ში გვაქვს შესაძლობლობა, მოვახდინოთ გამოსახულებების კლასიფიცირება (დაჯგუფება) და შემდგომში გამოვიყენოთ ეს ჯგუფები სხვადასსხვა ინსტრუქციების სისრულეში მოსაყვანად. რეგულარული გამოსახულებების კლასიფიცირებისათვის ვიყენებთ ფრჩხილებს `()`. ამჯერად მოდით, დაწერეთ გამოსახულება, რომელიც ქვემოთ მოცემული ტექსტისათვის მოახდენს `haa`-ს კლასიფიცირებას.",
 
   "steps.groupReference.title": "Referencing a Group",
   "steps.groupReference.description": "The words `ha` and `haa` are grouped below. The first group is used by writing `\\1` to avoid rewriting. Here `1` denotes the order of grouping. Type `\\2` at the end of the expression to refer to the second group.",
