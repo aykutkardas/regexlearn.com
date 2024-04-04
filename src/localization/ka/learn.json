@@ -146,7 +146,9 @@
   "steps.grouping.description": "Regex-ში გვაქვს შესაძლობლობა, მოვახდინოთ გამოსახულებების კლასიფიცირება (დაჯგუფება) და შემდგომში გამოვიყენოთ ეს ჯგუფები სხვადასსხვა ინსტრუქციების სისრულეში მოსაყვანად. რეგულარული გამოსახულებების კლასიფიცირებისათვის ვიყენებთ ფრჩხილებს `()`. ამჯერად მოდით, დაწერეთ გამოსახულება, რომელიც ქვემოთ მოცემული ტექსტისათვის მოახდენს `haa`-ს კლასიფიცირებას.",
 
   "steps.groupReference.title": "Referencing a Group",
+  "steps.groupReference.title": "ჯგუფზე მითითება (Referencing)",
   "steps.groupReference.description": "The words `ha` and `haa` are grouped below. The first group is used by writing `\\1` to avoid rewriting. Here `1` denotes the order of grouping. Type `\\2` at the end of the expression to refer to the second group.",
+  "steps.groupReference.description": "ქვემოთ მოცემულ მაგალითში კლასიფიცირებულია სიტყვები `ha` და `haa`. პირველ ჯგუფზე მითითება ხდება `\\1`-ის დაწერით (ამ გზით თავს ვარიდებთ გამოსახულების ერთი და იგივე ფრაგმენტის ხელახლა გადაწერას). ამ შემთხვევაში, `1` აღნიშნავს ჯგუფის რიგის ნომერს. დაწერეთ `\\2` ქვემოთ მოცემული გამოსახულების ბოლოში, რათა მოახდინოთ მითითება მეორე ჯგუფზე.",
 
   "steps.nonCapturingGrouping.title": "Parentheses `(?: )`: Non-capturing Grouping",
   "steps.nonCapturingGrouping.description": "You can group an expression and ensure that it is not captured by references. For example, below are two groups. However, the first group reference we denote with `\\1` actually indicates the second group, as the first is a non-capturing group.",
