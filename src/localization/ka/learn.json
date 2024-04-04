@@ -161,7 +161,9 @@
   "steps.pipeCharacter.description": "ამ სიმბოლოს საშუალებით შეგვიძლია განვსაზღვროთ ალტერნატიული ქვეგამოსახულებები გამოსახულებაში. ამ მიზნით, ყველა შესაძლო გამოსახულება უნდა ჩაიწეროს მიყოლებით და ერთმანეთისგან გამოიყოს ვერტიკალური ხაზით `|`. ეს მეთოდი განსხვავდება სიმბოლოთა ნაკრების განსაზღვრებისაგან `[abc]`, რომელიც მხოლოდ სიმბოლოების დონეზე მუშაობს. ალტერნატიული ქვეგამოსახულებები მუშაობს გამოსახულების დონეზე. მაგალითად, ქვემოთ მოცემული გამოსახულება შესაბამისობაში მოდის სიტყვებთან `cat` და `rat`. გამოსახულების ბოლოში დაამატეთ კიდევ ერთი ვერტიკალური ხაზი `|` და დაწერეთ სიტყვა `dog`, რათა ყველა სიტყვასთან მოხდეს თანხვედრა.",
 
   "steps.escapeCharacter.title": "Escape Character `\\`",
+  "steps.escapeCharacter.title": "უკან გადახრილი წილადის ხაზი `\\`",
   "steps.escapeCharacter.description": "There are special characters that we use when writing regex. `{ } [ ] / \\ + * . $^ | ?` Before we can select these characters themselves, we need to use an escape character `\\`. For example, to select the dot `.` and asterisk `*` characters in the text, let's add an escape character `\\` before it.",
+  "steps.escapeCharacter.description": "არსებობს სპეციალური სიმბოლები, რომლებსაც რეგულარული გამოსახულებების ჩაწერისას ვიყენებთ. `{ } [ ] / \\ + * . $^ | ?` იმისათვის, რომ ეს სიმბოლოები გამოსახულებაში აღქმულ იქნეს, როგორც ჩვეულებრივი სიმბოლოები, ვიყენებთ უკან გადახრილ წილადის ხაზს `\\`. მაგალითად, იმისათვის, რომ ქვემოთ მოცემულ ტექსტში მოძიებულ იქნეს წერტილი `.` და ვარსკვლავი `*`, რეგულარულ გამოსახულებაში ორივე სიმბოლოს (`.` და `*`) წინ დაამატეთ უკან გადახრილი წილადის ხაზი `\\`.",
 
   "steps.caret.title": "Caret Sign `^`:\\nSelecting by Line Start",
   "steps.caret.description": "We were using `[0-9]` to find numbers. To find only numbers at the beginning of a line, prefix this expression with the `^` sign.",
