@@ -96,7 +96,9 @@
   "steps.questionMark.description": "იმის აღსანიშნავად, რომ ესა თუ ის სიმბოლო არასავალდებულოა, სიმბოლოს შემდეგ ვწერთ კითხვის ნიშანს `?`. მაგალითად, ქვემოთ მოცემული ტექსტისათვის შეადგინეთ რეგულარული გამოსახულება, რომლითაც აღნიშნავთ, რომ ასო `u` არასავალდებულია.",
 
   "steps.quantifier.title": "Curly Braces - 1",
+  "steps.quantifier.title": "ფიგურული ფრჩხილები - 1",
   "steps.quantifier.description": "To express a certain number of occurrences of a character,  at the end we write curly braces `{n}` along with how many times we want it to occur. For example, indicate that the following letter `e` can occur only `2` times.",
+  "steps.quantifier.description": "იმის განსაზღვრისთვის, თუ კონკრეტულად რამდენჯერ უნდა მეორდებოდეს ესა თუ ის სიმბოლო ტექსტში, სიმბოლოს შემდეგ, ფიგურულს ფრჩხილებს შორის ვწერთ რიცხვს `{n}`, რომლითაც აღვნიშნავთ, რამდენჯერ უნდა მეორდებოდეს ეს კონკრეტული სიმბოლო ტექსტში. მაგალითად, ქვემოთ მოცემული ტექსტისათვის შეადგინეთ რეგულარული გამოსახულება, რომლითაც აღნიშნავთ, რომ ასო `e` უნდა მეორდებოდეს მხოლოდ `2`-ჯერ.",
 
   "steps.quantifierMin.title": "Curly Braces - 2",
   "steps.quantifierMin.description": "To express at least a certain number of occurrences of a character, immediately after the character we write at least how many times we want it to occur followed by a comma `,` and wrapped inside curly braces `{n, }`. For example, indicate that the following letter `e` can occur at least `3` times.",
