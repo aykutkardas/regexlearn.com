@@ -76,7 +76,9 @@
   "examples.rangeNumber.description": "დაწერეთ გამოსახულება, რათა ტექსტში აირჩიოთ ციფრები `2`-დან `7`-მდე.\\nდიაპაზონში ასევე უნდა შედიოდეს `2` და `7`.",
 
   "steps.repetitions.title": "Repetitions",
+  "steps.repetitions.title": "გამეორებები",
   "steps.repetitions.description": "Some special characters are used to specify how many times a character will be repeated in the text. These special characters are the plus `+`, the asterisk `*`, and the question mark `?`.",
+  "steps.repetitions.description": "იმის განსაზღვრისთვის, თუ რამდენჯერ მეორდება ესა თუ ის ასო (სიმბოლო) ტექსტში, რამდენიმე სპეციალური სიმბოლო გამოიყენება. ეს სპეციალური სიმბოლოებია: პლიუსი `+`, ვარსკვლავი `*` და კითხვის ნიშანი `?`.",
 
   "steps.asterisk.title": "Asterisk `*`",
   "steps.asterisk.description": "We put an asterisk `*` after a character to indicate that the character may either not match at all or can match many times. For example, indicate that the letter `e` should never occur in the text, or it can occur once or more side by side.",
