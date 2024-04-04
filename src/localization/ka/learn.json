@@ -176,7 +176,9 @@
   "steps.dollar.description": "დაურთეთ დოლარის `$` ნიშანი სიტყვა `html`-ს ბოლოსართის სახით, რათა მოძიებულ იქნეს მხოლოდ ყოველი ხაზის ბოლოში არსებული `html`-ები.",
 
   "steps.wordCharacter.title": "Word Character `\\w`: Letter, Number and Underscore",
+  "steps.wordCharacter.title": "ასო-ციფრულის სიმბოლო `\\w`: ასო, ციფრი და ქვეტირე",
   "steps.wordCharacter.description": "The expression `\\w` is used to find letters, numbers and underscore characters. Let's use the expression `\\w` to find word characters in the text.",
+  "steps.wordCharacter.description": "`\\w` ჩანაწერი გამოიყენება ტექსტში ასოების, ციფრებისა და ქვეტირეების მოსაძიებლად. ქვემოთ მოცემულ გამოსახულებაში გამოიყენეთ `\\w` ჩანაწერი, რათა მოიძიოთ ტექსტში არსებული ყველა ასო, ციფრი და ქვეტირე.",
 
   "steps.withoutWordCharacter.title": "Except Word Character `\\W`",
   "steps.withoutWordCharacter.description": "The expression `\\W` is used to find characters other than letters, numbers, and underscores.",
