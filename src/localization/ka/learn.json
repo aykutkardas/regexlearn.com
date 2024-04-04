@@ -201,7 +201,9 @@
   "steps.spaceCharacter.description": "ჩანაწერი `\\s` გამოიყენება მხოლოდ ინტერვალების მოსაძიებლად. გამოიყენეთ აღნიშნული ჩანაწერი ქვემოთ მოცემულ გამოსახულებაში.",
 
   "steps.withoutSpaceCharacter.title": "Except Space Character `\\S`",
+  "steps.withoutSpaceCharacter.title": "გარდა ინტერვალებისა `\\S`",
   "steps.withoutSpaceCharacter.description": "`\\S` is used to find non-space characters.",
+  "steps.withoutSpaceCharacter.description": "ჩანაწერი `\\S` გამოიყენება ტექსტში შემავალი ყველა სიმბოლოს მოსაძიებლად, გარდა ინტერვალებისა. გამოიყენეთ აღნიშნული ჩანაწერი ქვემოთ მოცემულ გამოსახულებაში.",
 
   "steps.lookarounds.title": "Lookarounds",
   "steps.lookarounds.description": "If we want the phrase we're writing to come before or after another phrase, we need to \"lookaround\". Take the next step to learn how to \"lookaround\".",
