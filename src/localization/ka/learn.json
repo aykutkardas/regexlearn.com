@@ -86,7 +86,9 @@
   "steps.asterisk.description": "იმის აღსანიშნავად, რომ ამა თუ იმ სიმბოლოს დამთხვევა ტექსტში საერთოდ არ მოხდეს, ან შეიძლება არაერთხელ მოხდეს, სიმბოლოს შემდეგ ვწერთ ვარსკვლავს `*`. მაგალითად, ქვემოთ მოცემული ტექსტისათვის შეადგინეთ რეგულარული გამოსახულება, რომლითაც აღნიშნავთ, რომ ასო `e` ტექსტში შეიძლება საერთოდ არ შედიოდეს ან შედიოდეს ერთხელ ან ზედიზედ მრავალჯერ.",
 
   "steps.plusCharacter.title": "Plus Sign `+`",
+  "steps.plusCharacter.title": "პლიუსი `+`",
   "steps.plusCharacter.description": "To indicate that a character can occur one or more times, we put a plus sign `+` after a character. For example, indicate that the letter `e` can occur one or more times in the text.",
+  "steps.plusCharacter.description": "იმის აღსანიშნავად, რომ ესა თუ ის სიმბოლო ტექსტში შეიძლება შედიოდეს ერთხელ ან მრავალჯერ, სიმბოლოს შემდეგ ვწერთ პლიუსს `+`. მაგალითად, ქვემოთ მოცემული ტექსტისათვის შეადგინეთ რეგულარული გამოსახულება, რომლითაც აღნიშნავთ, რომ ასო `e` ტექსტში შეიძლება შედიოდეს ერთხელ ან მრავალჯერ.",
 
   "steps.questionMark.title": "Question Mark `?`",
   "steps.questionMark.description": "To indicate that a character is optional, we put a `?` question mark after a character. For example, indicate that the following letter `u` is optional.",
