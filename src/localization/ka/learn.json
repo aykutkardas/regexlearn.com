@@ -136,7 +136,9 @@
   "examples.quantifierMin.description": "ფიგურული ფრჩხილების `{}` გამოყენებით შეადგინეთ რეგულარული გამოსახულება, რომელიც შესაბამისობაში მოვა ტექსტის იმ ფრაგმენტთან ან ფრაგმენტებთან, სადაც ზედიზედ `2` ან მეტი ციფრია წარმოდგენილი.",
 
   "examples.quantifierRange.title": "Practice: Curly Braces - 3",
+  "examples.quantifierRange.title": "სავარჯიშო: ფიგურული ფრჩხილები - 3",
   "examples.quantifierRange.description": "Write the expression using curly braces `{}` that will find texts containing at least `1` and at most `4` numbers side by side.",
+  "examples.quantifierRange.description": "ფიგურული ფრჩხილების `{}` გამოყენებით შეადგინეთ რეგულარული გამოსახულება, რომელიც შესაბამისობაში მოვა ტექსტის იმ ფრაგმენტთან ან ფრაგმენტებთან, სადაც ზედიზედ მინიმუმ `1` და მაქსიმუმ `4` ციფრია წარმოდგენილი.",
 
   "steps.grouping.title": "Parentheses `( )`: Grouping",
   "steps.grouping.description": "We can group an expression and use these groups to reference or enforce some rules. To group an expression, we enclose `()` in parentheses. For now just group `haa` below.",
