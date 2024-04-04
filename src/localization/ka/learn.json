@@ -181,7 +181,9 @@
   "steps.wordCharacter.description": "`\\w` ჩანაწერი გამოიყენება ტექსტში ასოების, ციფრებისა და ქვეტირეების მოსაძიებლად. ქვემოთ მოცემულ გამოსახულებაში გამოიყენეთ `\\w` ჩანაწერი, რათა მოიძიოთ ტექსტში არსებული ყველა ასო, ციფრი და ქვეტირე.",
 
   "steps.withoutWordCharacter.title": "Except Word Character `\\W`",
+  "steps.withoutWordCharacter.title": "გარდა ასო-ციფრული სიმბოლოებისა `\\W`",
   "steps.withoutWordCharacter.description": "The expression `\\W` is used to find characters other than letters, numbers, and underscores.",
+  "steps.withoutWordCharacter.description": "ჩანაწერი `\\W` გამოიყენება ტექსტში შემავალი ყველა სიმბოლოს მოსაძიებლად, გარდა ასოებისა, ციფრებისა და ქვეტირეებისა. გამოიყენეთ აღნიშნული ჩანაწერი ქვემოთ მოცემულ გამოსახულებაში.",
 
   "steps.numberCharacter.title": "Number Character `\\d`",
   "steps.numberCharacter.description": "`\\d` is used to find only number characters.",
