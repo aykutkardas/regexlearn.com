@@ -171,7 +171,9 @@
   "steps.caret.description": "როგორც ადრე აღვნიშნეთ, რეგულარულ გამოსახულებებში ციფრების მოძიებისთვის ვიყენებთ შემდეგნაირ ჩანაწერს: `[0-9]`. იმისათვის, რომ ქვემოთ მოცემული ტექსტის ყოველი ხაზის მხოლოდ დასაწყისში არსებული ციფრები იქნეს მოძიებული, გამოსახულებას თავსართის სახით დაურთეთ ახარისხების ნიშანი `^`.",
 
   "steps.dollar.title": "Dollar Sign `$`:\\nSelecting by End of Line",
+  "steps.dollar.title": "დოლარის ნიშანი `$`:\\nშერჩევა ხაზის დაბოლოების მიხედვით",
   "steps.dollar.description": "Let's use the `$` sign after the `html` value to find the `html` texts only at the end of the line.",
+  "steps.dollar.description": "დაურთეთ დოლარის `$` ნიშანი სიტყვა `html`-ს ბოლოსართის სახით, რათა მოძიებულ იქნეს მხოლოდ ყოველი ხაზის ბოლოში არსებული `html`-ები.",
 
   "steps.wordCharacter.title": "Word Character `\\w`: Letter, Number and Underscore",
   "steps.wordCharacter.description": "The expression `\\w` is used to find letters, numbers and underscore characters. Let's use the expression `\\w` to find word characters in the text.",
