@@ -106,7 +106,9 @@
   "steps.quantifierMin.description": "იმის განსაზღვრისთვის, თუ მინიმუმ რამდენჯერ უნდა მეორდებოდეს ესა თუ ის სიმბოლო ტექსტში, სიმბოლოს შემდეგ, ფიგურულ ფრჩხილებს შორის ვწერთ მინიმალური გამეორებების რიცხვს და შემდეგ მძიმეს `{n, }`. მაგალითად, ქვემოთ მოცემული ტექსტისათვის შეადგინეთ რეგულარული გამოსახულება, რომლითაც აღნიშნავთ, რომ ასო `e` უნდა მეორდებოდეს მინიმუმ `3`-ჯერ.",
 
   "steps.quantifierRange.title": "Curly Braces - 3",
+  "steps.quantifierRange.title": "ფიგურული ფრჩხილები - 3",
   "steps.quantifierRange.description": "To express the occurrence of a character in a certain number range, we write curly braces `{x,y}` with the interval we want to go to the end. For example, indicate that the following letter `e` can only occur between `1` and `3`.",
+  "steps.quantifierRange.description": "იმისათვის, რომ განსაზღვროთ გამეორებების დასაშვები დიაპაზონი (რიცხვითი შუალედი), ფიგურულ ფრჩხილებს შორის ვწერთ გამეორებების მინიმალურ და მაქსიმალურ ოდენობას `{x,y}`. მაგალითად, ქვემოთ მოცემული ტექსტისათვის შეადგინეთ რეგულარული გამოსახულება, რომლითაც აღნიშნავთ, რომ ასო `e` უნდა მეორდებოდეს მხოლოდ `1`-დან `3`-მდე დიაპაზონში.",
 
   "examples.asterisk.title": "Practice: Asterisk `*`",
   "examples.asterisk.description": "Use the asterisk `*` to write the expression that will select each word, suitable for the absence of the letter `e` in the text and the presence of one or more.",
