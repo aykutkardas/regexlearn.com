@@ -1,6 +1,7 @@
 {
-  "cheatsheet.section.title": "Regex Cheatsheet",
+  "cheatsheet.section.title": "Regex-ის ზოგადი განმარტებები",
   "cheatsheet.section.description": "Explore all Regex patterns and symbols with the Regex cheatsheet.",
+  "cheatsheet.section.description": "შეისწავლეთ ყველა Regex-ნუმიში და სიმბოლო ზოგადი განმარტებების გამოყენებით",
 
   "cheatsheet.anchors": "Anchors",
   "cheatsheet.caret.title": "Start of string or line",
