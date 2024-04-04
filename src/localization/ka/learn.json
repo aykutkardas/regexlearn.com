@@ -111,7 +111,9 @@
   "steps.quantifierRange.description": "იმისათვის, რომ განსაზღვროთ გამეორებების დასაშვები დიაპაზონი (რიცხვითი შუალედი), ფიგურულ ფრჩხილებს შორის ვწერთ გამეორებების მინიმალურ და მაქსიმალურ ოდენობას `{x,y}`. მაგალითად, ქვემოთ მოცემული ტექსტისათვის შეადგინეთ რეგულარული გამოსახულება, რომლითაც აღნიშნავთ, რომ ასო `e` უნდა მეორდებოდეს მხოლოდ `1`-დან `3`-მდე დიაპაზონში.",
 
   "examples.asterisk.title": "Practice: Asterisk `*`",
+  "examples.asterisk.title": "სავარჯიშო: ვარსკვლავი `*`",
   "examples.asterisk.description": "Use the asterisk `*` to write the expression that will select each word, suitable for the absence of the letter `e` in the text and the presence of one or more.",
+  "examples.asterisk.description": "ვარსკვლავის `*` გამოყენებით შეადგინეთ რეგულარული გამოსახულება, რომელიც შესაბამისობაში მოვა ყველა სიტყვასთან და დაუშვებს, რომ ასო `e` შეიძლება საერთოდ არ შედიოდეს ტექსტში, ანდა შედიოდეს ერთხელ ან ზედიზედ მრავალჯერ.",
 
   "examples.plusCharacter.title": "Practice: Plus Sign `+`",
   "examples.plusCharacter.description": "Write the expression using the plus sign `+` to select words in which the letter `e` occurs one or more times in the text.",
