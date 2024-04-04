@@ -91,7 +91,9 @@
   "steps.plusCharacter.description": "იმის აღსანიშნავად, რომ ესა თუ ის სიმბოლო ტექსტში შეიძლება შედიოდეს ერთხელ ან მრავალჯერ, სიმბოლოს შემდეგ ვწერთ პლიუსს `+`. მაგალითად, ქვემოთ მოცემული ტექსტისათვის შეადგინეთ რეგულარული გამოსახულება, რომლითაც აღნიშნავთ, რომ ასო `e` ტექსტში შეიძლება შედიოდეს ერთხელ ან მრავალჯერ.",
 
   "steps.questionMark.title": "Question Mark `?`",
+  "steps.questionMark.title": "კითხვის ნიშანი `?`",
   "steps.questionMark.description": "To indicate that a character is optional, we put a `?` question mark after a character. For example, indicate that the following letter `u` is optional.",
+  "steps.questionMark.description": "იმის აღსანიშნავად, რომ ესა თუ ის სიმბოლო არასავალდებულოა, სიმბოლოს შემდეგ ვწერთ კითხვის ნიშანს `?`. მაგალითად, ქვემოთ მოცემული ტექსტისათვის შეადგინეთ რეგულარული გამოსახულება, რომლითაც აღნიშნავთ, რომ ასო `u` არასავალდებულია.",
 
   "steps.quantifier.title": "Curly Braces - 1",
   "steps.quantifier.description": "To express a certain number of occurrences of a character,  at the end we write curly braces `{n}` along with how many times we want it to occur. For example, indicate that the following letter `e` can occur only `2` times.",
