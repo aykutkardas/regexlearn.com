@@ -8,12 +8,12 @@
 
   "steps.starter.title": "შესავალი",
   "steps.starter.description": "Regex is short for `Regular Expression`. It helps to match, find or manage text. Start by typing `OK` in the Regex field to proceed to the first step and access the more detailed description..",
-  "steps.starter.description": "Regex-ი არის `Regular Expression`-ის შემოკლებული ჩანაწერი. იგი გვეხმარება, შევამოწმოთ ტექსტში არსებული მსგავსებები, მოვახდინოთ ძიება ან მართვა ტექსტისა. მოდი, დავიწყოთ შემდეგით: ქვემოთ მოცემულ ველში ლათინური სიმბოლოებით შეიყვანეთ ტექსტი `OK`, რათა გადახვიდეთ პირველ საფეხურზე, სადაც მოცემული იქნება უფრო დეტალური აღწერა..",
+  "steps.starter.description": "Regex-ი არის `Regular Expression`-ის შემოკლებული ჩანაწერი. იგი გვეხმარება, შევამოწმოთ ტექსტში არსებული მსგავსებები, მოვახდინოთ ძიება ან მართვა ტექსტისა. მოდი, დავიწყოთ შემდეგით: ქვემოთ მოცემულ ველში ლათინური სიმბოლოებით შეიყვანეთ ტექსტი `OK`, რათა გადახვიდეთ პირველ ეტაპზე, სადაც მოცემული იქნება უფრო დეტალური აღწერა..",
 
   "steps.whatIsRegex.title": "What is Regular Expressions `Regex`?",
   "steps.whatIsRegex.title": "რა არის რეგულარული გამოსახულება (`Regex`)?",
   "steps.whatIsRegex.description": "Regular Expressions are a string of characters that express a search pattern. Often abbreviated as `Regex` or `Regexp`. It is especially used to find or replace words in texts. In addition, we can test whether a text complies with the rules we set.\\n\\n For example, let's say you have a list of filenames. And you only want to find files with the `pdf` extension. Following typing an expression `^\\w+\\.pdf$` will work. The meaning of the definitions in this expression will become clearer as the steps progress.",
-  "steps.whatIsRegex.description": "რეგულარული გამოსახულება არის სიმბოლოებისგან შემდგარი სტრიქონი, რომელიც გამოხატავს საძიებო ნიმუშს. ხშირად, შემოკლებით მოიხსენიებენ, როგორც `Regex` ან `Regexp`. განსაკუთრებით აქტიურად გამოიყენება ტექსტებში გარკვეული სიტყვების მოსაძებნად ან ჩასანაცვლებლად. გარდა ამისა, მისი მეშვეობით შეგვიძლია შევამოწმოთ, აკმაყოფილებს თუ არა ესა თუ ის ტექსტი ჩვენ მიერ განსაზღვრულ ნორმებს.\\n\\n მაგალითად, ვთქვათ, მოცემული გვაქვს ფაილების სახელთა სია და გვინდა, რომ მათ შორის მოვძებნოთ მხოლოდ `pdf` გაფართოების მქონე ფაილები. სასურველ შედეგს მივაღწევთ, თუ შევადგენთ შემდეგი სახის გამოსახულებას: `^\\w+\\.pdf$`. მომდევნო საფეხურების გავლასთან ერთად აღნიშნული გამოსახულების მუშაობის პრინციპი თანდათანობით გასაგები გახდება.",
+  "steps.whatIsRegex.description": "რეგულარული გამოსახულება არის სიმბოლოებისგან შემდგარი სტრიქონი, რომელიც გამოხატავს საძიებო ნიმუშს. ხშირად, შემოკლებით მოიხსენიებენ, როგორც `Regex` ან `Regexp`. განსაკუთრებით აქტიურად გამოიყენება ტექსტებში გარკვეული სიტყვების მოსაძებნად ან ჩასანაცვლებლად. გარდა ამისა, მისი მეშვეობით შეგვიძლია შევამოწმოთ, აკმაყოფილებს თუ არა ესა თუ ის ტექსტი ჩვენ მიერ განსაზღვრულ ნორმებს.\\n\\n მაგალითად, ვთქვათ, მოცემული გვაქვს ფაილების სახელთა სია და გვინდა, რომ მათ შორის მოვძებნოთ მხოლოდ `pdf` გაფართოების მქონე ფაილები. სასურველ შედეგს მივაღწევთ, თუ შევადგენთ შემდეგი სახის გამოსახულებას: `^\\w+\\.pdf$`. მომდევნო ეტაპების გავლასთან ერთად აღნიშნული გამოსახულების მუშაობის პრინციპი თანდათანობით გასაგები გახდება.",
 
   "steps.basicMatchers.title": "Basic Matchers",
   "steps.basicMatchers.title": "მსგავსებათა ძიება (საბაზისო)",
@@ -208,7 +208,7 @@
   "steps.lookarounds.title": "Lookarounds",
   "steps.lookarounds.title": "მიმოხედვა",
   "steps.lookarounds.description": "If we want the phrase we're writing to come before or after another phrase, we need to \"lookaround\". Take the next step to learn how to \"lookaround\".",
-  "steps.lookarounds.description": "თუ გვინდა, რომ ფრაზა, რომელსაც ვწერთ, მოსდევდეს ანდა წინ უსწრებდეს რაიმე სხვა ფრაზას, უნდა „მიმოვიხედოთ“. გადადით შემდეგ საფეხურზე, რათა შეისწავლოთ, თუ როგორ ხდება Regex-ში „მიმოხედვა“.",
+  "steps.lookarounds.description": "თუ გვინდა, რომ ფრაზა, რომელსაც ვწერთ, მოსდევდეს ანდა წინ უსწრებდეს რაიმე სხვა ფრაზას, უნდა „მიმოვიხედოთ“. გადადით შემდეგ ეტაპზე, რათა შეისწავლოთ, თუ როგორ ხდება Regex-ში „მიმოხედვა“.",
 
   "steps.positiveLookahead.title": "Positive Lookahead: `(?=)`",
   "steps.positiveLookahead.title": "დადებითი ხედვა წინ: `(?=)`",
@@ -233,7 +233,7 @@
   "steps.flags.title": "Flags",
   "steps.flags.title": "ალმები",
   "steps.flags.description": "Flags change the output of the expression. That's why flags are also called `modifiers`. Flags determine whether the typed expression treats text as separate lines, is case sensitive, or finds all matches. Continue to the next step to learn the flags.",
-  "steps.flags.description": "ალმები ამა თუ იმ გამოსახულებისაგან მიღებულ შედეგებს ცვლიან. სწორედ ამიტომაა, რომ ალმებს `მოდიფიკატორებადაც` მოიხსენიებენ. ალმები განსაზღვრავენ, გამოსახულება ტექსტზე იმოქმედებს, როგორც ცალკე ხაზების ერთობლიობაზე თუ ერთ მთლიან ტექსტზე; არის თუ არა გამოსახულება რეგისტრის მიმართ მგრძნობიარე; პოულობს თუ არა გამოსახულება ყველა დამთხვევას. გადადით შემდეგ საფეხურზე, რათა შეისწავლოთ Regex-ში ალმების გამოყენება.",
+  "steps.flags.description": "ალმები ამა თუ იმ გამოსახულებისაგან მიღებულ შედეგებს ცვლიან. სწორედ ამიტომაა, რომ ალმებს `მოდიფიკატორებადაც` მოიხსენიებენ. ალმები განსაზღვრავენ, გამოსახულება ტექსტზე იმოქმედებს, როგორც ცალკე ხაზების ერთობლიობაზე თუ ერთ მთლიან ტექსტზე; არის თუ არა გამოსახულება რეგისტრის მიმართ მგრძნობიარე; პოულობს თუ არა გამოსახულება ყველა დამთხვევას. გადადით შემდეგ ეტაპზე, რათა შეისწავლოთ Regex-ში ალმების გამოყენება.",
 
   "steps.flagsGlobal.title": "Global Flag",
   "steps.flagsGlobal.title": "გლობალურობის აღმნიშვნელი ალამი",
