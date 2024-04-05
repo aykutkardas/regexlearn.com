@@ -10,7 +10,9 @@
   "lesson.regexForSeo.usage.description": "შეგიძლიათ Regex-ი გამოიყენოთ SEO-სთვის ისეთ პლატფორმებზე, როგორებიცაა `Google Analytics`, `Google Data Studio`, `Google Sheets`, `Google Search Console`, `Ahrefs`, `Deepcrawl`, `Screaming Frog` და სხვა. ასევე ხშირად გამოიყენება `.htaccess` და `robots.txt (regex-ის მსგავსი სინტაქსი)` ფაილებში.\\n\\nქვემოთ მოცემულია Regex-ის მარტივი ნიმუში, რომელიც შესაბამისობაში მოვა სიაში შემავალ მხოლოდ იმ ტექსტებთან, რომლებიც იწყება `Google`-ით.",
 
   "lesson.regexForSeo.basics.title": "Basics",
+  "lesson.regexForSeo.basics.title": "საწყისები",
   "lesson.regexForSeo.basics.description": "Let's take a look at some Regexes that you will use frequently. We recommend that you review the `Regex 101` tutorial to learn more about these. Type `Yes` to get started.",
+  "lesson.regexForSeo.basics.description": "მოდი, განვიხილოთ Regex-ის რამდენიმე ისეთი ნიმუში, რაც ხშირად გამოგადგებათ პრაქტიკაში. გირჩევთ, გადახედოთ `Regex 101` სახელმძღვანელოს, რათა უკეთ გაერკვეთ მათი მუშაობის პრინციპებში. ქვემოთ მოცემულ ველში შეიყვანეთ სიტყვა `Yes`, რათა საქმეზე გადავიდეთ.",
 
   "lesson.regexForSeo.or.title": "Or Operator `|`",
   "lesson.regexForSeo.or.description": "We use the Or operator `|` to filter out multiple expressions. For example, filter text containing `seo` and `regex` by writing the two words, separating them with the Or operator `|`.",
