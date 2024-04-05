@@ -1,6 +1,6 @@
 {
   "cheatsheet.section.title": "Regex-ის ზოგადი განმარტებები",
-  "cheatsheet.section.description": "შეისწავლეთ ყველა Regex-ნუმიში და სიმბოლო ზოგადი განმარტებების გამოყენებით",
+  "cheatsheet.section.description": "შეისწავლეთ ყველა Regex-ნიმუში და სიმბოლო ზოგადი განმარტებების გამოყენებით",
 
   "cheatsheet.anchors": "ძირითადი",
   "cheatsheet.caret.title": "ტექსტის ან სტრიქონის დასაწყისი",
@@ -43,7 +43,7 @@
   "cheatsheet.multilineFlag.description": "თუ არ არის გააქტიურებული, გამოსახულება სტრიქონის საწყის და საბოლოო წერტილებად აღიქვამს მთლიანი ტექსტის საწყის და საბოლოო წერტილებს. ანუ, გამოსახულება არ იმოქმედებს თითოეულ სტრიქონზე ცალ-ცალკე.",
 
   "cheatsheet.groupAndReferences": "ჯგუფები & მათზე მითითება",
-  "cheatsheet.group.title": "გჯუფი",
+  "cheatsheet.group.title": "ჯგუფი",
   "cheatsheet.group.description": "ახდენს გამოსახულების კლასიფიცირებას (დაჯგუფებას).",
   "cheatsheet.reference.title": "მითითება",
   "cheatsheet.reference.description": "მიუთითებს (იყენებს) დაჯგუფებულ გამოსახულებას.",
