@@ -1,6 +1,8 @@
 {
   "lesson.regexForSeo.starter.title": "Regex for SEO",
+  "lesson.regexForSeo.starter.title": "Regex-ი SEO-სთვის",
   "lesson.regexForSeo.starter.description": "Regex is a set of regular expressions frequently used in many fields, especially by people who want to increase their productivity. The advantages of using Regex for SEO are that it makes it easier to analyze big data and write richer filters. We recommend starting with the `Regex 101` tutorial if you are new to Regex. \\n\\nStart by typing `OK` in the Regex field to proceed to the first step and access more detailed explanations.",
+  "lesson.regexForSeo.starter.description": "Regex-ი არის რეგულარული გამოსახულებების ნაკრები, რომელიც გამოიყენება სხვადასხვა მიმართულებით, განსაკუთრებით იმ ადამიანების მიერ, რომლესაც სურთ, გაზარდონ თავიანთი პროდუქტიულობა. Regex-ის SEO-სთვის გამოყენების უპირატესობა იმაში მდგომარეობს, რომ იგი ამარტივებს მასშტაბური (დიდი) მონაცემების ანალიზს და ძლიერი ფილტრების შემუშავებას. თუ თქვენ ახალი ხართ Regex-ში, გირჩევთ, დაიწყოთ `Regex 101` სახელმძღვანელოთი. \\n\\დასაწყისისათვის, შეიყვანეთ ტექსტი `OK` ქვემოთ მოცემულ Regex-ის ველში, რათა გადახვიდეთ პირველ ეტაპზე და მიიღოთ უფრო დეტალური განმარტებები.",
 
   "lesson.regexForSeo.usage.title": "Use Cases",
   "lesson.regexForSeo.usage.description": "You can use Regex for SEO on platforms such as `Google Analytics`, `Google Data Studio`, `Google Sheets`, `Google Search Console`, `Ahrefs`, `Deepcrawl`, `Screaming Frog`. It is also frequently used in `.htaccess` and `robots.txt (regex-like syntax)` files.\\n\\nBelow is a sample regex that will select only texts in the list that start with `Google`.",
