@@ -251,7 +251,9 @@
   "steps.flagsCaseInsensitive.description": "იმისათვის, რომ ჩვენ მიერ შედგენილი გამოსახულება რეგისტრის მიმართ მგრძნობიარე არ იყოს, უნდა გავააქტიუროთ `case-insensitive` ალამი.",
 
   "steps.greedyMatching.title": "Greedy Matching",
+  "steps.greedyMatching.title": "„გაუმაძღარი“ ძიება",
   "steps.greedyMatching.description": "Regex does a greedy match by default. This means that the matchmaking will be as long as possible. Check out the example below. It refers to any match that ends in `r` and can be any character preceded by it. But it does not stop at the first letter `r`.",
+  "steps.greedyMatching.description": "Regex-ი ნაგულისხმევად ახორციელებს „გაუმაძღარ“ ძიებას. ეს ნიშნავს, რომ დამთხვევათა ძიების პროცესი მაქსიმალურად დიდხანს გასტანს. იხილეთ ქვემოთ მოცემული მაგალითი. მოცემული გამოსახულება მიემართება `r` ასოზე დამთავრებულ ტექსტს, თანაც, მნიშვნელობა არ აქვს, რა სიმბოლოები უსწრებს წინ `r`-ს. ამასთან, ძიების პროცესი არ ჩერდება ტექსტში პირველივე ნაპოვნ დამთხვევაზე (`r`-ზე).",
 
   "steps.lazyMatching.title": "Lazy Matching",
   "steps.lazyMatching.description": "Lazy matchmaking, unlike greedy matching, stops at the first matching. For example, in the example below, add a `?` after `*` to find the first match that ends with the letter `r` and is preceded by any character. It means that this match will stop at the first letter `r`.",
