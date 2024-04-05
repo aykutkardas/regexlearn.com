@@ -241,7 +241,9 @@
   "steps.flagsGlobal.description": "`global` ალამი გამოსახულებას უბრძანებს, რომ ყველა შესაძლო დამთხვევა მოძებნოს ტექსტში. თუ ამ ალამს არ გამოიყენებთ, გამოსახულება იმოქმედებს მხოლოდ პირველ დამთხვევაზე ტექსტში. ახლა კი, ქვემოთ მოცემული გამოსახულებისათვის გაააქტიურეთ `global` ალამი, რათა ტექსტიდან მოახდინოთ ყველა დამთხვევის ამოკრება.",
 
   "steps.flagsMultiline.title": "Multiline Flag",
+  "steps.flagsMultiline.title": "მრავალსტრიქონიანობის აღმნიშვნელი ალამი",
   "steps.flagsMultiline.description": "Regex sees all text as one line. But we use the `multiline` flag to handle each line separately. In this way, the expressions we write to identify patterns at the end of lines work separately for each line. Now enable the `multiline` flag to find all matches.",
+  "steps.flagsMultiline.description": "Regex-ი მთელ ტექსტს ერთ სტრიქონად აღიქვამს. მაგრამ არსებობს `multiline` ალამი, რომლის გააქტიურებითაც შეგვიძლია ცალ-ცალკე ვიმოქმედოთ თითოეულ სტრიქონზე. ამ გზით, ჩვენ მიერ შედგენილი გამოსახულებები, რომელთა გამოყენებითაც სტრიქონების ბოლოში არსებულ ფრაგმენტებზე ვახდენთ მითითებას, თითოეული სტრიქონზე ცალ-ცალკე იმოქმედებს. ახლა კი, ქვემოთ მოცემული გამოსახულებისათვის გაააქტიურეთ `multiline` ალამი, რათა ტექსტიდან ამოკრიბოთ ყველა დამთხვევა.",
 
   "steps.flagsCaseInsensitive.title": "Case-insensitive Flag",
   "steps.flagsCaseInsensitive.description": "In order to remove the case-sensitivity of the expression we have written, we must activate the `case-insensitive` flag.",
