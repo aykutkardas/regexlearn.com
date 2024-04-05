@@ -246,7 +246,9 @@
   "steps.flagsMultiline.description": "Regex-ი მთელ ტექსტს ერთ სტრიქონად აღიქვამს. მაგრამ არსებობს `multiline` ალამი, რომლის გააქტიურებითაც შეგვიძლია ცალ-ცალკე ვიმოქმედოთ თითოეულ სტრიქონზე. ამ გზით, ჩვენ მიერ შედგენილი გამოსახულებები, რომელთა გამოყენებითაც სტრიქონების ბოლოში არსებულ ფრაგმენტებზე ვახდენთ მითითებას, თითოეული სტრიქონზე ცალ-ცალკე იმოქმედებს. ახლა კი, ქვემოთ მოცემული გამოსახულებისათვის გაააქტიურეთ `multiline` ალამი, რათა ტექსტიდან ამოკრიბოთ ყველა დამთხვევა.",
 
   "steps.flagsCaseInsensitive.title": "Case-insensitive Flag",
+  "steps.flagsCaseInsensitive.title": "რეგისტრის მიმართ არამგრძნობიარეობის აღმნიშვნელი ალამი",
   "steps.flagsCaseInsensitive.description": "In order to remove the case-sensitivity of the expression we have written, we must activate the `case-insensitive` flag.",
+  "steps.flagsCaseInsensitive.description": "იმისათვის, რომ ჩვენ მიერ შედგენილი გამოსახულება რეგისტრის მიმართ მგრძნობიარე არ იყოს, უნდა გავააქტიუროთ `case-insensitive` ალამი.",
 
   "steps.greedyMatching.title": "Greedy Matching",
   "steps.greedyMatching.description": "Regex does a greedy match by default. This means that the matchmaking will be as long as possible. Check out the example below. It refers to any match that ends in `r` and can be any character preceded by it. But it does not stop at the first letter `r`.",
