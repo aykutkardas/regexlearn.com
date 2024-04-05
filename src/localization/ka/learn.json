@@ -261,5 +261,7 @@
   "steps.lazyMatching.description": "„გაუმაძღარი“ ძიებისაგან განსხვავებით, „ზანტი“ ძიება ჩერდება პირველივე ნაპოვნ დამთხვევაზე. მაგალითისათვის, ქვემოთ მოცემულ გამოსახულებაში დაამატეთ კითხვის ნიშანი `?` ვარსკვლავის `*` შემდეგ, რათა მოძებნილ იქნეს პირველი დამთხვევა, რომელსაც წინ უსწრებს ნებისმიერი სიმბოლო, და ბოლოვდება ასო `r`-ზე. მაშასადამე, ძიების პროცესი შეწყდება პირველივე ნაპოვნ დამთხვევაზე (`r`-ზე).",
 
   "steps.completeAllSteps.title": "Congratulations, you have completed all the steps!",
-  "steps.completeAllSteps.description": "You can return to the previous steps whenever you want, and you can easily navigate through all the steps you have passed."
+  "steps.completeAllSteps.title": "გილოცავთ, ყველა ეტაპი წარმატებით გაიარეთ!",
+  "steps.completeAllSteps.description": "You can return to the previous steps whenever you want, and you can easily navigate through all the steps you have passed.",
+  "steps.completeAllSteps.description": "შეგიძლიათ ნებისმიერ დროს მიუბრუნდეთ განვლილ ეტაპებს და მარტივად გადახვიდეთ ერთი ეტაპიდან მეორეზე."
 }
