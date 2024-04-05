@@ -236,7 +236,9 @@
   "steps.flags.description": "ალმები ამა თუ იმ გამოსახულებისაგან მიღებულ შედეგებს ცვლიან. სწორედ ამიტომაა, რომ ალმებს `მოდიფიკატორებადაც` მოიხსენიებენ. ალმები განსაზღვრავენ, გამოსახულება ტექსტზე იმოქმედებს, როგორც ცალკე ხაზების ერთობლიობაზე თუ ერთ მთლიან ტექსტზე; არის თუ არა გამოსახულება რეგისტრის მიმართ მგრძნობიარე; პოულობს თუ არა გამოსახულება ყველა დამთხვევას. გადადით შემდეგ საფეხურზე, რათა შეისწავლოთ Regex-ში ალმების გამოყენება.",
 
   "steps.flagsGlobal.title": "Global Flag",
+  "steps.flagsGlobal.title": "გლობალურობის აღმნიშვნელი ალამი",
   "steps.flagsGlobal.description": "The `global` flag causes the expression to select all matches. If not used it will only select the first match. Now enable the `global` flag to be able to select all matches.",
+  "steps.flagsGlobal.description": "`global` ალამი გამოსახულებას უბრძანებს, რომ ყველა შესაძლო დამთხვევა მოძებნოს ტექსტში. თუ ამ ალამს არ გამოიყენებთ, გამოსახულება იმოქმედებს მხოლოდ პირველ დამთხვევაზე ტექსტში. ახლა კი, ქვემოთ მოცემული გამოსახულებისათვის გაააქტიურეთ `global` ალამი, რათა ტექსტიდან მოახდინოთ ყველა დამთხვევის ამოკრება.",
 
   "steps.flagsMultiline.title": "Multiline Flag",
   "steps.flagsMultiline.description": "Regex sees all text as one line. But we use the `multiline` flag to handle each line separately. In this way, the expressions we write to identify patterns at the end of lines work separately for each line. Now enable the `multiline` flag to find all matches.",
