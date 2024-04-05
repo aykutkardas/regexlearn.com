@@ -213,7 +213,7 @@
   "steps.positiveLookahead.title": "Positive Lookahead: `(?=)`",
   "steps.positiveLookahead.title": "დადებითი ხედვა წინ: `(?=)`",
   "steps.positiveLookahead.description": "For example, we want to select the hour value in the text. Therefore, to select only the numerical values that have `PM` after them, we need to write the positive look-ahead expression `(?=)` after our expression. Include `PM` after the `=` sign inside the parentheses.",
-  "steps.positiveLookahead.description": "დავუშვათ გვჭირდება, რომ ტექსტიდან ამოვიღოთ საათის აღმნიშვნელი მნიშვნელობა. ესე იგი, უნდა მივწვდეთ მხოლოდ რიცხობრივ მნიშვნელობებს, რომლებსაც თან სდევს `PM`-ი. ამისათვის, ქვემოთ მოცემული გამოსახულების ბოლოში დაწერეთ დადებითი ხედვის გამოსახულება `(?=)` და ფრჩხილებს შორის, ტოლობის ნიშნის `=` შემდეგ დაამატეთ `PM`-ი.",
+  "steps.positiveLookahead.description": "დავუშვათ გვჭირდება, რომ ტექსტიდან ამოვიღოთ საათის აღმნიშვნელი მნიშვნელობა. ესე იგი, უნდა მივწვდეთ მხოლოდ რიცხვით მნიშვნელობებს, რომლებსაც თან სდევს `PM`-ი. ამისათვის, ქვემოთ მოცემული გამოსახულების ბოლოში დაწერეთ დადებითი ხედვის გამოსახულება `(?=)` და ფრჩხილებს შორის, ტოლობის ნიშნის `=` შემდეგ დაამატეთ `PM`-ი.",
 
   "steps.negativeLookahead.title": "Negative Lookahead: `(?!)`",
   "steps.negativeLookahead.description": "For example, we want to select numbers other than the hour value in the text. Therefore, we need to write the negative look-ahead `(?!)` expression after our expression to select only the numerical values that do not have `PM` after them. Include `PM` after the `!` sign inside the parentheses.",
