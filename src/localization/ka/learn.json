@@ -231,7 +231,9 @@
   "steps.negativeLookbehind.description": "ვთქვათ გვჭირდება, რომ ტექსტიდან ამოვკრიბოთ ყველა რიცხვითი მნიშვნელობა, გარდა ფასის მაჩვენებელი მნიშვნელობებისა. ამისათვის, ქვემოთ მოცემული გამოსახულების დასაწყისში დაწერეთ უარყოფითი უკან ხედვის გამოსახულება `(?&lt;!)` და ფრჩხილებს შორის, ძახილის ნიშნის `!` შემდეგ დაამატეთ სიმბოლო `\\$`.",
 
   "steps.flags.title": "Flags",
+  "steps.flags.title": "ალმები",
   "steps.flags.description": "Flags change the output of the expression. That's why flags are also called `modifiers`. Flags determine whether the typed expression treats text as separate lines, is case sensitive, or finds all matches. Continue to the next step to learn the flags.",
+  "steps.flags.description": "ალმები ამა თუ იმ გამოსახულებისაგან მიღებულ შედეგებს ცვლიან. სწორედ ამიტომაა, რომ ალმებს `მოდიფიკატორებადაც` მოიხსენიებენ. ალმები განსაზღვრავენ, გამოსახულება ტექსტზე იმოქმედებს, როგორც ცალკე ხაზების ერთობლიობაზე თუ ერთ მთლიან ტექსტზე; არის თუ არა გამოსახულება რეგისტრის მიმართ მგრძნობიარე; პოულობს თუ არა გამოსახულება ყველა შესაძლო დამთხვევას. გადადით შემდეგ საფეხურზე, რათა შეისწავლოთ Regex-ში ალმების გამოყენება.",
 
   "steps.flagsGlobal.title": "Global Flag",
   "steps.flagsGlobal.description": "The `global` flag causes the expression to select all matches. If not used it will only select the first match. Now enable the `global` flag to be able to select all matches.",
