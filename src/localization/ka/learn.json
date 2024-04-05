@@ -226,7 +226,9 @@
   "steps.positiveLookbehind.description": "დავუშვათ გვინდა, რომ ტექსტიდან ამოვიღოთ ფასის მნიშვნელობა. ესე იგი, უნდა მივწვდეთ მხოლოდ რიცხვით მნიშვნელობებს, რომლებსაც წინ უსწრებს სიმბოლო `$`. ამისათვის, ქვემოთ მოცემული გამოსახულების დასაწყისში დაწერეთ დადებითი უკან ხედვის გამოსახულება `(?<=)` და ფრჩხილებს შორის, ტოლობის ნიშნის `=` შემდეგ დაამატეთ სიმბოლო `\\$`.",
 
   "steps.negativeLookbehind.title": "Negative Lookbehind: `(?&lt;!)`",
+  "steps.negativeLookbehind.title": "უარყოფითი ხედვა უკან: `(?&lt;!)`",
   "steps.negativeLookbehind.description": "For example, we want to select numbers in the text other than the price value. Therefore, to select only numeric values that are not preceded by `$`, we need to write the negative lookbehind `(?&lt;!)` before our expression. Add `\\$` after the `!` inside the parenthesis.",
+  "steps.negativeLookbehind.description": "ვთქვათ გვჭირდება, რომ ტექსტიდან ამოვკრიბოთ ყველა რიცხვითი მნიშვნელობა, გარდა ფასის მაჩვენებელი მნიშვნელობებისა. ამისათვის, ქვემოთ მოცემული გამოსახულების დასაწყისში დაწერეთ უარყოფითი უკან ხედვის გამოსახულება `(?&lt;!)` და ფრჩხილებს შორის, ძახილის ნიშნის `!` შემდეგ დაამატეთ სიმბოლო `\\$`.",
 
   "steps.flags.title": "Flags",
   "steps.flags.description": "Flags change the output of the expression. That's why flags are also called `modifiers`. Flags determine whether the typed expression treats text as separate lines, is case sensitive, or finds all matches. Continue to the next step to learn the flags.",
