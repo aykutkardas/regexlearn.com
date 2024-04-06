@@ -55,7 +55,9 @@
   "lesson.regexForSeo.limitation.description": "შესაძლოა დაგჭირდეთ შედეგების ფილტრაცია მათში შემავალ სიმბოლოთა კონკრეტული რაოდენობის მიხედვით. მაგალითად, იმისათვის, რომ URL-ების სიიდან ამოკრიბოთ `35` სიმბოლოსაგან შემდგარი URL-ები, Regex-ის ველში, `.`-ის შემდეგ, ფიგურულ ფრჩხილებს `{}` შორის ჩაწერეთ სასურველი რიცხვი (ამ შემთხვევაში, `35`).",
 
   "lesson.regexForSeo.maxLimitation.title": "Length Restrictions (Maximum) `{n,m}`",
+  "lesson.regexForSeo.maxLimitation.title": "სიგრძის შეზღუდვა (მაქსიმუმი) `{n,m}`",
   "lesson.regexForSeo.maxLimitation.description": "To filter URLs with a maximum length of `35` characters, type `{1,35}` the minimum and maximum number values we will use for the length, using curly braces at the end of the period `.`.",
+  "lesson.regexForSeo.maxLimitation.description": "იმისათვის, რომ URL-ების სიიდან ამოკრიბოთ ისეთი URL-ები, რომლებიც მაქსიმუმ `35` სიმბოლოსაგან შედგება, Regex-ის ველში, `.`-ის შემდეგ, ფიგურულ ფრჩხილებს შორის ჩაწერეთ სასურველი რიცხვები (მინიმუმი და მაქსიმუმი, ამ შემთხვევაში, `{1,35}`).",
 
   "lesson.regexForSeo.minLimitation.title": "Length Restrictions (Minumum) `{n,}`",
   "lesson.regexForSeo.minLimitation.description": "To filter URLs with a minimum length of `35` characters, type `{35,}` using curly braces at the end of the period and ending with a comma for the minimum number value we will use for the length.",
