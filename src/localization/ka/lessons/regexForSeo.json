@@ -65,7 +65,9 @@
   "lesson.regexForSeo.minLimitation.description": "იმისათვის, რომ URL-ების სიიდან ამოკრიბოთ ისეთი URL-ები, რომლებიც მინიმუმ `35` სიმბოლოსაგან შედგება, Regex-ის ველში, `.`-ის შემდეგ, ფიგურულ ფრჩხილებს შორის ჩაწერეთ სასურველი რიცხვი (მინიმუმი) ბოლოში მძიმით (ამ შემთხვევაში, `{35,}`).",
 
   "lesson.regexForSeo.robots.title": "robots.txt (regex-like syntax)",
+  "lesson.regexForSeo.robots.title": "robots.txt (regex-ის მაგვარი სინტაქსი)",
   "lesson.regexForSeo.robots.description": "Here is an example of regex-like usage in the `robots.txt` file. The example states that bots should not crawl links with the extension `pdf`.",
+  "lesson.regexForSeo.robots.description": "ქვემოთ მოცემულია `robots.txt` ფაილში Regex-ის მაგვარი სინტაქსის გამოყენების მაგალითი. აღნიშნულ მაგალითში განსაზღვრულია, რომ ბოტებმა არ უნდა მოახდინონ `pdf` გაფართოების მქონე ბმულების ინსპექტირება.",
 
   "lesson.regexForSeo.htaccess.title": ".htaccess",
   "lesson.regexForSeo.htaccess.description": "Here is an example of using regex in the `.htaccess` file. In the example, `php` extension links are directed to `html` extensions with `301` code.",
