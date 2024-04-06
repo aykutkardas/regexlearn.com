@@ -15,7 +15,9 @@
   "lesson.regexForSeo.basics.description": "მოდი, განვიხილოთ Regex-ის რამდენიმე ისეთი ნიმუში, რაც ხშირად გამოგადგებათ პრაქტიკაში. გირჩევთ, გადახედოთ `Regex 101` სახელმძღვანელოს, რათა უკეთ გაერკვეთ მათი მუშაობის პრინციპებში. ქვემოთ მოცემულ ველში შეიყვანეთ სიტყვა `Yes`, რათა საქმეზე გადავიდეთ.",
 
   "lesson.regexForSeo.or.title": "Or Operator `|`",
+  "lesson.regexForSeo.or.title": "„ან“ ოპერატორი `|`",
   "lesson.regexForSeo.or.description": "We use the Or operator `|` to filter out multiple expressions. For example, filter text containing `seo` and `regex` by writing the two words, separating them with the Or operator `|`.",
+  "lesson.regexForSeo.or.description": "„ან“ ოპერატორს `|` ვიყენებთ რამდენიმე ალტერნატიული ქვეგამოსახულების განსაზღვრის მიზნით. მაგალითისათვის, დაწერეთ რეგულარული გამოსახულება, რომელიც ქვემოთ მოცემული ტექსტიდან ამოკრებს სიტყვებს `seo` და `regex`. ამისათვის, Regex-ის ველში შეიყვანეთ აღნიშნული სიტყვები და ერთმანეთისგან გამოყავით „ან“ ოპრატორით `|`.",
 
   "lesson.regexForSeo.optional.title": "Optional Operator `?`",
   "lesson.regexForSeo.optional.description": "We use it to express that an expression or character is optional. For example, we want to filter text containing both `http` and `https`. We can use the Or operator `|` for this operation, but there is a better way for these two almost identical words.\\n\\nIn this example, the letter `s` is optional. Instead, add a question mark `?` to the end of the letter `s`.",
