@@ -71,6 +71,7 @@
 
   "lesson.regexForSeo.htaccess.title": ".htaccess",
   "lesson.regexForSeo.htaccess.description": "Here is an example of using regex in the `.htaccess` file. In the example, `php` extension links are directed to `html` extensions with `301` code.",
+  "lesson.regexForSeo.htaccess.description": "ქვემოთ მოცემულია Regex-ის გამოყენების მაგალითი `.htaccess` ფაილში. აღნიშნულ მაგალითში განსაზღვრულია, რომ `php` გაფართოების მქონე ყოველი ბმული უნდა გადამისამართდეს იმავე, ოღონდ `html` გაფართოების მქონე ბმულზე კონკრეტული სტატუსის კოდით (`301`).",
 
   "lesson.regexForSeo.outro.title": "Outro",
   "lesson.regexForSeo.outro.description": "Regex knowledge is a skill that increases productivity on any platform that allows you to use regex. Once you start using it and improve this skill, it will help you complete many repetitive tasks faster and save time for other things. To better understand the basics of Regex, you can visit the `Regex 101` tutorial. You can use the `Playground` page to test your expressions on your texts."
