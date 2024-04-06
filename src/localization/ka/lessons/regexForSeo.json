@@ -50,7 +50,9 @@
   "lesson.regexForSeo.dollarAndEscape.description": "ისევ და ისევ, მოცემული გვაქვს URL-ების სია. ამჯერად გვსურს, რომ ამოვკრიბოთ მხოლოდ ისეთი URL-ები, რომლებიც სრულდება `.htm`-ით.\\n\\nვინაიდან წერტილი არის სპეციალური სიმბოლო, რომელიც შესაბამისობაში მოდის ყველაფერთან, უპირველეს ყოვლისა, წერტილის წინ უნდა დავამატოთ უკან გადახრილი წილადის ხაზი `\\`, რათა წერტილი `.` აღქმულ იქნეს, როგორც ჩვეულებრივი სიმბოლო. ეს მუშაობს ნებისმიერ სპეციალურ სიმბოლოზე (მაგ.: `*`, `+`, `?` და სხვ.).\\n\\nშემდგომ ამისა, გამოსახულების ბოლოში უნდა დავამატოთ დოლარის ნიშანი `$`. ამით აღვნიშნავთ, რომ ჩაწერილი გამოსახულება უნდა შეესაბამებოდეს ტექსტის დასასრულს (ესე იგი, ტექსტი უნდა ბოლოვდებოდეს `.htm`-ით).",
 
   "lesson.regexForSeo.limitation.title": "Length Restrictions `{n}`",
+  "lesson.regexForSeo.limitation.title": "სიგრძის შეზღუდვა `{n}`",
   "lesson.regexForSeo.limitation.description": "We may want to filter the results by character lengths. For example, to filter URLs that are `35` characters long, type the number you want to use for the length, `{35}`, using curly braces at the end of the period `.`.",
+  "lesson.regexForSeo.limitation.description": "შესაძლოა დაგჭირდეთ შედეგების ფილტრაცია მათში შემავალ სიმბოლოთა კონკრეტული რაოდენობის მიხედვით. მაგალითად, იმისათვის, რომ URL-ების სიიდან ამოკრიბოთ `35` სიმბოლოსაგან შემდგარი URL-ები, Regex-ის ველში, `.`-ის შემდეგ, ფიგურულ ფრჩხილებს `{}` შორის ჩაწერეთ სასურველი რიცხვი (ამ შემთხვევაში, `35`).",
 
   "lesson.regexForSeo.maxLimitation.title": "Length Restrictions (Maximum) `{n,m}`",
   "lesson.regexForSeo.maxLimitation.description": "To filter URLs with a maximum length of `35` characters, type `{1,35}` the minimum and maximum number values we will use for the length, using curly braces at the end of the period `.`.",
