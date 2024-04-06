@@ -35,7 +35,9 @@
   "lesson.regexForSeo.contains.description": "იმისათვის, რომ ტექსტი გავფილტროთ ამა თუ იმ სიტყვის ან ფრაზის შემცველობის მიხედვით, სასურველი სიტყვა ან ფრაზა უნდა მოვაქციოთ ორ `.*`-ს შორის (`.*` არის გამოსახულება, რომელიც ნებისმიერ სიმბოლსთან მოდის შესაბამისობაში). მაგალითისათვის, Regex-ის ველში შეიყვანეთ `.*buy.*`, რათა ტექსტიდან ამოკრიბოთ ყველა ის სტრიქონი, რომელიც შეიცავს სიტყვას `buy`.",
 
   "lesson.regexForSeo.negated.title": "Negated Character Sets `[^abc]`",
+  "lesson.regexForSeo.negated.title": "უარყოფილ სიმბოლოთა ნაკრები `[^abc]`",
   "lesson.regexForSeo.negated.description": "We use the negated character sets `[^]` to denote characters we don't want to be included. The characters we do not want to be included are written in square brackets with a caret at the beginning. Below are both `http` and `https`. Since `http` occurs in both, it will also choose `https`. Type `[^s]` after the letter `p` to exclude the letter `s`.",
+  "lesson.regexForSeo.negated.description": "უარყოფილ სიმბოლოთა ნაკრებებს `[^]` ვიყენებთ იმ სიმბოლოების აღნიშვნისთვის, რომლებიც გვინდა, რომ უარვყოთ. ასეთი სიმბოლოები უნდა ჩავწეროთ კვადრატულ ფრჩხილებს შორის და თავსართის სახით დავურთოთ ახარისხების ნიშანი `^`. ქვემოთ მოცემულ ტექსტში გვაქვს როგორც `http`-ით, ისე `https`-ით დაწყებული სტრიქონები. რადგან `http` ფრაგმენტი ორივეგან გვხვდება, გამოსახულება შესაბამისობაში მოვა `https`-ით დაწყებულ სტრიქონებთანაც. ეს რომ ასე არ მოხდეს, Regex-ის ველში, ასო `p`-ს შემდეგ დაამატეთ `[^s]`, რათა მოხდეს ასო `s`-ის გამორიცხვა. შედეგად, გამოსახულება შესაბამისობაში მოვა მხოლოდ `http`-ით დაწყებულ სტრიქონებთან.",
 
   "lesson.regexForSeo.caret.title": "Caret Sign `^`",
   "lesson.regexForSeo.caret.description": "Let's say we have a list of URLs, and we want to find only those URLs that start with `http`. But URLs also contain `http` in different parts other than their beginning. So add a caret `^` to the beginning of the following expression to filter out only those starting with `http`.",
