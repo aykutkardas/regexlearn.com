@@ -1,80 +1,49 @@
 {
-  "lesson.regexForSeo.starter.title": "Regex for SEO",
-  "lesson.regexForSeo.starter.title": "Regex-ი SEO-სთვის",
-  "lesson.regexForSeo.starter.description": "Regex is a set of regular expressions frequently used in many fields, especially by people who want to increase their productivity. The advantages of using Regex for SEO are that it makes it easier to analyze big data and write richer filters. We recommend starting with the `Regex 101` tutorial if you are new to Regex. \\n\\nStart by typing `OK` in the Regex field to proceed to the first step and access more detailed explanations.",
+  "lesson.regexForSeo.starter.title": "რეგულარული გამოსახულებები SEO-სთვის",
   "lesson.regexForSeo.starter.description": "Regex-ი არის რეგულარული გამოსახულებების ნაკრები, რომელიც გამოიყენება სხვადასხვა მიმართულებით, განსაკუთრებით იმ ადამიანების მიერ, ვისაც საკუთარი პროდუქტიულობის გაზრდა სურს. რეგულარული გამოსახულებების SEO-სთვის გამოყენების უპირატესობა იმაში მდგომარეობს, რომ იგი ამარტივებს დიდი (მასშტაბური) მონაცემების ანალიზს და ძლიერი ფილტრების შემუშავების პროცესს. თუკი Regex-ი თქვენთვის ახალია, გირჩევთ სწავლა დაიწყოთ `Regex 101` სახელმძღვანელოთი. \\n\\nდასაწყისისათვის, ქვემოთ მოცემულ Regex-ის ველში შეიყვანეთ ტექსტი `OK`, რათა გადახვიდეთ პირველ ეტაპზე და უფრო დეტალური განმარტებები მიიღოთ.",
 
-  "lesson.regexForSeo.usage.title": "Use Cases",
   "lesson.regexForSeo.usage.title": "გამოყენების მაგალითები",
-  "lesson.regexForSeo.usage.description": "You can use Regex for SEO on platforms such as `Google Analytics`, `Google Data Studio`, `Google Sheets`, `Google Search Console`, `Ahrefs`, `Deepcrawl`, `Screaming Frog`. It is also frequently used in `.htaccess` and `robots.txt (regex-like syntax)` files.\\n\\nBelow is a sample regex that will select only texts in the list that start with `Google`.",
   "lesson.regexForSeo.usage.description": "რეგულარული გამოსახულებების SEO-სთვის გამოყენება შეგიძლიათ ისეთ პლატფორმებზე, როგორებიცაა `Google Analytics`, `Google Data Studio`, `Google Sheets`, `Google Search Console`, `Ahrefs`, `Deepcrawl`, `Screaming Frog` და სხვა. ასევე, ხშირად გამოიყენება `.htaccess` და `robots.txt (regex-ის მაგვარი სინტაქსი)` ფაილებში.\\n\\nქვემოთ მოცემულია Regex-ის მარტივი ნიმუში, რომელიც შესაბამისობაში მოვა ჩამონათვალში შემავალ მხოლოდ იმ ტექსტებთან, რომლებიც იწყება `Google`-ით.",
 
-  "lesson.regexForSeo.basics.title": "Basics",
   "lesson.regexForSeo.basics.title": "საწყისები",
-  "lesson.regexForSeo.basics.description": "Let's take a look at some Regexes that you will use frequently. We recommend that you review the `Regex 101` tutorial to learn more about these. Type `Yes` to get started.",
   "lesson.regexForSeo.basics.description": "მოდი, განვიხილოთ Regex-ის რამდენიმე ისეთი ნიმუში, რაც ხშირად გამოგადგებათ პრაქტიკაში. გირჩევთ გადახედოთ `Regex 101` სახელმძღვანელოს, რათა უკეთ გაერკვეთ მაგალითებში მოყვანილი გამოსახულებების მუშაობის პრინციპებში. ქვემოთ მოცემულ ველში შეიყვანეთ სიტყვა `Yes` და გადავიდეთ საქმეზე.",
 
-  "lesson.regexForSeo.or.title": "Or Operator `|`",
   "lesson.regexForSeo.or.title": "„ან“ ოპერატორი `|`",
-  "lesson.regexForSeo.or.description": "We use the Or operator `|` to filter out multiple expressions. For example, filter text containing `seo` and `regex` by writing the two words, separating them with the Or operator `|`.",
   "lesson.regexForSeo.or.description": "„ან“ ოპერატორს `|` ვიყენებთ რამდენიმე ალტერნატიული ქვეგამოსახულების განსაზღვრის მიზნით. მაგალითისათვის, დაწერეთ რეგულარული გამოსახულება, რომელიც ქვემოთ მოცემული ტექსტიდან ამოკრებს სიტყვებს `seo` და `regex`. ამისათვის, Regex-ის ველში შეიყვანეთ აღნიშნული სიტყვები და ერთმანეთისაგან გამოყავით „ან“ ოპრატორით `|`.",
 
-  "lesson.regexForSeo.optional.title": "Optional Operator `?`",
   "lesson.regexForSeo.optional.title": "პირობითობის აღმნიშვნელი ოპერატორი `?`",
-  "lesson.regexForSeo.optional.description": "We use it to express that an expression or character is optional. For example, we want to filter text containing both `http` and `https`. We can use the Or operator `|` for this operation, but there is a better way for these two almost identical words.\\n\\nIn this example, the letter `s` is optional. Instead, add a question mark `?` to the end of the letter `s`.",
   "lesson.regexForSeo.optional.description": "ამ ოპერატორს ვიყენებთ იმის აღსანიშნავად, რომ ესა თუ ის სიმბოლო ან გამოსახულება არასავალდებულოა. ვთქვათ გვჭირდება ტექსტის გაფილტვრა ისე, რომ ამოვკრიბოთ `http` და `https` სიტყვები. რა თქმა უნდა, შეგვიძლია ამ მიზნით „ან“ ოპერატორის `|` გამოყენება, მაგრამ აღნიშნულ შემთხვევაში, როცა სიტყვები თითქმის იდენტურია, არსებობს უკეთესი გზაც.\\n\\nმოცემულ მაგალითში, ასო `s` არის პირობითი (არასავალდებულო). Regex-ის ველში, ასო `s`-ის შემდეგ დაამატეთ კითხვის ნიშანი `?`.",
 
-  "lesson.regexForSeo.any.title": "Anything `.*`",
   "lesson.regexForSeo.any.title": "ნებისმიერი სიმბოლო `.*`",
-  "lesson.regexForSeo.any.description": "In regex, the period `.` can match anything, including spaces. But this match is only for a single character where it is used. The asterisk character `*` means that the preceding item does not exist at all or occurs more than once in the text. When the two are used together, it means that there can be an element of unlimited length where used.\\n\\nBelow are various keywords. Add `.*` to the end of the regex to write the expression that starts with `how to write` and matches everything after it.",
   "lesson.regexForSeo.any.description": "Regex-ში წერტილი `.` შესაბამისობაში მოდის ყველა სიმბოლოსთან ინტერვალის ჩათვლით. მაგრამ ეს შესაბამისობა ვრცელდება მხოლოდ ერთ სიმბოლოზე (და არა მთლიან ტექსტზე). ვარსკვლავის სიმბოლო `*` აღნიშნავს, რომ მის წინ მდებარე გამოსახულების დამთხვევა ტექსტში შეიძლება საერთოდ არ მოხდეს, ან ბევრჯერ მოხდეს. როდესაც ნახსენები ორი სიმბოლო (`.` და `*`) ერთად გამოიყენება, ეს იმას ნიშნავს, რომ `.`-ის შესაბამისობა გავრცელდება მთლიან ტექსტზე (და არა მხოლოდ ერთ სიმბოლოზე).\\n\\nქვემოთ, Regex-ის ველში, მოცემულია რამდენიმე საკვანძო სიტყვა. იმავე ველში, ინტერვალის შემდეგ დაამატეთ წერტილი და ვარსკვლავი `.*`, რათა შეადგინოთ გამოსახულება, რომელიც შესაბამისობაში მოვა ყველა ისეთ სტრიქონთან, რომელიც იწყება `how to write`-ით და არ აქვს მნიშვნელობა, როგორ გრძელდება.",
 
-  "lesson.regexForSeo.contains.title": "Contains",
   "lesson.regexForSeo.contains.title": "შეიცავს",
-  "lesson.regexForSeo.contains.description": "To filter the text that contains the words or phrases we're looking for, we write the word we're looking for between our two phrases `.*` that match everything. For example, type `.*buy.*` to filter out what includes `buy`.",
   "lesson.regexForSeo.contains.description": "იმისათვის, რომ ტექსტი გავფილტროთ ამა თუ იმ სიტყვის ან ფრაზის შემცველობის მიხედვით, სასურველი სიტყვა ან ფრაზა უნდა მოვაქციოთ ორ `.*`-ს შორის (`.*` არის გამოსახულება, რომელიც ნებისმიერ სიმბოლსთან მოდის შესაბამისობაში). მაგალითისათვის, Regex-ის ველში შეიყვანეთ `.*buy.*`, რათა ტექსტიდან ამოკრიბოთ ყველა ის სტრიქონი, რომელიც შეიცავს სიტყვას `buy`.",
 
-  "lesson.regexForSeo.negated.title": "Negated Character Sets `[^abc]`",
   "lesson.regexForSeo.negated.title": "უარყოფილ სიმბოლოთა ნაკრები `[^abc]`",
-  "lesson.regexForSeo.negated.description": "We use the negated character sets `[^]` to denote characters we don't want to be included. The characters we do not want to be included are written in square brackets with a caret at the beginning. Below are both `http` and `https`. Since `http` occurs in both, it will also choose `https`. Type `[^s]` after the letter `p` to exclude the letter `s`.",
   "lesson.regexForSeo.negated.description": "უარყოფილ სიმბოლოთა ნაკრებებს `[^]` ვიყენებთ იმ სიმბოლოების აღნიშვნისთვის, რომლებიც გვინდა, რომ უარვყოთ. ასეთი სიმბოლოები უნდა ჩავწეროთ კვადრატულ ფრჩხილებს შორის და თავსართის სახით დავურთოთ ახარისხების ნიშანი `^`. ქვემოთ მოცემულ ტექსტში გვაქვს როგორც `http`-ით, ისე `https`-ით დაწყებული სტრიქონები. რადგან `http` ფრაგმენტი ორივეგან გვხვდება, გამოსახულება შესაბამისობაში მოვა `https`-ით დაწყებულ სტრიქონებთანაც. ეს რომ ასე არ მოხდეს, Regex-ის ველში, ასო `p`-ს შემდეგ დაამატეთ `[^s]`, რათა მოხდეს ასო `s`-ის გამორიცხვა. შედეგად, გამოსახულება შესაბამისობაში მოვა მხოლოდ `http`-ით დაწყებულ სტრიქონებთან.",
 
-  "lesson.regexForSeo.caret.title": "Caret Sign `^`",
   "lesson.regexForSeo.caret.title": "ახარისხების ნიშანი `^`",
-  "lesson.regexForSeo.caret.description": "Let's say we have a list of URLs, and we want to find only those URLs that start with `http`. But URLs also contain `http` in different parts other than their beginning. So add a caret `^` to the beginning of the following expression to filter out only those starting with `http`.",
   "lesson.regexForSeo.caret.description": "ვთქვათ გვაქვს URL-ების ჩამონათვალი და გვინდა, რომ ამოვკრიბოთ მხოლოდ ისეთი URL-ები, რომლებიც იწყება `http`-ით. მაგრამ `http` ფრაგმენტი URL-ის დასაწყისის გარდა, სხვა ადგილებშიც შეიძლება გვხდებოდეს (მაგალითად, შუაში ან ბოლოში). იმისათვის, რომ მხოლოდ ისეთი URL-ები ამოვკრიბოთ, რომლებიც იწყება `http`-ით, Regex-ის ველის დასაწყისში დაამატეთ ახარისხების ნიშანი `^`.",
 
-  "lesson.regexForSeo.dollarAndEscape.title": "Dollar Sign `$` and Escape Character `\\`",
   "lesson.regexForSeo.dollarAndEscape.title": "დოლარის ნიშანი `$` და უკან გადახრილი წილადის ხაზი `\\`",
-  "lesson.regexForSeo.dollarAndEscape.description": "Again we have a list of URLs. We want to find only those URLs ending in `.htm`.\\n\\nSince the period `.` is a special character that matches everything, we first need to disable the period before `htm` using the escape character `\\`. This applies to all special characters.\\n\\nThen add a `$` sign to the end of the expression. This ensures that the text to be filtered ends with the expression written before it.",
   "lesson.regexForSeo.dollarAndEscape.description": "ისევ და ისევ, მოცემული გვაქვს URL-ების ჩამონათვალი. ამჯერად გვსურს, რომ ამოვკრიბოთ მხოლოდ ისეთი URL-ები, რომლებიც სრულდება `.htm`-ით.\\n\\nვინაიდან წერტილი არის სპეციალური სიმბოლო, რომელიც შესაბამისობაში მოდის ყველანაირ სიმბოლოსთან, უპირველეს ყოვლისა, წერტილის წინ უნდა დავამატოთ უკან გადახრილი წილადის ხაზი `\\`, რათა წერტილი `.` აღქმულ იქნეს, როგორც ჩვეულებრივი სიმბოლო. ეს „ხრიკი“ ვრცელდება ნებისმიერ სპეციალურ სიმბოლოზე (მაგ.: `*`, `+`, `?` და სხვ.).\\n\\nშემდგომ ამისა, გამოსახულების ბოლოში უნდა დავამატოთ დოლარის ნიშანი `$`. ამით აღვნიშნავთ, რომ ჩაწერილი გამოსახულება უნდა შეესაბამებოდეს ტექსტის დასასრულს (ესე იგი, ტექსტი უნდა ბოლოვდებოდეს `.htm`-ით).",
 
-  "lesson.regexForSeo.limitation.title": "Length Restrictions `{n}`",
   "lesson.regexForSeo.limitation.title": "სიგრძის შეზღუდვა `{n}`",
-  "lesson.regexForSeo.limitation.description": "We may want to filter the results by character lengths. For example, to filter URLs that are `35` characters long, type the number you want to use for the length, `{35}`, using curly braces at the end of the period `.`.",
   "lesson.regexForSeo.limitation.description": "შესაძლოა დაგჭირდეთ შედეგების ფილტრაცია მათში შემავალ სიმბოლოთა კონკრეტული რაოდენობის მიხედვით. მაგალითად, იმისათვის, რომ URL-ების ჩამონათვალიდან ამოკრიბოთ `35` სიმბოლოსაგან შემდგარი URL-ები, Regex-ის ველში, `.`-ის შემდეგ, ფიგურულ ფრჩხილებს `{}` შორის ჩაწერეთ სასურველი რიცხვი (ამ შემთხვევაში, `35`).",
 
-  "lesson.regexForSeo.maxLimitation.title": "Length Restrictions (Maximum) `{n,m}`",
   "lesson.regexForSeo.maxLimitation.title": "სიგრძის შეზღუდვა (მაქსიმუმი) `{n,m}`",
-  "lesson.regexForSeo.maxLimitation.description": "To filter URLs with a maximum length of `35` characters, type `{1,35}` the minimum and maximum number values we will use for the length, using curly braces at the end of the period `.`.",
   "lesson.regexForSeo.maxLimitation.description": "იმისათვის, რომ URL-ების ჩამონათვალიდან ამოკრიბოთ ისეთი URL-ები, რომლებიც მაქსიმუმ `35` სიმბოლოსაგან შედგება, Regex-ის ველში, `.`-ის შემდეგ, ფიგურულ ფრჩხილებს `{}` შორის ჩაწერეთ სასურველი რიცხვები (მინიმუმი და მაქსიმუმი, ამ შემთხვევაში, `{1,35}`).",
 
-  "lesson.regexForSeo.minLimitation.title": "Length Restrictions (Minumum) `{n,}`",
   "lesson.regexForSeo.minLimitation.title": "სიგრძის შეზღუდვა (მინიმუმი) `{n,}`",
-  "lesson.regexForSeo.minLimitation.description": "To filter URLs with a minimum length of `35` characters, type `{35,}` using curly braces at the end of the period and ending with a comma for the minimum number value we will use for the length.",
   "lesson.regexForSeo.minLimitation.description": "იმისათვის, რომ URL-ების ჩამონათვალიდან ამოკრიბოთ ისეთი URL-ები, რომლებიც მინიმუმ `35` სიმბოლოსაგან შედგება, Regex-ის ველში, `.`-ის შემდეგ, ფიგურულ ფრჩხილებს `{}` შორის ჩაწერეთ სასურველი რიცხვი (მინიმუმი) ბოლოში მძიმით (ამ შემთხვევაში, `{35,}`).",
 
-  "lesson.regexForSeo.robots.title": "robots.txt (regex-like syntax)",
   "lesson.regexForSeo.robots.title": "robots.txt (regex-ის მაგვარი სინტაქსი)",
-  "lesson.regexForSeo.robots.description": "Here is an example of regex-like usage in the `robots.txt` file. The example states that bots should not crawl links with the extension `pdf`.",
   "lesson.regexForSeo.robots.description": "ქვემოთ მოცემულია `robots.txt` ფაილში Regex-ის მაგვარი სინტაქსის გამოყენების მაგალითი. აღნიშნულ მაგალითში განსაზღვრულია, რომ ბოტებმა არ უნდა მოახდინონ `pdf` გაფართოების მქონე ბმულების ინსპექტირება.",
 
   "lesson.regexForSeo.htaccess.title": ".htaccess",
-  "lesson.regexForSeo.htaccess.description": "Here is an example of using regex in the `.htaccess` file. In the example, `php` extension links are directed to `html` extensions with `301` code.",
   "lesson.regexForSeo.htaccess.description": "ქვემოთ მოცემულია Regex-ის გამოყენების მაგალითი `.htaccess` ფაილში. აღნიშნულ მაგალითში განსაზღვრულია, რომ `php` გაფართოების მქონე ყოველი ბმული უნდა გადამისამართდეს იმავე, ოღონდ `html` გაფართოების მქონე ბმულზე კონკრეტული სტატუსის კოდით (`301`).",
 
-  "lesson.regexForSeo.outro.title": "Outro",
   "lesson.regexForSeo.outro.title": "შეჯამება",
-  "lesson.regexForSeo.outro.description": "Regex knowledge is a skill that increases productivity on any platform that allows you to use regex. Once you start using it and improve this skill, it will help you complete many repetitive tasks faster and save time for other things. To better understand the basics of Regex, you can visit the `Regex 101` tutorial. You can use the `Playground` page to test your expressions on your texts.",
   "lesson.regexForSeo.outro.description": "Regex-ის ცოდნა არის უნარი, რომელიც ზრდის პროდუქტიულობას ნებისმიერ პლატფორმაზე მუშაობისას, სადაც კი შესაძლებელია მისი გამოყენება. როგორც კი დაიწყებთ მის გამოყენებას და განივითარებთ აღნიშნულ უნარს, გაგიმარტივდებათ მრავალი რუტინული დავალების სწრაფად და ეფექტურად შესრულება, რაც დაგიზოგავთ დროს და ენერგიას. იმისათვის, რომ უკეთ გაიაზროთ Regex-ის ფუნდამენტური საკითხები, ეწვიეთ `Regex 101` სახელმძღვანელოს. ასევე შეგიძლიათ გამოიყენოთ `სავარჯიშო სივრცე` თქვენ მიერ შემუშავებული გამოსახულებების ტესტირებისათვის."
 }
