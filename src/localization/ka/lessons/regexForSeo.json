@@ -7,7 +7,7 @@
   "lesson.regexForSeo.usage.title": "Use Cases",
   "lesson.regexForSeo.usage.title": "გამოყენების მაგალითები",
   "lesson.regexForSeo.usage.description": "You can use Regex for SEO on platforms such as `Google Analytics`, `Google Data Studio`, `Google Sheets`, `Google Search Console`, `Ahrefs`, `Deepcrawl`, `Screaming Frog`. It is also frequently used in `.htaccess` and `robots.txt (regex-like syntax)` files.\\n\\nBelow is a sample regex that will select only texts in the list that start with `Google`.",
-  "lesson.regexForSeo.usage.description": "შეგიძლიათ Regex-ი გამოიყენოთ SEO-სთვის ისეთ პლატფორმებზე, როგორებიცაა `Google Analytics`, `Google Data Studio`, `Google Sheets`, `Google Search Console`, `Ahrefs`, `Deepcrawl`, `Screaming Frog` და სხვა. ასევე ხშირად გამოიყენება `.htaccess` და `robots.txt (regex-ის მსგავსი სინტაქსი)` ფაილებში.\\n\\nქვემოთ მოცემულია Regex-ის მარტივი ნიმუში, რომელიც შესაბამისობაში მოვა სიაში შემავალ მხოლოდ იმ ტექსტებთან, რომლებიც იწყება `Google`-ით.",
+  "lesson.regexForSeo.usage.description": "შეგიძლიათ Regex-ი გამოიყენოთ SEO-სთვის ისეთ პლატფორმებზე, როგორებიცაა `Google Analytics`, `Google Data Studio`, `Google Sheets`, `Google Search Console`, `Ahrefs`, `Deepcrawl`, `Screaming Frog` და სხვა. ასევე ხშირად გამოიყენება `.htaccess` და `robots.txt (regex-ის მაგვარი სინტაქსი)` ფაილებში.\\n\\nქვემოთ მოცემულია Regex-ის მარტივი ნიმუში, რომელიც შესაბამისობაში მოვა სიაში შემავალ მხოლოდ იმ ტექსტებთან, რომლებიც იწყება `Google`-ით.",
 
   "lesson.regexForSeo.basics.title": "Basics",
   "lesson.regexForSeo.basics.title": "საწყისები",
