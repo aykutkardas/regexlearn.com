@@ -60,7 +60,9 @@
   "lesson.regexForSeo.maxLimitation.description": "იმისათვის, რომ URL-ების სიიდან ამოკრიბოთ ისეთი URL-ები, რომლებიც მაქსიმუმ `35` სიმბოლოსაგან შედგება, Regex-ის ველში, `.`-ის შემდეგ, ფიგურულ ფრჩხილებს შორის ჩაწერეთ სასურველი რიცხვები (მინიმუმი და მაქსიმუმი, ამ შემთხვევაში, `{1,35}`).",
 
   "lesson.regexForSeo.minLimitation.title": "Length Restrictions (Minumum) `{n,}`",
+  "lesson.regexForSeo.minLimitation.title": "სიგრძის შეზღუდვა (მინიმუმი) `{n,}`",
   "lesson.regexForSeo.minLimitation.description": "To filter URLs with a minimum length of `35` characters, type `{35,}` using curly braces at the end of the period and ending with a comma for the minimum number value we will use for the length.",
+  "lesson.regexForSeo.minLimitation.description": "იმისათვის, რომ URL-ების სიიდან ამოკრიბოთ ისეთი URL-ები, რომლებიც მინიმუმ `35` სიმბოლოსაგან შედგება, Regex-ის ველში, `.`-ის შემდეგ, ფიგურულ ფრჩხილებს შორის ჩაწერეთ სასურველი რიცხვი (მინიმუმი) ბოლოში მძიმით (ამ შემთხვევაში, `{35,}`).",
 
   "lesson.regexForSeo.robots.title": "robots.txt (regex-like syntax)",
   "lesson.regexForSeo.robots.description": "Here is an example of regex-like usage in the `robots.txt` file. The example states that bots should not crawl links with the extension `pdf`.",
