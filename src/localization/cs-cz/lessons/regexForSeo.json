@@ -1,0 +1,49 @@
+{
+  "lesson.regexForSeo.starter.title": "Regex pro SEO",
+  "lesson.regexForSeo.starter.description": "Regex je sada pravidelných výrazů často používaných v mnoha oblastech, zejména lidmi, kteří chtějí zvýšit svou produktivitu. Výhody používání regexu pro SEO spočívají v tom, že usnadňuje analýzu velkých dat a umožňuje psát bohatší filtry. Doporučujeme začít s tutoriálem `Regex 101`, pokud jste začátečníci. \\n\\nZačněte tím, že napíšete `OK` do pole regexu a přejděte na první krok, kde získáte podrobnější vysvětlení.",
+
+  "lesson.regexForSeo.usage.title": "Příklady použití",
+  "lesson.regexForSeo.usage.description": "Regex pro SEO můžete použít na platformách jako `Google Analytics`, `Google Data Studio`, `Google Sheets`, `Google Search Console`, `Ahrefs`, `Deepcrawl`, `Screaming Frog`. Často se také používá v souborech `.htaccess` a `robots.txt (syntaxe podobné regexu)`.\\n\\nNíže je příklad regexu, který vybere pouze texty v seznamu začínající slovem `Google`.",
+
+  "lesson.regexForSeo.basics.title": "Základy",
+  "lesson.regexForSeo.basics.description": "Podívejme se na pár regexů, které budete často používat. Doporučujeme si přečíst tutoriál `Regex 101`, abyste se dozvěděli více o těchto základech. Napište `Yes`, abyste začali.",
+
+  "lesson.regexForSeo.or.title": "Operátor `|` (Nebo)",
+  "lesson.regexForSeo.or.description": "Operátor `|` (nebo) používáme, abychom filtrovali více výrazů. Například pro filtrování textu obsahujícího `seo` a `regex` napište obě slova oddělená operátorem `|` (nebo).",
+
+  "lesson.regexForSeo.optional.title": "Volitelný operátor `?`",
+  "lesson.regexForSeo.optional.description": "Používáme ho k vyjádření toho, že výraz nebo znak je volitelný. Například chceme filtrovat text obsahující jak `http`, tak `https`. Můžeme k tomu použít operátor `|` (nebo), ale existuje i lepší způsob pro tyto dva téměř identické výrazy.\\n\\nV tomto příkladu je písmeno `s` volitelné. Přidejte na konec písmene `s` otazník `?`.",
+
+  "lesson.regexForSeo.any.title": "Vše `.*`",
+  "lesson.regexForSeo.any.description": "V regexu může tečka `.` odpovídat čemukoli, včetně mezer. Ale tento zápis platí pouze pro jedno písmeno. Znak hvězdičky `*` znamená, že předcházející položka v textu buď vůbec neexistuje, nebo se vyskytuje více než jednou. Když jsou tyto dva znaky použity společně, znamená to, že může být prvek libovolné délky.\\n\\nNíže jsou různá klíčová slova. Přidejte `.*` na konec regexu, abyste vybrali výraz začínající slovy `how to write` a vše za ním.",
+
+  "lesson.regexForSeo.contains.title": "Obsahuje",
+  "lesson.regexForSeo.contains.description": "Abyste filtrovali text obsahující slova nebo fráze, které hledáme, napište slovo, které hledáme, mezi dvě fráze `.*`, které mohou být cokoli. Například napište `.*buy.*`, abyste filtrovali text obsahující slovo `buy`.",
+
+  "lesson.regexForSeo.negated.title": "Negované znakové sady `[^abc]`",
+  "lesson.regexForSeo.negated.description": "Používáme negované znakové sady `[^]` k označení znaků, které nechceme zahrnovat. Znaky, které nechceme zahrnovat, jsou napsány v hranatých závorkách se stříškou `^` na začátku. Níže jsou označeny `http` i `https`. Protože `http` se vyskytuje v obou, tudíž vybere také `https`. Napište `[^s]` za písmeno `p`, abyste vyloučili písmeno `s`.",
+
+  "lesson.regexForSeo.caret.title": "Znak stříšky `^`",
+  "lesson.regexForSeo.caret.description": "Předpokládejme, že máme seznam URL adres a chceme najít pouze ty, které začínají slovem `http`. Ale adresy obsahují `http` také v jiných částech, než na začátku. Přidejte stříšku `^` na začátek následujícího výrazu, abyste filtrovali pouze ty, které začínají slovem `http`.",
+
+  "lesson.regexForSeo.dollarAndEscape.title": "Znak dolaru `$` a zpětné lomítko `\\`",
+  "lesson.regexForSeo.dollarAndEscape.description": "Opět máme seznam URL adres. Chceme najít pouze ty, které končí `.htm`.\\n\\nProtože tečka `.` je speciální znak, který označí vše, nejprve musíme 'zakázat' speciální tečku před `htm` pomocí zpětného lomítka `\\`. Toto platí pro všechny speciální znaky.\\n\\nPoté přidejte znak dolaru `$` na konec výrazu. Tím se zajistí, že text, který se má filtrovat, končí výrazem napsaným před ním.",
+
+  "lesson.regexForSeo.limitation.title": "Omezení délky `{n}`",
+  "lesson.regexForSeo.limitation.description": "Můžeme chtít filtrovat výsledky podle délky znaků. Například k filtrování URL adres o délce `35` znaků napište číslo, které chcete použít pro délku, `{35}`, do složených závorek za tečku `.`.",
+
+  "lesson.regexForSeo.maxLimitation.title": "Omezení délky (Maximální) `{n,m}`",
+  "lesson.regexForSeo.maxLimitation.description": "K filtrování URL adres s maximální délkou `35` znaků napište `{1,35}`, minimální a maximální číselné hodnoty, které chcete použít pro délku, do složených závorek za tečku `.`.",
+
+  "lesson.regexForSeo.minLimitation.title": "Omezení délky (Minimální) `{n,}`",
+  "lesson.regexForSeo.minLimitation.description": "K filtrování URL adres s minimální délkou `35` znaků napište `{35,}`, za tečku napište složené závorky končící čárkou pro minimální číselnou hodnotu, kterou chcete použít pro délku.",
+
+  "lesson.regexForSeo.robots.title": "robots.txt (syntaxe podobná regexu)",
+  "lesson.regexForSeo.robots.description": "Zde je příklad použití syntaxe podobné regexu v souboru `robots.txt`. Příklad uvádí, že roboti by neměli procházet odkazy s příponou `pdf`.",
+
+  "lesson.regexForSeo.htaccess.title": ".htaccess",
+  "lesson.regexForSeo.htaccess.description": "Zde je příklad použití regexu v souboru `.htaccess`. V příkladu jsou odkazy s příponou `php` přesměrovány na odkazy s příponou `html` s kódem `301`.",
+
+  "lesson.regexForSeo.outro.title": "Závěr",
+  "lesson.regexForSeo.outro.description": "Znalost regexu je dovednost, která zvyšuje produktivitu na jakékoli platformě umožňující používání regexu. Jakmile začnete používat tuto dovednost a zdokonalíte ji, pomůže vám rychle dokončovat mnoho opakujících se úkolů a ušetřit čas na jiné věci. Pro lepší porozumění základům regexu můžete zkusit tutoriál `Regex 101`. Na stránce `Playground` můžete testovat své regex výrazy na svých textech."
+}

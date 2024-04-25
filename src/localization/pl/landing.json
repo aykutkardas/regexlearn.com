@@ -1,0 +1,26 @@
+{
+  "landing.title": "Naucz się wyrażeń regularnych krok po kroku, od zera do bohatera.",
+  "landing.description": "Nauka wyrażeń regularnych jest łatwiejsza, niż myślisz. Możesz używać tego narzędzia do łatwego `uczenia się`, `ćwiczeń`, `testowania` i `udostępniania` wyrażeń regularnych.",
+  "landing.imageAltText": "Ilustracja zrelaksowanego mężczyzny z położonymi nogami na stole.",
+
+  "section.learn.title": "Ucz się",
+  "section.learn.content": "`Wyrażenia regularne`, skrótowo zapisywane jako Regex lub Regexp, to ciąg znaków tworzony według zasad składni wyrażeń regularnych. Wyrażenia regularne używają poleceń takich jak wyszukiwanie, dopasowanie i edycja, przez co możesz je wykorzystać do łatwego zarządzania danymi. Regexy mogą być używane w językach programowania, np. Python, SQL, JavaScript, R, w narzędziach Google Analytics, Google Data Studio oraz w całym procesie programowania. Na stronie RegexLearn nauczysz się wyrażeń regularnych za pomocą przykładów i samouczków.",
+  "section.learn.imageAltText": "Ilustracja góry z flagą na szczycie.",
+
+  "section.cheatsheet.button": "Sprawdź teraz",
+  "section.cheatsheet.title": "Ściągawka",
+  "section.cheatsheet.content": "Dzięki `Ściągawce RegexLearn` możesz szybko sprawdzić na jednej stronie wszystkie niezbędne elementy wyrażeń regularnych. Sprawdź wszystkie wzorce i symbole wyrażeń regularnych za pomocą tej ściągawki.",
+  "section.cheatsheet.imageAltText": "Ilustracja mężczyzny przeglądającego strony przez lornetkę",
+
+  "section.playground.title": "Piaskownica",
+  "section.playground.content": "Jeśli chcesz stworzyć wyrażenie regularne, to możesz je łatwo skonstruować i przetestować za pomocą Piaskownicy. Jako tester wyrażeń regularnych możesz je zweryfikować i udostępnić innym osobom swoje do dalszej współpracy.",
+  "section.playground.imageAltText": "Ilustracja kota, który prawie strąca pełny kubek.",
+
+  "section.practice.title": "Ćwicz",
+  "section.practice.content": "Jeśli zakończyłeś część związaną z nauką, to przyszedł czas na ĆWICZENIA! W tej sekcji możesz sprawdzić swoją wiedzę o wyrażeniach regularnych i dalej ją szlifować za pomocą samouczków dostosowanych do Twojego poziomu. Już wkrótce.",
+  "section.practice.imageAltText": "Ilustracja kobiety robiącej notatki z książki.",
+
+  "section.opensource.title": "Otwarty kod",
+  "section.opensource.content": "RegexLearn to darmowy projekt otwartoźródłowy, w którym zaangażowanie społeczności w jego dalszy rozwój jest bardzo mile widziane. Praca nad tym projektem pozwala doskonalić umiejętności, uczyć się i współpracować. Możesz wesprzeć projekt tutaj.",
+  "section.opensource.imageAltText": "Ilustracja kobiety, mężczyzny i kota układających kawałki układanki."
+}

@@ -10,6 +10,7 @@ interface HighlightedTextProps {
   search?: RegExp;
   children?: React.ReactNode;
   text: string;
+  onClick?: () => void;
   attrs?: { [key: string]: string };
 }
 

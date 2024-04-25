@@ -2,7 +2,7 @@
   "examples.starter.title": "Pratiquer",
   "examples.starter.description": "Maintenant il est temps de pratiquer pour consolider ce que vous avez appris.",
 
-  "examples.finish.title": "Pratique terminée!",
+  "examples.finish.title": "Pratique terminée !",
   "examples.finish.description": " ",
 
   "steps.starter.title": "Introduction",
@@ -23,7 +23,7 @@
   "steps.negatedCharacterSet.title": "Jeux de caractères négatifs `[^abc]`",
   "steps.negatedCharacterSet.description": "Pour trouver tous les mots du texte ci-dessous, à l'exception de `ber` et `bor`, tapez `e` et `o` successivement après le signe d'insertion `^` entre crochets `[]`.",
 
-  "steps.range.title": "Plage de lettres  `[a-z]`",
+  "steps.range.title": "Plage de lettres `[a-z]`",
   "steps.range.description": "Pour trouver les lettres dans l'intervalle spécifié, la lettre de départ et la lettre d'arrivée sont écrites entre crochets `[]` avec un tiret entre les deux `-`. Cette expression est sensible à la casse. Tapez l'expression qui sélectionnera toutes les lettres minuscules entre `e` et `o`, y compris elles-mêmes.",
 
   "steps.rangeNumber.title": "Plage de nombres `[0-9]`",
@@ -32,10 +32,10 @@
   "examples.basicMatchers.title": "Pratique : Correspondance de base",
   "examples.basicMatchers.description": "Ecrivez l'expression qui sélectionnera les mots `of` dans le texte.",
 
-  "examples.dotCharacter.title": "Pratique: Tous les caractères",
+  "examples.dotCharacter.title": "Pratique : Tous les caractères",
   "examples.dotCharacter.description": "Tapez l'expression pour sélectionner des lettres, des chiffres, des espaces et des caractères spéciaux dans le texte. L'expression que vous tapez doit correspondre à n'importe quel caractère.",
 
-  "examples.characterSet.title": "Practique: Jeux de caractères",
+  "examples.characterSet.title": "Pratique : Jeux de caractères",
   "examples.characterSet.description": "Écrivez la phrase qui correspond à chaque mot du texte. Les seuls caractères qui changent sont les initiales des mots.",
 
   "examples.negatedCharacterSet.title": "Pratique : Jeux de caractères négatifs",
@@ -44,7 +44,7 @@
   "examples.range.title": "Pratique : Plage de lettres",
   "examples.range.description": "Écrivez l'expression qui sélectionnera les lettres de `g` à `k` dans le texte. \\n Les lettres `g` et `k` doivent également être incluses dans cette plage.",
 
-  "examples.rangeNumber.title": "Practique: Plage de nombre",
+  "examples.rangeNumber.title": "Pratique : Plage de nombre",
   "examples.rangeNumber.description": "Tapez une expression pour sélectionner les nombres de `2` à `7` dans le texte.\\n Les chiffres 2 et 7 devraient également être inclus dans cette fourchette.",
 
   "steps.repetitions.title": "Répétitions",
@@ -68,22 +68,22 @@
   "steps.quantifierRange.title": "Accolades - 3",
   "steps.quantifierRange.description": "Pour exprimer l'occurrence d'un caractère dans une certaine plage de nombres, on écrit entre accolades `{x,y}` l'intervalle que l'on veut aller jusqu'au bout. Par exemple, indiquez que la lettre suivante `e` ne peut apparaître qu'entre `1` et `3`.",
 
-  "examples.asterisk.title": "Pratique: Astérisque `*`",
+  "examples.asterisk.title": "Pratique : Astérisque `*`",
   "examples.asterisk.description": "Utilisez l'astérisque `*` pour écrire l'expression qui sélectionnera chaque mot, en tenant compte de l'absence de la lettre `e` dans le texte et de la présence de plusieurs mots.",
 
-  "examples.plusCharacter.title": "Practice: Signe Plus `+`",
+  "examples.plusCharacter.title": "Pratique : Signe Plus `+`",
   "examples.plusCharacter.description": "Écrivez l'expression en utilisant le signe plus `+` pour sélectionner les mots dans lesquels la lettre `e` apparaît une ou plusieurs fois dans le texte.",
 
-  "examples.questionMark.title": "Practique: Point d'interrogation `?`",
+  "examples.questionMark.title": "Pratique : Point d'interrogation `?`",
   "examples.questionMark.description": "Écrivez l'expression indiquant que la lettre `n` est facultative dans le texte, en utilisant le point d'interrogation `?`. Ainsi, les deux mots `a` et `an` peuvent être sélectionnés.",
 
-  "examples.quantifier.title": "Practique: Accolades - 1",
+  "examples.quantifier.title": "Pratique : Accolades - 1",
   "examples.quantifier.description": "Écrivez l'expression utilisant les accolades `{}` qui trouvera les textes contenant les chiffres `4` chiffres successifs. Pour rappel, la plage `[0-9]` correspondra à un seul chiffre.",
 
-  "examples.quantifierMin.title": "Practique: Accolades - 2",
+  "examples.quantifierMin.title": "Pratique : Accolades - 2",
   "examples.quantifierMin.description": "Écrivez l'expression utilisant les accolades `{}` qui trouvera les textes contenant au moins `2` chiffres successifs.",
 
-  "examples.quantifierRange.title": "Practique: Accolades - 3",
+  "examples.quantifierRange.title": "Pratique : Accolades - 3",
   "examples.quantifierRange.description": "Écrivez l'expression utilisant les accolades `{}` qui trouvera les textes contenant au moins `1` et au plus `4` chiffres successifs.",
 
   "steps.grouping.title": "Parenthèses `( )`: Grouper",
@@ -120,24 +120,24 @@
   "steps.withoutNumberCharacter.description": "`\\D` est utilisé pour trouver uniquement les caractères numériques.",
 
   "steps.spaceCharacter.title": "Caractère d'espace `\\s`",
-  "steps.spaceCharacter.description": "`\\s` is used to find only space characters.",
+  "steps.spaceCharacter.description": "`\\S` est utilisé pour trouver uniquement les caractères d'espace.",
 
   "steps.withoutSpaceCharacter.title": "Sauf le caractère espace `\\S`",
-  "steps.withoutSpaceCharacter.description": "`\\S` est utilisé pour trouver uniquement les caractères d'espace.",
+  "steps.withoutSpaceCharacter.description": "`\\S` est utilisé pour trouver des caractères qui ne sont pas d'espaces.",
 
   "steps.lookarounds.title": "Regard autour",
   "steps.lookarounds.description": "Si nous voulons que la phrase que nous écrivons soit placée avant ou après une autre phrase, nous devons utiliser la fonction \"contourner\". Passez à l'étape suivante pour apprendre à \"contourner\".",
 
-  "steps.positiveLookahead.title": "Regard avant Positif: `(?=)`",
+  "steps.positiveLookahead.title": "Regard avant Positif : `(?=)`",
   "steps.positiveLookahead.description": "Par exemple, nous voulons sélectionner la valeur de l'heure dans le texte. Par conséquent, pour ne sélectionner que les valeurs numériques qui ont `PM` après elles, nous devons écrire l'expression positive look-ahead `(?=)` après notre expression. Incluez `PM` après le signe `=` à l'intérieur des parenthèses.",
 
-  "steps.negativeLookahead.title": "Regard avant Négatif: `(?!)`",
+  "steps.negativeLookahead.title": "Regard avant Négatif : `(?!)`",
   "steps.negativeLookahead.description": "Par exemple, nous voulons sélectionner des chiffres autres que la valeur de l'heure dans le texte. Par conséquent, nous devons écrire l'expression négative `( ?!)` après notre expression pour sélectionner uniquement les valeurs numériques qui n'ont pas `PM` après elles. Inclure `PM` après le signe `!` à l'intérieur des parenthèses",
 
-  "steps.positiveLookbehind.title": "Regard derrière positif: `(?<=)`",
+  "steps.positiveLookbehind.title": "Regard derrière Positif : `(?<=)`",
   "steps.positiveLookbehind.description": "Par exemple, nous voulons sélectionner la valeur du prix dans le texte. Par conséquent, pour sélectionner uniquement les valeurs numériques précédées de `$`, nous devons écrire l'expression positive lookbehind `(?<=)` avant notre expression. Ajoutez `\\$` après le signe `=` à l'intérieur des parenthèses.",
 
-  "steps.negativeLookbehind.title": "Regard derrière négatif: `(?&lt;!)`",
+  "steps.negativeLookbehind.title": "Regard derrière Négatif : `(?&lt;!)`",
   "steps.negativeLookbehind.description": "Par exemple, nous voulons sélectionner des chiffres dans le texte autres que la valeur du prix. Par conséquent, pour sélectionner uniquement les valeurs numériques qui ne sont pas précédées de `$`, nous devons écrire le lookbehind négatif `(?&lt; !)` avant notre expression. Ajoutez `\\$` après le `!` à l'intérieur des parenthèses.",
 
   "steps.flags.title": "Drapeaux",

@@ -1,0 +1,164 @@
+{
+  "examples.starter.title": "Ćwiczenia",
+  "examples.starter.description": "Nadszedł czas na wykonanie kilku ćwiczeń, aby utrwalić to, czego się nauczyliśmy.",
+
+  "examples.finish.title": "Koniec ćwiczeń!",
+  "examples.finish.description": " ",
+
+  "steps.starter.title": "Wstęp",
+  "steps.starter.description": "Regex to skrót od `Regular Expression` (wyrażenie regularne). Pomaga dopasować, znaleźć lub zarządzać tekstem. Aby przejść do kolejnej sekcji i by uzyskać bardziej szczegółowy opis, wpisz `OK` w polu Regex.",
+
+  "steps.whatIsRegex.title": "Czym jest wyrażenie regularne `Regex`?",
+  "steps.whatIsRegex.description": "Wyrażenia regularne to ciągi znaków, które określają wzorzec wyszukiwania. Ich skrótowym określeniem jest `Regex` lub `Regexp`. W szczególności wykorzystuje się je do wyszukiwania lub zamiany słów w tekstach. Ponadto, dzięki nim możemy sprawdzić, czy tekst spełnia określone przez nas zasady.\\n\\n Na przykład, przyjmijmy, że masz listę nazw plików i chcesz znaleźć tylko pliki o rozszerzeniu `pdf`. Wpisując wyrażenie `^\\w+\\.pdf$` osiągniesz zamierzony efekt. Znaczenie poszczególnych elementów tego wyrażenia regularnego stanie się dla Ciebie bardziej jasne wraz z kolejnymi sekcjami tego samouczka.",
+
+  "steps.basicMatchers.title": "Podstawowe dopasowania",
+  "steps.basicMatchers.description": "Znak lub słowo, które chcemy znaleźć, wpisujemy wprost. Jest to podobne do normalnego procesu wyszukiwania. Na przykład, aby znaleźć w tekście słowo `curious`, wpisz je tak samo.",
+
+  "steps.dotCharacter.title": "Kropka `.`: dowolny znak",
+  "steps.dotCharacter.description": "Kropka `.` umożliwia wybranie dowolnego znaku, w tym znaków specjalnych i spacji. Aby kontynuować, wpisz kropkę `.` w polu Regex.",
+
+  "steps.characterSet.title": "Zbiór znaków `[abc]`",
+  "steps.characterSet.description": "Jeśli w danym wyrazie jeden ze znaków może być różnymi znakami, zapisujemy to stosując nawiasy kwadratowe `[]`, a w nim wszystkie alternatywy znaków. Na przykład, aby napisać wyrażenie, które może znaleźć wszystkie słowa w poniższym tekście, wpisz wewnątrz nawiasów kwadratowych `[]` kolejno litery `a`, `e`, `i`, `o`, `u`.",
+
+  "steps.negatedCharacterSet.title": "Negacja zbioru znaków `[^abc]`",
+  "steps.negatedCharacterSet.description": "Aby znaleźć wszystkie słowa w poniższym tekście, z wyjątkiem `ber` i `bor`, wewnątrz nawiasów kwadratowych `[]` po znaku `^` wpisz kolejno litery `e` i `o`.",
+
+  "steps.range.title": "Zakres liter `[a-z]`",
+  "steps.range.description": "Aby znaleźć litery w określonym zakresie, w nawiasach kwadratowych `[]` podaje się literę początkową i końcową oddzielone myślnikiem `-`. Wielkość liter ma znaczenie. Wpisz wyrażenie, które dopasuje wszystkie małe litery między `e` i `o`, włączając w to te litery.",
+
+  "steps.rangeNumber.title": "Zakres cyfry `[0-9]`",
+  "steps.rangeNumber.description": "Aby znaleźć cyfry w określonym zakresie, w nawiasach kwadratowych `[]` podaje się początkową i końcową cyfrę oddzielone myślnikiem `-`. Wpisz wyrażenie, które dopasuje wszystkie cyfry między `3` i `6`, włączając w to te cyfry.",
+
+  "examples.basicMatchers.title": "Ćwiczenie: podstawowe dopasowanie",
+  "examples.basicMatchers.description": "Napisz wyrażenie, które dopasuje w tekście słowo `of`.",
+
+  "examples.dotCharacter.title": "Ćwiczenie: dowolny znak",
+  "examples.dotCharacter.description": "Napisz wyrażenie, tak aby dopasować w tekście pojedyncze litery, cyfry, spacje i znaki specjalne. Wyrażenie, które wpiszesz, musi pasować do dowolnego znaku.",
+
+  "examples.characterSet.title": "Ćwiczenie: zbiór znaków",
+  "examples.characterSet.description": "Napisz wyrażenie, które dopasuje każde słowo w tekście. Jedne co się zmienia w poniższych słowach to początkowe litery.",
+
+  "examples.negatedCharacterSet.title": "Ćwiczenie: negacja zbioru znaków",
+  "examples.negatedCharacterSet.description": "Napisz wyrażenie, które w poniższym tekście będzie pasować do wszystkiego, oprócz słów `beor` i `beur`. Użyj negacji zbioru znaków.",
+
+  "examples.range.title": "Ćwiczenie: zakres liter",
+  "examples.range.description": "Napisz wyrażenie, które w poniższym tekście będzie dopasowywać litery od `g` do `k`.\\n\\nLitery `g` i `k` powinny również być uwzględnione w tym dopasowaniu.",
+
+  "examples.rangeNumber.title": "Ćwiczenie: zakres cyfr",
+  "examples.rangeNumber.description": "Napisz wyrażenie, które w poniższym tekście będzie dopasowywać cyfry od `2` do `7`.\\n\\nCyfry `2` i `7` powinny również być uwzględnione w tym dopasowaniu.",
+
+  "steps.repetitions.title": "Powtórzenia",
+  "steps.repetitions.description": "Niektóre specjalne znaki służą do określenia ile razy dany znak może powtórzyć się w tekście. Te specjalne znaki to plus `+`, gwiazdka `*` i znak zapytania `?`.",
+
+  "steps.asterisk.title": "Gwiazdka `*`",
+  "steps.asterisk.description": "Aby wskazać, że dany znak może się nie pojawić wcale lub może się pojawić wiele razy, umieszczamy po nim gwiazdkę `*`. Na przykład, możemy wskazać, że litera `e` nie powinna występować w tekście, może wystąpić raz lub więcej razy obok siebie.",
+
+  "steps.plusCharacter.title": "Plus `+`",
+  "steps.plusCharacter.description": "Aby wskazać, że dany znak może wystąpić jeden lub więcej razy, umieszczamy po nim znak plusa `+`. Na przykład, możemy wskazać, że litera `e` może wystąpić w tekście jeden lub więcej razy obok siebie.",
+
+  "steps.questionMark.title": "Znak zapytania `?`",
+  "steps.questionMark.description": "Aby wskazać, że dany znak jest opcjonalny, umieszczamy po nim znak zapytania `?`. Na przykład, możemy wskazać, że następna litera `u` jest opcjonalna.",
+
+  "steps.quantifier.title": "Nawiasy klamrowe - 1",
+  "steps.quantifier.description": "Aby określić liczbę wystąpień po sobie danego znaku, umieszczamy po nim nawiasy klamrowe `{n}` razem z liczbą określającą, ile razy ma się pojawić. Na przykład, możemy wskazać, że następna litera `e` może wystąpić obok siebie dokładnie `2` razy.",
+
+  "steps.quantifierMin.title": "Nawiasy klamrowe - 2",
+  "steps.quantifierMin.description": "Aby określić minimalną liczbę wystąpień po sobie danego znaku, wskazujemy przynajmniej ile razy ma się on pojawić, następnie przecinek `,` i umieszczamy to w nawiasach klamrowych `{n, }`. Na przykład, możemy wskazać, że litera `e` może wystąpić obok siebie przynajmniej `3` razy.",
+
+  "steps.quantifierRange.title": "Nawiasy klamrowe - 3",
+  "steps.quantifierRange.description": "Aby określić liczbę wystąpień znaku po sobie danego znaku w określonym zakresie, stosujemy nawiasy klamrowe `{x,y}` z podanym zakresem powtórzeń, który nas interesuje. Na przykład, możemy wskazać, że litera `e` może wystąpić po sobie tylko od `1` do `3` razy.",
+
+  "examples.asterisk.title": "Ćwiczenie: gwiazdka `*`",
+  "examples.asterisk.description": "Użyj gwiazdki `*` do napisania wyrażenia, które dopasuje w poniższym tekście każde słowo, w którym nie ma litery `e` lub występuje w nim co najmniej raz.",
+
+  "examples.plusCharacter.title": "Ćwiczenie: plus `+`",
+  "examples.plusCharacter.description": "Napisz wyrażenie używając znaku plus `+`, tak aby dopasować słowa, w których litera `e` występuje co najmniej raz.",
+
+  "examples.questionMark.title": "Ćwiczenie: znak zapytania `?`",
+  "examples.questionMark.description": "Napisz wyrażenie używając znaku zapytania `?`, tak aby wskazać, że litera `n` jest opcjonalna. Dzięki temu zarówno `a`, jak i `an` mogą być dopasowane.",
+
+  "examples.quantifier.title": "Ćwiczenie: nawiasy klamrowe - 1",
+  "examples.quantifier.description": "Napisz wyrażenie używając nawiasów klamrowych `{}`, które dopasuje napisy zawierające 4 cyfry obok siebie. Pamiętaj, że zakres `[0-9]` dopasowuje pojedynczą cyfrę.",
+
+  "examples.quantifierMin.title": "Ćwiczenie: nawiasy klamrowe - 2",
+  "examples.quantifierMin.description": "Napisz wyrażenie używając nawiasów klamrowych `{}`, które znajdzie napisy zawierające co najmniej `2` cyfry obok siebie.",
+
+  "examples.quantifierRange.title": "Ćwiczenie: nawiasy klamrowe - 3",
+  "examples.quantifierRange.description": "Napisz wyrażenie używając nawiasów klamrowych `{}`, które znajdzie napisy zawierające co najmniej `1` i co najwyżej `4` cyfry obok siebie.",
+
+  "steps.grouping.title": "Nawiasy okrągłe `( )`: grupowanie",
+  "steps.grouping.description": "Możemy grupować wyrażenia i używać tych grup do odwoływania się do nich lub do narzucania pewnych reguł. Aby zgrupować wyrażenie, umieszczamy je w nawiasach okrągłych `()`. W poniższym przypadku po prostu zgrupuj `haa`.",
+
+  "steps.groupReference.title": "Referencja do grupy",
+  "steps.groupReference.description": "Poniżej znajdują się zgrupowane wyrazy `ha` i `haa`. Pierwszą grupę można użyć, pisząc `\\1`, tak aby uniknąć powtarzania. W tym przypadku `1` oznacza kolejność zgrupowania. Wpisz na końcu wyrażenia `\\2`, tak aby odwołać się do drugiej grupy.",
+
+  "steps.nonCapturingGrouping.title": "Nawiasy okrągłe `(?: )`: grupowanie bez referencji",
+  "steps.nonCapturingGrouping.description": "Możesz zgrupować dane wyrażenie i zapewnić, że nie będzie możliwe odwołanie do niego przez referencję. Na przykład, poniżej znajdują się dwie grupy. Jednak odwołanie do pierwszej grupy, które oznaczamy jako `\\1`, faktycznie odnosi się do drugiej grupy, ponieważ pierwsza grupa jest grupą bez referencji.",
+
+  "steps.pipeCharacter.title": "Kreska pionowa `|`",
+  "steps.pipeCharacter.description": "Istnieje znak, który pozwala określić, że wyrażenie może znajdować się w różnych wariantach. Wszystkie możliwe wyrażenia są oddzielone znakiem pionowej kreski `|` - jest to znak alternatywy. W odróżnieniu do zbioru znaków `[abc]`, który działa na poziomie znaków, alternatywy działają na poziomie wyrażeń. Na przykład, poniższe wyrażenie dopasuje zarówno `cat`, jak i `rat`. Dodaj na końcu wyrażenia kolejny znak pionowej kreski `|` i wpisz `dog`, tak aby dopasować wszystkie słowa.",
+
+  "steps.escapeCharacter.title": "Znak ucieczki `\\`",
+  "steps.escapeCharacter.description": "Istnieją specjalne znaki, których używamy podczas pisania wyrażeń regularnych. Są to: `{ } [ ] / \\ + * . $ ^ | ?`. Aby dopasować w tekście któryś z tych znaków, musimy użyć przed nim znaku ucieczki (modyfikacji) `\\`. Na przykład, aby dopasować w tekście znaki kropki `.` i gwiazdki `*`, dodajmy przed nimi znak ucieczki `\\`.",
+
+  "steps.caret.title": "Daszek `^`:\\nDopasowanie od początku linii",
+  "steps.caret.description": "Dotychczas używaliśmy `[0-9]` do znajdowania cyfr. Aby znaleźć cyfry znajdujące się tylko na początku linii, poprzedź poniższe wyrażenie znakiem `^`.",
+
+  "steps.dollar.title": "Dolar `$`:\\nDopasowanie od końca linii",
+  "steps.dollar.description": "Dodajmy znak `$` po wartości `html`, tak aby znaleźć tylko wyrazy `html` znajdujące się na końcu linii.",
+
+  "steps.wordCharacter.title": "Znak słowa `\\w`: litera, cyfra lub podkreślnik",
+  "steps.wordCharacter.description": "Wyrażenie `\\w` służy do wyszukiwania liter, cyfr i znaków podkreślenia. Użyjmy wyrażenia `\\w`, tak aby znaleźć w tekście znaki należące do słów.",
+
+  "steps.withoutWordCharacter.title": "Znak niesłowa `\\W`",
+  "steps.withoutWordCharacter.description": "Wyrażenie `\\W` służy do wyszukiwania znaków innych niż litery, cyfry i znak podkreślenia.",
+
+  "steps.numberCharacter.title": "Cyfra `\\d`",
+  "steps.numberCharacter.description": "Wyrażenie `\\d` służy do wyszukiwania cyfr.",
+
+  "steps.withoutNumberCharacter.title": "Niecyfra `\\D`",
+  "steps.withoutNumberCharacter.description": "Wyrażenie `\\D` służy do wyszukiwania znaków innych niż cyfry.",
+
+  "steps.spaceCharacter.title": "Biały znak `\\s`",
+  "steps.spaceCharacter.description": "Wyrażenie `\\s` służy do wyszukiwania tzw. białych znaków, np. spacji, tabulacji i znaków nowej linii.",
+
+  "steps.withoutSpaceCharacter.title": "Niebiały znak `\\S`",
+  "steps.withoutSpaceCharacter.description": "Wyrażenie `\\S` służy do wyszukiwania niebiałych znaków.",
+
+  "steps.lookarounds.title": "Przewidywanie",
+  "steps.lookarounds.description": "Jeśli chcemy aby wyszukiwany przez nas tekst występował przed lub po innym tekście, musimy skorzystać z mechanizmu \"przewidywania\". W kolejnych sekcjach zobaczymy jak z niej korzystać.",
+
+  "steps.positiveLookahead.title": "Przewidywanie pozytywne w przód: `(?=)`",
+  "steps.positiveLookahead.description": "Na przykład, w poniższym tekście chcemy dopasować wartość liczbową związaną z godziną. Aby dopasować wyłącznie wartości numeryczne, po których występuje ciąg znaków `PM`, po naszym docelowym wyrażeniu musimy podać wyrażenie korzystające z przewidywania pozytywnego w przód `(?=)`. Wewnątrz nawiasów okrągłych po znaku `=` wpisz `PM`.",
+
+  "steps.negativeLookahead.title": "Przewidywanie negatywne w przód: `(?!)`",
+  "steps.negativeLookahead.description": "W kolejnym przykładzie chcemy dopasować wartość liczbową niezwiązaną z godziną. Aby dopasować wyłącznie wartości numeryczne, po których nie występuje ciąg znaków `PM`, po naszym docelowym wyrażeniu musimy podać wyrażenie korzystające z przewidywania negatywnego w przód `(?!)`. Wewnątrz nawiasów okrągłych po znaku `!` wpisz `PM`.",
+
+  "steps.positiveLookbehind.title": "Przewidywanie pozytywne wstecz: `(?<=)`",
+  "steps.positiveLookbehind.description": "W poniższym tekście chcemy dopasować wartość liczbową związaną z ceną. Aby dopasować wyłącznie wartości liczbowe, które poprzedza znak `$`, przed naszym docelowym wyrażeniem musimy podać wyrażenie korzystające z przewidywania pozytywnego wstecz `(?<=)`. Wewnątrz nawiasów okrągłych po znaku `=` wpisz `\\$`.",
+
+  "steps.negativeLookbehind.title": "Przewidywanie negatywne wstecz: `(?&lt;!)`",
+  "steps.negativeLookbehind.description": "W kolejnym przykładzie chcemy dopasować wartość liczbową niezwiązaną z ceną. Aby dopasować wyłącznie wartości liczbowe, których nie poprzedza znak `$`, przed naszym docelowym wyrażeniem musimy podać wyrażenie korzystające z przewidywania negatywnego wstecz `(?&lt;!)`. Wewnątrz nawiasów okrągłych po znaku `!` wpisz `\\$`.",
+
+  "steps.flags.title": "Flagi",
+  "steps.flags.description": "Flagi zmieniają wynik działania wyrażenia. Z tego powodu nazywane są również `modyfikatorami`. Flagi określają, czy wpisane wyrażenie traktuje tekst wejściowy jako osobne linie, czy jest wielkości liter ma znaczenie oraz czy mają zostać znalezione wszystkie możliwe dopasowania. Aby dowiedzieć się więcej o flagach, przejdź do kolejnej sekcji.", 
+  
+  "steps.flagsGlobal.title": "Wszystkie dopasowania",
+  "steps.flagsGlobal.description": "Flaga `global` (skrótowo oznaczana jako `g`) powoduje, że wyrażenie wybiera wszystkie możliwe dopasowania. Jeśli ta flaga nie jest ustawiona, to wyrażenie zwróci tylko pierwsze dopasowanie. Aby wybrać wszystkie dopasowania, włącz flagę `global`.",
+
+  "steps.flagsMultiline.title": "Tryb wieloliniowy",
+  "steps.flagsMultiline.description": "Standardowo wyrażenie regularne traktuje cały tekst jako jedną linię. Używając flagi `multiline` (skrótowo oznaczanej jako `m`), każda linia jest osobno przetwarzana przez nasze wyrażenie regularne. Dzięki temu, w poniższym przykładzie nasze wyrażenie, które ma dopasować wzorzec występujący na końcu linii, działa osobno dla każdej linii. Aby znaleźć wszystkie dopasowania, włącz flagę `multiline`.",
+
+  "steps.flagsCaseInsensitive.title": "Ignorowanie wielkość liter",
+  "steps.flagsCaseInsensitive.description": "Aby w naszym wyrażeniu wyłączyć rozróżnianie wielkości liter, musimy aktywować flagę `case-insensitive` (skrótowo oznaczaną jako `i`).",
+
+  "steps.greedyMatching.title": "Dopasowanie zachłanne",
+  "steps.greedyMatching.description": "Domyślnie wyrażenie regularne wykonuje dopasowanie zachłanne, co oznacza, że dopasowanie będzie jak najdłuższe. Spójrzmy na poniższy przykład. Mamy tu dowolne dopasowanie kończące się literą `r`, więc przed tą literą mogą wystąpić dowolne znaki. Zwróćmy uwagę, że dopasowanie nie zatrzymuje się na pierwszej napotkanej literze `r`.",
+
+  "steps.lazyMatching.title": "Dopasowanie leniwe",
+  "steps.lazyMatching.description": "Dopasowanie leniwe, w przeciwieństwie do zachłannego, zatrzymuje się przy pierwszym dopasowaniu. Na przykład, aby znaleźć w poniższym tekście pierwsze dopasowanie kończące się literą `r`, które poprzedzone jest dowolnymi znakami, w wyrażeniu regularnym po znaku `*` dodaj `?`. W konsekwencji będzie to oznaczać, że dopasowanie zakończy się na pierwszym wystąpieniu litery `r`.",
+
+  "steps.completeAllSteps.title": "Gratulacje, koniec kursu!",
+  "steps.completeAllSteps.description": "W dowolnym momencie możesz powrócić do poprzednich sekcji kursu oraz możesz łatwo poruszać się pomiędzy wszystkimi ukończonymi przez Ciebie sekcjami."
+
+}

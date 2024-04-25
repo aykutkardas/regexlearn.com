@@ -23,5 +23,8 @@ yarn-debug.log*
 yarn-error.log*
 .firebase
 .vscode
+.idea
 .next
 out
+public/robots.txt
+public/sitemap*

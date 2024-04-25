@@ -25,7 +25,7 @@ const CheatsheetDemo = ({ data }: Props) => {
           value: initialContent,
           attributes: {
             class:
-              'shadow-sm mx-1 my-[2px] px-1 py-[2px] rounded-md text-white bg-regreen-400 text-black inline-block',
+              'shadow-sm mx-1 my-[2px] px-1 py-[2px] rounded-md text-white bg-green-500 text-black inline-block',
           },
         }),
       );
@@ -40,7 +40,7 @@ const CheatsheetDemo = ({ data }: Props) => {
   const readableContent = (content || initialContent).replace(/\\n/gm, '<br />');
 
   return (
-    <div className="font-mono">
+    <div dir='ltr' className="font-mono">
       <div
         className={cx(
           'inline-block bg-jet-400 rounded-md p-3 my-1 text-center w-full relative mb-3 text-xs text-neutral-400',

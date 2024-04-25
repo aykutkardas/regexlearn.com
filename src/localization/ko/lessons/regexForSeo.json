@@ -1,0 +1,49 @@
+{
+  "lesson.regexForSeo.starter.title": "SEO를 위한 Regex",
+  "lesson.regexForSeo.starter.description": "Regex는 정규 표현식의 집합이며, 특히 생산성을 끌어올리고 싶은 사람들이 다방면에서 활용합니다. SEO를 위한 Regex의 장점은 빅데이터를 더 쉽게 분석하고 더 풍부한 필터를 사용할 수 있다는 것입니다. 당신이 초심자일 경우 `Regex 101`를 먼저 시작하길 추천합니다. \\n\\n먼저 Regex 필드에 `OK`를 입력하여 첫 번째 단계로 이동해 보다 자세한 설명을 확인해보세요.",
+
+  "lesson.regexForSeo.usage.title": "유즈 케이스",
+  "lesson.regexForSeo.usage.description": "SEO를 위한 Regex는 `Google 애널리틱스`, `Google 데이터 스튜디오`, `Google 시트`, `Google 웹마스터 도구`, `Ahrefs`, `Deepcrawl`, `Screaming Frog` 등에서 사용할 수 있습니다. 또한 `.htaccess 확장자` 또는 `robots.txt (정규식과 유사한 문법)` 파일에도 자주 사용됩니다.\\n\\n아래 예제는 리스트에서 `Google`로 시작하는 문자열만 선택하는 정규식입니다.",
+
+  "lesson.regexForSeo.basics.title": "기본",
+  "lesson.regexForSeo.basics.description": "자주 사용하게 될 몇 가지 정규 표현들을 살펴보겠습니다. 자세한 내용은 `Regex 101` 튜토리얼을 다시 보시는 것을 추천드립니다. `Yes` 를 입력해 시작합니다.",
+
+  "lesson.regexForSeo.or.title": "Or 연산자 `|`",
+  "lesson.regexForSeo.or.description": "Or 연산자 `|` 로 여러 표현식을 나눠 사용할 수 있습니다. 예를 들어, `seo` 와 `regex` 라는 단어를 찾으려면 Or 연산자 `|` 를 두 문구 사이에 넣으면 됩니다.",
+
+  "lesson.regexForSeo.optional.title": "조건 연산자 `?`",
+  "lesson.regexForSeo.optional.description": "이 연산자는 표현식이나 문자가 선택적임을 나타내기 위해 사용합니다. 예를 들면, `http` 와 `https` 두 단어를 찾으려고 합니다. Or 연산자 `|` 를 사용할 수도 있지만, 두 단어가 비슷하므로 더 나은 방법을 사용할 수 있습니다.\\n\\n이 예제에서 `s` 는 선택적인 문자입니다. 그저 `s` 문자 뒤에 물음표 `?` 를 붙이면 됩니다.",
+
+  "lesson.regexForSeo.any.title": "모든 것 `.*`",
+  "lesson.regexForSeo.any.description": "표현식에서 마침표 `.` 는 공백을 포함한 모든 것을 찾을 수 있습니다. 하지만 한 개의 문자밖에 찾지 못합니다. 별표 `*` 는 선행 문구가 아예 없거나 단어에서 한 번 이상 발생함을 의미합니다. 두 문자를 같이 사용하게 되면 문자가 끝없이 있다는 말이 됩니다.\\n\\n아래에 여러 키워드들이 있습니다. `how to write` 라는 포현식 뒤에 `.*` 를 추가해 모든 문자열을 찾도록 써보세요.",
+
+  "lesson.regexForSeo.contains.title": "포함",
+  "lesson.regexForSeo.contains.description": "우리가 찾는 단어나 구절이 포함된 텍스트를 찾기 위해선, `.*` 라는 두 표현식 사이에 찾고 싶은 단어를 쓰면 됩니다. 예를 들어, `.*buy.*` 라고 쓰면 `buy` 를 모두 찾아낼 수 있습니다.",
+
+  "lesson.regexForSeo.negated.title": "부정 문자 집합 `[^abc]`",
+  "lesson.regexForSeo.negated.description": "찾고 싶지 않은 문자를 나타내기 위해 부정 문자 집합 `[^]` 를 사용합니다. 포함하지 않으려는 문자는 대괄호 안 첫머리에 캐럿(^)이 있습니다. 아래에 `http` 와 `https` 가 있습니다. `http` 는 두 문자열이 갖고 있으므로 `https` 도 선택됩니다. `s` 를 제외하려면 `p` 뒤에 `[^s]` 를 입력하면 됩니다.",
+
+  "lesson.regexForSeo.caret.title": "캐럿 기호 `^`",
+  "lesson.regexForSeo.caret.description": "아래 URL 목록중에서 `http` 로만 시작하는 URL만 찾으려고 합니다. 하지만 URL의 경우 첫 부분 외에도 `http` 가 포함되는 경우도 있습니다. 따라서 다음 표현식의 시작 부분에 캐럿 `^` 을 추가하면 `http` 로만 시작하는 문자열을 찾을 수 있습니다.",
+
+  "lesson.regexForSeo.dollarAndEscape.title": "달러 기호 `$` 와 탈출 문자 `\\`",
+  "lesson.regexForSeo.dollarAndEscape.description": "우리는 이번에도 URL 목록을 갖고 있습니다. 이번엔 `.htm` 으로만 끝나는 URL을 찾으려고 합니다.\\n\\n마침표 `.` 는 모든 것을 찾는 특수 문자이므로 `htm` 앞에 탈출 문자 `\\` 를 추가하여 마침표를 비활성화 시켜야 합니다. 탈출 문자는 모든 특수 문자에 적용됩니다.\\n\n그런 다음 표현식 끝에 `$` 기호를 붙이면 됩니다. 이렇게 하면 찾을 텍스트가 앞에 써진 식으로 끝납니다.",
+
+  "lesson.regexForSeo.limitation.title": "길이 제한 `{n}`",
+  "lesson.regexForSeo.limitation.description": "우린 문자열 길이로 필터링을 하려고 합니다. 예를 들어, 길이가 `35` 자인 URL을 찾으려면 마침표 `.` 뒤에 중괄호를 열고 `{35}` 처럼 입력하면 됩니다.",
+
+  "lesson.regexForSeo.maxLimitation.title": "길이 제한 (최대) `{n,m}`",
+  "lesson.regexForSeo.maxLimitation.description": "최대 길이가 `35` 자인 URL을 찾으려면 마침표 `.` 뒤에 중괄호를 열고 `{1,35}` 와 같이 최소 및 최대 길이를 입력하면 됩니다.",
+
+  "lesson.regexForSeo.minLimitation.title": "길이 제한 (최소) `{n,}`",
+  "lesson.regexForSeo.minLimitation.description": "최소 길이가 `35` 자인 URL을 찾으려면 마침표 `.` 뒤에 중괄호를 열고 `{35,}` 와 같이 최소 길이를 입력하고 쉼표로 끝내면 됩니다.",
+
+  "lesson.regexForSeo.robots.title": "robots.txt (정규식-같은 문법)",
+  "lesson.regexForSeo.robots.description": "이 예제는 `robots.txt` 파일에서 정규식 처럼 사용되는 예제입니다. 이 예제는 봇이 `pdf` 로 끝나는 링크를 크롤링 할 수 없음을 명시하고 있습니다.",
+
+  "lesson.regexForSeo.htaccess.title": ".htaccess",
+  "lesson.regexForSeo.htaccess.description": "다음은 `.htaccess` 파일에서 정규식을 사용하는 예제입니다. 예제에서 `php` 확장자를 가진 링크는 `301` 코드가 있는 `html` 링크로 연결되도록 합니다.",
+
+  "lesson.regexForSeo.outro.title": "마치며",
+  "lesson.regexForSeo.outro.description": "정규식은 정규식을 사용할 수 있는 모든 플랫폼에서 생산성을 높여줄 수 있는 기술입니다. 정규식 실력이 향상될 수록, 많은 반복작업들을 빨리 끝낼 수 있으며 시간을 절약하는데 도움이 될 것입니다. 정규식의 기본을 더 이해하기 위해서는 `Regex 101` 튜토리얼을 확인하면 됩니다. 또한 `Playground` 페이지에서 당신의 정규식 실력을 테스트해 볼 수 있습니다."
+}
