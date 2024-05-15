@@ -26,7 +26,7 @@ const Header = ({ page }: Props) => {
         <div className="flex-1 inline-flex items-baseline">
           <Logo />
           {isPlaygroundPage && (
-            <span className="text-xs ml-1 relative bottom-1 text-neutral-500 sm:flex hidden">
+            <span className="text-xs ltr:ml-1 rtl:mr-1 relative bottom-1 text-neutral-500 sm:flex hidden">
               v{packageInfo.version}
             </span>
           )}

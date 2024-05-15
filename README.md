@@ -38,10 +38,18 @@ the way:
 - 🇫🇷 French
 - 🇵🇱 Polish
 - 🇰🇷 Korean
-- 🇦🇪 Arabic [(Requested)](https://github.com/aykutkardas/regexlearn.com/issues/163)
 - 🇧🇷 Brazilian Portuguese
-- 🇬🇪 Georgian [(Requested)](https://github.com/aykutkardas/regexlearn.com/issues/274)
 - 🇨🇿 Czech
+- 🇬🇪 Georgian
+
+### Requested Translations
+
+- 🇦🇪 Arabic [(Issue)](https://github.com/aykutkardas/regexlearn.com/issues/163)
+- 🇧🇩 Bengali [(Issue)](https://github.com/aykutkardas/regexlearn.com/issues/304)
+- 🇮🇹 Italian [(Issue)](https://github.com/aykutkardas/regexlearn.com/issues/323)
+- 🇮🇷 Persian [(Issue)](https://github.com/aykutkardas/regexlearn.com/issues/325)
+- 🇻🇳 Vietnamese [(Issue)](https://github.com/aykutkardas/regexlearn.com/issues/329)
+- 🇮🇩 Indonesian [(Issue)](https://github.com/aykutkardas/regexlearn.com/issues/335)
 
 Interested in adding your language? Please
 **[create an issue](https://github.com/aykutkardas/regexlearn.com/issues/new)** and let us know!

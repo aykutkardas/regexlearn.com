@@ -29,7 +29,7 @@ const PageLearn = () => {
               attrs={{ className: 'text-regreen-400' }}
             />
           </div>
-          <div className="w-full md:w-1/2 lg:w-1/3 md:pl-10 lg:pl-0 ml-auto flex flex-col gap-4 mt-8 md:mt-0 mb-10">
+          <div className="w-full md:w-1/2 lg:w-1/3 md:pl-10 lg:pl-0 ltr:ml-auto rtl:mr-auto flex flex-col gap-4 mt-8 md:mt-0 mb-10">
             {lessons.map(lesson => (
               <div key={lesson.key} className="w-full mb-3">
                 <LessonBox
@@ -49,7 +49,7 @@ const PageLearn = () => {
                   rel="noreferrer"
                 >
                   {lesson.sponsor || lesson.creator ? (
-                    <span className="flex items-center">
+                    <span dir='ltr' className="flex items-center">
                       {lesson.sponsor ? 'Sponsored' : 'Created'} by{' '}
                       <img
                         className="mx-1"

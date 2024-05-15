@@ -7,11 +7,14 @@ export const langNames = {
   ru: '🇷🇺',
   'zh-cn': '🇨🇳',
   uk: '🇺🇦',
+  ka: '🇬🇪',
   ko: '🇰🇷',
   pl: '🇵🇱',
   'pt-br': '🇧🇷',
   'cs-cz': '🇨🇿',
 };
+
+export const rtlSupported = [];
 
 export const defaultLocale = 'en';
 

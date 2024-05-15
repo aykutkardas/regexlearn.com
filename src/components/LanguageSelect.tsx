@@ -11,6 +11,8 @@ const langList = Object.keys(langNames).map(langKey => ({
 
 const LanguageSelect = () => {
   const { pathname, query } = useRouter();
+  
+  
   let currentLang = langNames[query.lang as string];
 
   const availableLangList = langList.filter(({ value }) => query.lang !== value);
@@ -21,7 +23,7 @@ const LanguageSelect = () => {
         <span>{currentLang}</span>
       </Popover.Button>
 
-      <Popover.Panel className="absolute right-0 z-10 mt-2 p-2 border w-28 border-neutral-700 bg-neutral-800 shadow-md rounded-md">
+      <Popover.Panel className="absolute rtl:left-0 ltr:right-0 z-10 mt-2 p-2 border w-28 border-neutral-700 bg-neutral-800 shadow-md rounded-md">
         {availableLangList.map(({ label, value }) => (
           <a
             href={getIntlPath({ href: pathname, lang: value, query })}
