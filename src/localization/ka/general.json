@@ -1,0 +1,39 @@
+{
+  "general.prev": "წინა",
+  "general.next": "შემდეგი",
+  "general.result": "შედეგი",
+  "general.regex": "Regex",
+  "general.text": "ტექსტი",
+  "general.watch": "ყურება",
+  "general.start": "დაწყება",
+  "general.continue": "გაგრძელება",
+  "general.completedStep": "ეტაპი გადალახულია!",
+  "general.hintQuestion": "პასუხის ჩვენება",
+  "general.reportStep": "პრობლემის შეტყობინება",
+  "general.startLearning": "სწავლის დაწყება",
+  "general.comingSoon": "მალე...",
+  "general.becomeSponsor": "გახდი სპონსორი",
+  "general.learn": "სწავლა",
+  "general.playground": "სავარჯიშო სივრცე",
+  "general.cheatsheet": "ზოგადი განმარტებები",
+  "general.ourSponsors": "ჩვენი სპონსორები",
+  "general.share": "გაზიარება",
+  "general.shareLinkCopied": "გაზიარების ბმული კოპირებულია!",
+  "general.somethingWentWrong": "რაღაც შეცდომაა!",
+
+  "notFound.intro": "გვერდი, რომელსაც თქვენ ეძებთ, არ არსებობს.",
+  "notFound.button": "მთავარ გვერდზე დაბრუნება",
+
+  "page.landing.title": "Regex Learn - ეტაპობრივად, ნულიდან მაღალ დონეზე.",
+  "page.learn.title": "Regex Learn - Regex-ის ინტერაქციული კურსი",
+  "page.cheatsheet.title": "Regex Learn - ზოგადი განმარტებები",
+  "page.playground.title": "Regex Learn - სავარჯიშო სივრცე",
+  "page.404.title": "Regex Learn - არ მოიძებნა",
+
+  "page.landing.description": "ისწავლეთ Regex-ი ინტერაქციულად, აკეთეთ თქვენი ცოდნის დონის შესაბამისი სავარჯიშოები, შეამოწმეთ და გააზიარეთ თქვენ მიერ დაწერილი Regex-ი.",
+  "page.learn.description": "ისწავლეთ Regex-ი ეტაპობრივად. გაიარეთ ინტერაქციული კურსი, რომელიც სწავლის პროცესს უფრო მარტივს და სწრაფს გახდის.",
+  "page.cheatsheet.description": "ხანდახან უბრალოდ გჭირდებათ, რომ გადაიმეოროთ Regex-ი. სცადეთ, გამოიყენოთ ზოგადი განმარტებები, რაც დაგეხმარებათ, უკეთ გაიაზროთ ან გაიხსენოთ მივიწყებული საკითხები.",
+  "page.playground.description": "შეგიძლიათ მარტივად ააგოთ და გამოცადოთ თქვენი Regex-ნიმუში ონლაინ, სავარჯიშო სივრცის გამოყენებით.",
+
+  "learn.safari.unsupportWarning": "Regex-ი ამ ეტაპზე ზოგიერთი ბრაუზერის მიერ მხარდაჭერილი არ არის. თუკი ამ ნაბიჯის გადალახვას ვერ ახერხებთ, შეგიძლიათ აქ დააწკაპუნოთ."
+}
