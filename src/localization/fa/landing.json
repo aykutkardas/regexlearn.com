@@ -1,26 +1,26 @@
 {
-  "landing.title": "Learn Regex step by step, from zero to advanced.",
-  "landing.description": "Learning Regex is easier than you think. You can use this tool to easily `learn`, `practice`, `test` and `share` Regex.",
-  "landing.imageAltText": "Illustration of a relaxed man with his legs on the table.",
+  "landing.title": "یادگیری ریجکس به صورت گام به گام ، از صفر تا صد.",
+  "landing.description": "یادگیری ریجکس از چیزی که فکر میکنید ، ساده تر است. میتوانید از این وب سایت برای `یادگیری`، `تمرین`، `تست` و `اشتراک گذاری` استفاده کنید.",
+  "landing.imageAltText": "تصویر مردی که پاهایش را روی میز گذاشته است.",
 
-  "section.learn.title": "Learn",
-  "section.learn.content": "`Regular Expressions`, abbreviated as Regex or Regexp, are a string of characters created within the framework of Regex syntax rules. You can easily manage your data with Regex, which uses commands like finding, matching, and editing. Regex can be used in programming languages such as Python, SQL, JavaScript, R, Google Analytics, Google Data Studio, and throughout the coding process. Learn regex online with examples and tutorials on RegexLearn now.",
-  "section.learn.imageAltText": "Illustration of a mountain with a flag on its summit.",
+  "section.learn.title": "آموزش",
+  "section.learn.content": "کلمه Regular Expressions که به اختصار Regex یا Regexp نامیده می شود، رشته ای از کاراکترها هستند که در چارچوب قوانین نحوی Regex ایجاد شده اند. شما به راحتی می توانید داده های خود را با Regex مدیریت کنید که از دستوراتی مانند یافتن، تطبیق و ویرایش استفاده می کند. Regex را می توان در زبان های برنامه نویسی مانند Python، SQL، JavaScript، R، Google Analytics، Google Data Studio و در طول فرآیند کدنویسی استفاده کرد. هم اکنون regex را با مثال ها و آموزش های RegexLearn به صورت آنلاین بیاموزید.",
+  "section.learn.imageAltText": "تصویر کوه با پرچمی بر قله آن.",
 
-  "section.cheatsheet.button": "Review Now",
-  "section.cheatsheet.title": "Cheatsheet",
-  "section.cheatsheet.content": "With `RegexLearn Cheatsheet`, you can see all of the usages you need at once and check them directly from the one page. Explore all Regex patterns and symbols with the Regex cheat sheet.",
-  "section.cheatsheet.imageAltText": "Illustration of a man viewing pages through binoculars.",
+  "section.cheatsheet.button": "همین الان بررسی کنید",
+  "section.cheatsheet.title": "برگه تقلب",
+  "section.cheatsheet.content": "با برگه تقلب ریجکس میتونید همه آنچه نیاز دارید را به طور همزمان بررسی کنید. تمام الگوها و نمادها در برگه تقلب وجود دارند.",
+  "section.cheatsheet.imageAltText": "تصویر مردی که صفحات را با دوربین دوچشمی مشاهده میکند.",
 
-  "section.playground.title": "Playground",
-  "section.playground.content": "If you want to generate a Regex, you can easily build and test your Regex pattern via the Playground. As a Regex tester, you can validate and share your Regex with others for collaborative work.",
-  "section.playground.imageAltText": "Illustration of a cat about to drop a full glass.",
+  "section.playground.title": "زمین تمرین",
+  "section.playground.content": "اگر میخواهید یک ریجکس بسازید و آن را آزمایش کنید، میتوانید از طریق زمین بازی این کار را انجام دهید و با دیگران به اشتراک بگذارید.",
+  "section.playground.imageAltText": "تصویر گربه ایی در حال انداختن لیوان پر.",
 
-  "section.practice.title": "Practice",
-  "section.practice.content": "If you complete the learning part, it's time to PRACTICE! In the practice section, you can test your Regex knowledge and practice with Regex tutorials based on your level. Soon.",
-  "section.practice.imageAltText": "Illustration of a woman taking notes from a book.",
+  "section.practice.title": "تمرین",
+  "section.practice.content": "اگر بخش یادگیری را تکمیل کرده اید، زمان تمرین کردن رسیده! در بخش تمرین میتوانید دانش خود را ارتقا دهید. به زودی در دسترس قرار خواهد گرفت.",
+  "section.practice.imageAltText": "تصویر زنی که از یک کتاب یادداشت میکند.",
 
-  "section.opensource.title": "Open Source",
-  "section.opensource.content": "Regex Learn is an open-source project that welcomes community contributions and is free to use. Working on this project allows you to hone your skills, study, and collaborate.  You can contribute & support here.",
-  "section.opensource.imageAltText": "Illustration of a woman, a man, and a cat putting together puzzle pieces."
+  "section.opensource.title": "منبع باز",
+  "section.opensource.content": "این وب سایت یک پروژه منبع باز است که از مشارکت های داخل جامعه استقبال میکند و همچنین استفاده از آن رایگان است. کار بر روی این پروژه به شما امکان میدهد مهارت های خود را تقویت کنید. شما میتوانید در زیر مشارکت و حمایت کنید.",
+  "section.opensource.imageAltText": "تصویری از یک زن، یک مرد و یک گربه که قطعات پازل را کنار هم میچینند."
 }
