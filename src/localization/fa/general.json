@@ -1,0 +1,39 @@
+{
+  "general.prev": "قبلی",
+  "general.next": "بعدی",
+  "general.result": "نتیجه",
+  "general.regex": "regex",
+  "general.text": "متن",
+  "general.watch": "تماشا",
+  "general.start": "شروع",
+  "general.continue": "ادامه",
+  "general.completedStep": "مرحله تکمیل شد!",
+  "general.hintQuestion": "نمایش پاسخ",
+  "general.reportStep": "گزارش مشکل",
+  "general.startLearning": "شروع یادگیری",
+  "general.comingSoon": "به زودی",
+  "general.becomeSponsor": "اسپانسر شوید",
+  "general.learn": "آموزش",
+  "general.playground": "زمین تمرین",
+  "general.cheatsheet": "برگه تقلب",
+  "general.ourSponsors": "حامیان ما",
+  "general.share": "اشتراک گذاری",
+  "general.shareLinkCopied": "لینک اشتراک کپی شد!",
+  "general.somethingWentWrong": "مشکلی به وجود اومد!",
+
+  "notFound.intro": "صفحه ایی که دنبال آن هستید وجود ندارد.",
+  "notFound.button": "بازگشت به خانه",
+
+  "page.landing.title": "آموزش ریجکس - قدم به قدم ، از صفر تا صد",
+  "page.learn.title": "آموزش ریجکس - دوره تعاملی ریجکس",
+  "page.cheatsheet.title": "آموزش ریجکس - برگه تقلب",
+  "page.playground.title": "آموزش ریجکس - زمین تمرین",
+  "page.404.title": "آموزش ریجکس - پیدا نشد",
+
+  "page.landing.description": "ریجکس را به صورت تعاملی یاد بگیرید، به صورت مداوم تمرین کنید و به اشتراک بگذارید.",
+  "page.learn.description": "ریجکس را گام به گام یاد بگیرید. آموزش ما را تکمیل کنید تا یادگیری شما به انتها برسد.",
+  "page.cheatsheet.description": "بعضی وقت ها نیاز به یادآوری ریجکس در ذهن خود دارد. از برگه تقلب برای یادآوری استفاده کنید.",
+  "page.playground.description": "شما به راحتی میتوانید الگوی ریجکس خود را به صورت آنلاین در زمین تمرین بسازید و آزمایش کنید.",
+
+  "learn.safari.unsupportWarning": "ریجکس در این مرحله توسط برخی از مرورگرها پشتیبانی نمی شود. اگر برای عبور از این مرحله مشکل دارید، اینجا را کلیک کنید"
+}

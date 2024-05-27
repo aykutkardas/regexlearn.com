@@ -12,9 +12,10 @@ export const langNames = {
   pl: '🇵🇱',
   'pt-br': '🇧🇷',
   'cs-cz': '🇨🇿',
+  'fa': '🇮🇷',
 };
 
-export const rtlSupported = [];
+export const rtlSupported = ['fa'];
 
 export const defaultLocale = 'en';
 
