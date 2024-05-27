@@ -60,13 +60,13 @@
   "steps.questionMark.description": "To indicate that a character is optional, we put a `?` question mark after a character. For example, indicate that the following letter `u` is optional.",
 
   "steps.quantifier.title": "Curly Braces - 1",
-  "steps.quantifier.description": "To express a certain number of occurrences of a character,  at the end we write curly braces `{n}` along with how many times we want it to occur. For example, indicate that the following letter `e` can occur only `2` times.",
+  "steps.quantifier.description": "To express a certain number of occurrences of a character,  at the end we write curly braces `{n}` along with how many times we want it to occur. For example, indicate that the following letter `e` can occur only `2` times in a row.",
 
   "steps.quantifierMin.title": "Curly Braces - 2",
-  "steps.quantifierMin.description": "To express at least a certain number of occurrences of a character, immediately after the character we write at least how many times we want it to occur followed by a comma `,` and wrapped inside curly braces `{n, }`. For example, indicate that the following letter `e` can occur at least `3` times.",
+  "steps.quantifierMin.description": "To express at least a certain number of occurrences of a character, immediately after the character we write at least how many times we want it to occur in a row followed by a comma `,` and wrapped inside curly braces `{n, }`. For example, indicate that the following letter `e` can occur at least `3` times in a row.",
 
   "steps.quantifierRange.title": "Curly Braces - 3",
-  "steps.quantifierRange.description": "To express the occurrence of a character in a certain number range, we write curly braces `{x,y}` with the interval we want to go to the end. For example, indicate that the following letter `e` can only occur between `1` and `3`.",
+  "steps.quantifierRange.description": "To express the occurrence of a character in a certain number range, we write curly braces `{x,y}` for the inclusive interval. For example, indicate that the following letter `e` can only occur between `1` and `3` times in a row.",
 
   "examples.asterisk.title": "Practice: Asterisk `*`",
   "examples.asterisk.description": "Use the asterisk `*` to write the expression that will select each word, suitable for the absence of the letter `e` in the text and the presence of one or more.",
