@@ -36,7 +36,7 @@ const CheatsheetCollapse = ({ title, data }: CheatsheetCollapseProps) => {
         aria-controls={`Collapse-${data.title}`}
       >
         <div className="w-14 inline-block">
-          <span className="p-1 text-xs font-mono text-neutral-100 bg-[#333] rounded-md">
+          <span className="p-1 text-xs font-mono text-neutral-100 bg-[#333] rounded-md" dir='ltr'>
             {data.code}
           </span>
         </div>
