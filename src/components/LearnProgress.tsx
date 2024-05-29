@@ -36,8 +36,6 @@ const LearnProgress = () => {
   const listOpenInner = direction === 'rtl' ? '-left-10' : '-right-10';
   const listCloseInner = direction === 'rtl' ? 'left-[204px]' : 'right-[204px]';
   const listIconName = direction === 'rtl' ? 'arrow-right' : 'arrow-left';
-  const listStepDirection = direction === 'rtl' ? 'left-[7px]' : 'right-[7px]';
-
 
   return (
     <div
@@ -80,7 +78,7 @@ const LearnProgress = () => {
               },
               'step-item relative truncate max-w-[80%] flex flex-row-reverse items-center',
               index !== lessonData.length - 1 &&
-                `pb-6 after:content-[''] after:block after:w-[2px] after:h-8 after:bg-neutral-700 after:rounded-md after:${listStepDirection} after:top-8 after:absolute`,
+              `pb-6 after:content-[''] after:block after:w-[2px] after:h-8 after:bg-neutral-700 after:rounded-md after:mx-[7px] after:top-8 after:absolute`,
             )}
           >
             {step === index && (
@@ -110,7 +108,7 @@ const LearnProgress = () => {
                   ? '!pr-2 text-neutral-50'
                   : 'text-neutral-300 hover:text-neutral-100 pl-0',
               )}
-              text={formatMessage({ id: lesson.title })}
+              text={formatMessage({ id: lesson.title }).replace('\\n', '')}
               onClick={() => handleChangeStep(index)}
               attrs={{
                 className: clsx(
