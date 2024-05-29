@@ -37,7 +37,6 @@ const LearnProgress = () => {
   const listCloseInner = direction === 'rtl' ? 'left-[204px]' : 'right-[204px]';
   const listIconName = direction === 'rtl' ? 'arrow-right' : 'arrow-left';
 
-
   return (
     <div
       className={clsx(
