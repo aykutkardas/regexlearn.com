@@ -40,14 +40,14 @@ the way:
 - 🇰🇷 Korean
 - 🇧🇷 Brazilian Portuguese
 - 🇨🇿 Czech
+- 🇬🇪 Georgian
+- 🇮🇷 Persian
 
 ### Requested Translations
 
 - 🇦🇪 Arabic [(Issue)](https://github.com/aykutkardas/regexlearn.com/issues/163)
-- 🇬🇪 Georgian [(Issue)](https://github.com/aykutkardas/regexlearn.com/issues/274)
 - 🇧🇩 Bengali [(Issue)](https://github.com/aykutkardas/regexlearn.com/issues/304)
 - 🇮🇹 Italian [(Issue)](https://github.com/aykutkardas/regexlearn.com/issues/323)
-- 🇮🇷 Persian [(Issue)](https://github.com/aykutkardas/regexlearn.com/issues/325)
 - 🇻🇳 Vietnamese [(Issue)](https://github.com/aykutkardas/regexlearn.com/issues/329)
 - 🇮🇩 Indonesian [(Issue)](https://github.com/aykutkardas/regexlearn.com/issues/335)
 

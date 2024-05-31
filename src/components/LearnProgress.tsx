@@ -4,6 +4,7 @@ import { useIntl } from 'react-intl';
 import Icon from './Icon';
 import { InteractiveAreaContext } from 'src/context/InteractiveAreaContext';
 import HighlightedText from './HighlightedText';
+import { useLanguageDirection } from "src/utils/useLanguageDirection";
 
 const LearnProgress = () => {
   const [open, setOpen] = useState(false);
@@ -27,11 +28,20 @@ const LearnProgress = () => {
 
   const toggleProgress = () => setOpen(!open);
 
+  const direction = useLanguageDirection();
+
+  // list lesson (ToggleProgress For RTL/LTR)
+  const listOpen = direction === 'rtl' ? 'left-0' : 'right-0';
+  const listClose = direction === 'rtl' ? '-left-[244px]' : '-right-[244px]';
+  const listOpenInner = direction === 'rtl' ? '-left-10' : '-right-10';
+  const listCloseInner = direction === 'rtl' ? 'left-[204px]' : 'right-[204px]';
+  const listIconName = direction === 'rtl' ? 'arrow-right' : 'arrow-left';
+
   return (
     <div
       className={clsx(
         'hidden lg:block text-xs top-[50%] -translate-y-[50%] absolute z-10 transition-all select-none',
-        open ? 'right-0 ' : '-right-[244px]',
+        open ? listOpen : listClose,
       )}
     >
       <div
@@ -41,15 +51,17 @@ const LearnProgress = () => {
         <div
           onClick={toggleProgress}
           className={clsx(
-            'w-10 h-10 cursor-pointer rounded-full  flex fixed top-[50%] -translate-x-[50%] -translate-y-[50%] transition-all duration-50',
-            open ? '-right-10 bg-neutral-600/40' : 'right-[204px] bg-emerald-600',
+            direction === 'rtl' ? 'translate-x-[50%]' : '-translate-x-[50%]',
+            `w-10 h-10 cursor-pointer rounded-full  flex fixed top-[50%] transition-all duration-50`,
+            open ? `${listOpenInner} bg-neutral-600/40` : `${listCloseInner} bg-emerald-600`,
           )}
         >
           <Icon
-            icon="arrow-left"
+            icon={listIconName}
             size={15}
             className={clsx(
-              'mr-auto my-auto ml-1 text-neutral-100',
+              direction === 'rtl' ? 'ml-auto mr-1' : 'mr-auto ml-1',
+              `my-auto text-neutral-100`,
               open ? 'rotate-180' : 'rotate-0',
             )}
           />
@@ -66,17 +78,26 @@ const LearnProgress = () => {
               },
               'step-item relative truncate max-w-[80%] flex flex-row-reverse items-center',
               index !== lessonData.length - 1 &&
-                "pb-6 after:content-[''] after:block after:w-[2px] after:h-8 after:bg-neutral-700 after:rounded-md after:right-[7px] after:top-8 after:absolute",
+              `pb-6 after:content-[''] after:block after:w-[2px] after:h-8 after:bg-neutral-700 after:rounded-md after:mx-[7px] after:top-8 after:absolute`,
             )}
           >
             {step === index && (
-              <Icon icon="play" size={16} className="text-green-400 ml-2 flex-shrink-0" />
+              <Icon icon="play" size={16} className={clsx(
+                direction === 'ltr' ? 'ml-2' : 'mr-2',
+                "text-green-400 flex-shrink-0"
+              )} />
             )}
             {lastStep >= index && step !== index && (
-              <Icon icon="check" size={16} className="text-green-400 ml-2 flex-shrink-0" />
+              <Icon icon="check" size={16} className={clsx(
+                direction === 'ltr' ? 'ml-2' : 'mr-2',
+                "text-green-400 flex-shrink-0"
+              )} />
             )}
             {lastStep < index && (
-              <Icon icon="lock-closed" size={16} className="text-neutral-500 ml-2 flex-shrink-0" />
+              <Icon icon="lock-closed" size={16} className={clsx(
+                direction === 'ltr' ? 'ml-2' : 'mr-2',
+                "text-neutral-500 flex-shrink-0"
+              )} />
             )}
 
             <HighlightedText
@@ -87,7 +108,7 @@ const LearnProgress = () => {
                   ? '!pr-2 text-neutral-50'
                   : 'text-neutral-300 hover:text-neutral-100 pl-0',
               )}
-              text={formatMessage({ id: lesson.title })}
+              text={formatMessage({ id: lesson.title }).replace('\\n', '')}
               onClick={() => handleChangeStep(index)}
               attrs={{
                 className: clsx(

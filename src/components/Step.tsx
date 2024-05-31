@@ -43,6 +43,7 @@ const Step = () => {
           text={formatMessage({ id: data.title })}
           attrs={{
             className: 'px-2 my-1 bg-neutral-700 rounded-md mx-1 whitespace-nowrap',
+            dir: 'ltr'
           }}
         />
         <HighlightedText
@@ -51,6 +52,7 @@ const Step = () => {
           text={formatMessage({ id: data.description })}
           attrs={{
             className: 'p-1 text-xs whitespace-nowrap rounded-md bg-neutral-700 tracking-widest',
+            dir: 'ltr'
           }}
         />
       </div>
