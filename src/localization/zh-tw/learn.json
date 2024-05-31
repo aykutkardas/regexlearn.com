@@ -9,7 +9,7 @@
   "steps.starter.description": "Regex 是`正規表示式`(Regular Expression)的縮寫，能幫助你吻合、尋找與管理文字。先從在正規表示式欄位輸入`OK`開始第一步，並且察看更為詳細的說明。",
 
   "steps.whatIsRegex.title": "什麼是正規表示式 `Regex`？",
-  "steps.whatIsRegex.description": "Regular Expressions are a string of characters that express a search pattern. Often abbreviated as `Regex` or `Regexp`. It is especially used to find or replace words in texts. In addition, we can test whether a text complies with the rules we set.\\n\\n For example, let's say you have a list of filenames. And you only want to find files with the `pdf` extension. Following typing an expression `^\\w+\\.pdf$` will work. The meaning of the definitions in this expression will become clearer as the steps progress.",
+  "steps.whatIsRegex.description": "正規表示式是一系列表現搜尋模式的字元組合，通常英文縮寫為 `Regex` 或是 `Regexp`，通常會用來尋找或是取代文字片段當中的字。除此之外，我們也能測試文字是否符合我們設定的規則。\\n\\n例如說，你手上有檔案名稱清單，你只想要找副檔名有 `pdf` 的檔案，只要打上 `^\\w+\\.pdf$` 就可以找出來了。這意味著採用正規表示式會隨著步驟走越來越清楚了。",
 
   "steps.basicMatchers.title": "基本吻合",
   "steps.basicMatchers.description": "The character or word we want to find is written directly. It is similar to a normal search process. For example, to find the word `curious` in the text, type the same.",
@@ -156,8 +156,8 @@
   "steps.greedyMatching.description": "Regex does a greedy match by default. This means that the matchmaking will be as long as possible. Check out the example below. It refers to any match that ends in `r` and can be any character preceded by it. But it does not stop at the first letter `r`.",
 
   "steps.lazyMatching.title": "偷懶比對",
-  "steps.lazyMatching.description": "Lazy matchmaking, unlike greedy matching, stops at the first matching. For example, in the example below, add a `?` after `*` to find the first match that ends with the letter `r` and is preceded by any character. It means that this match will stop at the first letter `r`.",
+  "steps.lazyMatching.description": "偷懶比對，不像貪心比對那樣，會在第一次吻合時就停止了。例如說，以下的例子來說，在 `*` 新增 `?` 則會在吻合字前面有任何字母，字結尾有 `r` 時，吻合一次就會停止，意味著吻合到第一個 `r` 字母。",
 
   "steps.completeAllSteps.title": "恭喜你，你已經完成所有步驟了！",
-  "steps.completeAllSteps.description": "You can return to the previous steps whenever you want, and you can easily navigate through all the steps you have passed."
+  "steps.completeAllSteps.description": "你可以在任何時候回到先前的步驟，而且可以瀏覽先前通過的步驟。"
 }
