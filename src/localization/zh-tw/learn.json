@@ -1,6 +1,6 @@
 {
   "examples.starter.title": "練習",
-  "examples.starter.description": "Now it's time to do some practice to consolidate what we've learned.",
+  "examples.starter.description": "現在透過練習來強化所學。",
 
   "examples.finish.title": "完成練習！",
   "examples.finish.description": " ",
@@ -92,72 +92,72 @@
   "steps.groupReference.title": "參照群組",
   "steps.groupReference.description": "The words `ha` and `haa` are grouped below. The first group is used by writing `\\1` to avoid rewriting. Here `1` denotes the order of grouping. Type `\\2` at the end of the expression to refer to the second group.",
 
-  "steps.nonCapturingGroupping.title": "Parentheses `(?: )`: Non-capturing Grouping",
+  "steps.nonCapturingGroupping.title": "圓括號 `(?: )`: 非捕捉群組",
   "steps.nonCapturingGroupping.description": "You can group an expression and ensure that it is not captured by references. For example, below are two groups. However, the first group reference we denote with `\\1` actually indicates the second group, as the first is a non-capturing group.",
 
-  "steps.pipeCharacter.title": "Pipe Character `|`",
+  "steps.pipeCharacter.title": "管道字元 `|`",
   "steps.pipeCharacter.description": "It allows to specify that an expression can be in different expressions. Thus, all possible statements are written separated by the pipe sign `|`. This differs from charset `[abc]`, charsets operate at the character level. Alternatives are at the expression level. For example, the following expression would select both `cat` and `rat`. Add another pipe sign `|` to the end of the expression and type `dog` so that all words are selected.",
 
-  "steps.escapeCharacter.title": "Escape Character `\\`",
+  "steps.escapeCharacter.title": "逃脫字元 `\\`",
   "steps.escapeCharacter.description": "There are special characters that we use when writing regex. `{ } [ ] / \\ + * . $^ | ?` Before we can select these characters themselves, we need to use an escape character `\\`. For example, to select the dot `.` and asterisk `*` characters in the text, let's add an escape character `\\` before it.",
 
-  "steps.caret.title": "Caret Sign `^`:\\nSelecting by Line Start",
+  "steps.caret.title": "插入記號 `^`:\\nSelecting by Line Start",
   "steps.caret.description": "We were using `[0-9]` to find numbers. To find only numbers at the beginning of a line, prefix this expression with the `^` sign.",
 
-  "steps.dollar.title": "Dollar Sign `$`:\\nSelecting by End of Line",
+  "steps.dollar.title": "金錢符號 `$`:\\nSelecting by End of Line",
   "steps.dollar.description": "Let's use the `$` sign after the `html` value to find the `html` texts only at the end of the line.",
 
-  "steps.wordCharacter.title": "Word Character `\\w`: Letter, Number and Underscore",
+  "steps.wordCharacter.title": "文字字元 `\\w`: 字母、數字與底線",
   "steps.wordCharacter.description": "The expression `\\w` is used to find letters, numbers and underscore characters. Let's use the expression `\\w` to find word characters in the text.",
 
-  "steps.withoutWordCharacter.title": "Except Word Character `\\W`",
+  "steps.withoutWordCharacter.title": "排除文字字元 `\\W`",
   "steps.withoutWordCharacter.description": "The expression `\\W` is used to find characters other than letters, numbers, and underscores.",
 
-  "steps.numberCharacter.title": "Number Character `\\d`",
+  "steps.numberCharacter.title": "數字字元 `\\d`",
   "steps.numberCharacter.description": "`\\d` is used to find only number characters.",
 
-  "steps.withoutNumberCharacter.title": "Except Number Character `\\D`",
+  "steps.withoutNumberCharacter.title": "排除數字字元 `\\D`",
   "steps.withoutNumberCharacter.description": "`\\D` is used to find non-numeric characters.",
 
-  "steps.spaceCharacter.title": "Space Character `\\s`",
+  "steps.spaceCharacter.title": "空白字元 `\\s`",
   "steps.spaceCharacter.description": "`\\s` is used to find only space characters.",
 
-  "steps.withoutSpaceCharacter.title": "Except Space Character `\\S`",
+  "steps.withoutSpaceCharacter.title": "排除空白字元 `\\S`",
   "steps.withoutSpaceCharacter.description": "`\\S` is used to find non-space characters.",
 
-  "steps.lookarounds.title": "Lookarounds",
+  "steps.lookarounds.title": "環顧",
   "steps.lookarounds.description": "If we want the phrase we're writing to come before or after another phrase, we need to \"lookaround\". Take the next step to learn how to \"lookaround\".",
 
-  "steps.positiveLookahead.title": "Positive Lookahead: `(?=)`",
+  "steps.positiveLookahead.title": "正面向前環顧: `(?=)`",
   "steps.positiveLookahead.description": "For example, we want to select the hour value in the text. Therefore, to select only the numerical values that have `PM` after them, we need to write the positive look-ahead expression `(?=)` after our expression. Include `PM` after the `=` sign inside the parentheses.",
 
-  "steps.negativeLookahead.title": "Negative Lookahead: `(?!)`",
+  "steps.negativeLookahead.title": "負面向前環顧: `(?!)`",
   "steps.negativeLookahead.description": "For example, we want to select numbers other than the hour value in the text. Therefore, we need to write the negative look-ahead `(?!)` expression after our expression to select only the numerical values that do not have `PM` after them. Include `PM` after the `!` sign inside the parentheses.",
 
-  "steps.positiveLookbehind.title": "Positive Lookbehind: `(?<=)`",
+  "steps.positiveLookbehind.title": "正面向後環顧: `(?<=)`",
   "steps.positiveLookbehind.description": "For example, we want to select the price value in the text. Therefore, to select only the number values that are preceded by `$`, we need to write the positive lookbehind expression `(?<=)` before our expression. Add `\\$` after the `=` sign inside the parenthesis.",
 
-  "steps.negativeLookbehind.title": "Negative Lookbehind: `(?&lt;!)`",
+  "steps.negativeLookbehind.title": "負面向後環顧: `(?&lt;!)`",
   "steps.negativeLookbehind.description": "For example, we want to select numbers in the text other than the price value. Therefore, to select only numeric values that are not preceded by `$`, we need to write the negative lookbehind `(?&lt;!)` before our expression. Add `\\$` after the `!` inside the parenthesis.",
 
-  "steps.flags.title": "Flags",
+  "steps.flags.title": "修飾詞",
   "steps.flags.description": "Flags change the output of the expression. That's why flags are also called `modifiers`. Flags determine whether the typed expression treats text as separate lines, is case sensitive, or finds all matches. Continue to the next step to learn the flags.",
 
-  "steps.flagsGlobal.title": "Global Flag",
+  "steps.flagsGlobal.title": "全域修飾詞",
   "steps.flagsGlobal.description": "The `global` flag causes the expression to select all matches. If not used it will only select the first match. Now enable the `global` flag to be able to select all matches.",
 
-  "steps.flagsMultiline.title": "Multiline Flag",
+  "steps.flagsMultiline.title": "多行修飾詞",
   "steps.flagsMultiline.description": "Regex sees all text as one line. But we use the `multiline` flag to handle each line separately. In this way, the expressions we write to identify patterns at the end of lines work separately for each line. Now enable the `multiline` flag to find all matches.",
 
-  "steps.flagsCaseInsensitive.title": "Case-insensitive Flag",
+  "steps.flagsCaseInsensitive.title": "不區分大小寫修飾詞",
   "steps.flagsCaseInsensitive.description": "In order to remove the case-sensitivity of the expression we have written, we must activate the `case-insensitive` flag.",
 
-  "steps.greedyMatching.title": "Greedy Matching",
+  "steps.greedyMatching.title": "貪心比對",
   "steps.greedyMatching.description": "Regex does a greedy match by default. This means that the matchmaking will be as long as possible. Check out the example below. It refers to any match that ends in `r` and can be any character preceded by it. But it does not stop at the first letter `r`.",
 
-  "steps.lazyMatching.title": "Lazy Matching",
+  "steps.lazyMatching.title": "偷懶比對",
   "steps.lazyMatching.description": "Lazy matchmaking, unlike greedy matching, stops at the first matching. For example, in the example below, add a `?` after `*` to find the first match that ends with the letter `r` and is preceded by any character. It means that this match will stop at the first letter `r`.",
 
-  "steps.completeAllSteps.title": "Congratulations, you have completed all the steps!",
+  "steps.completeAllSteps.title": "恭喜你，你已經完成所有步驟了！",
   "steps.completeAllSteps.description": "You can return to the previous steps whenever you want, and you can easily navigate through all the steps you have passed."
 }
