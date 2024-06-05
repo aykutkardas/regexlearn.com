@@ -12,19 +12,19 @@
   "steps.whatIsRegex.description": "正規表示式是一系列表現搜尋模式的字元組合，通常英文縮寫為 `Regex` 或是 `Regexp`，通常會用來尋找或是取代文字片段當中的字。除此之外，我們也能測試文字是否符合我們設定的規則。\\n\\n例如說，你手上有檔案名稱清單，你只想要找副檔名有 `pdf` 的檔案，只要打上 `^\\w+\\.pdf$` 就可以找出來了。這意味著採用正規表示式會隨著步驟走越來越清楚了。",
 
   "steps.basicMatchers.title": "基本吻合",
-  "steps.basicMatchers.description": "The character or word we want to find is written directly. It is similar to a normal search process. For example, to find the word `curious` in the text, type the same.",
+  "steps.basicMatchers.description": "我們想要找的字元或是文字已經寫好了，整個過程類似尋找。例如，在段落當中尋找`好奇`，也一樣輸入。",
 
   "steps.dotCharacter.title": "點 `.`: 任何字元",
-  "steps.dotCharacter.description": "The period `.` allows selecting any character, including special characters and spaces. Type a period `.` in the Regex field to proceed.",
+  "steps.dotCharacter.description": "點 `.` 允許選擇任何字元，包括特殊字元與空白。在正規表示式欄位輸入點 `.`。",
 
   "steps.characterSet.title": "字元集 `[abc]`",
-  "steps.characterSet.description": "If one of the characters in a word can be various characters, we write it in square brackets `[]` with all alternative characters. For example, to write an expression that can find all the words in the text, type the characters `a`, `e`, `i`, `o`, `u` adjacently within square brackets `[]`.",
+  "steps.characterSet.description": "如果文字當中的其中一個字元是任何字元，我們會在括號 `[]` 內輸入所有不同字元。例如，如果要撰寫表示式找段落當中出現的所有文字，則在括號 `[]` 內彼此相鄰輸入字元 `a`、`e`、`i`、`o`、`u`。",
 
   "steps.negatedCharacterSet.title": "排除字元集 `[^abc]`",
-  "steps.negatedCharacterSet.description": "To find all words in the text below, except for `ber` and `bor`, type `e` and `o` side by side after the caret `^` character inside square brackets `[]`.",
+  "steps.negatedCharacterSet.description": "要找尋下列段落所有文字當中，除了 `ber` 與 `bor` 之外的文字，在括號 `[]` 內插入記號 `^` 後彼此相鄰輸入 `e`、`o`。",
 
   "steps.range.title": "字母範圍`[a-z]`",
-  "steps.range.description": "To find the letters in the specified range, the starting letter and the ending letter are written in square brackets `[]` with a dash between them `-`. It is case-sensitive. Type the expression that will select all lowercase letters between `e` and `o`, including themselves.",
+  "steps.range.description": "要找尋特定範圍內的字母，可以在括號 `[]` 內填寫開始與結束的字母，並且在中間 `-` 連結，這種方式是區分大小寫的。請輸入包括 `e` 與 `o`　兩者之間的小寫字母。",
 
   "steps.rangeNumber.title": "數字範圍`[0-9]`",
   "steps.rangeNumber.description": "To find the numbers in the specified range, the starting number and the ending number are written in square brackets `[]` with a dash `-` between them. Write an expression that will select all numbers between `3` and `6`, including themselves.",
