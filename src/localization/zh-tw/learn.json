@@ -24,13 +24,13 @@
   "steps.negatedCharacterSet.description": "要找尋下列段落所有文字當中，除了 `ber` 與 `bor` 之外的文字，在括號 `[]` 內插入記號 `^` 後彼此相鄰輸入 `e`、`o`。",
 
   "steps.range.title": "字母範圍`[a-z]`",
-  "steps.range.description": "要找尋特定範圍內的字母，可以在括號 `[]` 內填寫開始與結束的字母，並且在中間 `-` 連結，這種方式是區分大小寫的。請輸入包括 `e` 與 `o`　兩者之間的小寫字母。",
+  "steps.range.description": "要找尋特定範圍內的字母，可以在括號 `[]` 內填寫開始與結束的字母，並且在中間用折線 `-` 連結，這種方式是區分大小寫的。請輸入包括 `e` 與 `o`　則會選擇包括本身兩者之間的小寫字母。",
 
   "steps.rangeNumber.title": "數字範圍`[0-9]`",
-  "steps.rangeNumber.description": "To find the numbers in the specified range, the starting number and the ending number are written in square brackets `[]` with a dash `-` between them. Write an expression that will select all numbers between `3` and `6`, including themselves.",
+  "steps.rangeNumber.description": "要找尋特定範圍內的數字，可以在括號 `[]` 內填寫開始與結束的數字，並且在中間用折線 `-` 連結。請輸入包括 `3` 與 `6`，則會選擇包括本身兩者之間數字。",
 
   "examples.basicMatchers.title": "練習：基本吻合",
-  "examples.basicMatchers.description": "Write the expression that will select the words `of` in the text.",
+  "examples.basicMatchers.description": "撰寫選取段落當中 `of` 文字的表示式。",
 
   "examples.dotCharacter.title": "練習：任何字元",
   "examples.dotCharacter.description": "Type the expression to select individual letters, numbers, spaces, and special characters in the text. The expression you type must match any character.",
