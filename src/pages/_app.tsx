@@ -79,7 +79,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
           )}
         </Head>
       )}
-      <div dir={direction} className="flex flex-col h-screen text-neutral-50 font-openSans gooooz">
+      <div dir={direction} className="flex flex-col h-screen text-neutral-50 font-openSans">
         <Component {...pageProps} />
       </div>
     </IntlProvider>
