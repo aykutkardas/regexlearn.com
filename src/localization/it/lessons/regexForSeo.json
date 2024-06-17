@@ -1,0 +1,49 @@
+{
+  "lesson.regexForSeo.starter.title": "Regex per SEO",
+  "lesson.regexForSeo.starter.description": "Regex è un insieme di espressioni regolari frequentemente usato in molti campi, soprattutto da chi vuole aumentare la propria produttività. I vantaggi dell'uso di Regex per SEO sono che facilita l'analisi dei big data e la scrittura di filtri più ricchi. Raccomandiamo di iniziare con il tutorial `Regex 101` se sei nuovo a Regex. \\n\\nInizia scrivendo `OK` nel campo Regex per procedere al primo passo e accedere a spiegazioni più dettagliate.",
+
+  "lesson.regexForSeo.usage.title": "Casi d'uso",
+  "lesson.regexForSeo.usage.description": "Puoi usare Regex per SEO su piattaforme come `Google Analytics`, `Google Data Studio`, `Google Sheets`, `Google Search Console`, `Ahrefs`, `Deepcrawl`, `Screaming Frog`. È anche frequentemente usato nei file `.htaccess` e `robots.txt (sintassi simile a regex)`.\\n\\nDi seguito è riportato un esempio di regex che selezionerà solo i testi nell'elenco che iniziano con `Google`.",
+
+  "lesson.regexForSeo.basics.title": "Basi",
+  "lesson.regexForSeo.basics.description": "Diamo un'occhiata ad alcune regex che userai frequentemente. Raccomandiamo di rivedere il tutorial `Regex 101` per saperne di più su queste. Scrivi `Yes` per iniziare.",
+
+  "lesson.regexForSeo.or.title": "Operatore Or `|`",
+  "lesson.regexForSeo.or.description": "Usiamo l'operatore Or `|` per filtrare più espressioni. Ad esempio, filtra il testo contenente `seo` e `regex` scrivendo le due parole, separandole con l'operatore Or `|`.",
+
+  "lesson.regexForSeo.optional.title": "Operatore opzionale `?`",
+  "lesson.regexForSeo.optional.description": "Lo usiamo per esprimere che un'espressione o un carattere è opzionale. Ad esempio, vogliamo filtrare il testo contenente sia `http` che `https`. Possiamo usare l'operatore Or `|` per questa operazione, ma c'è un modo migliore per queste due parole quasi identiche.\\n\\nIn questo esempio, la lettera `s` è opzionale. Invece, aggiungi un punto interrogativo `?` alla fine della lettera `s`.",
+
+  "lesson.regexForSeo.any.title": "Qualsiasi cosa `.*`",
+  "lesson.regexForSeo.any.description": "In regex, il punto `.` può corrispondere a qualsiasi cosa, inclusi gli spazi. Ma questa corrispondenza è solo per un singolo carattere dove viene utilizzata. Il carattere asterisco `*` significa che l'elemento precedente non esiste affatto o si verifica più di una volta nel testo. Quando i due vengono usati insieme, significa che ci può essere un elemento di lunghezza illimitata dove viene usato.\\n\\nDi seguito sono riportate varie parole chiave. Aggiungi `.*` alla fine della regex per scrivere l'espressione che inizia con `how to write` e corrisponde a tutto ciò che segue.",
+
+  "lesson.regexForSeo.contains.title": "Contiene",
+  "lesson.regexForSeo.contains.description": "Per filtrare il testo che contiene le parole o le frasi che stiamo cercando, scriviamo la parola che stiamo cercando tra le nostre due frasi `.*` che corrispondono a tutto. Ad esempio, scrivi `.*buy.*` per filtrare ciò che include `buy`.",
+
+  "lesson.regexForSeo.negated.title": "Set di caratteri negati `[^abc]`",
+  "lesson.regexForSeo.negated.description": "Usiamo i set di caratteri negati `[^]` per indicare i caratteri che non vogliamo includere. I caratteri che non vogliamo includere sono scritti tra parentesi quadre con un caret all'inizio. Di seguito sono presenti sia `http` che `https`. Poiché `http` appare in entrambi, sceglierà anche `https`. Scrivi `[^s]` dopo la lettera `p` per escludere la lettera `s`.",
+
+  "lesson.regexForSeo.caret.title": "Segno di caret `^`",
+  "lesson.regexForSeo.caret.description": "Supponiamo di avere un elenco di URL e vogliamo trovare solo quelli che iniziano con `http`. Ma gli URL contengono anche `http` in diverse parti oltre all'inizio. Quindi aggiungi un caret `^` all'inizio della seguente espressione per filtrare solo quelli che iniziano con `http`.",
+
+  "lesson.regexForSeo.dollarAndEscape.title": "Segno del dollaro `$` e carattere di escape `\\`",
+  "lesson.regexForSeo.dollarAndEscape.description": "Abbiamo di nuovo un elenco di URL. Vogliamo trovare solo quelli che terminano con `.htm`.\\n\\nPoiché il punto `.` è un carattere speciale che corrisponde a tutto, dobbiamo prima disabilitare il punto prima di `htm` usando il carattere di escape `\\`. Questo vale per tutti i caratteri speciali.\\n\\nQuindi aggiungi un segno `$` alla fine dell'espressione. Questo assicura che il testo da filtrare termini con l'espressione scritta prima di esso.",
+
+  "lesson.regexForSeo.limitation.title": "Limitazioni di lunghezza `{n}`",
+  "lesson.regexForSeo.limitation.description": "Potremmo voler filtrare i risultati per lunghezza dei caratteri. Ad esempio, per filtrare gli URL che sono lunghi `35` caratteri, scrivi il numero che vuoi usare per la lunghezza, `{35}`, usando parentesi graffe alla fine del punto `.`.",
+
+  "lesson.regexForSeo.maxLimitation.title": "Limitazioni di lunghezza (Massimo) `{n,m}`",
+  "lesson.regexForSeo.maxLimitation.description": "Per filtrare gli URL con una lunghezza massima di `35` caratteri, scrivi `{1,35}` i valori numerici minimo e massimo che useremo per la lunghezza, usando parentesi graffe alla fine del punto `.`.",
+
+  "lesson.regexForSeo.minLimitation.title": "Limitazioni di lunghezza (Minimo) `{n,}`",
+  "lesson.regexForSeo.minLimitation.description": "Per filtrare gli URL con una lunghezza minima di `35` caratteri, scrivi `{35,}` usando parentesi graffe alla fine del punto e terminando con una virgola per il valore numerico minimo che useremo per la lunghezza.",
+
+  "lesson.regexForSeo.robots.title": "robots.txt (sintassi simile a regex)",
+  "lesson.regexForSeo.robots.description": "Ecco un esempio di utilizzo simile a regex nel file `robots.txt`. L'esempio afferma che i bot non dovrebbero eseguire la scansione dei link con l'estensione `pdf`.",
+
+  "lesson.regexForSeo.htaccess.title": ".htaccess",
+  "lesson.regexForSeo.htaccess.description": "Ecco un esempio di utilizzo di regex nel file `.htaccess`. Nell'esempio, i link con estensione `php` sono diretti alle estensioni `html` con il codice `301`.",
+
+  "lesson.regexForSeo.outro.title": "Conclusione",
+  "lesson.regexForSeo.outro.description": "La conoscenza di Regex è una competenza che aumenta la produttività su qualsiasi piattaforma che ti permette di usare regex. Una volta iniziato a usarlo e migliorato questa abilità, ti aiuterà a completare molte attività ripetitive più velocemente e risparmiare tempo per altre cose. Per comprendere meglio le basi di Regex, puoi visitare il tutorial `Regex 101`. Puoi usare la pagina `Playground` per testare le tue espressioni sui tuoi testi."
+}

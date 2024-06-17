@@ -1,0 +1,26 @@
+{
+  "landing.title": "Impara Regex passo dopo passo, da zero ad avanzato.",
+  "landing.description": "Imparare Regex è più facile di quanto pensi. Puoi usare questo strumento per `imparare`, `praticare`, `testare` e `condividere` Regex facilmente.",
+  "landing.imageAltText": "Illustrazione di un uomo rilassato con le gambe sul tavolo.",
+
+  "section.learn.title": "Impara",
+  "section.learn.content": "`Regular Expressions`, abbreviate come Regex o Regexp, sono una stringa di caratteri creata secondo le regole della sintassi Regex. Puoi gestire facilmente i tuoi dati con Regex, che utilizza comandi come trovare, corrispondere e modificare. Regex può essere utilizzato in linguaggi di programmazione come Python, SQL, JavaScript, R, Google Analytics, Google Data Studio e durante l'intero processo di codifica. Impara regex online con esempi e tutorial su RegexLearn ora.",
+  "section.learn.imageAltText": "Illustrazione di una montagna con una bandiera sulla cima.",
+
+  "section.cheatsheet.button": "Rivedi ora",
+  "section.cheatsheet.title": "Cheatsheet",
+  "section.cheatsheet.content": "Con `RegexLearn Cheatsheet`, puoi vedere tutti gli usi di cui hai bisogno in una volta sola e controllarli direttamente da una pagina. Esplora tutti i modelli e simboli Regex con il cheatsheet Regex.",
+  "section.cheatsheet.imageAltText": "Illustrazione di un uomo che guarda pagine attraverso un binocolo.",
+
+  "section.playground.title": "Area di prova",
+  "section.playground.content": "Se vuoi generare un Regex, puoi facilmente costruire e testare il tuo modello Regex tramite l'Area di prova. Come tester Regex, puoi convalidare e condividere il tuo Regex con altri per un lavoro collaborativo.",
+  "section.playground.imageAltText": "Illustrazione di un gatto che sta per far cadere un bicchiere pieno.",
+
+  "section.practice.title": "Pratica",
+  "section.practice.content": "Se hai completato la parte di apprendimento, è tempo di PRATICARE! Nella sezione pratica, puoi testare le tue conoscenze Regex e praticare con tutorial Regex basati sul tuo livello. Presto disponibile.",
+  "section.practice.imageAltText": "Illustrazione di una donna che prende appunti da un libro.",
+
+  "section.opensource.title": "Open Source",
+  "section.opensource.content": "Regex Learn è un progetto open-source che accoglie contributi della comunità ed è gratuito da usare. Lavorare su questo progetto ti permette di affinare le tue competenze, studiare e collaborare. Puoi contribuire e supportare qui.",
+  "section.opensource.imageAltText": "Illustrazione di una donna, un uomo e un gatto che mettono insieme pezzi di un puzzle."
+}
