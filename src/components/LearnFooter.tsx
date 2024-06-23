@@ -9,6 +9,7 @@ import Social from 'src/components/Social';
 import shortcuts from 'src/shortcuts';
 import { InteractiveAreaContext } from 'src/context/InteractiveAreaContext';
 import { useLanguageDirection } from 'src/utils/useLanguageDirection';
+import PeerlistLaunch from './PeerlistLaunch';
 
 const LearnFooter = () => {
   const { lessonData, step, nextStep, prevStep, success, error } =
@@ -68,6 +69,7 @@ const LearnFooter = () => {
           </div>
         )}
       </div>
+      <PeerlistLaunch fixed className="fixed left-2 bottom-20" />
     </div>
   );
 };
