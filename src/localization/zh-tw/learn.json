@@ -33,25 +33,25 @@
   "examples.basicMatchers.description": "撰寫選取段落當中 `of` 文字的表示式。",
 
   "examples.dotCharacter.title": "練習：任何字元",
-  "examples.dotCharacter.description": "Type the expression to select individual letters, numbers, spaces, and special characters in the text. The expression you type must match any character.",
+  "examples.dotCharacter.description": "輸入這一表示式來選擇文字當中的單一字母、數字、空白與特殊符號。表示式能找到任何字元。",
 
   "examples.characterSet.title": "練習：字元組",
-  "examples.characterSet.description": "Write the phrase that matches each word in the text. The only characters that change are the initials of the words.",
+  "examples.characterSet.description": "撰寫表示式來吻合段落中的文字，只有開頭的文字要改變。",
 
   "examples.negatedCharacterSet.title": "練習：排除字元組",
-  "examples.negatedCharacterSet.description": "Write down the expression that will match anything other than the words `beor` and `beur` in the text. Do this using the negated character set.",
+  "examples.negatedCharacterSet.description": "撰寫表示式，吻合除了 `beor` 與 `beur` 之外段落當中的文字。請使用排除字元組。",
 
   "examples.range.title": "練習：字母範圍",
-  "examples.range.description": "Write the expression that will select the letters from `g` to `k` in the text.\\n`g` and `k` letters should also be included in this range.",
+  "examples.range.description": "撰寫表示式來選擇段落當中範圍從 `g` 到 `k` 之間的字母。\\n`g` 到 `k` 這兩個字母也必須包括在範圍內。",
 
   "examples.rangeNumber.title": "練習：數字範圍",
-  "examples.rangeNumber.description": "Type an expression to select numbers from `2` to `7` in the text.\\n`2` and `7` should also be included in this range.",
+  "examples.rangeNumber.description": "撰寫表示式來選擇段落當中範圍從 `2` 到 `7` 之間的數字。\\n`2` 到 `7` 這兩個數字也必須包括在範圍內。",
 
   "steps.repetitions.title": "重覆",
-  "steps.repetitions.description": "Some special characters are used to specify how many times a character will be repeated in the text. These special characters are the plus `+`, the asterisk `*`, and the question mark `?`.",
+  "steps.repetitions.description": "有些特殊字元用在表示段落當中特定字元重覆次數。這些特殊字元有加號 `+`、星號 `*` 以及問號 `?`。",
 
   "steps.asterisk.title": "星號 `*`",
-  "steps.asterisk.description": "We put an asterisk `*` after a character to indicate that the character may either not match at all or can match many times. For example, indicate that the letter `e` should never occur in the text, or it can occur once or more side by side.",
+  "steps.asterisk.description": "我們在字元後面加上星號 `*` 來表示可能沒吻合，或是吻合多次。例如說，指示字母 `e` 沒有出現在文字當中，或是有出現一次或者接連多次出現。",
 
   "steps.plusCharacter.title": "加號 `+`",
   "steps.plusCharacter.description": "To indicate that a character can occur one or more times, we put a plus sign `+` after a character. For example, indicate that the letter `e` can occur one or more times in the text.",
