@@ -42,12 +42,12 @@ the way:
 - 🇨🇿 Czech
 - 🇬🇪 Georgian
 - 🇮🇷 Persian
+- 🇮🇹 Italian
 
 ### Requested Translations
 
 - 🇦🇪 Arabic [(Issue)](https://github.com/aykutkardas/regexlearn.com/issues/163)
 - 🇧🇩 Bengali [(Issue)](https://github.com/aykutkardas/regexlearn.com/issues/304)
-- 🇮🇹 Italian [(Issue)](https://github.com/aykutkardas/regexlearn.com/issues/323)
 - 🇻🇳 Vietnamese [(Issue)](https://github.com/aykutkardas/regexlearn.com/issues/329)
 - 🇮🇩 Indonesian [(Issue)](https://github.com/aykutkardas/regexlearn.com/issues/335)
 
