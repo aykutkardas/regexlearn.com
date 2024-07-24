@@ -1,0 +1,39 @@
+{
+  "general.prev": "Precedente",
+  "general.next": "Successivo",
+  "general.result": "Risultato",
+  "general.regex": "Regex",
+  "general.text": "Testo",
+  "general.watch": "Guarda",
+  "general.start": "Inizia",
+  "general.continue": "Continua",
+  "general.completedStep": "Passaggio completato!",
+  "general.hintQuestion": "Mostra risposta",
+  "general.reportStep": "Segnala un problema",
+  "general.startLearning": "Inizia a imparare",
+  "general.comingSoon": "Prossimamente",
+  "general.becomeSponsor": "Diventa uno sponsor",
+  "general.learn": "Impara",
+  "general.playground": "Area di prova",
+  "general.cheatsheet": "Cheatsheet",
+  "general.ourSponsors": "I nostri sponsor",
+  "general.share": "Condividi",
+  "general.shareLinkCopied": "Link condiviso copiato!",
+  "general.somethingWentWrong": "Qualcosa è andato storto!",
+
+  "notFound.intro": "La pagina che stai cercando non esiste.",
+  "notFound.button": "Torna alla home",
+
+  "page.landing.title": "Regex Learn - Passo dopo passo, da zero ad avanzato.",
+  "page.learn.title": "Regex Learn - Corso interattivo di Regex",
+  "page.cheatsheet.title": "Regex Learn - Cheatsheet Regex",
+  "page.playground.title": "Regex Learn - Area di prova",
+  "page.404.title": "Regex Learn - Non trovato",
+
+  "page.landing.description": "Impara Regex in modo interattivo, pratica al tuo livello, testa e condividi il tuo Regex.",
+  "page.learn.description": "Impara Regex passo dopo passo. Completa il tutorial interattivo che renderà il tuo apprendimento più facile e veloce.",
+  "page.cheatsheet.description": "A volte hai solo bisogno di ricordare Regex. Prova il cheatsheet che ti renderà più facile capire e ricordare meglio.",
+  "page.playground.description": "Puoi facilmente costruire e testare il tuo modello regex online tramite l'Area di prova.",
+
+  "learn.safari.unsupportWarning": "Il Regex in questo passaggio non è supportato da alcuni browser. Se hai difficoltà a superare questo passaggio, clicca qui."
+}
