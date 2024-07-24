@@ -144,16 +144,16 @@
   "steps.flags.description": "Flags change the output of the expression. That's why flags are also called `modifiers`. Flags determine whether the typed expression treats text as separate lines, is case sensitive, or finds all matches. Continue to the next step to learn the flags.",
 
   "steps.flagsGlobal.title": "全域修飾詞",
-  "steps.flagsGlobal.description": "The `global` flag causes the expression to select all matches. If not used it will only select the first match. Now enable the `global` flag to be able to select all matches.",
+  "steps.flagsGlobal.description": "`全域`修飾詞造成表示式會找出所有吻合結果。如果不啟用則只會顯示第一筆吻合結果。如果啟用`全域`修飾詞則會選取所有吻合結果。",
 
   "steps.flagsMultiline.title": "多行修飾詞",
-  "steps.flagsMultiline.description": "Regex sees all text as one line. But we use the `multiline` flag to handle each line separately. In this way, the expressions we write to identify patterns at the end of lines work separately for each line. Now enable the `multiline` flag to find all matches.",
+  "steps.flagsMultiline.description": "正規表示式會視所有文字為一行，但當我們使用`多行`修飾詞時表示一行一行來處理資料。這種方式之下，我們撰寫表示式來區別每一行行末不同模式。如果啟用`多行`模式則會找出所有吻合結果。",
 
   "steps.flagsCaseInsensitive.title": "不區分大小寫修飾詞",
-  "steps.flagsCaseInsensitive.description": "In order to remove the case-sensitivity of the expression we have written, we must activate the `case-insensitive` flag.",
+  "steps.flagsCaseInsensitive.description": "為了要移除表示式的區分大小寫的設定，我們需要啟用`不區別大小寫`的修飾詞。",
 
   "steps.greedyMatching.title": "貪心比對",
-  "steps.greedyMatching.description": "Regex does a greedy match by default. This means that the matchmaking will be as long as possible. Check out the example below. It refers to any match that ends in `r` and can be any character preceded by it. But it does not stop at the first letter `r`.",
+  "steps.greedyMatching.description": "正規表示式預設是啟用貪心模式來比對，這意味著吻合時會盡可能越長越好。檢視以下範圍，意思是任何結尾是 `r` ，而且前面是任何字元的吻合結果，但不會只停在第一個字母 `r`。",
 
   "steps.lazyMatching.title": "偷懶比對",
   "steps.lazyMatching.description": "偷懶比對，不像貪心比對那樣，會在第一次吻合時就停止了。例如說，以下的例子來說，在 `*` 新增 `?` 則會在吻合字前面有任何字母，字結尾有 `r` 時，吻合一次就會停止，意味著吻合到第一個 `r` 字母。",
