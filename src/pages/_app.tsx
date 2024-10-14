@@ -42,6 +42,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
       {metadata && (
         <Head>
           <title>{metadata.title}</title>
+          <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
           <meta name="description" content={metadata.description} />
           {typeof metadata.hrefLang === 'string' &&
             locales.map(locale => (
