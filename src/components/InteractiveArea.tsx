@@ -144,6 +144,14 @@ const InteractiveArea = ({ isShow, setIsOpenModal }: Props) => {
     applyRegex(e.target.value, flags);
   };
 
+  const onFocus = e => {
+    if (data.readOnly) {
+        return;
+    }
+
+    onChange(e);
+  }
+
   const focusInput = () => {
     regexInput?.current?.focus();
   };
@@ -254,7 +262,7 @@ const InteractiveArea = ({ isShow, setIsOpenModal }: Props) => {
             readOnly={data.readOnly}
             value={data.visibleRegex || regex}
             onChange={onChange}
-            onFocus={onChange}
+            onFocus={onFocus}
             placeholder={placeholder}
             spellCheck={false}
           />

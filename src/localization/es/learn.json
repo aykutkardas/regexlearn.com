@@ -158,6 +158,6 @@
   "steps.lazyMatching.title": "Coincidencia perezosa",
   "steps.lazyMatching.description": "El emparejamiento perezoso, a diferencia del emparejamiento codicioso, se detiene en el primer emparejamiento. Por ejemplo, en el siguiente ejemplo, agregue un `?` después de `*` para encontrar la primera coincidencia que termine con la letra `r` y esté precedida por cualquier carácter. Significa que esta coincidencia se detendrá en la primera letra `r`.",
 
-  "steps.completeAllSteps.title": "Felicitaciones has completado todos los pasos.",
+  "steps.completeAllSteps.title": "Felicitaciones, has completado todos los pasos.",
   "steps.completeAllSteps.description": "Puede volver a los pasos anteriores cuando lo desee, y puede navegar fácilmente a través de todos los pasos que ha pasado."
 }

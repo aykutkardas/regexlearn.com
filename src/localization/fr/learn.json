@@ -114,7 +114,7 @@
   "steps.withoutWordCharacter.description": "L'expression `\\W` est utilisée pour trouver des caractères autres que des lettres, des chiffres et des caractères de soulignement.",
 
   "steps.numberCharacter.title": "Caractère numérique `\\d`",
-  "steps.numberCharacter.description": "`\\d` is used to find only number characters.",
+  "steps.numberCharacter.description": "`\\d` est utilisé pour trouver uniquement les caractères numériques.",
 
   "steps.withoutNumberCharacter.title": "Except Number Character `\\D`",
   "steps.withoutNumberCharacter.description": "`\\D` est utilisé pour trouver uniquement les caractères numériques.",
