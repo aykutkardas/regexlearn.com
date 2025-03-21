@@ -72,25 +72,25 @@
   "examples.asterisk.description": "使用星號 `*` 來撰寫表示式選取每個文字，適合文字當中沒有或是一次或是多次出現字母 `e` 的情形。",
 
   "examples.plusCharacter.title": "練習：加號 `+`",
-  "examples.plusCharacter.description": "使用加號 `+` 來撰寫表示式選取文字當中吻合一次或是多次字母 `e` 的情形。Write the expression using the plus sign `+` to select words in which the letter `e` occurs one or more times in the text.",
+  "examples.plusCharacter.description": "使用加號 `+` 來撰寫表示式選取文字當中吻合一次或是多次字母 `e` 的情形。",
 
   "examples.questionMark.title": "練習：問號 `?`",
-  "examples.questionMark.description": "Write the expression indicating that the letter `n` is optional in the text, using the question mark `?`. Thus, both the words `a` and `an` can be selected.",
+  "examples.questionMark.description": "使用問號 `?` 撰寫表示式表達文字當中字母 `n` 是選擇性的。因此 `a` 與 `an` 都會被選擇。",
 
   "examples.quantifier.title": "練習：大括號 - 1",
-  "examples.quantifier.description": "Write the expression using curly braces `{}` that will find texts containing `4` numbers side by side. Remember that the range `[0-9]` will match a single digit.",
+  "examples.quantifier.description": "使用大括號 `{}` 來找文字當中含有連續的 `4` 數字。記住範圍 `[0-9]` 會找出吻合的單一位數字。",
 
   "examples.quantifierMin.title": "練習：大括號 - 2",
-  "examples.quantifierMin.description": "Write the expression using curly braces `{}` that will find texts containing at least `2` numbers side by side.",
+  "examples.quantifierMin.description": "使用大括號 `{}` 來找出文字當中連續出現至少 `2` 的文字。",
 
   "examples.quantifierRange.title": "練習：大括號 - 3",
-  "examples.quantifierRange.description": "Write the expression using curly braces `{}` that will find texts containing at least `1` and at most `4` numbers side by side.",
+  "examples.quantifierRange.description": "使用大括號 `{}` 找出文字當中連續出現現至少 `1` 以及最多 `4` 的文字。",
 
   "steps.groupping.title": "Parentheses `( )`: 群組",
-  "steps.groupping.description": "We can group an expression and use these groups to reference or enforce some rules. To group an expression, we enclose `()` in parentheses. For now just group `haa` below.",
+  "steps.groupping.description": "我可以群組表示式，並且採用群組來參照或是套用一些規則。要群組表示式，則需要在 `()` 括號內。現在我自來群組下面的 `haa`。",
 
   "steps.groupReference.title": "參照群組",
-  "steps.groupReference.description": "The words `ha` and `haa` are grouped below. The first group is used by writing `\\1` to avoid rewriting. Here `1` denotes the order of grouping. Type `\\2` at the end of the expression to refer to the second group.",
+  "steps.groupReference.description": "`ha` 與 `haa` 已經在下面群組了。第一個群組用 `\\1` 來撰寫避免再重寫。這邊 `1` 表示群組的順序。在表示式結尾輸入 `\\2` 表示第二個群組。",
 
   "steps.nonCapturingGroupping.title": "圓括號 `(?: )`: 非捕捉群組",
   "steps.nonCapturingGroupping.description": "You can group an expression and ensure that it is not captured by references. For example, below are two groups. However, the first group reference we denote with `\\1` actually indicates the second group, as the first is a non-capturing group.",
