@@ -54,25 +54,25 @@
   "steps.asterisk.description": "我們在字元後面加上星號 `*` 來表示可能沒吻合，或是吻合多次。例如說，指示字母 `e` 沒有出現在文字當中，或是有出現一次或者接連多次出現。",
 
   "steps.plusCharacter.title": "加號 `+`",
-  "steps.plusCharacter.description": "To indicate that a character can occur one or more times, we put a plus sign `+` after a character. For example, indicate that the letter `e` can occur one or more times in the text.",
+  "steps.plusCharacter.description": "我們在字元後面加上加號 `+` 來表示吻合一次或是更多次。例如說，表示字母 `e` 可以在段落中吻合一次或更多次。",
 
   "steps.questionMark.title": "問號 `?`",
-  "steps.questionMark.description": "To indicate that a character is optional, we put a `?` question mark after a character. For example, indicate that the following letter `u` is optional.",
+  "steps.questionMark.description": "我們在字元後面加上問號 `?`，例如說，表示 `u` 後面的字母是可有可無。",
 
   "steps.quantifier.title": "大括號 - 1",
-  "steps.quantifier.description": "To express a certain number of occurrences of a character,  at the end we write curly braces `{n}` along with how many times we want it to occur. For example, indicate that the following letter `e` can occur only `2` times.",
+  "steps.quantifier.description": "我們在結尾加上大括號 `{n}` 來表示我們希望字元吻合的次數。例如說，表示字母 `e` 只能吻合 `2` 次。",
 
   "steps.quantifierMin.title": "大括號 - 2",
-  "steps.quantifierMin.description": "To express at least a certain number of occurrences of a character, immediately after the character we write at least how many times we want it to occur followed by a comma `,` and wrapped inside curly braces `{n, }`. For example, indicate that the following letter `e` can occur at least `3` times.",
+  "steps.quantifierMin.description": "要來表示某個字元出現的最少吻合次數，我們在字元後立即寫出我們希望出現的最少次數，後面跟著逗號 `,`，並用大括號 `{n, }` 包起來。例如說，表示以下字母 `e` 最少吻合 `3` 次。",
 
   "steps.quantifierRange.title": "大括號 - 3",
-  "steps.quantifierRange.description": "To express the occurrence of a character in a certain number range, we write curly braces `{x,y}` with the interval we want to go to the end. For example, indicate that the following letter `e` can only occur between `1` and `3`.",
+  "steps.quantifierRange.description": "要來表示某個字元的吻合次數範圍，我們寫大括號 `{x,y}` 裡頭寫出開始到結尾的區間。例如說，這表示接續的字母 `e` 只可以吻合`1` 到 `3` 次。",
 
   "examples.asterisk.title": "練習：星號 `*`",
-  "examples.asterisk.description": "Use the asterisk `*` to write the expression that will select each word, suitable for the absence of the letter `e` in the text and the presence of one or more.",
+  "examples.asterisk.description": "使用星號 `*` 來撰寫表示式選取每個文字，適合文字當中沒有或是一次或是多次出現字母 `e` 的情形。",
 
   "examples.plusCharacter.title": "練習：加號 `+`",
-  "examples.plusCharacter.description": "Write the expression using the plus sign `+` to select words in which the letter `e` occurs one or more times in the text.",
+  "examples.plusCharacter.description": "使用加號 `+` 來撰寫表示式選取文字當中吻合一次或是多次字母 `e` 的情形。Write the expression using the plus sign `+` to select words in which the letter `e` occurs one or more times in the text.",
 
   "examples.questionMark.title": "練習：問號 `?`",
   "examples.questionMark.description": "Write the expression indicating that the letter `n` is optional in the text, using the question mark `?`. Thus, both the words `a` and `an` can be selected.",
