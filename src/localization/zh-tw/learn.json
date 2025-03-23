@@ -129,19 +129,19 @@
   "steps.lookarounds.description": "如果你想要某個詞出現在某個詞之前或是之後的話，我們需要 \"環顧\"。接著來學習如何 \"環顧\".",
 
   "steps.positiveLookahead.title": "正面向前環顧: `(?=)`",
-  "steps.positiveLookahead.description": "For example, we want to select the hour value in the text. Therefore, to select only the numerical values that have `PM` after them, we need to write the positive look-ahead expression `(?=)` after our expression. Include `PM` after the `=` sign inside the parentheses.",
+  "steps.positiveLookahead.description": "例如，我們希望選取文字當中的時間數值，因此我們只要選取在後面有接 `PM` 的數字，我們需要在表示式後接上正面向前環顧表示式 `(?=)`，包括括號內 `=` 符號後接續 `PM`。",
 
   "steps.negativeLookahead.title": "負面向前環顧: `(?!)`",
-  "steps.negativeLookahead.description": "For example, we want to select numbers other than the hour value in the text. Therefore, we need to write the negative look-ahead `(?!)` expression after our expression to select only the numerical values that do not have `PM` after them. Include `PM` after the `!` sign inside the parentheses.",
+  "steps.negativeLookahead.description": "例如，我們希望選取文字當中數字而非時間，因此我們在表示式後撰寫負面向前環顧 `(?!)` 表示式，就只會選取數字，而非後面接有 `PM`。包括括號內 `!` 符號後接續 `PM`。",
 
   "steps.positiveLookbehind.title": "正面向後環顧: `(?<=)`",
   "steps.positiveLookbehind.description": "For example, we want to select the price value in the text. Therefore, to select only the number values that are preceded by `$`, we need to write the positive lookbehind expression `(?<=)` before our expression. Add `\\$` after the `=` sign inside the parenthesis.",
 
   "steps.negativeLookbehind.title": "負面向後環顧: `(?&lt;!)`",
-  "steps.negativeLookbehind.description": "For example, we want to select numbers in the text other than the price value. Therefore, to select only numeric values that are not preceded by `$`, we need to write the negative lookbehind `(?&lt;!)` before our expression. Add `\\$` after the `!` inside the parenthesis.",
+  "steps.negativeLookbehind.description": "例如，我們想要選取文字當中的數字但非價格，因此我們不選取 `$` 後有數字的數字，我們需要在表示式前撰寫負面向後環顧 `(?&lt;!)`。在括號內 `!` 後新增表示 `\\$`。",
 
   "steps.flags.title": "修飾詞",
-  "steps.flags.description": "Flags change the output of the expression. That's why flags are also called `modifiers`. Flags determine whether the typed expression treats text as separate lines, is case sensitive, or finds all matches. Continue to the next step to learn the flags.",
+  "steps.flags.description": "修飾詞改變表示式的輸出，這也是為什麼又稱為`旗旘`。修飾詞能夠決定表示式處理文字的方式，像是分行、是否大小寫敏感，或是尋找所有吻合狀態。接下來的步驟會詳細解釋修飾詞。",
 
   "steps.flagsGlobal.title": "全域修飾詞",
   "steps.flagsGlobal.description": "`全域`修飾詞造成表示式會找出所有吻合結果。如果不啟用則只會顯示第一筆吻合結果。如果啟用`全域`修飾詞則會選取所有吻合結果。",
