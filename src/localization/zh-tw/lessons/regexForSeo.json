@@ -12,10 +12,10 @@
   "lesson.regexForSeo.or.description": "我們使用或運算子 `|` 來篩選出多重表示式。例如我們想要篩選文字包含 `seo` 與 `regex` 兩個字，就用或是運算子 `|` 來分隔。",
 
   "lesson.regexForSeo.optional.title": "選擇性的運算子 `?`",
-  "lesson.regexForSeo.optional.description": "We use it to express that an expression or character is optional. For example, we want to filter text containing both `http` and `https`. We can use the Or operator `|` for this operation, but there is a better way for these two almost identical words.\\n\\nIn this example, the letter `s` is optional. Instead, add a question mark `?` to the end of the letter `s`.",
+  "lesson.regexForSeo.optional.description": "我們使用來表示表示式或是字元是選擇性的。例如我們想篩選出有 `http` 與 `https` 兩者都要。我們可以使用或是運算子 `|` 來處理，但是比較好的方式是這兩都很像。\\n\n在這一例子當中，字母 `s` 是選擇性的，因此能加上問號 `?` 來替代結尾的字母 `s`。",
 
   "lesson.regexForSeo.any.title": "任何 `.*`",
-  "lesson.regexForSeo.any.description": "In regex, the period `.` can match anything, including spaces. But this match is only for a single character where it is used. The asterisk character `*` means that the preceding item does not exist at all or occurs more than once in the text. When the two are used together, it means that there can be an element of unlimited length where used.\\n\\nBelow are various keywords. Add `.*` to the end of the regex to write the expression that starts with `how to write` and matches everything after it.",
+  "lesson.regexForSeo.any.description": "在正規表示式當中，逗號 `,` 能吻合任何字元，包括空白。但是使用時這只會吻合一個字元。因此加星號 `*` 表示文字當中後面沒有字元或是有超過一個字元的情形。當兩者組合在一起使用時，表示任何長度的元素。\\n\n以下有多個關鍵字，在正規表示式結尾新增 `.*` 來表示開頭為 `how to write` 以及吻合後面任何東西。",
 
   "lesson.regexForSeo.contains.title": "包含",
   "lesson.regexForSeo.contains.description": "To filter the text that contains the words or phrases we're looking for, we write the word we're looking for between our two phrases `.*` that match everything. For example, type `.*buy.*` to filter out what includes `buy`.",
