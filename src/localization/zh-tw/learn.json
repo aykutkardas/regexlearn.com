@@ -93,40 +93,40 @@
   "steps.groupReference.description": "`ha` 與 `haa` 已經在下面群組了。第一個群組用 `\\1` 來撰寫避免再重寫。這邊 `1` 表示群組的順序。在表示式結尾輸入 `\\2` 表示第二個群組。",
 
   "steps.nonCapturingGroupping.title": "圓括號 `(?: )`: 非捕捉群組",
-  "steps.nonCapturingGroupping.description": "You can group an expression and ensure that it is not captured by references. For example, below are two groups. However, the first group reference we denote with `\\1` actually indicates the second group, as the first is a non-capturing group.",
+  "steps.nonCapturingGroupping.description": "你可以指定群組的表達式是非參照捕捉群組。例如下列的兩組群組。然後，第一個群組參照用 `\\1` 修飾實際是表示第二個群組，因為第一個群組是非博捉群組。",
 
   "steps.pipeCharacter.title": "管道字元 `|`",
-  "steps.pipeCharacter.description": "It allows to specify that an expression can be in different expressions. Thus, all possible statements are written separated by the pipe sign `|`. This differs from charset `[abc]`, charsets operate at the character level. Alternatives are at the expression level. For example, the following expression would select both `cat` and `rat`. Add another pipe sign `|` to the end of the expression and type `dog` so that all words are selected.",
+  "steps.pipeCharacter.description": "這個選項允許表示式有不同的表示式。因此，所有可能的聲稱用管道符號 `|` 分隔。這個選項與 `[abc]` 字元組是以字元為層次運作，其他的是以表示式的層次。例如，下列的表示式會同時選擇 `cat` 與 `rat`。新增其他管道符號 `|` 在表示式結尾再打上 `dog` 則會所有文字都會被選到。",
 
   "steps.escapeCharacter.title": "逃脫字元 `\\`",
-  "steps.escapeCharacter.description": "There are special characters that we use when writing regex. `{ } [ ] / \\ + * . $^ | ?` Before we can select these characters themselves, we need to use an escape character `\\`. For example, to select the dot `.` and asterisk `*` characters in the text, let's add an escape character `\\` before it.",
+  "steps.escapeCharacter.description": "當撰寫表示式時使用一些特殊字元， `{ } [ ] / \\ + * . $^ | ?` 。當然我們也可以選擇這些字元，但我們需要用跳脫字元 `\\`。例如，選擇文字當中的句號 `.` 和星號 `*` 字元，就能在前面加上逃脫字元 `\\`。",
 
-  "steps.caret.title": "插入記號 `^`:\\nSelecting by Line Start",
-  "steps.caret.description": "We were using `[0-9]` to find numbers. To find only numbers at the beginning of a line, prefix this expression with the `^` sign.",
+  "steps.caret.title": "插入記號 `^`:\\n在一行開始處選擇",
+  "steps.caret.description": "我們使用 `[0-9]` 來找數字，要只在一行的開頭找數字的話，請在前面加上前綴 `^` 符號。",
 
-  "steps.dollar.title": "金錢符號 `$`:\\nSelecting by End of Line",
+  "steps.dollar.title": "金錢符號 `$`:\\n在一行結束處選擇",
   "steps.dollar.description": "Let's use the `$` sign after the `html` value to find the `html` texts only at the end of the line.",
 
   "steps.wordCharacter.title": "文字字元 `\\w`: 字母、數字與底線",
-  "steps.wordCharacter.description": "The expression `\\w` is used to find letters, numbers and underscore characters. Let's use the expression `\\w` to find word characters in the text.",
+  "steps.wordCharacter.description": "表示式 `\\w` 是用來找字母、數字與底線字元。讓我們使用表示式 `\\w` 來找文字當中的文字字元。",
 
   "steps.withoutWordCharacter.title": "排除文字字元 `\\W`",
-  "steps.withoutWordCharacter.description": "The expression `\\W` is used to find characters other than letters, numbers, and underscores.",
+  "steps.withoutWordCharacter.description": "表示式 `\\W` 是用來排除字母、數字與底線的字元。",
 
   "steps.numberCharacter.title": "數字字元 `\\d`",
-  "steps.numberCharacter.description": "`\\d` is used to find only number characters.",
+  "steps.numberCharacter.description": "`\\d` 是只用來找數字字元",
 
   "steps.withoutNumberCharacter.title": "排除數字字元 `\\D`",
-  "steps.withoutNumberCharacter.description": "`\\D` is used to find non-numeric characters.",
+  "steps.withoutNumberCharacter.description": "`\\D` 是用來排除數字字元。",
 
   "steps.spaceCharacter.title": "空白字元 `\\s`",
-  "steps.spaceCharacter.description": "`\\s` is used to find only space characters.",
+  "steps.spaceCharacter.description": "`\\s` 是只用來找空白字元。",
 
   "steps.withoutSpaceCharacter.title": "排除空白字元 `\\S`",
-  "steps.withoutSpaceCharacter.description": "`\\S` is used to find non-space characters.",
+  "steps.withoutSpaceCharacter.description": "`\\S` 是用來排除空白字元。",
 
   "steps.lookarounds.title": "環顧",
-  "steps.lookarounds.description": "If we want the phrase we're writing to come before or after another phrase, we need to \"lookaround\". Take the next step to learn how to \"lookaround\".",
+  "steps.lookarounds.description": "如果你想要某個詞出現在某個詞之前或是之後的話，我們需要 \"環顧\"。接著來學習如何 \"環顧\".",
 
   "steps.positiveLookahead.title": "正面向前環顧: `(?=)`",
   "steps.positiveLookahead.description": "For example, we want to select the hour value in the text. Therefore, to select only the numerical values that have `PM` after them, we need to write the positive look-ahead expression `(?=)` after our expression. Include `PM` after the `=` sign inside the parentheses.",
