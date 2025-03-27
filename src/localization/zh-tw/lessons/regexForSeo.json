@@ -18,16 +18,16 @@
   "lesson.regexForSeo.any.description": "在正規表示式當中，逗號 `,` 能吻合任何字元，包括空白。但是使用時這只會吻合一個字元。因此加星號 `*` 表示文字當中後面沒有字元或是有超過一個字元的情形。當兩者組合在一起使用時，表示任何長度的元素。\\n\n以下有多個關鍵字，在正規表示式結尾新增 `.*` 來表示開頭為 `how to write` 以及吻合後面任何東西。",
 
   "lesson.regexForSeo.contains.title": "包含",
-  "lesson.regexForSeo.contains.description": "To filter the text that contains the words or phrases we're looking for, we write the word we're looking for between our two phrases `.*` that match everything. For example, type `.*buy.*` to filter out what includes `buy`.",
+  "lesson.regexForSeo.contains.description": "要篩選出特定的文字或是片語，我們可以尋找被夾在中間的文字 `.*`。例如我們輸入 `.*buy.*` 來尋找含有 `buy` 的文字。.",
 
   "lesson.regexForSeo.negated.title": "負面字元集 `[^abc]`",
-  "lesson.regexForSeo.negated.description": "We use the negated character sets `[^]` to denote characters we don't want to be included. The characters we do not want to be included are written in square brackets with a caret at the beginning. Below are both `http` and `https`. Since `http` occurs in both, it will also choose `https`. Type `[^s]` after the letter `p` to exclude the letter `s`.",
+  "lesson.regexForSeo.negated.description": "我們使用負面字元集 `[^]`，中括號開頭用插入符號來排除我們不要的字元。像是 `http` 與 `https`，都包含 `http`，因此也會選擇 `https`。在字母 `p` 之後輸入 `[^s]` 來排除字母 `s`。",
 
   "lesson.regexForSeo.caret.title": "插入符號 `^`",
-  "lesson.regexForSeo.caret.description": "Let's say we have a list of URLs, and we want to find only those URLs that start with `http`. But URLs also contain `http` in different parts other than their beginning. So add a caret `^` to the beginning of the following expression to filter out only those starting with `http`.",
+  "lesson.regexForSeo.caret.description": "我們有網址清單，而我們只想要找 `http` 開頭的網址，但有時候 `http` 也會出現在不是開頭的地方。所以在開頭新增插入符號 `^` 能夠只篩選出 `http` 開頭的網址。",
 
   "lesson.regexForSeo.dollarAndEscape.title": "錢幣符號 `$` 與跳脫字元 `\\`",
-  "lesson.regexForSeo.dollarAndEscape.description": "Again we have a list of URLs. We want to find only those URLs ending in `.htm`.\\n\\nSince the period `.` is a special character that matches everything, we first need to disable the period before `htm` using the escape character `\\`. This applies to all special characters.\\n\\nThen add a `$` sign to the end of the expression. This ensures that the text to be filtered ends with the expression written before it.",
+  "lesson.regexForSeo.dollarAndEscape.description": "我們又有網址清單，我們只想要網址結尾是 `.htm`。\\n\\n由於句號是特殊字元會吻合所有，我們需要用跳脫字元 `\\` 把 `htm` 前的使其失效。這會 This applies to all special characters.\\n\\nThen add a `$` sign to the end of the expression. This ensures that the text to be filtered ends with the expression written before it.",
 
   "lesson.regexForSeo.limitation.title": "長度限制 `{n}`",
   "lesson.regexForSeo.limitation.description": "We may want to filter the results by character lengths. For example, to filter URLs that are `35` characters long, type the number you want to use for the length, `{35}`, using curly braces at the end of the period `.`.",
