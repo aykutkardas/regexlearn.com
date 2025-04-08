@@ -17,9 +17,7 @@ export const langNames = {
   'ar': '🇸🇦',
 };
 
-export const rtlSupported = ['fa'];
-
-export const rtlSupported = ['ar'];
+export const rtlSupported = ['fa', 'ar'];
 
 export const defaultLocale = 'en';
 
