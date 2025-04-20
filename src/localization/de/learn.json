@@ -75,7 +75,7 @@
   "examples.plusCharacter.description": "Schreiben Sie den Ausdruck mit dem Pluszeichen `+`, um Wörter auszuwählen, in denen der Buchstabe `e` einmal oder mehrmals im Text vorkommt.",
 
   "examples.questionMark.title": "Übung: Fragezeichen `?`",
-  "examples.questionMark.description": "Schreiben Sie den Ausdruck, der anzeigt, dass der Buchstabe `n` im Text optional ist, indem Sie das Fragezeichen `?` verwenden. Somit können sowohl die Wörter `a` als auch `an` ausgewählt werden." ,
+  "examples.questionMark.description": "Schreiben Sie den Ausdruck, der anzeigt, dass der Buchstabe `n` im Text optional ist, indem Sie das Fragezeichen `?` verwenden. Somit können sowohl die Wörter `a` als auch `an` ausgewählt werden.",
 
   "examples.quantifier.title": "Übung: Geschweifte Klammern - 1",
   "examples.quantifier.description": "Schreiben Sie den Ausdruck mit geschweiften Klammern `{}`, der Texte findet, die `4` Zahlen nebeneinander enthalten.",
@@ -126,14 +126,14 @@
   "steps.withoutSpaceCharacter.description": "`\\S` wird verwendet, um Nicht-Leerzeichen zu finden.",
 
   "steps.lookarounds.title": "Lookarounds",
-  "steps.lookarounds.description": "Wenn wir möchten, dass der Satz, den wir schreiben, vor oder nach einem anderen Satz steht, müssen wir \"look around\". Machen Sie den nächsten Schritt, um zu lernen, wie man \"looks around\"." ,
+  "steps.lookarounds.description": "Wenn wir möchten, dass der Satz, den wir schreiben, vor oder nach einem anderen Satz steht, müssen wir \"look around\". Machen Sie den nächsten Schritt, um zu lernen, wie man \"looks around\".",
 
   "steps.positiveLookahead.title": "Positiver Lookahead: `(?=)`",
   "steps.positiveLookahead.description": "Zum Beispiel möchten wir den Stundenwert im Text auswählen. Um daher nur die numerischen Werte auszuwählen, denen `PM` folgt, müssen wir den positiven Look-Ahead-Ausdruck ` schreiben (?=)` nach unserem Ausdruck. Fügen Sie `PM` nach dem `=`-Zeichen in Klammern ein.",
 
   "steps.negativeLookahead.title": "Negativer Lookahead: `(?!)`",
   "steps.negativeLookahead.description": "Zum Beispiel möchten wir andere Zahlen als den Stundenwert im Text auswählen. Daher müssen wir den negativen Look-Ahead-Ausdruck `(?!)` nach unserem Ausdruck schreiben, um nur auszuwählen die numerischen Werte, die kein `PM` nach sich haben. Fügen Sie `PM` nach dem `!`-Zeichen in Klammern ein.",
-  
+
   "steps.positiveLookbehind.title": "Positiver Lookbehind: `(?<=)`",
   "steps.positiveLookbehind.description": "Zum Beispiel möchten wir den Preiswert im Text auswählen. Daher müssen wir, um nur die Zahlenwerte auszuwählen, denen `$` vorangestellt ist, den positiven Lookbehind-Ausdruck `(?< schreiben =)` vor unserem Ausdruck. Fügen Sie `\\$` nach dem `=`-Zeichen in den Klammern hinzu.",
 
@@ -151,12 +151,12 @@
 
   "steps.flagsCaseInsensitive.title": "Groß-/Kleinschreibung beachten",
   "steps.flagsCaseInsensitive.description": "Um die Groß-/Kleinschreibung des von uns geschriebenen Ausdrucks zu entfernen, müssen wir das Flag `Groß-/Kleinschreibung ignorieren` aktivieren.",
-  
+
   "steps.greedyMatching.title": "Gieriger Abgleich",
-  "steps.greedyMatching.description": "Regex führt standardmäßig einen Greedy-Match durch. Das bedeutet, dass das Matchmaking so lang wie möglich sein wird. Sehen Sie sich das Beispiel unten an. Es bezieht sich auf alle Matches, die auf „r“ enden und beliebig sein können vorangestelltes Zeichen. Aber es hört nicht beim ersten Buchstaben `r` auf.",
+  "steps.greedyMatching.description": "Regex führt standardmäßig einen Greedy-Match durch. Das bedeutet, dass das Matching so lang wie möglich sein wird. Sehen Sie sich das Beispiel unten an. Es bezieht sich auf alle Matches, die auf „r“ enden und beliebig sein können vorangestelltes Zeichen. Aber es hört nicht beim ersten Buchstaben `r` auf.",
 
   "steps.lazyMatching.title": "Lazy Matching",
-  "steps.lazyMatching.description": "Lazy Matchmaking stoppt im Gegensatz zu Greedy Matching beim ersten Matching. Fügen Sie zum Beispiel im Beispiel unten ein „?“ nach „*“ hinzu, um das erste Match zu finden, das mit dem Buchstaben „`“ endet r` und ihm ein beliebiges Zeichen vorangestellt ist. Dies bedeutet, dass dieser Vergleich beim ersten Buchstaben `r` stoppt.",
+  "steps.lazyMatching.description": "Lazy Matching stoppt im Gegensatz zu Greedy Matching beim ersten Matching. Fügen Sie zum Beispiel im Beispiel unten ein „?“ nach „*“ hinzu, um das erste Match zu finden, das mit dem Buchstaben „`“ endet r` und ihm ein beliebiges Zeichen vorangestellt ist. Dies bedeutet, dass dieser Vergleich beim ersten Buchstaben `r` stoppt.",
 
   "steps.completeAllSteps.title": "Herzlichen Glückwunsch, Sie haben alle Schritte abgeschlossen!",
   "steps.completeAllSteps.description": "Sie können jederzeit zu den vorherigen Schritten zurückkehren und einfach durch alle Schritte navigieren, die Sie durchlaufen haben."
