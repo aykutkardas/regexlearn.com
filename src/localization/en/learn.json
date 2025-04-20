@@ -90,7 +90,7 @@
   "steps.grouping.description": "We can group an expression and use these groups to reference or enforce some rules. To group an expression, we enclose `()` in parentheses. For now just group `haa` below.",
 
   "steps.groupReference.title": "Referencing a Group",
-  "steps.groupReference.description": "The words `ha` and `haa` are grouped below. The first group is used by writing `\\1` to avoid rewriting. Here `1` denotes the order of grouping. Type `\\2` at the end of the expression to refer to the second group.",
+  "steps.groupReference.description": "Below, we have two groups: `(ha)` and `(haa)`. When we want to reference these groups later in the pattern, we use `\\1` for the first group and `\\2` for the second group. For example, in the pattern `(ha)-\\1,(haa)-\\2`, the `-` is outside the groups, and `\\1` refers to `ha` while `\\2` refers to `haa`. Type `\\2` at the end of the expression to refer to the second group.",
 
   "steps.nonCapturingGrouping.title": "Parentheses `(?: )`: Non-capturing Grouping",
   "steps.nonCapturingGrouping.description": "You can group an expression and ensure that it is not captured by references. For example, below are two groups. However, the first group reference we denote with `\\1` actually indicates the second group, as the first is a non-capturing group.",
@@ -153,7 +153,7 @@
   "steps.flagsCaseInsensitive.description": "In order to remove the case-sensitivity of the expression we have written, we must activate the `case-insensitive` flag.",
 
   "steps.greedyMatching.title": "Greedy Matching",
-  "steps.greedyMatching.description": "Regex does a greedy match by default. This means that the matching will be as long as possible. Check out the example below. It refers to any match that ends in `r` and can be any character preceded by it. But it does not stop at the first letter `r`.",
+  "steps.greedyMatching.description": "Regex does a greedy match by default. This means that the matching will be as long as possible. Check out the example below. It refers to any match that ends in `r` and can be any character preceded by it. But it does not stop at the first match.",
 
   "steps.lazyMatching.title": "Lazy Matching",
   "steps.lazyMatching.description": "Lazy matching, unlike greedy matching, stops at the first matching. For example, in the example below, add a `?` after `*` to find the first match that ends with the letter `r` and is preceded by any character. It means that this match will stop at the first letter `r`.",
