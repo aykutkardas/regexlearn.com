@@ -137,8 +137,8 @@
   "steps.positiveLookbehind.title": "Lookbehind positivo: `(?<=)`",
   "steps.positiveLookbehind.description": "Per esempio, vogliamo selezionare il valore del prezzo nel testo. Quindi, per selezionare solo i valori numerici preceduti da `$`, dobbiamo scrivere l'espressione di lookbehind positivo `(?<=)` prima della nostra espressione. Aggiungi `\\$` dopo il segno `=` all'interno delle parentesi.",
 
-  "steps.negativeLookbehind.title": "Lookbehind negativo: `(?<! )`",
-  "steps.negativeLookbehind.description": "Per esempio, vogliamo selezionare numeri nel testo diversi dal valore del prezzo. Quindi, per selezionare solo valori numerici non preceduti da `$`, dobbiamo scrivere l'espressione di lookbehind negativo `(?<! )` prima della nostra espressione. Aggiungi `\\$` dopo il segno `!` all'interno delle parentesi.",
+  "steps.negativeLookbehind.title": "Lookbehind negativo: `(?&lt;!)`",
+  "steps.negativeLookbehind.description": "Per esempio, vogliamo selezionare numeri nel testo diversi dal valore del prezzo. Quindi, per selezionare solo valori numerici non preceduti da `$`, dobbiamo scrivere l'espressione di lookbehind negativo `(?&lt;!)` prima della nostra espressione. Aggiungi `\\$` dopo il segno `!` all'interno delle parentesi.",
 
   "steps.flags.title": "Flag",
   "steps.flags.description": "Le flag cambiano l'output dell'espressione. Ecco perché le flag sono anche chiamate `modificatori`. Le flag determinano se l'espressione digitata tratta il testo come righe separate, è sensibile alle maiuscole o trova tutte le corrispondenze. Continua al passo successivo per imparare le flag.",
