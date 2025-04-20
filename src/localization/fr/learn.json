@@ -117,7 +117,7 @@
   "steps.numberCharacter.description": "`\\d` est utilisé pour trouver uniquement les caractères numériques.",
 
   "steps.withoutNumberCharacter.title": "Except Number Character `\\D`",
-  "steps.withoutNumberCharacter.description": "`\\D` est utilisé pour trouver uniquement les caractères numériques.",
+  "steps.withoutNumberCharacter.description": "`\\D` est utilisé pour trouver uniquement les caractères non numériques.",
 
   "steps.spaceCharacter.title": "Caractère d'espace `\\s`",
   "steps.spaceCharacter.description": "`\\S` est utilisé pour trouver uniquement les caractères d'espace.",
