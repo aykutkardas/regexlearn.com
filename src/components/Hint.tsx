@@ -35,13 +35,13 @@ const Hint = ({ regex, flags, hiddenFlags }: Props) => {
         <FormattedMessage id="general.hintQuestion" />
       </Popover.Button>
 
-      <Popover.Panel className="absolute w-32 text-center z-10 mt-2 p-2 border border-neutral-700 bg-neutral-800 shadow-md rounded-md">
+      <Popover.Panel className="absolute right-0 w-40 text-center z-10 mt-2 p-2 border border-neutral-700 bg-neutral-800 shadow-md rounded-md">
         <div className="text-green-300 flex flex-col gap-3">
           {regex.map(answer => (
             <div className="mt-1 border border-neutral-800 text-neutral-500" key={answer}>
               <span
                 data-flags={flags}
-                className={cx('text-regreen-400 text-sm', {
+                className={cx('text-regreen-400 text-nowrap w-full text-sm', {
                   "before:content-['/'] before:text-neutral-500 after:content-['/'_attr(data-flags)] after:text-neutral-500":
                     !hiddenFlags,
                 })}
