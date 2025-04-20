@@ -136,8 +136,8 @@
   "steps.positiveLookbehind.title": "Lookbehind Positivo: `(?<=)`",
   "steps.positiveLookbehind.description": "Por exemplo, queremos selecionar o valor do preço no texto. Portanto, para selecionar apenas os valores numéricos precedidos por `$`, precisamos escrever o lookbehind positivo `(?<=)` antes de nossa expressão. Adicione `\\$` após o sinal de igual `=` entre parênteses.",
 
-  "steps.negativeLookbehind.title": "Lookbehind Negativo: `(?<!)`",
-  "steps.negativeLookbehind.description": "Por exemplo, queremos selecionar números no texto que não sejam o valor do preço. Portanto, para selecionar apenas valores numéricos que não sejam precedidos por `$`, precisamos escrever o lookbehind negativo `(?<!)` antes de nossa expressão. Adicione `\\$` após o sinal de menor que `<` entre parênteses.",
+  "steps.negativeLookbehind.title": "Lookbehind Negativo: `(?&lt;!)`",
+  "steps.negativeLookbehind.description": "Por exemplo, queremos selecionar números no texto que não sejam o valor do preço. Portanto, para selecionar apenas valores numéricos que não sejam precedidos por `$`, precisamos escrever o lookbehind negativo `(?&lt;!)` antes de nossa expressão. Adicione `\\$` após o sinal de menor que `<` entre parênteses.",
 
   "steps.flags.title": "Flags",
   "steps.flags.description": "As flags alteram a saída da expressão. É por isso que as flags também são chamadas de `modificadores`. Elas determinam se a expressão escrita trata o texto como linhas independentes, faz distinção entre maiúsculas e minúsculas ou encontra todas as correspondências. Continue para aprender sobre as flags.",
@@ -159,4 +159,4 @@
 
   "steps.completeAllSteps.title": "Parabéns, você completou todos os passos.",
   "steps.completeAllSteps.description": "Você pode voltar para os passos anteriores quando quiser, e pode navegar facilmente por todos os passos que você passou."
-  }
+}
