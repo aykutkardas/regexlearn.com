@@ -117,7 +117,7 @@
   "steps.numberCharacter.description": "`\\d` используется для поиска только числовых символов.",
 
   "steps.withoutNumberCharacter.title": "Кроме символа числа `\\D`",
-  "steps.withoutNumberCharacter.description": "`\\D` используется для поиска нечисловых символов.",
+  "steps.withoutNumberCharacter.description": "`\\D` est utilisé pour trouver uniquement les caractères non numériques.",
 
   "steps.spaceCharacter.title": "Пробел `\\s`",
   "steps.spaceCharacter.description": "`\\s` используется для поиска только пробелов.",
