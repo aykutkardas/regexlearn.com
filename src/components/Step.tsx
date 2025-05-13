@@ -43,7 +43,7 @@ const Step = () => {
           text={formatMessage({ id: data.title })}
           attrs={{
             className: 'px-2 my-1 bg-neutral-700 rounded-md mx-1 whitespace-nowrap',
-            dir: 'ltr'
+            dir: 'ltr',
           }}
         />
         <HighlightedText
@@ -52,7 +52,7 @@ const Step = () => {
           text={formatMessage({ id: data.description })}
           attrs={{
             className: 'p-1 text-xs whitespace-nowrap rounded-md bg-neutral-700 tracking-widest',
-            dir: 'ltr'
+            dir: 'ltr',
           }}
         />
       </div>
@@ -72,22 +72,18 @@ const Step = () => {
       <InteractiveArea key={step} isShow={isInteractive} setIsOpenModal={setIsOpenModal} />
       <a
         className="text-xs inline-flex items-center justify-end text-neutral-400 hover:text-neutral-100 relative bottom-3 ml-auto mt-5"
-        href={
-          lesson.sponsorURL ||
-          lesson.creatorURL ||
-          'https://github.com/aykutkardas/regexlearn.com#sponsoring'
-        }
+        href={lesson.creatorURL || 'https://github.com/aykutkardas/regexlearn.com#sponsoring'}
         target="_blank"
         rel="noreferrer"
       >
-        {lesson.sponsor || lesson.creator ? (
-          <span dir='ltr' className="flex items-center">
+        {lesson.creator ? (
+          <span dir="ltr" className="flex items-center">
             {lesson.sponsor ? 'Sponsored' : 'Created'} by{' '}
             <img
               className="mx-1"
               style={{ height: lesson.logoHeight || 12 }}
               src={lesson.sponsorLogo || lesson.creatorLogo}
-              alt={lesson.sponsor || lesson.creator}
+              alt={lesson.creator}
             />
           </span>
         ) : (

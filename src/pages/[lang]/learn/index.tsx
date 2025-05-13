@@ -41,21 +41,19 @@ const PageLearn = () => {
                 <a
                   className="text-xs flex items-center justify-end text-neutral-400 hover:text-neutral-100 relative ml-auto mt-2 mr-2"
                   href={
-                    lesson.sponsorURL ||
-                    lesson.creatorURL ||
-                    'https://github.com/aykutkardas/regexlearn.com#sponsoring'
+                    lesson.creatorURL || 'https://github.com/aykutkardas/regexlearn.com#sponsoring'
                   }
                   target="_blank"
                   rel="noreferrer"
                 >
-                  {lesson.sponsor || lesson.creator ? (
-                    <span dir='ltr' className="flex items-center">
-                      {lesson.sponsor ? 'Sponsored' : 'Created'} by{' '}
+                  {lesson.creator ? (
+                    <span dir="ltr" className="flex items-center">
+                      Created by{' '}
                       <img
                         className="mx-1"
                         style={{ height: lesson.logoHeight || 12 }}
-                        src={lesson.sponsorLogo || lesson.creatorLogo}
-                        alt={lesson.sponsor || lesson.creator}
+                        src={lesson.creatorLogo}
+                        alt={lesson.creator}
                       />
                     </span>
                   ) : (

@@ -15,9 +15,10 @@ export const langNames = {
   'cs-cz': '🇨🇿',
   'fa': '🇮🇷',
   it: '🇮🇹',
+  'ar': '🇸🇦',
 };
 
-export const rtlSupported = ['fa'];
+export const rtlSupported = ['fa', 'ar'];
 
 export const defaultLocale = 'en';
 

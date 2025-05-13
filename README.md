@@ -43,10 +43,10 @@ the way:
 - 🇬🇪 Georgian
 - 🇮🇷 Persian
 - 🇮🇹 Italian
+- 🇸🇦 Arabic
 
 ### Requested Translations
 
-- 🇦🇪 Arabic [(Issue)](https://github.com/aykutkardas/regexlearn.com/issues/163)
 - 🇧🇩 Bengali [(Issue)](https://github.com/aykutkardas/regexlearn.com/issues/304)
 - 🇻🇳 Vietnamese [(Issue)](https://github.com/aykutkardas/regexlearn.com/issues/329)
 - 🇮🇩 Indonesian [(Issue)](https://github.com/aykutkardas/regexlearn.com/issues/335)

@@ -1,0 +1,39 @@
+{
+  "general.prev": "السابق",
+  "general.next": "التالي",
+  "general.result": "النتيجة",
+  "general.regex": "التعبير النمطي",
+  "general.text": "النص",
+  "general.watch": "مشاهدة",
+  "general.start": "ابدأ",
+  "general.continue": "متابعة",
+  "general.completedStep": "الخطوة مكتملة!",
+  "general.hintQuestion": "عرض الإجابة",
+  "general.reportStep": "الإبلاغ عن مشكلة",
+  "general.startLearning": "ابدأ التعلم",
+  "general.comingSoon": "قريبًا",
+  "general.becomeSponsor": "كن راعيًا",
+  "general.learn": "تعلم",
+  "general.playground": "ساحة اللعب",
+  "general.cheatsheet": "ورقة معلومات مرجعية",
+  "general.ourSponsors": "رعاتنا",
+  "general.share": "مشاركة",
+  "general.shareLinkCopied": "تم نسخ رابط المشاركة!",
+  "general.somethingWentWrong": "حدث خطأ ما!",
+
+  "notFound.intro": "الصفحة التي تبحث عنها غير موجودة.",
+  "notFound.button": "العودة إلى الصفحة الرئيسية",
+
+  "page.landing.title": "تعلم التعبيرات النمطية - خطوة بخطوة، من الصفر إلى المتقدم.",
+  "page.learn.title": "تعلم التعبيرات النمطية - دورة تفاعلية",
+  "page.cheatsheet.title": "تعلم التعبيرات النمطية - ورقة معلومات مرجعية",
+  "page.playground.title": "تعلم التعبيرات النمطية - ساحة اللعب",
+  "page.404.title": "تعلم التعبيرات النمطية - غير موجود",
+
+  "page.landing.description": "تعلم التعبيرات النمطية بشكل تفاعلي، تمرن على مستواك، اختبر وشارك تعبيراتك النمطية.",
+  "page.learn.description": "تعلم التعبيرات النمطية خطوة بخطوة. أكمل الدليل التفاعلي الذي سيجعل تعلمك أسهل وأسرع.",
+  "page.cheatsheet.description": "في بعض الأحيان تحتاج فقط لتذكر التعبيرات النمطية. جرب ورقة الغش التي ستجعل من السهل عليك الفهم والتذكر بشكل أفضل.",
+  "page.playground.description": "يمكنك بناء واختبار نمط التعبير النمطي الخاص بك بسهولة عبر ساحة اللعب.",
+
+  "learn.safari.unsupportWarning": "التعبيرات النمطية في هذه الخطوة غير مدعومة من بعض المتصفحات. إذا واجهت مشكلة في تجاوز هذه الخطوة، انقر هنا."
+}
