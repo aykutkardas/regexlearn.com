@@ -1,0 +1,163 @@
+{
+  "examples.starter.title": "練習",
+  "examples.starter.description": "現在透過練習來強化所學。",
+
+  "examples.finish.title": "完成練習！",
+  "examples.finish.description": " ",
+
+  "steps.starter.title": "介紹",
+  "steps.starter.description": "Regex 是`正規表示式`(Regular Expression)的縮寫，能幫助你吻合、尋找與管理文字。先從在正規表示式欄位輸入`OK`開始第一步，並且察看更為詳細的說明。",
+
+  "steps.whatIsRegex.title": "什麼是正規表示式 `Regex`？",
+  "steps.whatIsRegex.description": "正規表示式是一系列表現搜尋模式的字元組合，通常英文縮寫為 `Regex` 或是 `Regexp`，通常會用來尋找或是取代文字片段當中的字。除此之外，我們也能測試文字是否符合我們設定的規則。\\n\\n例如說，你手上有檔案名稱清單，你只想要找副檔名有 `pdf` 的檔案，只要打上 `^\\w+\\.pdf$` 就可以找出來了。這意味著採用正規表示式會隨著步驟走越來越清楚了。",
+
+  "steps.basicMatchers.title": "基本吻合",
+  "steps.basicMatchers.description": "我們想要找的字元或是文字已經寫好了，整個過程類似尋找。例如，在段落當中尋找`好奇`，也一樣輸入。",
+
+  "steps.dotCharacter.title": "點 `.`: 任何字元",
+  "steps.dotCharacter.description": "點 `.` 允許選擇任何字元，包括特殊字元與空白。在正規表示式欄位輸入點 `.`。",
+
+  "steps.characterSet.title": "字元集 `[abc]`",
+  "steps.characterSet.description": "如果文字當中的其中一個字元是任何字元，我們會在括號 `[]` 內輸入所有不同字元。例如，如果要撰寫表示式找段落當中出現的所有文字，則在括號 `[]` 內彼此相鄰輸入字元 `a`、`e`、`i`、`o`、`u`。",
+
+  "steps.negatedCharacterSet.title": "排除字元集 `[^abc]`",
+  "steps.negatedCharacterSet.description": "要找尋下列段落所有文字當中，除了 `ber` 與 `bor` 之外的文字，在括號 `[]` 內插入記號 `^` 後彼此相鄰輸入 `e`、`o`。",
+
+  "steps.range.title": "字母範圍`[a-z]`",
+  "steps.range.description": "要找尋特定範圍內的字母，可以在括號 `[]` 內填寫開始與結束的字母，並且在中間用折線 `-` 連結，這種方式是區分大小寫的。請輸入包括 `e` 與 `o`　則會選擇包括本身兩者之間的小寫字母。",
+
+  "steps.rangeNumber.title": "數字範圍`[0-9]`",
+  "steps.rangeNumber.description": "要找尋特定範圍內的數字，可以在括號 `[]` 內填寫開始與結束的數字，並且在中間用折線 `-` 連結。請輸入包括 `3` 與 `6`，則會選擇包括本身兩者之間數字。",
+
+  "examples.basicMatchers.title": "練習：基本吻合",
+  "examples.basicMatchers.description": "撰寫選取段落當中 `of` 文字的表示式。",
+
+  "examples.dotCharacter.title": "練習：任何字元",
+  "examples.dotCharacter.description": "輸入這一表示式來選擇文字當中的單一字母、數字、空白與特殊符號。表示式能找到任何字元。",
+
+  "examples.characterSet.title": "練習：字元組",
+  "examples.characterSet.description": "撰寫表示式來吻合段落中的文字，只有開頭的文字要改變。",
+
+  "examples.negatedCharacterSet.title": "練習：排除字元組",
+  "examples.negatedCharacterSet.description": "撰寫表示式，吻合除了 `beor` 與 `beur` 之外段落當中的文字。請使用排除字元組。",
+
+  "examples.range.title": "練習：字母範圍",
+  "examples.range.description": "撰寫表示式來選擇段落當中範圍從 `g` 到 `k` 之間的字母。\\n`g` 到 `k` 這兩個字母也必須包括在範圍內。",
+
+  "examples.rangeNumber.title": "練習：數字範圍",
+  "examples.rangeNumber.description": "撰寫表示式來選擇段落當中範圍從 `2` 到 `7` 之間的數字。\\n`2` 到 `7` 這兩個數字也必須包括在範圍內。",
+
+  "steps.repetitions.title": "重覆",
+  "steps.repetitions.description": "有些特殊字元用在表示段落當中特定字元重覆次數。這些特殊字元有加號 `+`、星號 `*` 以及問號 `?`。",
+
+  "steps.asterisk.title": "星號 `*`",
+  "steps.asterisk.description": "我們在字元後面加上星號 `*` 來表示可能沒吻合，或是吻合多次。例如說，指示字母 `e` 沒有出現在文字當中，或是有出現一次或者接連多次出現。",
+
+  "steps.plusCharacter.title": "加號 `+`",
+  "steps.plusCharacter.description": "我們在字元後面加上加號 `+` 來表示吻合一次或是更多次。例如說，表示字母 `e` 可以在段落中吻合一次或更多次。",
+
+  "steps.questionMark.title": "問號 `?`",
+  "steps.questionMark.description": "我們在字元後面加上問號 `?`，例如說，表示 `u` 後面的字母是可有可無。",
+
+  "steps.quantifier.title": "大括號 - 1",
+  "steps.quantifier.description": "我們在結尾加上大括號 `{n}` 來表示我們希望字元吻合的次數。例如說，表示字母 `e` 只能吻合 `2` 次。",
+
+  "steps.quantifierMin.title": "大括號 - 2",
+  "steps.quantifierMin.description": "要來表示某個字元出現的最少吻合次數，我們在字元後立即寫出我們希望出現的最少次數，後面跟著逗號 `,`，並用大括號 `{n, }` 包起來。例如說，表示以下字母 `e` 最少吻合 `3` 次。",
+
+  "steps.quantifierRange.title": "大括號 - 3",
+  "steps.quantifierRange.description": "要來表示某個字元的吻合次數範圍，我們寫大括號 `{x,y}` 裡頭寫出開始到結尾的區間。例如說，這表示接續的字母 `e` 只可以吻合`1` 到 `3` 次。",
+
+  "examples.asterisk.title": "練習：星號 `*`",
+  "examples.asterisk.description": "使用星號 `*` 來撰寫表示式選取每個文字，適合文字當中沒有或是一次或是多次出現字母 `e` 的情形。",
+
+  "examples.plusCharacter.title": "練習：加號 `+`",
+  "examples.plusCharacter.description": "使用加號 `+` 來撰寫表示式選取文字當中吻合一次或是多次字母 `e` 的情形。",
+
+  "examples.questionMark.title": "練習：問號 `?`",
+  "examples.questionMark.description": "使用問號 `?` 撰寫表示式表達文字當中字母 `n` 是選擇性的。因此 `a` 與 `an` 都會被選擇。",
+
+  "examples.quantifier.title": "練習：大括號 - 1",
+  "examples.quantifier.description": "使用大括號 `{}` 來找文字當中含有連續的 `4` 數字。記住範圍 `[0-9]` 會找出吻合的單一位數字。",
+
+  "examples.quantifierMin.title": "練習：大括號 - 2",
+  "examples.quantifierMin.description": "使用大括號 `{}` 來找出文字當中連續出現至少 `2` 的文字。",
+
+  "examples.quantifierRange.title": "練習：大括號 - 3",
+  "examples.quantifierRange.description": "使用大括號 `{}` 找出文字當中連續出現現至少 `1` 以及最多 `4` 的文字。",
+
+  "steps.groupping.title": "Parentheses `( )`: 群組",
+  "steps.groupping.description": "我可以群組表示式，並且採用群組來參照或是套用一些規則。要群組表示式，則需要在 `()` 括號內。現在我自來群組下面的 `haa`。",
+
+  "steps.groupReference.title": "參照群組",
+  "steps.groupReference.description": "`ha` 與 `haa` 已經在下面群組了。第一個群組用 `\\1` 來撰寫避免再重寫。這邊 `1` 表示群組的順序。在表示式結尾輸入 `\\2` 表示第二個群組。",
+
+  "steps.nonCapturingGroupping.title": "圓括號 `(?: )`: 非捕捉群組",
+  "steps.nonCapturingGroupping.description": "你可以指定群組的表達式是非參照捕捉群組。例如下列的兩組群組。然後，第一個群組參照用 `\\1` 修飾實際是表示第二個群組，因為第一個群組是非博捉群組。",
+
+  "steps.pipeCharacter.title": "管道字元 `|`",
+  "steps.pipeCharacter.description": "這個選項允許表示式有不同的表示式。因此，所有可能的聲稱用管道符號 `|` 分隔。這個選項與 `[abc]` 字元組是以字元為層次運作，其他的是以表示式的層次。例如，下列的表示式會同時選擇 `cat` 與 `rat`。新增其他管道符號 `|` 在表示式結尾再打上 `dog` 則會所有文字都會被選到。",
+
+  "steps.escapeCharacter.title": "逃脫字元 `\\`",
+  "steps.escapeCharacter.description": "當撰寫表示式時使用一些特殊字元， `{ } [ ] / \\ + * . $^ | ?` 。當然我們也可以選擇這些字元，但我們需要用跳脫字元 `\\`。例如，選擇文字當中的句號 `.` 和星號 `*` 字元，就能在前面加上逃脫字元 `\\`。",
+
+  "steps.caret.title": "插入記號 `^`:\\n在一行開始處選擇",
+  "steps.caret.description": "我們使用 `[0-9]` 來找數字，要只在一行的開頭找數字的話，請在前面加上前綴 `^` 符號。",
+
+  "steps.dollar.title": "金錢符號 `$`:\\n在一行結束處選擇",
+  "steps.dollar.description": "Let's use the `$` sign after the `html` value to find the `html` texts only at the end of the line.",
+
+  "steps.wordCharacter.title": "文字字元 `\\w`: 字母、數字與底線",
+  "steps.wordCharacter.description": "表示式 `\\w` 是用來找字母、數字與底線字元。讓我們使用表示式 `\\w` 來找文字當中的文字字元。",
+
+  "steps.withoutWordCharacter.title": "排除文字字元 `\\W`",
+  "steps.withoutWordCharacter.description": "表示式 `\\W` 是用來排除字母、數字與底線的字元。",
+
+  "steps.numberCharacter.title": "數字字元 `\\d`",
+  "steps.numberCharacter.description": "`\\d` 是只用來找數字字元",
+
+  "steps.withoutNumberCharacter.title": "排除數字字元 `\\D`",
+  "steps.withoutNumberCharacter.description": "`\\D` 是用來排除數字字元。",
+
+  "steps.spaceCharacter.title": "空白字元 `\\s`",
+  "steps.spaceCharacter.description": "`\\s` 是只用來找空白字元。",
+
+  "steps.withoutSpaceCharacter.title": "排除空白字元 `\\S`",
+  "steps.withoutSpaceCharacter.description": "`\\S` 是用來排除空白字元。",
+
+  "steps.lookarounds.title": "環顧",
+  "steps.lookarounds.description": "如果你想要某個詞出現在某個詞之前或是之後的話，我們需要 \"環顧\"。接著來學習如何 \"環顧\".",
+
+  "steps.positiveLookahead.title": "正面向前環顧: `(?=)`",
+  "steps.positiveLookahead.description": "例如，我們希望選取文字當中的時間數值，因此我們只要選取在後面有接 `PM` 的數字，我們需要在表示式後接上正面向前環顧表示式 `(?=)`，包括括號內 `=` 符號後接續 `PM`。",
+
+  "steps.negativeLookahead.title": "負面向前環顧: `(?!)`",
+  "steps.negativeLookahead.description": "例如，我們希望選取文字當中數字而非時間，因此我們在表示式後撰寫負面向前環顧 `(?!)` 表示式，就只會選取數字，而非後面接有 `PM`。包括括號內 `!` 符號後接續 `PM`。",
+
+  "steps.positiveLookbehind.title": "正面向後環顧: `(?<=)`",
+  "steps.positiveLookbehind.description": "For example, we want to select the price value in the text. Therefore, to select only the number values that are preceded by `$`, we need to write the positive lookbehind expression `(?<=)` before our expression. Add `\\$` after the `=` sign inside the parenthesis.",
+
+  "steps.negativeLookbehind.title": "負面向後環顧: `(?&lt;!)`",
+  "steps.negativeLookbehind.description": "例如，我們想要選取文字當中的數字但非價格，因此我們不選取 `$` 後有數字的數字，我們需要在表示式前撰寫負面向後環顧 `(?&lt;!)`。在括號內 `!` 後新增表示 `\\$`。",
+
+  "steps.flags.title": "修飾詞",
+  "steps.flags.description": "修飾詞改變表示式的輸出，這也是為什麼又稱為`旗旘`。修飾詞能夠決定表示式處理文字的方式，像是分行、是否大小寫敏感，或是尋找所有吻合狀態。接下來的課程會詳細解釋修飾詞運作方式。",
+
+  "steps.flagsGlobal.title": "全域修飾詞",
+  "steps.flagsGlobal.description": "`全域`修飾詞造成表示式會找出所有吻合結果。如果不啟用則只會顯示第一筆吻合結果。如果啟用`全域`修飾詞則會選取所有吻合結果。",
+
+  "steps.flagsMultiline.title": "多行修飾詞",
+  "steps.flagsMultiline.description": "正規表示式會視所有文字為一行，但當我們使用`多行`修飾詞時表示一行一行來處理資料。這種方式之下，我們撰寫表示式來區別每一行行末不同模式。如果啟用`多行`模式則會找出所有吻合結果。",
+
+  "steps.flagsCaseInsensitive.title": "不區分大小寫修飾詞",
+  "steps.flagsCaseInsensitive.description": "為了要移除表示式的區分大小寫的設定，我們需要啟用`不區別大小寫`的修飾詞。",
+
+  "steps.greedyMatching.title": "貪心比對",
+  "steps.greedyMatching.description": "正規表示式預設是啟用貪心模式來比對，這意味著吻合時會盡可能越長越好。檢視以下範圍，意思是任何結尾是 `r` ，而且前面是任何字元的吻合結果，但不會只停在第一個字母 `r`。",
+
+  "steps.lazyMatching.title": "偷懶比對",
+  "steps.lazyMatching.description": "偷懶比對，不像貪心比對那樣，會在第一次吻合時就停止了。例如說，以下的例子來說，在 `*` 新增 `?` 則會在吻合字前面有任何字母，字結尾有 `r` 時，吻合一次就會停止，意味著吻合到第一個 `r` 字母。",
+
+  "steps.completeAllSteps.title": "恭喜你，你已經完成所有課程了！",
+  "steps.completeAllSteps.description": "你可以在任何時候回到先前的步驟，而且可以瀏覽先前通過的步驟。"
+}

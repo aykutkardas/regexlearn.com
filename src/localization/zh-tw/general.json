@@ -1,0 +1,39 @@
+{
+  "general.prev": "先前",
+  "general.next": "之後",
+  "general.result": "結果",
+  "general.regex": "正規表示式",
+  "general.text": "文字",
+  "general.watch": "觀看",
+  "general.start": "開始",
+  "general.continue": "繼續",
+  "general.completedStep": "完成步驟！",
+  "general.hintQuestion": "顯示解答",
+  "general.reportStep": "回報問題",
+  "general.startLearning": "開始課程",
+  "general.comingSoon": "即將來臨",
+  "general.becomeSponsor": "成為贊助者",
+  "general.learn": "學習",
+  "general.playground": "遊樂場",
+  "general.cheatsheet": "小抄",
+  "general.ourSponsors": "我們的贊助者",
+  "general.share": "分享",
+  "general.shareLinkCopied": "已經複製分享連結！",
+  "general.somethingWentWrong": "有東西出錯了！",
+
+  "notFound.intro": "你在找的頁面並不存在。",
+  "notFound.button": "回到首頁",
+
+  "page.landing.title": "學習正規表示式 - 一步步來，從入門到進階。",
+  "page.learn.title": "學習正規表示式 - 正規表示式互動課程",
+  "page.cheatsheet.title": "學習正規表示式 - 正規表示式小抄",
+  "page.playground.title": "學習正規表示式 - 遊樂場",
+  "page.404.title": "學習正規表示式 - 找不到",
+
+  "page.landing.description": "互動方式學習正規表示式，以你的程度來學習、測驗與分享你自己的正規表示式。",
+  "page.learn.description": "一步步學習正規表示式，完成互動學習課程讓你學習過程更容易與更快。",
+  "page.cheatsheet.description": "有時候你只是需要記下正規表示式的語法，試試小抄讓一切更容易理解與記憶。",
+  "page.playground.description": "你可以透過線上的遊樂場來更容易建構與測試你的正規表示式模組。",
+
+  "learn.safari.unsupportWarning": "這一步驟的正規表示式有些瀏覽器並不支援，如果你在這一步遇到問題，你可以點這裡。"
+}

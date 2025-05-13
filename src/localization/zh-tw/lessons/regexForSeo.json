@@ -1,0 +1,49 @@
+{
+  "lesson.regexForSeo.starter.title": "SEO 當中的正規表示式",
+  "lesson.regexForSeo.starter.description": "Regex 是一組各領域常用的正規表示式，特別是想增進他們生產力的人們。使用正規表示式在 SEO 的好處是更容易分析巨量資料以及撰寫更豐富的篩選規則。我們建議你如果是新手則從 `正規表示式 101` 教學開始。 \\n\n從 Regex 欄位打 `OK` 開始第一課，然後閱讀更詳細的解釋。",
+
+  "lesson.regexForSeo.usage.title": "使用情境",
+  "lesson.regexForSeo.usage.description": "你在 SEO 的正規表示式應用到平台上，例如 `Google Analytics`、`Ahrefs`、`Deepcrawl`、`Screaming Frog`。而且也會常用在 `.htaccess` 與 `robots.txt` (類似正規表示式語法) 檔案當中。\\n\n以下是一些簡單的正規表示式範例，能夠選取 `Google` 開頭的文字。",
+
+  "lesson.regexForSeo.basics.title": "基本",
+  "lesson.regexForSeo.basics.description": "我們從一些常用的正規表示式例子講起，我們推薦你再次閱讀 `正規表示式 101` 教學來學習更多資訊。按 `是` 來開始。",
+
+  "lesson.regexForSeo.or.title": "或是運算子 `|`",
+  "lesson.regexForSeo.or.description": "我們使用或運算子 `|` 來篩選出多重表示式。例如我們想要篩選文字包含 `seo` 與 `regex` 兩個字，就用或是運算子 `|` 來分隔。",
+
+  "lesson.regexForSeo.optional.title": "選擇性的運算子 `?`",
+  "lesson.regexForSeo.optional.description": "我們使用來表示表示式或是字元是選擇性的。例如我們想篩選出有 `http` 與 `https` 兩者都要。我們可以使用或是運算子 `|` 來處理，但是比較好的方式是這兩都很像。\\n\n在這一例子當中，字母 `s` 是選擇性的，因此能加上問號 `?` 來替代結尾的字母 `s`。",
+
+  "lesson.regexForSeo.any.title": "任何 `.*`",
+  "lesson.regexForSeo.any.description": "在正規表示式當中，逗號 `,` 能吻合任何字元，包括空白。但是使用時這只會吻合一個字元。因此加星號 `*` 表示文字當中後面沒有字元或是有超過一個字元的情形。當兩者組合在一起使用時，表示任何長度的元素。\\n\n以下有多個關鍵字，在正規表示式結尾新增 `.*` 來表示開頭為 `how to write` 以及吻合後面任何東西。",
+
+  "lesson.regexForSeo.contains.title": "包含",
+  "lesson.regexForSeo.contains.description": "要篩選出特定的文字或是片語，我們可以尋找被夾在中間的文字 `.*`。例如我們輸入 `.*buy.*` 來尋找含有 `buy` 的文字。.",
+
+  "lesson.regexForSeo.negated.title": "負面字元集 `[^abc]`",
+  "lesson.regexForSeo.negated.description": "我們使用負面字元集 `[^]`，中括號開頭用插入符號來排除我們不要的字元。像是 `http` 與 `https`，都包含 `http`，因此也會選擇 `https`。在字母 `p` 之後輸入 `[^s]` 來排除字母 `s`。",
+
+  "lesson.regexForSeo.caret.title": "插入符號 `^`",
+  "lesson.regexForSeo.caret.description": "我們有網址清單，而我們只想要找 `http` 開頭的網址，但有時候 `http` 也會出現在不是開頭的地方。所以在開頭新增插入符號 `^` 能夠只篩選出 `http` 開頭的網址。",
+
+  "lesson.regexForSeo.dollarAndEscape.title": "錢幣符號 `$` 與跳脫字元 `\\`",
+  "lesson.regexForSeo.dollarAndEscape.description": "我們又有網址清單，我們只想要網址結尾是 `.htm`。\\n\\n由於句號是特殊字元會吻合所有，我們需要用跳脫字元 `\\` 把 `htm` 前的使其失效。這會套用到所有特殊字元。\\n\\n接著在表示式結尾加上 `$`，這會確保篩選出來的文字結尾部分前面是吻合表示式的。",
+
+  "lesson.regexForSeo.limitation.title": "長度限制 `{n}`",
+  "lesson.regexForSeo.limitation.description": "我們也許會希望依據字元長度篩選出結果。例如我們要篩選出 `35` 字元長度的網址，因此你會輸入長度 `{35}`，用中括號包起來並且結尾加上句號 `.`。",
+
+  "lesson.regexForSeo.maxLimitation.title": "長度限制 (最大) `{n,m}`",
+  "lesson.regexForSeo.maxLimitation.description": "要篩選大長度 `35` 字元，輸入 `{1,35}` 的最小與最大數值，然後使用大括號包起來，最後在結眉加上句號。",
+
+  "lesson.regexForSeo.minLimitation.title": "長度限制 (最小) `{n,}`",
+  "lesson.regexForSeo.minLimitation.description": "要篩選最短長度 `35` 字元的網址，輸入 `{35,}` 然後在句點結尾加大括號，然後輸入我們要找的最小數值接著加逗號。",
+
+  "lesson.regexForSeo.robots.title": "robots.txt (類似正規表示式語法)",
+  "lesson.regexForSeo.robots.description": "這邊是 `robots.txt` 檔案當中類似正規表示式的例子，例子當中註明不要爬取 `pdf` 結尾的附檔名。",
+
+  "lesson.regexForSeo.htaccess.title": ".htaccess",
+  "lesson.regexForSeo.htaccess.description": "這是 `.htaccess` 檔案當中類似正規表示式的例子，例子當中 `php` 的副檔名結尾會重新導向至 `html` 副檔名並且顯示 `301` 代碼。",
+
+  "lesson.regexForSeo.outro.title": "其他",
+  "lesson.regexForSeo.outro.description": "正規表示式知識是在任何平台增進你生產力的技能。一旦你學會使用之後，並且持續精進技能，你能夠更快完成重覆性工作，將時間用其他事務。要更瞭解正規表示式的基礎知識，你可以瀏覽 `Regex 101` 教學，你可以進入`遊樂場`頁面來測試你的表示式套用到文字的狀況。"
+}

@@ -1,0 +1,26 @@
+{
+  "landing.title": "一步步學習正規表示式，從入門到進階。",
+  "landing.description": "學習正規表示式比你想像得還要容易，你可以使用這工具來輕鬆`學習`、`練習`、`測驗`與`分享`正規表示式。",
+  "landing.imageAltText": "一個男士坐姿輕鬆腿放在桌子上的插圖。",
+
+  "section.learn.title": "學習",
+  "section.learn.content": "`正規表示式`，英文叫 Regex 或是 Regexp，是一組藉由正規表示式語法規則創造，由字元組成的字串。You can easily manage your data with Regex, which uses commands like finding, matching, and editing. Regex can be used in programming languages such as Python, SQL, JavaScript, R, Google Analytics, Google Data Studio, and throughout the coding process. Learn regex online with examples and tutorials on RegexLearn now.",
+  "section.learn.imageAltText": "山頂有旗幟的插圖。",
+
+  "section.cheatsheet.button": "現在檢視吧！",
+  "section.cheatsheet.title": "小抄",
+  "section.cheatsheet.content": "有了`RegexLearn小抄`，你可以直接在一個頁面當中，一次看到所有的用法。透過 Regex 小抄瀏覽所有正規表示式模式與符號。",
+  "section.cheatsheet.imageAltText": "人透過望遠鏡瀏覽頁面的插圖。",
+
+  "section.playground.title": "遊樂場",
+  "section.playground.content": "如果你想要產生正規表示式的話，你可以輕易透過遊樂場來測式正規表示式模式。而做為正規表示式測試者，你可以跟其他人合作驗證與分享正規表示式模式。",
+  "section.playground.imageAltText": "一隻貓即將摔破玻璃杯的插圖。",
+
+  "section.practice.title": "練習",
+  "section.practice.content": "如果你完成學習課程，如今是練習時間！在練習部分，你可以測試侚的正規表示式知識，以及之後推出，依據你程度練習正規表示式教學的練習題目。",
+  "section.practice.imageAltText": "一位女士看書記筆記的插圖。",
+
+  "section.opensource.title": "開放原始碼",
+  "section.opensource.content": "正規表示式學習是開源的專案，因此歡迎各方貢獻R，以及免費使用。貢獻專案將會打摩你的技能、學習與合作。你可以來這邊貢獻與支援。",
+  "section.opensource.imageAltText": "女士、男士與貓一起組拼圖的插圖。"
+}
