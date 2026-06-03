@@ -51,7 +51,7 @@
   "steps.repetitions.description": "Einige Sonderzeichen werden verwendet, um anzugeben, wie oft ein Zeichen im Text wiederholt wird. Diese Sonderzeichen sind das Plus `+`, das Sternchen `*` und das Fragezeichen `?`.",
 
   "steps.asterisk.title": "Sternchen `*`",
-  "steps.asterisk.description": "Wir setzen ein Sternchen `*` an das Ende, um anzuzeigen, dass ein Zeichen überhaupt nicht oder mehrfach übereinstimmen kann. Geben Sie zum Beispiel an, dass der Buchstabe `e` niemals in der vorkommen sollte Text, oder es kann einmal oder mehrmals nebeneinander vorkommen.",
+  "steps.asterisk.description": "Wir setzen ein Sternchen `*` an das Ende, um anzuzeigen, dass ein Zeichen überhaupt nicht oder mehrfach übereinstimmen kann. Geben Sie zum Beispiel an, dass der Buchstabe `e` im Text niemals vorkommen sollte oder einmal oder mehrmals hintereinander auftreten kann.",
 
   "steps.plusCharacter.title": "Pluszeichen `+`",
   "steps.plusCharacter.description": "Um anzuzeigen, dass ein Zeichen einmal oder mehrmals vorkommen kann, setzen wir ein Pluszeichen `+` am Ende. Geben Sie beispielsweise an, dass der Buchstabe `e` einmal oder mehrmals vorkommen kann der Text.",
