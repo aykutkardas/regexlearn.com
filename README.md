@@ -23,15 +23,17 @@ languages, keep the cheatsheet nearby, and test your patterns live in the playgr
 
 Available in 21 languages:
 
-| Language | Language | Language |
-| --- | --- | --- |
-| 🇺🇸 English | 🇹🇷 Turkish | 🇷🇺 Russian |
-| 🇪🇸 Spanish | 🇨🇳 Chinese (Simplified) | 🇹🇼 Chinese (Traditional) |
-| 🇩🇪 German | 🇺🇦 Ukrainian | 🇫🇷 French |
-| 🇵🇱 Polish | 🇰🇷 Korean | 🇧🇷 Brazilian Portuguese |
-| 🇨🇿 Czech | 🇬🇪 Georgian | 🇮🇷 Persian |
-| 🇮🇹 Italian | 🇸🇦 Arabic | 🇧🇩 Bengali |
-| 🇯🇵 Japanese | 🇮🇩 Indonesian | 🇻🇳 Vietnamese |
+<table>
+  <tbody>
+    <tr><td>🇺🇸 English</td><td>🇹🇷 Turkish</td><td>🇷🇺 Russian</td></tr>
+    <tr><td>🇪🇸 Spanish</td><td>🇨🇳 Chinese (Simplified)</td><td>🇹🇼 Chinese (Traditional)</td></tr>
+    <tr><td>🇩🇪 German</td><td>🇺🇦 Ukrainian</td><td>🇫🇷 French</td></tr>
+    <tr><td>🇵🇱 Polish</td><td>🇰🇷 Korean</td><td>🇧🇷 Brazilian Portuguese</td></tr>
+    <tr><td>🇨🇿 Czech</td><td>🇬🇪 Georgian</td><td>🇮🇷 Persian</td></tr>
+    <tr><td>🇮🇹 Italian</td><td>🇸🇦 Arabic</td><td>🇧🇩 Bengali</td></tr>
+    <tr><td>🇯🇵 Japanese</td><td>🇮🇩 Indonesian</td><td>🇻🇳 Vietnamese</td></tr>
+  </tbody>
+</table>
 
 Speak a language that isn't listed? Adding it is a single pull request: copy the
 [`en`](src/localization/en) folder in [`src/localization/`](src/localization), translate the JSON
