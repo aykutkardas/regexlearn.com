@@ -1,0 +1,163 @@
+{
+  "examples.starter.title": "Luyện tập",
+  "examples.starter.description": "Bây giờ hãy luyện tập để củng cố những gì đã học.",
+
+  "examples.finish.title": "Đã hoàn thành bài luyện tập!",
+  "examples.finish.description": " ",
+
+  "steps.starter.title": "Giới thiệu",
+  "steps.starter.description": "Regex là viết tắt của `Regular Expression`. Nó giúp đối sánh, tìm kiếm hoặc xử lý văn bản. Các bài học và Sân thử nghiệm dùng bộ máy regex của JavaScript, trong đó mẫu được viết dưới dạng `/pattern/flags`. Nhập `OK` vào trường Regex để chuyển đến bước đầu tiên và xem giải thích chi tiết hơn.",
+
+  "steps.whatIsRegex.title": "Regular Expressions `Regex` là gì?",
+  "steps.whatIsRegex.description": "Regular Expressions là chuỗi ký tự biểu diễn một mẫu tìm kiếm, thường được viết tắt là `Regex` hoặc `Regexp`. Nó chủ yếu dùng để tìm hoặc thay thế từ trong văn bản, đồng thời kiểm tra văn bản có tuân theo các quy tắc đã đặt ra hay không.\n\nVí dụ, bạn có danh sách tên tệp và chỉ muốn tìm tệp có phần mở rộng `pdf`. Biểu thức `^\\w+\\.pdf$` sẽ thực hiện việc đó. Ý nghĩa của từng thành phần sẽ rõ hơn qua các bước tiếp theo.",
+
+  "steps.basicMatchers.title": "Đối sánh cơ bản",
+  "steps.basicMatchers.description": "Ký tự hoặc từ cần tìm được viết trực tiếp, giống như tìm kiếm thông thường. Ví dụ, để tìm từ `curious`, hãy nhập chính từ đó.",
+
+  "steps.dotCharacter.title": "Dấu chấm `.`: Ký tự bất kỳ",
+  "steps.dotCharacter.description": "Dấu chấm `.` cho phép chọn bất kỳ ký tự nào, kể cả ký tự đặc biệt và khoảng trắng. Nhập `.` vào trường Regex để tiếp tục.",
+
+  "steps.characterSet.title": "Tập ký tự `[abc]`",
+  "steps.characterSet.description": "Nếu một vị trí trong từ có thể là nhiều ký tự khác nhau, hãy viết tất cả lựa chọn trong ngoặc vuông `[]`. Để tìm mọi từ trong văn bản, hãy nhập liền nhau các ký tự `a`, `e`, `i`, `o`, `u` trong `[]`.",
+
+  "steps.negatedCharacterSet.title": "Tập ký tự phủ định `[^abc]`",
+  "steps.negatedCharacterSet.description": "Để tìm mọi từ bên dưới ngoại trừ `ber` và `bor`, hãy nhập `e` và `o` liền nhau sau dấu mũ `^` trong ngoặc vuông `[]`.",
+
+  "steps.range.title": "Phạm vi chữ cái `[a-z]`",
+  "steps.range.description": "Để tìm các chữ trong một phạm vi, viết chữ đầu và chữ cuối trong ngoặc vuông `[]`, ngăn cách bằng dấu gạch ngang `-`. Có phân biệt chữ hoa và chữ thường. Hãy nhập biểu thức chọn mọi chữ thường từ `e` đến `o`, bao gồm cả hai đầu.",
+
+  "steps.rangeNumber.title": "Phạm vi chữ số `[0-9]`",
+  "steps.rangeNumber.description": "Để tìm số trong một phạm vi, viết số đầu và số cuối trong ngoặc vuông `[]`, ngăn cách bằng `-`. Hãy viết biểu thức chọn mọi số từ `3` đến `6`, bao gồm cả hai đầu.",
+
+  "examples.basicMatchers.title": "Luyện tập: Đối sánh cơ bản",
+  "examples.basicMatchers.description": "Viết biểu thức chọn các từ `of` trong văn bản.",
+
+  "examples.dotCharacter.title": "Luyện tập: Ký tự bất kỳ",
+  "examples.dotCharacter.description": "Nhập biểu thức chọn từng chữ cái, chữ số, khoảng trắng và ký tự đặc biệt. Biểu thức phải khớp với bất kỳ ký tự nào.",
+
+  "examples.characterSet.title": "Luyện tập: Tập ký tự",
+  "examples.characterSet.description": "Viết biểu thức khớp với từng từ trong văn bản. Chỉ ký tự đầu của các từ thay đổi.",
+
+  "examples.negatedCharacterSet.title": "Luyện tập: Tập ký tự phủ định",
+  "examples.negatedCharacterSet.description": "Dùng tập ký tự phủ định để viết biểu thức khớp với mọi thứ ngoại trừ `beor` và `beur`.",
+
+  "examples.range.title": "Luyện tập: Phạm vi chữ cái",
+  "examples.range.description": "Viết biểu thức chọn các chữ từ `g` đến `k`.\nCả `g` và `k` phải nằm trong phạm vi.",
+
+  "examples.rangeNumber.title": "Luyện tập: Phạm vi chữ số",
+  "examples.rangeNumber.description": "Nhập biểu thức chọn các số từ `2` đến `7`.\nCả `2` và `7` phải nằm trong phạm vi.",
+
+  "steps.repetitions.title": "Lặp lại",
+  "steps.repetitions.description": "Một số ký tự đặc biệt dùng để chỉ số lần ký tự lặp lại: dấu cộng `+`, dấu sao `*` và dấu hỏi `?`.",
+
+  "steps.asterisk.title": "Dấu sao `*`",
+  "steps.asterisk.description": "Đặt `*` sau một ký tự để cho biết ký tự đó có thể không xuất hiện hoặc xuất hiện nhiều lần. Hãy biểu thị chữ `e` không xuất hiện hoặc xuất hiện liền nhau một lần trở lên.",
+
+  "steps.plusCharacter.title": "Dấu cộng `+`",
+  "steps.plusCharacter.description": "Đặt `+` sau một ký tự để yêu cầu ký tự đó xuất hiện một lần trở lên. Hãy biểu thị chữ `e` phải xuất hiện ít nhất một lần.",
+
+  "steps.questionMark.title": "Dấu hỏi `?`",
+  "steps.questionMark.description": "Đặt `?` sau một ký tự để làm cho ký tự đó trở thành tùy chọn. Hãy biểu thị chữ `u` tiếp theo là tùy chọn.",
+
+  "steps.quantifier.title": "Ngoặc nhọn - 1",
+  "steps.quantifier.description": "Để chỉ số lần xuất hiện cụ thể, viết số lần trong ngoặc nhọn `{n}` sau ký tự. Hãy biểu thị chữ `e` tiếp theo chỉ xuất hiện liền nhau đúng `2` lần.",
+
+  "steps.quantifierMin.title": "Ngoặc nhọn - 2",
+  "steps.quantifierMin.description": "Để chỉ số lần xuất hiện tối thiểu, viết số và dấu phẩy trong `{n,}` sau ký tự. Hãy biểu thị chữ `e` tiếp theo xuất hiện liền nhau ít nhất `3` lần.",
+
+  "steps.quantifierRange.title": "Ngoặc nhọn - 3",
+  "steps.quantifierRange.description": "Để chỉ phạm vi số lần xuất hiện, dùng `{x,y}` với cả hai giới hạn được tính. Hãy biểu thị chữ `e` tiếp theo xuất hiện liền nhau từ `1` đến `3` lần.",
+
+  "examples.asterisk.title": "Luyện tập: Dấu sao `*`",
+  "examples.asterisk.description": "Dùng `*` để viết biểu thức chọn mỗi từ mà chữ `e` không có hoặc xuất hiện một lần trở lên.",
+
+  "examples.plusCharacter.title": "Luyện tập: Dấu cộng `+`",
+  "examples.plusCharacter.description": "Dùng `+` để chọn những từ có chữ `e` xuất hiện một lần trở lên.",
+
+  "examples.questionMark.title": "Luyện tập: Dấu hỏi `?`",
+  "examples.questionMark.description": "Dùng `?` để biểu thị chữ `n` là tùy chọn, nhờ đó cả `a` và `an` đều được chọn.",
+
+  "examples.quantifier.title": "Luyện tập: Ngoặc nhọn - 1",
+  "examples.quantifier.description": "Dùng ngoặc nhọn `{}` để tìm văn bản chứa `4` chữ số liền nhau. Nhớ rằng `[0-9]` khớp với một chữ số.",
+
+  "examples.quantifierMin.title": "Luyện tập: Ngoặc nhọn - 2",
+  "examples.quantifierMin.description": "Dùng ngoặc nhọn `{}` để tìm văn bản chứa ít nhất `2` chữ số liền nhau.",
+
+  "examples.quantifierRange.title": "Luyện tập: Ngoặc nhọn - 3",
+  "examples.quantifierRange.description": "Dùng ngoặc nhọn `{}` để tìm văn bản chứa từ `1` đến `4` chữ số liền nhau.",
+
+  "steps.grouping.title": "Dấu ngoặc `( )`: Nhóm",
+  "steps.grouping.description": "Ta có thể nhóm một biểu thức rồi tham chiếu nhóm hoặc áp dụng quy tắc cho nhóm đó. Hãy đặt biểu thức trong dấu ngoặc `()`. Trước tiên, hãy nhóm `haa` bên dưới.",
+
+  "steps.groupReference.title": "Tham chiếu nhóm",
+  "steps.groupReference.description": "Bên dưới có hai nhóm: `(ha)` và `(haa)`. Để tham chiếu về sau, dùng `\\1` cho nhóm đầu và `\\2` cho nhóm thứ hai. Trong `(ha)-\\1,(haa)-\\2`, dấu `-` nằm ngoài nhóm, `\\1` tham chiếu `ha`, còn `\\2` tham chiếu `haa`. Nhập `\\2` ở cuối biểu thức.",
+
+  "steps.nonCapturingGrouping.title": "Dấu ngoặc `(?: )`: Nhóm không bắt giữ",
+  "steps.nonCapturingGrouping.description": "Thêm `?:` ngay sau ngoặc mở, như `(?:ha)`, sẽ tạo nhóm không bắt giữ. Biểu thức vẫn được nhóm nhưng kết quả không được lưu nên không thể tham chiếu. Nhóm đầu `(?:ha)` không bắt giữ, vì vậy `\\1` tham chiếu nhóm bắt giữ `(haa)`.",
+
+  "steps.pipeCharacter.title": "Ký tự ống `|`",
+  "steps.pipeCharacter.description": "Ký tự `|` cho phép nhiều biểu thức thay thế. Khác với `[abc]` hoạt động ở cấp ký tự, phép lựa chọn hoạt động ở cấp biểu thức. Biểu thức sau chọn cả `cat` và `rat`. Hãy thêm `|` rồi `dog` vào cuối để chọn mọi từ.",
+
+  "steps.escapeCharacter.title": "Ký tự thoát `\\`",
+  "steps.escapeCharacter.description": "Regex sử dụng các ký tự đặc biệt `{ } [ ] / \\ + * . $^ | ?`. Để chọn chính ký tự đó, hãy đặt ký tự thoát `\\` phía trước. Thêm `\\` trước dấu chấm `.` và dấu sao `*`.",
+
+  "steps.caret.title": "Dấu mũ `^`:\nChọn theo đầu dòng",
+  "steps.caret.description": "Ta dùng `[0-9]` để tìm chữ số. Để chỉ tìm số ở đầu dòng, hãy thêm `^` vào đầu biểu thức.",
+
+  "steps.dollar.title": "Dấu đô la `$`:\nChọn theo cuối dòng",
+  "steps.dollar.description": "Thêm `$` sau giá trị `html` để chỉ tìm `html` ở cuối dòng.",
+
+  "steps.wordCharacter.title": "Ký tự từ `\\w`: Chữ, số và gạch dưới",
+  "steps.wordCharacter.description": "`\\w` dùng để tìm chữ cái, chữ số và dấu gạch dưới. Hãy dùng `\\w` để tìm ký tự từ.",
+
+  "steps.withoutWordCharacter.title": "Không phải ký tự từ `\\W`",
+  "steps.withoutWordCharacter.description": "`\\W` dùng để tìm ký tự không phải chữ cái, chữ số hoặc dấu gạch dưới.",
+
+  "steps.numberCharacter.title": "Ký tự số `\\d`",
+  "steps.numberCharacter.description": "`\\d` chỉ dùng để tìm chữ số.",
+
+  "steps.withoutNumberCharacter.title": "Không phải ký tự số `\\D`",
+  "steps.withoutNumberCharacter.description": "`\\D` dùng để tìm ký tự không phải chữ số.",
+
+  "steps.spaceCharacter.title": "Ký tự khoảng trắng `\\s`",
+  "steps.spaceCharacter.description": "`\\s` chỉ dùng để tìm ký tự khoảng trắng.",
+
+  "steps.withoutSpaceCharacter.title": "Không phải khoảng trắng `\\S`",
+  "steps.withoutSpaceCharacter.description": "`\\S` dùng để tìm ký tự không phải khoảng trắng.",
+
+  "steps.lookarounds.title": "Lookaround",
+  "steps.lookarounds.description": "Nếu cụm từ đang viết phải đứng trước hoặc sau một cụm từ khác, ta cần dùng lookaround. Hãy tiếp tục để tìm hiểu.",
+
+  "steps.positiveLookahead.title": "Lookahead dương: `(?=)`",
+  "steps.positiveLookahead.description": "Để chỉ chọn số có `PM` theo sau, viết lookahead dương `(?=)` sau biểu thức và nhập `PM` sau dấu `=` trong ngoặc.",
+
+  "steps.negativeLookahead.title": "Lookahead âm: `(?!)`",
+  "steps.negativeLookahead.description": "Để chỉ chọn số không có `PM` theo sau, viết lookahead âm `(?!)` sau biểu thức và nhập `PM` sau dấu `!` trong ngoặc.",
+
+  "steps.positiveLookbehind.title": "Lookbehind dương: `(?<=)`",
+  "steps.positiveLookbehind.description": "Để chỉ chọn số có `$` đứng trước, viết lookbehind dương `(?<=)` trước biểu thức và thêm `\\$` sau dấu `=` trong ngoặc.",
+
+  "steps.negativeLookbehind.title": "Lookbehind âm: `(?&lt;!)`",
+  "steps.negativeLookbehind.description": "Để chỉ chọn số không có `$` đứng trước, viết lookbehind âm `(?&lt;!)` trước biểu thức và thêm `\\$` sau dấu `!` trong ngoặc.",
+
+  "steps.flags.title": "Cờ",
+  "steps.flags.description": "Cờ thay đổi cách biểu thức hoạt động và còn được gọi là `modifier`. Cờ quyết định văn bản có được xử lý theo từng dòng, có phân biệt hoa thường và có tìm mọi kết quả khớp hay không.",
+
+  "steps.flagsGlobal.title": "Cờ toàn cục",
+  "steps.flagsGlobal.description": "Cờ `global` làm cho biểu thức chọn mọi kết quả khớp; nếu không dùng thì chỉ chọn kết quả đầu tiên. Hãy bật cờ `global`.",
+
+  "steps.flagsMultiline.title": "Cờ nhiều dòng",
+  "steps.flagsMultiline.description": "Regex thường xem toàn bộ văn bản là một dòng. Cờ `multiline` xử lý từng dòng riêng, giúp các mẫu đầu và cuối dòng hoạt động trên mỗi dòng. Hãy bật cờ `multiline`.",
+
+  "steps.flagsCaseInsensitive.title": "Cờ không phân biệt hoa thường",
+  "steps.flagsCaseInsensitive.description": "Để biểu thức không phân biệt chữ hoa và chữ thường, hãy bật cờ `case-insensitive`.",
+
+  "steps.greedyMatching.title": "Đối sánh tham lam",
+  "steps.greedyMatching.description": "Theo mặc định, Regex đối sánh tham lam, nghĩa là chọn phạm vi dài nhất có thể. Ví dụ bên dưới chọn phạm vi kết thúc bằng `r` với các ký tự bất kỳ phía trước, nên không dừng ở kết quả đầu tiên.",
+
+  "steps.lazyMatching.title": "Đối sánh lười",
+  "steps.lazyMatching.description": "Đối sánh lười dừng ở kết quả đầu tiên. Trong ví dụ bên dưới, thêm `?` sau `*` để tìm phạm vi đầu tiên kết thúc bằng chữ `r` và có ký tự bất kỳ phía trước. Kết quả sẽ dừng ở chữ `r` đầu tiên.",
+
+  "steps.completeAllSteps.title": "Chúc mừng, bạn đã hoàn thành tất cả các bước!",
+  "steps.completeAllSteps.description": "Bạn có thể quay lại các bước trước bất cứ lúc nào và dễ dàng di chuyển giữa những bước đã hoàn thành."
+}

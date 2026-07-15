@@ -1,0 +1,49 @@
+{
+  "lesson.regexForSeo.starter.title": "Regex cho SEO",
+  "lesson.regexForSeo.starter.description": "Regex là tập hợp các biểu thức chính quy được dùng rộng rãi trong nhiều lĩnh vực, đặc biệt để tăng năng suất. Với SEO, Regex giúp phân tích dữ liệu lớn và tạo bộ lọc phong phú hơn. Nếu mới làm quen với Regex, bạn nên bắt đầu bằng hướng dẫn `Regex 101`. \n\nHãy nhập `OK` vào trường Regex để chuyển đến bước đầu tiên và xem giải thích chi tiết hơn.",
+
+  "lesson.regexForSeo.usage.title": "Trường hợp sử dụng",
+  "lesson.regexForSeo.usage.description": "Bạn có thể dùng Regex cho SEO trên các nền tảng như `Google Analytics`, `Google Data Studio`, `Google Sheets`, `Google Search Console`, `Ahrefs`, `Deepcrawl` và `Screaming Frog`. Regex cũng thường được dùng trong tệp `.htaccess` và `robots.txt (regex-like syntax)`.\n\nVí dụ bên dưới chỉ chọn các văn bản trong danh sách bắt đầu bằng `Google`.",
+
+  "lesson.regexForSeo.basics.title": "Cơ bản",
+  "lesson.regexForSeo.basics.description": "Hãy xem một số Regex thường dùng. Bạn nên xem hướng dẫn `Regex 101` để hiểu thêm. Nhập `Yes` để bắt đầu.",
+
+  "lesson.regexForSeo.or.title": "Toán tử OR `|`",
+  "lesson.regexForSeo.or.description": "Toán tử OR `|` dùng để lọc nhiều biểu thức. Ví dụ, hãy lọc văn bản chứa `seo` hoặc `regex` bằng cách viết hai từ và ngăn cách chúng bằng `|`.",
+
+  "lesson.regexForSeo.optional.title": "Toán tử tùy chọn `?`",
+  "lesson.regexForSeo.optional.description": "Toán tử này cho biết một biểu thức hoặc ký tự là tùy chọn. Ví dụ, ta muốn lọc cả `http` và `https`. Có thể dùng `|`, nhưng có cách tốt hơn cho hai từ gần giống nhau này.\n\nTrong ví dụ, chữ `s` là tùy chọn. Hãy thêm `?` sau chữ `s`.",
+
+  "lesson.regexForSeo.any.title": "Bất kỳ nội dung nào `.*`",
+  "lesson.regexForSeo.any.description": "Trong regex, dấu chấm `.` khớp với bất kỳ ký tự nào, kể cả khoảng trắng, nhưng chỉ một ký tự. Dấu sao `*` nghĩa là phần tử trước đó xuất hiện không lần nào hoặc nhiều lần. Khi kết hợp, `.*` khớp với chuỗi có độ dài bất kỳ.\n\nHãy thêm `.*` vào cuối regex để biểu thức bắt đầu bằng `how to write` và khớp mọi thứ phía sau.",
+
+  "lesson.regexForSeo.contains.title": "Chứa",
+  "lesson.regexForSeo.contains.description": "Để lọc văn bản chứa từ hoặc cụm từ cần tìm, hãy đặt từ đó giữa hai `.*`. Ví dụ, nhập `.*buy.*` để lọc nội dung có chứa `buy`.",
+
+  "lesson.regexForSeo.negated.title": "Tập ký tự phủ định `[^abc]`",
+  "lesson.regexForSeo.negated.description": "Tập ký tự phủ định `[^]` biểu thị các ký tự không được phép xuất hiện. Chúng được viết trong ngoặc vuông với dấu mũ ở đầu. Bên dưới có cả `http` và `https`; vì `http` nằm trong cả hai nên cũng chọn `https`. Nhập `[^s]` sau chữ `p` để loại chữ `s`.",
+
+  "lesson.regexForSeo.caret.title": "Dấu mũ `^`",
+  "lesson.regexForSeo.caret.description": "Giả sử ta có danh sách URL và chỉ muốn tìm URL bắt đầu bằng `http`. Vì `http` cũng có thể xuất hiện ở vị trí khác, hãy thêm `^` vào đầu biểu thức để chỉ lọc URL bắt đầu bằng `http`.",
+
+  "lesson.regexForSeo.dollarAndEscape.title": "Dấu đô la `$` và ký tự thoát `\\`",
+  "lesson.regexForSeo.dollarAndEscape.description": "Ta có danh sách URL và chỉ muốn tìm URL kết thúc bằng `.htm`.\n\nVì dấu chấm `.` là ký tự đặc biệt khớp với mọi thứ, trước tiên hãy vô hiệu hóa ý nghĩa đặc biệt của nó bằng ký tự thoát `\\`. Điều này áp dụng cho mọi ký tự đặc biệt.\n\nSau đó thêm `$` vào cuối biểu thức để văn bản phải kết thúc bằng phần đứng trước nó.",
+
+  "lesson.regexForSeo.limitation.title": "Giới hạn độ dài `{n}`",
+  "lesson.regexForSeo.limitation.description": "Ta có thể lọc kết quả theo số ký tự. Để lọc URL dài `35` ký tự, hãy nhập `{35}` sau dấu chấm `.`.",
+
+  "lesson.regexForSeo.maxLimitation.title": "Giới hạn độ dài (Tối đa) `{n,m}`",
+  "lesson.regexForSeo.maxLimitation.description": "Để lọc URL dài tối đa `35` ký tự, hãy nhập giá trị tối thiểu và tối đa `{1,35}` sau dấu chấm `.`.",
+
+  "lesson.regexForSeo.minLimitation.title": "Giới hạn độ dài (Tối thiểu) `{n,}`",
+  "lesson.regexForSeo.minLimitation.description": "Để lọc URL dài tối thiểu `35` ký tự, hãy nhập `{35,}` sau dấu chấm `.`; dấu phẩy cho biết không có giới hạn trên.",
+
+  "lesson.regexForSeo.robots.title": "robots.txt (cú pháp giống regex)",
+  "lesson.regexForSeo.robots.description": "Đây là ví dụ sử dụng cú pháp giống regex trong tệp `robots.txt`. Ví dụ yêu cầu bot không thu thập các liên kết có phần mở rộng `pdf`.",
+
+  "lesson.regexForSeo.htaccess.title": ".htaccess",
+  "lesson.regexForSeo.htaccess.description": "Đây là ví dụ sử dụng regex trong tệp `.htaccess`. Các liên kết có phần mở rộng `php` được chuyển hướng sang `html` bằng mã `301`.",
+
+  "lesson.regexForSeo.outro.title": "Kết luận",
+  "lesson.regexForSeo.outro.description": "Kiến thức Regex giúp tăng năng suất trên mọi nền tảng hỗ trợ regex. Khi thành thạo, bạn có thể hoàn thành nhiều công việc lặp lại nhanh hơn và dành thời gian cho việc khác. Hãy xem `Regex 101` để hiểu nền tảng và dùng `Playground` để kiểm tra biểu thức trên văn bản của bạn."
+}

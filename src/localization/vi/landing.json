@@ -1,0 +1,26 @@
+{
+  "landing.title": "Học Regex từng bước, từ cơ bản đến nâng cao.",
+  "landing.description": "Học Regex dễ hơn bạn nghĩ. Với công cụ này, bạn có thể dễ dàng `học`, `luyện tập` và `kiểm tra` Regex.",
+  "landing.imageAltText": "Minh họa một người đàn ông thư giãn, gác chân lên bàn.",
+
+  "section.learn.title": "Học",
+  "section.learn.content": "`Regular Expressions`, viết tắt là Regex hoặc Regexp, là chuỗi ký tự được tạo theo các quy tắc cú pháp Regex. Bạn có thể dễ dàng quản lý dữ liệu bằng các thao tác tìm kiếm, đối sánh và chỉnh sửa. Regex được dùng trong Python, SQL, JavaScript, R, Google Analytics, Google Data Studio và nhiều quy trình lập trình khác. Hãy học regex trực tuyến qua các ví dụ và hướng dẫn trên RegexLearn ngay hôm nay.",
+  "section.learn.imageAltText": "Minh họa ngọn núi với lá cờ trên đỉnh.",
+
+  "section.cheatsheet.button": "Xem ngay",
+  "section.cheatsheet.title": "Bảng tra cứu",
+  "section.cheatsheet.content": "Với `Bảng tra cứu RegexLearn`, bạn có thể xem tất cả cách dùng cần thiết trên một trang. Khám phá mọi mẫu và ký hiệu Regex trong bảng tra cứu.",
+  "section.cheatsheet.imageAltText": "Minh họa một người đàn ông xem các trang qua ống nhòm.",
+
+  "section.playground.title": "Sân thử nghiệm",
+  "section.playground.content": "Nếu muốn tạo Regex, bạn có thể dễ dàng xây dựng, xác thực và kiểm tra mẫu Regex trong Sân thử nghiệm.",
+  "section.playground.imageAltText": "Minh họa một chú mèo sắp làm đổ cốc nước đầy.",
+
+  "section.practice.title": "Luyện tập",
+  "section.practice.content": "Sau khi hoàn thành phần học, đã đến lúc LUYỆN TẬP! Tại đây, bạn có thể kiểm tra kiến thức Regex và luyện tập với hướng dẫn phù hợp trình độ. Sắp ra mắt.",
+  "section.practice.imageAltText": "Minh họa một người phụ nữ ghi chép từ sách.",
+
+  "section.opensource.title": "Mã nguồn mở",
+  "section.opensource.content": "Regex Learn là dự án mã nguồn mở miễn phí, luôn chào đón đóng góp từ cộng đồng. Tham gia dự án giúp bạn rèn luyện kỹ năng, học hỏi và cộng tác. Bạn có thể đóng góp và hỗ trợ tại đây.",
+  "section.opensource.imageAltText": "Minh họa một phụ nữ, một đàn ông và một chú mèo cùng ghép hình."
+}
