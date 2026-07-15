@@ -1,0 +1,163 @@
+{
+  "examples.starter.title": "Latihan",
+  "examples.starter.description": "Sekarang saatnya berlatih untuk memperkuat hal-hal yang telah kita pelajari.",
+
+  "examples.finish.title": "Latihan selesai!",
+  "examples.finish.description": " ",
+
+  "steps.starter.title": "Pengantar",
+  "steps.starter.description": "Regex adalah singkatan dari `Regular Expression`. Regex membantu mencocokkan, menemukan, atau mengelola teks. Pelajaran dan Playground menggunakan mesin regex JavaScript, dengan pola yang ditulis sebagai `/pattern/flags`. Ketik `OK` di kolom Regex untuk menuju langkah pertama dan membaca penjelasan lebih terperinci.",
+
+  "steps.whatIsRegex.title": "Apa itu Regular Expressions `Regex`?",
+  "steps.whatIsRegex.description": "Regular Expressions adalah rangkaian karakter yang menyatakan sebuah pola pencarian, sering disingkat `Regex` atau `Regexp`. Regex terutama digunakan untuk menemukan atau mengganti kata dalam teks. Kita juga dapat menguji apakah teks mematuhi aturan yang ditentukan.\n\nMisalnya, Anda memiliki daftar nama berkas dan hanya ingin mencari berkas berekstensi `pdf`. Ekspresi `^\\w+\\.pdf$` dapat digunakan. Arti setiap bagian ekspresi akan semakin jelas seiring Anda mengikuti langkah-langkah berikutnya.",
+
+  "steps.basicMatchers.title": "Pencocok Dasar",
+  "steps.basicMatchers.description": "Karakter atau kata yang ingin dicari ditulis secara langsung, seperti pencarian biasa. Misalnya, untuk menemukan kata `curious` dalam teks, ketik kata tersebut.",
+
+  "steps.dotCharacter.title": "Titik `.`: Karakter Apa Pun",
+  "steps.dotCharacter.description": "Titik `.` dapat memilih karakter apa pun, termasuk karakter khusus dan spasi. Ketik titik `.` di kolom Regex untuk melanjutkan.",
+
+  "steps.characterSet.title": "Himpunan Karakter `[abc]`",
+  "steps.characterSet.description": "Jika satu posisi dalam sebuah kata dapat berisi beberapa karakter, tulis semua alternatif di dalam kurung siku `[]`. Untuk menemukan semua kata dalam teks, ketik karakter `a`, `e`, `i`, `o`, dan `u` secara berurutan di dalam `[]`.",
+
+  "steps.negatedCharacterSet.title": "Himpunan Karakter Negatif `[^abc]`",
+  "steps.negatedCharacterSet.description": "Untuk menemukan semua kata dalam teks di bawah kecuali `ber` dan `bor`, ketik `e` dan `o` bersebelahan setelah caret `^` di dalam kurung siku `[]`.",
+
+  "steps.range.title": "Rentang Huruf `[a-z]`",
+  "steps.range.description": "Untuk mencari huruf dalam rentang tertentu, tulis huruf awal dan akhir di dalam kurung siku `[]`, dipisahkan tanda hubung `-`. Huruf besar dan kecil dibedakan. Ketik ekspresi yang memilih semua huruf kecil dari `e` hingga `o`, termasuk keduanya.",
+
+  "steps.rangeNumber.title": "Rentang Angka `[0-9]`",
+  "steps.rangeNumber.description": "Untuk mencari angka dalam rentang tertentu, tulis angka awal dan akhir di dalam kurung siku `[]`, dipisahkan tanda hubung `-`. Tulis ekspresi yang memilih semua angka dari `3` hingga `6`, termasuk keduanya.",
+
+  "examples.basicMatchers.title": "Latihan: Pencocok Dasar",
+  "examples.basicMatchers.description": "Tulis ekspresi yang memilih kata `of` dalam teks.",
+
+  "examples.dotCharacter.title": "Latihan: Karakter Apa Pun",
+  "examples.dotCharacter.description": "Ketik ekspresi untuk memilih setiap huruf, angka, spasi, dan karakter khusus dalam teks. Ekspresi harus cocok dengan karakter apa pun.",
+
+  "examples.characterSet.title": "Latihan: Himpunan Karakter",
+  "examples.characterSet.description": "Tulis ekspresi yang mencocokkan setiap kata dalam teks. Hanya huruf pertama setiap kata yang berubah.",
+
+  "examples.negatedCharacterSet.title": "Latihan: Himpunan Karakter Negatif",
+  "examples.negatedCharacterSet.description": "Tulis ekspresi yang mencocokkan semua kata selain `beor` dan `beur` menggunakan himpunan karakter negatif.",
+
+  "examples.range.title": "Latihan: Rentang Huruf",
+  "examples.range.description": "Tulis ekspresi yang memilih huruf dari `g` hingga `k` dalam teks.\nHuruf `g` dan `k` juga harus termasuk dalam rentang.",
+
+  "examples.rangeNumber.title": "Latihan: Rentang Angka",
+  "examples.rangeNumber.description": "Ketik ekspresi yang memilih angka dari `2` hingga `7` dalam teks.\nAngka `2` dan `7` juga harus termasuk dalam rentang.",
+
+  "steps.repetitions.title": "Pengulangan",
+  "steps.repetitions.description": "Beberapa karakter khusus digunakan untuk menentukan berapa kali sebuah karakter diulang dalam teks: plus `+`, asterisk `*`, dan tanda tanya `?`.",
+
+  "steps.asterisk.title": "Asterisk `*`",
+  "steps.asterisk.description": "Letakkan asterisk `*` setelah karakter untuk menunjukkan bahwa karakter tersebut boleh tidak muncul atau muncul berkali-kali. Nyatakan bahwa huruf `e` boleh tidak ada atau muncul satu kali maupun lebih secara berurutan.",
+
+  "steps.plusCharacter.title": "Tanda Plus `+`",
+  "steps.plusCharacter.description": "Letakkan plus `+` setelah karakter untuk menunjukkan bahwa karakter harus muncul satu kali atau lebih. Nyatakan bahwa huruf `e` harus muncul satu kali atau lebih.",
+
+  "steps.questionMark.title": "Tanda Tanya `?`",
+  "steps.questionMark.description": "Letakkan tanda tanya `?` setelah karakter untuk membuatnya opsional. Nyatakan bahwa huruf `u` berikut bersifat opsional.",
+
+  "steps.quantifier.title": "Kurung Kurawal - 1",
+  "steps.quantifier.description": "Untuk menentukan jumlah kemunculan karakter, tulis jumlah tersebut dalam kurung kurawal `{n}` setelah karakter. Nyatakan bahwa huruf `e` berikut hanya boleh muncul `2` kali berturut-turut.",
+
+  "steps.quantifierMin.title": "Kurung Kurawal - 2",
+  "steps.quantifierMin.description": "Untuk menentukan jumlah kemunculan minimum, tulis jumlah dan koma dalam kurung kurawal `{n,}` setelah karakter. Nyatakan bahwa huruf `e` berikut dapat muncul setidaknya `3` kali berturut-turut.",
+
+  "steps.quantifierRange.title": "Kurung Kurawal - 3",
+  "steps.quantifierRange.description": "Untuk menentukan rentang jumlah kemunculan, gunakan kurung kurawal `{x,y}` dengan kedua batas ikut dihitung. Nyatakan bahwa huruf `e` berikut hanya dapat muncul antara `1` dan `3` kali berturut-turut.",
+
+  "examples.asterisk.title": "Latihan: Asterisk `*`",
+  "examples.asterisk.description": "Gunakan asterisk `*` untuk menulis ekspresi yang memilih setiap kata ketika huruf `e` tidak ada atau muncul satu kali maupun lebih.",
+
+  "examples.plusCharacter.title": "Latihan: Tanda Plus `+`",
+  "examples.plusCharacter.description": "Gunakan plus `+` untuk memilih kata yang mengandung huruf `e` satu kali atau lebih.",
+
+  "examples.questionMark.title": "Latihan: Tanda Tanya `?`",
+  "examples.questionMark.description": "Gunakan tanda tanya `?` untuk menunjukkan bahwa huruf `n` bersifat opsional, sehingga kata `a` dan `an` dapat dipilih.",
+
+  "examples.quantifier.title": "Latihan: Kurung Kurawal - 1",
+  "examples.quantifier.description": "Gunakan kurung kurawal `{}` untuk menemukan teks yang berisi `4` angka berurutan. Ingat bahwa rentang `[0-9]` mencocokkan satu digit.",
+
+  "examples.quantifierMin.title": "Latihan: Kurung Kurawal - 2",
+  "examples.quantifierMin.description": "Gunakan kurung kurawal `{}` untuk menemukan teks yang berisi setidaknya `2` angka berurutan.",
+
+  "examples.quantifierRange.title": "Latihan: Kurung Kurawal - 3",
+  "examples.quantifierRange.description": "Gunakan kurung kurawal `{}` untuk menemukan teks yang berisi sedikitnya `1` dan paling banyak `4` angka berurutan.",
+
+  "steps.grouping.title": "Tanda Kurung `( )`: Pengelompokan",
+  "steps.grouping.description": "Kita dapat mengelompokkan ekspresi, lalu merujuk grup tersebut atau menerapkan aturan tertentu. Untuk mengelompokkan ekspresi, apit dengan tanda kurung `()`. Untuk sekarang, kelompokkan `haa` di bawah.",
+
+  "steps.groupReference.title": "Merujuk Grup",
+  "steps.groupReference.description": "Di bawah terdapat dua grup: `(ha)` dan `(haa)`. Untuk merujuknya kemudian dalam pola, gunakan `\\1` untuk grup pertama dan `\\2` untuk grup kedua. Dalam pola `(ha)-\\1,(haa)-\\2`, tanda `-` berada di luar grup, `\\1` merujuk `ha`, dan `\\2` merujuk `haa`. Ketik `\\2` di akhir ekspresi untuk merujuk grup kedua.",
+
+  "steps.nonCapturingGrouping.title": "Tanda Kurung `(?: )`: Grup Non-Capturing",
+  "steps.nonCapturingGrouping.description": "Menambahkan `?:` tepat setelah tanda kurung buka, seperti `(?:ha)`, membuat grup non-capturing. Ekspresi tetap dikelompokkan, tetapi hasilnya tidak disimpan sehingga tidak dapat dirujuk. Grup pertama `(?:ha)` bersifat non-capturing, jadi `\\1` merujuk grup capturing `(haa)`.",
+
+  "steps.pipeCharacter.title": "Karakter Pipa `|`",
+  "steps.pipeCharacter.description": "Karakter pipa `|` memungkinkan beberapa alternatif ekspresi. Berbeda dari himpunan `[abc]` yang bekerja per karakter, alternatif bekerja pada tingkat ekspresi. Ekspresi berikut memilih `cat` dan `rat`. Tambahkan `|` lalu `dog` di akhir ekspresi agar semua kata terpilih.",
+
+  "steps.escapeCharacter.title": "Karakter Escape `\\`",
+  "steps.escapeCharacter.description": "Regex menggunakan karakter khusus berikut: `{ } [ ] / \\ + * . $^ | ?`. Untuk memilih karakter itu sendiri, gunakan karakter escape `\\`. Tambahkan `\\` sebelum titik `.` dan asterisk `*` dalam teks.",
+
+  "steps.caret.title": "Tanda Caret `^`:\nMemilih dari Awal Baris",
+  "steps.caret.description": "Kita menggunakan `[0-9]` untuk mencari angka. Untuk mencari hanya angka di awal baris, tambahkan `^` di depan ekspresi.",
+
+  "steps.dollar.title": "Tanda Dolar `$`:\nMemilih dari Akhir Baris",
+  "steps.dollar.description": "Tambahkan `$` setelah nilai `html` untuk menemukan teks `html` hanya di akhir baris.",
+
+  "steps.wordCharacter.title": "Karakter Kata `\\w`: Huruf, Angka, dan Garis Bawah",
+  "steps.wordCharacter.description": "Ekspresi `\\w` digunakan untuk menemukan huruf, angka, dan garis bawah. Gunakan `\\w` untuk menemukan karakter kata dalam teks.",
+
+  "steps.withoutWordCharacter.title": "Selain Karakter Kata `\\W`",
+  "steps.withoutWordCharacter.description": "Ekspresi `\\W` digunakan untuk menemukan karakter selain huruf, angka, dan garis bawah.",
+
+  "steps.numberCharacter.title": "Karakter Angka `\\d`",
+  "steps.numberCharacter.description": "`\\d` digunakan untuk menemukan karakter angka saja.",
+
+  "steps.withoutNumberCharacter.title": "Selain Karakter Angka `\\D`",
+  "steps.withoutNumberCharacter.description": "`\\D` digunakan untuk menemukan karakter selain angka.",
+
+  "steps.spaceCharacter.title": "Karakter Spasi `\\s`",
+  "steps.spaceCharacter.description": "`\\s` digunakan untuk menemukan karakter spasi putih saja.",
+
+  "steps.withoutSpaceCharacter.title": "Selain Karakter Spasi `\\S`",
+  "steps.withoutSpaceCharacter.description": "`\\S` digunakan untuk menemukan karakter selain spasi putih.",
+
+  "steps.lookarounds.title": "Lookaround",
+  "steps.lookarounds.description": "Jika frasa yang kita tulis harus berada sebelum atau sesudah frasa lain, kita perlu menggunakan lookaround. Lanjutkan ke langkah berikutnya untuk mempelajarinya.",
+
+  "steps.positiveLookahead.title": "Lookahead Positif: `(?=)`",
+  "steps.positiveLookahead.description": "Misalnya, kita ingin memilih nilai jam. Untuk memilih hanya angka yang diikuti `PM`, tulis lookahead positif `(?=)` setelah ekspresi. Masukkan `PM` setelah tanda `=` di dalam kurung.",
+
+  "steps.negativeLookahead.title": "Lookahead Negatif: `(?!)`",
+  "steps.negativeLookahead.description": "Untuk memilih angka selain nilai jam, pilih angka yang tidak diikuti `PM` dengan menulis lookahead negatif `(?!)` setelah ekspresi. Masukkan `PM` setelah tanda `!` di dalam kurung.",
+
+  "steps.positiveLookbehind.title": "Lookbehind Positif: `(?<=)`",
+  "steps.positiveLookbehind.description": "Untuk memilih hanya angka yang didahului `$`, tulis lookbehind positif `(?<=)` sebelum ekspresi. Tambahkan `\\$` setelah tanda `=` di dalam kurung.",
+
+  "steps.negativeLookbehind.title": "Lookbehind Negatif: `(?&lt;!)`",
+  "steps.negativeLookbehind.description": "Untuk memilih hanya angka yang tidak didahului `$`, tulis lookbehind negatif `(?&lt;!)` sebelum ekspresi. Tambahkan `\\$` setelah tanda `!` di dalam kurung.",
+
+  "steps.flags.title": "Flag",
+  "steps.flags.description": "Flag mengubah hasil ekspresi dan juga disebut `modifier`. Flag menentukan apakah teks diperlakukan sebagai baris terpisah, apakah huruf besar dan kecil dibedakan, serta apakah semua kecocokan dicari. Lanjutkan untuk mempelajari setiap flag.",
+
+  "steps.flagsGlobal.title": "Flag Global",
+  "steps.flagsGlobal.description": "Flag `global` membuat ekspresi memilih semua kecocokan. Tanpanya, hanya kecocokan pertama yang dipilih. Aktifkan flag `global` untuk memilih semua kecocokan.",
+
+  "steps.flagsMultiline.title": "Flag Multibaris",
+  "steps.flagsMultiline.description": "Regex biasanya melihat seluruh teks sebagai satu baris. Flag `multiline` membuat setiap baris diproses secara terpisah, sehingga pola awal dan akhir baris bekerja pada tiap baris. Aktifkan flag `multiline` untuk menemukan semua kecocokan.",
+
+  "steps.flagsCaseInsensitive.title": "Flag Tanpa Membedakan Kapitalisasi",
+  "steps.flagsCaseInsensitive.description": "Aktifkan flag `case-insensitive` agar ekspresi tidak membedakan huruf besar dan kecil.",
+
+  "steps.greedyMatching.title": "Pencocokan Greedy",
+  "steps.greedyMatching.description": "Secara bawaan, Regex melakukan pencocokan greedy, yaitu mengambil kecocokan sepanjang mungkin. Contoh di bawah mencari rentang yang diakhiri `r` dan dapat didahului karakter apa pun, sehingga tidak berhenti pada kecocokan pertama.",
+
+  "steps.lazyMatching.title": "Pencocokan Lazy",
+  "steps.lazyMatching.description": "Berbeda dari greedy, pencocokan lazy berhenti pada kecocokan pertama. Tambahkan `?` setelah `*` pada contoh di bawah untuk menemukan kecocokan pertama yang diakhiri huruf `r` dan didahului karakter apa pun. Kecocokan akan berhenti pada huruf `r` pertama.",
+
+  "steps.completeAllSteps.title": "Selamat, Anda telah menyelesaikan semua langkah!",
+  "steps.completeAllSteps.description": "Anda dapat kembali ke langkah sebelumnya kapan saja dan berpindah dengan mudah di antara semua langkah yang telah diselesaikan."
+}

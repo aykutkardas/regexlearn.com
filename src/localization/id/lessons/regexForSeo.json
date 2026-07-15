@@ -1,0 +1,49 @@
+{
+  "lesson.regexForSeo.starter.title": "Regex untuk SEO",
+  "lesson.regexForSeo.starter.description": "Regex adalah kumpulan ekspresi reguler yang sering digunakan di berbagai bidang, terutama untuk meningkatkan produktivitas. Dalam SEO, Regex mempermudah analisis data berukuran besar dan pembuatan filter yang lebih kaya. Jika Anda baru mengenal Regex, sebaiknya mulai dari tutorial `Regex 101`. \n\nKetik `OK` di kolom Regex untuk menuju langkah pertama dan membaca penjelasan lebih terperinci.",
+
+  "lesson.regexForSeo.usage.title": "Contoh Penggunaan",
+  "lesson.regexForSeo.usage.description": "Anda dapat menggunakan Regex untuk SEO pada platform seperti `Google Analytics`, `Google Data Studio`, `Google Sheets`, `Google Search Console`, `Ahrefs`, `Deepcrawl`, dan `Screaming Frog`. Regex juga sering digunakan dalam berkas `.htaccess` dan `robots.txt (regex-like syntax)`.\n\nBerikut adalah contoh regex yang hanya memilih teks dalam daftar yang diawali dengan `Google`.",
+
+  "lesson.regexForSeo.basics.title": "Dasar-Dasar",
+  "lesson.regexForSeo.basics.description": "Mari lihat beberapa Regex yang sering digunakan. Untuk mempelajarinya lebih lanjut, sebaiknya tinjau tutorial `Regex 101`. Ketik `Yes` untuk memulai.",
+
+  "lesson.regexForSeo.or.title": "Operator OR `|`",
+  "lesson.regexForSeo.or.description": "Operator OR `|` digunakan untuk memfilter beberapa ekspresi. Misalnya, filter teks yang mengandung `seo` atau `regex` dengan menulis kedua kata tersebut dan memisahkannya menggunakan operator OR `|`.",
+
+  "lesson.regexForSeo.optional.title": "Operator Opsional `?`",
+  "lesson.regexForSeo.optional.description": "Operator ini menunjukkan bahwa suatu ekspresi atau karakter bersifat opsional. Misalnya, kita ingin memfilter teks yang mengandung `http` maupun `https`. Operator OR `|` dapat digunakan, tetapi ada cara yang lebih baik untuk dua kata yang hampir sama ini.\n\nDalam contoh ini, huruf `s` bersifat opsional. Tambahkan tanda tanya `?` setelah huruf `s`.",
+
+  "lesson.regexForSeo.any.title": "Apa Pun `.*`",
+  "lesson.regexForSeo.any.description": "Dalam regex, titik `.` dapat mencocokkan karakter apa pun, termasuk spasi, tetapi hanya satu karakter. Asterisk `*` berarti elemen sebelumnya muncul nol kali atau lebih. Jika digabungkan, keduanya mencocokkan rangkaian karakter dengan panjang berapa pun.\n\nTambahkan `.*` di akhir regex agar ekspresi diawali dengan `how to write` dan mencocokkan semua karakter setelahnya.",
+
+  "lesson.regexForSeo.contains.title": "Mengandung",
+  "lesson.regexForSeo.contains.description": "Untuk memfilter teks yang mengandung kata atau frasa tertentu, letakkan kata tersebut di antara dua `.*` yang mencocokkan apa pun. Contohnya, ketik `.*buy.*` untuk memfilter teks yang mengandung `buy`.",
+
+  "lesson.regexForSeo.negated.title": "Himpunan Karakter Negatif `[^abc]`",
+  "lesson.regexForSeo.negated.description": "Himpunan karakter negatif `[^]` digunakan untuk menandai karakter yang tidak boleh disertakan. Karakter tersebut ditulis di dalam kurung siku dengan tanda caret di awal. Di bawah terdapat `http` dan `https`. Karena `http` ada pada keduanya, pola itu juga memilih `https`. Ketik `[^s]` setelah huruf `p` untuk mengecualikan huruf `s`.",
+
+  "lesson.regexForSeo.caret.title": "Tanda Caret `^`",
+  "lesson.regexForSeo.caret.description": "Misalkan kita memiliki daftar URL dan hanya ingin mencari URL yang diawali dengan `http`. Karena `http` juga dapat muncul di bagian lain URL, tambahkan caret `^` di awal ekspresi untuk memfilter URL yang benar-benar diawali dengan `http`.",
+
+  "lesson.regexForSeo.dollarAndEscape.title": "Tanda Dolar `$` dan Karakter Escape `\\`",
+  "lesson.regexForSeo.dollarAndEscape.description": "Kita kembali memiliki daftar URL dan hanya ingin mencari URL yang berakhiran `.htm`.\n\nKarena titik `.` adalah karakter khusus yang mencocokkan apa pun, nonaktifkan makna khusus titik sebelum `htm` dengan karakter escape `\\`. Hal ini berlaku untuk semua karakter khusus.\n\nKemudian tambahkan `$` di akhir ekspresi agar teks yang difilter harus berakhir dengan ekspresi sebelumnya.",
+
+  "lesson.regexForSeo.limitation.title": "Batas Panjang `{n}`",
+  "lesson.regexForSeo.limitation.description": "Kita dapat memfilter hasil berdasarkan jumlah karakter. Misalnya, untuk memfilter URL sepanjang `35` karakter, tulis `{35}` setelah titik `.`.",
+
+  "lesson.regexForSeo.maxLimitation.title": "Batas Panjang (Maksimum) `{n,m}`",
+  "lesson.regexForSeo.maxLimitation.description": "Untuk memfilter URL dengan panjang maksimum `35` karakter, tulis nilai minimum dan maksimum `{1,35}` setelah titik `.`.",
+
+  "lesson.regexForSeo.minLimitation.title": "Batas Panjang (Minimum) `{n,}`",
+  "lesson.regexForSeo.minLimitation.description": "Untuk memfilter URL dengan panjang minimum `35` karakter, tulis `{35,}` setelah titik `.`; koma menandakan tidak ada batas maksimum.",
+
+  "lesson.regexForSeo.robots.title": "robots.txt (sintaks mirip regex)",
+  "lesson.regexForSeo.robots.description": "Berikut contoh penggunaan sintaks mirip regex dalam berkas `robots.txt`. Contoh tersebut menyatakan bahwa bot tidak boleh merayapi tautan berekstensi `pdf`.",
+
+  "lesson.regexForSeo.htaccess.title": ".htaccess",
+  "lesson.regexForSeo.htaccess.description": "Berikut contoh penggunaan regex dalam berkas `.htaccess`. Pada contoh ini, tautan berekstensi `php` dialihkan ke ekstensi `html` dengan kode `301`.",
+
+  "lesson.regexForSeo.outro.title": "Penutup",
+  "lesson.regexForSeo.outro.description": "Pengetahuan Regex meningkatkan produktivitas pada platform apa pun yang mendukung regex. Setelah terbiasa, Anda dapat menyelesaikan banyak pekerjaan berulang dengan lebih cepat dan menghemat waktu. Untuk memahami dasarnya, kunjungi tutorial `Regex 101`. Gunakan halaman `Playground` untuk menguji ekspresi pada teks Anda."
+}

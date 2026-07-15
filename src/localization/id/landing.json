@@ -1,0 +1,26 @@
+{
+  "landing.title": "Pelajari Regex langkah demi langkah, dari nol hingga mahir.",
+  "landing.description": "Belajar Regex lebih mudah daripada yang Anda bayangkan. Dengan alat ini, Anda dapat dengan mudah `belajar`, `berlatih`, dan `menguji` Regex.",
+  "landing.imageAltText": "Ilustrasi seorang pria bersantai dengan kaki di atas meja.",
+
+  "section.learn.title": "Belajar",
+  "section.learn.content": "`Regular Expressions`, yang disingkat Regex atau Regexp, adalah rangkaian karakter yang dibuat berdasarkan aturan sintaks Regex. Anda dapat mengelola data dengan mudah melalui operasi pencarian, pencocokan, dan penyuntingan. Regex dapat digunakan dalam bahasa pemrograman seperti Python, SQL, JavaScript, R, serta Google Analytics, Google Data Studio, dan proses pemrograman lainnya. Pelajari regex secara daring melalui contoh dan tutorial di RegexLearn sekarang.",
+  "section.learn.imageAltText": "Ilustrasi gunung dengan bendera di puncaknya.",
+
+  "section.cheatsheet.button": "Lihat Sekarang",
+  "section.cheatsheet.title": "Contekan",
+  "section.cheatsheet.content": "Dengan `Contekan RegexLearn`, Anda dapat melihat semua penggunaan yang dibutuhkan sekaligus dalam satu halaman. Pelajari seluruh pola dan simbol Regex melalui contekan ini.",
+  "section.cheatsheet.imageAltText": "Ilustrasi seorang pria melihat halaman dengan teropong.",
+
+  "section.playground.title": "Playground",
+  "section.playground.content": "Jika ingin membuat Regex, Anda dapat menyusun, memvalidasi, dan menguji pola Regex dengan mudah di Playground.",
+  "section.playground.imageAltText": "Ilustrasi seekor kucing yang hampir menjatuhkan gelas penuh.",
+
+  "section.practice.title": "Latihan",
+  "section.practice.content": "Setelah menyelesaikan bagian pembelajaran, saatnya BERLATIH! Di bagian latihan, Anda dapat menguji pengetahuan Regex dan berlatih dengan tutorial sesuai tingkat Anda. Segera hadir.",
+  "section.practice.imageAltText": "Ilustrasi seorang wanita mencatat dari sebuah buku.",
+
+  "section.opensource.title": "Sumber Terbuka",
+  "section.opensource.content": "Regex Learn adalah proyek sumber terbuka gratis yang menerima kontribusi komunitas. Dengan berkontribusi, Anda dapat mengasah keterampilan, belajar, dan berkolaborasi. Anda dapat berkontribusi dan mendukung proyek ini di sini.",
+  "section.opensource.imageAltText": "Ilustrasi seorang wanita, pria, dan kucing menyusun kepingan puzzle."
+}
