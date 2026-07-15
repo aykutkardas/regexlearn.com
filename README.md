@@ -23,12 +23,15 @@ languages, keep the cheatsheet nearby, and test your patterns live in the playgr
 
 Available in 21 languages:
 
-🇺🇸 English, 🇹🇷 Turkish, 🇷🇺 Russian, 🇪🇸 Spanish, 🇨🇳 Chinese (Simplified), 🇹🇼 Chinese (Traditional),
-🇩🇪 German, 🇺🇦 Ukrainian, 🇫🇷 French, 🇵🇱 Polish, 🇰🇷 Korean, 🇧🇷 Brazilian Portuguese, 🇨🇿 Czech,
-🇬🇪 Georgian, 🇮🇷 Persian, 🇮🇹 Italian, 🇸🇦 Arabic, 🇧🇩 Bengali, 🇯🇵 Japanese, 🇮🇩 Indonesian,
-🇻🇳 Vietnamese
-
-### Requested Translations
+| Language | Language | Language |
+| --- | --- | --- |
+| 🇺🇸 English | 🇹🇷 Turkish | 🇷🇺 Russian |
+| 🇪🇸 Spanish | 🇨🇳 Chinese (Simplified) | 🇹🇼 Chinese (Traditional) |
+| 🇩🇪 German | 🇺🇦 Ukrainian | 🇫🇷 French |
+| 🇵🇱 Polish | 🇰🇷 Korean | 🇧🇷 Brazilian Portuguese |
+| 🇨🇿 Czech | 🇬🇪 Georgian | 🇮🇷 Persian |
+| 🇮🇹 Italian | 🇸🇦 Arabic | 🇧🇩 Bengali |
+| 🇯🇵 Japanese | 🇮🇩 Indonesian | 🇻🇳 Vietnamese |
 
 Speak a language that isn't listed? Adding it is a single pull request: copy the
 [`en`](src/localization/en) folder in [`src/localization/`](src/localization), translate the JSON
