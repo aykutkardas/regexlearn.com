@@ -1,0 +1,49 @@
+{
+  "lesson.regexForSeo.starter.title": "SEOのためのRegex",
+  "lesson.regexForSeo.starter.description": "Regex（正規表現）は多くの分野で使われ、特に作業効率を高めたい人に役立ちます。SEOで使うと、大規模データの分析や高度なフィルター作成が容易になります。初めての方は`Regex 101`から始めることをおすすめします。\\n\\n正規表現欄に`OK`と入力して最初のステップへ進み、詳しい説明を確認しましょう。",
+
+  "lesson.regexForSeo.usage.title": "使用例",
+  "lesson.regexForSeo.usage.description": "SEOでは`Google Analytics`、`Google Data Studio`、`Google Sheets`、`Google Search Console`、`Ahrefs`、`Deepcrawl`、`Screaming Frog`などでRegexを使用できます。`.htaccess`や`robots.txt (regex-like syntax)`でもよく使われます。\\n\\n下の例は、一覧から`Google`で始まるテキストだけを選択します。",
+
+  "lesson.regexForSeo.basics.title": "基礎",
+  "lesson.regexForSeo.basics.description": "よく使う正規表現を見てみましょう。詳しくは`Regex 101`をご覧ください。`Yes`と入力して始めます。",
+
+  "lesson.regexForSeo.or.title": "OR演算子 `|`",
+  "lesson.regexForSeo.or.description": "複数の式を対象にするにはOR演算子`|`を使います。`seo`または`regex`を含むテキストを抽出するため、2語を`|`で区切って書いてください。",
+
+  "lesson.regexForSeo.optional.title": "省略可能演算子 `?`",
+  "lesson.regexForSeo.optional.description": "式や文字が省略可能であることを表します。`http`と`https`の両方を抽出する場合、`|`も使えますが、ほぼ同じ2語にはより良い方法があります。\\n\\nこの例では`s`が省略可能です。`s`の後に`?`を加えてください。",
+
+  "lesson.regexForSeo.any.title": "任意の文字列 `.*`",
+  "lesson.regexForSeo.any.description": "ドット`.`は空白を含む任意の1文字に一致し、アスタリスク`*`は直前の要素が0回以上現れることを表します。組み合わせた`.*`は、任意の長さの文字列に一致します。\\n\\n`how to write`で始まり、その後のすべてに一致するよう、式の末尾に`.*`を加えてください。",
+
+  "lesson.regexForSeo.contains.title": "含む",
+  "lesson.regexForSeo.contains.description": "探す語句を含むテキストを抽出するには、その語句を任意の文字列に一致する2つの`.*`で挟みます。`buy`を含むものを抽出するには`.*buy.*`と入力してください。",
+
+  "lesson.regexForSeo.negated.title": "否定文字セット `[^abc]`",
+  "lesson.regexForSeo.negated.description": "含めたくない文字は、先頭にキャレットを置いた否定文字セット`[^]`で表します。下には`http`と`https`があり、`http`だけでは両方に一致します。`s`を除外するため、`p`の後に`[^s]`を入力してください。",
+
+  "lesson.regexForSeo.caret.title": "キャレット `^`",
+  "lesson.regexForSeo.caret.description": "URL一覧から`http`で始まるものだけを探します。URLの途中にも`http`が含まれる場合があるため、式の先頭に`^`を加えてください。",
+
+  "lesson.regexForSeo.dollarAndEscape.title": "ドル記号 `$`とエスケープ文字 `\\`",
+  "lesson.regexForSeo.dollarAndEscape.description": "URL一覧から`.htm`で終わるものだけを探します。\\n\\n`.`は任意の文字に一致する特殊文字なので、前にエスケープ文字`\\`を置いて特殊な意味を無効にします。これはすべての特殊文字に適用できます。\\n\\n次に式の末尾へ`$`を加え、直前の式でテキストが終わることを指定します。",
+
+  "lesson.regexForSeo.limitation.title": "長さの制限 `{n}`",
+  "lesson.regexForSeo.limitation.description": "文字数で結果を抽出できます。長さが`35`文字のURLを抽出するには、`.`の後に回数を波括弧で囲んだ`{35}`を入力します。",
+
+  "lesson.regexForSeo.maxLimitation.title": "長さの制限（最大）`{n,m}`",
+  "lesson.regexForSeo.maxLimitation.description": "最大`35`文字のURLを抽出するには、`.`の後に最小値と最大値を波括弧で囲んだ`{1,35}`を入力します。",
+
+  "lesson.regexForSeo.minLimitation.title": "長さの制限（最小）`{n,}`",
+  "lesson.regexForSeo.minLimitation.description": "最低`35`文字のURLを抽出するには、`.`の後に最小値とカンマを波括弧で囲んだ`{35,}`を入力します。",
+
+  "lesson.regexForSeo.robots.title": "robots.txt（正規表現に似た構文）",
+  "lesson.regexForSeo.robots.description": "`robots.txt`で正規表現に似た構文を使う例です。ボットが拡張子`pdf`のリンクをクロールしないよう指定しています。",
+
+  "lesson.regexForSeo.htaccess.title": ".htaccess",
+  "lesson.regexForSeo.htaccess.description": "`.htaccess`で正規表現を使う例です。`php`拡張子のリンクを`301`で`html`拡張子へ転送します。",
+
+  "lesson.regexForSeo.outro.title": "まとめ",
+  "lesson.regexForSeo.outro.description": "Regexは、利用できるあらゆるプラットフォームで生産性を高めるスキルです。身につけると反復作業を短時間で終え、ほかの作業に時間を使えます。基礎は`Regex 101`で学び、自分のテキストと式は`Playground`でテストできます。"
+}

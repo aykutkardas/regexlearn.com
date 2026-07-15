@@ -1,0 +1,163 @@
+{
+  "examples.starter.title": "練習",
+  "examples.starter.description": "学んだ内容を定着させるため、練習してみましょう。",
+
+  "examples.finish.title": "練習完了！",
+  "examples.finish.description": " ",
+
+  "steps.starter.title": "はじめに",
+  "steps.starter.description": "Regexは`Regular Expression`（正規表現）の略で、テキストの照合、検索、処理に役立ちます。レッスンとプレイグラウンドではJavaScriptの正規表現エンジンを使用し、パターンを`/pattern/flags`の形式で記述します。正規表現欄に`OK`と入力して最初のステップへ進み、詳しい説明を確認しましょう。",
+
+  "steps.whatIsRegex.title": "正規表現 `Regex` とは？",
+  "steps.whatIsRegex.description": "正規表現は検索パターンを表す文字列で、`Regex`や`Regexp`と略されます。主にテキスト内の語句の検索や置換、設定した規則にテキストが従うかの検証に使います。\\n\\nたとえばファイル名一覧から拡張子が`pdf`のものだけを探すには、`^\\w+\\.pdf$`と入力します。各記号の意味は、ステップを進めると明確になります。",
+
+  "steps.basicMatchers.title": "基本的なマッチ",
+  "steps.basicMatchers.description": "探したい文字や単語をそのまま記述します。通常の検索と同じです。たとえばテキストから`curious`を探すには、そのまま入力します。",
+
+  "steps.dotCharacter.title": "ドット `.`：任意の文字",
+  "steps.dotCharacter.description": "ドット`.`は、特殊文字や空白を含む任意の1文字に一致します。正規表現欄に`.`を入力してください。",
+
+  "steps.characterSet.title": "文字セット `[abc]`",
+  "steps.characterSet.description": "単語内の1文字に複数の候補がある場合、候補を角括弧`[]`内に並べます。テキスト内のすべての単語に一致させるため、`a`、`e`、`i`、`o`、`u`を角括弧内に続けて入力してください。",
+
+  "steps.negatedCharacterSet.title": "否定文字セット `[^abc]`",
+  "steps.negatedCharacterSet.description": "下のテキストから`ber`と`bor`以外の単語を探すため、角括弧`[]`内のキャレット`^`の後に`e`と`o`を続けて入力してください。",
+
+  "steps.range.title": "文字の範囲 `[a-z]`",
+  "steps.range.description": "範囲の開始文字と終了文字を角括弧`[]`内でハイフン`-`で結びます。大文字と小文字は区別されます。`e`から`o`まで（両端を含む）の小文字を選択する式を入力してください。",
+
+  "steps.rangeNumber.title": "数字の範囲 `[0-9]`",
+  "steps.rangeNumber.description": "範囲の開始数字と終了数字を角括弧`[]`内でハイフン`-`で結びます。`3`から`6`まで（両端を含む）の数字を選択する式を書いてください。",
+
+  "examples.basicMatchers.title": "練習：基本的なマッチ",
+  "examples.basicMatchers.description": "テキスト内の`of`を選択する式を書いてください。",
+
+  "examples.dotCharacter.title": "練習：任意の文字",
+  "examples.dotCharacter.description": "文字、数字、空白、特殊文字の各1文字を選択する式を入力してください。任意の文字に一致する必要があります。",
+
+  "examples.characterSet.title": "練習：文字セット",
+  "examples.characterSet.description": "テキスト内の各単語に一致する式を書いてください。異なるのは各単語の先頭文字だけです。",
+
+  "examples.negatedCharacterSet.title": "練習：否定文字セット",
+  "examples.negatedCharacterSet.description": "否定文字セットを使い、`beor`と`beur`以外に一致する式を書いてください。",
+
+  "examples.range.title": "練習：文字の範囲",
+  "examples.range.description": "テキスト内の`g`から`k`までを選択する式を書いてください。\\n`g`と`k`も範囲に含めます。",
+
+  "examples.rangeNumber.title": "練習：数字の範囲",
+  "examples.rangeNumber.description": "`2`から`7`までを選択する式を入力してください。\\n`2`と`7`も範囲に含めます。",
+
+  "steps.repetitions.title": "繰り返し",
+  "steps.repetitions.description": "文字の繰り返し回数は、プラス`+`、アスタリスク`*`、疑問符`?`などの特殊文字で指定します。",
+
+  "steps.asterisk.title": "アスタリスク `*`",
+  "steps.asterisk.description": "文字の後に`*`を置くと、その文字が0回または何回でも連続して一致します。`e`が存在しない場合、または1回以上連続する場合を表してください。",
+
+  "steps.plusCharacter.title": "プラス記号 `+`",
+  "steps.plusCharacter.description": "文字の後に`+`を置くと、その文字が1回以上連続して一致します。`e`が1回以上現れることを表してください。",
+
+  "steps.questionMark.title": "疑問符 `?`",
+  "steps.questionMark.description": "文字の後に`?`を置くと、その文字は省略可能になります。次の文字`u`が省略可能であることを表してください。",
+
+  "steps.quantifier.title": "波括弧 - 1",
+  "steps.quantifier.description": "文字の出現回数を指定するには、その文字の後に回数を波括弧で囲んだ`{n}`を書きます。次の`e`が連続してちょうど`2`回現れることを表してください。",
+
+  "steps.quantifierMin.title": "波括弧 - 2",
+  "steps.quantifierMin.description": "最小回数を指定するには、文字の直後に回数とカンマを波括弧で囲んだ`{n,}`を書きます。次の`e`が少なくとも`3`回連続することを表してください。",
+
+  "steps.quantifierRange.title": "波括弧 - 3",
+  "steps.quantifierRange.description": "回数の範囲は、両端を含む`{x,y}`で指定します。次の`e`が連続して`1`回以上`3`回以下現れることを表してください。",
+
+  "examples.asterisk.title": "練習：アスタリスク `*`",
+  "examples.asterisk.description": "`*`を使い、`e`がない、または1回以上ある各単語を選択する式を書いてください。",
+
+  "examples.plusCharacter.title": "練習：プラス記号 `+`",
+  "examples.plusCharacter.description": "`+`を使い、`e`が1回以上現れる単語を選択する式を書いてください。",
+
+  "examples.questionMark.title": "練習：疑問符 `?`",
+  "examples.questionMark.description": "`?`を使って`n`が省略可能であることを表し、`a`と`an`の両方を選択してください。",
+
+  "examples.quantifier.title": "練習：波括弧 - 1",
+  "examples.quantifier.description": "波括弧`{}`を使い、数字が`4`つ連続するテキストを探してください。`[0-9]`は1桁に一致します。",
+
+  "examples.quantifierMin.title": "練習：波括弧 - 2",
+  "examples.quantifierMin.description": "波括弧`{}`を使い、数字が少なくとも`2`つ連続するテキストを探してください。",
+
+  "examples.quantifierRange.title": "練習：波括弧 - 3",
+  "examples.quantifierRange.description": "波括弧`{}`を使い、数字が`1`つ以上`4`つ以下連続するテキストを探してください。",
+
+  "steps.grouping.title": "丸括弧 `( )`：グループ化",
+  "steps.grouping.description": "式をグループ化すると、後から参照したり規則をまとめて適用したりできます。丸括弧`()`で囲みます。まず下の`haa`をグループ化してください。",
+
+  "steps.groupReference.title": "グループの参照",
+  "steps.groupReference.description": "下には`(ha)`と`(haa)`の2グループがあります。後から参照するには、1番目に`\\1`、2番目に`\\2`を使います。`(ha)-\\1,(haa)-\\2`では`-`はグループ外で、`\\1`は`ha`、`\\2`は`haa`を参照します。式の末尾に`\\2`を入力してください。",
+
+  "steps.nonCapturingGrouping.title": "丸括弧 `(?: )`：非キャプチャグループ",
+  "steps.nonCapturingGrouping.description": "開始括弧の直後に`?:`を加えた`(?:ha)`は非キャプチャグループです。式はまとめられますが一致結果を保存しないため参照できません。最初の`(?:ha)`は非キャプチャなので、`\\1`はキャプチャグループ`(haa)`を参照します。",
+
+  "steps.pipeCharacter.title": "パイプ記号 `|`",
+  "steps.pipeCharacter.description": "複数候補はパイプ`|`で区切ります。文字単位の文字セット`[abc]`とは異なり、式単位で選択します。次の式は`cat`と`rat`に一致します。末尾に`|`と`dog`を加え、すべての単語を選択してください。",
+
+  "steps.escapeCharacter.title": "エスケープ文字 `\\`",
+  "steps.escapeCharacter.description": "正規表現では`{ } [ ] / \\ + * . $^ | ?`が特殊な意味を持ちます。記号自体に一致させるには、前にエスケープ文字`\\`を置きます。`.`と`*`の前に`\\`を追加してください。",
+
+  "steps.caret.title": "キャレット `^`：\\n行頭を選択",
+  "steps.caret.description": "数字には`[0-9]`を使いました。行頭の数字だけを探すには、式の先頭に`^`を付けます。",
+
+  "steps.dollar.title": "ドル記号 `$`：\\n行末を選択",
+  "steps.dollar.description": "行末にある`html`だけを探すため、`html`の後に`$`を付けてください。",
+
+  "steps.wordCharacter.title": "単語文字 `\\w`：英数字とアンダースコア",
+  "steps.wordCharacter.description": "`\\w`は英数字とアンダースコアを探します。`\\w`を使って単語文字を探してください。",
+
+  "steps.withoutWordCharacter.title": "単語文字以外 `\\W`",
+  "steps.withoutWordCharacter.description": "`\\W`は英数字とアンダースコア以外を探します。",
+
+  "steps.numberCharacter.title": "数字 `\\d`",
+  "steps.numberCharacter.description": "`\\d`は数字だけを探します。",
+
+  "steps.withoutNumberCharacter.title": "数字以外 `\\D`",
+  "steps.withoutNumberCharacter.description": "`\\D`は数字以外を探します。",
+
+  "steps.spaceCharacter.title": "空白文字 `\\s`",
+  "steps.spaceCharacter.description": "`\\s`は空白文字だけを探します。",
+
+  "steps.withoutSpaceCharacter.title": "空白文字以外 `\\S`",
+  "steps.withoutSpaceCharacter.description": "`\\S`は空白文字以外を探します。",
+
+  "steps.lookarounds.title": "先読み・後読み",
+  "steps.lookarounds.description": "ある式の前後に別の式があることを条件にするには、先読み・後読みを使います。次のステップで学びましょう。",
+
+  "steps.positiveLookahead.title": "肯定先読み：`(?=)`",
+  "steps.positiveLookahead.description": "後ろに`PM`がある数値だけを選ぶには、式の後に肯定先読み`(?=)`を書き、括弧内の`=`の後に`PM`を入れます。",
+
+  "steps.negativeLookahead.title": "否定先読み：`(?!)`",
+  "steps.negativeLookahead.description": "後ろに`PM`がない数値だけを選ぶには、式の後に否定先読み`(?!)`を書き、括弧内の`!`の後に`PM`を入れます。",
+
+  "steps.positiveLookbehind.title": "肯定後読み：`(?<=)`",
+  "steps.positiveLookbehind.description": "前に`$`がある数値だけを選ぶには、式の前に肯定後読み`(?<=)`を書き、括弧内の`=`の後に`\\$`を加えます。",
+
+  "steps.negativeLookbehind.title": "否定後読み：`(?&lt;!)`",
+  "steps.negativeLookbehind.description": "前に`$`がない数値だけを選ぶには、式の前に否定後読み`(?&lt;!)`を書き、括弧内の`!`の後に`\\$`を加えます。",
+
+  "steps.flags.title": "フラグ",
+  "steps.flags.description": "フラグ（`modifier`）は式の動作を変えます。複数行として扱うか、大文字小文字を区別するか、すべての一致を探すかを指定します。",
+
+  "steps.flagsGlobal.title": "グローバルフラグ",
+  "steps.flagsGlobal.description": "`global`フラグは最初で止まらず、すべての一致を選択します。有効にしてください。",
+
+  "steps.flagsMultiline.title": "複数行フラグ",
+  "steps.flagsMultiline.description": "通常、正規表現はテキスト全体を1行として扱います。`multiline`フラグを使うと各行を個別に扱えます。すべての一致を探すため有効にしてください。",
+
+  "steps.flagsCaseInsensitive.title": "大文字・小文字を無視するフラグ",
+  "steps.flagsCaseInsensitive.description": "式で大文字と小文字を区別しないようにするには、`case-insensitive`フラグを有効にします。",
+
+  "steps.greedyMatching.title": "貪欲マッチ",
+  "steps.greedyMatching.description": "正規表現は既定で貪欲に一致し、可能な限り長い範囲を選びます。下の例は`r`で終わり、その前に任意の文字が続く範囲に一致するため、最初の`r`では止まりません。",
+
+  "steps.lazyMatching.title": "遅延マッチ",
+  "steps.lazyMatching.description": "遅延マッチは最初に一致した位置で止まります。下の例で`*`の後に`?`を加え、任意の文字が続いて最初の`r`で終わる範囲を探してください。",
+
+  "steps.completeAllSteps.title": "おめでとうございます。すべてのステップを完了しました！",
+  "steps.completeAllSteps.description": "いつでも前のステップに戻り、完了したステップを簡単に見直せます。"
+}

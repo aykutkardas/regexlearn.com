@@ -1,0 +1,26 @@
+{
+  "landing.title": "正規表現をゼロから上級まで段階的に学ぼう。",
+  "landing.description": "正規表現の学習は、思っているより簡単です。このツールで正規表現を手軽に`学習`、`練習`、`テスト`できます。",
+  "landing.imageAltText": "机に足を乗せてくつろぐ男性のイラスト。",
+
+  "section.learn.title": "学ぶ",
+  "section.learn.content": "`Regular Expressions`（正規表現、RegexまたはRegexp）は、正規表現の構文規則に従って作られた文字列です。検索、照合、編集などの操作を使い、データを簡単に扱えます。Python、SQL、JavaScript、R、Google Analytics、Google Data Studioなどで利用できます。RegexLearnの例とチュートリアルで今すぐ学びましょう。",
+  "section.learn.imageAltText": "山頂に旗が立つ山のイラスト。",
+
+  "section.cheatsheet.button": "今すぐ確認",
+  "section.cheatsheet.title": "チートシート",
+  "section.cheatsheet.content": "`RegexLearn チートシート`では、必要な使い方を1ページでまとめて確認できます。正規表現のパターンと記号を一覧で学びましょう。",
+  "section.cheatsheet.imageAltText": "双眼鏡でページを見る男性のイラスト。",
+
+  "section.playground.title": "プレイグラウンド",
+  "section.playground.content": "正規表現を作成したいときは、プレイグラウンドでパターンを簡単に作成、検証、テストできます。",
+  "section.playground.imageAltText": "いっぱいのコップを落としそうな猫のイラスト。",
+
+  "section.practice.title": "練習",
+  "section.practice.content": "学習を終えたら、次は練習です！練習セクションでは、知識を確認し、レベルに合ったチュートリアルで演習できます。近日公開。",
+  "section.practice.imageAltText": "本を見ながらメモを取る女性のイラスト。",
+
+  "section.opensource.title": "オープンソース",
+  "section.opensource.content": "Regex Learnは、コミュニティからの貢献を歓迎する無料のオープンソースプロジェクトです。参加を通じてスキルを磨き、学び、協力できます。こちらから貢献・支援できます。",
+  "section.opensource.imageAltText": "女性、男性、猫がパズルを組み立てるイラスト。"
+}
