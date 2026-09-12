@@ -137,8 +137,8 @@
   "steps.positiveLookbehind.title": "正向后行断言: `(?<=)`",
   "steps.positiveLookbehind.description": "例如，我们要匹配文本中的金额数。为了只匹配前面带有 `$` 的数字。我们要在表达式前面使用正向后行断言 `(?<=)`，并在括号内的 `=` 后面添加 `\\$`。",
 
-  "steps.negativeLookbehind.title": "负向后行断言: `(?&lt;!)`",
-  "steps.negativeLookbehind.description": "例如，我们要在文本中匹配除价格外的数字。为了只匹配前面没有 `$` 的数字，我们要在表达式前用负向后行断言 `(?&lt;!)`，并在括号内的 `!` 后面添加 `\\$`。",
+  "steps.negativeLookbehind.title": "负向后行断言: `(?<!)`",
+  "steps.negativeLookbehind.description": "例如，我们要在文本中匹配除价格外的数字。为了只匹配前面没有 `$` 的数字，我们要在表达式前用负向后行断言 `(?<!)`，并在括号内的 `!` 后面添加 `\\$`。",
 
   "steps.flags.title": "标志",
   "steps.flags.description": "标志改变表达式的输出。这就是标志也称为 `修饰符` 的原因。标志决定表达式是否将文本视作单独的行处理，是否区分大小写，或者是否查找所有匹配项。请继续下一步步骤以学习标志。",

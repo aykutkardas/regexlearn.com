@@ -137,8 +137,8 @@
   "steps.positiveLookbehind.title": "Pohled dozadu: `(?<=)`",
   "steps.positiveLookbehind.description": "Například, chceme vybrat hodnotu ceny v textu. Abychom vybrali pouze číselné hodnoty, které jsou předcházeny znakem `$`, musíme napsat regulární výraz kladného pohledu dozadu `(?<=)` před naším výrazem. Přidejte `\\$` za znaménko `=` uvnitř závorek.",
 
-  "steps.negativeLookbehind.title": "Znegovaný pohled dozadu: `(?&lt;!)`",
-  "steps.negativeLookbehind.description": "Například, chceme vybrat čísla v textu, která nejsou hodnotou ceny. Proto musíme napsat regulární výraz záporného pohledu dozadu `(?&lt;!)` před naším výrazem, abychom vybrali pouze číselné hodnoty, které nejsou předcházeny znakem `$`. Přidejte `\\$` za znaménko `!` uvnitř závorek.",
+  "steps.negativeLookbehind.title": "Znegovaný pohled dozadu: `(?<!)`",
+  "steps.negativeLookbehind.description": "Například, chceme vybrat čísla v textu, která nejsou hodnotou ceny. Proto musíme napsat regulární výraz záporného pohledu dozadu `(?<!)` před naším výrazem, abychom vybrali pouze číselné hodnoty, které nejsou předcházeny znakem `$`. Přidejte `\\$` za znaménko `!` uvnitř závorek.",
 
   "steps.flags.title": "Vlajky",
   "steps.flags.description": "Vlajky mění výstup výrazu. Proto se jim také říká `modifikátory`. Vlajky určují, zda se má text považovat za oddělené řádky, zda má rozlišovat velikost písmen nebo zda má najít všechna shoda. Pokračujte na další krok a dozvíte se více o vlajkách.",
@@ -161,4 +161,3 @@
   "steps.completeAllSteps.title": "Gratulujeme, dokončili jste všechny kroky!",
   "steps.completeAllSteps.description": "Můžete se kdykoli vrátit zpět ke předchozím krokům a snadno procházet všemi kroky, kterými jste prošli."
 }
-

@@ -130,16 +130,15 @@
 
   "steps.positiveLookahead.title": "Olumlu İleriye Bakınma: `(?=)`",
   "steps.positiveLookahead.description": "Örneğin metinde saat değerini seçmek istiyoruz. Bu yüzden yalnızca kendinden sonra `PM` ifadesi geçen sayı değerlerini seçmek için ifademizden sonra olumlu ileriye bakınma `(?=)` ifadesini yazmamız gerekir. Parantezlerin içerisinde `=` işaretinden sonra `PM` ifadesini ekleyin.",
-  
 
   "steps.negativeLookahead.title": "Olumsuz İleriye Bakınma: `(?!)`",
   "steps.negativeLookahead.description": "Örneğin metinde saat değeri dışındaki sayıları seçmek istiyoruz. Bu yüzden yalnızca kendinden sonra `PM` ifadesi geçmeyen sayı değerlerini seçmek için ifademizden sonra olumsuz ileriye bakınma `(?!)` ifadesini yazmamız gerekir. Parantezlerin içerisinde `!` işaretinden sonra `PM` ifadesini ekleyin.",
-  
+
   "steps.positiveLookbehind.title": "Olumlu Geriye Bakınma: `(?<=)`",
   "steps.positiveLookbehind.description": "Örneğin metinde fiyat değerini seçmek istiyoruz. Bu yüzden yalnızca kendinden önce `$` ifadesi geçen sayı değerlerini seçmek için ifademizden önce olumlu geriye bakınma `(?<=)` ifadesini yazmamız gerekir. Parantezlerin içerisinde `=` işaretinden sonra `\\$` ifadesini ekleyin.",
 
-  "steps.negativeLookbehind.title": "Olumsuz Geriye Bakınma: `(?&lt;!)`",
-  "steps.negativeLookbehind.description": "Örneğin metinde fiyat değeri dışındaki sayıları seçmek istiyoruz. Bu yüzden yalnızca kendinden önce `$` ifadesi geçmeyen sayı değerlerini seçmek için ifademizden önce olumsuz geriye bakınma `(?&lt;!)` ifadesini yazmamız gerekir. Parantezlerin içerisinde `!` işaretinden sonra `\\$` ifadesini ekleyin.",
+  "steps.negativeLookbehind.title": "Olumsuz Geriye Bakınma: `(?<!)`",
+  "steps.negativeLookbehind.description": "Örneğin metinde fiyat değeri dışındaki sayıları seçmek istiyoruz. Bu yüzden yalnızca kendinden önce `$` ifadesi geçmeyen sayı değerlerini seçmek için ifademizden önce olumsuz geriye bakınma `(?<!)` ifadesini yazmamız gerekir. Parantezlerin içerisinde `!` işaretinden sonra `\\$` ifadesini ekleyin.",
 
   "steps.flags.title": "Bayraklar",
   "steps.flags.description": "Bayraklar ifadenin çıktısını değiştirirler. Bu yüzden değiştiriciler `modifiers` olarakta anılırlar. Yazılan ifadenin, metni ayrı satırlar olarak mı ele alacağını, büyük küçük harf duyarlı olup olmayacağını ya da tüm eşleşmeleri bulup bulmayacağını belirler. Bayrakları öğrenmek için sonraki adıma devam edin.",
@@ -152,7 +151,7 @@
 
   "steps.flagsCaseInsensitive.title": "Büyük/Küçük Harf Duyarsızlık Bayrağı",
   "steps.flagsCaseInsensitive.description": "Yazdığımız ifadenin büyük küçük harf duyarlılığını kaldırmak için `case-insensitive` bayrağını aktif etmeliyiz.",
-  
+
   "steps.greedyMatching.title": "Aç Gözlü Eşleştirme",
   "steps.greedyMatching.description": "Regex varsayılan olarak aç gözlü bir eşleştirme yapar. Bu da eşleştirmenin mümkün olduğu kadar uzun olacağı anlamına gelir. Aşağıdaki örneği inceleyin. `r` ile biten ve öncesinde herhangi bir karakter olabilecek tüm eşleştirmeyi ifade eder. Fakat ilk `r` harfinde durmaz.",
 
