@@ -137,8 +137,8 @@
   "steps.positiveLookbehind.title": "Przewidywanie pozytywne wstecz: `(?<=)`",
   "steps.positiveLookbehind.description": "W poniższym tekście chcemy dopasować wartość liczbową związaną z ceną. Aby dopasować wyłącznie wartości liczbowe, które poprzedza znak `$`, przed naszym docelowym wyrażeniem musimy podać wyrażenie korzystające z przewidywania pozytywnego wstecz `(?<=)`. Wewnątrz nawiasów okrągłych po znaku `=` wpisz `\\$`.",
 
-  "steps.negativeLookbehind.title": "Przewidywanie negatywne wstecz: `(?&lt;!)`",
-  "steps.negativeLookbehind.description": "W kolejnym przykładzie chcemy dopasować wartość liczbową niezwiązaną z ceną. Aby dopasować wyłącznie wartości liczbowe, których nie poprzedza znak `$`, przed naszym docelowym wyrażeniem musimy podać wyrażenie korzystające z przewidywania negatywnego wstecz `(?&lt;!)`. Wewnątrz nawiasów okrągłych po znaku `!` wpisz `\\$`.",
+  "steps.negativeLookbehind.title": "Przewidywanie negatywne wstecz: `(?<!)`",
+  "steps.negativeLookbehind.description": "W kolejnym przykładzie chcemy dopasować wartość liczbową niezwiązaną z ceną. Aby dopasować wyłącznie wartości liczbowe, których nie poprzedza znak `$`, przed naszym docelowym wyrażeniem musimy podać wyrażenie korzystające z przewidywania negatywnego wstecz `(?<!)`. Wewnątrz nawiasów okrągłych po znaku `!` wpisz `\\$`.",
 
   "steps.flags.title": "Flagi",
   "steps.flags.description": "Flagi zmieniają wynik działania wyrażenia. Z tego powodu nazywane są również `modyfikatorami`. Flagi określają, czy wpisane wyrażenie traktuje tekst wejściowy jako osobne linie, czy jest wielkości liter ma znaczenie oraz czy mają zostać znalezione wszystkie możliwe dopasowania. Aby dowiedzieć się więcej o flagach, przejdź do kolejnej sekcji.", 

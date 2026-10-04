@@ -137,8 +137,8 @@
   "steps.positiveLookbehind.title": "肯定後読み：`(?<=)`",
   "steps.positiveLookbehind.description": "前に`$`がある数値だけを選ぶには、式の前に肯定後読み`(?<=)`を書き、括弧内の`=`の後に`\\$`を加えます。",
 
-  "steps.negativeLookbehind.title": "否定後読み：`(?&lt;!)`",
-  "steps.negativeLookbehind.description": "前に`$`がない数値だけを選ぶには、式の前に否定後読み`(?&lt;!)`を書き、括弧内の`!`の後に`\\$`を加えます。",
+  "steps.negativeLookbehind.title": "否定後読み：`(?<!)`",
+  "steps.negativeLookbehind.description": "前に`$`がない数値だけを選ぶには、式の前に否定後読み`(?<!)`を書き、括弧内の`!`の後に`\\$`を加えます。",
 
   "steps.flags.title": "フラグ",
   "steps.flags.description": "フラグ（`modifier`）は式の動作を変えます。複数行として扱うか、大文字小文字を区別するか、すべての一致を探すかを指定します。",

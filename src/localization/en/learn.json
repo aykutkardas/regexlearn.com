@@ -137,8 +137,8 @@
   "steps.positiveLookbehind.title": "Positive Lookbehind: `(?<=)`",
   "steps.positiveLookbehind.description": "For example, we want to select the price value in the text. To select only the numbers preceded by `$`, we write the positive lookbehind `(?<=)` before our expression. Add `\\$` after the `=` sign inside the parentheses.",
 
-  "steps.negativeLookbehind.title": "Negative Lookbehind: `(?&lt;!)`",
-  "steps.negativeLookbehind.description": "For example, we want to select the numbers in the text other than the price value. To select only the numbers not preceded by `$`, we write the negative lookbehind `(?&lt;!)` before our expression. Add `\\$` after the `!` sign inside the parentheses.",
+  "steps.negativeLookbehind.title": "Negative Lookbehind: `(?<!)`",
+  "steps.negativeLookbehind.description": "For example, we want to select the numbers in the text other than the price value. To select only the numbers not preceded by `$`, we write the negative lookbehind `(?<!)` before our expression. Add `\\$` after the `!` sign inside the parentheses.",
 
   "steps.flags.title": "Flags",
   "steps.flags.description": "Flags change how an expression matches, which is why they are also called `modifiers`. They determine whether the expression treats the text as separate lines, whether it is case-sensitive, and whether it finds all matches. Continue to the next step to learn about flags.",

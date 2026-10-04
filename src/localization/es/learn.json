@@ -137,8 +137,8 @@
   "steps.positiveLookbehind.title": "Lookbehind Positivo: `(?<=)`",
   "steps.positiveLookbehind.description": "Por ejemplo, queremos seleccionar el valor del precio en el texto. Por lo tanto, para seleccionar solo los valores numéricos precedidos por `$`, necesitamos escribir la expresión lookbehind positiva `(?<=)` antes de nuestra expresión. Agregue `\\$` después del signo `=` entre parentesis.",
 
-  "steps.negativeLookbehind.title": "Lookbehind Negativo: `(?&lt;!)`",
-  "steps.negativeLookbehind.description": "Por ejemplo, queremos seleccionar números en el texto que no sean el valor del precio. Por lo tanto, para seleccionar solo valores numéricos que no estén precedidos por `$`, necesitamos escribir la expresión lookbehind negativo `(?&lt;!)` antes de nuestra expresión. Agregue `\\$` después de `!` entre parentesis.",
+  "steps.negativeLookbehind.title": "Lookbehind Negativo: `(?<!)`",
+  "steps.negativeLookbehind.description": "Por ejemplo, queremos seleccionar números en el texto que no sean el valor del precio. Por lo tanto, para seleccionar solo valores numéricos que no estén precedidos por `$`, necesitamos escribir la expresión lookbehind negativo `(?<!)` antes de nuestra expresión. Agregue `\\$` después de `!` entre parentesis.",
 
   "steps.flags.title": "Banderas",
   "steps.flags.description": "Las banderas cambian la salida de la expresión. Es por eso que las banderas también se llaman `modificadores`. Determina si la expresión escrita trata el texto como líneas independientes, distingue entre mayúsculas y minúsculas o encuentra todas las coincidencias. Continúe con el siguiente paso para aprender las banderas.",

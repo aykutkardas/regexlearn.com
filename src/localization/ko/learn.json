@@ -137,8 +137,8 @@
   "steps.positiveLookbehind.title": "Positive Lookbehind: `(?<=)`",
   "steps.positiveLookbehind.description": "예를 들어, 텍스트에서 가격 값을 선택하려고 합니다. 따라서 `$`로 시작되는 숫자 값을 선택하려면 표현 앞에 긍정형 룩비하인드 식 `(?<=)`를 작성해야 합니다. 괄호 안쪽의 `=` 기호 뒤에 `\\$`을 추가하세요.",
 
-  "steps.negativeLookbehind.title": "Negative Lookbehind: `(?&lt;!)`",
-  "steps.negativeLookbehind.description": "예를 들어, 우리는 문단에서 가격 값 이외의 숫자를 선택하기를 원합니다.Therefore, `$` 앞에 없는 숫자 값만 선택하려면 표현 앞에 `(?&lt;!)` 뒤에 음의 모양을 써야 합니다. 괄호 안의 `!` 뒤에 `\\$`를 추가합니다.",
+  "steps.negativeLookbehind.title": "Negative Lookbehind: `(?<!)`",
+  "steps.negativeLookbehind.description": "예를 들어, 우리는 문단에서 가격 값 이외의 숫자를 선택하기를 원합니다.Therefore, `$` 앞에 없는 숫자 값만 선택하려면 표현 앞에 `(?<!)` 뒤에 음의 모양을 써야 합니다. 괄호 안의 `!` 뒤에 `\\$`를 추가합니다.",
 
   "steps.flags.title": "Flags",
   "steps.flags.description": "Flags는 표현식의 결과를 바꿉니다. 이는 `modifiers`로도 불리는 이유입니다. 입력된 표현식으로 각각의 분리된 줄로 처리할 지, 대소문자를 구분할 지, 일치하는 모든 항목을 찾을 지를 결정하세요. flags을 배우기 위한 다음 단계로 진행하겠습니다.",

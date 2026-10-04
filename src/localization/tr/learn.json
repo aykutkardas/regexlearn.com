@@ -138,8 +138,8 @@
   "steps.positiveLookbehind.title": "Olumlu Geriye Bakınma: `(?<=)`",
   "steps.positiveLookbehind.description": "Örneğin metinde fiyat değerini seçmek istiyoruz. Bu yüzden yalnızca kendinden önce `$` ifadesi geçen sayı değerlerini seçmek için ifademizden önce olumlu geriye bakınma `(?<=)` ifadesini yazmamız gerekir. Parantezlerin içerisinde `=` işaretinden sonra `\\$` ifadesini ekleyin.",
 
-  "steps.negativeLookbehind.title": "Olumsuz Geriye Bakınma: `(?&lt;!)`",
-  "steps.negativeLookbehind.description": "Örneğin metinde fiyat değeri dışındaki sayıları seçmek istiyoruz. Bu yüzden yalnızca kendinden önce `$` ifadesi geçmeyen sayı değerlerini seçmek için ifademizden önce olumsuz geriye bakınma `(?&lt;!)` ifadesini yazmamız gerekir. Parantezlerin içerisinde `!` işaretinden sonra `\\$` ifadesini ekleyin.",
+  "steps.negativeLookbehind.title": "Olumsuz Geriye Bakınma: `(?<!)`",
+  "steps.negativeLookbehind.description": "Örneğin metinde fiyat değeri dışındaki sayıları seçmek istiyoruz. Bu yüzden yalnızca kendinden önce `$` ifadesi geçmeyen sayı değerlerini seçmek için ifademizden önce olumsuz geriye bakınma `(?<!)` ifadesini yazmamız gerekir. Parantezlerin içerisinde `!` işaretinden sonra `\\$` ifadesini ekleyin.",
 
   "steps.flags.title": "Bayraklar",
   "steps.flags.description": "Bayraklar ifadenin çıktısını değiştirirler. Bu yüzden değiştiriciler `modifiers` olarak da anılırlar. Yazılan ifadenin, metni ayrı satırlar olarak mı ele alacağını, büyük küçük harf duyarlı olup olmayacağını ya da tüm eşleşmeleri bulup bulmayacağını belirler. Bayrakları öğrenmek için sonraki adıma devam edin.",
