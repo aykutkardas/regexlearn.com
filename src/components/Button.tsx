@@ -4,7 +4,6 @@ import cx from 'clsx';
 export enum ButtonVariants {
   Primary = 'primary',
   Secondary = 'secondary',
-  Ghost = 'ghost',
 }
 
 const variants = {
@@ -17,7 +16,6 @@ const variants = {
     'bg-white/[0.04] text-neutral-100 font-medium border border-white/10',
     'hover:bg-white/[0.08] hover:border-white/20',
   ),
-  [ButtonVariants.Ghost]: 'text-neutral-300 hover:text-white hover:bg-white/[0.06]',
 };
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
