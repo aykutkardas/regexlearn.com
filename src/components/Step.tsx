@@ -77,7 +77,7 @@ const Step = () => {
 
       <InteractiveArea key={step} isShow={isInteractive} setIsOpenModal={setIsOpenModal} />
 
-      <div className="flex items-center justify-between gap-4 mt-3 min-h-[24px]">
+      <div className="flex flex-wrap items-center justify-between gap-x-4 gap-y-2 mt-3 min-h-[24px] whitespace-nowrap">
         {isInteractive ? <ReportStep title={data.title} step={step} /> : <span />}
         <a
           className="text-xs inline-flex items-center text-neutral-500 hover:text-neutral-200 transition-colors"

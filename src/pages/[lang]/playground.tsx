@@ -11,11 +11,11 @@ import globalIntl from 'src/utils/globalIntl';
 const PagePlayground = () => (
   <div className="container-full flex flex-col h-screen items-between flex-1 bg-ink-900">
     <Header page="playground" />
-    <div className="flex flex-1 flex-col min-h-0 sm:flex-row">
+    <div className="flex flex-1 flex-col min-h-0 md:flex-row">
       <div className="w-full flex-1 min-h-0 p-4">
         <PlaygroundEditor />
       </div>
-      <aside className="hidden sm:flex flex-col w-[380px] h-full min-h-0 border-l rtl:border-l-0 rtl:border-r border-white/[0.06] bg-ink-950/30">
+      <aside className="hidden md:flex flex-col w-[300px] lg:w-[380px] shrink-0 h-full min-h-0 border-l rtl:border-l-0 rtl:border-r border-white/[0.06] bg-ink-950/30">
         <PlaygroundSidebar />
         <div className="h-14 shrink-0 border-t px-3 flex items-center justify-between border-white/[0.06]">
           <ReportPlayground />

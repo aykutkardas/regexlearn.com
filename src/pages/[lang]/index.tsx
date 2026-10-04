@@ -53,7 +53,7 @@ const PageHome = () => {
   return (
     <div className="container">
       <Header />
-      <div className="w-full flex flex-col md:flex-row items-center gap-10 md:min-h-[calc(100vh-5rem)] pt-10 pb-16 md:py-12">
+      <div className="w-full flex flex-col md:flex-row items-center gap-10 lg:min-h-[calc(100vh-5rem)] pt-10 pb-16 md:py-20 lg:py-12">
         <div className="w-full md:w-3/5 text-center md:text-start animate-fade-up">
           <span dir="ltr" className="eyebrow font-mono mb-6">
             <span className="w-1.5 h-1.5 rounded-full bg-regreen-400 animate-pulse" />

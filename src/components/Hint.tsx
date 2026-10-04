@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import { Fragment, useRef } from 'react';
 import cx from 'clsx';
 import { Popover, Transition } from '@headlessui/react';
 import useEventListener from '@use-it/event-listener';
@@ -46,6 +46,7 @@ const Hint = ({ regex, flags, hiddenFlags }: Props) => {
       </Popover.Button>
 
       <Transition
+        as={Fragment}
         enter="transition duration-150 ease-out"
         enterFrom="opacity-0 -translate-y-1"
         enterTo="opacity-100 translate-y-0"
@@ -53,7 +54,7 @@ const Hint = ({ regex, flags, hiddenFlags }: Props) => {
         leaveFrom="opacity-100"
         leaveTo="opacity-0"
       >
-        <Popover.Panel className="absolute right-0 min-w-[10rem] z-20 mt-2 p-1.5 rounded-xl border border-white/10 bg-ink-900/95 backdrop-blur-xl shadow-2xl">
+        <Popover.Panel className="absolute right-0 min-w-[10rem] z-20 mt-2 p-1.5 rounded-xl border border-white/10 bg-ink-900 shadow-2xl">
           <div className="flex flex-col gap-1">
             {regex.map(answer => (
               <div

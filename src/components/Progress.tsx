@@ -14,7 +14,7 @@ const Progress = ({ current, total, showProgressText = true }: Props) => {
   const percent = toPercent(current, total);
 
   return (
-    <div className="w-36 sm:w-48 flex items-center flex-col justify-start gap-2 select-none">
+    <div className="w-20 xs:w-28 sm:w-40 md:w-48 flex items-center flex-col justify-start gap-2 select-none">
       <div
         className="w-full h-1.5 rounded-full bg-white/[0.08] overflow-hidden"
         role="progressbar"

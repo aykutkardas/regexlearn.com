@@ -5,6 +5,10 @@ module.exports = {
   content: ['./src/pages/**/*.{js,ts,jsx,tsx}', './src/components/**/*.{js,ts,jsx,tsx}'],
   darkMode: 'class',
   theme: {
+    screens: {
+      xs: '400px',
+      ...defaultTheme.screens,
+    },
     extend: {
       container: {
         screens: {

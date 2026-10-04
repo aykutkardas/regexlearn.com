@@ -64,7 +64,7 @@ const FlagSelect = ({ flags, setFlags }: FlagSelectProps) => {
         <Icon icon="flag" size={14} />
       </Popover.Button>
 
-      <Popover.Panel className="absolute right-0 z-20 mt-2 p-2 w-56 flex flex-col gap-1 rounded-xl border border-white/10 bg-ink-900/95 backdrop-blur-xl shadow-2xl">
+      <Popover.Panel className="absolute right-0 z-20 mt-2 p-2 w-56 flex flex-col gap-1 rounded-xl border border-white/10 bg-ink-900 shadow-2xl">
         {flagList.map(({ name, code, command, regex }) => (
           <div className="flex w-full justify-between text-xs items-center px-2 py-1.5 rounded-lg hover:bg-white/[0.04]" key={name}>
             <Checkbox

@@ -1,3 +1,4 @@
+import { Fragment } from 'react';
 import { useRouter } from 'next/router';
 import { Popover, Transition } from '@headlessui/react';
 import cx from 'clsx';
@@ -25,21 +26,22 @@ const LanguageSelect = () => {
   const currentLocale = (query.lang as string) || defaultLocale;
 
   return (
-    <Popover className="relative select-none">
+    <Popover className="sm:relative select-none">
       <Popover.Button
         aria-label="Language"
         className={cx(
-          'h-9 inline-flex items-center gap-1.5 px-3 rounded-full text-xs font-semibold tracking-wide',
+          'h-8 sm:h-9 inline-flex items-center gap-1.5 px-2 sm:px-3 rounded-full text-xs font-semibold tracking-wide',
           'text-neutral-200 border border-white/10 bg-white/[0.03] hover:bg-white/[0.08] transition-colors',
         )}
       >
         <span className="uppercase">{currentLocale.split('-')[0]}</span>
-        <svg width="10" height="10" viewBox="0 0 10 10" aria-hidden className="opacity-60">
+        <svg width="10" height="10" viewBox="0 0 10 10" aria-hidden className="opacity-60 hidden sm:block">
           <path d="M2 3.5 5 6.5 8 3.5" fill="none" stroke="currentColor" strokeWidth="1.5" />
         </svg>
       </Popover.Button>
 
       <Transition
+        as={Fragment}
         enter="transition duration-150 ease-out"
         enterFrom="opacity-0 -translate-y-1 scale-95"
         enterTo="opacity-100 translate-y-0 scale-100"
@@ -49,8 +51,8 @@ const LanguageSelect = () => {
       >
         <Popover.Panel
           className={cx(
-            'absolute rtl:left-0 ltr:right-0 z-50 mt-2 p-1.5 w-[300px] max-w-[calc(100vw-2rem)]',
-            'grid grid-cols-2 gap-0.5 rounded-2xl border border-white/10 bg-ink-900/95 backdrop-blur-xl shadow-2xl',
+            'absolute z-50 mt-2 p-1.5 inset-x-2 top-full sm:top-auto sm:inset-x-auto sm:w-[300px] sm:ltr:right-0 sm:rtl:left-0',
+            'grid grid-cols-2 gap-0.5 rounded-2xl border border-white/10 bg-ink-900 shadow-2xl',
           )}
         >
           {langList.map(({ label, value, flag }) => {

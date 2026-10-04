@@ -17,7 +17,7 @@ const PageLearn = () => {
     <div className="container flex flex-1 flex-col items-between h-full">
       <Header />
       <div className="flex flex-col justify-center flex-1 py-10">
-        <div className="flex flex-col md:flex-row items-start gap-10 lg:gap-16">
+        <div className="flex flex-col md:flex-row items-start gap-8 md:gap-10 lg:gap-16">
           <div className="w-full md:w-1/2 flex flex-col items-start md:sticky md:top-28 animate-fade-up">
             <span className="font-mono text-xs text-regreen-400/80 tracking-widest mb-3">
               {'/learn/'}
@@ -27,7 +27,7 @@ const PageLearn = () => {
             </h1>
             <HighlightedText
               element="p"
-              className="text-neutral-400 leading-relaxed mt-5"
+              className="text-neutral-400 leading-relaxed mt-5 line-clamp-4 md:line-clamp-none"
               text={formatMessage({ id: 'section.learn.content' })}
               attrs={{ className: 'code-chip' }}
             />
