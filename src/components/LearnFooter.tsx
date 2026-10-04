@@ -20,52 +20,61 @@ const LearnFooter = () => {
   const prevIconName = direction === 'rtl' ? 'arrow-right' : 'arrow-left';
 
   return (
-    <div className="my-5 flex select-none">
-      <div className="w-1/3 h-full flex items-end">
+    <div className="py-5 flex items-center select-none border-t border-white/5">
+      <div className="w-1/3 flex items-center">
         {step > 0 && (
-          <div
-            className="rtl:left-0 ltr:right-0 items-end text-left flex flex-col hover:opacity-60"
-            role="button"
-            tabIndex={0}
+          <button
+            type="button"
+            className="group inline-flex items-center gap-2 h-10 ltr:pl-2 ltr:pr-3 rtl:pr-2 rtl:pl-3 rounded-xl text-sm text-neutral-300 hover:text-white hover:bg-white/6 transition-colors"
             onClick={prevStep}
           >
+            <Icon
+              icon={prevIconName}
+              size={18}
+              className="transition-transform group-hover:ltr:-translate-x-0.5 group-hover:rtl:translate-x-0.5"
+            />
+            <FormattedMessage id="general.prev" />
             <Shortcut command={shortcuts.prevStep} />
-            <div className="inline-flex items-center">
-              <Icon className="mr-1" icon={prevIconName} size={20} />
-              <FormattedMessage id="general.prev" />
-            </div>
-          </div>
+          </button>
         )}
       </div>
-      <div className="w-1/3 h-full flex items-end justify-center">
+      <div className="w-1/3 flex items-center justify-center">
         <Social />
       </div>
-      <div className="w-1/3 h-full flex items-end justify-end text-right">
+      <div className="w-1/3 flex items-center justify-end">
         {step < lessonData.length - 1 && (
-          <div
-            className="rtl:right-0 ltr:left-0 items-start text-right flex flex-col hover:opacity-60"
-            role="button"
-            tabIndex={0}
+          <button
+            type="button"
+            className={cx(
+              'group inline-flex items-center gap-2 h-10 ltr:pl-3 ltr:pr-2 rtl:pr-3 rtl:pl-2 rounded-xl text-sm font-medium transition-all duration-200',
+              success
+                ? 'bg-linear-to-b/srgb from-regreen-400 to-emerald-500 text-ink-950 shadow-glow-sm hover:shadow-glow'
+                : 'bg-white/4 border border-white/10 text-neutral-200 hover:bg-white/8',
+            )}
             onClick={nextStep}
           >
-            <div>
-              <Shortcut command={shortcuts.nextStep} />
-              <Icon
-                className={cx('ml-1', {
-                  'text-regreen-400': success,
-                  'text-red-400': error,
-                  'animate__animated animate__shakeY': success,
-                  'animate__animated animate__shakeX': error,
-                })}
-                size={20}
-                icon={success ? 'lock-open' : 'lock-closed'}
-              />
-            </div>
-            <div className="inline-flex items-center ml-auto">
-              <FormattedMessage id="general.next" />
-              <Icon className="ml-1" icon={nextIconName} size={20} />
-            </div>
-          </div>
+            <Icon
+              className={cx({
+                'text-ink-950': success,
+                'text-red-400': error && !success,
+                'text-neutral-400': !error && !success,
+                'animate__animated animate__shakeY': success,
+                'animate__animated animate__shakeX': error,
+              })}
+              size={16}
+              icon={success ? 'lock-open' : 'lock-closed'}
+            />
+            <FormattedMessage id="general.next" />
+            <Shortcut
+              command={shortcuts.nextStep}
+              className={success ? 'bg-black/10! border-black/20! text-ink-950/70!' : ''}
+            />
+            <Icon
+              icon={nextIconName}
+              size={18}
+              className="transition-transform group-hover:ltr:translate-x-0.5 group-hover:rtl:-translate-x-0.5"
+            />
+          </button>
         )}
       </div>
     </div>

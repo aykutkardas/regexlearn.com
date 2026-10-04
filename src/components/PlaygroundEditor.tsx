@@ -1,206 +1,146 @@
-import 'draft-js/dist/Draft.css';
-
-import { useState, useEffect, useRef, FormEvent } from 'react';
+import { useState, useEffect, useMemo, useRef, Fragment, KeyboardEvent, UIEvent } from 'react';
 import { useIntl } from 'react-intl';
 import cx from 'clsx';
 
-import {
-  Editor,
-  EditorState,
-  CompositeDecorator,
-  ContentState,
-  ContentBlock,
-  getDefaultKeyBinding,
-} from 'draft-js';
-
 import setCaretPosition from 'src/utils/setCaretPosition';
+import findPlaygroundMatches from 'src/utils/findPlaygroundMatches';
 import FlagSelect from './FlagSelect';
-
-function myKeyBindingFn(e): string | null {
-  if (e.ctrlKey && e.key.toLowerCase() === 'm') {
-    e.preventDefault();
-    return null;
-  }
-  return getDefaultKeyBinding(e);
-}
-
-const Highlight = ({ children }) => (
-  <span className="shadow-sm h-3 px-[3px] mx-[1px] py-[2px] rounded-md text-white bg-green-500">
-    {children}
-  </span>
-);
 
 const initText = `Regular Expressions, abbreviated as Regex or Regexp, are a string of characters created within the framework of Regex syntax rules. You can easily manage your data with Regex, which uses commands like finding, matching, and editing. Regex can be used in programming languages such as Python, SQL, JavaScript, R, Google Analytics, Google Data Studio, and throughout the coding process. Learn regex online with examples and tutorials on RegexLearn now.`;
 
-const initialContent = ContentState.createFromText(initText);
+const initialRegex = '[A-Z]\\w+';
+const initialFlags = 'g';
+
+// Shared by the textarea and the highlight layer behind it so both lay text out identically.
+const textLayout =
+  'px-4 py-3 font-mono text-[13px] md:text-sm leading-8 md:leading-5 tracking-wider whitespace-pre-wrap wrap-break-word scrollbar-gutter-stable';
+
+const normalizeFlags = (flags: string) =>
+  ['g', 'm', 'i'].filter(flag => flags.includes(flag)).join('');
 
 const Playground = () => {
   const { formatMessage } = useIntl();
   const regexInput = useRef<HTMLInputElement>(null);
-  const editor = useRef(null);
+  const textarea = useRef<HTMLTextAreaElement>(null);
+  const backdrop = useRef<HTMLDivElement>(null);
 
-  const [state, setState] = useState({
-    regex: '',
-    flags: '',
-    editorState: EditorState.createEmpty(),
-  });
+  const [regex, setRegex] = useState(initialRegex);
+  const [flags, setFlags] = useState(initialFlags);
+  const [text, setText] = useState(initText);
 
-  const onChangeFlags = flags => {
-    let newFlags = '';
-    if (flags.includes('g')) {
-      newFlags += 'g';
-    }
-    if (flags.includes('m')) {
-      newFlags += 'm';
-    }
-    if (flags.includes('i')) {
-      newFlags += 'i';
-    }
-    setState({
-      regex: state.regex,
-      flags: newFlags,
-      editorState: checkRegex(state.regex, newFlags, state.editorState),
+  const ranges = useMemo(() => findPlaygroundMatches(text, regex, flags), [text, regex, flags]);
+
+  const highlightedText = useMemo(() => {
+    const parts = [];
+    let cursor = 0;
+
+    ranges.forEach(({ start, end }, index) => {
+      parts.push(text.slice(cursor, start));
+      parts.push(
+        <mark
+          key={index}
+          data-highlight
+          className="rounded-sm bg-regreen-400 text-ink-950 shadow-[0_0_0_2px_#5ff59b]"
+        >
+          {text.slice(start, end)}
+        </mark>,
+      );
+      cursor = end;
     });
-  };
+    parts.push(text.slice(cursor));
 
-  const onChangeRegex = (event: FormEvent<HTMLInputElement>) => {
-    const regex = event?.currentTarget?.value || '';
-    setState({ ...state, regex, editorState: checkRegex(regex, state.flags, state.editorState) });
-  };
-
-  const onChangeContent = (editorState: EditorState) => {
-    setState({ ...state, editorState });
-  };
-
-  const checkRegex = (regex, flags, editorState) => {
-    let rowIndex = 0;
-    let matchCount = 0;
-
-    if (!regex) {
-      const content = editorState.getCurrentContent();
-      return EditorState.createWithContent(content);
-    }
-
-    const blockCount = editorState.getCurrentContent().getBlockMap().size;
-
-    function findWithRegex(content: ContentBlock, callback: Function) {
-      const isMultiple = flags.includes('m');
-      const currentRow = rowIndex;
-
-      rowIndex++;
-
-      // Without the multiline flag, `^` only matches the start of the whole
-      // text (first row) and `$` only its end (last row).
-      if (!isMultiple) {
-        if (regex.startsWith('^') && currentRow > 0) return;
-        if (regex.endsWith('$') && currentRow < blockCount - 1) return;
-      }
-
-      const isGlobal = flags.includes('g');
-
-      if (!isGlobal && matchCount > 0) return;
-
-      const text = content.getText();
-      const currentRegex = new RegExp(regex, isGlobal ? flags : `g${flags}`);
-
-      let matches = [...text.matchAll(currentRegex)];
-
-      if (!isGlobal) {
-        matches = matches.slice(0, 1);
-      }
-
-      if (regex && matches.length) {
-        matches.forEach(match => callback(match.index, match.index + match[0].length));
-      }
-
-      if (matches.length) {
-        matchCount++;
-      }
-    }
-
-    function handleStrategy(content: ContentBlock, callback: Function) {
-      try {
-        findWithRegex(content, callback);
-      } catch (err) {}
-    }
-
-    const HighlightDecorator = new CompositeDecorator([
-      {
-        strategy: handleStrategy,
-        component: Highlight,
-      },
-    ]);
-
-    return EditorState.createWithContent(editorState.getCurrentContent(), HighlightDecorator);
-  };
+    return parts.map((part, index) => <Fragment key={`p${index}`}>{part}</Fragment>);
+  }, [text, ranges]);
 
   useEffect(() => {
-    const regex = '[A-Z]\\w+';
-    const flags = 'g';
-    setState({
-      regex,
-      flags,
-      editorState: checkRegex(regex, flags, EditorState.createWithContent(initialContent)),
-    });
-    setCaretPosition(regexInput.current, regex.length);
+    setCaretPosition(regexInput.current, initialRegex.length);
   }, []);
 
+  const syncScroll = (event: UIEvent<HTMLTextAreaElement>) => {
+    if (!backdrop.current) return;
+    backdrop.current.scrollTop = event.currentTarget.scrollTop;
+  };
+
+  // Ctrl+M toggles the multiline flag; keep it from reaching the textarea.
+  const onTextKeyDown = (event: KeyboardEvent<HTMLTextAreaElement>) => {
+    if (event.ctrlKey && event.key.toLowerCase() === 'm') {
+      event.preventDefault();
+    }
+  };
+
   return (
-    <>
-      <div dir='ltr'
-        className={cx(
-          'bg-jet-500 rounded-md relative tracking-wider text-neutral-300 mb-5 mt-4',
-          'w-full flex items-center',
-        )}
-      >
-        <span className="bg-neutral-600/40 px-2 py-1 rounded-t-md ml-3 text-[10px] text-neutral-400 absolute -top-[23px]">
-          {formatMessage({ id: 'general.regex' })}
-        </span>
-        <div className="flex items-center px-1 py-6 text-neutral-500 tracking-wider w-full rounded-md bg-neutral-600/40 h-7 md:text-sm">
-          <span className="ml-3">/</span>
-          <input
-            ref={regexInput}
-            className="border-0 px-1 flex-1 focus:outline-none md:text-sm leading-5 text-regreen-400 bg-transparent focus:ring-0 w-full"
-            type="text"
-            onChange={e => onChangeRegex(e)}
-            value={state.regex}
-            spellCheck={false}
-          />
-          <span>
-            /<span className="text-green-500">{state.flags}</span>
-          </span>
-          <FlagSelect flags={state.flags} setFlags={onChangeFlags} />
+    <div className="flex flex-col gap-4 h-full">
+      <div dir="ltr" className="panel">
+        <div className="flex items-center justify-between px-4 h-9 border-b border-white/5 bg-white/2 rounded-t-xl">
+          <span className="panel-label">{formatMessage({ id: 'general.regex' })}</span>
+        </div>
+        <div className="flex items-center gap-2 p-2">
+          <div
+            className={cx(
+              'flex flex-1 items-center h-11 px-3 rounded-lg font-mono text-sm md:text-base',
+              'bg-ink-950/70 border border-white/6 transition-[border-color,box-shadow]',
+              'focus-within:border-regreen-400/40 focus-within:shadow-[0_0_0_3px_rgb(95_245_155/0.08)]',
+            )}
+          >
+            <span className="text-neutral-600">/</span>
+            <input
+              ref={regexInput}
+              aria-label={formatMessage({ id: 'general.regex' })}
+              className="border-0 px-1 flex-1 focus:outline-hidden font-mono text-sm md:text-base text-regreen-400 bg-transparent focus:ring-0 w-full"
+              type="text"
+              onChange={event => setRegex(event.currentTarget.value)}
+              value={regex}
+              spellCheck={false}
+              autoComplete="off"
+              autoCapitalize="off"
+            />
+            <span className="text-neutral-600">
+              /<span className="text-regreen-400">{flags}</span>
+            </span>
+          </div>
+          <FlagSelect flags={flags} setFlags={newFlags => setFlags(normalizeFlags(newFlags))} />
         </div>
       </div>
 
       <div
-        className={cx(
-          'bg-jet-500 rounded-md relative tracking-wider text-neutral-300 h-auto',
-          'flex flex-col text-left w-full items-start',
-        )}
-        onClick={() => editor.current.focus()}
+        dir="ltr"
+        className="panel flex flex-col flex-1 min-h-0 overflow-hidden cursor-text"
+        onClick={() => textarea.current?.focus()}
       >
-        <span className="bg-neutral-700/40 px-2 py-1 rounded-t-md ml-3 relative text-[10px] text-neutral-400">
-          {formatMessage({ id: 'general.text' })}
-        </span>
-        <div className="bg-neutral-700/40 rounded-lg w-full p-2 flex">
+        <div className="flex items-center justify-between px-4 h-9 border-b border-white/5 bg-white/2 shrink-0">
+          <span className="panel-label">{formatMessage({ id: 'general.text' })}</span>
+        </div>
+        <div className="relative flex-1 min-h-0">
           <div
-            className={cx(
-              'overflow-y-scroll h-[calc(100vh-5rem-10rem)] w-full flex md:text-sm  overflow-x-hidden !leading-7',
-              '[&_.public-DraftEditor-content]:min-h-full [&_.DraftEditor-root]:w-full  [&_.public-DraftEditor-content]:ring-0',
-            )}
+            ref={backdrop}
+            aria-hidden
+            className={cx(textLayout, 'absolute inset-0 overflow-hidden text-neutral-300 pointer-events-none')}
           >
-            <Editor
-              ref={editor}
-              editorState={state.editorState}
-              onChange={onChangeContent}
-              placeholder="Text here"
-              keyBindingFn={myKeyBindingFn}
-            />
+            {highlightedText}
+            {/* Keeps a trailing newline from collapsing so both layers stay the same height. */}
+            {'\n'}
           </div>
+          <textarea
+            ref={textarea}
+            aria-label={formatMessage({ id: 'general.text' })}
+            className={cx(
+              textLayout,
+              'absolute inset-0 w-full h-full resize-none overflow-y-auto overflow-x-hidden',
+              'bg-transparent border-0 text-transparent caret-neutral-100 focus:ring-0 focus:outline-hidden',
+              'placeholder:text-neutral-600 selection:bg-regreen-400/30 selection:text-transparent',
+            )}
+            value={text}
+            onChange={event => setText(event.currentTarget.value)}
+            onScroll={syncScroll}
+            onKeyDown={onTextKeyDown}
+            placeholder="Text here"
+            spellCheck={false}
+            autoComplete="off"
+            autoCapitalize="off"
+          />
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

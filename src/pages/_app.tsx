@@ -70,7 +70,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
           <meta name="twitter:image" content={baseURL + '/images/og-regexlearn-image.jpg'} />
         </Head>
       )}
-      <div dir={direction} className="flex flex-col h-screen text-neutral-50 font-openSans">
+      <div dir={direction} className="flex flex-col h-screen text-neutral-50 font-sans">
         <Component {...pageProps} />
       </div>
     </IntlProvider>

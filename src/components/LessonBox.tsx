@@ -16,95 +16,143 @@ interface Props {
     stepCount: number;
     videoCount?: number;
   };
-  bgColor?: string;
+  accent?: 'green' | 'orange';
   lock?: boolean;
 }
 
-const LessonBox = ({ data, lock, bgColor }: Props) => {
-  const [isVisit, setIsVisit] = useState(false);
+const accents = {
+  green: {
+    card: 'from-[#324A34] to-[#25332a] hover:shadow-regreen-400/10',
+    glow: 'bg-regreen-400/20',
+    bar: 'from-regreen-400 to-emerald-500',
+    text: 'text-regreen-400',
+  },
+  orange: {
+    card: 'from-[#8a561d] to-[#4a3220] hover:shadow-orange-400/10',
+    glow: 'bg-orange-400/25',
+    bar: 'from-orange-300 to-orange-500',
+    text: 'text-orange-300',
+  },
+};
+
+const LessonBox = ({ data, lock, accent = 'green' }: Props) => {
+  const [lastStep, setLastStep] = useState(0);
   const { formatMessage } = useIntl();
-
-  let DynamicWrapper;
-
-  if (lock) {
-    DynamicWrapper = Fragment;
-  } else {
-    const WrapperLessonBox = ({ children }) => (
-      <IntlLink href={`/[lang]/learn/[lesson]`} query={{ lesson: data.slug }}>
-        {children}
-      </IntlLink>
-    );
-    DynamicWrapper = WrapperLessonBox;
-  }
+  const direction = useLanguageDirection();
+  const theme = accents[accent];
 
   useEffect(() => {
     const lessonData = lookie.get(`lesson.${data.key}`);
-
-    if (lessonData && lessonData.lastStep > 0) {
-      setIsVisit(true);
-    }
+    setLastStep(lessonData?.lastStep > 0 ? lessonData.lastStep : 0);
   }, [data.key]);
 
+  const isVisit = lastStep > 0;
+  const progress = Math.min(100, Math.round(((lastStep + (isVisit ? 1 : 0)) / data.stepCount) * 100));
   const startText = formatMessage({ id: isVisit ? 'general.continue' : 'general.start' });
 
   const resetProgress = e => {
     e.preventDefault();
     e.stopPropagation();
     lookie.remove(`lesson.${data.key}`);
-    setIsVisit(false);
+    setLastStep(0);
   };
 
-  const direction = useLanguageDirection();
   const arrowDirectionName = direction === 'rtl' ? 'arrow-left' : 'arrow-right';
 
-  return (
-    <DynamicWrapper className="hover:outline-8">
+  const card = (
+    <div
+      className={cx(
+        'group relative overflow-hidden w-full min-h-44 rounded-2xl p-5 flex flex-col select-none',
+        'bg-linear-to-br/srgb border border-white/8 shadow-card',
+        'transition-all duration-300 hover:-translate-y-0.5 hover:border-white/15 hover:shadow-2xl',
+        theme.card,
+        lock && 'cursor-not-allowed text-center grayscale',
+      )}
+    >
       <div
+        aria-hidden
+        className="absolute inset-0 bg-[url(/images/noise.png)] bg-repeat opacity-60 mix-blend-overlay pointer-events-none"
+      />
+      <div
+        aria-hidden
         className={cx(
-          'bg-[url(/images/noise.png)] relative bg-repeat bg-contain  transition-all duration-300 w-full h-44 bg-center rounded-xl py-3 px-4 flex flex-col shadow-xl hover:shadow-2xl flex-1 select-none',
-          bgColor || 'bg-[#324A34]/80 hover:bg-[#324A34]',
-          !lock ? '' : 'cursor-not-allowed text-center grayscale',
+          'absolute -top-16 ltr:-right-16 rtl:-left-16 w-48 h-48 rounded-full blur-3xl transition-opacity duration-300 opacity-60 group-hover:opacity-100',
+          theme.glow,
         )}
-      >
-        <h2 className="mb-1 text-lg font-bold">
+      />
+
+      <div className="relative flex items-start justify-between gap-4">
+        <h2 className="text-lg font-bold tracking-tight">
           <FormattedMessage id={data.title} />
         </h2>
-        <p className="text-sm text-neutral-300 max-w-[70%] mt-2">
-          <FormattedMessage id={data.description} />
-        </p>
-        {!lock && (
-          <div className="flex items-end text-sm flex-1 justify-between">
-            {isVisit && (
+        <div className="inline-flex items-center gap-1.5 text-xs text-neutral-300 shrink-0">
+          {data.videoCount && (
+            <span className="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-black/20">
+              <Icon icon="video-camera" size={14} />
+              {data.videoCount}
+            </span>
+          )}
+          <span className="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-black/20">
+            <Icon icon="document-duplicate" size={14} />
+            {data.stepCount}
+          </span>
+        </div>
+      </div>
+      <p className="relative text-sm text-neutral-300/90 max-w-[85%] mt-2 leading-relaxed">
+        <FormattedMessage id={data.description} />
+      </p>
+
+      {!lock && (
+        <div className="relative flex flex-col flex-1 justify-end gap-3 mt-5">
+          {isVisit && (
+            <div className="flex items-center gap-3">
+              <div className="flex-1 h-1.5 rounded-full bg-black/30 overflow-hidden">
+                <div
+                  className={cx('h-full rounded-full bg-linear-to-r/srgb', theme.bar)}
+                  style={{ width: `${progress}%` }}
+                />
+              </div>
+              <span className={cx('text-xs font-mono', theme.text)}>{progress}%</span>
+            </div>
+          )}
+          <div className="flex items-center justify-between gap-2">
+            {isVisit ? (
               <span
                 role="button"
                 tabIndex={0}
                 onClick={resetProgress}
-                className="inline-flex items-center bg-neutral-800/60 px-2 py-1 rounded-md text-xs text-neutral-400 hover:text-neutral-50"
+                onKeyDown={e => (e.key === 'Enter' || e.key === ' ') && resetProgress(e)}
+                className="inline-flex items-center px-2.5 py-1 rounded-lg text-xs text-neutral-400 hover:text-white hover:bg-black/20 transition-colors"
               >
                 {formatMessage({ id: 'general.resetProgress' })}
               </span>
+            ) : (
+              <span />
             )}
-            <div className="inline-flex items-center text-sm text-neutral-300 absolute top-5 ltr:right-4 rtl:left-4 space-x-2">
-              {data.videoCount && (
-                <span className="inline-flex items-center rtl:right-0 ">
-                  <Icon icon="video-camera" size={16} className="mx-1" />
-                  {data.videoCount}
-                </span>
-              )}
-              <span className="inline-flex items-center ">
-                <Icon icon="document-duplicate" size={16}  className="mx-1"/>
-                {data.stepCount}
-              </span>
-            </div>
-            <span className="inline-flex items-center rtl:mr-auto ltr:ml-auto bg-neutral-800 px-2 py-1 rounded-md text-xs text-neutral-300 hover:text-neutral-50">
-  {startText} <Icon icon={arrowDirectionName} size={14} className="rtl:mr-1 ltr:ml-1" />
-</span>
-
-
+            <span className="inline-flex items-center gap-1.5 bg-ink-900/80 group-hover:bg-ink-950 px-3 py-1.5 rounded-lg text-xs font-medium text-white transition-colors">
+              {startText}
+              <Icon
+                icon={arrowDirectionName}
+                size={13}
+                className="transition-transform group-hover:ltr:translate-x-0.5 group-hover:rtl:-translate-x-0.5"
+              />
+            </span>
           </div>
-        )}
-      </div>
-    </DynamicWrapper>
+        </div>
+      )}
+    </div>
+  );
+
+  if (lock) return <Fragment>{card}</Fragment>;
+
+  return (
+    <IntlLink
+      href={`/[lang]/learn/[lesson]`}
+      query={{ lesson: data.slug }}
+      className="block rounded-2xl"
+    >
+      {card}
+    </IntlLink>
   );
 };
 

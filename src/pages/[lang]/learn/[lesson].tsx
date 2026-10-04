@@ -1,5 +1,4 @@
 import { GetStaticPaths, GetStaticProps } from 'next';
-import Head from 'next/head';
 
 import Header from 'src/components/Header';
 import LearnFooter from 'src/components/LearnFooter';
@@ -19,19 +18,14 @@ const PageLesson = ({ lesson }: PageLessonProps) => {
   const lessonData = require(`src/data/lessons/${lesson.key}.js`)?.default;
 
   return (
-    <>
-      <Head>
-        <link rel="stylesheet" href="/css/animate.css" />
-      </Head>
-      <InteractiveAreaProvider key={lessonData} lesson={lesson} lessonData={lessonData}>
-        <div className="px-3 flex flex-col flex-1 justify-between relative overflow-x-hidden">
-          <Header page="learn-detail" />
-          <LearnProgress />
-          <Step />
-          <LearnFooter />
-        </div>
-      </InteractiveAreaProvider>
-    </>
+    <InteractiveAreaProvider key={lessonData} lesson={lesson} lessonData={lessonData}>
+      <div className="px-3 flex flex-col flex-1 justify-between relative overflow-x-hidden">
+        <Header page="learn-detail" />
+        <LearnProgress />
+        <Step />
+        <LearnFooter />
+      </div>
+    </InteractiveAreaProvider>
   );
 };
 

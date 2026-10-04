@@ -1,4 +1,4 @@
-import xor from 'lodash.xor';
+import xor from 'src/utils/xor';
 
 const regex101 = [
   {
@@ -395,7 +395,7 @@ const regex101 = [
     title: 'steps.caret.title',
     description: 'steps.caret.description',
     originalTitle: 'Start of The String',
-    content: 'Basic Omellette Recipe\n\n1. 3 eggs, beaten\n2. 1 tsp sunflower oil\n3. 1 tsp butter',
+    content: 'Basic Omelette Recipe\n\n1. 3 eggs, beaten\n2. 1 tsp sunflower oil\n3. 1 tsp butter',
     initialValue: '[0-9]',
     initialFlags: 'gm',
     flags: 'gm',

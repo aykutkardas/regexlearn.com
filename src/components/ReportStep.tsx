@@ -32,14 +32,14 @@ const ReportStep = ({ title: stepTitle, step }: Props) => {
 `);
 
   return (
-    <div className="cursor-default absolute -bottom-7 left-1 select-none">
+    <div className="cursor-default select-none">
       <a
-        className="inline-flex items-center text-[11px] text-neutral-500 hover:text-neutral-300 transition-colors"
+        className="inline-flex items-center text-xs text-neutral-500 hover:text-neutral-200 transition-colors"
         href={`https://github.com/aykutkardas/regexlearn.com/issues/new?title=${title}&body=${body}`}
         target="_blank"
         rel="noreferrer"
       >
-        <Icon icon="chat-bubble" size={16} className="mr-1" />
+        <Icon icon="chat-bubble" size={14} className="ltr:mr-1.5 rtl:ml-1.5" />
         <FormattedMessage id="general.reportStep" />
       </a>
     </div>

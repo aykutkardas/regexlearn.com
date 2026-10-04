@@ -8,18 +8,22 @@ const PlaygroundSidebar = () => {
   const { formatMessage } = useIntl();
 
   return (
-    <div className="overflow-y-scroll lg:overflow-y-hidden p-3 space-y-8 flex-col lg:hover:overflow-y-scroll rounded-md">
+    <div className="flex-1 overflow-y-auto p-3 flex flex-col gap-5">
       {data.map(row => (
-        <div key={row.title} className="bg-neutral-800 rounded-md">
-          <div className="mb-3">{formatMessage({ id: row.title })}</div>
-          {row.data.map(item => (
-            <CheatsheetCollapse
-              key={item.title}
-              title={formatMessage({ id: item.title })}
-              data={item}
-            />
-          ))}
-        </div>
+        <section key={row.title}>
+          <h2 className="px-2.5 pb-2 text-[11px] font-semibold uppercase tracking-[0.16em] text-neutral-500">
+            {formatMessage({ id: row.title })}
+          </h2>
+          <div className="flex flex-col gap-0.5">
+            {row.data.map(item => (
+              <CheatsheetCollapse
+                key={item.title}
+                title={formatMessage({ id: item.title })}
+                data={item}
+              />
+            ))}
+          </div>
+        </section>
       ))}
     </div>
   );

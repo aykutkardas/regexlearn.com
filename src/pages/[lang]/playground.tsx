@@ -9,31 +9,29 @@ import ReportPlayground from 'src/components/ReportPlayground';
 import globalIntl from 'src/utils/globalIntl';
 
 const PagePlayground = () => (
-  <div className="container-full flex flex-col h-screen items-between flex-1 bg-neutral-800">
+  <div className="container-full flex flex-col h-screen items-between flex-1 bg-ink-900">
     <Header page="playground" />
-    <div className="flex flex-1 flex-col h-[calc(100vh-5rem)] items-center justify-center sm:flex-row ">
-      <div className="w-full  overflow-y-scroll p-4">
+    <div className="flex flex-1 flex-col min-h-0 md:flex-row">
+      <div className="w-full flex-1 min-h-0 p-4">
         <PlaygroundEditor />
       </div>
-      <div className="hidden sm:flex flex-col w-[400px] h-full border-l border-neutral-700">
+      <aside className="hidden md:flex flex-col w-[300px] lg:w-[380px] shrink-0 h-full min-h-0 border-l rtl:border-l-0 rtl:border-r border-white/6 bg-ink-950/30">
         <PlaygroundSidebar />
-        <div className="h-20 min-h-[70px] border-t py-2 flex flex-col items-center justify-between border-neutral-700 sticky bottom-0">
-          <div className="flex gap-x-2 justify-center">
-            <a
-              href="https://www.buymeacoffee.com/aykutkardas"
-              target="_blank"
-              rel="noreferrer"
-              aria-label="Buy Me a Coffee"
-              title="Buy Me a Coffee"
-            >
-              <div className="w-6 h-6 cursor-pointer hover:scale-110 transition inline-flex items-center justify-center rounded-full bg-gradient-to-tr from-yellow-600 to-yellow-500 shadow-xl">
-                <Icon icon="coffee" className="text-white" size={14} />
-              </div>
-            </a>
-          </div>
+        <div className="h-14 shrink-0 border-t px-3 flex items-center justify-between border-white/6">
           <ReportPlayground />
+          <a
+            href="https://www.buymeacoffee.com/aykutkardas"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Buy Me a Coffee"
+            title="Buy Me a Coffee"
+          >
+            <span className="w-7 h-7 hover:scale-110 transition inline-flex items-center justify-center rounded-full bg-linear-to-tr/srgb from-yellow-600 to-yellow-400 text-ink-950 shadow-lg shadow-yellow-500/20">
+              <Icon icon="coffee" size={15} />
+            </span>
+          </a>
         </div>
-      </div>
+      </aside>
     </div>
   </div>
 );
