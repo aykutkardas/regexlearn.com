@@ -1,4 +1,4 @@
-import xor from 'lodash.xor';
+import xor from 'src/utils/xor';
 
 const createGrouppedRegex = (regex: string, flags?: string) => {
   const matches = [...regex.matchAll(/\\(\d+)/g)]
