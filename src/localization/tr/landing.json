@@ -1,6 +1,6 @@
 {
   "landing.title": "Sıfırdan ileri seviyeye, adım adım Regex öğren.",
-  "landing.description": "Regex öğrenmek düşündüğünüzden daha kolay. Regex'i kolayca `öğrenmek`, `pratik yapmak`, `test etmek` ve `paylaşmak` için bu aracı kullanabilirsiniz.",
+  "landing.description": "Regex öğrenmek düşündüğünüzden daha kolay. Regex'i kolayca `öğrenmek`, `pratik yapmak` ve `test etmek` için bu aracı kullanabilirsiniz.",
   "landing.imageAltText": "Bacakları masanın üzerinde olan rahat bir adamın illüstrasyonu.",
 
   "section.learn.title": "Öğren",
@@ -13,7 +13,7 @@
   "section.cheatsheet.imageAltText": "Dürbünle sayfaları inceleyen bir adamın illüstrasyonu.",
 
   "section.playground.title": "Playground",
-  "section.playground.content": "Kolayca `Regex` ifadelerinizi oluşturup test edebileceğiniz `Playground` ile tek tıkla oluşturduğunuz ifadeleri paylaşıp takımınızla ortak bir şekilde çalışabilirsiniz.",
+  "section.playground.content": "`Playground` ile `Regex` ifadelerinizi kolayca oluşturabilir, doğrulayabilir ve test edebilirsiniz.",
   "section.playground.imageAltText": "Dolu bir bardağı düşürmek üzere olan bir kedinin illüstrasyonu.",
 
   "section.practice.title": "Pratik",

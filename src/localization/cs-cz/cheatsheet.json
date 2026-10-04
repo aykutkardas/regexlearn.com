@@ -1,6 +1,4 @@
 {
-  "cheatsheet.section.title": "Regex tahák",
-  "cheatsheet.section.description": "Prozkoumejte všechny vzory a symboly regexu s tahákem pro regex.",
 
   "cheatsheet.anchors": "Začátky a konce",
   "cheatsheet.caret.title": "Začátek řetězce nebo řádku",

@@ -1,6 +1,4 @@
 {
-  "cheatsheet.section.title": "Spickzettel",
-  "cheatsheet.section.description": "Entdecken Sie alle Regex Muster und Symbole mit dem Regex Spickzettel.",
 
   "cheatsheet.anchors": "Anker",
   "cheatsheet.caret.title": "Beginn einer Zeichenfolge oder Zeile",

@@ -1,6 +1,4 @@
 {
-  "cheatsheet.section.title": "正規表現チートシート",
-  "cheatsheet.section.description": "正規表現のパターンと記号を一覧で確認できます。",
 
   "cheatsheet.anchors": "アンカー",
   "cheatsheet.caret.title": "文字列または行の先頭",
