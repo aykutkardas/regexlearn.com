@@ -54,9 +54,9 @@ const FlagBox = ({ flags, setFlags }: FlagBoxProps) => {
   useEventListener('keyup', handleFlagKey);
 
   return (
-    <div className="flex flex-row items-start gap-5 select-none text-xs">
+    <div className="flex flex-row flex-wrap items-center gap-x-5 gap-y-2 select-none text-xs">
       {flagList.map(({ name, code, command, regex }) => (
-        <div className="inline-flex items-center" key={name}>
+        <div className="inline-flex items-center gap-1.5" key={name}>
           <Checkbox
             id={`flag-${name}`}
             checked={!!flags?.includes(code)}
@@ -66,7 +66,7 @@ const FlagBox = ({ flags, setFlags }: FlagBoxProps) => {
               element="span"
               text={name}
               search={regex}
-              attrs={{ className: 'text-green-500' }}
+              attrs={{ className: 'text-regreen-400 font-semibold font-mono' }}
             />
           </Checkbox>
           <Shortcut command={command} />

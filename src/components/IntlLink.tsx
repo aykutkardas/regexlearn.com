@@ -12,6 +12,8 @@ interface Props {
   query?: ParsedUrlQuery;
   passHref?: boolean;
   navLink?: boolean;
+  activeClassName?: string;
+  inactiveClassName?: string;
   children: any;
   tabIndex?: number;
 }
@@ -24,6 +26,8 @@ const IntlLink = ({
   passHref,
   className = '',
   navLink,
+  activeClassName = 'text-regreen-400',
+  inactiveClassName = 'text-neutral-200 hover:text-regreen-400',
   tabIndex,
 }: Props) => {
   const { query: routerQuery, pathname } = useRouter();
@@ -41,12 +45,13 @@ const IntlLink = ({
       href={intlPathName}
       passHref={passHref}
       tabIndex={tabIndex}
+      aria-current={navLink && pathname === newPathname ? 'page' : undefined}
       className={clsx(
         className,
         navLink
           ? pathname === newPathname
-            ? 'text-regreen-400'
-            : 'text-neutral-200 hover:text-regreen-400'
+            ? activeClassName
+            : inactiveClassName
           : null,
       )}
     >

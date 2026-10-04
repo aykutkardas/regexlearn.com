@@ -25,7 +25,7 @@ function myKeyBindingFn(e): string | null {
 }
 
 const Highlight = ({ children }) => (
-  <span className="shadow-sm h-3 px-[3px] mx-[1px] py-[2px] rounded-md text-white bg-green-500">
+  <span className="px-[3px] mx-px py-0.5 rounded-md text-ink-950 bg-regreen-400">
     {children}
   </span>
 );
@@ -146,61 +146,64 @@ const Playground = () => {
   }, []);
 
   return (
-    <>
-      <div dir='ltr'
-        className={cx(
-          'bg-jet-500 rounded-md relative tracking-wider text-neutral-300 mb-5 mt-4',
-          'w-full flex items-center',
-        )}
-      >
-        <span className="bg-neutral-600/40 px-2 py-1 rounded-t-md ml-3 text-[10px] text-neutral-400 absolute -top-[23px]">
-          {formatMessage({ id: 'general.regex' })}
-        </span>
-        <div className="flex items-center px-1 py-6 text-neutral-500 tracking-wider w-full rounded-md bg-neutral-600/40 h-7 md:text-sm">
-          <span className="ml-3">/</span>
-          <input
-            ref={regexInput}
-            className="border-0 px-1 flex-1 focus:outline-none md:text-sm leading-5 text-regreen-400 bg-transparent focus:ring-0 w-full"
-            type="text"
-            onChange={e => onChangeRegex(e)}
-            value={state.regex}
-            spellCheck={false}
-          />
-          <span>
-            /<span className="text-green-500">{state.flags}</span>
-          </span>
+    <div className="flex flex-col gap-4 h-full">
+      <div dir="ltr" className="panel">
+        <div className="flex items-center justify-between px-4 h-9 border-b border-white/[0.05] bg-white/[0.02] rounded-t-xl">
+          <span className="panel-label">{formatMessage({ id: 'general.regex' })}</span>
+        </div>
+        <div className="flex items-center gap-2 p-2">
+          <div
+            className={cx(
+              'flex flex-1 items-center h-11 px-3 rounded-lg font-mono text-sm md:text-base',
+              'bg-ink-950/70 border border-white/[0.06] transition-[border-color,box-shadow]',
+              'focus-within:border-regreen-400/40 focus-within:shadow-[0_0_0_3px_rgb(95_245_155/0.08)]',
+            )}
+          >
+            <span className="text-neutral-600">/</span>
+            <input
+              ref={regexInput}
+              aria-label={formatMessage({ id: 'general.regex' })}
+              className="border-0 px-1 flex-1 focus:outline-none font-mono text-sm md:text-base text-regreen-400 bg-transparent focus:ring-0 w-full"
+              type="text"
+              onChange={e => onChangeRegex(e)}
+              value={state.regex}
+              spellCheck={false}
+              autoComplete="off"
+              autoCapitalize="off"
+            />
+            <span className="text-neutral-600">
+              /<span className="text-regreen-400">{state.flags}</span>
+            </span>
+          </div>
           <FlagSelect flags={state.flags} setFlags={onChangeFlags} />
         </div>
       </div>
 
       <div
-        className={cx(
-          'bg-jet-500 rounded-md relative tracking-wider text-neutral-300 h-auto',
-          'flex flex-col text-left w-full items-start',
-        )}
+        dir="ltr"
+        className="panel flex flex-col flex-1 min-h-0 overflow-hidden cursor-text"
         onClick={() => editor.current.focus()}
       >
-        <span className="bg-neutral-700/40 px-2 py-1 rounded-t-md ml-3 relative text-[10px] text-neutral-400">
-          {formatMessage({ id: 'general.text' })}
-        </span>
-        <div className="bg-neutral-700/40 rounded-lg w-full p-2 flex">
-          <div
-            className={cx(
-              'overflow-y-scroll h-[calc(100vh-5rem-10rem)] w-full flex md:text-sm  overflow-x-hidden !leading-7',
-              '[&_.public-DraftEditor-content]:min-h-full [&_.DraftEditor-root]:w-full  [&_.public-DraftEditor-content]:ring-0',
-            )}
-          >
-            <Editor
-              ref={editor}
-              editorState={state.editorState}
-              onChange={onChangeContent}
-              placeholder="Text here"
-              keyBindingFn={myKeyBindingFn}
-            />
-          </div>
+        <div className="flex items-center justify-between px-4 h-9 border-b border-white/[0.05] bg-white/[0.02] shrink-0">
+          <span className="panel-label">{formatMessage({ id: 'general.text' })}</span>
+        </div>
+        <div
+          className={cx(
+            'overflow-y-auto flex-1 w-full flex px-4 py-3 font-mono text-[13px] md:text-sm text-neutral-300 overflow-x-hidden !leading-8',
+            '[&_.public-DraftEditor-content]:min-h-full [&_.DraftEditor-root]:w-full [&_.public-DraftEditor-content]:ring-0',
+            '[&_.public-DraftEditorPlaceholder-root]:text-neutral-600',
+          )}
+        >
+          <Editor
+            ref={editor}
+            editorState={state.editorState}
+            onChange={onChangeContent}
+            placeholder="Text here"
+            keyBindingFn={myKeyBindingFn}
+          />
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

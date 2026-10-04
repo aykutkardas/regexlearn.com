@@ -1,10 +1,13 @@
+import cx from 'clsx';
+
 import { isMacOS, isMobile } from 'src/utils/useOS';
 
 interface Props {
   command: string;
+  className?: string;
 }
 
-const Shortcut = ({ command }: Props) => {
+const Shortcut = ({ command, className }: Props) => {
   if (isMobile()) return null;
 
   const altKey = isMacOS() ? '⌥' : 'Alt';
@@ -18,12 +21,16 @@ const Shortcut = ({ command }: Props) => {
     )
     .join(' ');
   return (
-    <div
-      role="button"
-      className="hidden tracking-tighter md:inline-flex p-1 border-b-2 border-neutral-600 m-1 text-[9px] bg-neutral-500/20 rounded-md text-neutral-400"
+    <kbd
+      className={cx(
+        'hidden md:inline-flex items-center font-mono font-normal tracking-tight whitespace-nowrap',
+        'px-1.5 py-0.5 text-[10px] leading-none rounded-md',
+        'border border-white/10 border-b-2 bg-white/[0.04] text-neutral-400',
+        className,
+      )}
     >
       {readableCommand}
-    </div>
+    </kbd>
   );
 };
 

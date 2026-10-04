@@ -7,12 +7,64 @@
 }
 
 @layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
+  }
+
   body {
     background-color: var(--background);
+    background-image: radial-gradient(
+        900px 500px at 15% -10%,
+        rgb(95 245 155 / 0.07),
+        transparent 70%
+      ),
+      radial-gradient(700px 400px at 100% 0%, rgb(56 189 248 / 0.04), transparent 70%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+
+  ::selection {
+    @apply bg-regreen-400/30 text-white;
   }
 
   * {
-    @apply focus-visible:ring focus-visible:ring-regreen-400 focus-visible:outline-none focus-visible:rounded-sm;
+    @apply focus-visible:ring-2 focus-visible:ring-regreen-400/80 focus-visible:outline-none focus-visible:rounded-md;
+  }
+}
+
+@layer components {
+  /* Glassy surface used for cards and panels. */
+  .surface {
+    @apply bg-white/[0.03] border border-white/[0.06] shadow-card;
+  }
+
+  /* Small inline code chip used inside translated texts. */
+  .code-chip {
+    @apply font-mono text-[0.85em] px-1.5 py-0.5 rounded-md bg-white/[0.06] border border-white/[0.06] text-regreen-400 whitespace-nowrap;
+  }
+
+  /* Editor-like panel with a header label (Text / Regex). */
+  .panel {
+    @apply relative rounded-xl bg-ink-900/80 border border-white/[0.06] shadow-card;
+  }
+
+  .panel-label {
+    @apply inline-flex items-center gap-1.5 text-[10px] font-medium uppercase tracking-[0.14em] text-neutral-400;
+  }
+
+  .panel-label::before {
+    content: '';
+    @apply w-1.5 h-1.5 rounded-full bg-regreen-400/70;
+  }
+
+  .eyebrow {
+    @apply inline-flex items-center gap-2 text-xs font-medium tracking-wide text-regreen-400 bg-regreen-400/10 border border-regreen-400/20 rounded-full px-3 py-1;
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-regreen-300 via-regreen-400 to-emerald-500;
   }
 }
 
@@ -21,17 +73,27 @@
 }
 
 ::-webkit-scrollbar {
-  @apply h-1 w-1;
+  @apply h-1.5 w-1.5;
 }
 
 ::-webkit-scrollbar-track {
-  @apply bg-neutral-800;
+  @apply bg-transparent;
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply rounded bg-neutral-700;
+  @apply rounded-full bg-white/10;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  @apply bg-neutral-600;
+  @apply bg-white/20;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

@@ -1,19 +1,18 @@
 import Icon from 'src/components/Icon';
 
-const SupportButton = ({ small }: { small?: boolean }) => (
-  <div className="fixed bottom-5 right-5 hidden sm:flex flex-col space-y-2">
-    <a
-      href="https://www.buymeacoffee.com/aykutkardas"
-      target="_blank"
-      rel="noreferrer"
-      aria-label="Buy Me a Coffee"
-      title="Buy Me a Coffee"
-    >
-      <div className="w-10 h-10 cursor-pointer hover:scale-110 transition inline-flex items-center justify-center rounded-full bg-gradient-to-tr from-yellow-600 to-yellow-500 shadow-xl">
-        <Icon icon="coffee" size={24} />
-      </div>
-    </a>
-  </div>
+const SupportButton = () => (
+  <a
+    href="https://www.buymeacoffee.com/aykutkardas"
+    target="_blank"
+    rel="noreferrer"
+    aria-label="Buy Me a Coffee"
+    title="Buy Me a Coffee"
+    className="fixed bottom-5 ltr:right-5 rtl:left-5 z-30 hidden sm:inline-flex group"
+  >
+    <span className="w-11 h-11 inline-flex items-center justify-center rounded-full bg-gradient-to-tr from-yellow-600 to-yellow-400 text-ink-950 shadow-lg shadow-yellow-500/20 ring-1 ring-yellow-300/40 transition-transform group-hover:scale-110 group-hover:-rotate-6">
+      <Icon icon="coffee" size={22} />
+    </span>
+  </a>
 );
 
 export default SupportButton;
