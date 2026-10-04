@@ -187,6 +187,8 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     scroll-behavior: smooth;
+    /* Regex must render literally: no ligatures like <= -> ≤ (JetBrains Mono) or -> -> → (Inter). */
+    font-variant-ligatures: none;
   }
 
   body {
