@@ -18,6 +18,12 @@ interface Props {
   setIsOpenModal: Function;
 }
 
+// Fits the input to its text: one `ch` per character plus the `tracking-wider` letter spacing.
+const regexInputWidth = (value: string) => {
+  const length = Math.max(value.length, 4);
+  return `calc(${length + 1}ch + ${length * 0.05}em)`;
+};
+
 const InteractiveArea = ({ isShow, setIsOpenModal }: Props) => {
   const {
     data,
@@ -273,7 +279,7 @@ const InteractiveArea = ({ isShow, setIsOpenModal }: Props) => {
               type="text"
               aria-label={formatMessage({ id: 'general.regex' })}
               className="bg-transparent border-0 outline-hidden ring-0! text-center max-w-[440px] min-w-[5ch] px-1 py-0 font-mono text-base tracking-wider text-regreen-400 placeholder:text-neutral-600"
-              style={{ width: `${Math.max((data.visibleRegex || regex).length, 4) + 1}ch` }}
+              style={{ width: regexInputWidth(data.visibleRegex || regex) }}
               readOnly={data.readOnly}
               value={data.visibleRegex || regex}
               onChange={onChange}
