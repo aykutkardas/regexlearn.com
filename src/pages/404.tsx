@@ -11,14 +11,12 @@ import globalIntl from 'src/utils/globalIntl';
 const Page404 = () => (
   <div className="container flex flex-col h-full">
     <Header />
-    <div className="flex flex-col flex-1 items-center justify-center w-full h-full">
-      <img className="w-[300px]" src="/404.webp" alt="404" />
-      <IntlLink href="/">
-        <Button variant={ButtonVariants.Primary}>
-          <FormattedMessage id="notFound.button" />
-        </Button>
-      </IntlLink>
-      <p className="mt-3">
+    <div className="flex flex-col flex-1 items-center justify-center w-full h-full text-center py-12">
+      <div className="relative">
+        <div aria-hidden className="absolute inset-[15%] rounded-full bg-regreen-400/10 blur-3xl" />
+        <img className="relative w-[300px]" src="/404.webp" alt="404" />
+      </div>
+      <p className="mt-4 text-neutral-400 leading-relaxed">
         <FormattedMessage
           id="notFound.intro"
           values={{
@@ -26,6 +24,11 @@ const Page404 = () => (
           }}
         />
       </p>
+      <IntlLink href="/" tabIndex={-1}>
+        <Button variant={ButtonVariants.Primary} className="mt-6">
+          <FormattedMessage id="notFound.button" />
+        </Button>
+      </IntlLink>
     </div>
     <Footer />
   </div>

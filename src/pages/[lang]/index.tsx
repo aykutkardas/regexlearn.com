@@ -15,43 +15,85 @@ import ProductHuntBadges from 'src/components/ProductHuntBadges';
 
 import sponsors from 'sponsors.json';
 import globalIntl from 'src/utils/globalIntl';
+import { useLanguageDirection } from 'src/utils/useLanguageDirection';
+
+const HeroVisual = ({ alt }: { alt: string }) => (
+  <div className="relative">
+    <div aria-hidden className="absolute inset-[10%] rounded-full bg-regreen-400/20 blur-[80px]" />
+    <img
+      className="relative w-80 h-80 lg:w-[480px] lg:h-[480px] drop-shadow-2xl"
+      src="/Done.webp"
+      alt={alt}
+    />
+    <div
+      aria-hidden
+      dir="ltr"
+      className="absolute top-10 ltr:-left-4 rtl:-right-4 hidden lg:flex items-center gap-2 surface backdrop-blur-md rounded-xl px-3 py-2 font-mono text-xs animate-float"
+    >
+      <span className="text-neutral-500">/</span>
+      <span className="text-regreen-400">[a-z]+</span>
+      <span className="text-neutral-500">/g</span>
+    </div>
+    <div
+      aria-hidden
+      dir="ltr"
+      className="absolute bottom-16 ltr:-right-2 rtl:-left-2 hidden lg:flex items-center gap-1.5 surface backdrop-blur-md rounded-xl px-3 py-2 font-mono text-xs animate-float [animation-delay:-3s]"
+    >
+      <span className="px-1 rounded bg-regreen-400 text-ink-950">regex</span>
+      <span className="text-neutral-400">is</span>
+      <span className="px-1 rounded bg-regreen-400 text-ink-950">fun</span>
+    </div>
+  </div>
+);
 
 const PageHome = () => {
   const { formatMessage } = useIntl();
+  const direction = useLanguageDirection();
 
   return (
     <div className="container">
       <Header />
-      <div className="w-full flex items-center min-h-screen relative -top-12">
-        <div className="w-full md:w-7/10">
-          <h1 className="text-3xl font-bold sm:leading-snug mb-3 font-sans lg:text-[45px] text-white">
+      <div className="w-full flex flex-col md:flex-row items-center gap-10 lg:min-h-[calc(100vh-5rem)] pt-10 pb-16 md:py-20 lg:py-12">
+        <div className="w-full md:w-3/5 text-center md:text-start animate-fade-up">
+          <span dir="ltr" className="eyebrow font-mono mb-6">
+            <span className="w-1.5 h-1.5 rounded-full bg-regreen-400 animate-pulse" />
+            /^learn(ing)?\s+regex$/i
+          </span>
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.1] mb-6 text-transparent bg-clip-text bg-gradient-to-b from-white to-neutral-300">
             <FormattedMessage id="landing.title" />
           </h1>
           <HighlightedText
             element="p"
-            className="md:text-lg md:leading-8 my-1 text-neutral-200/80"
+            className="md:text-lg leading-relaxed text-neutral-400 max-w-xl mx-auto md:mx-0"
             text={formatMessage({ id: 'landing.description' })}
+            attrs={{ className: 'code-chip' }}
           />
-          <IntlLink href="/[lang]/learn" tabIndex={-1}>
-            <Button variant={ButtonVariants.Primary} className="mt-4">
-              <FormattedMessage id="general.startLearning" />
-            </Button>
-          </IntlLink>
+          <div className="flex flex-wrap items-center justify-center md:justify-start gap-3 mt-8">
+            <IntlLink href="/[lang]/learn" tabIndex={-1}>
+              <Button variant={ButtonVariants.Primary} className="px-6 py-3 text-[15px]">
+                <FormattedMessage id="general.startLearning" />
+                <Icon icon={direction === 'rtl' ? 'arrow-left' : 'arrow-right'} size={16} />
+              </Button>
+            </IntlLink>
+            <IntlLink href="/[lang]/playground" tabIndex={-1}>
+              <Button variant={ButtonVariants.Secondary} className="px-6 py-3 text-[15px]">
+                <FormattedMessage id="general.playground" />
+              </Button>
+            </IntlLink>
+          </div>
+          <div className="mt-10 flex justify-center md:justify-start opacity-80">
+            <ProductHuntBadges />
+          </div>
         </div>
-        <div className="w-full md:w-3/10 hidden sm:flex justify-end">
-          <img
-            className="w-80 h-80 lg:w-[500px] lg:h-[500px] drop-shadow-xl"
-            src="/Done.webp"
-            alt={formatMessage({ id: 'landing.imageAltText' })}
-          />
+        <div className="w-full md:w-2/5 hidden sm:flex justify-center md:justify-end">
+          <HeroVisual alt={formatMessage({ id: 'landing.imageAltText' })} />
         </div>
       </div>
 
-      <div className="max-w-lg mx-auto bg-gradient-to-r from-green-50/0 via-green-500/30 to-green-50/0 flex items-center justify-center h-[60px] relative -top-[110px]">
-        <ProductHuntBadges />
-      </div>
+      <div className="border-t border-white/[0.06]" />
 
       <Section
+        index={1}
         title="section.learn.title"
         description="section.learn.content"
         image="/Learn.webp"
@@ -61,6 +103,7 @@ const PageHome = () => {
         reverse
       />
       <Section
+        index={2}
         title="section.cheatsheet.title"
         description="section.cheatsheet.content"
         image="/Cheatsheet.webp"
@@ -69,6 +112,7 @@ const PageHome = () => {
         buttonText="section.cheatsheet.button"
       />
       <Section
+        index={3}
         title="section.playground.title"
         description="section.playground.content"
         image="/Playground.webp"
@@ -78,12 +122,14 @@ const PageHome = () => {
         reverse
       />
       <Section
+        index={4}
         title="section.practice.title"
         description="section.practice.content"
         image="/Practise.webp"
         imageAltText="section.practice.imageAltText"
       />
       <Section
+        index={5}
         title="section.opensource.title"
         description="section.opensource.content"
         image="/Open Source.webp"
@@ -97,37 +143,47 @@ const PageHome = () => {
             rel="noreferrer"
             tabIndex={-1}
           >
-            <Button className="inline-flex items-center justify-center bg-neutral-600 hover:bg-neutral-700 mt-4">
-              <Icon icon="github" size={16} color="white" className="mr-2" />
+            <Button variant={ButtonVariants.Secondary} className="mt-6">
+              <Icon icon="github" size={16} />
               <span>GitHub</span>
             </Button>
           </a>
         )}
       />
-      <div className="w-full text-center mb-16 my-52">
-        <h3 className="text-neutral-300 text-md">
-          <FormattedMessage id="general.ourSponsors" />
-        </h3>
-        <div className="flex gap-3 mt-2 items-center justify-center max-w-lg mx-auto bg-gradient-to-r from-green-50/0 via-neutral-500/30 to-green-50/0 h-16">
-          {sponsors.map(sponsor => (
-            <a
-              key={sponsor.name}
-              href={sponsor.url}
-              target="_blank"
-              rel="noreferrer"
-              className="opacity-70 hover:opacity-100 w-auto h-auto"
-            >
-              <img
-                src={sponsor.logo.url}
-                width={sponsor.logo.width}
-                height={sponsor.logo.height}
-                alt={sponsor.name}
-                title={sponsor.name}
-              />
-            </a>
-          ))}
+      <section className="w-full mt-16 mb-8">
+        <div className="surface rounded-3xl px-6 py-10 text-center">
+          <h3 className="text-xs font-semibold uppercase tracking-[0.2em] text-neutral-500">
+            <FormattedMessage id="general.ourSponsors" />
+          </h3>
+          <div className="flex flex-wrap gap-8 mt-6 items-center justify-center">
+            {sponsors.map(sponsor => (
+              <a
+                key={sponsor.name}
+                href={sponsor.url}
+                target="_blank"
+                rel="noreferrer"
+                className="opacity-60 hover:opacity-100 transition-opacity grayscale hover:grayscale-0"
+              >
+                <img
+                  src={sponsor.logo.url}
+                  width={sponsor.logo.width}
+                  height={sponsor.logo.height}
+                  alt={sponsor.name}
+                  title={sponsor.name}
+                />
+              </a>
+            ))}
+          </div>
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href="https://github.com/aykutkardas/regexlearn.com#sponsoring"
+            className="inline-block mt-8 text-sm text-regreen-400 hover:text-regreen-300 transition-colors"
+          >
+            <FormattedMessage id="general.becomeSponsor" /> &rarr;
+          </a>
         </div>
-      </div>
+      </section>
       <SupportButton />
       <Footer />
     </div>

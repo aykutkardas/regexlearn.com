@@ -16,30 +16,31 @@ const PageLearn = () => {
   return (
     <div className="container flex flex-1 flex-col items-between h-full">
       <Header />
-      <div className="flex flex-col justify-center flex-1">
-        <div className="flex flex-col md:flex-row items-start mt-6">
-          <div className="w-full md:w-1/2 flex flex-col items-start">
-            <h1 className="text-3xl text-white">
+      <div className="flex flex-col justify-center flex-1 py-10">
+        <div className="flex flex-col md:flex-row items-start gap-8 md:gap-10 lg:gap-16">
+          <div className="w-full md:w-1/2 flex flex-col items-start md:sticky md:top-28 animate-fade-up">
+            <span className="font-mono text-xs text-regreen-400/80 tracking-widest mb-3">
+              {'/learn/'}
+            </span>
+            <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight text-white">
               <FormattedMessage id={'section.learn.title'} />
             </h1>
             <HighlightedText
               element="p"
-              className=" text-neutral-300 mt-4 "
+              className="text-neutral-400 leading-relaxed mt-5 line-clamp-4 md:line-clamp-none"
               text={formatMessage({ id: 'section.learn.content' })}
-              attrs={{ className: 'text-regreen-400' }}
+              attrs={{ className: 'code-chip' }}
             />
           </div>
-          <div className="w-full md:w-1/2 lg:w-1/3 md:pl-10 lg:pl-0 ltr:ml-auto rtl:mr-auto flex flex-col gap-4 mt-8 md:mt-0 mb-10">
+          <div className="w-full md:w-1/2 lg:w-5/12 ltr:ml-auto rtl:mr-auto flex flex-col gap-6">
             {lessons.map(lesson => (
-              <div key={lesson.key} className="w-full mb-3">
+              <div key={lesson.key} className="w-full">
                 <LessonBox
                   data={lesson}
-                  bgColor={
-                    lesson.key === 'regexForSeo' ? 'bg-[#af6b21]/80 hover:bg-[#af6b21]' : null
-                  }
+                  accent={lesson.key === 'regexForSeo' ? 'orange' : 'green'}
                 />
                 <a
-                  className="text-xs flex items-center justify-end text-neutral-400 hover:text-neutral-100 relative ml-auto mt-2 mr-2"
+                  className="text-xs flex items-center justify-end text-neutral-500 hover:text-neutral-200 transition-colors mt-2.5 px-1"
                   href={
                     lesson.creatorURL || 'https://github.com/aykutkardas/regexlearn.com#sponsoring'
                   }

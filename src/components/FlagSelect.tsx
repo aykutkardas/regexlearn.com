@@ -57,13 +57,16 @@ const FlagSelect = ({ flags, setFlags }: FlagSelectProps) => {
 
   return (
     <Popover className="relative select-none cursor-pointer">
-      <Popover.Button className="cursor-pointer text-neutral-300 hover:bg-neutral-700 mr-[2px] ml-3 w-9 border-dashed border p-2 text-sm h-9 flex items-center justify-center rounded-md border-neutral-600 focus:ring-0 focus:bg-neutral-700">
+      <Popover.Button
+        aria-label="Flags"
+        className="cursor-pointer text-neutral-300 hover:text-white hover:bg-white/[0.08] w-11 h-11 border border-white/10 bg-white/[0.03] flex items-center justify-center rounded-lg transition-colors"
+      >
         <Icon icon="flag" size={14} />
       </Popover.Button>
 
-      <Popover.Panel className="absolute right-0 rtl:left-0 rtl:right-auto z-10 mt-2 p-2 border w-48 border-neutral-700 bg-neutral-800 shadow-md rounded-md">
+      <Popover.Panel className="absolute right-0 z-20 mt-2 p-2 w-56 flex flex-col gap-1 rounded-xl border border-white/10 bg-ink-900 shadow-2xl">
         {flagList.map(({ name, code, command, regex }) => (
-          <div className="inline-flex w-full justify-between text-xs items-center" key={name}>
+          <div className="flex w-full justify-between text-xs items-center px-2 py-1.5 rounded-lg hover:bg-white/[0.04]" key={name}>
             <Checkbox
               id={`flag-${name}`}
               checked={!!flags?.includes(code)}
@@ -73,7 +76,7 @@ const FlagSelect = ({ flags, setFlags }: FlagSelectProps) => {
                 element="span"
                 text={name}
                 search={regex}
-                attrs={{ className: 'text-green-500' }}
+                attrs={{ className: 'text-regreen-400 font-semibold font-mono' }}
               />
             </Checkbox>
             <Shortcut command={command} />

@@ -34,12 +34,12 @@ const ReportPlayground = () => {
 
   return (
     <a
-      className="inline-flex items-center text-xs p-2 text-neutral-400 hover:text-neutral-300 transition-colors h-4"
+      className="inline-flex items-center text-xs px-2 py-1.5 rounded-lg text-neutral-400 hover:text-white hover:bg-white/[0.04] transition-colors"
       href={`https://github.com/aykutkardas/regexlearn.com/issues/new?title=${title}&body=${body}`}
       target="_blank"
       rel="noreferrer"
     >
-      <Icon icon="chat-bubble" size={16} className="ltr:mr-1 rtl:ml-1" />
+      <Icon icon="chat-bubble" size={14} className="ltr:mr-1.5 rtl:ml-1.5" />
       <FormattedMessage id="general.reportStep" />
     </a>
   );

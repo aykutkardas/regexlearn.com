@@ -1,6 +1,6 @@
-import { useRef } from 'react';
+import { Fragment, useRef } from 'react';
 import cx from 'clsx';
-import { Popover } from '@headlessui/react';
+import { Popover, Transition } from '@headlessui/react';
 import useEventListener from '@use-it/event-listener';
 import { FormattedMessage } from 'react-intl';
 
@@ -36,29 +36,45 @@ const Hint = ({ regex, flags, hiddenFlags }: Props) => {
   useEventListener('keyup', toggleShow);
 
   return (
-    <Popover className="select-none cursor-pointer absolute right-2 top-1 md:top-auto md:bottom-1">
-      <Popover.Button ref={popoverButtonRef} className="flex flex-col items-end text-[10px]">
-        <Shortcut command={shortcuts.hint} />
+    <Popover className="relative select-none">
+      <Popover.Button
+        ref={popoverButtonRef}
+        className="inline-flex items-center gap-2 text-[11px] text-neutral-400 hover:text-white transition-colors"
+      >
         <FormattedMessage id="general.hintQuestion" />
+        <Shortcut command={shortcuts.hint} />
       </Popover.Button>
 
-      <Popover.Panel className="absolute right-0 w-40 text-center z-10 mt-2 p-2 border border-neutral-700 bg-neutral-800 shadow-md rounded-md">
-        <div className="text-green-300 flex flex-col gap-3">
-          {regex.map(answer => (
-            <div className="mt-1 border border-neutral-800 text-neutral-500" key={answer}>
-              <span
-                data-flags={flags}
-                className={cx('text-regreen-400 text-nowrap w-full text-sm', {
-                  "before:content-['/'] before:text-neutral-500 after:content-['/'_attr(data-flags)] after:text-neutral-500":
-                    !hiddenFlags,
-                })}
+      <Transition
+        as={Fragment}
+        enter="transition duration-150 ease-out"
+        enterFrom="opacity-0 -translate-y-1"
+        enterTo="opacity-100 translate-y-0"
+        leave="transition duration-100 ease-in"
+        leaveFrom="opacity-100"
+        leaveTo="opacity-0"
+      >
+        <Popover.Panel className="absolute right-0 min-w-[10rem] z-20 mt-2 p-1.5 rounded-xl border border-white/10 bg-ink-900 shadow-2xl">
+          <div className="flex flex-col gap-1">
+            {regex.map(answer => (
+              <div
+                className="px-3 py-2 rounded-lg bg-white/[0.03] text-center font-mono"
+                key={answer}
               >
-                {answer}
-              </span>
-            </div>
-          ))}
-        </div>
-      </Popover.Panel>
+                <span
+                  data-flags={flags}
+                  className={cx('text-regreen-400 whitespace-nowrap text-sm', {
+                    "before:content-['/'] before:text-neutral-500 after:content-['/'_attr(data-flags)] after:text-neutral-500":
+                      !hiddenFlags,
+                  })}
+                >
+                  {answer}
+                </span>
+              </div>
+            ))}
+          </div>
+        </Popover.Panel>
+      </Transition>
     </Popover>
   );
 };

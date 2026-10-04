@@ -46,14 +46,16 @@ const LearnProgress = () => {
     >
       <div
         ref={learnProgressRef}
-        className="hidden-scrollbar scroll-smooth pl-5 bg-[#282c34] rounded-2xl shadow-2xl shadow-[#282c34] relative w-56 overflow-y-scroll overflow-x-hidden py-10  h-[320px]"
+        className="hidden-scrollbar scroll-smooth pl-5 bg-ink-900 border border-white/[0.06] rounded-2xl shadow-2xl shadow-black/40 relative w-56 overflow-y-scroll overflow-x-hidden py-10 h-[360px]"
       >
         <div
           onClick={toggleProgress}
           className={clsx(
             direction === 'rtl' ? 'translate-x-[50%]' : '-translate-x-[50%]',
             `w-10 h-10 cursor-pointer rounded-full  flex fixed top-[50%] transition-all duration-50`,
-            open ? `${listOpenInner} bg-neutral-600/40` : `${listCloseInner} bg-emerald-600`,
+            open
+              ? `${listOpenInner} bg-white/10 hover:bg-white/15`
+              : `${listCloseInner} bg-regreen-500 hover:bg-regreen-400/80 shadow-glow-sm`,
           )}
         >
           <Icon
@@ -66,37 +68,37 @@ const LearnProgress = () => {
             )}
           />
         </div>
-        <div className="flex h-10 w-72 bg-gradient-to-b pointer-events-none from-[#282c34] z-20 to-neutral-50/0 fixed top-0" />
-        <div className="flex h-10 w-72 bg-gradient-to-t pointer-events-none from-[#282c34] z-20 to-neutral-50/0 fixed bottom-0" />
+        <div className="flex h-10 w-72 bg-gradient-to-b pointer-events-none from-ink-900 z-20 to-transparent fixed top-0" />
+        <div className="flex h-10 w-72 bg-gradient-to-t pointer-events-none from-ink-900 z-20 to-transparent fixed bottom-0" />
         {lessonData.map((lesson, index) => (
           <div
             key={lesson.title + index}
             className={clsx(
               {
-                'active-step text-green-400': step === index,
+                'active-step text-regreen-400': step === index,
                 '': lastStep >= index && step !== index,
               },
               'step-item relative truncate max-w-[80%] flex flex-row-reverse items-center',
               index !== lessonData.length - 1 &&
-              `pb-6 after:content-[''] after:block after:w-[2px] after:h-8 after:bg-neutral-700 after:rounded-md after:mx-[7px] after:top-8 after:absolute`,
+              `pb-6 after:content-[''] after:block after:w-[2px] after:h-8 after:bg-white/10 after:rounded-md after:mx-[7px] after:top-8 after:absolute`,
             )}
           >
             {step === index && (
               <Icon icon="play" size={16} className={clsx(
                 direction === 'ltr' ? 'ml-2' : 'mr-2',
-                "text-green-400 flex-shrink-0"
+                "text-regreen-400 flex-shrink-0"
               )} />
             )}
             {lastStep >= index && step !== index && (
               <Icon icon="check" size={16} className={clsx(
                 direction === 'ltr' ? 'ml-2' : 'mr-2',
-                "text-green-400 flex-shrink-0"
+                "text-regreen-400 flex-shrink-0"
               )} />
             )}
             {lastStep < index && (
               <Icon icon="lock-closed" size={16} className={clsx(
                 direction === 'ltr' ? 'ml-2' : 'mr-2',
-                "text-neutral-500 flex-shrink-0"
+                "text-neutral-600 flex-shrink-0"
               )} />
             )}
 
@@ -112,8 +114,8 @@ const LearnProgress = () => {
               onClick={() => handleChangeStep(index)}
               attrs={{
                 className: clsx(
-                  ' text-[10px] p-1 bg-emerald-400/20 rounded-lg',
-                  step === index ? 'text-emerald-400' : 'text-emerald-600',
+                  'font-mono text-[10px] px-1 py-0.5 bg-regreen-400/10 rounded-md',
+                  step === index ? 'text-regreen-400' : 'text-regreen-500',
                 ),
               }}
             />

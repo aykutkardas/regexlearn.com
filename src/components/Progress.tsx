@@ -1,4 +1,4 @@
-import { useLanguageDirection } from "src/utils/useLanguageDirection";
+import { useLanguageDirection } from 'src/utils/useLanguageDirection';
 
 const toPercent = (current: number, total: number) => Math.round((current / total) * 100);
 
@@ -9,21 +9,26 @@ interface Props {
 }
 
 const Progress = ({ current, total, showProgressText = true }: Props) => {
-  
   const direction = useLanguageDirection();
-  const progressText = direction === "rtl" ? `${total} / ${current}` : `${current} / ${total}`;
-
+  const progressText = direction === 'rtl' ? `${total} / ${current}` : `${current} / ${total}`;
+  const percent = toPercent(current, total);
 
   return (
-    <div className="w-36 flex items-center flex-col justify-start select-none relative">
-      <div className="w-full max-w-[200px] h-[2px] rounded-sm bg-neutral-600">
+    <div className="w-20 xs:w-28 sm:w-40 md:w-48 flex items-center flex-col justify-start gap-2 select-none">
+      <div
+        className="w-full h-1.5 rounded-full bg-white/[0.08] overflow-hidden"
+        role="progressbar"
+        aria-valuemin={0}
+        aria-valuemax={total}
+        aria-valuenow={current}
+      >
         <div
-          className="h-[6px] min-w-[6px] rounded-full bg-regreen-400 relative bottom-[2px] transition-all duration-300 max-w-full"
-          style={{ width: `${toPercent(current, total)}%` }}
+          className="h-full min-w-[6px] rounded-full bg-gradient-to-r from-emerald-500 to-regreen-400 shadow-[0_0_12px_rgb(95_245_155/0.5)] transition-all duration-500 ease-out"
+          style={{ width: `${percent}%` }}
         />
       </div>
       {showProgressText && (
-        <div className="text-sm font-bold w-full mt-2 absolute text-center text-neutral-400">
+        <div className="text-[11px] font-mono font-medium text-neutral-500 tracking-wider">
           {progressText}
         </div>
       )}

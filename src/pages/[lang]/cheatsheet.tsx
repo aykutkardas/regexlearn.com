@@ -17,15 +17,24 @@ const PageCheatsheet = () => {
   return (
     <div className="container flex flex-col items-between flex-1">
       <Header />
-      <div className="flex h-auto flex-1 flex-wrap mt-[12%]">
+      <div className="pt-10 pb-8 md:pt-14 animate-fade-up">
+        <span className="font-mono text-xs text-regreen-400/80 tracking-widest">{'/cheatsheet/'}</span>
+        <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight text-white mt-3">
+          <FormattedMessage id="section.cheatsheet.title" />
+        </h1>
+        <p className="text-neutral-400 leading-relaxed mt-4 max-w-2xl">
+          <FormattedMessage id="page.cheatsheet.description" />
+        </p>
+      </div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 items-start flex-1">
         {columns.map((column, index) => (
-          <div key={index} className="w-full sm:w-1/2 md:w-1/3">
-            <div className="flex flex-col mr-0 md:mr-8">
-              {column.map(row => (
-                <div key={row.title} className="mb-8">
-                  <h4 className="mb-6 text-white">
-                    <FormattedMessage id={row.title} />
-                  </h4>
+          <div key={index} className="flex flex-col gap-5">
+            {column.map(row => (
+              <section key={row.title} className="surface rounded-2xl p-3">
+                <h2 className="px-2.5 pt-1 pb-3 text-xs font-semibold uppercase tracking-[0.16em] text-neutral-500">
+                  <FormattedMessage id={row.title} />
+                </h2>
+                <div className="flex flex-col gap-0.5">
                   {row.data.map(item => (
                     <CheatsheetCollapse
                       key={item.title}
@@ -34,8 +43,8 @@ const PageCheatsheet = () => {
                     />
                   ))}
                 </div>
-              ))}
-            </div>
+              </section>
+            ))}
           </div>
         ))}
       </div>
