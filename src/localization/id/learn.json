@@ -137,8 +137,8 @@
   "steps.positiveLookbehind.title": "Lookbehind Positif: `(?<=)`",
   "steps.positiveLookbehind.description": "Untuk memilih hanya angka yang didahului `$`, tulis lookbehind positif `(?<=)` sebelum ekspresi. Tambahkan `\\$` setelah tanda `=` di dalam kurung.",
 
-  "steps.negativeLookbehind.title": "Lookbehind Negatif: `(?&lt;!)`",
-  "steps.negativeLookbehind.description": "Untuk memilih hanya angka yang tidak didahului `$`, tulis lookbehind negatif `(?&lt;!)` sebelum ekspresi. Tambahkan `\\$` setelah tanda `!` di dalam kurung.",
+  "steps.negativeLookbehind.title": "Lookbehind Negatif: `(?<!)`",
+  "steps.negativeLookbehind.description": "Untuk memilih hanya angka yang tidak didahului `$`, tulis lookbehind negatif `(?<!)` sebelum ekspresi. Tambahkan `\\$` setelah tanda `!` di dalam kurung.",
 
   "steps.flags.title": "Flag",
   "steps.flags.description": "Flag mengubah hasil ekspresi dan juga disebut `modifier`. Flag menentukan apakah teks diperlakukan sebagai baris terpisah, apakah huruf besar dan kecil dibedakan, serta apakah semua kecocokan dicari. Lanjutkan untuk mempelajari setiap flag.",

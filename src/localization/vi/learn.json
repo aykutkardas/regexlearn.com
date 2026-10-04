@@ -137,8 +137,8 @@
   "steps.positiveLookbehind.title": "Lookbehind dương: `(?<=)`",
   "steps.positiveLookbehind.description": "Để chỉ chọn số có `$` đứng trước, viết lookbehind dương `(?<=)` trước biểu thức và thêm `\\$` sau dấu `=` trong ngoặc.",
 
-  "steps.negativeLookbehind.title": "Lookbehind âm: `(?&lt;!)`",
-  "steps.negativeLookbehind.description": "Để chỉ chọn số không có `$` đứng trước, viết lookbehind âm `(?&lt;!)` trước biểu thức và thêm `\\$` sau dấu `!` trong ngoặc.",
+  "steps.negativeLookbehind.title": "Lookbehind âm: `(?<!)`",
+  "steps.negativeLookbehind.description": "Để chỉ chọn số không có `$` đứng trước, viết lookbehind âm `(?<!)` trước biểu thức và thêm `\\$` sau dấu `!` trong ngoặc.",
 
   "steps.flags.title": "Cờ",
   "steps.flags.description": "Cờ thay đổi cách biểu thức hoạt động và còn được gọi là `modifier`. Cờ quyết định văn bản có được xử lý theo từng dòng, có phân biệt hoa thường và có tìm mọi kết quả khớp hay không.",

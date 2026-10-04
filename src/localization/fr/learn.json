@@ -137,8 +137,8 @@
   "steps.positiveLookbehind.title": "Regard derrière Positif : `(?<=)`",
   "steps.positiveLookbehind.description": "Par exemple, nous voulons sélectionner la valeur du prix dans le texte. Par conséquent, pour sélectionner uniquement les valeurs numériques précédées de `$`, nous devons écrire l'expression positive lookbehind `(?<=)` avant notre expression. Ajoutez `\\$` après le signe `=` à l'intérieur des parenthèses.",
 
-  "steps.negativeLookbehind.title": "Regard derrière Négatif : `(?&lt;!)`",
-  "steps.negativeLookbehind.description": "Par exemple, nous voulons sélectionner des chiffres dans le texte autres que la valeur du prix. Par conséquent, pour sélectionner uniquement les valeurs numériques qui ne sont pas précédées de `$`, nous devons écrire le lookbehind négatif `(?&lt; !)` avant notre expression. Ajoutez `\\$` après le `!` à l'intérieur des parenthèses.",
+  "steps.negativeLookbehind.title": "Regard derrière Négatif : `(?<!)`",
+  "steps.negativeLookbehind.description": "Par exemple, nous voulons sélectionner des chiffres dans le texte autres que la valeur du prix. Par conséquent, pour sélectionner uniquement les valeurs numériques qui ne sont pas précédées de `$`, nous devons écrire le lookbehind négatif `(?< !)` avant notre expression. Ajoutez `\\$` après le `!` à l'intérieur des parenthèses.",
 
   "steps.flags.title": "Drapeaux",
   "steps.flags.description": "Les drapeaux changent la sortie de l'expression. C'est pourquoi les drapeaux sont aussi appelés `modificateurs`. Détermine si l'expression saisie traite le texte comme des lignes séparées, si elle respecte la casse ou si elle trouve toutes les correspondances. Passez à l'étape suivante pour apprendre les drapeaux.",

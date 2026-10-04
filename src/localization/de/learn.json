@@ -137,8 +137,8 @@
   "steps.positiveLookbehind.title": "Positiver Lookbehind: `(?<=)`",
   "steps.positiveLookbehind.description": "Zum Beispiel möchten wir den Preiswert im Text auswählen. Daher müssen wir, um nur die Zahlenwerte auszuwählen, denen `$` vorangestellt ist, den positiven Lookbehind-Ausdruck `(?< schreiben =)` vor unserem Ausdruck. Fügen Sie `\\$` nach dem `=`-Zeichen in den Klammern hinzu.",
 
-  "steps.negativeLookbehind.title": "Negativer Lookbehind: `(?&lt;!)`",
-  "steps.negativeLookbehind.description": "Zum Beispiel möchten wir im Text andere Zahlen als den Preiswert auswählen. Um daher nur numerische Werte auszuwählen, denen kein `$` vorangestellt ist, müssen wir das negative Lookbehind ` schreiben (?&lt;!)` vor unserem Ausdruck. Fügen Sie `\\$` nach dem `!` innerhalb der Klammern hinzu.",
+  "steps.negativeLookbehind.title": "Negativer Lookbehind: `(?<!)`",
+  "steps.negativeLookbehind.description": "Zum Beispiel möchten wir im Text andere Zahlen als den Preiswert auswählen. Um daher nur numerische Werte auszuwählen, denen kein `$` vorangestellt ist, müssen wir das negative Lookbehind ` schreiben (?<!)` vor unserem Ausdruck. Fügen Sie `\\$` nach dem `!` innerhalb der Klammern hinzu.",
 
   "steps.flags.title": "Flaggen",
   "steps.flags.description": "Flags ändern die Ausgabe des Ausdrucks. Aus diesem Grund werden Flags auch als `Modifikatoren` bezeichnet. Legt fest, ob der eingegebene Ausdruck Text als separate Zeilen behandelt, Groß-/Kleinschreibung beachtet oder alle Übereinstimmungen findet. Fahren Sie mit fort nächster Schritt, um die Flaggen zu lernen.",
