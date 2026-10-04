@@ -1,4 +1,4 @@
-import useEventListener from '@use-it/event-listener';
+import useEventListener from 'src/utils/useEventListener';
 import { Popover } from '@headlessui/react';
 
 import Checkbox from 'src/components/Checkbox';

@@ -2,7 +2,7 @@ import { createPortal } from 'react-dom';
 import { useState, useEffect, useContext } from 'react';
 import { useIntl } from 'react-intl';
 import dynamic from 'next/dynamic';
-import useEventListener from '@use-it/event-listener';
+import useEventListener from 'src/utils/useEventListener';
 
 import InteractiveArea from 'src/components/InteractiveArea';
 import HighlightedText from 'src/components/HighlightedText';

@@ -1,7 +1,7 @@
 import { Fragment, useRef } from 'react';
 import cx from 'clsx';
 import { Popover, Transition } from '@headlessui/react';
-import useEventListener from '@use-it/event-listener';
+import useEventListener from 'src/utils/useEventListener';
 import { FormattedMessage } from 'react-intl';
 
 import Shortcut from 'src/components/Shortcut';

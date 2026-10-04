@@ -1,4 +1,4 @@
-import useEventListener from '@use-it/event-listener';
+import useEventListener from 'src/utils/useEventListener';
 
 import Checkbox from 'src/components/Checkbox';
 import Shortcut from 'src/components/Shortcut';
