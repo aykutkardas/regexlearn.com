@@ -6,30 +6,30 @@
   "examples.finish.description": " ",
 
   "steps.starter.title": "Giriş",
-  "steps.starter.description": "Regex `Regular Expression` 'in kısaltmasıdır. Metni eşleştirmeye, bulmaya ya da yönetmeye yardımcı olur. İlk adıma geçmek ve daha detaylı açıklamaya erişmek için Regex alanına `OK` yazarak başlayın.",
+  "steps.starter.description": "Regex `Regular Expression` 'in kısaltmasıdır. Metni eşleştirmeye, bulmaya ya da yönetmeye yardımcı olur. Dersler ve Playground, JavaScript'in regex motorunu kullanır; bu motorda bir ifade `/pattern/flags` şeklinde yazılır. İlk adıma geçmek ve daha detaylı açıklamaya erişmek için Regex alanına `OK` yazarak başlayın.",
 
   "steps.whatIsRegex.title": "Düzenli İfadeler `Regex` Nedir?",
-  "steps.whatIsRegex.description": "Düzenli İfadeler bir arama modelini ifade eden bir karakter dizisidir. Genellikle `Regex` ya da `Regexp` olarak kısaltılmıştır. Özelikle metinlerde geçen sözcükleri bulmak veya değiştirmek için kullanılır. Ayrıca bir metnin belirlediğimiz kurallara uyup uymadığı test edilebilir.\\n\\n Örneğin dosya isimlerinden oluşan bir listeniz olduğunu düşünelim. Ve siz sadece `pdf` uzantılı dosyaları bulmak istiyorsunuz. O halde şöyle bir ifade `^\\w+\\.pdf$` yazmak işe yarayacaktır. Bu ifadedeki tanımlamaların ne anlama geldiği adımlar geçtikçe daha anlaşılır olacak.",
+  "steps.whatIsRegex.description": "Düzenli İfadeler bir arama modelini ifade eden bir karakter dizisidir. Genellikle `Regex` ya da `Regexp` olarak kısaltılmıştır. Özellikle metinlerde geçen sözcükleri bulmak veya değiştirmek için kullanılır. Ayrıca bir metnin belirlediğimiz kurallara uyup uymadığı test edilebilir.\\n\\n Örneğin dosya isimlerinden oluşan bir listeniz olduğunu düşünelim. Ve siz sadece `pdf` uzantılı dosyaları bulmak istiyorsunuz. O halde şöyle bir ifade `^\\w+\\.pdf$` yazmak işe yarayacaktır. Bu ifadedeki tanımlamaların ne anlama geldiği adımlar geçtikçe daha anlaşılır olacak.",
 
   "steps.basicMatchers.title": "Temel Eşleştiriciler",
   "steps.basicMatchers.description": "Bulmak istediğimiz karakter ya da sözcük doğrudan yazılır. Normal bir arama işlemine benzer. Örneğin metinde geçen `curious` sözcüğünü bulmak için, aynısını yazın.",
 
   "steps.dotCharacter.title": "Nokta `.`: Herhangi Bir Karakter",
-  "steps.dotCharacter.description": "Nokta `.` işareti özel karakterler ve boşluklar da dahil herhangi bir karakteri seçmeyi sağlar.",
+  "steps.dotCharacter.description": "Nokta `.` işareti özel karakterler ve boşluklar da dahil herhangi bir karakteri seçmeyi sağlar. Devam etmek için Regex alanına bir nokta `.` yazın.",
 
   "steps.characterSet.title": "Karakter Setleri `[abc]`",
   "steps.characterSet.description": "Eğer bir sözcüğün içerdiği karakterlerden biri çeşitli karakterler olabilirse bunu köşeli parantez `[]` içerisinde tüm alternatif karakterler ile birlikte yazarız. Örneğin metindeki tüm sözcükleri bulabilecek ifadeyi yazabilmek için `a`, `e`, `i`, `o`, `u` karakterlerini bitişik olarak köşeli parantezlerin `[]` içine yazın.",
 
   "steps.negatedCharacterSet.title": "Negatiflenmiş Karakter Setleri `[^abc]`",
-  "steps.negatedCharacterSet.description": "Aşağıdaki metinde `ber` ve `bor` sözcükleri dışındaki tüm sözcükleri bulabilmek için süslü parantezlerin `[]` içine şapka `^` karakterinden sonra `e` ve `o` harfini yan yana yazın.",
+  "steps.negatedCharacterSet.description": "Aşağıdaki metinde `ber` ve `bor` sözcükleri dışındaki tüm sözcükleri bulabilmek için köşeli parantezlerin `[]` içine şapka `^` karakterinden sonra `e` ve `o` harfini yan yana yazın.",
 
   "steps.range.title": "Harf Karakter Aralığı `[a-z]`",
   "steps.range.description": "Belirttiğimiz aralıktaki harfleri bulmak için başlangıç harfi ve bitiş harfi aralarında bir tire `-` olacak şekilde köşeli parantezler `[]` içine yazılır. Büyük küçük harf duyarlıdır. Kendileri de dahil `e` ve `o` aralarındaki tüm küçük harfleri seçecek ifadeyi yazın.",
 
   "steps.rangeNumber.title": "Sayı Karakter Aralığı `[0-9]`",
-  "steps.rangeNumber.description": "Belirttiğimiz aralıktaki sayıları bulmak için başlangıç sayısı ve bitiş sayısı aralarında bir tire `-` olacak şekilde köşeli parantezler `[]` içine yazılır. Kendileride dahil `3` ve `6` aralarındaki tüm sayıları seçecek ifadeyi yazın.",
+  "steps.rangeNumber.description": "Belirttiğimiz aralıktaki sayıları bulmak için başlangıç sayısı ve bitiş sayısı aralarında bir tire `-` olacak şekilde köşeli parantezler `[]` içine yazılır. Kendileri de dahil `3` ve `6` aralarındaki tüm sayıları seçecek ifadeyi yazın.",
 
-  "examples.basicMatchers.title": "Pratik: Temel Eşleştici",
+  "examples.basicMatchers.title": "Pratik: Temel Eşleştirici",
   "examples.basicMatchers.description": "Metinde geçen `of` kelimelerini seçecek ifadeyi yazın.",
 
   "examples.dotCharacter.title": "Pratik: Her Karakter",
@@ -42,10 +42,10 @@
   "examples.negatedCharacterSet.description": "Metindeki `beor` ve `beur` kelimeleri dışındakilerle eşleşecek olan ifadeyi yazın. Bunu negatiflenmiş karakter setini kullanarak yapın.",
 
   "examples.range.title": "Pratik: Harf Karakter Aralığı",
-  "examples.range.description": "Metindeki `g` harfinden `k` harfine kadar olan harfleri seçecek ifadeyi yazın.\\n`g` ve `k` harfleride bu aralığa dahil olmalıdır.",
+  "examples.range.description": "Metindeki `g` harfinden `k` harfine kadar olan harfleri seçecek ifadeyi yazın.\\n`g` ve `k` harfleri de bu aralığa dahil olmalıdır.",
 
   "examples.rangeNumber.title": "Pratik: Sayı Karakter Aralığı",
-  "examples.rangeNumber.description": "Metindeki `2` sayısından `7` sayısına kadar olan sayıları seçecek ifadeyi yazın.\\n`2` ve `7` sayısıda bu aralığa dahil olmalıdır.",
+  "examples.rangeNumber.description": "Metindeki `2` sayısından `7` sayısına kadar olan sayıları seçecek ifadeyi yazın.\\n`2` ve `7` sayısı da bu aralığa dahil olmalıdır.",
 
   "steps.repetitions.title": "Tekrarlar",
   "steps.repetitions.description": "Bir karakterin kaç defa tekrar edeceğini, metinde bulunup bulunmayacağını ifade etmek için bazı özel karakterler kullanılır. Bu özel karakterler artı `+`, yıldız `*` ve soru işareti `?` dir.",
@@ -60,13 +60,13 @@
   "steps.questionMark.description": "Bir karakterin opsiyonel olduğunu ifade etmek için sonuna `?` soru işareti koyarız. Örneğin aşağıdaki `u` harfinin opsiyonel olduğunu belirtin.",
 
   "steps.quantifier.title": "Süslü Parantezler - 1",
-  "steps.quantifier.description": "Bir karakterin belirli bir sayıda geçmesini ifade etmek için sonuna kaç kere geçmesini istediğimizle birlikte süslü parantezleri `{n}` yazarız. Örneğin aşağıdaki `e` harfinin sadece `2` kere geçebileceğini belirtin.",
+  "steps.quantifier.description": "Bir karakterin belirli bir sayıda geçmesini ifade etmek için sonuna kaç kere geçmesini istediğimizle birlikte süslü parantezleri `{n}` yazarız. Örneğin aşağıdaki `e` harfinin yan yana sadece `2` kez geçebileceğini belirtin.",
 
   "steps.quantifierMin.title": "Süslü Parantezler - 2",
-  "steps.quantifierMin.description": "Bir karakterin en az belirli bir sayıda geçmesini ifade etmek için karekterin sonuna en az kaç kere geçmesini istediğimizi sonuna virgül `,` ile birlikte süslü parantezlerin `{n,}` içine yazarız. Örneğin aşağıdaki `e` harfinin en az `3` kez geçebileceğini belirtin.",
+  "steps.quantifierMin.description": "Bir karakterin en az belirli bir sayıda geçmesini ifade etmek için karakterin sonuna en az kaç kere geçmesini istediğimizi sonuna virgül `,` ile birlikte süslü parantezlerin `{n,}` içine yazarız. Örneğin aşağıdaki `e` harfinin yan yana en az `3` kez geçebileceğini belirtin.",
 
   "steps.quantifierRange.title": "Süslü Parantezler - 3",
-  "steps.quantifierRange.description": "Bir karakterin belirli bir sayı aralığında geçmesini ifade etmek için sonuna geçmesini istediğimiz aralıkla birlikte süslü parantezleri `{x,y}` yazarız. Örneğin aşağıdaki `e` harfinin sadece `1` ile `3` arasında geçebileceğini belirtin.",
+  "steps.quantifierRange.description": "Bir karakterin belirli bir sayı aralığında geçmesini ifade etmek için sonuna geçmesini istediğimiz aralıkla birlikte süslü parantezleri `{x,y}` yazarız. Örneğin aşağıdaki `e` harfinin yan yana sadece `1` ile `3` kez arasında geçebileceğini belirtin.",
 
   "examples.asterisk.title": "Pratik: Yıldız İşareti `*`",
   "examples.asterisk.description": "Metindeki `e` harfinin olmama, bir veya daha fazla olma durumuna uygun, her kelimeyi seçecek ifadeyi yıldız işaretini `*` kullanarak yazın.",
@@ -75,10 +75,10 @@
   "examples.plusCharacter.description": "Metindeki `e` harfinin bir veya daha fazla geçtiği kelimeleri seçecek ifadeyi artı işaretini `+` kullanarak yazın.",
 
   "examples.questionMark.title": "Pratik: Soru İşareti `?`",
-  "examples.questionMark.description": "Metinde geçen `n` harfinin opsiyonel olduğunu bildiren ifadeyi soru işaretini `?` kullanarak yazın. Böylelikle hem `a` hemde `an` sözcükleri seçilebilmiş olsun.",
+  "examples.questionMark.description": "Metinde geçen `n` harfinin opsiyonel olduğunu bildiren ifadeyi soru işaretini `?` kullanarak yazın. Böylelikle hem `a` hem de `an` sözcükleri seçilebilmiş olsun.",
 
   "examples.quantifier.title": "Pratik: Süslü Parantezler - 1",
-  "examples.quantifier.description": "Yan yana `4` sayı geçen metinleri bulacak ifadeyi süslü parantez `{}` kullanarak yazın.",
+  "examples.quantifier.description": "Yan yana `4` sayı geçen metinleri bulacak ifadeyi süslü parantez `{}` kullanarak yazın. `[0-9]` aralığının tek bir rakamla eşleştiğini unutmayın.",
 
   "examples.quantifierMin.title": "Pratik: Süslü Parantezler - 2",
   "examples.quantifierMin.description": "Yan yana en az `2` sayı geçen metinleri bulacak ifadeyi süslü parantez `{}` kullanarak yazın.",
@@ -90,13 +90,13 @@
   "steps.grouping.description": "Bir ifadeyi gruplayabilir ve bu grupları referans göstermek ya da bazı kurallar uygulamak için kullanabiliriz. Bir ifadeyi gruplamak için `()` parantez içine alırız. Şimdilik sadece aşağıdaki `haa` kelimesini gruplayın.",
 
   "steps.groupReference.title": "Bir Gruba Referans Göstermek",
-  "steps.groupReference.description": "Aşağıda `ha` ve `haa` kelimeleri gruplanmıştır. İlk grup tekrar yazılmamak için `\\1` yazılarak kullanılır. Buradaki `1` gruplanma sırasını ifade eder. İkinci gruba refarans göstermek için ifadenin sonun `\\2` yazın.",
+  "steps.groupReference.description": "Aşağıda iki grup var: `(ha)` ve `(haa)`. Bu gruplara ifadenin ilerleyen kısmında yeniden başvurmak istediğimizde, birinci grup için `\\1`, ikinci grup için `\\2` kullanırız. Örneğin `(ha)-\\1,(haa)-\\2` ifadesinde `-` grupların dışındadır; `\\1` `ha`'ya, `\\2` ise `haa`'ya karşılık gelir. İkinci gruba referans göstermek için ifadenin sonuna `\\2` yazın.",
 
   "steps.nonCapturingGrouping.title": "Parantezler `(?: )`: Yakalanmayan Gruplama",
-  "steps.nonCapturingGrouping.description": "Aşağıda `ha` ve `haa` kelimeleri gruplanmıştır. İlk grup yakalanmayan bir gruptur. Bu yüzden referans verilemez. Gruplanmış `haa` kelimesine referans göstermek için ifadenin sonuna `\\1` yazın. Buradaki `1` yakalanan grupların sırasını ifade eder.",
+  "steps.nonCapturingGrouping.description": "Açılış parantezinden hemen sonra `?:` eklemek, örneğin `(?:ha)`, grubu yakalanmayan bir grup yapar: ifade yine gruplanır ama eşleşmesi saklanmaz, bu yüzden ona referans verilemez. Aşağıda ilk grup `(?:ha)` yakalanmayan bir gruptur. Bu yüzden `\\1` referansı, yakalanan grup olan `(haa)`'yı gösterir. Gruplanmış `haa` kelimesine referans göstermek için ifadenin sonuna `\\1` yazın.",
 
   "steps.pipeCharacter.title": "Boru Karakteri `|`",
-  "steps.pipeCharacter.description": "Bir ifadenin farklı ifadelerde olabileceğini belirmeyi sağlar. Böylece olabilecek tüm ifadeler boru işareti `|` ile birbirinden ayrılarak yazılır. Bunun karakter setinden `[abc]` farkı, karakter setleri karakter seviyesinde çalışır. Alternatifler ise ifade düzeyindedir. Örneğin aşağıdaki ifade hem `cat` hemde `rat` sözcüklerini seçecek şekildedir. İfadenin sonuna bir boru işareti `|` daha ekleyip `dog` yazarak tüm sözcüklerin seçilmesini sağlayın.",
+  "steps.pipeCharacter.description": "Bir ifadenin farklı ifadelerde olabileceğini belirtmeyi sağlar. Böylece olabilecek tüm ifadeler boru işareti `|` ile birbirinden ayrılarak yazılır. Bunun karakter setinden `[abc]` farkı, karakter setleri karakter seviyesinde çalışır. Alternatifler ise ifade düzeyindedir. Örneğin aşağıdaki ifade hem `cat` hem de `rat` sözcüklerini seçecek şekildedir. İfadenin sonuna bir boru işareti `|` daha ekleyip `dog` yazarak tüm sözcüklerin seçilmesini sağlayın.",
 
   "steps.escapeCharacter.title": "Kaçış Karakteri `\\`",
   "steps.escapeCharacter.description": "Regex yazarken kullandığımız özel karakterler vardır. `{ } [ ] / \\ + * . $ ^ | ?` Bu karakterlerin kendilerini seçebilmek için öncesinde bir kaçış karakteri `\\` kullanmamız gerekir. Örneğin metindeki nokta `.` ve yıldız `*` karakterlerini seçmek için öncesine bir kaçış karakteri `\\` ekleyelim.",
@@ -142,7 +142,7 @@
   "steps.negativeLookbehind.description": "Örneğin metinde fiyat değeri dışındaki sayıları seçmek istiyoruz. Bu yüzden yalnızca kendinden önce `$` ifadesi geçmeyen sayı değerlerini seçmek için ifademizden önce olumsuz geriye bakınma `(?&lt;!)` ifadesini yazmamız gerekir. Parantezlerin içerisinde `!` işaretinden sonra `\\$` ifadesini ekleyin.",
 
   "steps.flags.title": "Bayraklar",
-  "steps.flags.description": "Bayraklar ifadenin çıktısını değiştirirler. Bu yüzden değiştiriciler `modifiers` olarakta anılırlar. Yazılan ifadenin, metni ayrı satırlar olarak mı ele alacağını, büyük küçük harf duyarlı olup olmayacağını ya da tüm eşleşmeleri bulup bulmayacağını belirler. Bayrakları öğrenmek için sonraki adıma devam edin.",
+  "steps.flags.description": "Bayraklar ifadenin çıktısını değiştirirler. Bu yüzden değiştiriciler `modifiers` olarak da anılırlar. Yazılan ifadenin, metni ayrı satırlar olarak mı ele alacağını, büyük küçük harf duyarlı olup olmayacağını ya da tüm eşleşmeleri bulup bulmayacağını belirler. Bayrakları öğrenmek için sonraki adıma devam edin.",
 
   "steps.flagsGlobal.title": "Global Bayrağı",
   "steps.flagsGlobal.description": "`global` bayrağı, ifadenin tüm eşleşmeleri seçmesini sağlar. Eğer kullanılmazsa sadece ilk eşleşmeyi seçecektir. Şimdi tüm eşleşmeleri seçebilmek için `global` bayrağını aktif edin.",

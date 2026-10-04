@@ -1,6 +1,4 @@
 {
-  "cheatsheet.section.title": "正規表示式小抄",
-  "cheatsheet.section.description": "透過正規表示式小抄探索所有正規表示式配對模式與符號。",
   "cheatsheet.anchors": "錨點",
   "cheatsheet.caret.title": "字串或行的開頭",
   "cheatsheet.caret.description": "配對字串或是行的開頭。",
