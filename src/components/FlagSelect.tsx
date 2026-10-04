@@ -59,14 +59,14 @@ const FlagSelect = ({ flags, setFlags }: FlagSelectProps) => {
     <Popover className="relative select-none cursor-pointer">
       <Popover.Button
         aria-label="Flags"
-        className="cursor-pointer text-neutral-300 hover:text-white hover:bg-white/[0.08] w-11 h-11 border border-white/10 bg-white/[0.03] flex items-center justify-center rounded-lg transition-colors"
+        className="cursor-pointer text-neutral-300 hover:text-white hover:bg-white/8 w-11 h-11 border border-white/10 bg-white/3 flex items-center justify-center rounded-lg transition-colors"
       >
         <Icon icon="flag" size={14} />
       </Popover.Button>
 
       <Popover.Panel className="absolute right-0 z-20 mt-2 p-2 w-56 flex flex-col gap-1 rounded-xl border border-white/10 bg-ink-900 shadow-2xl">
         {flagList.map(({ name, code, command, regex }) => (
-          <div className="flex w-full justify-between text-xs items-center px-2 py-1.5 rounded-lg hover:bg-white/[0.04]" key={name}>
+          <div className="flex w-full justify-between text-xs items-center px-2 py-1.5 rounded-lg hover:bg-white/4" key={name}>
             <Checkbox
               id={`flag-${name}`}
               checked={!!flags?.includes(code)}

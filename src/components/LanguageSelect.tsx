@@ -31,7 +31,7 @@ const LanguageSelect = () => {
         aria-label="Language"
         className={cx(
           'h-8 sm:h-9 inline-flex items-center gap-1.5 px-2 sm:px-3 rounded-full text-xs font-semibold tracking-wide',
-          'text-neutral-200 border border-white/10 bg-white/[0.03] hover:bg-white/[0.08] transition-colors',
+          'text-neutral-200 border border-white/10 bg-white/3 hover:bg-white/8 transition-colors',
         )}
       >
         <span className="uppercase">{currentLocale.split('-')[0]}</span>
@@ -67,7 +67,7 @@ const LanguageSelect = () => {
                   'flex items-center gap-2 px-2.5 py-2 rounded-lg text-[13px] transition-colors',
                   isActive
                     ? 'bg-regreen-400/10 text-regreen-400'
-                    : 'text-neutral-300 hover:bg-white/[0.06] hover:text-white',
+                    : 'text-neutral-300 hover:bg-white/6 hover:text-white',
                 )}
               >
                 <span className="text-base leading-none">{flag}</span>

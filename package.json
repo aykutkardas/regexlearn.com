@@ -30,15 +30,15 @@
   },
   "devDependencies": {
     "@tailwindcss/forms": "^0.5.11",
+    "@tailwindcss/postcss": "^4.3.3",
     "@types/node": "^22.20.5",
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",
-    "autoprefixer": "^10.6.1",
     "eslint": "^9.39.5",
     "eslint-config-next": "16.3.8",
     "next-sitemap": "^4.1.8",
     "postcss": "^8.5.28",
-    "tailwindcss": "^3.4.19",
+    "tailwindcss": "^4.3.3",
     "typescript": "^5.9.3"
   },
   "overrides": {

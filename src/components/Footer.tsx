@@ -13,7 +13,7 @@ const links = [
 ];
 
 const Footer = () => (
-  <footer className="w-full mt-16 border-t border-white/[0.06]">
+  <footer className="w-full mt-16 border-t border-white/6">
     <div className="flex flex-col md:flex-row items-center justify-between gap-6 py-8">
       <div className="flex flex-col items-center md:items-start gap-2">
         <Logo />

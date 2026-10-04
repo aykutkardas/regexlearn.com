@@ -44,11 +44,11 @@ const Step = () => {
         )}
         <HighlightedText
           element="h2"
-          className="text-3xl sm:text-4xl text-white font-bold tracking-tight leading-snug"
+          className="text-3xl sm:text-4xl text-white font-bold tracking-tight leading-snug sm:leading-10"
           text={formatMessage({ id: data.title })}
           attrs={{
             className:
-              'font-mono text-[0.8em] px-2 py-0.5 mx-1 rounded-lg bg-white/[0.06] border border-white/[0.08] text-regreen-400 whitespace-nowrap',
+              'font-mono text-[0.8em] px-2 py-0.5 mx-1 rounded-lg bg-white/6 border border-white/8 text-regreen-400 whitespace-nowrap',
             dir: 'ltr',
           }}
         />
@@ -121,7 +121,7 @@ const Step = () => {
           </div>
           <Button variant={ButtonVariants.Secondary} onClick={() => setIsOpenModal(false)}>
             Close
-            <kbd className="font-mono text-[10px] px-1.5 py-0.5 rounded border border-white/10 text-neutral-400">
+            <kbd className="font-mono text-[10px] px-1.5 py-0.5 rounded-sm border border-white/10 text-neutral-400">
               Esc
             </kbd>
           </Button>

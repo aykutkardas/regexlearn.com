@@ -13,7 +13,7 @@ const initialFlags = 'g';
 
 // Shared by the textarea and the highlight layer behind it so both lay text out identically.
 const textLayout =
-  'px-4 py-3 font-mono text-[13px] md:text-sm leading-8 tracking-wider whitespace-pre-wrap break-words [scrollbar-gutter:stable]';
+  'px-4 py-3 font-mono text-[13px] md:text-sm leading-8 md:leading-5 tracking-wider whitespace-pre-wrap wrap-break-word scrollbar-gutter-stable';
 
 const normalizeFlags = (flags: string) =>
   ['g', 'm', 'i'].filter(flag => flags.includes(flag)).join('');
@@ -40,7 +40,7 @@ const Playground = () => {
         <mark
           key={index}
           data-highlight
-          className="rounded bg-regreen-400 text-ink-950 shadow-[0_0_0_2px_#5ff59b]"
+          className="rounded-sm bg-regreen-400 text-ink-950 shadow-[0_0_0_2px_#5ff59b]"
         >
           {text.slice(start, end)}
         </mark>,
@@ -71,14 +71,14 @@ const Playground = () => {
   return (
     <div className="flex flex-col gap-4 h-full">
       <div dir="ltr" className="panel">
-        <div className="flex items-center justify-between px-4 h-9 border-b border-white/[0.05] bg-white/[0.02] rounded-t-xl">
+        <div className="flex items-center justify-between px-4 h-9 border-b border-white/5 bg-white/2 rounded-t-xl">
           <span className="panel-label">{formatMessage({ id: 'general.regex' })}</span>
         </div>
         <div className="flex items-center gap-2 p-2">
           <div
             className={cx(
               'flex flex-1 items-center h-11 px-3 rounded-lg font-mono text-sm md:text-base',
-              'bg-ink-950/70 border border-white/[0.06] transition-[border-color,box-shadow]',
+              'bg-ink-950/70 border border-white/6 transition-[border-color,box-shadow]',
               'focus-within:border-regreen-400/40 focus-within:shadow-[0_0_0_3px_rgb(95_245_155/0.08)]',
             )}
           >
@@ -86,7 +86,7 @@ const Playground = () => {
             <input
               ref={regexInput}
               aria-label={formatMessage({ id: 'general.regex' })}
-              className="border-0 px-1 flex-1 focus:outline-none font-mono text-sm md:text-base text-regreen-400 bg-transparent focus:ring-0 w-full"
+              className="border-0 px-1 flex-1 focus:outline-hidden font-mono text-sm md:text-base text-regreen-400 bg-transparent focus:ring-0 w-full"
               type="text"
               onChange={event => setRegex(event.currentTarget.value)}
               value={regex}
@@ -107,7 +107,7 @@ const Playground = () => {
         className="panel flex flex-col flex-1 min-h-0 overflow-hidden cursor-text"
         onClick={() => textarea.current?.focus()}
       >
-        <div className="flex items-center justify-between px-4 h-9 border-b border-white/[0.05] bg-white/[0.02] shrink-0">
+        <div className="flex items-center justify-between px-4 h-9 border-b border-white/5 bg-white/2 shrink-0">
           <span className="panel-label">{formatMessage({ id: 'general.text' })}</span>
         </div>
         <div className="relative flex-1 min-h-0">
@@ -126,7 +126,7 @@ const Playground = () => {
             className={cx(
               textLayout,
               'absolute inset-0 w-full h-full resize-none overflow-y-auto overflow-x-hidden',
-              'bg-transparent border-0 text-transparent caret-neutral-100 focus:ring-0 focus:outline-none',
+              'bg-transparent border-0 text-transparent caret-neutral-100 focus:ring-0 focus:outline-hidden',
               'placeholder:text-neutral-600 selection:bg-regreen-400/30 selection:text-transparent',
             )}
             value={text}

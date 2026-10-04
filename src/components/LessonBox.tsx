@@ -62,8 +62,8 @@ const LessonBox = ({ data, lock, accent = 'green' }: Props) => {
   const card = (
     <div
       className={cx(
-        'group relative overflow-hidden w-full min-h-[11rem] rounded-2xl p-5 flex flex-col select-none',
-        'bg-gradient-to-br border border-white/[0.08] shadow-card',
+        'group relative overflow-hidden w-full min-h-44 rounded-2xl p-5 flex flex-col select-none',
+        'bg-linear-to-br/srgb border border-white/8 shadow-card',
         'transition-all duration-300 hover:-translate-y-0.5 hover:border-white/15 hover:shadow-2xl',
         theme.card,
         lock && 'cursor-not-allowed text-center grayscale',
@@ -108,7 +108,7 @@ const LessonBox = ({ data, lock, accent = 'green' }: Props) => {
             <div className="flex items-center gap-3">
               <div className="flex-1 h-1.5 rounded-full bg-black/30 overflow-hidden">
                 <div
-                  className={cx('h-full rounded-full bg-gradient-to-r', theme.bar)}
+                  className={cx('h-full rounded-full bg-linear-to-r/srgb', theme.bar)}
                   style={{ width: `${progress}%` }}
                 />
               </div>
@@ -134,7 +134,7 @@ const LessonBox = ({ data, lock, accent = 'green' }: Props) => {
               <Icon
                 icon={arrowDirectionName}
                 size={13}
-                className="transition-transform ltr:group-hover:translate-x-0.5 rtl:group-hover:-translate-x-0.5"
+                className="transition-transform group-hover:ltr:translate-x-0.5 group-hover:rtl:-translate-x-0.5"
               />
             </span>
           </div>

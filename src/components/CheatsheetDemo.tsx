@@ -40,7 +40,7 @@ const CheatsheetDemo = ({ data }: Props) => {
 
   return (
     <div dir="ltr" className="font-mono flex flex-col gap-2">
-      <div className="rounded-lg bg-ink-950/60 border border-white/[0.05] overflow-hidden">
+      <div className="rounded-lg bg-ink-950/60 border border-white/5 overflow-hidden">
         <div className="px-3 pt-2 text-[9px] uppercase tracking-[0.16em] text-neutral-500 font-sans font-medium">
           {formatMessage({ id: 'general.text' })}
         </div>
@@ -49,7 +49,7 @@ const CheatsheetDemo = ({ data }: Props) => {
           dangerouslySetInnerHTML={{ __html: readableContent }}
         />
       </div>
-      <div className="rounded-lg bg-ink-950/60 border border-white/[0.05] overflow-hidden">
+      <div className="rounded-lg bg-ink-950/60 border border-white/5 overflow-hidden">
         <div className="px-3 pt-2 text-[9px] uppercase tracking-[0.16em] text-neutral-500 font-sans font-medium">
           {formatMessage({ id: 'general.regex' })}
         </div>
