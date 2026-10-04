@@ -94,10 +94,10 @@ RegexLearn is shaped by its community: lessons, translations, and fixes in this 
 contributors around the world. Spotted a typo, a bug, or an awkward translation? A small pull
 request is all it takes to improve the experience for thousands of learners.
 
-- Please target the **`develop`** branch with your pull requests. It is the default branch and the
-  integration branch for upcoming releases.
-- The `main` branch is production: every commit on it is deployed to
-  [regexlearn.com](https://regexlearn.com/) automatically, so it only moves on releases.
+- Please target the **`main`** branch with your pull requests.
+- `main` is production: every pull request merged into it is deployed to
+  [regexlearn.com](https://regexlearn.com/) automatically, so please make sure `npm run build`
+  passes before opening one.
 
 ## Our Sponsors
 
