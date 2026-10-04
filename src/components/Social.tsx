@@ -1,7 +1,7 @@
 import Icon from 'src/components/Icon';
 
 const socialLinkClassName =
-  'w-8 h-8 inline-flex items-center justify-center rounded-full text-neutral-400 hover:text-white hover:bg-white/[0.06] transition-colors';
+  'w-8 h-8 inline-flex items-center justify-center rounded-full text-neutral-400 hover:text-white hover:bg-white/6 transition-colors';
 
 const Social = () => (
   <div className="flex items-center gap-1">

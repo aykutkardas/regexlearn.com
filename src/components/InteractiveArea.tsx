@@ -217,8 +217,8 @@ const InteractiveArea = ({ isShow, setIsOpenModal }: Props) => {
       className={cx('mt-8', {
         '[&_.highlight]:bg-red-400 ': error,
         '[&_.highlight]:bg-yellow-500': match,
-        '[&_.highlight]:!bg-regreen-400': success,
-        '[&_.regex-block]:!border-red-400/60 [&_.regex-block]:shadow-[0_0_0_3px_rgb(248_113_113/0.12)]':
+        '[&_.highlight]:bg-regreen-400!': success,
+        '[&_.regex-block]:border-red-400/60! [&_.regex-block]:shadow-[0_0_0_3px_rgb(248_113_113/0.12)]':
           lockError,
       })}
     >
@@ -231,7 +231,7 @@ const InteractiveArea = ({ isShow, setIsOpenModal }: Props) => {
         </button>
       )}
       <div className="panel overflow-hidden">
-        <div className="flex items-center justify-between px-4 h-9 border-b border-white/[0.05] bg-white/[0.02]">
+        <div className="flex items-center justify-between px-4 h-9 border-b border-white/5 bg-white/2">
           <span className="panel-label">{formatMessage({ id: 'general.text' })}</span>
           <span aria-hidden className="flex gap-1.5">
             <span className="w-2 h-2 rounded-full bg-white/10" />
@@ -240,7 +240,7 @@ const InteractiveArea = ({ isShow, setIsOpenModal }: Props) => {
           </span>
         </div>
         <div
-          className="px-4 py-4 font-mono text-[13px] leading-7 tracking-wide text-neutral-300 text-left break-words"
+          className="px-4 py-4 font-mono text-[13px] leading-7 tracking-wide text-neutral-300 text-left wrap-break-word"
           dangerouslySetInnerHTML={{ __html: readableContent }}
         />
       </div>
@@ -251,7 +251,7 @@ const InteractiveArea = ({ isShow, setIsOpenModal }: Props) => {
           'focus-within:border-regreen-400/40 focus-within:shadow-[0_0_0_3px_rgb(95_245_155/0.08)]',
         )}
       >
-        <div className="flex items-center justify-between px-4 h-9 border-b border-white/[0.05] bg-white/[0.02] rounded-t-xl">
+        <div className="flex items-center justify-between px-4 h-9 border-b border-white/5 bg-white/2 rounded-t-xl">
           <span className="panel-label">{formatMessage({ id: 'general.regex' })}</span>
           {!data.noHint && (
             <Hint hiddenFlags={data.hiddenFlags} regex={data.regex} flags={data.flags} />
@@ -260,7 +260,7 @@ const InteractiveArea = ({ isShow, setIsOpenModal }: Props) => {
         <div className="flex flex-col items-center gap-4 px-4 py-5">
           <div
             className={cx(
-              'bg-ink-950/70 border border-white/[0.06] px-4 py-2 rounded-lg flex items-center justify-center max-w-full font-mono text-base',
+              'bg-ink-950/70 border border-white/6 px-4 py-2 rounded-lg flex items-center justify-center max-w-full font-mono text-base',
               "before:content-['/'] before:text-neutral-600",
               "after:content-['/'_attr(data-flags)] after:text-neutral-500",
               { 'after:hidden before:hidden': data.hiddenFlags },
@@ -272,7 +272,7 @@ const InteractiveArea = ({ isShow, setIsOpenModal }: Props) => {
               key={step}
               type="text"
               aria-label={formatMessage({ id: 'general.regex' })}
-              className="bg-transparent border-0 outline-none !ring-0 text-center max-w-[440px] min-w-[5ch] px-1 py-0 font-mono text-base tracking-wider text-regreen-400 placeholder:text-neutral-600"
+              className="bg-transparent border-0 outline-hidden ring-0! text-center max-w-[440px] min-w-[5ch] px-1 py-0 font-mono text-base tracking-wider text-regreen-400 placeholder:text-neutral-600"
               style={{ width: `${Math.max((data.visibleRegex || regex).length, 4) + 1}ch` }}
               readOnly={data.readOnly}
               value={data.visibleRegex || regex}
@@ -294,7 +294,7 @@ const InteractiveArea = ({ isShow, setIsOpenModal }: Props) => {
               {data.videoURL && (
                 <button
                   type="button"
-                  className="inline-flex items-center gap-1.5 text-xs px-2.5 py-1 rounded-lg text-neutral-300 hover:text-white bg-white/[0.04] hover:bg-white/[0.08] transition-colors"
+                  className="inline-flex items-center gap-1.5 text-xs px-2.5 py-1 rounded-lg text-neutral-300 hover:text-white bg-white/4 hover:bg-white/8 transition-colors"
                   onClick={() => setIsOpenModal(true)}
                 >
                   <Icon icon="video-camera" size={14} className="text-red-400" />

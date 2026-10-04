@@ -15,9 +15,9 @@ const PagePlayground = () => (
       <div className="w-full flex-1 min-h-0 p-4">
         <PlaygroundEditor />
       </div>
-      <aside className="hidden md:flex flex-col w-[300px] lg:w-[380px] shrink-0 h-full min-h-0 border-l rtl:border-l-0 rtl:border-r border-white/[0.06] bg-ink-950/30">
+      <aside className="hidden md:flex flex-col w-[300px] lg:w-[380px] shrink-0 h-full min-h-0 border-l rtl:border-l-0 rtl:border-r border-white/6 bg-ink-950/30">
         <PlaygroundSidebar />
-        <div className="h-14 shrink-0 border-t px-3 flex items-center justify-between border-white/[0.06]">
+        <div className="h-14 shrink-0 border-t px-3 flex items-center justify-between border-white/6">
           <ReportPlayground />
           <a
             href="https://www.buymeacoffee.com/aykutkardas"
@@ -26,7 +26,7 @@ const PagePlayground = () => (
             aria-label="Buy Me a Coffee"
             title="Buy Me a Coffee"
           >
-            <span className="w-7 h-7 hover:scale-110 transition inline-flex items-center justify-center rounded-full bg-gradient-to-tr from-yellow-600 to-yellow-400 text-ink-950 shadow-lg shadow-yellow-500/20">
+            <span className="w-7 h-7 hover:scale-110 transition inline-flex items-center justify-center rounded-full bg-linear-to-tr/srgb from-yellow-600 to-yellow-400 text-ink-950 shadow-lg shadow-yellow-500/20">
               <Icon icon="coffee" size={15} />
             </span>
           </a>

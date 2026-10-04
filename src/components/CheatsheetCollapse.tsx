@@ -25,7 +25,7 @@ const CheatsheetCollapse = ({ title, data }: CheatsheetCollapseProps) => {
     <div
       className={cx(
         'w-full rounded-xl transition-colors',
-        open ? 'bg-white/[0.04]' : 'hover:bg-white/[0.03]',
+        open ? 'bg-white/4' : 'hover:bg-white/3',
       )}
     >
       <div
@@ -46,7 +46,7 @@ const CheatsheetCollapse = ({ title, data }: CheatsheetCollapseProps) => {
               'inline-block px-1.5 py-0.5 text-xs font-mono rounded-md border transition-colors',
               open
                 ? 'text-regreen-400 bg-regreen-400/10 border-regreen-400/20'
-                : 'text-neutral-100 bg-white/[0.06] border-white/[0.06]',
+                : 'text-neutral-100 bg-white/6 border-white/6',
             )}
             dir="ltr"
           >
@@ -69,7 +69,7 @@ const CheatsheetCollapse = ({ title, data }: CheatsheetCollapseProps) => {
       {open && (
         <div id={`Collapse-${data.title}`} className="h-auto px-2.5 pb-3 pt-1 animate-fade-up">
           {data.description && (
-            <p className="text-xs text-neutral-400 leading-relaxed mb-3 ltr:pl-[4.25rem] rtl:pr-[4.25rem]">
+            <p className="text-xs text-neutral-400 leading-relaxed mb-3 ltr:pl-17 rtl:pr-17">
               <FormattedMessage id={data.description} />
             </p>
           )}

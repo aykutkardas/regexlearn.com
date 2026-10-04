@@ -54,11 +54,11 @@ const Hint = ({ regex, flags, hiddenFlags }: Props) => {
         leaveFrom="opacity-100"
         leaveTo="opacity-0"
       >
-        <Popover.Panel className="absolute right-0 min-w-[10rem] z-20 mt-2 p-1.5 rounded-xl border border-white/10 bg-ink-900 shadow-2xl">
+        <Popover.Panel className="absolute right-0 min-w-40 z-20 mt-2 p-1.5 rounded-xl border border-white/10 bg-ink-900 shadow-2xl">
           <div className="flex flex-col gap-1">
             {regex.map(answer => (
               <div
-                className="px-3 py-2 rounded-lg bg-white/[0.03] text-center font-mono"
+                className="px-3 py-2 rounded-lg bg-white/3 text-center font-mono"
                 key={answer}
               >
                 <span

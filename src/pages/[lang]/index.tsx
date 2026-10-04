@@ -39,9 +39,9 @@ const HeroVisual = ({ alt }: { alt: string }) => (
       dir="ltr"
       className="absolute bottom-16 ltr:-right-2 rtl:-left-2 hidden lg:flex items-center gap-1.5 surface backdrop-blur-md rounded-xl px-3 py-2 font-mono text-xs animate-float [animation-delay:-3s]"
     >
-      <span className="px-1 rounded bg-regreen-400 text-ink-950">regex</span>
+      <span className="px-1 rounded-sm bg-regreen-400 text-ink-950">regex</span>
       <span className="text-neutral-400">is</span>
-      <span className="px-1 rounded bg-regreen-400 text-ink-950">fun</span>
+      <span className="px-1 rounded-sm bg-regreen-400 text-ink-950">fun</span>
     </div>
   </div>
 );
@@ -59,24 +59,24 @@ const PageHome = () => {
             <span className="w-1.5 h-1.5 rounded-full bg-regreen-400 animate-pulse" />
             /^learn(ing)?\s+regex$/i
           </span>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.1] mb-6 text-transparent bg-clip-text bg-gradient-to-b from-white to-neutral-300">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.1] sm:leading-none mb-6 text-transparent bg-clip-text bg-linear-to-b/srgb from-white to-neutral-300">
             <FormattedMessage id="landing.title" />
           </h1>
           <HighlightedText
             element="p"
-            className="md:text-lg leading-relaxed text-neutral-400 max-w-xl mx-auto md:mx-0"
+            className="md:text-lg leading-relaxed md:leading-7 text-neutral-400 max-w-xl mx-auto md:mx-0"
             text={formatMessage({ id: 'landing.description' })}
             attrs={{ className: 'code-chip' }}
           />
           <div className="flex flex-wrap items-center justify-center md:justify-start gap-3 mt-8">
             <IntlLink href="/[lang]/learn" tabIndex={-1}>
-              <Button variant={ButtonVariants.Primary} className="px-6 py-3 text-[15px]">
+              <Button variant={ButtonVariants.Primary} className="px-6 py-3">
                 <FormattedMessage id="general.startLearning" />
                 <Icon icon={direction === 'rtl' ? 'arrow-left' : 'arrow-right'} size={16} />
               </Button>
             </IntlLink>
             <IntlLink href="/[lang]/playground" tabIndex={-1}>
-              <Button variant={ButtonVariants.Secondary} className="px-6 py-3 text-[15px]">
+              <Button variant={ButtonVariants.Secondary} className="px-6 py-3">
                 <FormattedMessage id="general.playground" />
               </Button>
             </IntlLink>
@@ -90,7 +90,7 @@ const PageHome = () => {
         </div>
       </div>
 
-      <div className="border-t border-white/[0.06]" />
+      <div className="border-t border-white/6" />
 
       <Section
         index={1}

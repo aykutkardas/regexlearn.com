@@ -8,13 +8,13 @@ export enum ButtonVariants {
 
 const variants = {
   [ButtonVariants.Primary]: cx(
-    'bg-gradient-to-b from-regreen-400 to-emerald-500 text-ink-950 font-semibold',
+    'bg-linear-to-b/srgb from-regreen-400 to-emerald-500 text-ink-950 font-semibold',
     'shadow-glow-sm hover:shadow-glow hover:brightness-110',
     'disabled:opacity-50 disabled:hover:brightness-100 disabled:shadow-none',
   ),
   [ButtonVariants.Secondary]: cx(
-    'bg-white/[0.04] text-neutral-100 font-medium border border-white/10',
-    'hover:bg-white/[0.08] hover:border-white/20',
+    'bg-white/4 text-neutral-100 font-medium border border-white/10',
+    'hover:bg-white/8 hover:border-white/20',
   ),
 };
 

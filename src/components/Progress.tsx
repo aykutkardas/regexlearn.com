@@ -16,14 +16,14 @@ const Progress = ({ current, total, showProgressText = true }: Props) => {
   return (
     <div className="w-20 xs:w-28 sm:w-40 md:w-48 flex items-center flex-col justify-start gap-2 select-none">
       <div
-        className="w-full h-1.5 rounded-full bg-white/[0.08] overflow-hidden"
+        className="w-full h-1.5 rounded-full bg-white/8 overflow-hidden"
         role="progressbar"
         aria-valuemin={0}
         aria-valuemax={total}
         aria-valuenow={current}
       >
         <div
-          className="h-full min-w-[6px] rounded-full bg-gradient-to-r from-emerald-500 to-regreen-400 shadow-[0_0_12px_rgb(95_245_155/0.5)] transition-all duration-500 ease-out"
+          className="h-full min-w-[6px] rounded-full bg-linear-to-r/srgb from-emerald-500 to-regreen-400 shadow-[0_0_12px_rgb(95_245_155/0.5)] transition-all duration-500 ease-out"
           style={{ width: `${percent}%` }}
         />
       </div>

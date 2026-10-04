@@ -25,7 +25,7 @@ const Shortcut = ({ command, className }: Props) => {
       className={cx(
         'hidden md:inline-flex items-center font-mono font-normal tracking-tight whitespace-nowrap',
         'px-1.5 py-0.5 text-[10px] leading-none rounded-md',
-        'border border-white/10 border-b-2 bg-white/[0.04] text-neutral-400',
+        'border border-white/10 border-b-2 bg-white/4 text-neutral-400',
         className,
       )}
     >

@@ -32,7 +32,7 @@ const LearnProgress = () => {
 
   // list lesson (ToggleProgress For RTL/LTR)
   const listOpen = direction === 'rtl' ? 'left-0' : 'right-0';
-  const listClose = direction === 'rtl' ? '-left-[244px]' : '-right-[244px]';
+  const listClose = direction === 'rtl' ? 'left-[-244px]' : 'right-[-244px]';
   const listOpenInner = direction === 'rtl' ? '-left-10' : '-right-10';
   const listCloseInner = direction === 'rtl' ? 'left-[204px]' : 'right-[204px]';
   const listIconName = direction === 'rtl' ? 'arrow-right' : 'arrow-left';
@@ -40,18 +40,18 @@ const LearnProgress = () => {
   return (
     <div
       className={clsx(
-        'hidden lg:block text-xs top-[50%] -translate-y-[50%] absolute z-10 transition-all select-none',
+        'hidden lg:block text-xs top-[50%] translate-y-[-50%] absolute z-10 transition-all select-none',
         open ? listOpen : listClose,
       )}
     >
       <div
         ref={learnProgressRef}
-        className="hidden-scrollbar scroll-smooth pl-5 bg-ink-900 border border-white/[0.06] rounded-2xl shadow-2xl shadow-black/40 relative w-56 overflow-y-scroll overflow-x-hidden py-10 h-[360px]"
+        className="hidden-scrollbar scroll-smooth pl-5 bg-ink-900 border border-white/6 rounded-2xl shadow-2xl shadow-black/40 relative w-56 overflow-y-scroll overflow-x-hidden py-10 h-[360px]"
       >
         <div
           onClick={toggleProgress}
           className={clsx(
-            direction === 'rtl' ? 'translate-x-[50%]' : '-translate-x-[50%]',
+            direction === 'rtl' ? 'translate-x-[50%]' : 'translate-x-[-50%]',
             `w-10 h-10 cursor-pointer rounded-full  flex fixed top-[50%] transition-all duration-50`,
             open
               ? `${listOpenInner} bg-white/10 hover:bg-white/15`
@@ -68,8 +68,8 @@ const LearnProgress = () => {
             )}
           />
         </div>
-        <div className="flex h-10 w-72 bg-gradient-to-b pointer-events-none from-ink-900 z-20 to-transparent fixed top-0" />
-        <div className="flex h-10 w-72 bg-gradient-to-t pointer-events-none from-ink-900 z-20 to-transparent fixed bottom-0" />
+        <div className="flex h-10 w-72 bg-linear-to-b/srgb pointer-events-none from-ink-900 z-20 to-transparent fixed top-0" />
+        <div className="flex h-10 w-72 bg-linear-to-t/srgb pointer-events-none from-ink-900 z-20 to-transparent fixed bottom-0" />
         {lessonData.map((lesson, index) => (
           <div
             key={lesson.title + index}
@@ -86,19 +86,19 @@ const LearnProgress = () => {
             {step === index && (
               <Icon icon="play" size={16} className={clsx(
                 direction === 'ltr' ? 'ml-2' : 'mr-2',
-                "text-regreen-400 flex-shrink-0"
+                "text-regreen-400 shrink-0"
               )} />
             )}
             {lastStep >= index && step !== index && (
               <Icon icon="check" size={16} className={clsx(
                 direction === 'ltr' ? 'ml-2' : 'mr-2',
-                "text-regreen-400 flex-shrink-0"
+                "text-regreen-400 shrink-0"
               )} />
             )}
             {lastStep < index && (
               <Icon icon="lock-closed" size={16} className={clsx(
                 direction === 'ltr' ? 'ml-2' : 'mr-2',
-                "text-neutral-600 flex-shrink-0"
+                "text-neutral-600 shrink-0"
               )} />
             )}
 
@@ -107,7 +107,7 @@ const LearnProgress = () => {
               className={clsx(
                 'truncate py-2 transition-all cursor-pointer',
                 index === step
-                  ? '!pr-2 text-neutral-50'
+                  ? 'pr-2! text-neutral-50'
                   : 'text-neutral-300 hover:text-neutral-100 pl-0',
               )}
               text={formatMessage({ id: lesson.title }).replace('\\n', '')}

@@ -20,18 +20,18 @@ const LearnFooter = () => {
   const prevIconName = direction === 'rtl' ? 'arrow-right' : 'arrow-left';
 
   return (
-    <div className="py-5 flex items-center select-none border-t border-white/[0.05]">
+    <div className="py-5 flex items-center select-none border-t border-white/5">
       <div className="w-1/3 flex items-center">
         {step > 0 && (
           <button
             type="button"
-            className="group inline-flex items-center gap-2 h-10 ltr:pl-2 ltr:pr-3 rtl:pr-2 rtl:pl-3 rounded-xl text-sm text-neutral-300 hover:text-white hover:bg-white/[0.06] transition-colors"
+            className="group inline-flex items-center gap-2 h-10 ltr:pl-2 ltr:pr-3 rtl:pr-2 rtl:pl-3 rounded-xl text-sm text-neutral-300 hover:text-white hover:bg-white/6 transition-colors"
             onClick={prevStep}
           >
             <Icon
               icon={prevIconName}
               size={18}
-              className="transition-transform ltr:group-hover:-translate-x-0.5 rtl:group-hover:translate-x-0.5"
+              className="transition-transform group-hover:ltr:-translate-x-0.5 group-hover:rtl:translate-x-0.5"
             />
             <FormattedMessage id="general.prev" />
             <Shortcut command={shortcuts.prevStep} />
@@ -48,8 +48,8 @@ const LearnFooter = () => {
             className={cx(
               'group inline-flex items-center gap-2 h-10 ltr:pl-3 ltr:pr-2 rtl:pr-3 rtl:pl-2 rounded-xl text-sm font-medium transition-all duration-200',
               success
-                ? 'bg-gradient-to-b from-regreen-400 to-emerald-500 text-ink-950 shadow-glow-sm hover:shadow-glow'
-                : 'bg-white/[0.04] border border-white/10 text-neutral-200 hover:bg-white/[0.08]',
+                ? 'bg-linear-to-b/srgb from-regreen-400 to-emerald-500 text-ink-950 shadow-glow-sm hover:shadow-glow'
+                : 'bg-white/4 border border-white/10 text-neutral-200 hover:bg-white/8',
             )}
             onClick={nextStep}
           >
@@ -67,12 +67,12 @@ const LearnFooter = () => {
             <FormattedMessage id="general.next" />
             <Shortcut
               command={shortcuts.nextStep}
-              className={success ? '!bg-black/10 !border-black/20 !text-ink-950/70' : ''}
+              className={success ? 'bg-black/10! border-black/20! text-ink-950/70!' : ''}
             />
             <Icon
               icon={nextIconName}
               size={18}
-              className="transition-transform ltr:group-hover:translate-x-0.5 rtl:group-hover:-translate-x-0.5"
+              className="transition-transform group-hover:ltr:translate-x-0.5 group-hover:rtl:-translate-x-0.5"
             />
           </button>
         )}

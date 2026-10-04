@@ -40,10 +40,10 @@ const Header = ({ page }: Props) => {
     <header
       className={cx('z-40 h-16 sm:h-20 transition-colors duration-300', {
         'sticky top-0 -mx-4 px-4 backdrop-blur-xl': isSticky,
-        'bg-ink-800/70 border-b border-white/[0.06]': isSticky && scrolled,
+        'bg-ink-800/70 border-b border-white/6': isSticky && scrolled,
         'border-b border-transparent': isSticky && !scrolled,
         relative: !isSticky,
-        'bg-ink-900/80 px-4 border-b border-white/[0.06] backdrop-blur-xl': isPlaygroundPage,
+        'bg-ink-900/80 px-4 border-b border-white/6 backdrop-blur-xl': isPlaygroundPage,
       })}
     >
       <div className="flex items-center justify-center h-full gap-3">
@@ -58,12 +58,12 @@ const Header = ({ page }: Props) => {
         {isLearnDetail && <div id="ProgressArea" className="flex justify-center flex-1" />}
         <div className="flex flex-1 min-w-0 items-center text-sm justify-end gap-1 sm:gap-2">
           {!isLearnDetail && (
-            <nav className="hidden sm:flex items-center gap-1 p-1 rounded-full bg-white/[0.03] border border-white/[0.06]">
+            <nav className="hidden sm:flex items-center gap-1 p-1 rounded-full bg-white/3 border border-white/6">
               {navItems.map(({ href, label }) => (
                 <IntlLink
                   key={href}
                   className="block whitespace-nowrap px-3 lg:px-3.5 py-1.5 rounded-full transition-colors font-medium text-[13px]"
-                  activeClassName="bg-white/[0.08] text-regreen-400"
+                  activeClassName="bg-white/8 text-regreen-400"
                   inactiveClassName="text-neutral-300 hover:text-white"
                   navLink
                   href={href}
@@ -80,7 +80,7 @@ const Header = ({ page }: Props) => {
             rel="noreferrer"
             aria-label="GitHub"
             className={cx(
-              'w-9 h-9 rounded-full text-neutral-300 hover:text-white hover:bg-white/[0.06]',
+              'w-9 h-9 rounded-full text-neutral-300 hover:text-white hover:bg-white/6',
               'select-none items-center hidden sm:inline-flex justify-center transition-colors',
             )}
           >
@@ -93,7 +93,7 @@ const Header = ({ page }: Props) => {
                 <>
                   <Popover.Button
                     aria-label="Menu"
-                    className="w-9 h-9 inline-flex items-center justify-center rounded-full text-neutral-200 hover:bg-white/[0.06] transition-colors"
+                    className="w-9 h-9 inline-flex items-center justify-center rounded-full text-neutral-200 hover:bg-white/6 transition-colors"
                   >
                     <svg width="18" height="18" viewBox="0 0 18 18" aria-hidden>
                       <g stroke="currentColor" strokeWidth="1.6" strokeLinecap="round">
@@ -126,8 +126,8 @@ const Header = ({ page }: Props) => {
                         <IntlLink
                           key={href}
                           className="block px-4 py-3 rounded-xl text-[15px] font-medium transition-colors"
-                          activeClassName="bg-white/[0.06] text-regreen-400"
-                          inactiveClassName="text-neutral-200 hover:bg-white/[0.04]"
+                          activeClassName="bg-white/6 text-regreen-400"
+                          inactiveClassName="text-neutral-200 hover:bg-white/4"
                           navLink
                           href={href}
                         >
@@ -138,7 +138,7 @@ const Header = ({ page }: Props) => {
                         href="https://github.com/aykutkardas/regexlearn.com"
                         target="_blank"
                         rel="noreferrer"
-                        className="flex items-center gap-2 px-4 py-3 mt-1 rounded-xl text-[15px] text-neutral-300 hover:bg-white/[0.04] border-t border-white/[0.06]"
+                        className="flex items-center gap-2 px-4 py-3 mt-1 rounded-xl text-[15px] text-neutral-300 hover:bg-white/4 border-t border-white/6"
                       >
                         <Icon icon="github" size={16} />
                         GitHub
