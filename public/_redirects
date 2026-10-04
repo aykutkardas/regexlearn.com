@@ -1,5 +1,0 @@
-/en               /                    301
-/en/learn         /learn               301
-/en/learn/*       /learn/:splat        301
-/en/cheatsheet    /cheatsheet          301
-/en/playground    /playground          301
