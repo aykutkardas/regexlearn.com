@@ -8,16 +8,35 @@
 expressions from a black art into a skill you can pick up in an afternoon. Learn step by step in 21
 languages, keep the cheatsheet nearby, and test your patterns live in the playground.
 
+![RegexLearn home page](preview/preview-landing.png)
+
 ## Features
 
 - **Step-by-Step Learning:** Interactive lessons that progress from the basics to advanced
-  patterns, one small step at a time.
+  patterns, one small step at a time. Matches light up as you type, and your progress is saved in
+  your browser.
 - **Courses:** Two lesson tracks are available: [Regex 101](https://regexlearn.com/learn/regex101)
   for fundamentals and [Regex for SEO](https://regexlearn.com/learn/regex-for-seo) for practical,
   search-focused usage.
-- **Cheatsheet:** A concise summary of regex syntax for quick reference while you work.
-- **Playground:** A private, browser-based sandbox to write and test regex patterns locally.
-- **Shortcut Friendly:** Move through lessons entirely from the keyboard.
+- **Cheatsheet:** A concise summary of regex syntax with a live example for every entry.
+- **Playground:** A private, browser-based sandbox to write and test regex patterns. Everything
+  runs locally; nothing you type is sent to a server.
+- **Shortcut Friendly:** Move through lessons, toggle flags, and reveal answers from the keyboard.
+- **Works Everywhere:** Responsive on phones and tablets, with right-to-left support for Arabic and
+  Persian.
+
+<table>
+  <tr>
+    <td width="33%"><img src="preview/preview-learn.png" alt="An interactive lesson step" /></td>
+    <td width="33%"><img src="preview/preview-cheatsheet.png" alt="The regex cheatsheet" /></td>
+    <td width="33%"><img src="preview/preview-playground.png" alt="The regex playground" /></td>
+  </tr>
+  <tr>
+    <td align="center">Learn</td>
+    <td align="center">Cheatsheet</td>
+    <td align="center">Playground</td>
+  </tr>
+</table>
 
 ## Supported Languages
 
@@ -41,15 +60,29 @@ files, and you've brought regex to every developer who reads in your language. P
 conversation first?
 **[Open an issue](https://github.com/aykutkardas/regexlearn.com/issues/new)**.
 
+### Translation Guidelines
+
+- **English is the reference.** Translate from [`src/localization/en`](src/localization/en) and keep
+  exactly the same keys in every file.
+- **Leave code as it is.** Text between backticks (`` `[a-z]` ``, `` `OK` ``) is rendered as code;
+  don't translate it, and keep every pair of backticks.
+- **Keep the line breaks.** `\n` marks a line break inside a lesson text; keep it in the same place.
+- **Match the lesson.** Each step asks the learner to type a specific answer, so a translated
+  instruction must still lead to that exact answer.
+
 ## Development
 
-Built with [Next.js](https://nextjs.org/), [TypeScript](https://www.typescriptlang.org/), and
-[Tailwind CSS](https://tailwindcss.com/).
+Built with [Next.js](https://nextjs.org/), [React](https://react.dev/),
+[TypeScript](https://www.typescriptlang.org/), and [Tailwind CSS](https://tailwindcss.com/). The
+site is exported as static HTML.
+
+Requires Node.js 20.9 or newer (the pinned version is in [`.node-version`](.node-version)).
 
 ```bash
 npm install   # install dependencies
 npm run dev   # start the dev server at http://localhost:3003
-npm run build # production build
+npm run lint  # lint the project
+npm run build # static production build in out/
 ```
 
 Local environment variables belong in `.env` or one of Next.js's `.env.*.local` files. These files
@@ -76,15 +109,6 @@ RegexLearn is free for everyone, and sponsors are what keep it that way. Sponsor
 brand in front of a worldwide audience of developers at the exact moment they're learning. Want
 your logo up there? **[Get in touch](mailto:aykutkrds@gmail.com)**.
 
-
 ## License
 
 This project is licensed under the MIT License. See the [LICENCE](LICENCE) file for details.
-
-## Preview
-
-![Preview](preview/preview-landing.png)
-
-![Preview](preview/preview-learn.png)
-
-![Preview](preview/preview-cheatsheet.png)
