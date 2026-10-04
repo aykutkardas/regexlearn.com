@@ -11,7 +11,7 @@ import LanguageSelect from 'src/components/LanguageSelect';
 import packageInfo from 'package.json';
 
 interface Props {
-  page?: 'home' | 'learn' | 'learn-detail' | 'cheatsheet' | 'playground';
+  page?: 'learn-detail' | 'playground';
 }
 
 const navItems = [
